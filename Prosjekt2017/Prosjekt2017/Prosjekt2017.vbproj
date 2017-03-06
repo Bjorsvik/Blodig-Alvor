@@ -72,6 +72,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Registreringsskjema.Designer.vb">
+      <DependentUpon>Registreringsskjema.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registreringsskjema.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reservasjon.Designer.vb">
       <DependentUpon>Reservasjon.vb</DependentUpon>
     </Compile>
@@ -102,6 +108,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Registreringsskjema.resx">
+      <DependentUpon>Registreringsskjema.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reservasjon.resx">
       <DependentUpon>Reservasjon.vb</DependentUpon>
     </EmbeddedResource>
