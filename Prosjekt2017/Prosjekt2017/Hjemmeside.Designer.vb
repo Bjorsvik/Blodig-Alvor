@@ -26,6 +26,8 @@ Partial Class Hjemmeside
         Me.LabelPassord = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Logginnknapp = New System.Windows.Forms.Button()
+        Me.Registreringsknapp = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'LabelBrukernavn
@@ -60,17 +62,37 @@ Partial Class Hjemmeside
         Me.TextBox2.Size = New System.Drawing.Size(176, 22)
         Me.TextBox2.TabIndex = 3
         '
+        'Logginnknapp
+        '
+        Me.Logginnknapp.Location = New System.Drawing.Point(105, 186)
+        Me.Logginnknapp.Name = "Logginnknapp"
+        Me.Logginnknapp.Size = New System.Drawing.Size(176, 40)
+        Me.Logginnknapp.TabIndex = 4
+        Me.Logginnknapp.Text = "Logg inn"
+        Me.Logginnknapp.UseVisualStyleBackColor = True
+        '
+        'Registreringsknapp
+        '
+        Me.Registreringsknapp.Location = New System.Drawing.Point(326, 186)
+        Me.Registreringsknapp.Name = "Registreringsknapp"
+        Me.Registreringsknapp.Size = New System.Drawing.Size(129, 40)
+        Me.Registreringsknapp.TabIndex = 5
+        Me.Registreringsknapp.Text = "Registrer"
+        Me.Registreringsknapp.UseVisualStyleBackColor = True
+        '
         'Hjemmeside
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(779, 431)
+        Me.Controls.Add(Me.Registreringsknapp)
+        Me.Controls.Add(Me.Logginnknapp)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.LabelPassord)
         Me.Controls.Add(Me.LabelBrukernavn)
         Me.Name = "Hjemmeside"
-        Me.Text = "Form1"
+        Me.Text = "Hjemmeside"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -80,4 +102,6 @@ Partial Class Hjemmeside
     Friend WithEvents LabelPassord As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Logginnknapp As Button
+    Friend WithEvents Registreringsknapp As Button
 End Class
