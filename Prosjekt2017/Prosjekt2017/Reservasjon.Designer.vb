@@ -38,7 +38,7 @@ Partial Class Reservasjon
         Me.ClientSize = New System.Drawing.Size(471, 322)
         Me.Controls.Add(Me.MonthCalendar1)
         Me.Name = "Reservasjon"
-        Me.Text = "Form1"
+        Me.Text = "Reservasjon"
         Me.ResumeLayout(False)
 
     End Sub
