@@ -22,35 +22,53 @@ Partial Class Hjemmeside
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.LabelBrukernavn = New System.Windows.Forms.Label()
+        Me.LabelPassord = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
-        'Label1
+        'LabelBrukernavn
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(102, 83)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(51, 17)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Label1"
+        Me.LabelBrukernavn.AutoSize = True
+        Me.LabelBrukernavn.Location = New System.Drawing.Point(102, 83)
+        Me.LabelBrukernavn.Name = "LabelBrukernavn"
+        Me.LabelBrukernavn.Size = New System.Drawing.Size(81, 17)
+        Me.LabelBrukernavn.TabIndex = 0
+        Me.LabelBrukernavn.Text = "Brukernavn"
         '
-        'Label2
+        'LabelPassord
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(102, 125)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(51, 17)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Label2"
+        Me.LabelPassord.AutoSize = True
+        Me.LabelPassord.Location = New System.Drawing.Point(102, 125)
+        Me.LabelPassord.Name = "LabelPassord"
+        Me.LabelPassord.Size = New System.Drawing.Size(60, 17)
+        Me.LabelPassord.TabIndex = 1
+        Me.LabelPassord.Text = "Passord"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(243, 83)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(176, 22)
+        Me.TextBox1.TabIndex = 2
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(243, 122)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(176, 22)
+        Me.TextBox2.TabIndex = 3
         '
         'Hjemmeside
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(779, 431)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.LabelPassord)
+        Me.Controls.Add(Me.LabelBrukernavn)
         Me.Name = "Hjemmeside"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
@@ -58,6 +76,8 @@ Partial Class Hjemmeside
 
     End Sub
 
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents LabelBrukernavn As Label
+    Friend WithEvents LabelPassord As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBox2 As TextBox
 End Class
