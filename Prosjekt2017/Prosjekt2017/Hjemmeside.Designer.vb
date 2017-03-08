@@ -24,8 +24,8 @@ Partial Class Hjemmeside
     Private Sub InitializeComponent()
         Me.LabelBrukernavn = New System.Windows.Forms.Label()
         Me.LabelPassord = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtBrukernavn = New System.Windows.Forms.TextBox()
+        Me.txtPassord = New System.Windows.Forms.TextBox()
         Me.Logginnknapp = New System.Windows.Forms.Button()
         Me.Registreringsknapp = New System.Windows.Forms.Button()
         Me.SuspendLayout()
@@ -33,64 +33,71 @@ Partial Class Hjemmeside
         'LabelBrukernavn
         '
         Me.LabelBrukernavn.AutoSize = True
-        Me.LabelBrukernavn.Location = New System.Drawing.Point(102, 83)
+        Me.LabelBrukernavn.Location = New System.Drawing.Point(156, 86)
+        Me.LabelBrukernavn.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LabelBrukernavn.Name = "LabelBrukernavn"
-        Me.LabelBrukernavn.Size = New System.Drawing.Size(81, 17)
+        Me.LabelBrukernavn.Size = New System.Drawing.Size(62, 13)
         Me.LabelBrukernavn.TabIndex = 0
         Me.LabelBrukernavn.Text = "Brukernavn"
         '
         'LabelPassord
         '
         Me.LabelPassord.AutoSize = True
-        Me.LabelPassord.Location = New System.Drawing.Point(102, 125)
+        Me.LabelPassord.Location = New System.Drawing.Point(156, 121)
+        Me.LabelPassord.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LabelPassord.Name = "LabelPassord"
-        Me.LabelPassord.Size = New System.Drawing.Size(60, 17)
+        Me.LabelPassord.Size = New System.Drawing.Size(45, 13)
         Me.LabelPassord.TabIndex = 1
         Me.LabelPassord.Text = "Passord"
         '
-        'TextBox1
+        'txtBrukernavn
         '
-        Me.TextBox1.Location = New System.Drawing.Point(243, 83)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(176, 22)
-        Me.TextBox1.TabIndex = 2
+        Me.txtBrukernavn.Location = New System.Drawing.Point(262, 86)
+        Me.txtBrukernavn.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtBrukernavn.Name = "txtBrukernavn"
+        Me.txtBrukernavn.Size = New System.Drawing.Size(133, 20)
+        Me.txtBrukernavn.TabIndex = 2
         '
-        'TextBox2
+        'txtPassord
         '
-        Me.TextBox2.Location = New System.Drawing.Point(243, 122)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(176, 22)
-        Me.TextBox2.TabIndex = 3
+        Me.txtPassord.Location = New System.Drawing.Point(262, 118)
+        Me.txtPassord.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtPassord.Name = "txtPassord"
+        Me.txtPassord.Size = New System.Drawing.Size(133, 20)
+        Me.txtPassord.TabIndex = 3
         '
         'Logginnknapp
         '
-        Me.Logginnknapp.Location = New System.Drawing.Point(105, 186)
+        Me.Logginnknapp.Location = New System.Drawing.Point(142, 167)
+        Me.Logginnknapp.Margin = New System.Windows.Forms.Padding(2)
         Me.Logginnknapp.Name = "Logginnknapp"
-        Me.Logginnknapp.Size = New System.Drawing.Size(176, 40)
+        Me.Logginnknapp.Size = New System.Drawing.Size(132, 32)
         Me.Logginnknapp.TabIndex = 4
         Me.Logginnknapp.Text = "Logg inn"
         Me.Logginnknapp.UseVisualStyleBackColor = True
         '
         'Registreringsknapp
         '
-        Me.Registreringsknapp.Location = New System.Drawing.Point(326, 186)
+        Me.Registreringsknapp.Location = New System.Drawing.Point(307, 167)
+        Me.Registreringsknapp.Margin = New System.Windows.Forms.Padding(2)
         Me.Registreringsknapp.Name = "Registreringsknapp"
-        Me.Registreringsknapp.Size = New System.Drawing.Size(129, 40)
+        Me.Registreringsknapp.Size = New System.Drawing.Size(97, 32)
         Me.Registreringsknapp.TabIndex = 5
         Me.Registreringsknapp.Text = "Registrer"
         Me.Registreringsknapp.UseVisualStyleBackColor = True
         '
         'Hjemmeside
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(779, 431)
+        Me.ClientSize = New System.Drawing.Size(584, 350)
         Me.Controls.Add(Me.Registreringsknapp)
         Me.Controls.Add(Me.Logginnknapp)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtPassord)
+        Me.Controls.Add(Me.txtBrukernavn)
         Me.Controls.Add(Me.LabelPassord)
         Me.Controls.Add(Me.LabelBrukernavn)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Hjemmeside"
         Me.Text = "Hjemmeside"
         Me.ResumeLayout(False)
@@ -100,8 +107,8 @@ Partial Class Hjemmeside
 
     Friend WithEvents LabelBrukernavn As Label
     Friend WithEvents LabelPassord As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtBrukernavn As TextBox
+    Friend WithEvents txtPassord As TextBox
     Friend WithEvents Logginnknapp As Button
     Friend WithEvents Registreringsknapp As Button
 End Class
