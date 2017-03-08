@@ -41,4 +41,8 @@ Public Class Hjemmeside
         tilkobling.Close()
         tilkobling.Dispose()
     End Sub
+
+    Private Sub txtPassord_TextChanged(sender As Object, e As EventArgs) Handles txtPassord.TextChanged
+        txtPassord.PasswordChar = "*"
+    End Sub
 End Class
