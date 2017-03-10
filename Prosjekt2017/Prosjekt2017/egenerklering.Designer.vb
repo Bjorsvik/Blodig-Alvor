@@ -179,7 +179,7 @@ Partial Class egenerklering
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(108, 9)
+        Me.Label1.Location = New System.Drawing.Point(107, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(329, 29)
         Me.Label1.TabIndex = 0
@@ -189,7 +189,7 @@ Partial Class egenerklering
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(35, 47)
+        Me.Label2.Location = New System.Drawing.Point(34, 47)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(41, 13)
         Me.Label2.TabIndex = 1
@@ -198,7 +198,7 @@ Partial Class egenerklering
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(35, 79)
+        Me.Label3.Location = New System.Drawing.Point(34, 79)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(53, 13)
         Me.Label3.TabIndex = 2
@@ -207,7 +207,7 @@ Partial Class egenerklering
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(186, 79)
+        Me.Label4.Location = New System.Drawing.Point(185, 79)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(46, 13)
         Me.Label4.TabIndex = 3
@@ -215,14 +215,14 @@ Partial Class egenerklering
         '
         'txtEtternavn
         '
-        Me.txtEtternavn.Location = New System.Drawing.Point(94, 76)
+        Me.txtEtternavn.Location = New System.Drawing.Point(93, 76)
         Me.txtEtternavn.Name = "txtEtternavn"
         Me.txtEtternavn.Size = New System.Drawing.Size(86, 20)
         Me.txtEtternavn.TabIndex = 4
         '
         'txtFornavn
         '
-        Me.txtFornavn.Location = New System.Drawing.Point(238, 76)
+        Me.txtFornavn.Location = New System.Drawing.Point(237, 76)
         Me.txtFornavn.Name = "txtFornavn"
         Me.txtFornavn.Size = New System.Drawing.Size(86, 20)
         Me.txtFornavn.TabIndex = 5
@@ -230,7 +230,7 @@ Partial Class egenerklering
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(339, 79)
+        Me.Label5.Location = New System.Drawing.Point(338, 79)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(126, 13)
         Me.Label5.TabIndex = 6
@@ -238,7 +238,7 @@ Partial Class egenerklering
         '
         'txtFodselsnummer
         '
-        Me.txtFodselsnummer.Location = New System.Drawing.Point(471, 76)
+        Me.txtFodselsnummer.Location = New System.Drawing.Point(470, 76)
         Me.txtFodselsnummer.Name = "txtFodselsnummer"
         Me.txtFodselsnummer.Size = New System.Drawing.Size(86, 20)
         Me.txtFodselsnummer.TabIndex = 7
@@ -246,7 +246,7 @@ Partial Class egenerklering
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(35, 125)
+        Me.Label6.Location = New System.Drawing.Point(34, 125)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(71, 13)
         Me.Label6.TabIndex = 8
@@ -254,7 +254,7 @@ Partial Class egenerklering
         '
         'txtPrivatAdresse
         '
-        Me.txtPrivatAdresse.Location = New System.Drawing.Point(113, 122)
+        Me.txtPrivatAdresse.Location = New System.Drawing.Point(112, 122)
         Me.txtPrivatAdresse.Name = "txtPrivatAdresse"
         Me.txtPrivatAdresse.Size = New System.Drawing.Size(211, 20)
         Me.txtPrivatAdresse.TabIndex = 9
@@ -262,7 +262,7 @@ Partial Class egenerklering
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(339, 125)
+        Me.Label7.Location = New System.Drawing.Point(338, 125)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(65, 13)
         Me.Label7.TabIndex = 10
@@ -270,7 +270,7 @@ Partial Class egenerklering
         '
         'txtPostnummer
         '
-        Me.txtPostnummer.Location = New System.Drawing.Point(410, 122)
+        Me.txtPostnummer.Location = New System.Drawing.Point(409, 122)
         Me.txtPostnummer.Name = "txtPostnummer"
         Me.txtPostnummer.Size = New System.Drawing.Size(86, 20)
         Me.txtPostnummer.TabIndex = 11
@@ -278,7 +278,7 @@ Partial Class egenerklering
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(35, 170)
+        Me.Label8.Location = New System.Drawing.Point(34, 170)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(43, 13)
         Me.Label8.TabIndex = 12
@@ -286,7 +286,7 @@ Partial Class egenerklering
         '
         'txtTelefon
         '
-        Me.txtTelefon.Location = New System.Drawing.Point(94, 167)
+        Me.txtTelefon.Location = New System.Drawing.Point(93, 167)
         Me.txtTelefon.Name = "txtTelefon"
         Me.txtTelefon.Size = New System.Drawing.Size(86, 20)
         Me.txtTelefon.TabIndex = 13
@@ -294,7 +294,7 @@ Partial Class egenerklering
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(195, 170)
+        Me.Label9.Location = New System.Drawing.Point(194, 170)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(37, 13)
         Me.Label9.TabIndex = 14
@@ -302,7 +302,7 @@ Partial Class egenerklering
         '
         'txtEpost
         '
-        Me.txtEpost.Location = New System.Drawing.Point(238, 167)
+        Me.txtEpost.Location = New System.Drawing.Point(237, 167)
         Me.txtEpost.Name = "txtEpost"
         Me.txtEpost.Size = New System.Drawing.Size(166, 20)
         Me.txtEpost.TabIndex = 15
@@ -310,7 +310,7 @@ Partial Class egenerklering
         'chkEpost
         '
         Me.chkEpost.AutoSize = True
-        Me.chkEpost.Location = New System.Drawing.Point(38, 219)
+        Me.chkEpost.Location = New System.Drawing.Point(37, 219)
         Me.chkEpost.Name = "chkEpost"
         Me.chkEpost.Size = New System.Drawing.Size(525, 17)
         Me.chkEpost.TabIndex = 18
@@ -321,7 +321,7 @@ Partial Class egenerklering
         'chkSMS
         '
         Me.chkSMS.AutoSize = True
-        Me.chkSMS.Location = New System.Drawing.Point(38, 242)
+        Me.chkSMS.Location = New System.Drawing.Point(37, 242)
         Me.chkSMS.Name = "chkSMS"
         Me.chkSMS.Size = New System.Drawing.Size(522, 17)
         Me.chkSMS.TabIndex = 19
@@ -332,7 +332,7 @@ Partial Class egenerklering
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(35, 300)
+        Me.Label10.Location = New System.Drawing.Point(34, 300)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(193, 13)
         Me.Label10.TabIndex = 20
@@ -341,7 +341,7 @@ Partial Class egenerklering
         'CheckBox3
         '
         Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(280, 299)
+        Me.CheckBox3.Location = New System.Drawing.Point(279, 299)
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox3.TabIndex = 21
@@ -350,7 +350,7 @@ Partial Class egenerklering
         'CheckBox4
         '
         Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Location = New System.Drawing.Point(304, 299)
+        Me.CheckBox4.Location = New System.Drawing.Point(303, 299)
         Me.CheckBox4.Name = "CheckBox4"
         Me.CheckBox4.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox4.TabIndex = 22
@@ -359,7 +359,7 @@ Partial Class egenerklering
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(277, 284)
+        Me.Label11.Location = New System.Drawing.Point(276, 284)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(18, 13)
         Me.Label11.TabIndex = 23
@@ -368,7 +368,7 @@ Partial Class egenerklering
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(301, 284)
+        Me.Label12.Location = New System.Drawing.Point(300, 284)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(23, 13)
         Me.Label12.TabIndex = 24
@@ -378,7 +378,7 @@ Partial Class egenerklering
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(35, 284)
+        Me.Label13.Location = New System.Drawing.Point(34, 284)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(101, 13)
         Me.Label13.TabIndex = 25
@@ -387,7 +387,7 @@ Partial Class egenerklering
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(35, 322)
+        Me.Label14.Location = New System.Drawing.Point(34, 322)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(109, 13)
         Me.Label14.TabIndex = 26
@@ -396,7 +396,7 @@ Partial Class egenerklering
         'CheckBox5
         '
         Me.CheckBox5.AutoSize = True
-        Me.CheckBox5.Location = New System.Drawing.Point(280, 321)
+        Me.CheckBox5.Location = New System.Drawing.Point(279, 321)
         Me.CheckBox5.Name = "CheckBox5"
         Me.CheckBox5.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox5.TabIndex = 27
@@ -405,7 +405,7 @@ Partial Class egenerklering
         'CheckBox6
         '
         Me.CheckBox6.AutoSize = True
-        Me.CheckBox6.Location = New System.Drawing.Point(304, 321)
+        Me.CheckBox6.Location = New System.Drawing.Point(303, 321)
         Me.CheckBox6.Name = "CheckBox6"
         Me.CheckBox6.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox6.TabIndex = 28
@@ -414,7 +414,7 @@ Partial Class egenerklering
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(35, 346)
+        Me.Label15.Location = New System.Drawing.Point(34, 346)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(177, 13)
         Me.Label15.TabIndex = 29
@@ -423,7 +423,7 @@ Partial Class egenerklering
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(35, 359)
+        Me.Label16.Location = New System.Drawing.Point(34, 359)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(210, 13)
         Me.Label16.TabIndex = 30
@@ -432,7 +432,7 @@ Partial Class egenerklering
         'CheckBox7
         '
         Me.CheckBox7.AutoSize = True
-        Me.CheckBox7.Location = New System.Drawing.Point(280, 346)
+        Me.CheckBox7.Location = New System.Drawing.Point(279, 346)
         Me.CheckBox7.Name = "CheckBox7"
         Me.CheckBox7.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox7.TabIndex = 31
@@ -441,7 +441,7 @@ Partial Class egenerklering
         'CheckBox8
         '
         Me.CheckBox8.AutoSize = True
-        Me.CheckBox8.Location = New System.Drawing.Point(304, 346)
+        Me.CheckBox8.Location = New System.Drawing.Point(303, 346)
         Me.CheckBox8.Name = "CheckBox8"
         Me.CheckBox8.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox8.TabIndex = 32
@@ -450,7 +450,7 @@ Partial Class egenerklering
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(35, 386)
+        Me.Label17.Location = New System.Drawing.Point(34, 386)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(124, 13)
         Me.Label17.TabIndex = 33
@@ -459,7 +459,7 @@ Partial Class egenerklering
         'CheckBox9
         '
         Me.CheckBox9.AutoSize = True
-        Me.CheckBox9.Location = New System.Drawing.Point(280, 385)
+        Me.CheckBox9.Location = New System.Drawing.Point(279, 385)
         Me.CheckBox9.Name = "CheckBox9"
         Me.CheckBox9.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox9.TabIndex = 34
@@ -468,7 +468,7 @@ Partial Class egenerklering
         'CheckBox10
         '
         Me.CheckBox10.AutoSize = True
-        Me.CheckBox10.Location = New System.Drawing.Point(304, 385)
+        Me.CheckBox10.Location = New System.Drawing.Point(303, 385)
         Me.CheckBox10.Name = "CheckBox10"
         Me.CheckBox10.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox10.TabIndex = 35
@@ -487,7 +487,7 @@ Partial Class egenerklering
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(35, 432)
+        Me.Label18.Location = New System.Drawing.Point(34, 432)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(201, 13)
         Me.Label18.TabIndex = 37
@@ -496,7 +496,7 @@ Partial Class egenerklering
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(35, 458)
+        Me.Label19.Location = New System.Drawing.Point(34, 458)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(85, 13)
         Me.Label19.TabIndex = 38
@@ -505,7 +505,7 @@ Partial Class egenerklering
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(35, 570)
+        Me.Label20.Location = New System.Drawing.Point(34, 570)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(85, 13)
         Me.Label20.TabIndex = 39
@@ -514,7 +514,7 @@ Partial Class egenerklering
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(35, 548)
+        Me.Label21.Location = New System.Drawing.Point(34, 548)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(171, 13)
         Me.Label21.TabIndex = 40
@@ -523,7 +523,7 @@ Partial Class egenerklering
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(35, 525)
+        Me.Label22.Location = New System.Drawing.Point(34, 525)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(71, 13)
         Me.Label22.TabIndex = 41
@@ -532,7 +532,7 @@ Partial Class egenerklering
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(35, 502)
+        Me.Label23.Location = New System.Drawing.Point(34, 502)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(90, 13)
         Me.Label23.TabIndex = 42
@@ -541,7 +541,7 @@ Partial Class egenerklering
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(35, 480)
+        Me.Label24.Location = New System.Drawing.Point(34, 480)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(125, 13)
         Me.Label24.TabIndex = 43
@@ -550,7 +550,7 @@ Partial Class egenerklering
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(280, 457)
+        Me.CheckBox1.Location = New System.Drawing.Point(279, 457)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox1.TabIndex = 44
@@ -559,7 +559,7 @@ Partial Class egenerklering
         'CheckBox2
         '
         Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(304, 525)
+        Me.CheckBox2.Location = New System.Drawing.Point(303, 525)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox2.TabIndex = 45
@@ -568,7 +568,7 @@ Partial Class egenerklering
         'CheckBox11
         '
         Me.CheckBox11.AutoSize = True
-        Me.CheckBox11.Location = New System.Drawing.Point(280, 525)
+        Me.CheckBox11.Location = New System.Drawing.Point(279, 525)
         Me.CheckBox11.Name = "CheckBox11"
         Me.CheckBox11.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox11.TabIndex = 46
@@ -577,7 +577,7 @@ Partial Class egenerklering
         'CheckBox12
         '
         Me.CheckBox12.AutoSize = True
-        Me.CheckBox12.Location = New System.Drawing.Point(304, 502)
+        Me.CheckBox12.Location = New System.Drawing.Point(303, 502)
         Me.CheckBox12.Name = "CheckBox12"
         Me.CheckBox12.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox12.TabIndex = 47
@@ -586,7 +586,7 @@ Partial Class egenerklering
         'CheckBox13
         '
         Me.CheckBox13.AutoSize = True
-        Me.CheckBox13.Location = New System.Drawing.Point(280, 502)
+        Me.CheckBox13.Location = New System.Drawing.Point(279, 502)
         Me.CheckBox13.Name = "CheckBox13"
         Me.CheckBox13.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox13.TabIndex = 48
@@ -595,7 +595,7 @@ Partial Class egenerklering
         'CheckBox14
         '
         Me.CheckBox14.AutoSize = True
-        Me.CheckBox14.Location = New System.Drawing.Point(304, 479)
+        Me.CheckBox14.Location = New System.Drawing.Point(303, 479)
         Me.CheckBox14.Name = "CheckBox14"
         Me.CheckBox14.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox14.TabIndex = 49
@@ -604,7 +604,7 @@ Partial Class egenerklering
         'CheckBox15
         '
         Me.CheckBox15.AutoSize = True
-        Me.CheckBox15.Location = New System.Drawing.Point(280, 479)
+        Me.CheckBox15.Location = New System.Drawing.Point(279, 479)
         Me.CheckBox15.Name = "CheckBox15"
         Me.CheckBox15.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox15.TabIndex = 50
@@ -613,7 +613,7 @@ Partial Class egenerklering
         'CheckBox16
         '
         Me.CheckBox16.AutoSize = True
-        Me.CheckBox16.Location = New System.Drawing.Point(304, 457)
+        Me.CheckBox16.Location = New System.Drawing.Point(303, 457)
         Me.CheckBox16.Name = "CheckBox16"
         Me.CheckBox16.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox16.TabIndex = 51
@@ -622,7 +622,7 @@ Partial Class egenerklering
         'CheckBox17
         '
         Me.CheckBox17.AutoSize = True
-        Me.CheckBox17.Location = New System.Drawing.Point(304, 570)
+        Me.CheckBox17.Location = New System.Drawing.Point(303, 570)
         Me.CheckBox17.Name = "CheckBox17"
         Me.CheckBox17.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox17.TabIndex = 52
@@ -631,7 +631,7 @@ Partial Class egenerklering
         'CheckBox18
         '
         Me.CheckBox18.AutoSize = True
-        Me.CheckBox18.Location = New System.Drawing.Point(280, 570)
+        Me.CheckBox18.Location = New System.Drawing.Point(279, 570)
         Me.CheckBox18.Name = "CheckBox18"
         Me.CheckBox18.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox18.TabIndex = 53
@@ -640,7 +640,7 @@ Partial Class egenerklering
         'CheckBox19
         '
         Me.CheckBox19.AutoSize = True
-        Me.CheckBox19.Location = New System.Drawing.Point(304, 548)
+        Me.CheckBox19.Location = New System.Drawing.Point(303, 548)
         Me.CheckBox19.Name = "CheckBox19"
         Me.CheckBox19.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox19.TabIndex = 54
@@ -649,7 +649,7 @@ Partial Class egenerklering
         'CheckBox20
         '
         Me.CheckBox20.AutoSize = True
-        Me.CheckBox20.Location = New System.Drawing.Point(280, 548)
+        Me.CheckBox20.Location = New System.Drawing.Point(279, 548)
         Me.CheckBox20.Name = "CheckBox20"
         Me.CheckBox20.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox20.TabIndex = 55
@@ -659,7 +659,7 @@ Partial Class egenerklering
         '
         Me.Label25.AutoSize = True
         Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(340, 284)
+        Me.Label25.Location = New System.Drawing.Point(339, 284)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(232, 13)
         Me.Label25.TabIndex = 56
@@ -668,7 +668,7 @@ Partial Class egenerklering
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(340, 300)
+        Me.Label26.Location = New System.Drawing.Point(339, 300)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(210, 13)
         Me.Label26.TabIndex = 57
@@ -677,7 +677,7 @@ Partial Class egenerklering
         'Label27
         '
         Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(340, 313)
+        Me.Label27.Location = New System.Drawing.Point(339, 313)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(164, 13)
         Me.Label27.TabIndex = 58
@@ -686,7 +686,7 @@ Partial Class egenerklering
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(611, 284)
+        Me.Label28.Location = New System.Drawing.Point(610, 284)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(23, 13)
         Me.Label28.TabIndex = 62
@@ -695,7 +695,7 @@ Partial Class egenerklering
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(587, 284)
+        Me.Label29.Location = New System.Drawing.Point(586, 284)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(18, 13)
         Me.Label29.TabIndex = 61
@@ -704,7 +704,7 @@ Partial Class egenerklering
         'CheckBox21
         '
         Me.CheckBox21.AutoSize = True
-        Me.CheckBox21.Location = New System.Drawing.Point(614, 299)
+        Me.CheckBox21.Location = New System.Drawing.Point(613, 299)
         Me.CheckBox21.Name = "CheckBox21"
         Me.CheckBox21.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox21.TabIndex = 60
@@ -713,7 +713,7 @@ Partial Class egenerklering
         'CheckBox22
         '
         Me.CheckBox22.AutoSize = True
-        Me.CheckBox22.Location = New System.Drawing.Point(590, 299)
+        Me.CheckBox22.Location = New System.Drawing.Point(589, 299)
         Me.CheckBox22.Name = "CheckBox22"
         Me.CheckBox22.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox22.TabIndex = 59
@@ -722,7 +722,7 @@ Partial Class egenerklering
         'Label30
         '
         Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(340, 336)
+        Me.Label30.Location = New System.Drawing.Point(339, 336)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(149, 13)
         Me.Label30.TabIndex = 63
@@ -731,7 +731,7 @@ Partial Class egenerklering
         'CheckBox23
         '
         Me.CheckBox23.AutoSize = True
-        Me.CheckBox23.Location = New System.Drawing.Point(614, 336)
+        Me.CheckBox23.Location = New System.Drawing.Point(613, 336)
         Me.CheckBox23.Name = "CheckBox23"
         Me.CheckBox23.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox23.TabIndex = 65
@@ -740,7 +740,7 @@ Partial Class egenerklering
         'CheckBox24
         '
         Me.CheckBox24.AutoSize = True
-        Me.CheckBox24.Location = New System.Drawing.Point(590, 336)
+        Me.CheckBox24.Location = New System.Drawing.Point(589, 336)
         Me.CheckBox24.Name = "CheckBox24"
         Me.CheckBox24.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox24.TabIndex = 64
@@ -749,7 +749,7 @@ Partial Class egenerklering
         'Label31
         '
         Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(340, 359)
+        Me.Label31.Location = New System.Drawing.Point(339, 359)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(210, 13)
         Me.Label31.TabIndex = 66
@@ -758,7 +758,7 @@ Partial Class egenerklering
         'Label32
         '
         Me.Label32.AutoSize = True
-        Me.Label32.Location = New System.Drawing.Point(340, 372)
+        Me.Label32.Location = New System.Drawing.Point(339, 372)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(80, 13)
         Me.Label32.TabIndex = 67
@@ -767,7 +767,7 @@ Partial Class egenerklering
         'CheckBox25
         '
         Me.CheckBox25.AutoSize = True
-        Me.CheckBox25.Location = New System.Drawing.Point(614, 359)
+        Me.CheckBox25.Location = New System.Drawing.Point(613, 359)
         Me.CheckBox25.Name = "CheckBox25"
         Me.CheckBox25.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox25.TabIndex = 69
@@ -776,7 +776,7 @@ Partial Class egenerklering
         'CheckBox26
         '
         Me.CheckBox26.AutoSize = True
-        Me.CheckBox26.Location = New System.Drawing.Point(590, 359)
+        Me.CheckBox26.Location = New System.Drawing.Point(589, 359)
         Me.CheckBox26.Name = "CheckBox26"
         Me.CheckBox26.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox26.TabIndex = 68
@@ -785,7 +785,7 @@ Partial Class egenerklering
         'Label33
         '
         Me.Label33.AutoSize = True
-        Me.Label33.Location = New System.Drawing.Point(340, 397)
+        Me.Label33.Location = New System.Drawing.Point(339, 397)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(227, 13)
         Me.Label33.TabIndex = 70
@@ -794,7 +794,7 @@ Partial Class egenerklering
         'Label34
         '
         Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(340, 410)
+        Me.Label34.Location = New System.Drawing.Point(339, 410)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(192, 13)
         Me.Label34.TabIndex = 71
@@ -803,7 +803,7 @@ Partial Class egenerklering
         'Label35
         '
         Me.Label35.AutoSize = True
-        Me.Label35.Location = New System.Drawing.Point(340, 423)
+        Me.Label35.Location = New System.Drawing.Point(339, 423)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(221, 13)
         Me.Label35.TabIndex = 72
@@ -812,7 +812,7 @@ Partial Class egenerklering
         'Label36
         '
         Me.Label36.AutoSize = True
-        Me.Label36.Location = New System.Drawing.Point(340, 436)
+        Me.Label36.Location = New System.Drawing.Point(339, 436)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(147, 13)
         Me.Label36.TabIndex = 73
@@ -821,7 +821,7 @@ Partial Class egenerklering
         'CheckBox27
         '
         Me.CheckBox27.AutoSize = True
-        Me.CheckBox27.Location = New System.Drawing.Point(614, 396)
+        Me.CheckBox27.Location = New System.Drawing.Point(613, 396)
         Me.CheckBox27.Name = "CheckBox27"
         Me.CheckBox27.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox27.TabIndex = 75
@@ -830,7 +830,7 @@ Partial Class egenerklering
         'CheckBox28
         '
         Me.CheckBox28.AutoSize = True
-        Me.CheckBox28.Location = New System.Drawing.Point(590, 396)
+        Me.CheckBox28.Location = New System.Drawing.Point(589, 396)
         Me.CheckBox28.Name = "CheckBox28"
         Me.CheckBox28.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox28.TabIndex = 74
@@ -839,7 +839,7 @@ Partial Class egenerklering
         'Label37
         '
         Me.Label37.AutoSize = True
-        Me.Label37.Location = New System.Drawing.Point(340, 458)
+        Me.Label37.Location = New System.Drawing.Point(339, 458)
         Me.Label37.Name = "Label37"
         Me.Label37.Size = New System.Drawing.Size(235, 13)
         Me.Label37.TabIndex = 76
@@ -848,7 +848,7 @@ Partial Class egenerklering
         'Label38
         '
         Me.Label38.AutoSize = True
-        Me.Label38.Location = New System.Drawing.Point(340, 471)
+        Me.Label38.Location = New System.Drawing.Point(339, 471)
         Me.Label38.Name = "Label38"
         Me.Label38.Size = New System.Drawing.Size(207, 13)
         Me.Label38.TabIndex = 77
@@ -857,7 +857,7 @@ Partial Class egenerklering
         'Label39
         '
         Me.Label39.AutoSize = True
-        Me.Label39.Location = New System.Drawing.Point(340, 484)
+        Me.Label39.Location = New System.Drawing.Point(339, 484)
         Me.Label39.Name = "Label39"
         Me.Label39.Size = New System.Drawing.Size(102, 13)
         Me.Label39.TabIndex = 78
@@ -866,7 +866,7 @@ Partial Class egenerklering
         'CheckBox29
         '
         Me.CheckBox29.AutoSize = True
-        Me.CheckBox29.Location = New System.Drawing.Point(614, 458)
+        Me.CheckBox29.Location = New System.Drawing.Point(613, 458)
         Me.CheckBox29.Name = "CheckBox29"
         Me.CheckBox29.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox29.TabIndex = 80
@@ -875,7 +875,7 @@ Partial Class egenerklering
         'CheckBox30
         '
         Me.CheckBox30.AutoSize = True
-        Me.CheckBox30.Location = New System.Drawing.Point(590, 458)
+        Me.CheckBox30.Location = New System.Drawing.Point(589, 458)
         Me.CheckBox30.Name = "CheckBox30"
         Me.CheckBox30.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox30.TabIndex = 79
@@ -884,7 +884,7 @@ Partial Class egenerklering
         'Label40
         '
         Me.Label40.AutoSize = True
-        Me.Label40.Location = New System.Drawing.Point(340, 503)
+        Me.Label40.Location = New System.Drawing.Point(339, 503)
         Me.Label40.Name = "Label40"
         Me.Label40.Size = New System.Drawing.Size(207, 13)
         Me.Label40.TabIndex = 81
@@ -893,7 +893,7 @@ Partial Class egenerklering
         'Label41
         '
         Me.Label41.AutoSize = True
-        Me.Label41.Location = New System.Drawing.Point(343, 516)
+        Me.Label41.Location = New System.Drawing.Point(342, 516)
         Me.Label41.Name = "Label41"
         Me.Label41.Size = New System.Drawing.Size(104, 13)
         Me.Label41.TabIndex = 82
@@ -902,7 +902,7 @@ Partial Class egenerklering
         'CheckBox31
         '
         Me.CheckBox31.AutoSize = True
-        Me.CheckBox31.Location = New System.Drawing.Point(614, 503)
+        Me.CheckBox31.Location = New System.Drawing.Point(613, 503)
         Me.CheckBox31.Name = "CheckBox31"
         Me.CheckBox31.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox31.TabIndex = 84
@@ -911,7 +911,7 @@ Partial Class egenerklering
         'CheckBox32
         '
         Me.CheckBox32.AutoSize = True
-        Me.CheckBox32.Location = New System.Drawing.Point(590, 503)
+        Me.CheckBox32.Location = New System.Drawing.Point(589, 503)
         Me.CheckBox32.Name = "CheckBox32"
         Me.CheckBox32.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox32.TabIndex = 83
@@ -920,7 +920,7 @@ Partial Class egenerklering
         'Label42
         '
         Me.Label42.AutoSize = True
-        Me.Label42.Location = New System.Drawing.Point(343, 538)
+        Me.Label42.Location = New System.Drawing.Point(342, 538)
         Me.Label42.Name = "Label42"
         Me.Label42.Size = New System.Drawing.Size(224, 13)
         Me.Label42.TabIndex = 85
@@ -929,7 +929,7 @@ Partial Class egenerklering
         'CheckBox33
         '
         Me.CheckBox33.AutoSize = True
-        Me.CheckBox33.Location = New System.Drawing.Point(614, 538)
+        Me.CheckBox33.Location = New System.Drawing.Point(613, 538)
         Me.CheckBox33.Name = "CheckBox33"
         Me.CheckBox33.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox33.TabIndex = 87
@@ -938,7 +938,7 @@ Partial Class egenerklering
         'CheckBox34
         '
         Me.CheckBox34.AutoSize = True
-        Me.CheckBox34.Location = New System.Drawing.Point(590, 538)
+        Me.CheckBox34.Location = New System.Drawing.Point(589, 538)
         Me.CheckBox34.Name = "CheckBox34"
         Me.CheckBox34.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox34.TabIndex = 86
@@ -947,7 +947,7 @@ Partial Class egenerklering
         'CheckBox53
         '
         Me.CheckBox53.AutoSize = True
-        Me.CheckBox53.Location = New System.Drawing.Point(280, 889)
+        Me.CheckBox53.Location = New System.Drawing.Point(279, 889)
         Me.CheckBox53.Name = "CheckBox53"
         Me.CheckBox53.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox53.TabIndex = 224
@@ -956,7 +956,7 @@ Partial Class egenerklering
         'CheckBox54
         '
         Me.CheckBox54.AutoSize = True
-        Me.CheckBox54.Location = New System.Drawing.Point(304, 889)
+        Me.CheckBox54.Location = New System.Drawing.Point(303, 889)
         Me.CheckBox54.Name = "CheckBox54"
         Me.CheckBox54.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox54.TabIndex = 223
@@ -965,7 +965,7 @@ Partial Class egenerklering
         'Label57
         '
         Me.Label57.AutoSize = True
-        Me.Label57.Location = New System.Drawing.Point(35, 889)
+        Me.Label57.Location = New System.Drawing.Point(34, 889)
         Me.Label57.Name = "Label57"
         Me.Label57.Size = New System.Drawing.Size(133, 13)
         Me.Label57.TabIndex = 222
@@ -974,7 +974,7 @@ Partial Class egenerklering
         'CheckBox51
         '
         Me.CheckBox51.AutoSize = True
-        Me.CheckBox51.Location = New System.Drawing.Point(280, 866)
+        Me.CheckBox51.Location = New System.Drawing.Point(279, 866)
         Me.CheckBox51.Name = "CheckBox51"
         Me.CheckBox51.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox51.TabIndex = 221
@@ -983,7 +983,7 @@ Partial Class egenerklering
         'CheckBox52
         '
         Me.CheckBox52.AutoSize = True
-        Me.CheckBox52.Location = New System.Drawing.Point(304, 866)
+        Me.CheckBox52.Location = New System.Drawing.Point(303, 866)
         Me.CheckBox52.Name = "CheckBox52"
         Me.CheckBox52.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox52.TabIndex = 220
@@ -992,7 +992,7 @@ Partial Class egenerklering
         'Label56
         '
         Me.Label56.AutoSize = True
-        Me.Label56.Location = New System.Drawing.Point(35, 866)
+        Me.Label56.Location = New System.Drawing.Point(34, 866)
         Me.Label56.Name = "Label56"
         Me.Label56.Size = New System.Drawing.Size(119, 13)
         Me.Label56.TabIndex = 219
@@ -1001,7 +1001,7 @@ Partial Class egenerklering
         'CheckBox49
         '
         Me.CheckBox49.AutoSize = True
-        Me.CheckBox49.Location = New System.Drawing.Point(280, 828)
+        Me.CheckBox49.Location = New System.Drawing.Point(279, 828)
         Me.CheckBox49.Name = "CheckBox49"
         Me.CheckBox49.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox49.TabIndex = 218
@@ -1010,7 +1010,7 @@ Partial Class egenerklering
         'CheckBox50
         '
         Me.CheckBox50.AutoSize = True
-        Me.CheckBox50.Location = New System.Drawing.Point(304, 828)
+        Me.CheckBox50.Location = New System.Drawing.Point(303, 828)
         Me.CheckBox50.Name = "CheckBox50"
         Me.CheckBox50.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox50.TabIndex = 217
@@ -1019,7 +1019,7 @@ Partial Class egenerklering
         'Label54
         '
         Me.Label54.AutoSize = True
-        Me.Label54.Location = New System.Drawing.Point(35, 828)
+        Me.Label54.Location = New System.Drawing.Point(34, 828)
         Me.Label54.Name = "Label54"
         Me.Label54.Size = New System.Drawing.Size(220, 13)
         Me.Label54.TabIndex = 216
@@ -1028,7 +1028,7 @@ Partial Class egenerklering
         'Label55
         '
         Me.Label55.AutoSize = True
-        Me.Label55.Location = New System.Drawing.Point(35, 841)
+        Me.Label55.Location = New System.Drawing.Point(34, 841)
         Me.Label55.Name = "Label55"
         Me.Label55.Size = New System.Drawing.Size(215, 13)
         Me.Label55.TabIndex = 215
@@ -1037,7 +1037,7 @@ Partial Class egenerklering
         'CheckBox47
         '
         Me.CheckBox47.AutoSize = True
-        Me.CheckBox47.Location = New System.Drawing.Point(280, 805)
+        Me.CheckBox47.Location = New System.Drawing.Point(279, 805)
         Me.CheckBox47.Name = "CheckBox47"
         Me.CheckBox47.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox47.TabIndex = 214
@@ -1046,7 +1046,7 @@ Partial Class egenerklering
         'CheckBox48
         '
         Me.CheckBox48.AutoSize = True
-        Me.CheckBox48.Location = New System.Drawing.Point(304, 805)
+        Me.CheckBox48.Location = New System.Drawing.Point(303, 805)
         Me.CheckBox48.Name = "CheckBox48"
         Me.CheckBox48.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox48.TabIndex = 213
@@ -1055,7 +1055,7 @@ Partial Class egenerklering
         'Label53
         '
         Me.Label53.AutoSize = True
-        Me.Label53.Location = New System.Drawing.Point(35, 805)
+        Me.Label53.Location = New System.Drawing.Point(34, 805)
         Me.Label53.Name = "Label53"
         Me.Label53.Size = New System.Drawing.Size(191, 13)
         Me.Label53.TabIndex = 212
@@ -1064,7 +1064,7 @@ Partial Class egenerklering
         'Label51
         '
         Me.Label51.AutoSize = True
-        Me.Label51.Location = New System.Drawing.Point(35, 770)
+        Me.Label51.Location = New System.Drawing.Point(34, 770)
         Me.Label51.Name = "Label51"
         Me.Label51.Size = New System.Drawing.Size(210, 13)
         Me.Label51.TabIndex = 211
@@ -1082,7 +1082,7 @@ Partial Class egenerklering
         'Label50
         '
         Me.Label50.AutoSize = True
-        Me.Label50.Location = New System.Drawing.Point(35, 747)
+        Me.Label50.Location = New System.Drawing.Point(34, 747)
         Me.Label50.Name = "Label50"
         Me.Label50.Size = New System.Drawing.Size(82, 13)
         Me.Label50.TabIndex = 209
@@ -1091,7 +1091,7 @@ Partial Class egenerklering
         'CheckBox35
         '
         Me.CheckBox35.AutoSize = True
-        Me.CheckBox35.Location = New System.Drawing.Point(280, 747)
+        Me.CheckBox35.Location = New System.Drawing.Point(279, 747)
         Me.CheckBox35.Name = "CheckBox35"
         Me.CheckBox35.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox35.TabIndex = 208
@@ -1100,7 +1100,7 @@ Partial Class egenerklering
         'CheckBox36
         '
         Me.CheckBox36.AutoSize = True
-        Me.CheckBox36.Location = New System.Drawing.Point(304, 747)
+        Me.CheckBox36.Location = New System.Drawing.Point(303, 747)
         Me.CheckBox36.Name = "CheckBox36"
         Me.CheckBox36.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox36.TabIndex = 207
@@ -1109,7 +1109,7 @@ Partial Class egenerklering
         'CheckBox37
         '
         Me.CheckBox37.AutoSize = True
-        Me.CheckBox37.Location = New System.Drawing.Point(280, 770)
+        Me.CheckBox37.Location = New System.Drawing.Point(279, 770)
         Me.CheckBox37.Name = "CheckBox37"
         Me.CheckBox37.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox37.TabIndex = 206
@@ -1118,7 +1118,7 @@ Partial Class egenerklering
         'CheckBox38
         '
         Me.CheckBox38.AutoSize = True
-        Me.CheckBox38.Location = New System.Drawing.Point(304, 770)
+        Me.CheckBox38.Location = New System.Drawing.Point(303, 770)
         Me.CheckBox38.Name = "CheckBox38"
         Me.CheckBox38.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox38.TabIndex = 205
@@ -1127,7 +1127,7 @@ Partial Class egenerklering
         'CheckBox39
         '
         Me.CheckBox39.AutoSize = True
-        Me.CheckBox39.Location = New System.Drawing.Point(304, 631)
+        Me.CheckBox39.Location = New System.Drawing.Point(303, 631)
         Me.CheckBox39.Name = "CheckBox39"
         Me.CheckBox39.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox39.TabIndex = 204
@@ -1136,7 +1136,7 @@ Partial Class egenerklering
         'CheckBox40
         '
         Me.CheckBox40.AutoSize = True
-        Me.CheckBox40.Location = New System.Drawing.Point(280, 653)
+        Me.CheckBox40.Location = New System.Drawing.Point(279, 653)
         Me.CheckBox40.Name = "CheckBox40"
         Me.CheckBox40.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox40.TabIndex = 203
@@ -1145,7 +1145,7 @@ Partial Class egenerklering
         'CheckBox41
         '
         Me.CheckBox41.AutoSize = True
-        Me.CheckBox41.Location = New System.Drawing.Point(304, 653)
+        Me.CheckBox41.Location = New System.Drawing.Point(303, 653)
         Me.CheckBox41.Name = "CheckBox41"
         Me.CheckBox41.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox41.TabIndex = 202
@@ -1154,7 +1154,7 @@ Partial Class egenerklering
         'CheckBox42
         '
         Me.CheckBox42.AutoSize = True
-        Me.CheckBox42.Location = New System.Drawing.Point(280, 689)
+        Me.CheckBox42.Location = New System.Drawing.Point(279, 689)
         Me.CheckBox42.Name = "CheckBox42"
         Me.CheckBox42.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox42.TabIndex = 201
@@ -1163,7 +1163,7 @@ Partial Class egenerklering
         'CheckBox43
         '
         Me.CheckBox43.AutoSize = True
-        Me.CheckBox43.Location = New System.Drawing.Point(304, 689)
+        Me.CheckBox43.Location = New System.Drawing.Point(303, 689)
         Me.CheckBox43.Name = "CheckBox43"
         Me.CheckBox43.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox43.TabIndex = 200
@@ -1172,7 +1172,7 @@ Partial Class egenerklering
         'CheckBox44
         '
         Me.CheckBox44.AutoSize = True
-        Me.CheckBox44.Location = New System.Drawing.Point(280, 724)
+        Me.CheckBox44.Location = New System.Drawing.Point(279, 724)
         Me.CheckBox44.Name = "CheckBox44"
         Me.CheckBox44.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox44.TabIndex = 199
@@ -1181,7 +1181,7 @@ Partial Class egenerklering
         'CheckBox45
         '
         Me.CheckBox45.AutoSize = True
-        Me.CheckBox45.Location = New System.Drawing.Point(304, 724)
+        Me.CheckBox45.Location = New System.Drawing.Point(303, 724)
         Me.CheckBox45.Name = "CheckBox45"
         Me.CheckBox45.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox45.TabIndex = 198
@@ -1190,7 +1190,7 @@ Partial Class egenerklering
         'CheckBox46
         '
         Me.CheckBox46.AutoSize = True
-        Me.CheckBox46.Location = New System.Drawing.Point(280, 631)
+        Me.CheckBox46.Location = New System.Drawing.Point(279, 631)
         Me.CheckBox46.Name = "CheckBox46"
         Me.CheckBox46.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox46.TabIndex = 197
@@ -1199,7 +1199,7 @@ Partial Class egenerklering
         'Label43
         '
         Me.Label43.AutoSize = True
-        Me.Label43.Location = New System.Drawing.Point(35, 653)
+        Me.Label43.Location = New System.Drawing.Point(34, 653)
         Me.Label43.Name = "Label43"
         Me.Label43.Size = New System.Drawing.Size(214, 13)
         Me.Label43.TabIndex = 196
@@ -1208,7 +1208,7 @@ Partial Class egenerklering
         'Label44
         '
         Me.Label44.AutoSize = True
-        Me.Label44.Location = New System.Drawing.Point(35, 666)
+        Me.Label44.Location = New System.Drawing.Point(34, 666)
         Me.Label44.Name = "Label44"
         Me.Label44.Size = New System.Drawing.Size(217, 13)
         Me.Label44.TabIndex = 195
@@ -1217,7 +1217,7 @@ Partial Class egenerklering
         'Label45
         '
         Me.Label45.AutoSize = True
-        Me.Label45.Location = New System.Drawing.Point(35, 689)
+        Me.Label45.Location = New System.Drawing.Point(34, 689)
         Me.Label45.Name = "Label45"
         Me.Label45.Size = New System.Drawing.Size(194, 13)
         Me.Label45.TabIndex = 194
@@ -1226,7 +1226,7 @@ Partial Class egenerklering
         'Label46
         '
         Me.Label46.AutoSize = True
-        Me.Label46.Location = New System.Drawing.Point(35, 702)
+        Me.Label46.Location = New System.Drawing.Point(34, 702)
         Me.Label46.Name = "Label46"
         Me.Label46.Size = New System.Drawing.Size(98, 13)
         Me.Label46.TabIndex = 193
@@ -1235,7 +1235,7 @@ Partial Class egenerklering
         'Label47
         '
         Me.Label47.AutoSize = True
-        Me.Label47.Location = New System.Drawing.Point(35, 724)
+        Me.Label47.Location = New System.Drawing.Point(34, 724)
         Me.Label47.Name = "Label47"
         Me.Label47.Size = New System.Drawing.Size(209, 13)
         Me.Label47.TabIndex = 192
@@ -1244,7 +1244,7 @@ Partial Class egenerklering
         'Label48
         '
         Me.Label48.AutoSize = True
-        Me.Label48.Location = New System.Drawing.Point(35, 631)
+        Me.Label48.Location = New System.Drawing.Point(34, 631)
         Me.Label48.Name = "Label48"
         Me.Label48.Size = New System.Drawing.Size(88, 13)
         Me.Label48.TabIndex = 191
@@ -1254,7 +1254,7 @@ Partial Class egenerklering
         '
         Me.Label49.AutoSize = True
         Me.Label49.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label49.Location = New System.Drawing.Point(35, 605)
+        Me.Label49.Location = New System.Drawing.Point(34, 605)
         Me.Label49.Name = "Label49"
         Me.Label49.Size = New System.Drawing.Size(232, 13)
         Me.Label49.TabIndex = 190
@@ -1264,7 +1264,7 @@ Partial Class egenerklering
         '
         Me.Label58.AutoSize = True
         Me.Label58.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label58.Location = New System.Drawing.Point(343, 605)
+        Me.Label58.Location = New System.Drawing.Point(342, 605)
         Me.Label58.Name = "Label58"
         Me.Label58.Size = New System.Drawing.Size(123, 13)
         Me.Label58.TabIndex = 225
@@ -1273,7 +1273,7 @@ Partial Class egenerklering
         'Label59
         '
         Me.Label59.AutoSize = True
-        Me.Label59.Location = New System.Drawing.Point(343, 631)
+        Me.Label59.Location = New System.Drawing.Point(342, 631)
         Me.Label59.Name = "Label59"
         Me.Label59.Size = New System.Drawing.Size(70, 13)
         Me.Label59.TabIndex = 226
@@ -1282,7 +1282,7 @@ Partial Class egenerklering
         'CheckBox55
         '
         Me.CheckBox55.AutoSize = True
-        Me.CheckBox55.Location = New System.Drawing.Point(614, 631)
+        Me.CheckBox55.Location = New System.Drawing.Point(613, 631)
         Me.CheckBox55.Name = "CheckBox55"
         Me.CheckBox55.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox55.TabIndex = 234
@@ -1291,7 +1291,7 @@ Partial Class egenerklering
         'CheckBox56
         '
         Me.CheckBox56.AutoSize = True
-        Me.CheckBox56.Location = New System.Drawing.Point(590, 653)
+        Me.CheckBox56.Location = New System.Drawing.Point(589, 653)
         Me.CheckBox56.Name = "CheckBox56"
         Me.CheckBox56.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox56.TabIndex = 233
@@ -1300,7 +1300,7 @@ Partial Class egenerklering
         'CheckBox57
         '
         Me.CheckBox57.AutoSize = True
-        Me.CheckBox57.Location = New System.Drawing.Point(614, 653)
+        Me.CheckBox57.Location = New System.Drawing.Point(613, 653)
         Me.CheckBox57.Name = "CheckBox57"
         Me.CheckBox57.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox57.TabIndex = 232
@@ -1309,7 +1309,7 @@ Partial Class egenerklering
         'CheckBox58
         '
         Me.CheckBox58.AutoSize = True
-        Me.CheckBox58.Location = New System.Drawing.Point(590, 689)
+        Me.CheckBox58.Location = New System.Drawing.Point(589, 689)
         Me.CheckBox58.Name = "CheckBox58"
         Me.CheckBox58.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox58.TabIndex = 231
@@ -1318,7 +1318,7 @@ Partial Class egenerklering
         'CheckBox59
         '
         Me.CheckBox59.AutoSize = True
-        Me.CheckBox59.Location = New System.Drawing.Point(614, 689)
+        Me.CheckBox59.Location = New System.Drawing.Point(613, 689)
         Me.CheckBox59.Name = "CheckBox59"
         Me.CheckBox59.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox59.TabIndex = 230
@@ -1327,7 +1327,7 @@ Partial Class egenerklering
         'CheckBox60
         '
         Me.CheckBox60.AutoSize = True
-        Me.CheckBox60.Location = New System.Drawing.Point(590, 724)
+        Me.CheckBox60.Location = New System.Drawing.Point(589, 724)
         Me.CheckBox60.Name = "CheckBox60"
         Me.CheckBox60.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox60.TabIndex = 229
@@ -1336,7 +1336,7 @@ Partial Class egenerklering
         'CheckBox61
         '
         Me.CheckBox61.AutoSize = True
-        Me.CheckBox61.Location = New System.Drawing.Point(614, 724)
+        Me.CheckBox61.Location = New System.Drawing.Point(613, 724)
         Me.CheckBox61.Name = "CheckBox61"
         Me.CheckBox61.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox61.TabIndex = 228
@@ -1345,7 +1345,7 @@ Partial Class egenerklering
         'CheckBox62
         '
         Me.CheckBox62.AutoSize = True
-        Me.CheckBox62.Location = New System.Drawing.Point(590, 631)
+        Me.CheckBox62.Location = New System.Drawing.Point(589, 631)
         Me.CheckBox62.Name = "CheckBox62"
         Me.CheckBox62.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox62.TabIndex = 227
@@ -1354,7 +1354,7 @@ Partial Class egenerklering
         'Label60
         '
         Me.Label60.AutoSize = True
-        Me.Label60.Location = New System.Drawing.Point(343, 653)
+        Me.Label60.Location = New System.Drawing.Point(342, 653)
         Me.Label60.Name = "Label60"
         Me.Label60.Size = New System.Drawing.Size(201, 13)
         Me.Label60.TabIndex = 236
@@ -1363,7 +1363,7 @@ Partial Class egenerklering
         'Label61
         '
         Me.Label61.AutoSize = True
-        Me.Label61.Location = New System.Drawing.Point(343, 666)
+        Me.Label61.Location = New System.Drawing.Point(342, 666)
         Me.Label61.Name = "Label61"
         Me.Label61.Size = New System.Drawing.Size(143, 13)
         Me.Label61.TabIndex = 235
@@ -1372,7 +1372,7 @@ Partial Class egenerklering
         'Label62
         '
         Me.Label62.AutoSize = True
-        Me.Label62.Location = New System.Drawing.Point(343, 689)
+        Me.Label62.Location = New System.Drawing.Point(342, 689)
         Me.Label62.Name = "Label62"
         Me.Label62.Size = New System.Drawing.Size(179, 13)
         Me.Label62.TabIndex = 238
@@ -1381,7 +1381,7 @@ Partial Class egenerklering
         'Label63
         '
         Me.Label63.AutoSize = True
-        Me.Label63.Location = New System.Drawing.Point(343, 702)
+        Me.Label63.Location = New System.Drawing.Point(342, 702)
         Me.Label63.Name = "Label63"
         Me.Label63.Size = New System.Drawing.Size(159, 13)
         Me.Label63.TabIndex = 237
@@ -1390,7 +1390,7 @@ Partial Class egenerklering
         'Label64
         '
         Me.Label64.AutoSize = True
-        Me.Label64.Location = New System.Drawing.Point(343, 750)
+        Me.Label64.Location = New System.Drawing.Point(342, 750)
         Me.Label64.Name = "Label64"
         Me.Label64.Size = New System.Drawing.Size(193, 13)
         Me.Label64.TabIndex = 241
@@ -1399,7 +1399,7 @@ Partial Class egenerklering
         'Label65
         '
         Me.Label65.AutoSize = True
-        Me.Label65.Location = New System.Drawing.Point(343, 737)
+        Me.Label65.Location = New System.Drawing.Point(342, 737)
         Me.Label65.Name = "Label65"
         Me.Label65.Size = New System.Drawing.Size(224, 13)
         Me.Label65.TabIndex = 240
@@ -1408,7 +1408,7 @@ Partial Class egenerklering
         'Label66
         '
         Me.Label66.AutoSize = True
-        Me.Label66.Location = New System.Drawing.Point(343, 724)
+        Me.Label66.Location = New System.Drawing.Point(342, 724)
         Me.Label66.Name = "Label66"
         Me.Label66.Size = New System.Drawing.Size(214, 13)
         Me.Label66.TabIndex = 239
@@ -1427,7 +1427,7 @@ Partial Class egenerklering
         'Label68
         '
         Me.Label68.AutoSize = True
-        Me.Label68.Location = New System.Drawing.Point(301, 432)
+        Me.Label68.Location = New System.Drawing.Point(300, 432)
         Me.Label68.Name = "Label68"
         Me.Label68.Size = New System.Drawing.Size(23, 13)
         Me.Label68.TabIndex = 244
@@ -1436,7 +1436,7 @@ Partial Class egenerklering
         'Label69
         '
         Me.Label69.AutoSize = True
-        Me.Label69.Location = New System.Drawing.Point(277, 432)
+        Me.Label69.Location = New System.Drawing.Point(276, 432)
         Me.Label69.Name = "Label69"
         Me.Label69.Size = New System.Drawing.Size(18, 13)
         Me.Label69.TabIndex = 243
@@ -1445,7 +1445,7 @@ Partial Class egenerklering
         'Label70
         '
         Me.Label70.AutoSize = True
-        Me.Label70.Location = New System.Drawing.Point(301, 605)
+        Me.Label70.Location = New System.Drawing.Point(300, 605)
         Me.Label70.Name = "Label70"
         Me.Label70.Size = New System.Drawing.Size(23, 13)
         Me.Label70.TabIndex = 246
@@ -1454,7 +1454,7 @@ Partial Class egenerklering
         'Label71
         '
         Me.Label71.AutoSize = True
-        Me.Label71.Location = New System.Drawing.Point(277, 605)
+        Me.Label71.Location = New System.Drawing.Point(276, 605)
         Me.Label71.Name = "Label71"
         Me.Label71.Size = New System.Drawing.Size(18, 13)
         Me.Label71.TabIndex = 245
@@ -1463,7 +1463,7 @@ Partial Class egenerklering
         'Label72
         '
         Me.Label72.AutoSize = True
-        Me.Label72.Location = New System.Drawing.Point(611, 605)
+        Me.Label72.Location = New System.Drawing.Point(610, 605)
         Me.Label72.Name = "Label72"
         Me.Label72.Size = New System.Drawing.Size(23, 13)
         Me.Label72.TabIndex = 248
@@ -1472,7 +1472,7 @@ Partial Class egenerklering
         'Label73
         '
         Me.Label73.AutoSize = True
-        Me.Label73.Location = New System.Drawing.Point(587, 605)
+        Me.Label73.Location = New System.Drawing.Point(586, 605)
         Me.Label73.Name = "Label73"
         Me.Label73.Size = New System.Drawing.Size(18, 13)
         Me.Label73.TabIndex = 247
@@ -1499,7 +1499,7 @@ Partial Class egenerklering
         'Label76
         '
         Me.Label76.AutoSize = True
-        Me.Label76.Location = New System.Drawing.Point(343, 805)
+        Me.Label76.Location = New System.Drawing.Point(342, 805)
         Me.Label76.Name = "Label76"
         Me.Label76.Size = New System.Drawing.Size(228, 13)
         Me.Label76.TabIndex = 252
@@ -1508,7 +1508,7 @@ Partial Class egenerklering
         'CheckBox63
         '
         Me.CheckBox63.AutoSize = True
-        Me.CheckBox63.Location = New System.Drawing.Point(590, 805)
+        Me.CheckBox63.Location = New System.Drawing.Point(589, 805)
         Me.CheckBox63.Name = "CheckBox63"
         Me.CheckBox63.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox63.TabIndex = 254
@@ -1517,7 +1517,7 @@ Partial Class egenerklering
         'CheckBox64
         '
         Me.CheckBox64.AutoSize = True
-        Me.CheckBox64.Location = New System.Drawing.Point(614, 805)
+        Me.CheckBox64.Location = New System.Drawing.Point(613, 805)
         Me.CheckBox64.Name = "CheckBox64"
         Me.CheckBox64.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox64.TabIndex = 253
@@ -1528,7 +1528,7 @@ Partial Class egenerklering
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(692, 809)
+        Me.ClientSize = New System.Drawing.Size(671, 463)
         Me.Controls.Add(Me.CheckBox63)
         Me.Controls.Add(Me.CheckBox64)
         Me.Controls.Add(Me.Label76)
