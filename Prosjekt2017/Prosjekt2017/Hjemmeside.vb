@@ -28,8 +28,7 @@ Public Class Hjemmeside
             MsgBox("Brukeren er logget på")
             Reservasjon.Show()
             Me.Hide()
-            'ElseIf 
-            'Dim sqlSporringAnsatte = "select * from ansatte"
+
 
         End If
 
