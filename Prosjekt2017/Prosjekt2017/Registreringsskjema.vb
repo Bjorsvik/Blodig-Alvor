@@ -8,6 +8,7 @@ Public Class Registreringsskjema
     Private Sub btnRegistrer_Click(sender As Object, e As EventArgs) Handles btnRegistrer.Click
         Dim brukernavn = txtBrukernavn.Text
         Dim passord = txtPassord.Text
+        Dim bpassord = txtBekreftPassord.Text
         Dim fornavn = txtFornavn.Text
         Dim etternavn = txtEtternavn.Text
         Dim fodselsdato = txtFodselsdato.Text
@@ -16,37 +17,40 @@ Public Class Registreringsskjema
         Dim postnummer = txtPostnummer.Text
         Dim poststed = txtPoststed.Text
 
-        Dim sqlSporring = "insert into blodgiver (brukernavn, passord, fornavn, etternavn, fodselsdato,
+        If bpassord IsNot passord Then
+            MsgBox("Passordene er ikke like")
+        Else
+            Dim sqlSporring = "insert into blodgiver (brukernavn, passord, fornavn, etternavn, fodselsdato,
                            telefon, adresse, postnummer, poststed) values (@brukernavn, @passord, @fornavn, 
                            @etternavn, @fodselsdato, @telefon, @adresse, @postnummer, @poststed)"
 
-        Dim sqlSporringBrukernavn = "select * from blodgiver where brukernavn=@brukernavn"
+            Dim sqlSporringBrukernavn = "select * from blodgiver where brukernavn=@brukernavn"
 
-        Dim sqlRegistrer As New MySqlCommand(sqlSporring, tilkobling)
+            Dim sqlRegistrer As New MySqlCommand(sqlSporring, tilkobling)
 
-        Dim sqlSjekk As New MySqlCommand(sqlSporringBrukernavn, tilkobling)
-        sqlSjekk.Parameters.AddWithValue("@brukernavn", brukernavn)
+            Dim sqlSjekk As New MySqlCommand(sqlSporringBrukernavn, tilkobling)
+            sqlSjekk.Parameters.AddWithValue("@brukernavn", brukernavn)
 
 
-        Dim reader = sqlSjekk.ExecuteReader()
-        If reader.HasRows Then
-            MsgBox("Brukernavnet er tatt")
-            reader.Close()
-        Else
-            sqlRegistrer.Parameters.AddWithValue("@brukernavn", brukernavn)
-            sqlRegistrer.Parameters.AddWithValue("@passord", passord)
-            sqlRegistrer.Parameters.AddWithValue("@fornavn", fornavn)
-            sqlRegistrer.Parameters.AddWithValue("@etternavn", etternavn)
-            sqlRegistrer.Parameters.AddWithValue("@fodselsdato", fodselsdato)
-            sqlRegistrer.Parameters.AddWithValue("@telefon", telefon)
-            sqlRegistrer.Parameters.AddWithValue("@adresse", adresse)
-            sqlRegistrer.Parameters.AddWithValue("@postnummer", postnummer)
-            sqlRegistrer.Parameters.AddWithValue("@poststed", poststed)
-            sqlRegistrer.ExecuteNonQuery()
-            Me.Close()
+            Dim reader = sqlSjekk.ExecuteReader()
+            If reader.HasRows Then
+                MsgBox("Brukernavnet er tatt")
+                reader.Close()
+            Else
+                reader.Close()
+                sqlRegistrer.Parameters.AddWithValue("@brukernavn", brukernavn)
+                sqlRegistrer.Parameters.AddWithValue("@passord", passord)
+                sqlRegistrer.Parameters.AddWithValue("@fornavn", fornavn)
+                sqlRegistrer.Parameters.AddWithValue("@etternavn", etternavn)
+                sqlRegistrer.Parameters.AddWithValue("@fodselsdato", fodselsdato)
+                sqlRegistrer.Parameters.AddWithValue("@telefon", telefon)
+                sqlRegistrer.Parameters.AddWithValue("@adresse", adresse)
+                sqlRegistrer.Parameters.AddWithValue("@postnummer", postnummer)
+                sqlRegistrer.Parameters.AddWithValue("@poststed", poststed)
+                sqlRegistrer.ExecuteNonQuery()
+                Me.Close()
+            End If
         End If
-
-
 
     End Sub
 
@@ -57,5 +61,13 @@ Public Class Registreringsskjema
     Private Sub Registreringsskjema_Close(sender As Object, e As EventArgs) Handles MyBase.Closed
         tilkobling.Close()
         tilkobling.Dispose()
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub txtBekreftPassord_TextChanged(sender As Object, e As EventArgs) Handles txtBekreftPassord.TextChanged
+        txtBekreftPassord.PasswordChar = "*"
     End Sub
 End Class

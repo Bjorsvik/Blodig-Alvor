@@ -41,6 +41,8 @@ Partial Class Registreringsskjema
         Me.txtPassord = New System.Windows.Forms.TextBox()
         Me.lbBrukernavn = New System.Windows.Forms.Label()
         Me.lbPassord = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtBekreftPassord = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'lblFornavn
@@ -196,11 +198,29 @@ Partial Class Registreringsskjema
         Me.lbPassord.TabIndex = 18
         Me.lbPassord.Text = "Passord"
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(18, 338)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(81, 13)
+        Me.Label1.TabIndex = 19
+        Me.Label1.Text = "Bekreft passord"
+        '
+        'txtBekreftPassord
+        '
+        Me.txtBekreftPassord.Location = New System.Drawing.Point(105, 335)
+        Me.txtBekreftPassord.Name = "txtBekreftPassord"
+        Me.txtBekreftPassord.Size = New System.Drawing.Size(100, 20)
+        Me.txtBekreftPassord.TabIndex = 20
+        '
         'Registreringsskjema
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(422, 388)
+        Me.Controls.Add(Me.txtBekreftPassord)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lbPassord)
         Me.Controls.Add(Me.lbBrukernavn)
         Me.Controls.Add(Me.txtPassord)
@@ -246,4 +266,6 @@ Partial Class Registreringsskjema
     Friend WithEvents txtPassord As TextBox
     Friend WithEvents lbBrukernavn As Label
     Friend WithEvents lbPassord As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents txtBekreftPassord As TextBox
 End Class
