@@ -90,7 +90,7 @@ Partial Class Hjemmeside
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(584, 350)
+        Me.ClientSize = New System.Drawing.Size(560, 309)
         Me.Controls.Add(Me.Registreringsknapp)
         Me.Controls.Add(Me.Logginnknapp)
         Me.Controls.Add(Me.txtPassord)

@@ -28,8 +28,7 @@ Public Class Hjemmeside
             MsgBox("Brukeren er logget på")
             Reservasjon.Show()
             Me.Hide()
-            'ElseIf 
-            'Dim sqlSporringAnsatte = "select * from ansatte"
+
 
         End If
 
@@ -40,5 +39,9 @@ Public Class Hjemmeside
     Private Sub Hjemmeside_Closed(sender As Object, e As EventArgs) Handles MyBase.Closed
         tilkobling.Close()
         tilkobling.Dispose()
+    End Sub
+
+    Private Sub txtPassord_TextChanged(sender As Object, e As EventArgs) Handles txtPassord.TextChanged
+        txtPassord.PasswordChar = "*"
     End Sub
 End Class

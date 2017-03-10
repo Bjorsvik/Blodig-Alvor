@@ -76,6 +76,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="egenerklering.Designer.vb">
+      <DependentUpon>egenerklering.vb</DependentUpon>
+    </Compile>
+    <Compile Include="egenerklering.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Registreringsskjema.Designer.vb">
       <DependentUpon>Registreringsskjema.vb</DependentUpon>
     </Compile>
@@ -112,6 +118,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="egenerklering.resx">
+      <DependentUpon>egenerklering.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registreringsskjema.resx">
       <DependentUpon>Registreringsskjema.vb</DependentUpon>
     </EmbeddedResource>
