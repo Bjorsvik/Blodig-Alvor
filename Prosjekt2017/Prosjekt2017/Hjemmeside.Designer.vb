@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Hjemmeside
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Hjemmeside
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.LabelBrukernavn = New System.Windows.Forms.Label()
         Me.LabelPassord = New System.Windows.Forms.Label()
@@ -33,7 +33,7 @@ Partial Class Hjemmeside
         'LabelBrukernavn
         '
         Me.LabelBrukernavn.AutoSize = True
-        Me.LabelBrukernavn.Location = New System.Drawing.Point(156, 86)
+        Me.LabelBrukernavn.Location = New System.Drawing.Point(119, 73)
         Me.LabelBrukernavn.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LabelBrukernavn.Name = "LabelBrukernavn"
         Me.LabelBrukernavn.Size = New System.Drawing.Size(62, 13)
@@ -43,7 +43,7 @@ Partial Class Hjemmeside
         'LabelPassord
         '
         Me.LabelPassord.AutoSize = True
-        Me.LabelPassord.Location = New System.Drawing.Point(156, 121)
+        Me.LabelPassord.Location = New System.Drawing.Point(119, 108)
         Me.LabelPassord.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LabelPassord.Name = "LabelPassord"
         Me.LabelPassord.Size = New System.Drawing.Size(45, 13)
@@ -52,7 +52,7 @@ Partial Class Hjemmeside
         '
         'txtBrukernavn
         '
-        Me.txtBrukernavn.Location = New System.Drawing.Point(262, 86)
+        Me.txtBrukernavn.Location = New System.Drawing.Point(225, 73)
         Me.txtBrukernavn.Margin = New System.Windows.Forms.Padding(2)
         Me.txtBrukernavn.Name = "txtBrukernavn"
         Me.txtBrukernavn.Size = New System.Drawing.Size(133, 20)
@@ -60,7 +60,7 @@ Partial Class Hjemmeside
         '
         'txtPassord
         '
-        Me.txtPassord.Location = New System.Drawing.Point(262, 118)
+        Me.txtPassord.Location = New System.Drawing.Point(225, 105)
         Me.txtPassord.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPassord.Name = "txtPassord"
         Me.txtPassord.Size = New System.Drawing.Size(133, 20)
@@ -68,7 +68,7 @@ Partial Class Hjemmeside
         '
         'Logginnknapp
         '
-        Me.Logginnknapp.Location = New System.Drawing.Point(142, 167)
+        Me.Logginnknapp.Location = New System.Drawing.Point(105, 154)
         Me.Logginnknapp.Margin = New System.Windows.Forms.Padding(2)
         Me.Logginnknapp.Name = "Logginnknapp"
         Me.Logginnknapp.Size = New System.Drawing.Size(132, 32)
@@ -78,7 +78,7 @@ Partial Class Hjemmeside
         '
         'Registreringsknapp
         '
-        Me.Registreringsknapp.Location = New System.Drawing.Point(307, 167)
+        Me.Registreringsknapp.Location = New System.Drawing.Point(270, 154)
         Me.Registreringsknapp.Margin = New System.Windows.Forms.Padding(2)
         Me.Registreringsknapp.Name = "Registreringsknapp"
         Me.Registreringsknapp.Size = New System.Drawing.Size(97, 32)
@@ -90,7 +90,7 @@ Partial Class Hjemmeside
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(560, 309)
+        Me.ClientSize = New System.Drawing.Size(482, 265)
         Me.Controls.Add(Me.Registreringsknapp)
         Me.Controls.Add(Me.Logginnknapp)
         Me.Controls.Add(Me.txtPassord)
