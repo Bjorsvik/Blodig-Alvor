@@ -15,14 +15,12 @@ Public Class Registreringsskjema
         Dim telefon = txtTlf.Text
         Dim adresse = txtAdresse.Text
         Dim postnummer = txtPostnummer.Text
-        Dim poststed = txtPoststed.Text
 
-        If bpassord IsNot passord Then
-            MsgBox("Passordene er ikke like")
-        Else
+
+        If bpassord = passord Then
             Dim sqlSporring = "insert into blodgiver (brukernavn, passord, fornavn, etternavn, fodselsdato,
-                           telefon, adresse, postnummer, poststed) values (@brukernavn, @passord, @fornavn, 
-                           @etternavn, @fodselsdato, @telefon, @adresse, @postnummer, @poststed)"
+                           telefon, adresse, postnummer) values (@brukernavn, @passord, @fornavn, 
+                           @etternavn, @fodselsdato, @telefon, @adresse, @postnummer)"
 
             Dim sqlSporringBrukernavn = "select * from blodgiver where brukernavn=@brukernavn"
 
@@ -46,16 +44,17 @@ Public Class Registreringsskjema
                 sqlRegistrer.Parameters.AddWithValue("@telefon", telefon)
                 sqlRegistrer.Parameters.AddWithValue("@adresse", adresse)
                 sqlRegistrer.Parameters.AddWithValue("@postnummer", postnummer)
-                sqlRegistrer.Parameters.AddWithValue("@poststed", poststed)
                 sqlRegistrer.ExecuteNonQuery()
                 Me.Close()
             End If
+        Else
+            MsgBox("Passordene er ikke like")
         End If
 
     End Sub
 
-    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles txtPassord.TextChanged
-        txtPassord.PasswordChar = "*"
+    Private Sub txtPassord_TextChanged(sender As Object, e As EventArgs) Handles txtPassord.TextChanged
+        'txtPassord.PasswordChar = "*"
     End Sub
 
     Private Sub Registreringsskjema_Close(sender As Object, e As EventArgs) Handles MyBase.Closed
@@ -68,6 +67,18 @@ Public Class Registreringsskjema
     End Sub
 
     Private Sub txtBekreftPassord_TextChanged(sender As Object, e As EventArgs) Handles txtBekreftPassord.TextChanged
-        txtBekreftPassord.PasswordChar = "*"
+        'txtBekreftPassord.PasswordChar = "*"
+    End Sub
+
+    Private Sub txtPostnummer_TextChanged(sender As Object, e As EventArgs) Handles txtPostnummer.TextChanged
+        'If txtPostnummer.TextLength = 4 Then
+        'Dim sqlSporringPoststed = "SELECT poststed FROM postnummer JOIN blodgiver ON blodgiver.postnummer = postnummer.postnummer"
+        'Dim sqlSjekk As New MySqlCommand(sqlSporringPoststed, tilkobling)
+        'Dim reader = sqlSjekk.ExecuteReader()
+        'If reader.HasRows Then
+        'lbPoststed.Text = reader.ToString
+        'reader.Close()
+        'End If
+        'End If
     End Sub
 End Class
