@@ -6,7 +6,7 @@ Public Class Hjemmeside
 
     Private Sub Hjemmeside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'tilkoblingingen blir koblet direkte sånn at brukeren har tilgang til databasen ved oppstart
-        tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=kietmn;Uid=kietmn;Pwd=t8kt7tKw")
+        tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=g_oops_23;Uid=g_oops_23;Pwd=3d4CcHvg")
         tilkobling.Open()
     End Sub
 
