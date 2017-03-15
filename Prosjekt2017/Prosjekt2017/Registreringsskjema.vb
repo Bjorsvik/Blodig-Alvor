@@ -2,8 +2,10 @@
 Public Class Registreringsskjema
     Private tilkobling As MySqlConnection
     Private Sub Registreringsskjema_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=kietmn;Uid=kietmn;Pwd=t8kt7tKw")
+        tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=g_oops_23;Uid=g_oops_23;Pwd=3d4CcHvg")
         tilkobling.Open()
+
+        txtPostnummer.MaxLength = 4
     End Sub
     Private Sub btnRegistrer_Click(sender As Object, e As EventArgs) Handles btnRegistrer.Click
         Dim brukernavn = txtBrukernavn.Text
@@ -15,12 +17,13 @@ Public Class Registreringsskjema
         Dim telefon = txtTlf.Text
         Dim adresse = txtAdresse.Text
         Dim postnummer = txtPostnummer.Text
+        Dim epost = txtEpost.Text
 
 
         If bpassord = passord Then
             Dim sqlSporring = "insert into blodgiver (brukernavn, passord, fornavn, etternavn, fodselsdato,
-                           telefon, adresse, postnummer) values (@brukernavn, @passord, @fornavn, 
-                           @etternavn, @fodselsdato, @telefon, @adresse, @postnummer)"
+                           telefon, adresse, postnummer, epost) values (@brukernavn, @passord, @fornavn, 
+                           @etternavn, @fodselsdato, @telefon, @adresse, @postnummer, @epost)"
 
             Dim sqlSporringBrukernavn = "select * from blodgiver where brukernavn=@brukernavn"
 
@@ -44,6 +47,7 @@ Public Class Registreringsskjema
                 sqlRegistrer.Parameters.AddWithValue("@telefon", telefon)
                 sqlRegistrer.Parameters.AddWithValue("@adresse", adresse)
                 sqlRegistrer.Parameters.AddWithValue("@postnummer", postnummer)
+                sqlRegistrer.Parameters.AddWithValue("@epost", epost)
                 sqlRegistrer.ExecuteNonQuery()
                 Me.Close()
             End If
@@ -71,14 +75,35 @@ Public Class Registreringsskjema
     End Sub
 
     Private Sub txtPostnummer_TextChanged(sender As Object, e As EventArgs) Handles txtPostnummer.TextChanged
-        'If txtPostnummer.TextLength = 4 Then
-        'Dim sqlSporringPoststed = "SELECT poststed FROM postnummer JOIN blodgiver ON blodgiver.postnummer = postnummer.postnummer"
-        'Dim sqlSjekk As New MySqlCommand(sqlSporringPoststed, tilkobling)
-        'Dim reader = sqlSjekk.ExecuteReader()
-        'If reader.HasRows Then
-        'lbPoststed.Text = reader.ToString
-        'reader.Close()
-        'End If
-        'End If
+
+        If txtPostnummer.TextLength = 4 Then
+
+
+            Dim READER As MySqlDataReader
+            Try
+                Dim postnummer As Integer = txtPostnummer.Text
+                Dim tuddle As String = "'"
+                Dim Query As String
+                Query = "SELECT poststed from Postnummer WHERE postnummer = " & tuddle & postnummer & tuddle
+                Dim command As New MySqlCommand(Query, tilkobling)
+                READER = command.ExecuteReader
+
+                If READER.Read() Then
+                    lbPoststed.Text = READER.GetString(0)
+                End If
+
+                tilkobling.Close()
+            Catch ex As MySqlException
+                MessageBox.Show(ex.Message)
+            Finally
+                tilkobling.Open()
+            End Try
+
+        End If
+
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles lbEpost.Click
+
     End Sub
 End Class
