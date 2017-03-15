@@ -3,6 +3,7 @@ Imports System.Data
 Public Class Hjemmeside
     'Oppretter en mysql connection til databasen
     Private tilkobling As MySqlConnection
+
     Private Sub Hjemmeside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'tilkoblingingen blir koblet direkte sånn at brukeren har tilgang til databasen ved oppstart
         tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=kietmn;Uid=kietmn;Pwd=t8kt7tKw")
@@ -16,6 +17,7 @@ Public Class Hjemmeside
     Private Sub Logginnknapp_Click(sender As Object, e As EventArgs) Handles Logginnknapp.Click
         Dim brukernavn = txtBrukernavn.Text
         Dim passord = txtPassord.Text
+        brukernavndb = txtBrukernavn.Text
 
         Dim sqlSporringBruker = "select * from blodgiver where brukernavn=@brukernavn " & "and passord=@passord"
 
@@ -26,16 +28,18 @@ Public Class Hjemmeside
         Dim reader = sql.ExecuteReader()
         If reader.HasRows Then
             MsgBox("Brukeren er logget på")
-            Reservasjon.Show()
+            reader.Close()
             Me.Hide()
-
+            minside.Show()
 
         End If
 
-
-
     End Sub
 
+    Public Sub LogginnknappPublic_Click(sender As Object, e As EventArgs) Handles Logginnknapp.Click
+        Dim brukernavnd As String = txtBrukernavn.Text
+
+    End Sub
     Private Sub Hjemmeside_Closed(sender As Object, e As EventArgs) Handles MyBase.Closed
         tilkobling.Close()
         tilkobling.Dispose()

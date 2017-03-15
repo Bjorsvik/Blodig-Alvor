@@ -82,16 +82,17 @@
     <Compile Include="egenerklering.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="minside.Designer.vb">
+      <DependentUpon>minside.vb</DependentUpon>
+    </Compile>
+    <Compile Include="minside.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PubVar.vb" />
     <Compile Include="Registreringsskjema.Designer.vb">
       <DependentUpon>Registreringsskjema.vb</DependentUpon>
     </Compile>
     <Compile Include="Registreringsskjema.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reservasjon.Designer.vb">
-      <DependentUpon>Reservasjon.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Reservasjon.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Hjemmeside.vb">
@@ -121,11 +122,11 @@
     <EmbeddedResource Include="egenerklering.resx">
       <DependentUpon>egenerklering.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="minside.resx">
+      <DependentUpon>minside.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registreringsskjema.resx">
       <DependentUpon>Registreringsskjema.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reservasjon.resx">
-      <DependentUpon>Reservasjon.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Hjemmeside.resx">
       <DependentUpon>Hjemmeside.vb</DependentUpon>
