@@ -1,3 +1,3 @@
 ﻿Module PubVar
-    Public brukernavndb As String
+    Public telefon As Integer
 End Module

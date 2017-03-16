@@ -2,13 +2,14 @@
 Public Class Registreringsskjema
     Private tilkobling As MySqlConnection
     Private Sub Registreringsskjema_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=g_oops_23;Uid=g_oops_23;Pwd=3d4CcHvg")
         tilkobling.Open()
 
         txtPostnummer.MaxLength = 4
     End Sub
     Private Sub btnRegistrer_Click(sender As Object, e As EventArgs) Handles btnRegistrer.Click
-        Dim brukernavn = txtBrukernavn.Text
+
         Dim passord = txtPassord.Text
         Dim bpassord = txtBekreftPassord.Text
         Dim fornavn = txtFornavn.Text
@@ -21,25 +22,24 @@ Public Class Registreringsskjema
 
 
         If bpassord = passord Then
-            Dim sqlSporring = "insert into blodgiver (brukernavn, passord, fornavn, etternavn, fodselsdato,
-                           telefon, adresse, postnummer, epost) values (@brukernavn, @passord, @fornavn, 
+            Dim sqlSporring = "insert into Blodgiver (passord, fornavn, etternavn, fodselsdato,
+                           telefon, adresse, postnummer, epost) values (@passord, @fornavn, 
                            @etternavn, @fodselsdato, @telefon, @adresse, @postnummer, @epost)"
 
-            Dim sqlSporringBrukernavn = "select * from blodgiver where brukernavn=@brukernavn"
+            Dim sqlSporringBrukernavn = "select * from Blodgiver where telefon=@telefon"
 
             Dim sqlRegistrer As New MySqlCommand(sqlSporring, tilkobling)
 
             Dim sqlSjekk As New MySqlCommand(sqlSporringBrukernavn, tilkobling)
-            sqlSjekk.Parameters.AddWithValue("@brukernavn", brukernavn)
+            sqlSjekk.Parameters.AddWithValue("@telefon", telefon)
 
 
             Dim reader = sqlSjekk.ExecuteReader()
             If reader.HasRows Then
-                MsgBox("Brukernavnet er tatt")
+                MsgBox("Personnummer er i bruk")
                 reader.Close()
             Else
                 reader.Close()
-                sqlRegistrer.Parameters.AddWithValue("@brukernavn", brukernavn)
                 sqlRegistrer.Parameters.AddWithValue("@passord", passord)
                 sqlRegistrer.Parameters.AddWithValue("@fornavn", fornavn)
                 sqlRegistrer.Parameters.AddWithValue("@etternavn", etternavn)
@@ -49,6 +49,7 @@ Public Class Registreringsskjema
                 sqlRegistrer.Parameters.AddWithValue("@postnummer", postnummer)
                 sqlRegistrer.Parameters.AddWithValue("@epost", epost)
                 sqlRegistrer.ExecuteNonQuery()
+                reader.Close()
                 Me.Close()
             End If
         Else
@@ -64,10 +65,6 @@ Public Class Registreringsskjema
     Private Sub Registreringsskjema_Close(sender As Object, e As EventArgs) Handles MyBase.Closed
         tilkobling.Close()
         tilkobling.Dispose()
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
     End Sub
 
     Private Sub txtBekreftPassord_TextChanged(sender As Object, e As EventArgs) Handles txtBekreftPassord.TextChanged
