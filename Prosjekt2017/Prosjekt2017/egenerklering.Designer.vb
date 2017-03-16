@@ -173,6 +173,105 @@ Partial Class egenerklering
         Me.CheckBox63 = New System.Windows.Forms.CheckBox()
         Me.CheckBox64 = New System.Windows.Forms.CheckBox()
         Me.Label77 = New System.Windows.Forms.Label()
+        Me.Label78 = New System.Windows.Forms.Label()
+        Me.CheckBox65 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox66 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox67 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox68 = New System.Windows.Forms.CheckBox()
+        Me.Label79 = New System.Windows.Forms.Label()
+        Me.CheckBox69 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox70 = New System.Windows.Forms.CheckBox()
+        Me.Label80 = New System.Windows.Forms.Label()
+        Me.Label81 = New System.Windows.Forms.Label()
+        Me.CheckBox71 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox72 = New System.Windows.Forms.CheckBox()
+        Me.Label82 = New System.Windows.Forms.Label()
+        Me.Label83 = New System.Windows.Forms.Label()
+        Me.Label84 = New System.Windows.Forms.Label()
+        Me.CheckBox73 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox74 = New System.Windows.Forms.CheckBox()
+        Me.Label85 = New System.Windows.Forms.Label()
+        Me.Label86 = New System.Windows.Forms.Label()
+        Me.Label87 = New System.Windows.Forms.Label()
+        Me.Label88 = New System.Windows.Forms.Label()
+        Me.CheckBox75 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox76 = New System.Windows.Forms.CheckBox()
+        Me.Label89 = New System.Windows.Forms.Label()
+        Me.Label90 = New System.Windows.Forms.Label()
+        Me.CheckBox77 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox78 = New System.Windows.Forms.CheckBox()
+        Me.Label91 = New System.Windows.Forms.Label()
+        Me.Label92 = New System.Windows.Forms.Label()
+        Me.Label93 = New System.Windows.Forms.Label()
+        Me.CheckBox79 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox80 = New System.Windows.Forms.CheckBox()
+        Me.Label94 = New System.Windows.Forms.Label()
+        Me.Label95 = New System.Windows.Forms.Label()
+        Me.Label96 = New System.Windows.Forms.Label()
+        Me.Label97 = New System.Windows.Forms.Label()
+        Me.Label98 = New System.Windows.Forms.Label()
+        Me.CheckBox81 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox82 = New System.Windows.Forms.CheckBox()
+        Me.Label99 = New System.Windows.Forms.Label()
+        Me.Label100 = New System.Windows.Forms.Label()
+        Me.CheckBox83 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox84 = New System.Windows.Forms.CheckBox()
+        Me.Label101 = New System.Windows.Forms.Label()
+        Me.Label102 = New System.Windows.Forms.Label()
+        Me.CheckBox85 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox86 = New System.Windows.Forms.CheckBox()
+        Me.Label103 = New System.Windows.Forms.Label()
+        Me.Label104 = New System.Windows.Forms.Label()
+        Me.Label105 = New System.Windows.Forms.Label()
+        Me.Label106 = New System.Windows.Forms.Label()
+        Me.Label107 = New System.Windows.Forms.Label()
+        Me.Label108 = New System.Windows.Forms.Label()
+        Me.CheckBox87 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox88 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox89 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox90 = New System.Windows.Forms.CheckBox()
+        Me.Label109 = New System.Windows.Forms.Label()
+        Me.CheckBox91 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox92 = New System.Windows.Forms.CheckBox()
+        Me.Label110 = New System.Windows.Forms.Label()
+        Me.CheckBox93 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox94 = New System.Windows.Forms.CheckBox()
+        Me.Label111 = New System.Windows.Forms.Label()
+        Me.CheckBox95 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox96 = New System.Windows.Forms.CheckBox()
+        Me.Label112 = New System.Windows.Forms.Label()
+        Me.CheckBox97 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox98 = New System.Windows.Forms.CheckBox()
+        Me.Label113 = New System.Windows.Forms.Label()
+        Me.CheckBox99 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox100 = New System.Windows.Forms.CheckBox()
+        Me.Label114 = New System.Windows.Forms.Label()
+        Me.CheckBox101 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox102 = New System.Windows.Forms.CheckBox()
+        Me.Label115 = New System.Windows.Forms.Label()
+        Me.CheckBox103 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox104 = New System.Windows.Forms.CheckBox()
+        Me.Label116 = New System.Windows.Forms.Label()
+        Me.CheckBox105 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox106 = New System.Windows.Forms.CheckBox()
+        Me.Label117 = New System.Windows.Forms.Label()
+        Me.CheckBox107 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox108 = New System.Windows.Forms.CheckBox()
+        Me.Label118 = New System.Windows.Forms.Label()
+        Me.CheckBox109 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox110 = New System.Windows.Forms.CheckBox()
+        Me.Label119 = New System.Windows.Forms.Label()
+        Me.CheckBox111 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox112 = New System.Windows.Forms.CheckBox()
+        Me.Label120 = New System.Windows.Forms.Label()
+        Me.CheckBox113 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox114 = New System.Windows.Forms.CheckBox()
+        Me.Label121 = New System.Windows.Forms.Label()
+        Me.Label122 = New System.Windows.Forms.Label()
+        Me.CheckBox115 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox116 = New System.Windows.Forms.CheckBox()
+        Me.Label123 = New System.Windows.Forms.Label()
+        Me.Label124 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -1534,12 +1633,1004 @@ Partial Class egenerklering
         Me.Label77.TabIndex = 255
         Me.Label77.Text = "Har du i løpet av de siste to år"
         '
+        'Label78
+        '
+        Me.Label78.AutoSize = True
+        Me.Label78.Location = New System.Drawing.Point(34, 941)
+        Me.Label78.Name = "Label78"
+        Me.Label78.Size = New System.Drawing.Size(237, 13)
+        Me.Label78.TabIndex = 256
+        Me.Label78.Text = "Hatt sjeldne eller alvorlige infeksjonssukdommer?"
+        '
+        'CheckBox65
+        '
+        Me.CheckBox65.AutoSize = True
+        Me.CheckBox65.Location = New System.Drawing.Point(279, 940)
+        Me.CheckBox65.Name = "CheckBox65"
+        Me.CheckBox65.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox65.TabIndex = 258
+        Me.CheckBox65.UseVisualStyleBackColor = True
+        '
+        'CheckBox66
+        '
+        Me.CheckBox66.AutoSize = True
+        Me.CheckBox66.Location = New System.Drawing.Point(303, 940)
+        Me.CheckBox66.Name = "CheckBox66"
+        Me.CheckBox66.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox66.TabIndex = 257
+        Me.CheckBox66.UseVisualStyleBackColor = True
+        '
+        'CheckBox67
+        '
+        Me.CheckBox67.AutoSize = True
+        Me.CheckBox67.Location = New System.Drawing.Point(617, 1078)
+        Me.CheckBox67.Name = "CheckBox67"
+        Me.CheckBox67.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox67.TabIndex = 290
+        Me.CheckBox67.UseVisualStyleBackColor = True
+        '
+        'CheckBox68
+        '
+        Me.CheckBox68.AutoSize = True
+        Me.CheckBox68.Location = New System.Drawing.Point(593, 1078)
+        Me.CheckBox68.Name = "CheckBox68"
+        Me.CheckBox68.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox68.TabIndex = 289
+        Me.CheckBox68.UseVisualStyleBackColor = True
+        '
+        'Label79
+        '
+        Me.Label79.AutoSize = True
+        Me.Label79.Location = New System.Drawing.Point(342, 1117)
+        Me.Label79.Name = "Label79"
+        Me.Label79.Size = New System.Drawing.Size(228, 13)
+        Me.Label79.TabIndex = 288
+        Me.Label79.Text = "brukes til forskning? Du er like velkommen som"
+        '
+        'CheckBox69
+        '
+        Me.CheckBox69.AutoSize = True
+        Me.CheckBox69.Location = New System.Drawing.Point(617, 1046)
+        Me.CheckBox69.Name = "CheckBox69"
+        Me.CheckBox69.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox69.TabIndex = 287
+        Me.CheckBox69.UseVisualStyleBackColor = True
+        '
+        'CheckBox70
+        '
+        Me.CheckBox70.AutoSize = True
+        Me.CheckBox70.Location = New System.Drawing.Point(593, 1046)
+        Me.CheckBox70.Name = "CheckBox70"
+        Me.CheckBox70.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox70.TabIndex = 286
+        Me.CheckBox70.UseVisualStyleBackColor = True
+        '
+        'Label80
+        '
+        Me.Label80.AutoSize = True
+        Me.Label80.Location = New System.Drawing.Point(342, 1104)
+        Me.Label80.Name = "Label80"
+        Me.Label80.Size = New System.Drawing.Size(241, 13)
+        Me.Label80.TabIndex = 285
+        Me.Label80.Text = "Godtar du at anonumiserte prøver av ditt blod kan"
+        '
+        'Label81
+        '
+        Me.Label81.AutoSize = True
+        Me.Label81.Location = New System.Drawing.Point(342, 1078)
+        Me.Label81.Name = "Label81"
+        Me.Label81.Size = New System.Drawing.Size(221, 13)
+        Me.Label81.TabIndex = 284
+        Me.Label81.Text = "Er du eller din mor født i Amerika sør for USA?"
+        '
+        'CheckBox71
+        '
+        Me.CheckBox71.AutoSize = True
+        Me.CheckBox71.Location = New System.Drawing.Point(617, 1011)
+        Me.CheckBox71.Name = "CheckBox71"
+        Me.CheckBox71.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox71.TabIndex = 283
+        Me.CheckBox71.UseVisualStyleBackColor = True
+        '
+        'CheckBox72
+        '
+        Me.CheckBox72.AutoSize = True
+        Me.CheckBox72.Location = New System.Drawing.Point(593, 1011)
+        Me.CheckBox72.Name = "CheckBox72"
+        Me.CheckBox72.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox72.TabIndex = 282
+        Me.CheckBox72.UseVisualStyleBackColor = True
+        '
+        'Label82
+        '
+        Me.Label82.AutoSize = True
+        Me.Label82.Location = New System.Drawing.Point(342, 1059)
+        Me.Label82.Name = "Label82"
+        Me.Label82.Size = New System.Drawing.Size(94, 13)
+        Me.Label82.TabIndex = 281
+        Me.Label82.Text = "fem år til sammen?"
+        '
+        'Label83
+        '
+        Me.Label83.AutoSize = True
+        Me.Label83.Location = New System.Drawing.Point(342, 1046)
+        Me.Label83.Name = "Label83"
+        Me.Label83.Size = New System.Drawing.Size(167, 13)
+        Me.Label83.TabIndex = 280
+        Me.Label83.Text = "Har du oppholdt deg i Afrika i mer "
+        '
+        'Label84
+        '
+        Me.Label84.AutoSize = True
+        Me.Label84.Location = New System.Drawing.Point(342, 1024)
+        Me.Label84.Name = "Label84"
+        Me.Label84.Size = New System.Drawing.Size(237, 13)
+        Me.Label84.TabIndex = 279
+        Me.Label84.Text = "seks måneder i områder der malaria forekommer?"
+        '
+        'CheckBox73
+        '
+        Me.CheckBox73.AutoSize = True
+        Me.CheckBox73.Location = New System.Drawing.Point(617, 976)
+        Me.CheckBox73.Name = "CheckBox73"
+        Me.CheckBox73.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox73.TabIndex = 278
+        Me.CheckBox73.UseVisualStyleBackColor = True
+        '
+        'CheckBox74
+        '
+        Me.CheckBox74.AutoSize = True
+        Me.CheckBox74.Location = New System.Drawing.Point(593, 976)
+        Me.CheckBox74.Name = "CheckBox74"
+        Me.CheckBox74.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox74.TabIndex = 277
+        Me.CheckBox74.UseVisualStyleBackColor = True
+        '
+        'Label85
+        '
+        Me.Label85.AutoSize = True
+        Me.Label85.Location = New System.Drawing.Point(342, 1011)
+        Me.Label85.Name = "Label85"
+        Me.Label85.Size = New System.Drawing.Size(229, 13)
+        Me.Label85.TabIndex = 276
+        Me.Label85.Text = "Har du oppholdt deg sammenhengende i minst "
+        '
+        'Label86
+        '
+        Me.Label86.AutoSize = True
+        Me.Label86.Location = New System.Drawing.Point(342, 989)
+        Me.Label86.Name = "Label86"
+        Me.Label86.Size = New System.Drawing.Size(104, 13)
+        Me.Label86.TabIndex = 275
+        Me.Label86.Text = "malaria forekommer?"
+        '
+        'Label87
+        '
+        Me.Label87.AutoSize = True
+        Me.Label87.Location = New System.Drawing.Point(342, 976)
+        Me.Label87.Name = "Label87"
+        Me.Label87.Size = New System.Drawing.Size(240, 13)
+        Me.Label87.TabIndex = 274
+        Me.Label87.Text = "Har du i løpet av de tre siste år vært i områder der"
+        '
+        'Label88
+        '
+        Me.Label88.AutoSize = True
+        Me.Label88.Location = New System.Drawing.Point(342, 951)
+        Me.Label88.Name = "Label88"
+        Me.Label88.Size = New System.Drawing.Size(215, 13)
+        Me.Label88.TabIndex = 273
+        Me.Label88.Text = "til sammen i perioden mellom 1980 og 1996?"
+        '
+        'CheckBox75
+        '
+        Me.CheckBox75.AutoSize = True
+        Me.CheckBox75.Location = New System.Drawing.Point(617, 937)
+        Me.CheckBox75.Name = "CheckBox75"
+        Me.CheckBox75.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox75.TabIndex = 272
+        Me.CheckBox75.UseVisualStyleBackColor = True
+        '
+        'CheckBox76
+        '
+        Me.CheckBox76.AutoSize = True
+        Me.CheckBox76.Location = New System.Drawing.Point(593, 937)
+        Me.CheckBox76.Name = "CheckBox76"
+        Me.CheckBox76.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox76.TabIndex = 271
+        Me.CheckBox76.UseVisualStyleBackColor = True
+        '
+        'Label89
+        '
+        Me.Label89.AutoSize = True
+        Me.Label89.Location = New System.Drawing.Point(342, 938)
+        Me.Label89.Name = "Label89"
+        Me.Label89.Size = New System.Drawing.Size(238, 13)
+        Me.Label89.TabIndex = 270
+        Me.Label89.Text = "Har du oppholdt deg i Storbritania i mer enn ett år"
+        '
+        'Label90
+        '
+        Me.Label90.AutoSize = True
+        Me.Label90.Location = New System.Drawing.Point(342, 918)
+        Me.Label90.Name = "Label90"
+        Me.Label90.Size = New System.Drawing.Size(129, 13)
+        Me.Label90.TabIndex = 269
+        Me.Label90.Text = "sykdom eller variant CJD?"
+        '
+        'CheckBox77
+        '
+        Me.CheckBox77.AutoSize = True
+        Me.CheckBox77.Location = New System.Drawing.Point(617, 902)
+        Me.CheckBox77.Name = "CheckBox77"
+        Me.CheckBox77.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox77.TabIndex = 268
+        Me.CheckBox77.UseVisualStyleBackColor = True
+        '
+        'CheckBox78
+        '
+        Me.CheckBox78.AutoSize = True
+        Me.CheckBox78.Location = New System.Drawing.Point(593, 902)
+        Me.CheckBox78.Name = "CheckBox78"
+        Me.CheckBox78.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox78.TabIndex = 267
+        Me.CheckBox78.UseVisualStyleBackColor = True
+        '
+        'Label91
+        '
+        Me.Label91.AutoSize = True
+        Me.Label91.Location = New System.Drawing.Point(342, 902)
+        Me.Label91.Name = "Label91"
+        Me.Label91.Size = New System.Drawing.Size(234, 13)
+        Me.Label91.TabIndex = 266
+        Me.Label91.Text = "Har du eller noen i familien hatt Creutzfeldt-jakob"
+        '
+        'Label92
+        '
+        Me.Label92.AutoSize = True
+        Me.Label92.Location = New System.Drawing.Point(614, 841)
+        Me.Label92.Name = "Label92"
+        Me.Label92.Size = New System.Drawing.Size(23, 13)
+        Me.Label92.TabIndex = 265
+        Me.Label92.Text = "Nei"
+        '
+        'Label93
+        '
+        Me.Label93.AutoSize = True
+        Me.Label93.Location = New System.Drawing.Point(590, 841)
+        Me.Label93.Name = "Label93"
+        Me.Label93.Size = New System.Drawing.Size(18, 13)
+        Me.Label93.TabIndex = 264
+        Me.Label93.Text = "Ja"
+        '
+        'CheckBox79
+        '
+        Me.CheckBox79.AutoSize = True
+        Me.CheckBox79.Location = New System.Drawing.Point(617, 865)
+        Me.CheckBox79.Name = "CheckBox79"
+        Me.CheckBox79.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox79.TabIndex = 263
+        Me.CheckBox79.UseVisualStyleBackColor = True
+        '
+        'CheckBox80
+        '
+        Me.CheckBox80.AutoSize = True
+        Me.CheckBox80.Location = New System.Drawing.Point(593, 865)
+        Me.CheckBox80.Name = "CheckBox80"
+        Me.CheckBox80.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox80.TabIndex = 262
+        Me.CheckBox80.UseVisualStyleBackColor = True
+        '
+        'Label94
+        '
+        Me.Label94.AutoSize = True
+        Me.Label94.Location = New System.Drawing.Point(342, 879)
+        Me.Label94.Name = "Label94"
+        Me.Label94.Size = New System.Drawing.Size(144, 13)
+        Me.Label94.TabIndex = 261
+        Me.Label94.Text = "ganger de siste 12 måneder?"
+        '
+        'Label95
+        '
+        Me.Label95.AutoSize = True
+        Me.Label95.Location = New System.Drawing.Point(342, 866)
+        Me.Label95.Name = "Label95"
+        Me.Label95.Size = New System.Drawing.Size(173, 13)
+        Me.Label95.TabIndex = 260
+        Me.Label95.Text = "Har du brukt narkotika en eller flere"
+        '
+        'Label96
+        '
+        Me.Label96.AutoSize = True
+        Me.Label96.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label96.Location = New System.Drawing.Point(342, 841)
+        Me.Label96.Name = "Label96"
+        Me.Label96.Size = New System.Drawing.Size(77, 13)
+        Me.Label96.TabIndex = 259
+        Me.Label96.Text = "Besvar også"
+        '
+        'Label97
+        '
+        Me.Label97.AutoSize = True
+        Me.Label97.Location = New System.Drawing.Point(342, 1130)
+        Me.Label97.Name = "Label97"
+        Me.Label97.Size = New System.Drawing.Size(240, 13)
+        Me.Label97.TabIndex = 291
+        Me.Label97.Text = "blodgiver enten du svarer ja eller nei. Blodbanken"
+        '
+        'Label98
+        '
+        Me.Label98.AutoSize = True
+        Me.Label98.Location = New System.Drawing.Point(342, 1143)
+        Me.Label98.Name = "Label98"
+        Me.Label98.Size = New System.Drawing.Size(249, 13)
+        Me.Label98.TabIndex = 292
+        Me.Label98.Text = "kan gi informasjon om aktuelle forskningsprosjekter."
+        '
+        'CheckBox81
+        '
+        Me.CheckBox81.AutoSize = True
+        Me.CheckBox81.Location = New System.Drawing.Point(617, 1104)
+        Me.CheckBox81.Name = "CheckBox81"
+        Me.CheckBox81.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox81.TabIndex = 294
+        Me.CheckBox81.UseVisualStyleBackColor = True
+        '
+        'CheckBox82
+        '
+        Me.CheckBox82.AutoSize = True
+        Me.CheckBox82.Location = New System.Drawing.Point(593, 1104)
+        Me.CheckBox82.Name = "CheckBox82"
+        Me.CheckBox82.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox82.TabIndex = 293
+        Me.CheckBox82.UseVisualStyleBackColor = True
+        '
+        'Label99
+        '
+        Me.Label99.AutoSize = True
+        Me.Label99.Location = New System.Drawing.Point(342, 1179)
+        Me.Label99.Name = "Label99"
+        Me.Label99.Size = New System.Drawing.Size(54, 13)
+        Me.Label99.TabIndex = 296
+        Me.Label99.Text = "måneder?"
+        '
+        'Label100
+        '
+        Me.Label100.AutoSize = True
+        Me.Label100.Location = New System.Drawing.Point(342, 1166)
+        Me.Label100.Name = "Label100"
+        Me.Label100.Size = New System.Drawing.Size(219, 13)
+        Me.Label100.TabIndex = 295
+        Me.Label100.Text = "Har du deltatt i medikamentforsøk de siste 12"
+        '
+        'CheckBox83
+        '
+        Me.CheckBox83.AutoSize = True
+        Me.CheckBox83.Location = New System.Drawing.Point(617, 1166)
+        Me.CheckBox83.Name = "CheckBox83"
+        Me.CheckBox83.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox83.TabIndex = 298
+        Me.CheckBox83.UseVisualStyleBackColor = True
+        '
+        'CheckBox84
+        '
+        Me.CheckBox84.AutoSize = True
+        Me.CheckBox84.Location = New System.Drawing.Point(593, 1166)
+        Me.CheckBox84.Name = "CheckBox84"
+        Me.CheckBox84.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox84.TabIndex = 297
+        Me.CheckBox84.UseVisualStyleBackColor = True
+        '
+        'Label101
+        '
+        Me.Label101.AutoSize = True
+        Me.Label101.Location = New System.Drawing.Point(342, 1214)
+        Me.Label101.Name = "Label101"
+        Me.Label101.Size = New System.Drawing.Size(124, 13)
+        Me.Label101.TabIndex = 300
+        Me.Label101.Text = "for legemiddelproduksjon"
+        '
+        'Label102
+        '
+        Me.Label102.AutoSize = True
+        Me.Label102.Location = New System.Drawing.Point(342, 1201)
+        Me.Label102.Name = "Label102"
+        Me.Label102.Size = New System.Drawing.Size(232, 13)
+        Me.Label102.TabIndex = 299
+        Me.Label102.Text = "Jeg samtykker i at mitt plasma føres ut av Norge"
+        '
+        'CheckBox85
+        '
+        Me.CheckBox85.AutoSize = True
+        Me.CheckBox85.Location = New System.Drawing.Point(617, 1201)
+        Me.CheckBox85.Name = "CheckBox85"
+        Me.CheckBox85.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox85.TabIndex = 302
+        Me.CheckBox85.UseVisualStyleBackColor = True
+        '
+        'CheckBox86
+        '
+        Me.CheckBox86.AutoSize = True
+        Me.CheckBox86.Location = New System.Drawing.Point(593, 1201)
+        Me.CheckBox86.Name = "CheckBox86"
+        Me.CheckBox86.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox86.TabIndex = 301
+        Me.CheckBox86.UseVisualStyleBackColor = True
+        '
+        'Label103
+        '
+        Me.Label103.AutoSize = True
+        Me.Label103.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label103.Location = New System.Drawing.Point(34, 976)
+        Me.Label103.Name = "Label103"
+        Me.Label103.Size = New System.Drawing.Size(223, 13)
+        Me.Label103.TabIndex = 303
+        Me.Label103.Text = "Har du på noe tidspunkt gjennom livet"
+        '
+        'Label104
+        '
+        Me.Label104.AutoSize = True
+        Me.Label104.Location = New System.Drawing.Point(300, 918)
+        Me.Label104.Name = "Label104"
+        Me.Label104.Size = New System.Drawing.Size(23, 13)
+        Me.Label104.TabIndex = 305
+        Me.Label104.Text = "Nei"
+        '
+        'Label105
+        '
+        Me.Label105.AutoSize = True
+        Me.Label105.Location = New System.Drawing.Point(276, 918)
+        Me.Label105.Name = "Label105"
+        Me.Label105.Size = New System.Drawing.Size(18, 13)
+        Me.Label105.TabIndex = 304
+        Me.Label105.Text = "Ja"
+        '
+        'Label106
+        '
+        Me.Label106.AutoSize = True
+        Me.Label106.Location = New System.Drawing.Point(300, 976)
+        Me.Label106.Name = "Label106"
+        Me.Label106.Size = New System.Drawing.Size(23, 13)
+        Me.Label106.TabIndex = 307
+        Me.Label106.Text = "Nei"
+        '
+        'Label107
+        '
+        Me.Label107.AutoSize = True
+        Me.Label107.Location = New System.Drawing.Point(276, 976)
+        Me.Label107.Name = "Label107"
+        Me.Label107.Size = New System.Drawing.Size(18, 13)
+        Me.Label107.TabIndex = 306
+        Me.Label107.Text = "Ja"
+        '
+        'Label108
+        '
+        Me.Label108.AutoSize = True
+        Me.Label108.Location = New System.Drawing.Point(34, 999)
+        Me.Label108.Name = "Label108"
+        Me.Label108.Size = New System.Drawing.Size(184, 13)
+        Me.Label108.TabIndex = 308
+        Me.Label108.Text = "Hatt hjerte-, lever, eller lungesykdom?"
+        '
+        'CheckBox87
+        '
+        Me.CheckBox87.AutoSize = True
+        Me.CheckBox87.Location = New System.Drawing.Point(279, 999)
+        Me.CheckBox87.Name = "CheckBox87"
+        Me.CheckBox87.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox87.TabIndex = 310
+        Me.CheckBox87.UseVisualStyleBackColor = True
+        '
+        'CheckBox88
+        '
+        Me.CheckBox88.AutoSize = True
+        Me.CheckBox88.Location = New System.Drawing.Point(303, 999)
+        Me.CheckBox88.Name = "CheckBox88"
+        Me.CheckBox88.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox88.TabIndex = 309
+        Me.CheckBox88.UseVisualStyleBackColor = True
+        '
+        'CheckBox89
+        '
+        Me.CheckBox89.AutoSize = True
+        Me.CheckBox89.Location = New System.Drawing.Point(279, 1024)
+        Me.CheckBox89.Name = "CheckBox89"
+        Me.CheckBox89.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox89.TabIndex = 313
+        Me.CheckBox89.UseVisualStyleBackColor = True
+        '
+        'CheckBox90
+        '
+        Me.CheckBox90.AutoSize = True
+        Me.CheckBox90.Location = New System.Drawing.Point(303, 1024)
+        Me.CheckBox90.Name = "CheckBox90"
+        Me.CheckBox90.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox90.TabIndex = 312
+        Me.CheckBox90.UseVisualStyleBackColor = True
+        '
+        'Label109
+        '
+        Me.Label109.AutoSize = True
+        Me.Label109.Location = New System.Drawing.Point(34, 1024)
+        Me.Label109.Name = "Label109"
+        Me.Label109.Size = New System.Drawing.Size(57, 13)
+        Me.Label109.TabIndex = 311
+        Me.Label109.Text = "Hatt kreft?"
+        '
+        'CheckBox91
+        '
+        Me.CheckBox91.AutoSize = True
+        Me.CheckBox91.Location = New System.Drawing.Point(279, 1046)
+        Me.CheckBox91.Name = "CheckBox91"
+        Me.CheckBox91.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox91.TabIndex = 316
+        Me.CheckBox91.UseVisualStyleBackColor = True
+        '
+        'CheckBox92
+        '
+        Me.CheckBox92.AutoSize = True
+        Me.CheckBox92.Location = New System.Drawing.Point(303, 1046)
+        Me.CheckBox92.Name = "CheckBox92"
+        Me.CheckBox92.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox92.TabIndex = 315
+        Me.CheckBox92.UseVisualStyleBackColor = True
+        '
+        'Label110
+        '
+        Me.Label110.AutoSize = True
+        Me.Label110.Location = New System.Drawing.Point(34, 1046)
+        Me.Label110.Name = "Label110"
+        Me.Label110.Size = New System.Drawing.Size(119, 13)
+        Me.Label110.TabIndex = 314
+        Me.Label110.Text = "Hatt blødningstendens?"
+        '
+        'CheckBox93
+        '
+        Me.CheckBox93.AutoSize = True
+        Me.CheckBox93.Location = New System.Drawing.Point(279, 1069)
+        Me.CheckBox93.Name = "CheckBox93"
+        Me.CheckBox93.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox93.TabIndex = 319
+        Me.CheckBox93.UseVisualStyleBackColor = True
+        '
+        'CheckBox94
+        '
+        Me.CheckBox94.AutoSize = True
+        Me.CheckBox94.Location = New System.Drawing.Point(303, 1069)
+        Me.CheckBox94.Name = "CheckBox94"
+        Me.CheckBox94.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox94.TabIndex = 318
+        Me.CheckBox94.UseVisualStyleBackColor = True
+        '
+        'Label111
+        '
+        Me.Label111.AutoSize = True
+        Me.Label111.Location = New System.Drawing.Point(34, 1069)
+        Me.Label111.Name = "Label111"
+        Me.Label111.Size = New System.Drawing.Size(172, 13)
+        Me.Label111.TabIndex = 317
+        Me.Label111.Text = "Hatt allergi mot mat eller medisiner?"
+        '
+        'CheckBox95
+        '
+        Me.CheckBox95.AutoSize = True
+        Me.CheckBox95.Location = New System.Drawing.Point(279, 1091)
+        Me.CheckBox95.Name = "CheckBox95"
+        Me.CheckBox95.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox95.TabIndex = 322
+        Me.CheckBox95.UseVisualStyleBackColor = True
+        '
+        'CheckBox96
+        '
+        Me.CheckBox96.AutoSize = True
+        Me.CheckBox96.Location = New System.Drawing.Point(303, 1091)
+        Me.CheckBox96.Name = "CheckBox96"
+        Me.CheckBox96.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox96.TabIndex = 321
+        Me.CheckBox96.UseVisualStyleBackColor = True
+        '
+        'Label112
+        '
+        Me.Label112.AutoSize = True
+        Me.Label112.Location = New System.Drawing.Point(34, 1091)
+        Me.Label112.Name = "Label112"
+        Me.Label112.Size = New System.Drawing.Size(69, 13)
+        Me.Label112.TabIndex = 320
+        Me.Label112.Text = "Hatt malaria?"
+        '
+        'CheckBox97
+        '
+        Me.CheckBox97.AutoSize = True
+        Me.CheckBox97.Location = New System.Drawing.Point(279, 1117)
+        Me.CheckBox97.Name = "CheckBox97"
+        Me.CheckBox97.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox97.TabIndex = 325
+        Me.CheckBox97.UseVisualStyleBackColor = True
+        '
+        'CheckBox98
+        '
+        Me.CheckBox98.AutoSize = True
+        Me.CheckBox98.Location = New System.Drawing.Point(303, 1117)
+        Me.CheckBox98.Name = "CheckBox98"
+        Me.CheckBox98.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox98.TabIndex = 324
+        Me.CheckBox98.UseVisualStyleBackColor = True
+        '
+        'Label113
+        '
+        Me.Label113.AutoSize = True
+        Me.Label113.Location = New System.Drawing.Point(34, 1117)
+        Me.Label113.Name = "Label113"
+        Me.Label113.Size = New System.Drawing.Size(113, 13)
+        Me.Label113.TabIndex = 323
+        Me.Label113.Text = "Hatt tropesykdommer?"
+        '
+        'CheckBox99
+        '
+        Me.CheckBox99.AutoSize = True
+        Me.CheckBox99.Location = New System.Drawing.Point(279, 1143)
+        Me.CheckBox99.Name = "CheckBox99"
+        Me.CheckBox99.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox99.TabIndex = 328
+        Me.CheckBox99.UseVisualStyleBackColor = True
+        '
+        'CheckBox100
+        '
+        Me.CheckBox100.AutoSize = True
+        Me.CheckBox100.Location = New System.Drawing.Point(303, 1143)
+        Me.CheckBox100.Name = "CheckBox100"
+        Me.CheckBox100.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox100.TabIndex = 327
+        Me.CheckBox100.UseVisualStyleBackColor = True
+        '
+        'Label114
+        '
+        Me.Label114.AutoSize = True
+        Me.Label114.Location = New System.Drawing.Point(34, 1143)
+        Me.Label114.Name = "Label114"
+        Me.Label114.Size = New System.Drawing.Size(230, 13)
+        Me.Label114.TabIndex = 326
+        Me.Label114.Text = "Hatt hepatitt (gulsott), HIV-infeksjon eller AIDS?"
+        '
+        'CheckBox101
+        '
+        Me.CheckBox101.AutoSize = True
+        Me.CheckBox101.Location = New System.Drawing.Point(279, 1166)
+        Me.CheckBox101.Name = "CheckBox101"
+        Me.CheckBox101.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox101.TabIndex = 331
+        Me.CheckBox101.UseVisualStyleBackColor = True
+        '
+        'CheckBox102
+        '
+        Me.CheckBox102.AutoSize = True
+        Me.CheckBox102.Location = New System.Drawing.Point(303, 1166)
+        Me.CheckBox102.Name = "CheckBox102"
+        Me.CheckBox102.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox102.TabIndex = 330
+        Me.CheckBox102.UseVisualStyleBackColor = True
+        '
+        'Label115
+        '
+        Me.Label115.AutoSize = True
+        Me.Label115.Location = New System.Drawing.Point(34, 1166)
+        Me.Label115.Name = "Label115"
+        Me.Label115.Size = New System.Drawing.Size(239, 13)
+        Me.Label115.TabIndex = 329
+        Me.Label115.Text = "Hatt positiv prøve for Hepatitt eller HIV-infeksjon?"
+        '
+        'CheckBox103
+        '
+        Me.CheckBox103.AutoSize = True
+        Me.CheckBox103.Location = New System.Drawing.Point(279, 1190)
+        Me.CheckBox103.Name = "CheckBox103"
+        Me.CheckBox103.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox103.TabIndex = 334
+        Me.CheckBox103.UseVisualStyleBackColor = True
+        '
+        'CheckBox104
+        '
+        Me.CheckBox104.AutoSize = True
+        Me.CheckBox104.Location = New System.Drawing.Point(303, 1190)
+        Me.CheckBox104.Name = "CheckBox104"
+        Me.CheckBox104.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox104.TabIndex = 333
+        Me.CheckBox104.UseVisualStyleBackColor = True
+        '
+        'Label116
+        '
+        Me.Label116.AutoSize = True
+        Me.Label116.Location = New System.Drawing.Point(34, 1190)
+        Me.Label116.Name = "Label116"
+        Me.Label116.Size = New System.Drawing.Size(101, 13)
+        Me.Label116.TabIndex = 332
+        Me.Label116.Text = "Fått blodoverføring?"
+        '
+        'CheckBox105
+        '
+        Me.CheckBox105.AutoSize = True
+        Me.CheckBox105.Location = New System.Drawing.Point(279, 1214)
+        Me.CheckBox105.Name = "CheckBox105"
+        Me.CheckBox105.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox105.TabIndex = 337
+        Me.CheckBox105.UseVisualStyleBackColor = True
+        '
+        'CheckBox106
+        '
+        Me.CheckBox106.AutoSize = True
+        Me.CheckBox106.Location = New System.Drawing.Point(303, 1214)
+        Me.CheckBox106.Name = "CheckBox106"
+        Me.CheckBox106.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox106.TabIndex = 336
+        Me.CheckBox106.UseVisualStyleBackColor = True
+        '
+        'Label117
+        '
+        Me.Label117.AutoSize = True
+        Me.Label117.Location = New System.Drawing.Point(34, 1214)
+        Me.Label117.Name = "Label117"
+        Me.Label117.Size = New System.Drawing.Size(95, 13)
+        Me.Label117.TabIndex = 335
+        Me.Label117.Text = "Fått veksthormon?"
+        '
+        'CheckBox107
+        '
+        Me.CheckBox107.AutoSize = True
+        Me.CheckBox107.Location = New System.Drawing.Point(279, 1237)
+        Me.CheckBox107.Name = "CheckBox107"
+        Me.CheckBox107.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox107.TabIndex = 340
+        Me.CheckBox107.UseVisualStyleBackColor = True
+        '
+        'CheckBox108
+        '
+        Me.CheckBox108.AutoSize = True
+        Me.CheckBox108.Location = New System.Drawing.Point(303, 1237)
+        Me.CheckBox108.Name = "CheckBox108"
+        Me.CheckBox108.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox108.TabIndex = 339
+        Me.CheckBox108.UseVisualStyleBackColor = True
+        '
+        'Label118
+        '
+        Me.Label118.AutoSize = True
+        Me.Label118.Location = New System.Drawing.Point(34, 1237)
+        Me.Label118.Name = "Label118"
+        Me.Label118.Size = New System.Drawing.Size(136, 13)
+        Me.Label118.TabIndex = 338
+        Me.Label118.Text = "Fått hornhinnetransplantat?"
+        '
+        'CheckBox109
+        '
+        Me.CheckBox109.AutoSize = True
+        Me.CheckBox109.Location = New System.Drawing.Point(279, 1260)
+        Me.CheckBox109.Name = "CheckBox109"
+        Me.CheckBox109.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox109.TabIndex = 343
+        Me.CheckBox109.UseVisualStyleBackColor = True
+        '
+        'CheckBox110
+        '
+        Me.CheckBox110.AutoSize = True
+        Me.CheckBox110.Location = New System.Drawing.Point(303, 1260)
+        Me.CheckBox110.Name = "CheckBox110"
+        Me.CheckBox110.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox110.TabIndex = 342
+        Me.CheckBox110.UseVisualStyleBackColor = True
+        '
+        'Label119
+        '
+        Me.Label119.AutoSize = True
+        Me.Label119.Location = New System.Drawing.Point(34, 1260)
+        Me.Label119.Name = "Label119"
+        Me.Label119.Size = New System.Drawing.Size(60, 13)
+        Me.Label119.TabIndex = 341
+        Me.Label119.Text = "Hatt syfilis?"
+        '
+        'CheckBox111
+        '
+        Me.CheckBox111.AutoSize = True
+        Me.CheckBox111.Location = New System.Drawing.Point(279, 1282)
+        Me.CheckBox111.Name = "CheckBox111"
+        Me.CheckBox111.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox111.TabIndex = 346
+        Me.CheckBox111.UseVisualStyleBackColor = True
+        '
+        'CheckBox112
+        '
+        Me.CheckBox112.AutoSize = True
+        Me.CheckBox112.Location = New System.Drawing.Point(303, 1282)
+        Me.CheckBox112.Name = "CheckBox112"
+        Me.CheckBox112.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox112.TabIndex = 345
+        Me.CheckBox112.UseVisualStyleBackColor = True
+        '
+        'Label120
+        '
+        Me.Label120.AutoSize = True
+        Me.Label120.Location = New System.Drawing.Point(34, 1282)
+        Me.Label120.Name = "Label120"
+        Me.Label120.Size = New System.Drawing.Size(213, 13)
+        Me.Label120.TabIndex = 344
+        Me.Label120.Text = "Hatt alvorlig sykdom som ikke er nevnt her?"
+        '
+        'CheckBox113
+        '
+        Me.CheckBox113.AutoSize = True
+        Me.CheckBox113.Location = New System.Drawing.Point(303, 1306)
+        Me.CheckBox113.Name = "CheckBox113"
+        Me.CheckBox113.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox113.TabIndex = 350
+        Me.CheckBox113.UseVisualStyleBackColor = True
+        '
+        'CheckBox114
+        '
+        Me.CheckBox114.AutoSize = True
+        Me.CheckBox114.Location = New System.Drawing.Point(279, 1306)
+        Me.CheckBox114.Name = "CheckBox114"
+        Me.CheckBox114.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox114.TabIndex = 349
+        Me.CheckBox114.UseVisualStyleBackColor = True
+        '
+        'Label121
+        '
+        Me.Label121.AutoSize = True
+        Me.Label121.Location = New System.Drawing.Point(34, 1319)
+        Me.Label121.Name = "Label121"
+        Me.Label121.Size = New System.Drawing.Size(72, 13)
+        Me.Label121.TabIndex = 348
+        Me.Label121.Text = "som sprøyter?"
+        '
+        'Label122
+        '
+        Me.Label122.AutoSize = True
+        Me.Label122.Location = New System.Drawing.Point(34, 1306)
+        Me.Label122.Name = "Label122"
+        Me.Label122.Size = New System.Drawing.Size(198, 13)
+        Me.Label122.TabIndex = 347
+        Me.Label122.Text = "Brukt dopingmidler eller narkotiske midler"
+        '
+        'CheckBox115
+        '
+        Me.CheckBox115.AutoSize = True
+        Me.CheckBox115.Location = New System.Drawing.Point(303, 1343)
+        Me.CheckBox115.Name = "CheckBox115"
+        Me.CheckBox115.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox115.TabIndex = 354
+        Me.CheckBox115.UseVisualStyleBackColor = True
+        '
+        'CheckBox116
+        '
+        Me.CheckBox116.AutoSize = True
+        Me.CheckBox116.Location = New System.Drawing.Point(279, 1343)
+        Me.CheckBox116.Name = "CheckBox116"
+        Me.CheckBox116.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox116.TabIndex = 353
+        Me.CheckBox116.UseVisualStyleBackColor = True
+        '
+        'Label123
+        '
+        Me.Label123.AutoSize = True
+        Me.Label123.Location = New System.Drawing.Point(34, 1356)
+        Me.Label123.Name = "Label123"
+        Me.Label123.Size = New System.Drawing.Size(44, 13)
+        Me.Label123.TabIndex = 352
+        Me.Label123.Text = "for sex?"
+        '
+        'Label124
+        '
+        Me.Label124.AutoSize = True
+        Me.Label124.Location = New System.Drawing.Point(34, 1343)
+        Me.Label124.Name = "Label124"
+        Me.Label124.Size = New System.Drawing.Size(214, 13)
+        Me.Label124.TabIndex = 351
+        Me.Label124.Text = "Mottat penger eller narkotika som gjenytelse"
+        '
         'egenerklering
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(671, 463)
+        Me.Controls.Add(Me.CheckBox115)
+        Me.Controls.Add(Me.CheckBox116)
+        Me.Controls.Add(Me.Label123)
+        Me.Controls.Add(Me.Label124)
+        Me.Controls.Add(Me.CheckBox113)
+        Me.Controls.Add(Me.CheckBox114)
+        Me.Controls.Add(Me.Label121)
+        Me.Controls.Add(Me.Label122)
+        Me.Controls.Add(Me.CheckBox111)
+        Me.Controls.Add(Me.CheckBox112)
+        Me.Controls.Add(Me.Label120)
+        Me.Controls.Add(Me.CheckBox109)
+        Me.Controls.Add(Me.CheckBox110)
+        Me.Controls.Add(Me.Label119)
+        Me.Controls.Add(Me.CheckBox107)
+        Me.Controls.Add(Me.CheckBox108)
+        Me.Controls.Add(Me.Label118)
+        Me.Controls.Add(Me.CheckBox105)
+        Me.Controls.Add(Me.CheckBox106)
+        Me.Controls.Add(Me.Label117)
+        Me.Controls.Add(Me.CheckBox103)
+        Me.Controls.Add(Me.CheckBox104)
+        Me.Controls.Add(Me.Label116)
+        Me.Controls.Add(Me.CheckBox101)
+        Me.Controls.Add(Me.CheckBox102)
+        Me.Controls.Add(Me.Label115)
+        Me.Controls.Add(Me.CheckBox99)
+        Me.Controls.Add(Me.CheckBox100)
+        Me.Controls.Add(Me.Label114)
+        Me.Controls.Add(Me.CheckBox97)
+        Me.Controls.Add(Me.CheckBox98)
+        Me.Controls.Add(Me.Label113)
+        Me.Controls.Add(Me.CheckBox95)
+        Me.Controls.Add(Me.CheckBox96)
+        Me.Controls.Add(Me.Label112)
+        Me.Controls.Add(Me.CheckBox93)
+        Me.Controls.Add(Me.CheckBox94)
+        Me.Controls.Add(Me.Label111)
+        Me.Controls.Add(Me.CheckBox91)
+        Me.Controls.Add(Me.CheckBox92)
+        Me.Controls.Add(Me.Label110)
+        Me.Controls.Add(Me.CheckBox89)
+        Me.Controls.Add(Me.CheckBox90)
+        Me.Controls.Add(Me.Label109)
+        Me.Controls.Add(Me.CheckBox87)
+        Me.Controls.Add(Me.CheckBox88)
+        Me.Controls.Add(Me.Label108)
+        Me.Controls.Add(Me.Label106)
+        Me.Controls.Add(Me.Label107)
+        Me.Controls.Add(Me.Label104)
+        Me.Controls.Add(Me.Label105)
+        Me.Controls.Add(Me.Label103)
+        Me.Controls.Add(Me.CheckBox85)
+        Me.Controls.Add(Me.CheckBox86)
+        Me.Controls.Add(Me.Label101)
+        Me.Controls.Add(Me.Label102)
+        Me.Controls.Add(Me.CheckBox83)
+        Me.Controls.Add(Me.CheckBox84)
+        Me.Controls.Add(Me.Label99)
+        Me.Controls.Add(Me.Label100)
+        Me.Controls.Add(Me.CheckBox81)
+        Me.Controls.Add(Me.CheckBox82)
+        Me.Controls.Add(Me.Label98)
+        Me.Controls.Add(Me.Label97)
+        Me.Controls.Add(Me.CheckBox67)
+        Me.Controls.Add(Me.CheckBox68)
+        Me.Controls.Add(Me.Label79)
+        Me.Controls.Add(Me.CheckBox69)
+        Me.Controls.Add(Me.CheckBox70)
+        Me.Controls.Add(Me.Label80)
+        Me.Controls.Add(Me.Label81)
+        Me.Controls.Add(Me.CheckBox71)
+        Me.Controls.Add(Me.CheckBox72)
+        Me.Controls.Add(Me.Label82)
+        Me.Controls.Add(Me.Label83)
+        Me.Controls.Add(Me.Label84)
+        Me.Controls.Add(Me.CheckBox73)
+        Me.Controls.Add(Me.CheckBox74)
+        Me.Controls.Add(Me.Label85)
+        Me.Controls.Add(Me.Label86)
+        Me.Controls.Add(Me.Label87)
+        Me.Controls.Add(Me.Label88)
+        Me.Controls.Add(Me.CheckBox75)
+        Me.Controls.Add(Me.CheckBox76)
+        Me.Controls.Add(Me.Label89)
+        Me.Controls.Add(Me.Label90)
+        Me.Controls.Add(Me.CheckBox77)
+        Me.Controls.Add(Me.CheckBox78)
+        Me.Controls.Add(Me.Label91)
+        Me.Controls.Add(Me.Label92)
+        Me.Controls.Add(Me.Label93)
+        Me.Controls.Add(Me.CheckBox79)
+        Me.Controls.Add(Me.CheckBox80)
+        Me.Controls.Add(Me.Label94)
+        Me.Controls.Add(Me.Label95)
+        Me.Controls.Add(Me.Label96)
+        Me.Controls.Add(Me.CheckBox65)
+        Me.Controls.Add(Me.CheckBox66)
+        Me.Controls.Add(Me.Label78)
         Me.Controls.Add(Me.Label77)
         Me.Controls.Add(Me.CheckBox63)
         Me.Controls.Add(Me.CheckBox64)
@@ -1850,4 +2941,103 @@ Partial Class egenerklering
     Friend WithEvents CheckBox63 As CheckBox
     Friend WithEvents CheckBox64 As CheckBox
     Friend WithEvents Label77 As Label
+    Friend WithEvents Label78 As Label
+    Friend WithEvents CheckBox65 As CheckBox
+    Friend WithEvents CheckBox66 As CheckBox
+    Friend WithEvents CheckBox67 As CheckBox
+    Friend WithEvents CheckBox68 As CheckBox
+    Friend WithEvents Label79 As Label
+    Friend WithEvents CheckBox69 As CheckBox
+    Friend WithEvents CheckBox70 As CheckBox
+    Friend WithEvents Label80 As Label
+    Friend WithEvents Label81 As Label
+    Friend WithEvents CheckBox71 As CheckBox
+    Friend WithEvents CheckBox72 As CheckBox
+    Friend WithEvents Label82 As Label
+    Friend WithEvents Label83 As Label
+    Friend WithEvents Label84 As Label
+    Friend WithEvents CheckBox73 As CheckBox
+    Friend WithEvents CheckBox74 As CheckBox
+    Friend WithEvents Label85 As Label
+    Friend WithEvents Label86 As Label
+    Friend WithEvents Label87 As Label
+    Friend WithEvents Label88 As Label
+    Friend WithEvents CheckBox75 As CheckBox
+    Friend WithEvents CheckBox76 As CheckBox
+    Friend WithEvents Label89 As Label
+    Friend WithEvents Label90 As Label
+    Friend WithEvents CheckBox77 As CheckBox
+    Friend WithEvents CheckBox78 As CheckBox
+    Friend WithEvents Label91 As Label
+    Friend WithEvents Label92 As Label
+    Friend WithEvents Label93 As Label
+    Friend WithEvents CheckBox79 As CheckBox
+    Friend WithEvents CheckBox80 As CheckBox
+    Friend WithEvents Label94 As Label
+    Friend WithEvents Label95 As Label
+    Friend WithEvents Label96 As Label
+    Friend WithEvents Label97 As Label
+    Friend WithEvents Label98 As Label
+    Friend WithEvents CheckBox81 As CheckBox
+    Friend WithEvents CheckBox82 As CheckBox
+    Friend WithEvents Label99 As Label
+    Friend WithEvents Label100 As Label
+    Friend WithEvents CheckBox83 As CheckBox
+    Friend WithEvents CheckBox84 As CheckBox
+    Friend WithEvents Label101 As Label
+    Friend WithEvents Label102 As Label
+    Friend WithEvents CheckBox85 As CheckBox
+    Friend WithEvents CheckBox86 As CheckBox
+    Friend WithEvents Label103 As Label
+    Friend WithEvents Label104 As Label
+    Friend WithEvents Label105 As Label
+    Friend WithEvents Label106 As Label
+    Friend WithEvents Label107 As Label
+    Friend WithEvents Label108 As Label
+    Friend WithEvents CheckBox87 As CheckBox
+    Friend WithEvents CheckBox88 As CheckBox
+    Friend WithEvents CheckBox89 As CheckBox
+    Friend WithEvents CheckBox90 As CheckBox
+    Friend WithEvents Label109 As Label
+    Friend WithEvents CheckBox91 As CheckBox
+    Friend WithEvents CheckBox92 As CheckBox
+    Friend WithEvents Label110 As Label
+    Friend WithEvents CheckBox93 As CheckBox
+    Friend WithEvents CheckBox94 As CheckBox
+    Friend WithEvents Label111 As Label
+    Friend WithEvents CheckBox95 As CheckBox
+    Friend WithEvents CheckBox96 As CheckBox
+    Friend WithEvents Label112 As Label
+    Friend WithEvents CheckBox97 As CheckBox
+    Friend WithEvents CheckBox98 As CheckBox
+    Friend WithEvents Label113 As Label
+    Friend WithEvents CheckBox99 As CheckBox
+    Friend WithEvents CheckBox100 As CheckBox
+    Friend WithEvents Label114 As Label
+    Friend WithEvents CheckBox101 As CheckBox
+    Friend WithEvents CheckBox102 As CheckBox
+    Friend WithEvents Label115 As Label
+    Friend WithEvents CheckBox103 As CheckBox
+    Friend WithEvents CheckBox104 As CheckBox
+    Friend WithEvents Label116 As Label
+    Friend WithEvents CheckBox105 As CheckBox
+    Friend WithEvents CheckBox106 As CheckBox
+    Friend WithEvents Label117 As Label
+    Friend WithEvents CheckBox107 As CheckBox
+    Friend WithEvents CheckBox108 As CheckBox
+    Friend WithEvents Label118 As Label
+    Friend WithEvents CheckBox109 As CheckBox
+    Friend WithEvents CheckBox110 As CheckBox
+    Friend WithEvents Label119 As Label
+    Friend WithEvents CheckBox111 As CheckBox
+    Friend WithEvents CheckBox112 As CheckBox
+    Friend WithEvents Label120 As Label
+    Friend WithEvents CheckBox113 As CheckBox
+    Friend WithEvents CheckBox114 As CheckBox
+    Friend WithEvents Label121 As Label
+    Friend WithEvents Label122 As Label
+    Friend WithEvents CheckBox115 As CheckBox
+    Friend WithEvents CheckBox116 As CheckBox
+    Friend WithEvents Label123 As Label
+    Friend WithEvents Label124 As Label
 End Class
