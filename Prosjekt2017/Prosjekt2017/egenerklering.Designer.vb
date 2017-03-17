@@ -26,20 +26,20 @@ Partial Class egenerklering
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtEtternavn = New System.Windows.Forms.TextBox()
-        Me.txtFornavn = New System.Windows.Forms.TextBox()
+        Me.txtEtternavnE = New System.Windows.Forms.TextBox()
+        Me.txtFornavnE = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtFodselsnummer = New System.Windows.Forms.TextBox()
+        Me.txtFodselsnummerE = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtPrivatAdresse = New System.Windows.Forms.TextBox()
+        Me.txtPrivatAdresseE = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtPostnummer = New System.Windows.Forms.TextBox()
+        Me.txtPostnummerE = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtTelefon = New System.Windows.Forms.TextBox()
+        Me.txtTelefonE = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.txtEpost = New System.Windows.Forms.TextBox()
-        Me.chkEpost = New System.Windows.Forms.CheckBox()
-        Me.chkSMS = New System.Windows.Forms.CheckBox()
+        Me.txtEpostE = New System.Windows.Forms.TextBox()
+        Me.chkEpostNei = New System.Windows.Forms.CheckBox()
+        Me.chkSMSNei = New System.Windows.Forms.CheckBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.chk111 = New System.Windows.Forms.CheckBox()
         Me.chk112 = New System.Windows.Forms.CheckBox()
@@ -272,6 +272,11 @@ Partial Class egenerklering
         Me.chk5151 = New System.Windows.Forms.CheckBox()
         Me.Label123 = New System.Windows.Forms.Label()
         Me.Label124 = New System.Windows.Forms.Label()
+        Me.chkEpostJa = New System.Windows.Forms.CheckBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label125 = New System.Windows.Forms.Label()
+        Me.Label126 = New System.Windows.Forms.Label()
+        Me.chkSMSJa = New System.Windows.Forms.CheckBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -313,19 +318,19 @@ Partial Class egenerklering
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Fornavn"
         '
-        'txtEtternavn
+        'txtEtternavnE
         '
-        Me.txtEtternavn.Location = New System.Drawing.Point(93, 76)
-        Me.txtEtternavn.Name = "txtEtternavn"
-        Me.txtEtternavn.Size = New System.Drawing.Size(86, 20)
-        Me.txtEtternavn.TabIndex = 4
+        Me.txtEtternavnE.Location = New System.Drawing.Point(93, 76)
+        Me.txtEtternavnE.Name = "txtEtternavnE"
+        Me.txtEtternavnE.Size = New System.Drawing.Size(86, 20)
+        Me.txtEtternavnE.TabIndex = 4
         '
-        'txtFornavn
+        'txtFornavnE
         '
-        Me.txtFornavn.Location = New System.Drawing.Point(237, 76)
-        Me.txtFornavn.Name = "txtFornavn"
-        Me.txtFornavn.Size = New System.Drawing.Size(86, 20)
-        Me.txtFornavn.TabIndex = 5
+        Me.txtFornavnE.Location = New System.Drawing.Point(237, 76)
+        Me.txtFornavnE.Name = "txtFornavnE"
+        Me.txtFornavnE.Size = New System.Drawing.Size(86, 20)
+        Me.txtFornavnE.TabIndex = 5
         '
         'Label5
         '
@@ -336,12 +341,12 @@ Partial Class egenerklering
         Me.Label5.TabIndex = 6
         Me.Label5.Text = "Fødselsnummer (11 siffer)"
         '
-        'txtFodselsnummer
+        'txtFodselsnummerE
         '
-        Me.txtFodselsnummer.Location = New System.Drawing.Point(470, 76)
-        Me.txtFodselsnummer.Name = "txtFodselsnummer"
-        Me.txtFodselsnummer.Size = New System.Drawing.Size(86, 20)
-        Me.txtFodselsnummer.TabIndex = 7
+        Me.txtFodselsnummerE.Location = New System.Drawing.Point(470, 76)
+        Me.txtFodselsnummerE.Name = "txtFodselsnummerE"
+        Me.txtFodselsnummerE.Size = New System.Drawing.Size(86, 20)
+        Me.txtFodselsnummerE.TabIndex = 7
         '
         'Label6
         '
@@ -352,12 +357,12 @@ Partial Class egenerklering
         Me.Label6.TabIndex = 8
         Me.Label6.Text = "Privatadresse"
         '
-        'txtPrivatAdresse
+        'txtPrivatAdresseE
         '
-        Me.txtPrivatAdresse.Location = New System.Drawing.Point(112, 122)
-        Me.txtPrivatAdresse.Name = "txtPrivatAdresse"
-        Me.txtPrivatAdresse.Size = New System.Drawing.Size(211, 20)
-        Me.txtPrivatAdresse.TabIndex = 9
+        Me.txtPrivatAdresseE.Location = New System.Drawing.Point(112, 122)
+        Me.txtPrivatAdresseE.Name = "txtPrivatAdresseE"
+        Me.txtPrivatAdresseE.Size = New System.Drawing.Size(211, 20)
+        Me.txtPrivatAdresseE.TabIndex = 9
         '
         'Label7
         '
@@ -368,12 +373,12 @@ Partial Class egenerklering
         Me.Label7.TabIndex = 10
         Me.Label7.Text = "Postnummer"
         '
-        'txtPostnummer
+        'txtPostnummerE
         '
-        Me.txtPostnummer.Location = New System.Drawing.Point(409, 122)
-        Me.txtPostnummer.Name = "txtPostnummer"
-        Me.txtPostnummer.Size = New System.Drawing.Size(86, 20)
-        Me.txtPostnummer.TabIndex = 11
+        Me.txtPostnummerE.Location = New System.Drawing.Point(409, 122)
+        Me.txtPostnummerE.Name = "txtPostnummerE"
+        Me.txtPostnummerE.Size = New System.Drawing.Size(86, 20)
+        Me.txtPostnummerE.TabIndex = 11
         '
         'Label8
         '
@@ -384,12 +389,12 @@ Partial Class egenerklering
         Me.Label8.TabIndex = 12
         Me.Label8.Text = "Telefon"
         '
-        'txtTelefon
+        'txtTelefonE
         '
-        Me.txtTelefon.Location = New System.Drawing.Point(93, 167)
-        Me.txtTelefon.Name = "txtTelefon"
-        Me.txtTelefon.Size = New System.Drawing.Size(86, 20)
-        Me.txtTelefon.TabIndex = 13
+        Me.txtTelefonE.Location = New System.Drawing.Point(93, 167)
+        Me.txtTelefonE.Name = "txtTelefonE"
+        Me.txtTelefonE.Size = New System.Drawing.Size(86, 20)
+        Me.txtTelefonE.TabIndex = 13
         '
         'Label9
         '
@@ -400,34 +405,34 @@ Partial Class egenerklering
         Me.Label9.TabIndex = 14
         Me.Label9.Text = "E-post"
         '
-        'txtEpost
+        'txtEpostE
         '
-        Me.txtEpost.Location = New System.Drawing.Point(237, 167)
-        Me.txtEpost.Name = "txtEpost"
-        Me.txtEpost.Size = New System.Drawing.Size(166, 20)
-        Me.txtEpost.TabIndex = 15
+        Me.txtEpostE.Location = New System.Drawing.Point(237, 167)
+        Me.txtEpostE.Name = "txtEpostE"
+        Me.txtEpostE.Size = New System.Drawing.Size(166, 20)
+        Me.txtEpostE.TabIndex = 15
         '
-        'chkEpost
+        'chkEpostNei
         '
-        Me.chkEpost.AutoSize = True
-        Me.chkEpost.Location = New System.Drawing.Point(37, 219)
-        Me.chkEpost.Name = "chkEpost"
-        Me.chkEpost.Size = New System.Drawing.Size(525, 17)
-        Me.chkEpost.TabIndex = 18
-        Me.chkEpost.Text = "Tillater du at blodbanken sender deg epost(Innkalling, timepåminning, eventuelt a" &
+        Me.chkEpostNei.AutoSize = True
+        Me.chkEpostNei.Location = New System.Drawing.Point(61, 226)
+        Me.chkEpostNei.Name = "chkEpostNei"
+        Me.chkEpostNei.Size = New System.Drawing.Size(525, 17)
+        Me.chkEpostNei.TabIndex = 18
+        Me.chkEpostNei.Text = "Tillater du at blodbanken sender deg epost(Innkalling, timepåminning, eventuelt a" &
     "nnen viktig informasjon)?"
-        Me.chkEpost.UseVisualStyleBackColor = True
+        Me.chkEpostNei.UseVisualStyleBackColor = True
         '
-        'chkSMS
+        'chkSMSNei
         '
-        Me.chkSMS.AutoSize = True
-        Me.chkSMS.Location = New System.Drawing.Point(37, 242)
-        Me.chkSMS.Name = "chkSMS"
-        Me.chkSMS.Size = New System.Drawing.Size(522, 17)
-        Me.chkSMS.TabIndex = 19
-        Me.chkSMS.Text = "Tillater du at blodbanken sender deg SMS(Innkalling, timepåminning, eventuelt ann" &
+        Me.chkSMSNei.AutoSize = True
+        Me.chkSMSNei.Location = New System.Drawing.Point(61, 249)
+        Me.chkSMSNei.Name = "chkSMSNei"
+        Me.chkSMSNei.Size = New System.Drawing.Size(522, 17)
+        Me.chkSMSNei.TabIndex = 19
+        Me.chkSMSNei.Text = "Tillater du at blodbanken sender deg SMS(Innkalling, timepåminning, eventuelt ann" &
     "en viktig informasjon)?"
-        Me.chkSMS.UseVisualStyleBackColor = True
+        Me.chkSMSNei.UseVisualStyleBackColor = True
         '
         'Label10
         '
@@ -2526,12 +2531,62 @@ Partial Class egenerklering
         Me.Label124.TabIndex = 351
         Me.Label124.Text = "Mottat penger eller narkotika som gjenytelse"
         '
+        'chkEpostJa
+        '
+        Me.chkEpostJa.AutoSize = True
+        Me.chkEpostJa.Location = New System.Drawing.Point(40, 227)
+        Me.chkEpostJa.Name = "chkEpostJa"
+        Me.chkEpostJa.Size = New System.Drawing.Size(15, 14)
+        Me.chkEpostJa.TabIndex = 355
+        Me.chkEpostJa.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(260, 1527)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(158, 23)
+        Me.Button1.TabIndex = 356
+        Me.Button1.Text = "Send inn Egenærklering"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label125
+        '
+        Me.Label125.AutoSize = True
+        Me.Label125.Location = New System.Drawing.Point(58, 211)
+        Me.Label125.Name = "Label125"
+        Me.Label125.Size = New System.Drawing.Size(23, 13)
+        Me.Label125.TabIndex = 358
+        Me.Label125.Text = "Nei"
+        '
+        'Label126
+        '
+        Me.Label126.AutoSize = True
+        Me.Label126.Location = New System.Drawing.Point(37, 211)
+        Me.Label126.Name = "Label126"
+        Me.Label126.Size = New System.Drawing.Size(18, 13)
+        Me.Label126.TabIndex = 357
+        Me.Label126.Text = "Ja"
+        '
+        'chkSMSJa
+        '
+        Me.chkSMSJa.AutoSize = True
+        Me.chkSMSJa.Location = New System.Drawing.Point(40, 250)
+        Me.chkSMSJa.Name = "chkSMSJa"
+        Me.chkSMSJa.Size = New System.Drawing.Size(15, 14)
+        Me.chkSMSJa.TabIndex = 359
+        Me.chkSMSJa.UseVisualStyleBackColor = True
+        '
         'egenerklering
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(671, 463)
+        Me.Controls.Add(Me.chkSMSJa)
+        Me.Controls.Add(Me.Label125)
+        Me.Controls.Add(Me.Label126)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.chkEpostJa)
         Me.Controls.Add(Me.chk5152)
         Me.Controls.Add(Me.chk5151)
         Me.Controls.Add(Me.Label123)
@@ -2764,20 +2819,20 @@ Partial Class egenerklering
         Me.Controls.Add(Me.chk112)
         Me.Controls.Add(Me.chk111)
         Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.chkSMS)
-        Me.Controls.Add(Me.chkEpost)
-        Me.Controls.Add(Me.txtEpost)
+        Me.Controls.Add(Me.chkSMSNei)
+        Me.Controls.Add(Me.chkEpostNei)
+        Me.Controls.Add(Me.txtEpostE)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.txtTelefon)
+        Me.Controls.Add(Me.txtTelefonE)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.txtPostnummer)
+        Me.Controls.Add(Me.txtPostnummerE)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.txtPrivatAdresse)
+        Me.Controls.Add(Me.txtPrivatAdresseE)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.txtFodselsnummer)
+        Me.Controls.Add(Me.txtFodselsnummerE)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.txtFornavn)
-        Me.Controls.Add(Me.txtEtternavn)
+        Me.Controls.Add(Me.txtFornavnE)
+        Me.Controls.Add(Me.txtEtternavnE)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -2794,20 +2849,20 @@ Partial Class egenerklering
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents txtEtternavn As TextBox
-    Friend WithEvents txtFornavn As TextBox
+    Friend WithEvents txtEtternavnE As TextBox
+    Friend WithEvents txtFornavnE As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents txtFodselsnummer As TextBox
+    Friend WithEvents txtFodselsnummerE As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents txtPrivatAdresse As TextBox
+    Friend WithEvents txtPrivatAdresseE As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents txtPostnummer As TextBox
+    Friend WithEvents txtPostnummerE As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents txtTelefon As TextBox
+    Friend WithEvents txtTelefonE As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents txtEpost As TextBox
-    Friend WithEvents chkEpost As CheckBox
-    Friend WithEvents chkSMS As CheckBox
+    Friend WithEvents txtEpostE As TextBox
+    Friend WithEvents chkEpostNei As CheckBox
+    Friend WithEvents chkSMSNei As CheckBox
     Friend WithEvents Label10 As Label
     Friend WithEvents chk111 As CheckBox
     Friend WithEvents chk112 As CheckBox
@@ -3040,4 +3095,9 @@ Partial Class egenerklering
     Friend WithEvents chk5151 As CheckBox
     Friend WithEvents Label123 As Label
     Friend WithEvents Label124 As Label
+    Friend WithEvents chkEpostJa As CheckBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label125 As Label
+    Friend WithEvents Label126 As Label
+    Friend WithEvents chkSMSJa As CheckBox
 End Class
