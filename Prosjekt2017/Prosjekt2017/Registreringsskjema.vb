@@ -23,23 +23,9 @@ Public Class Registreringsskjema
 
     End Sub
 
-    Private Sub txtPassord_TextChanged(sender As Object, e As EventArgs) Handles txtPassord.TextChanged
-        'txtPassord.PasswordChar = "*"
-    End Sub
-
-    Private Sub Registreringsskjema_Close(sender As Object, e As EventArgs) Handles MyBase.Closed
-        tilkobling.Close()
-        tilkobling.Dispose()
-    End Sub
-
-    Private Sub txtBekreftPassord_TextChanged(sender As Object, e As EventArgs) Handles txtBekreftPassord.TextChanged
-        'txtBekreftPassord.PasswordChar = "*"
-    End Sub
-
     Private Sub txtPostnummer_TextChanged(sender As Object, e As EventArgs) Handles txtPostnummer.TextChanged
 
         If txtPostnummer.TextLength = 4 Then
-
 
             Dim READER As MySqlDataReader
             Try
@@ -63,5 +49,17 @@ Public Class Registreringsskjema
 
         End If
 
+    End Sub
+
+    Private Sub Registreringsskjema_Close(sender As Object, e As EventArgs) Handles MyBase.Closed
+        tilkobling.Close()
+        tilkobling.Dispose()
+    End Sub
+
+    Private Sub txtPassord_TextChanged(sender As Object, e As EventArgs) Handles txtPassord.TextChanged
+        'txtPassord.PasswordChar = "*"
+    End Sub
+    Private Sub txtBekreftPassord_TextChanged(sender As Object, e As EventArgs) Handles txtBekreftPassord.TextChanged
+        'txtBekreftPassord.PasswordChar = "*"
     End Sub
 End Class
