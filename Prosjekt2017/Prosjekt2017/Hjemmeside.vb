@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.Data
 Public Class Hjemmeside
-    'Oppretter en mysql connection til databasen
+    'Oppretter en mySQL-connection til databasen.
     Private tilkobling As MySqlConnection
 
     Private Sub Hjemmeside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -12,34 +12,49 @@ Public Class Hjemmeside
         btnLogginn.Hide()
         btnRegistrer.Hide()
 
-        'tilkoblingingen blir koblet direkte sånn at brukeren har tilgang til databasen ved oppstart
+        'Tilkoblingen blir koblet direkte slik at brukeren har tilgang til databasen ved oppstart.
         tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=g_oops_23;Uid=g_oops_23;Pwd=3d4CcHvg")
         tilkobling.Open()
     End Sub
+    Private Sub SetDefault(ByVal btnLogginn As Button)
+        Me.AcceptButton = btnLogginn
+    End Sub
+
 
     Private Sub Registreringsknapp_Click(sender As Object, e As EventArgs) Handles btnRegistrer.Click
         Registreringsskjema.Show()
     End Sub
 
     Private Sub Logginnknapp_Click(sender As Object, e As EventArgs) Handles btnLogginn.Click
-        Dim passord = txtPassord.Text
-        Dim telefon = txtTelefon.Text
-        PubVar.telefon = telefon
 
-        Dim sqlSporringBruker = "SELECT * from Blodgiver where telefon=@telefon " & "AND passord=@passord"
+        If txtTelefon.Text = "" Or Not IsNumeric(txtTelefon.Text) Then
+            MsgBox("Ugyldig telefonnummer.")
+        Else
 
-        Dim sql As New MySqlCommand(sqlSporringBruker, tilkobling)
-        sql.Parameters.AddWithValue("@telefon", telefon)
-        sql.Parameters.AddWithValue("@passord", passord)
+            Dim passord = txtPassord.Text
+            Dim telefon = txtTelefon.Text
+            PubVar.telefon = telefon
 
-        Dim READER As MySqlDataReader
-        READER = sql.ExecuteReader
-        If READER.Read Then
-            MsgBox("Brukeren er logget på")
-            READER.Close()
-            Me.Hide()
-            minside.Show()
+            ' brukerType er by default "Blodgiver", men endres til "Ansatt" ved ansatt-innlogging.
+            Dim sqlSporringBruker = "SELECT * from " & brukerType & " where telefon=@telefon " & "AND passord=@passord"
+
+            Dim sql As New MySqlCommand(sqlSporringBruker, tilkobling)
+            sql.Parameters.AddWithValue("@telefon", telefon)
+            sql.Parameters.AddWithValue("@passord", passord)
+
+            Dim reader As MySqlDataReader
+            reader = sql.ExecuteReader
+            If reader.Read Then
+                MsgBox("Velkommen til Min Side!")
+                reader.Close()
+                Me.Hide()
+                minside.Show()
+            Else
+                reader.Close()
+                MsgBox("Feil telefonnummer eller passord.")
+            End If
         End If
+
 
     End Sub
     Private Sub Hjemmeside_Closed(sender As Object, e As EventArgs) Handles MyBase.Closed
@@ -60,6 +75,9 @@ Public Class Hjemmeside
         txtPassord.Show()
         btnLogginn.Show()
         btnRegistrer.Show()
+
+        txtTelefon.Select()
+        PubVar.brukerType = "Blodgiver"
     End Sub
 
     Private Sub btnAnsatt_Click(sender As Object, e As EventArgs) Handles btnAnsatt.Click
@@ -71,5 +89,9 @@ Public Class Hjemmeside
         txtPassord.Show()
         btnLogginn.Show()
         btnRegistrer.Hide()
+
+        txtTelefon.Select()
+
+        PubVar.brukerType = "Blodgiver" ' <- Endre til "Ansatt" når databasetabellen er klar.
     End Sub
 End Class
