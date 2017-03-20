@@ -15,6 +15,7 @@ Public Class Registreringsskjema
         If bpassord = passord Then
             Dim nyBruker As New Bruker(txtPassord.Text, txtFornavn.Text, txtEtternavn.Text, txtFodselsdato.Text,
                                          txtTlf.Text, txtAdresse.Text, txtPostnummer.Text, txtEpost.Text)
+            nyBruker.regBruker()
             Me.Close()
         Else
             MsgBox("Passordene er ikke like")
@@ -61,10 +62,6 @@ Public Class Registreringsskjema
             End Try
 
         End If
-
-    End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles lbEpost.Click
 
     End Sub
 End Class
