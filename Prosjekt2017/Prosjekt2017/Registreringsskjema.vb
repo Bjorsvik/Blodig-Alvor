@@ -9,49 +9,13 @@ Public Class Registreringsskjema
         txtPostnummer.MaxLength = 4
     End Sub
     Private Sub btnRegistrer_Click(sender As Object, e As EventArgs) Handles btnRegistrer.Click
-
         Dim passord = txtPassord.Text
         Dim bpassord = txtBekreftPassord.Text
-        Dim fornavn = txtFornavn.Text
-        Dim etternavn = txtEtternavn.Text
-        Dim fodselsdato = txtFodselsdato.Text
-        Dim telefon = txtTlf.Text
-        Dim adresse = txtAdresse.Text
-        Dim postnummer = txtPostnummer.Text
-        Dim epost = txtEpost.Text
-
 
         If bpassord = passord Then
-            Dim sqlSporring = "insert into Blodgiver (passord, fornavn, etternavn, fodselsdato,
-                           telefon, adresse, postnummer, epost) values (@passord, @fornavn, 
-                           @etternavn, @fodselsdato, @telefon, @adresse, @postnummer, @epost)"
-
-            Dim sqlSporringBrukernavn = "select * from Blodgiver where telefon=@telefon"
-
-            Dim sqlRegistrer As New MySqlCommand(sqlSporring, tilkobling)
-
-            Dim sqlSjekk As New MySqlCommand(sqlSporringBrukernavn, tilkobling)
-            sqlSjekk.Parameters.AddWithValue("@telefon", telefon)
-
-
-            Dim reader = sqlSjekk.ExecuteReader()
-            If reader.HasRows Then
-                MsgBox("Personnummer er i bruk")
-                reader.Close()
-            Else
-                reader.Close()
-                sqlRegistrer.Parameters.AddWithValue("@passord", passord)
-                sqlRegistrer.Parameters.AddWithValue("@fornavn", fornavn)
-                sqlRegistrer.Parameters.AddWithValue("@etternavn", etternavn)
-                sqlRegistrer.Parameters.AddWithValue("@fodselsdato", fodselsdato)
-                sqlRegistrer.Parameters.AddWithValue("@telefon", telefon)
-                sqlRegistrer.Parameters.AddWithValue("@adresse", adresse)
-                sqlRegistrer.Parameters.AddWithValue("@postnummer", postnummer)
-                sqlRegistrer.Parameters.AddWithValue("@epost", epost)
-                sqlRegistrer.ExecuteNonQuery()
-                reader.Close()
-                Me.Close()
-            End If
+            Dim nyBruker As New Bruker(txtPassord.Text, txtFornavn.Text, txtEtternavn.Text, txtFodselsdato.Text,
+                                         txtTlf.Text, txtAdresse.Text, txtPostnummer.Text, txtEpost.Text)
+            Me.Close()
         Else
             MsgBox("Passordene er ikke like")
         End If
