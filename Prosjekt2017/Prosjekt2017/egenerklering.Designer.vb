@@ -106,6 +106,9 @@ Partial Class egenerklering
         Me.Label74 = New System.Windows.Forms.Label()
         Me.Label75 = New System.Windows.Forms.Label()
         Me.Label76 = New System.Windows.Forms.Label()
+
+        Me.CheckBox63 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox64 = New System.Windows.Forms.CheckBox()
         Me.Label77 = New System.Windows.Forms.Label()
         Me.Label78 = New System.Windows.Forms.Label()
         Me.Label79 = New System.Windows.Forms.Label()
@@ -3308,12 +3311,24 @@ Partial Class egenerklering
         Me.Label128.TabIndex = 422
         Me.Label128.Text = "Ja"
         '
+        'Label77
+        '
+        Me.Label77.AutoSize = True
+        Me.Label77.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label77.Location = New System.Drawing.Point(34, 918)
+        Me.Label77.Name = "Label77"
+        Me.Label77.Size = New System.Drawing.Size(180, 13)
+        Me.Label77.TabIndex = 255
+        Me.Label77.Text = "Har du i løpet av de siste to år"
+        '
         'egenerklering
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(671, 463)
+        Me.Controls.Add(Me.CheckBox63)
+        Me.Controls.Add(Me.CheckBox64)
         Me.Controls.Add(Me.Label126)
         Me.Controls.Add(Me.Label128)
         Me.Controls.Add(Me.Panel58)
@@ -3717,6 +3732,8 @@ Partial Class egenerklering
     Friend WithEvents Label74 As Label
     Friend WithEvents Label75 As Label
     Friend WithEvents Label76 As Label
+    Friend WithEvents CheckBox63 As CheckBox
+    Friend WithEvents CheckBox64 As CheckBox
     Friend WithEvents Label77 As Label
     Friend WithEvents Label78 As Label
     Friend WithEvents Label79 As Label
