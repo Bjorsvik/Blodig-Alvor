@@ -42,8 +42,8 @@ Partial Class minside
         Me.tabBrukerinfo = New System.Windows.Forms.TabPage()
         Me.tabHistorikk = New System.Windows.Forms.TabPage()
         Me.tabReservasjon = New System.Windows.Forms.TabPage()
-        Me.btnSkjema = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnSkjema = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.tabBrukerinfo.SuspendLayout()
         Me.tabReservasjon.SuspendLayout()
@@ -53,7 +53,7 @@ Partial Class minside
         '
         Me.lbFornavn.AutoSize = True
         Me.lbFornavn.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbFornavn.Location = New System.Drawing.Point(411, 94)
+        Me.lbFornavn.Location = New System.Drawing.Point(363, 82)
         Me.lbFornavn.Name = "lbFornavn"
         Me.lbFornavn.Size = New System.Drawing.Size(82, 26)
         Me.lbFornavn.TabIndex = 4
@@ -63,7 +63,7 @@ Partial Class minside
         '
         Me.lbEtternavn.AutoSize = True
         Me.lbEtternavn.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbEtternavn.Location = New System.Drawing.Point(411, 127)
+        Me.lbEtternavn.Location = New System.Drawing.Point(363, 115)
         Me.lbEtternavn.Name = "lbEtternavn"
         Me.lbEtternavn.Size = New System.Drawing.Size(98, 26)
         Me.lbEtternavn.TabIndex = 5
@@ -73,7 +73,7 @@ Partial Class minside
         '
         Me.lbFodselsdato.AutoSize = True
         Me.lbFodselsdato.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbFodselsdato.Location = New System.Drawing.Point(411, 157)
+        Me.lbFodselsdato.Location = New System.Drawing.Point(363, 145)
         Me.lbFodselsdato.Name = "lbFodselsdato"
         Me.lbFodselsdato.Size = New System.Drawing.Size(117, 26)
         Me.lbFodselsdato.TabIndex = 6
@@ -83,7 +83,7 @@ Partial Class minside
         '
         Me.lbTelefon.AutoSize = True
         Me.lbTelefon.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbTelefon.Location = New System.Drawing.Point(411, 208)
+        Me.lbTelefon.Location = New System.Drawing.Point(363, 196)
         Me.lbTelefon.Name = "lbTelefon"
         Me.lbTelefon.Size = New System.Drawing.Size(80, 26)
         Me.lbTelefon.TabIndex = 7
@@ -93,7 +93,7 @@ Partial Class minside
         '
         Me.lbAdresse.AutoSize = True
         Me.lbAdresse.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbAdresse.Location = New System.Drawing.Point(410, 235)
+        Me.lbAdresse.Location = New System.Drawing.Point(362, 223)
         Me.lbAdresse.Name = "lbAdresse"
         Me.lbAdresse.Size = New System.Drawing.Size(83, 26)
         Me.lbAdresse.TabIndex = 8
@@ -103,7 +103,7 @@ Partial Class minside
         '
         Me.lbPostnummer.AutoSize = True
         Me.lbPostnummer.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbPostnummer.Location = New System.Drawing.Point(410, 263)
+        Me.lbPostnummer.Location = New System.Drawing.Point(362, 251)
         Me.lbPostnummer.Name = "lbPostnummer"
         Me.lbPostnummer.Size = New System.Drawing.Size(118, 26)
         Me.lbPostnummer.TabIndex = 9
@@ -113,7 +113,7 @@ Partial Class minside
         '
         Me.lbPoststed.AutoSize = True
         Me.lbPoststed.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbPoststed.Location = New System.Drawing.Point(410, 292)
+        Me.lbPoststed.Location = New System.Drawing.Point(362, 280)
         Me.lbPoststed.Name = "lbPoststed"
         Me.lbPoststed.Size = New System.Drawing.Size(87, 26)
         Me.lbPoststed.TabIndex = 10
@@ -123,7 +123,7 @@ Partial Class minside
         '
         Me.lbEpost.AutoSize = True
         Me.lbEpost.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbEpost.Location = New System.Drawing.Point(411, 184)
+        Me.lbEpost.Location = New System.Drawing.Point(363, 172)
         Me.lbEpost.Name = "lbEpost"
         Me.lbEpost.Size = New System.Drawing.Size(61, 26)
         Me.lbEpost.TabIndex = 11
@@ -133,7 +133,7 @@ Partial Class minside
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(319, 184)
+        Me.Label1.Location = New System.Drawing.Point(271, 172)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(67, 26)
         Me.Label1.TabIndex = 19
@@ -143,7 +143,7 @@ Partial Class minside
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(291, 292)
+        Me.Label2.Location = New System.Drawing.Point(243, 280)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(93, 26)
         Me.Label2.TabIndex = 18
@@ -153,7 +153,7 @@ Partial Class minside
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(260, 261)
+        Me.Label3.Location = New System.Drawing.Point(212, 249)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(124, 26)
         Me.Label3.TabIndex = 17
@@ -163,7 +163,7 @@ Partial Class minside
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(295, 235)
+        Me.Label4.Location = New System.Drawing.Point(247, 223)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(89, 26)
         Me.Label4.TabIndex = 16
@@ -173,7 +173,7 @@ Partial Class minside
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(298, 209)
+        Me.Label5.Location = New System.Drawing.Point(250, 197)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(86, 26)
         Me.Label5.TabIndex = 15
@@ -183,7 +183,7 @@ Partial Class minside
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(263, 158)
+        Me.Label6.Location = New System.Drawing.Point(215, 146)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(123, 26)
         Me.Label6.TabIndex = 14
@@ -193,7 +193,7 @@ Partial Class minside
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(282, 127)
+        Me.Label7.Location = New System.Drawing.Point(234, 115)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(104, 26)
         Me.Label7.TabIndex = 13
@@ -203,7 +203,7 @@ Partial Class minside
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(298, 94)
+        Me.Label8.Location = New System.Drawing.Point(250, 82)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(88, 26)
         Me.Label8.TabIndex = 12
@@ -269,15 +269,6 @@ Partial Class minside
         Me.tabReservasjon.Text = "Reserver Time"
         Me.tabReservasjon.UseVisualStyleBackColor = True
         '
-        'btnSkjema
-        '
-        Me.btnSkjema.Location = New System.Drawing.Point(653, 356)
-        Me.btnSkjema.Name = "btnSkjema"
-        Me.btnSkjema.Size = New System.Drawing.Size(101, 44)
-        Me.btnSkjema.TabIndex = 0
-        Me.btnSkjema.Text = "Egenerklæring"
-        Me.btnSkjema.UseVisualStyleBackColor = True
-        '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(525, 357)
@@ -286,6 +277,15 @@ Partial Class minside
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "Reserver"
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'btnSkjema
+        '
+        Me.btnSkjema.Location = New System.Drawing.Point(653, 356)
+        Me.btnSkjema.Name = "btnSkjema"
+        Me.btnSkjema.Size = New System.Drawing.Size(101, 44)
+        Me.btnSkjema.TabIndex = 0
+        Me.btnSkjema.Text = "Egenerklæring"
+        Me.btnSkjema.UseVisualStyleBackColor = True
         '
         'minside
         '
