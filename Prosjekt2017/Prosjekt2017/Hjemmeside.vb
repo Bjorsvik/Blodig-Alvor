@@ -91,7 +91,6 @@ Public Class Hjemmeside
         btnRegistrer.Hide()
 
         txtTelefon.Select()
-
         PubVar.brukerType = "Blodgiver" ' <- Endre til "Ansatt" når databasetabellen er klar.
     End Sub
 End Class
