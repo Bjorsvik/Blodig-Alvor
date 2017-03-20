@@ -26,36 +26,26 @@ Partial Class egenerklering
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtEtternavn = New System.Windows.Forms.TextBox()
-        Me.txtFornavn = New System.Windows.Forms.TextBox()
+        Me.txtEtternavnE = New System.Windows.Forms.TextBox()
+        Me.txtFornavnE = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtFodselsnummer = New System.Windows.Forms.TextBox()
+        Me.txtFodselsnummerE = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtPrivatAdresse = New System.Windows.Forms.TextBox()
+        Me.txtPrivatAdresseE = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtPostnummer = New System.Windows.Forms.TextBox()
+        Me.txtPostnummerE = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtTelefon = New System.Windows.Forms.TextBox()
+        Me.txtTelefonE = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.txtEpost = New System.Windows.Forms.TextBox()
-        Me.chkEpost = New System.Windows.Forms.CheckBox()
-        Me.chkSMS = New System.Windows.Forms.CheckBox()
+        Me.txtEpostE = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.CheckBox7 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox8 = New System.Windows.Forms.CheckBox()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.CheckBox9 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox10 = New System.Windows.Forms.CheckBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
@@ -64,78 +54,32 @@ Partial Class egenerklering
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox11 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox12 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox13 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox14 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox15 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox16 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox17 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox18 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox19 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox20 = New System.Windows.Forms.CheckBox()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
-        Me.CheckBox21 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox22 = New System.Windows.Forms.CheckBox()
         Me.Label30 = New System.Windows.Forms.Label()
-        Me.CheckBox23 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox24 = New System.Windows.Forms.CheckBox()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.Label32 = New System.Windows.Forms.Label()
-        Me.CheckBox25 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox26 = New System.Windows.Forms.CheckBox()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.Label34 = New System.Windows.Forms.Label()
         Me.Label35 = New System.Windows.Forms.Label()
         Me.Label36 = New System.Windows.Forms.Label()
-        Me.CheckBox27 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox28 = New System.Windows.Forms.CheckBox()
         Me.Label37 = New System.Windows.Forms.Label()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.Label39 = New System.Windows.Forms.Label()
-        Me.CheckBox29 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox30 = New System.Windows.Forms.CheckBox()
         Me.Label40 = New System.Windows.Forms.Label()
         Me.Label41 = New System.Windows.Forms.Label()
-        Me.CheckBox31 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox32 = New System.Windows.Forms.CheckBox()
         Me.Label42 = New System.Windows.Forms.Label()
-        Me.CheckBox33 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox34 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox53 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox54 = New System.Windows.Forms.CheckBox()
         Me.Label57 = New System.Windows.Forms.Label()
-        Me.CheckBox51 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox52 = New System.Windows.Forms.CheckBox()
         Me.Label56 = New System.Windows.Forms.Label()
-        Me.CheckBox49 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox50 = New System.Windows.Forms.CheckBox()
         Me.Label54 = New System.Windows.Forms.Label()
         Me.Label55 = New System.Windows.Forms.Label()
-        Me.CheckBox47 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox48 = New System.Windows.Forms.CheckBox()
         Me.Label53 = New System.Windows.Forms.Label()
         Me.Label51 = New System.Windows.Forms.Label()
         Me.Label52 = New System.Windows.Forms.Label()
         Me.Label50 = New System.Windows.Forms.Label()
-        Me.CheckBox35 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox36 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox37 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox38 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox39 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox40 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox41 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox42 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox43 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox44 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox45 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox46 = New System.Windows.Forms.CheckBox()
         Me.Label43 = New System.Windows.Forms.Label()
         Me.Label44 = New System.Windows.Forms.Label()
         Me.Label45 = New System.Windows.Forms.Label()
@@ -145,14 +89,6 @@ Partial Class egenerklering
         Me.Label49 = New System.Windows.Forms.Label()
         Me.Label58 = New System.Windows.Forms.Label()
         Me.Label59 = New System.Windows.Forms.Label()
-        Me.CheckBox55 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox56 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox57 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox58 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox59 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox60 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox61 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox62 = New System.Windows.Forms.CheckBox()
         Me.Label60 = New System.Windows.Forms.Label()
         Me.Label61 = New System.Windows.Forms.Label()
         Me.Label62 = New System.Windows.Forms.Label()
@@ -170,10 +106,292 @@ Partial Class egenerklering
         Me.Label74 = New System.Windows.Forms.Label()
         Me.Label75 = New System.Windows.Forms.Label()
         Me.Label76 = New System.Windows.Forms.Label()
-        Me.CheckBox63 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox64 = New System.Windows.Forms.CheckBox()
         Me.Label77 = New System.Windows.Forms.Label()
+        Me.Label78 = New System.Windows.Forms.Label()
+        Me.Label79 = New System.Windows.Forms.Label()
+        Me.Label80 = New System.Windows.Forms.Label()
+        Me.Label81 = New System.Windows.Forms.Label()
+        Me.Label82 = New System.Windows.Forms.Label()
+        Me.Label83 = New System.Windows.Forms.Label()
+        Me.Label84 = New System.Windows.Forms.Label()
+        Me.Label85 = New System.Windows.Forms.Label()
+        Me.Label86 = New System.Windows.Forms.Label()
+        Me.Label87 = New System.Windows.Forms.Label()
+        Me.Label88 = New System.Windows.Forms.Label()
+        Me.Label89 = New System.Windows.Forms.Label()
+        Me.Label90 = New System.Windows.Forms.Label()
+        Me.Label91 = New System.Windows.Forms.Label()
+        Me.Label92 = New System.Windows.Forms.Label()
+        Me.Label93 = New System.Windows.Forms.Label()
+        Me.Label94 = New System.Windows.Forms.Label()
+        Me.Label95 = New System.Windows.Forms.Label()
+        Me.Label96 = New System.Windows.Forms.Label()
+        Me.Label97 = New System.Windows.Forms.Label()
+        Me.Label98 = New System.Windows.Forms.Label()
+        Me.Label99 = New System.Windows.Forms.Label()
+        Me.Label100 = New System.Windows.Forms.Label()
+        Me.Label101 = New System.Windows.Forms.Label()
+        Me.Label102 = New System.Windows.Forms.Label()
+        Me.Label103 = New System.Windows.Forms.Label()
+        Me.Label104 = New System.Windows.Forms.Label()
+        Me.Label105 = New System.Windows.Forms.Label()
+        Me.Label106 = New System.Windows.Forms.Label()
+        Me.Label107 = New System.Windows.Forms.Label()
+        Me.Label108 = New System.Windows.Forms.Label()
+        Me.Label109 = New System.Windows.Forms.Label()
+        Me.Label110 = New System.Windows.Forms.Label()
+        Me.Label111 = New System.Windows.Forms.Label()
+        Me.Label112 = New System.Windows.Forms.Label()
+        Me.Label113 = New System.Windows.Forms.Label()
+        Me.Label114 = New System.Windows.Forms.Label()
+        Me.Label115 = New System.Windows.Forms.Label()
+        Me.Label116 = New System.Windows.Forms.Label()
+        Me.Label117 = New System.Windows.Forms.Label()
+        Me.Label118 = New System.Windows.Forms.Label()
+        Me.Label119 = New System.Windows.Forms.Label()
+        Me.Label120 = New System.Windows.Forms.Label()
+        Me.Label121 = New System.Windows.Forms.Label()
+        Me.Label122 = New System.Windows.Forms.Label()
+        Me.Label123 = New System.Windows.Forms.Label()
+        Me.Label124 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.RadioButton14 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton5 = New System.Windows.Forms.RadioButton()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.RadioButton6 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton7 = New System.Windows.Forms.RadioButton()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.RadioButton8 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton9 = New System.Windows.Forms.RadioButton()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.RadioButton10 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton11 = New System.Windows.Forms.RadioButton()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.RadioButton12 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton13 = New System.Windows.Forms.RadioButton()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.RadioButton15 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton16 = New System.Windows.Forms.RadioButton()
+        Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.RadioButton17 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton18 = New System.Windows.Forms.RadioButton()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.RadioButton19 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton20 = New System.Windows.Forms.RadioButton()
+        Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.RadioButton21 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton22 = New System.Windows.Forms.RadioButton()
+        Me.Panel12 = New System.Windows.Forms.Panel()
+        Me.RadioButton23 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton24 = New System.Windows.Forms.RadioButton()
+        Me.Panel14 = New System.Windows.Forms.Panel()
+        Me.RadioButton27 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton28 = New System.Windows.Forms.RadioButton()
+        Me.Panel15 = New System.Windows.Forms.Panel()
+        Me.RadioButton29 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton30 = New System.Windows.Forms.RadioButton()
+        Me.Panel13 = New System.Windows.Forms.Panel()
+        Me.RadioButton25 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton26 = New System.Windows.Forms.RadioButton()
+        Me.Panel16 = New System.Windows.Forms.Panel()
+        Me.RadioButton31 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton32 = New System.Windows.Forms.RadioButton()
+        Me.Panel17 = New System.Windows.Forms.Panel()
+        Me.RadioButton33 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton34 = New System.Windows.Forms.RadioButton()
+        Me.Panel18 = New System.Windows.Forms.Panel()
+        Me.RadioButton35 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton36 = New System.Windows.Forms.RadioButton()
+        Me.Panel19 = New System.Windows.Forms.Panel()
+        Me.RadioButton37 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton38 = New System.Windows.Forms.RadioButton()
+        Me.Panel20 = New System.Windows.Forms.Panel()
+        Me.RadioButton39 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton40 = New System.Windows.Forms.RadioButton()
+        Me.Panel21 = New System.Windows.Forms.Panel()
+        Me.RadioButton41 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton42 = New System.Windows.Forms.RadioButton()
+        Me.Panel22 = New System.Windows.Forms.Panel()
+        Me.RadioButton43 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton44 = New System.Windows.Forms.RadioButton()
+        Me.Panel23 = New System.Windows.Forms.Panel()
+        Me.RadioButton45 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton46 = New System.Windows.Forms.RadioButton()
+        Me.Panel24 = New System.Windows.Forms.Panel()
+        Me.RadioButton47 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton48 = New System.Windows.Forms.RadioButton()
+        Me.Panel25 = New System.Windows.Forms.Panel()
+        Me.RadioButton49 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton50 = New System.Windows.Forms.RadioButton()
+        Me.Panel27 = New System.Windows.Forms.Panel()
+        Me.RadioButton53 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton54 = New System.Windows.Forms.RadioButton()
+        Me.Panel28 = New System.Windows.Forms.Panel()
+        Me.RadioButton55 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton56 = New System.Windows.Forms.RadioButton()
+        Me.Panel29 = New System.Windows.Forms.Panel()
+        Me.RadioButton57 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton58 = New System.Windows.Forms.RadioButton()
+        Me.Panel30 = New System.Windows.Forms.Panel()
+        Me.RadioButton59 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton60 = New System.Windows.Forms.RadioButton()
+        Me.Panel26 = New System.Windows.Forms.Panel()
+        Me.RadioButton51 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton52 = New System.Windows.Forms.RadioButton()
+        Me.Panel31 = New System.Windows.Forms.Panel()
+        Me.RadioButton61 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton62 = New System.Windows.Forms.RadioButton()
+        Me.Panel32 = New System.Windows.Forms.Panel()
+        Me.RadioButton63 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton64 = New System.Windows.Forms.RadioButton()
+        Me.Panel33 = New System.Windows.Forms.Panel()
+        Me.RadioButton65 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton66 = New System.Windows.Forms.RadioButton()
+        Me.Panel34 = New System.Windows.Forms.Panel()
+        Me.RadioButton67 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton68 = New System.Windows.Forms.RadioButton()
+        Me.Panel35 = New System.Windows.Forms.Panel()
+        Me.RadioButton69 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton70 = New System.Windows.Forms.RadioButton()
+        Me.Panel36 = New System.Windows.Forms.Panel()
+        Me.RadioButton71 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton72 = New System.Windows.Forms.RadioButton()
+        Me.Panel37 = New System.Windows.Forms.Panel()
+        Me.RadioButton73 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton74 = New System.Windows.Forms.RadioButton()
+        Me.Panel38 = New System.Windows.Forms.Panel()
+        Me.RadioButton75 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton76 = New System.Windows.Forms.RadioButton()
+        Me.Panel39 = New System.Windows.Forms.Panel()
+        Me.RadioButton77 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton78 = New System.Windows.Forms.RadioButton()
+        Me.Panel40 = New System.Windows.Forms.Panel()
+        Me.RadioButton79 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton80 = New System.Windows.Forms.RadioButton()
+        Me.Panel41 = New System.Windows.Forms.Panel()
+        Me.RadioButton81 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton82 = New System.Windows.Forms.RadioButton()
+        Me.Panel42 = New System.Windows.Forms.Panel()
+        Me.RadioButton83 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton84 = New System.Windows.Forms.RadioButton()
+        Me.Panel43 = New System.Windows.Forms.Panel()
+        Me.RadioButton85 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton86 = New System.Windows.Forms.RadioButton()
+        Me.Panel44 = New System.Windows.Forms.Panel()
+        Me.RadioButton87 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton88 = New System.Windows.Forms.RadioButton()
+        Me.Panel45 = New System.Windows.Forms.Panel()
+        Me.RadioButton89 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton90 = New System.Windows.Forms.RadioButton()
+        Me.Panel48 = New System.Windows.Forms.Panel()
+        Me.RadioButton95 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton96 = New System.Windows.Forms.RadioButton()
+        Me.Panel46 = New System.Windows.Forms.Panel()
+        Me.RadioButton91 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton92 = New System.Windows.Forms.RadioButton()
+        Me.Panel47 = New System.Windows.Forms.Panel()
+        Me.RadioButton93 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton94 = New System.Windows.Forms.RadioButton()
+        Me.Panel49 = New System.Windows.Forms.Panel()
+        Me.RadioButton97 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton98 = New System.Windows.Forms.RadioButton()
+        Me.Panel50 = New System.Windows.Forms.Panel()
+        Me.RadioButton99 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton100 = New System.Windows.Forms.RadioButton()
+        Me.Panel51 = New System.Windows.Forms.Panel()
+        Me.RadioButton101 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton102 = New System.Windows.Forms.RadioButton()
+        Me.Panel52 = New System.Windows.Forms.Panel()
+        Me.RadioButton103 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton104 = New System.Windows.Forms.RadioButton()
+        Me.Panel53 = New System.Windows.Forms.Panel()
+        Me.RadioButton105 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton106 = New System.Windows.Forms.RadioButton()
+        Me.Panel54 = New System.Windows.Forms.Panel()
+        Me.RadioButton107 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton108 = New System.Windows.Forms.RadioButton()
+        Me.Panel55 = New System.Windows.Forms.Panel()
+        Me.RadioButton109 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton110 = New System.Windows.Forms.RadioButton()
+        Me.Panel56 = New System.Windows.Forms.Panel()
+        Me.RadioButton111 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton112 = New System.Windows.Forms.RadioButton()
+        Me.Label127 = New System.Windows.Forms.Label()
+        Me.Label125 = New System.Windows.Forms.Label()
+        Me.Panel57 = New System.Windows.Forms.Panel()
+        Me.rbEpostNei = New System.Windows.Forms.RadioButton()
+        Me.rbEpostJa = New System.Windows.Forms.RadioButton()
+        Me.Panel58 = New System.Windows.Forms.Panel()
+        Me.RadioButton115 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton116 = New System.Windows.Forms.RadioButton()
+        Me.Label126 = New System.Windows.Forms.Label()
+        Me.Label128 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.Panel4.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        Me.Panel6.SuspendLayout()
+        Me.Panel7.SuspendLayout()
+        Me.Panel8.SuspendLayout()
+        Me.Panel9.SuspendLayout()
+        Me.Panel10.SuspendLayout()
+        Me.Panel11.SuspendLayout()
+        Me.Panel12.SuspendLayout()
+        Me.Panel14.SuspendLayout()
+        Me.Panel15.SuspendLayout()
+        Me.Panel13.SuspendLayout()
+        Me.Panel16.SuspendLayout()
+        Me.Panel17.SuspendLayout()
+        Me.Panel18.SuspendLayout()
+        Me.Panel19.SuspendLayout()
+        Me.Panel20.SuspendLayout()
+        Me.Panel21.SuspendLayout()
+        Me.Panel22.SuspendLayout()
+        Me.Panel23.SuspendLayout()
+        Me.Panel24.SuspendLayout()
+        Me.Panel25.SuspendLayout()
+        Me.Panel27.SuspendLayout()
+        Me.Panel28.SuspendLayout()
+        Me.Panel29.SuspendLayout()
+        Me.Panel30.SuspendLayout()
+        Me.Panel26.SuspendLayout()
+        Me.Panel31.SuspendLayout()
+        Me.Panel32.SuspendLayout()
+        Me.Panel33.SuspendLayout()
+        Me.Panel34.SuspendLayout()
+        Me.Panel35.SuspendLayout()
+        Me.Panel36.SuspendLayout()
+        Me.Panel37.SuspendLayout()
+        Me.Panel38.SuspendLayout()
+        Me.Panel39.SuspendLayout()
+        Me.Panel40.SuspendLayout()
+        Me.Panel41.SuspendLayout()
+        Me.Panel42.SuspendLayout()
+        Me.Panel43.SuspendLayout()
+        Me.Panel44.SuspendLayout()
+        Me.Panel45.SuspendLayout()
+        Me.Panel48.SuspendLayout()
+        Me.Panel46.SuspendLayout()
+        Me.Panel47.SuspendLayout()
+        Me.Panel49.SuspendLayout()
+        Me.Panel50.SuspendLayout()
+        Me.Panel51.SuspendLayout()
+        Me.Panel52.SuspendLayout()
+        Me.Panel53.SuspendLayout()
+        Me.Panel54.SuspendLayout()
+        Me.Panel55.SuspendLayout()
+        Me.Panel56.SuspendLayout()
+        Me.Panel57.SuspendLayout()
+        Me.Panel58.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -214,19 +432,19 @@ Partial Class egenerklering
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Fornavn"
         '
-        'txtEtternavn
+        'txtEtternavnE
         '
-        Me.txtEtternavn.Location = New System.Drawing.Point(93, 76)
-        Me.txtEtternavn.Name = "txtEtternavn"
-        Me.txtEtternavn.Size = New System.Drawing.Size(86, 20)
-        Me.txtEtternavn.TabIndex = 4
+        Me.txtEtternavnE.Location = New System.Drawing.Point(93, 76)
+        Me.txtEtternavnE.Name = "txtEtternavnE"
+        Me.txtEtternavnE.Size = New System.Drawing.Size(86, 20)
+        Me.txtEtternavnE.TabIndex = 4
         '
-        'txtFornavn
+        'txtFornavnE
         '
-        Me.txtFornavn.Location = New System.Drawing.Point(237, 76)
-        Me.txtFornavn.Name = "txtFornavn"
-        Me.txtFornavn.Size = New System.Drawing.Size(86, 20)
-        Me.txtFornavn.TabIndex = 5
+        Me.txtFornavnE.Location = New System.Drawing.Point(237, 76)
+        Me.txtFornavnE.Name = "txtFornavnE"
+        Me.txtFornavnE.Size = New System.Drawing.Size(86, 20)
+        Me.txtFornavnE.TabIndex = 5
         '
         'Label5
         '
@@ -237,12 +455,12 @@ Partial Class egenerklering
         Me.Label5.TabIndex = 6
         Me.Label5.Text = "Fødselsnummer (11 siffer)"
         '
-        'txtFodselsnummer
+        'txtFodselsnummerE
         '
-        Me.txtFodselsnummer.Location = New System.Drawing.Point(470, 76)
-        Me.txtFodselsnummer.Name = "txtFodselsnummer"
-        Me.txtFodselsnummer.Size = New System.Drawing.Size(86, 20)
-        Me.txtFodselsnummer.TabIndex = 7
+        Me.txtFodselsnummerE.Location = New System.Drawing.Point(470, 76)
+        Me.txtFodselsnummerE.Name = "txtFodselsnummerE"
+        Me.txtFodselsnummerE.Size = New System.Drawing.Size(86, 20)
+        Me.txtFodselsnummerE.TabIndex = 7
         '
         'Label6
         '
@@ -253,12 +471,12 @@ Partial Class egenerklering
         Me.Label6.TabIndex = 8
         Me.Label6.Text = "Privatadresse"
         '
-        'txtPrivatAdresse
+        'txtPrivatAdresseE
         '
-        Me.txtPrivatAdresse.Location = New System.Drawing.Point(112, 122)
-        Me.txtPrivatAdresse.Name = "txtPrivatAdresse"
-        Me.txtPrivatAdresse.Size = New System.Drawing.Size(211, 20)
-        Me.txtPrivatAdresse.TabIndex = 9
+        Me.txtPrivatAdresseE.Location = New System.Drawing.Point(112, 122)
+        Me.txtPrivatAdresseE.Name = "txtPrivatAdresseE"
+        Me.txtPrivatAdresseE.Size = New System.Drawing.Size(211, 20)
+        Me.txtPrivatAdresseE.TabIndex = 9
         '
         'Label7
         '
@@ -269,12 +487,12 @@ Partial Class egenerklering
         Me.Label7.TabIndex = 10
         Me.Label7.Text = "Postnummer"
         '
-        'txtPostnummer
+        'txtPostnummerE
         '
-        Me.txtPostnummer.Location = New System.Drawing.Point(409, 122)
-        Me.txtPostnummer.Name = "txtPostnummer"
-        Me.txtPostnummer.Size = New System.Drawing.Size(86, 20)
-        Me.txtPostnummer.TabIndex = 11
+        Me.txtPostnummerE.Location = New System.Drawing.Point(409, 122)
+        Me.txtPostnummerE.Name = "txtPostnummerE"
+        Me.txtPostnummerE.Size = New System.Drawing.Size(86, 20)
+        Me.txtPostnummerE.TabIndex = 11
         '
         'Label8
         '
@@ -285,12 +503,12 @@ Partial Class egenerklering
         Me.Label8.TabIndex = 12
         Me.Label8.Text = "Telefon"
         '
-        'txtTelefon
+        'txtTelefonE
         '
-        Me.txtTelefon.Location = New System.Drawing.Point(93, 167)
-        Me.txtTelefon.Name = "txtTelefon"
-        Me.txtTelefon.Size = New System.Drawing.Size(86, 20)
-        Me.txtTelefon.TabIndex = 13
+        Me.txtTelefonE.Location = New System.Drawing.Point(93, 167)
+        Me.txtTelefonE.Name = "txtTelefonE"
+        Me.txtTelefonE.Size = New System.Drawing.Size(86, 20)
+        Me.txtTelefonE.TabIndex = 13
         '
         'Label9
         '
@@ -301,34 +519,12 @@ Partial Class egenerklering
         Me.Label9.TabIndex = 14
         Me.Label9.Text = "E-post"
         '
-        'txtEpost
+        'txtEpostE
         '
-        Me.txtEpost.Location = New System.Drawing.Point(237, 167)
-        Me.txtEpost.Name = "txtEpost"
-        Me.txtEpost.Size = New System.Drawing.Size(166, 20)
-        Me.txtEpost.TabIndex = 15
-        '
-        'chkEpost
-        '
-        Me.chkEpost.AutoSize = True
-        Me.chkEpost.Location = New System.Drawing.Point(37, 219)
-        Me.chkEpost.Name = "chkEpost"
-        Me.chkEpost.Size = New System.Drawing.Size(525, 17)
-        Me.chkEpost.TabIndex = 18
-        Me.chkEpost.Text = "Tillater du at blodbanken sender deg epost(Innkalling, timepåminning, eventuelt a" &
-    "nnen viktig informasjon)?"
-        Me.chkEpost.UseVisualStyleBackColor = True
-        '
-        'chkSMS
-        '
-        Me.chkSMS.AutoSize = True
-        Me.chkSMS.Location = New System.Drawing.Point(37, 242)
-        Me.chkSMS.Name = "chkSMS"
-        Me.chkSMS.Size = New System.Drawing.Size(522, 17)
-        Me.chkSMS.TabIndex = 19
-        Me.chkSMS.Text = "Tillater du at blodbanken sender deg SMS(Innkalling, timepåminning, eventuelt ann" &
-    "en viktig informasjon)?"
-        Me.chkSMS.UseVisualStyleBackColor = True
+        Me.txtEpostE.Location = New System.Drawing.Point(237, 167)
+        Me.txtEpostE.Name = "txtEpostE"
+        Me.txtEpostE.Size = New System.Drawing.Size(166, 20)
+        Me.txtEpostE.TabIndex = 15
         '
         'Label10
         '
@@ -339,28 +535,10 @@ Partial Class egenerklering
         Me.Label10.TabIndex = 20
         Me.Label10.Text = "Har du fått informasjon om blodgivning?"
         '
-        'CheckBox3
-        '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(279, 299)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox3.TabIndex = 21
-        Me.CheckBox3.UseVisualStyleBackColor = True
-        '
-        'CheckBox4
-        '
-        Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Location = New System.Drawing.Point(303, 299)
-        Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox4.TabIndex = 22
-        Me.CheckBox4.UseVisualStyleBackColor = True
-        '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(276, 284)
+        Me.Label11.Location = New System.Drawing.Point(280, 284)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(18, 13)
         Me.Label11.TabIndex = 23
@@ -394,24 +572,6 @@ Partial Class egenerklering
         Me.Label14.TabIndex = 26
         Me.Label14.Text = "Føler du deg frisk nå?"
         '
-        'CheckBox5
-        '
-        Me.CheckBox5.AutoSize = True
-        Me.CheckBox5.Location = New System.Drawing.Point(279, 321)
-        Me.CheckBox5.Name = "CheckBox5"
-        Me.CheckBox5.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox5.TabIndex = 27
-        Me.CheckBox5.UseVisualStyleBackColor = True
-        '
-        'CheckBox6
-        '
-        Me.CheckBox6.AutoSize = True
-        Me.CheckBox6.Location = New System.Drawing.Point(303, 321)
-        Me.CheckBox6.Name = "CheckBox6"
-        Me.CheckBox6.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox6.TabIndex = 28
-        Me.CheckBox6.UseVisualStyleBackColor = True
-        '
         'Label15
         '
         Me.Label15.AutoSize = True
@@ -430,24 +590,6 @@ Partial Class egenerklering
         Me.Label16.TabIndex = 30
         Me.Label16.Text = "vært frisk i perioden fra forrige blodgivning?"
         '
-        'CheckBox7
-        '
-        Me.CheckBox7.AutoSize = True
-        Me.CheckBox7.Location = New System.Drawing.Point(279, 346)
-        Me.CheckBox7.Name = "CheckBox7"
-        Me.CheckBox7.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox7.TabIndex = 31
-        Me.CheckBox7.UseVisualStyleBackColor = True
-        '
-        'CheckBox8
-        '
-        Me.CheckBox8.AutoSize = True
-        Me.CheckBox8.Location = New System.Drawing.Point(303, 346)
-        Me.CheckBox8.Name = "CheckBox8"
-        Me.CheckBox8.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox8.TabIndex = 32
-        Me.CheckBox8.UseVisualStyleBackColor = True
-        '
         'Label17
         '
         Me.Label17.AutoSize = True
@@ -456,24 +598,6 @@ Partial Class egenerklering
         Me.Label17.Size = New System.Drawing.Size(124, 13)
         Me.Label17.TabIndex = 33
         Me.Label17.Text = "Veier du 50 kg eller mer?"
-        '
-        'CheckBox9
-        '
-        Me.CheckBox9.AutoSize = True
-        Me.CheckBox9.Location = New System.Drawing.Point(279, 385)
-        Me.CheckBox9.Name = "CheckBox9"
-        Me.CheckBox9.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox9.TabIndex = 34
-        Me.CheckBox9.UseVisualStyleBackColor = True
-        '
-        'CheckBox10
-        '
-        Me.CheckBox10.AutoSize = True
-        Me.CheckBox10.Location = New System.Drawing.Point(303, 385)
-        Me.CheckBox10.Name = "CheckBox10"
-        Me.CheckBox10.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox10.TabIndex = 35
-        Me.CheckBox10.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
@@ -548,114 +672,6 @@ Partial Class egenerklering
         Me.Label24.TabIndex = 43
         Me.Label24.Text = "Vært syk eller hatt feber?"
         '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(279, 457)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox1.TabIndex = 44
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'CheckBox2
-        '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(303, 525)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox2.TabIndex = 45
-        Me.CheckBox2.UseVisualStyleBackColor = True
-        '
-        'CheckBox11
-        '
-        Me.CheckBox11.AutoSize = True
-        Me.CheckBox11.Location = New System.Drawing.Point(279, 525)
-        Me.CheckBox11.Name = "CheckBox11"
-        Me.CheckBox11.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox11.TabIndex = 46
-        Me.CheckBox11.UseVisualStyleBackColor = True
-        '
-        'CheckBox12
-        '
-        Me.CheckBox12.AutoSize = True
-        Me.CheckBox12.Location = New System.Drawing.Point(303, 502)
-        Me.CheckBox12.Name = "CheckBox12"
-        Me.CheckBox12.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox12.TabIndex = 47
-        Me.CheckBox12.UseVisualStyleBackColor = True
-        '
-        'CheckBox13
-        '
-        Me.CheckBox13.AutoSize = True
-        Me.CheckBox13.Location = New System.Drawing.Point(279, 502)
-        Me.CheckBox13.Name = "CheckBox13"
-        Me.CheckBox13.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox13.TabIndex = 48
-        Me.CheckBox13.UseVisualStyleBackColor = True
-        '
-        'CheckBox14
-        '
-        Me.CheckBox14.AutoSize = True
-        Me.CheckBox14.Location = New System.Drawing.Point(303, 479)
-        Me.CheckBox14.Name = "CheckBox14"
-        Me.CheckBox14.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox14.TabIndex = 49
-        Me.CheckBox14.UseVisualStyleBackColor = True
-        '
-        'CheckBox15
-        '
-        Me.CheckBox15.AutoSize = True
-        Me.CheckBox15.Location = New System.Drawing.Point(279, 479)
-        Me.CheckBox15.Name = "CheckBox15"
-        Me.CheckBox15.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox15.TabIndex = 50
-        Me.CheckBox15.UseVisualStyleBackColor = True
-        '
-        'CheckBox16
-        '
-        Me.CheckBox16.AutoSize = True
-        Me.CheckBox16.Location = New System.Drawing.Point(303, 457)
-        Me.CheckBox16.Name = "CheckBox16"
-        Me.CheckBox16.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox16.TabIndex = 51
-        Me.CheckBox16.UseVisualStyleBackColor = True
-        '
-        'CheckBox17
-        '
-        Me.CheckBox17.AutoSize = True
-        Me.CheckBox17.Location = New System.Drawing.Point(303, 570)
-        Me.CheckBox17.Name = "CheckBox17"
-        Me.CheckBox17.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox17.TabIndex = 52
-        Me.CheckBox17.UseVisualStyleBackColor = True
-        '
-        'CheckBox18
-        '
-        Me.CheckBox18.AutoSize = True
-        Me.CheckBox18.Location = New System.Drawing.Point(279, 570)
-        Me.CheckBox18.Name = "CheckBox18"
-        Me.CheckBox18.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox18.TabIndex = 53
-        Me.CheckBox18.UseVisualStyleBackColor = True
-        '
-        'CheckBox19
-        '
-        Me.CheckBox19.AutoSize = True
-        Me.CheckBox19.Location = New System.Drawing.Point(303, 548)
-        Me.CheckBox19.Name = "CheckBox19"
-        Me.CheckBox19.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox19.TabIndex = 54
-        Me.CheckBox19.UseVisualStyleBackColor = True
-        '
-        'CheckBox20
-        '
-        Me.CheckBox20.AutoSize = True
-        Me.CheckBox20.Location = New System.Drawing.Point(279, 548)
-        Me.CheckBox20.Name = "CheckBox20"
-        Me.CheckBox20.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox20.TabIndex = 55
-        Me.CheckBox20.UseVisualStyleBackColor = True
-        '
         'Label25
         '
         Me.Label25.AutoSize = True
@@ -702,24 +718,6 @@ Partial Class egenerklering
         Me.Label29.TabIndex = 61
         Me.Label29.Text = "Ja"
         '
-        'CheckBox21
-        '
-        Me.CheckBox21.AutoSize = True
-        Me.CheckBox21.Location = New System.Drawing.Point(613, 299)
-        Me.CheckBox21.Name = "CheckBox21"
-        Me.CheckBox21.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox21.TabIndex = 60
-        Me.CheckBox21.UseVisualStyleBackColor = True
-        '
-        'CheckBox22
-        '
-        Me.CheckBox22.AutoSize = True
-        Me.CheckBox22.Location = New System.Drawing.Point(589, 299)
-        Me.CheckBox22.Name = "CheckBox22"
-        Me.CheckBox22.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox22.TabIndex = 59
-        Me.CheckBox22.UseVisualStyleBackColor = True
-        '
         'Label30
         '
         Me.Label30.AutoSize = True
@@ -728,24 +726,6 @@ Partial Class egenerklering
         Me.Label30.Size = New System.Drawing.Size(149, 13)
         Me.Label30.TabIndex = 63
         Me.Label30.Text = "Fått behandling med sprøyter?"
-        '
-        'CheckBox23
-        '
-        Me.CheckBox23.AutoSize = True
-        Me.CheckBox23.Location = New System.Drawing.Point(613, 336)
-        Me.CheckBox23.Name = "CheckBox23"
-        Me.CheckBox23.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox23.TabIndex = 65
-        Me.CheckBox23.UseVisualStyleBackColor = True
-        '
-        'CheckBox24
-        '
-        Me.CheckBox24.AutoSize = True
-        Me.CheckBox24.Location = New System.Drawing.Point(589, 336)
-        Me.CheckBox24.Name = "CheckBox24"
-        Me.CheckBox24.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox24.TabIndex = 64
-        Me.CheckBox24.UseVisualStyleBackColor = True
         '
         'Label31
         '
@@ -764,24 +744,6 @@ Partial Class egenerklering
         Me.Label32.Size = New System.Drawing.Size(80, 13)
         Me.Label32.TabIndex = 67
         Me.Label32.Text = "kjønnssykdom?"
-        '
-        'CheckBox25
-        '
-        Me.CheckBox25.AutoSize = True
-        Me.CheckBox25.Location = New System.Drawing.Point(613, 359)
-        Me.CheckBox25.Name = "CheckBox25"
-        Me.CheckBox25.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox25.TabIndex = 69
-        Me.CheckBox25.UseVisualStyleBackColor = True
-        '
-        'CheckBox26
-        '
-        Me.CheckBox26.AutoSize = True
-        Me.CheckBox26.Location = New System.Drawing.Point(589, 359)
-        Me.CheckBox26.Name = "CheckBox26"
-        Me.CheckBox26.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox26.TabIndex = 68
-        Me.CheckBox26.UseVisualStyleBackColor = True
         '
         'Label33
         '
@@ -819,24 +781,6 @@ Partial Class egenerklering
         Me.Label36.TabIndex = 73
         Me.Label36.Text = "for en av disse sykdommene?"
         '
-        'CheckBox27
-        '
-        Me.CheckBox27.AutoSize = True
-        Me.CheckBox27.Location = New System.Drawing.Point(613, 396)
-        Me.CheckBox27.Name = "CheckBox27"
-        Me.CheckBox27.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox27.TabIndex = 75
-        Me.CheckBox27.UseVisualStyleBackColor = True
-        '
-        'CheckBox28
-        '
-        Me.CheckBox28.AutoSize = True
-        Me.CheckBox28.Location = New System.Drawing.Point(589, 396)
-        Me.CheckBox28.Name = "CheckBox28"
-        Me.CheckBox28.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox28.TabIndex = 74
-        Me.CheckBox28.UseVisualStyleBackColor = True
-        '
         'Label37
         '
         Me.Label37.AutoSize = True
@@ -864,24 +808,6 @@ Partial Class egenerklering
         Me.Label39.TabIndex = 78
         Me.Label39.Text = "midler som sprøyter?"
         '
-        'CheckBox29
-        '
-        Me.CheckBox29.AutoSize = True
-        Me.CheckBox29.Location = New System.Drawing.Point(613, 458)
-        Me.CheckBox29.Name = "CheckBox29"
-        Me.CheckBox29.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox29.TabIndex = 80
-        Me.CheckBox29.UseVisualStyleBackColor = True
-        '
-        'CheckBox30
-        '
-        Me.CheckBox30.AutoSize = True
-        Me.CheckBox30.Location = New System.Drawing.Point(589, 458)
-        Me.CheckBox30.Name = "CheckBox30"
-        Me.CheckBox30.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox30.TabIndex = 79
-        Me.CheckBox30.UseVisualStyleBackColor = True
-        '
         'Label40
         '
         Me.Label40.AutoSize = True
@@ -900,24 +826,6 @@ Partial Class egenerklering
         Me.Label41.TabIndex = 82
         Me.Label41.Text = "tidligere prostituerte?"
         '
-        'CheckBox31
-        '
-        Me.CheckBox31.AutoSize = True
-        Me.CheckBox31.Location = New System.Drawing.Point(613, 503)
-        Me.CheckBox31.Name = "CheckBox31"
-        Me.CheckBox31.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox31.TabIndex = 84
-        Me.CheckBox31.UseVisualStyleBackColor = True
-        '
-        'CheckBox32
-        '
-        Me.CheckBox32.AutoSize = True
-        Me.CheckBox32.Location = New System.Drawing.Point(589, 503)
-        Me.CheckBox32.Name = "CheckBox32"
-        Me.CheckBox32.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox32.TabIndex = 83
-        Me.CheckBox32.UseVisualStyleBackColor = True
-        '
         'Label42
         '
         Me.Label42.AutoSize = True
@@ -926,42 +834,6 @@ Partial Class egenerklering
         Me.Label42.Size = New System.Drawing.Size(224, 13)
         Me.Label42.TabIndex = 85
         Me.Label42.Text = "Blitt tatovert, fått piercing eller tatt hull i ørene?"
-        '
-        'CheckBox33
-        '
-        Me.CheckBox33.AutoSize = True
-        Me.CheckBox33.Location = New System.Drawing.Point(613, 538)
-        Me.CheckBox33.Name = "CheckBox33"
-        Me.CheckBox33.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox33.TabIndex = 87
-        Me.CheckBox33.UseVisualStyleBackColor = True
-        '
-        'CheckBox34
-        '
-        Me.CheckBox34.AutoSize = True
-        Me.CheckBox34.Location = New System.Drawing.Point(589, 538)
-        Me.CheckBox34.Name = "CheckBox34"
-        Me.CheckBox34.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox34.TabIndex = 86
-        Me.CheckBox34.UseVisualStyleBackColor = True
-        '
-        'CheckBox53
-        '
-        Me.CheckBox53.AutoSize = True
-        Me.CheckBox53.Location = New System.Drawing.Point(279, 889)
-        Me.CheckBox53.Name = "CheckBox53"
-        Me.CheckBox53.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox53.TabIndex = 224
-        Me.CheckBox53.UseVisualStyleBackColor = True
-        '
-        'CheckBox54
-        '
-        Me.CheckBox54.AutoSize = True
-        Me.CheckBox54.Location = New System.Drawing.Point(303, 889)
-        Me.CheckBox54.Name = "CheckBox54"
-        Me.CheckBox54.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox54.TabIndex = 223
-        Me.CheckBox54.UseVisualStyleBackColor = True
         '
         'Label57
         '
@@ -972,24 +844,6 @@ Partial Class egenerklering
         Me.Label57.TabIndex = 222
         Me.Label57.Text = "Vært utenfor Vest-Europa?"
         '
-        'CheckBox51
-        '
-        Me.CheckBox51.AutoSize = True
-        Me.CheckBox51.Location = New System.Drawing.Point(279, 866)
-        Me.CheckBox51.Name = "CheckBox51"
-        Me.CheckBox51.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox51.TabIndex = 221
-        Me.CheckBox51.UseVisualStyleBackColor = True
-        '
-        'CheckBox52
-        '
-        Me.CheckBox52.AutoSize = True
-        Me.CheckBox52.Location = New System.Drawing.Point(303, 866)
-        Me.CheckBox52.Name = "CheckBox52"
-        Me.CheckBox52.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox52.TabIndex = 220
-        Me.CheckBox52.UseVisualStyleBackColor = True
-        '
         'Label56
         '
         Me.Label56.AutoSize = True
@@ -998,24 +852,6 @@ Partial Class egenerklering
         Me.Label56.Size = New System.Drawing.Size(119, 13)
         Me.Label56.TabIndex = 219
         Me.Label56.Text = "Hatt ny seksualpartner?"
-        '
-        'CheckBox49
-        '
-        Me.CheckBox49.AutoSize = True
-        Me.CheckBox49.Location = New System.Drawing.Point(279, 828)
-        Me.CheckBox49.Name = "CheckBox49"
-        Me.CheckBox49.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox49.TabIndex = 218
-        Me.CheckBox49.UseVisualStyleBackColor = True
-        '
-        'CheckBox50
-        '
-        Me.CheckBox50.AutoSize = True
-        Me.CheckBox50.Location = New System.Drawing.Point(303, 828)
-        Me.CheckBox50.Name = "CheckBox50"
-        Me.CheckBox50.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox50.TabIndex = 217
-        Me.CheckBox50.UseVisualStyleBackColor = True
         '
         'Label54
         '
@@ -1034,24 +870,6 @@ Partial Class egenerklering
         Me.Label55.Size = New System.Drawing.Size(215, 13)
         Me.Label55.TabIndex = 215
         Me.Label55.Text = "fått blod eller blodprodukter utenfor Norden?"
-        '
-        'CheckBox47
-        '
-        Me.CheckBox47.AutoSize = True
-        Me.CheckBox47.Location = New System.Drawing.Point(279, 805)
-        Me.CheckBox47.Name = "CheckBox47"
-        Me.CheckBox47.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox47.TabIndex = 214
-        Me.CheckBox47.UseVisualStyleBackColor = True
-        '
-        'CheckBox48
-        '
-        Me.CheckBox48.AutoSize = True
-        Me.CheckBox48.Location = New System.Drawing.Point(303, 805)
-        Me.CheckBox48.Name = "CheckBox48"
-        Me.CheckBox48.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox48.TabIndex = 213
-        Me.CheckBox48.UseVisualStyleBackColor = True
         '
         'Label53
         '
@@ -1088,114 +906,6 @@ Partial Class egenerklering
         Me.Label50.Size = New System.Drawing.Size(82, 13)
         Me.Label50.TabIndex = 209
         Me.Label50.Text = "Blitt bitt av flått?"
-        '
-        'CheckBox35
-        '
-        Me.CheckBox35.AutoSize = True
-        Me.CheckBox35.Location = New System.Drawing.Point(279, 747)
-        Me.CheckBox35.Name = "CheckBox35"
-        Me.CheckBox35.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox35.TabIndex = 208
-        Me.CheckBox35.UseVisualStyleBackColor = True
-        '
-        'CheckBox36
-        '
-        Me.CheckBox36.AutoSize = True
-        Me.CheckBox36.Location = New System.Drawing.Point(303, 747)
-        Me.CheckBox36.Name = "CheckBox36"
-        Me.CheckBox36.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox36.TabIndex = 207
-        Me.CheckBox36.UseVisualStyleBackColor = True
-        '
-        'CheckBox37
-        '
-        Me.CheckBox37.AutoSize = True
-        Me.CheckBox37.Location = New System.Drawing.Point(279, 770)
-        Me.CheckBox37.Name = "CheckBox37"
-        Me.CheckBox37.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox37.TabIndex = 206
-        Me.CheckBox37.UseVisualStyleBackColor = True
-        '
-        'CheckBox38
-        '
-        Me.CheckBox38.AutoSize = True
-        Me.CheckBox38.Location = New System.Drawing.Point(303, 770)
-        Me.CheckBox38.Name = "CheckBox38"
-        Me.CheckBox38.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox38.TabIndex = 205
-        Me.CheckBox38.UseVisualStyleBackColor = True
-        '
-        'CheckBox39
-        '
-        Me.CheckBox39.AutoSize = True
-        Me.CheckBox39.Location = New System.Drawing.Point(303, 631)
-        Me.CheckBox39.Name = "CheckBox39"
-        Me.CheckBox39.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox39.TabIndex = 204
-        Me.CheckBox39.UseVisualStyleBackColor = True
-        '
-        'CheckBox40
-        '
-        Me.CheckBox40.AutoSize = True
-        Me.CheckBox40.Location = New System.Drawing.Point(279, 653)
-        Me.CheckBox40.Name = "CheckBox40"
-        Me.CheckBox40.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox40.TabIndex = 203
-        Me.CheckBox40.UseVisualStyleBackColor = True
-        '
-        'CheckBox41
-        '
-        Me.CheckBox41.AutoSize = True
-        Me.CheckBox41.Location = New System.Drawing.Point(303, 653)
-        Me.CheckBox41.Name = "CheckBox41"
-        Me.CheckBox41.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox41.TabIndex = 202
-        Me.CheckBox41.UseVisualStyleBackColor = True
-        '
-        'CheckBox42
-        '
-        Me.CheckBox42.AutoSize = True
-        Me.CheckBox42.Location = New System.Drawing.Point(279, 689)
-        Me.CheckBox42.Name = "CheckBox42"
-        Me.CheckBox42.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox42.TabIndex = 201
-        Me.CheckBox42.UseVisualStyleBackColor = True
-        '
-        'CheckBox43
-        '
-        Me.CheckBox43.AutoSize = True
-        Me.CheckBox43.Location = New System.Drawing.Point(303, 689)
-        Me.CheckBox43.Name = "CheckBox43"
-        Me.CheckBox43.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox43.TabIndex = 200
-        Me.CheckBox43.UseVisualStyleBackColor = True
-        '
-        'CheckBox44
-        '
-        Me.CheckBox44.AutoSize = True
-        Me.CheckBox44.Location = New System.Drawing.Point(279, 724)
-        Me.CheckBox44.Name = "CheckBox44"
-        Me.CheckBox44.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox44.TabIndex = 199
-        Me.CheckBox44.UseVisualStyleBackColor = True
-        '
-        'CheckBox45
-        '
-        Me.CheckBox45.AutoSize = True
-        Me.CheckBox45.Location = New System.Drawing.Point(303, 724)
-        Me.CheckBox45.Name = "CheckBox45"
-        Me.CheckBox45.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox45.TabIndex = 198
-        Me.CheckBox45.UseVisualStyleBackColor = True
-        '
-        'CheckBox46
-        '
-        Me.CheckBox46.AutoSize = True
-        Me.CheckBox46.Location = New System.Drawing.Point(279, 631)
-        Me.CheckBox46.Name = "CheckBox46"
-        Me.CheckBox46.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox46.TabIndex = 197
-        Me.CheckBox46.UseVisualStyleBackColor = True
         '
         'Label43
         '
@@ -1279,78 +989,6 @@ Partial Class egenerklering
         Me.Label59.Size = New System.Drawing.Size(70, 13)
         Me.Label59.TabIndex = 226
         Me.Label59.Text = "Er du gravid?"
-        '
-        'CheckBox55
-        '
-        Me.CheckBox55.AutoSize = True
-        Me.CheckBox55.Location = New System.Drawing.Point(613, 631)
-        Me.CheckBox55.Name = "CheckBox55"
-        Me.CheckBox55.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox55.TabIndex = 234
-        Me.CheckBox55.UseVisualStyleBackColor = True
-        '
-        'CheckBox56
-        '
-        Me.CheckBox56.AutoSize = True
-        Me.CheckBox56.Location = New System.Drawing.Point(589, 653)
-        Me.CheckBox56.Name = "CheckBox56"
-        Me.CheckBox56.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox56.TabIndex = 233
-        Me.CheckBox56.UseVisualStyleBackColor = True
-        '
-        'CheckBox57
-        '
-        Me.CheckBox57.AutoSize = True
-        Me.CheckBox57.Location = New System.Drawing.Point(613, 653)
-        Me.CheckBox57.Name = "CheckBox57"
-        Me.CheckBox57.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox57.TabIndex = 232
-        Me.CheckBox57.UseVisualStyleBackColor = True
-        '
-        'CheckBox58
-        '
-        Me.CheckBox58.AutoSize = True
-        Me.CheckBox58.Location = New System.Drawing.Point(589, 689)
-        Me.CheckBox58.Name = "CheckBox58"
-        Me.CheckBox58.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox58.TabIndex = 231
-        Me.CheckBox58.UseVisualStyleBackColor = True
-        '
-        'CheckBox59
-        '
-        Me.CheckBox59.AutoSize = True
-        Me.CheckBox59.Location = New System.Drawing.Point(613, 689)
-        Me.CheckBox59.Name = "CheckBox59"
-        Me.CheckBox59.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox59.TabIndex = 230
-        Me.CheckBox59.UseVisualStyleBackColor = True
-        '
-        'CheckBox60
-        '
-        Me.CheckBox60.AutoSize = True
-        Me.CheckBox60.Location = New System.Drawing.Point(589, 724)
-        Me.CheckBox60.Name = "CheckBox60"
-        Me.CheckBox60.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox60.TabIndex = 229
-        Me.CheckBox60.UseVisualStyleBackColor = True
-        '
-        'CheckBox61
-        '
-        Me.CheckBox61.AutoSize = True
-        Me.CheckBox61.Location = New System.Drawing.Point(613, 724)
-        Me.CheckBox61.Name = "CheckBox61"
-        Me.CheckBox61.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox61.TabIndex = 228
-        Me.CheckBox61.UseVisualStyleBackColor = True
-        '
-        'CheckBox62
-        '
-        Me.CheckBox62.AutoSize = True
-        Me.CheckBox62.Location = New System.Drawing.Point(589, 631)
-        Me.CheckBox62.Name = "CheckBox62"
-        Me.CheckBox62.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox62.TabIndex = 227
-        Me.CheckBox62.UseVisualStyleBackColor = True
         '
         'Label60
         '
@@ -1506,24 +1144,6 @@ Partial Class egenerklering
         Me.Label76.TabIndex = 252
         Me.Label76.Text = "Har du hatt seksuell kontakt med andre menn?"
         '
-        'CheckBox63
-        '
-        Me.CheckBox63.AutoSize = True
-        Me.CheckBox63.Location = New System.Drawing.Point(589, 805)
-        Me.CheckBox63.Name = "CheckBox63"
-        Me.CheckBox63.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox63.TabIndex = 254
-        Me.CheckBox63.UseVisualStyleBackColor = True
-        '
-        'CheckBox64
-        '
-        Me.CheckBox64.AutoSize = True
-        Me.CheckBox64.Location = New System.Drawing.Point(613, 805)
-        Me.CheckBox64.Name = "CheckBox64"
-        Me.CheckBox64.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox64.TabIndex = 253
-        Me.CheckBox64.UseVisualStyleBackColor = True
-        '
         'Label77
         '
         Me.Label77.AutoSize = True
@@ -1534,15 +1154,2277 @@ Partial Class egenerklering
         Me.Label77.TabIndex = 255
         Me.Label77.Text = "Har du i løpet av de siste to år"
         '
+        'Label78
+        '
+        Me.Label78.AutoSize = True
+        Me.Label78.Location = New System.Drawing.Point(34, 941)
+        Me.Label78.Name = "Label78"
+        Me.Label78.Size = New System.Drawing.Size(237, 13)
+        Me.Label78.TabIndex = 256
+        Me.Label78.Text = "Hatt sjeldne eller alvorlige infeksjonssukdommer?"
+        '
+        'Label79
+        '
+        Me.Label79.AutoSize = True
+        Me.Label79.Location = New System.Drawing.Point(342, 1117)
+        Me.Label79.Name = "Label79"
+        Me.Label79.Size = New System.Drawing.Size(228, 13)
+        Me.Label79.TabIndex = 288
+        Me.Label79.Text = "brukes til forskning? Du er like velkommen som"
+        '
+        'Label80
+        '
+        Me.Label80.AutoSize = True
+        Me.Label80.Location = New System.Drawing.Point(342, 1104)
+        Me.Label80.Name = "Label80"
+        Me.Label80.Size = New System.Drawing.Size(241, 13)
+        Me.Label80.TabIndex = 285
+        Me.Label80.Text = "Godtar du at anonumiserte prøver av ditt blod kan"
+        '
+        'Label81
+        '
+        Me.Label81.AutoSize = True
+        Me.Label81.Location = New System.Drawing.Point(342, 1078)
+        Me.Label81.Name = "Label81"
+        Me.Label81.Size = New System.Drawing.Size(221, 13)
+        Me.Label81.TabIndex = 284
+        Me.Label81.Text = "Er du eller din mor født i Amerika sør for USA?"
+        '
+        'Label82
+        '
+        Me.Label82.AutoSize = True
+        Me.Label82.Location = New System.Drawing.Point(342, 1059)
+        Me.Label82.Name = "Label82"
+        Me.Label82.Size = New System.Drawing.Size(94, 13)
+        Me.Label82.TabIndex = 281
+        Me.Label82.Text = "fem år til sammen?"
+        '
+        'Label83
+        '
+        Me.Label83.AutoSize = True
+        Me.Label83.Location = New System.Drawing.Point(342, 1046)
+        Me.Label83.Name = "Label83"
+        Me.Label83.Size = New System.Drawing.Size(167, 13)
+        Me.Label83.TabIndex = 280
+        Me.Label83.Text = "Har du oppholdt deg i Afrika i mer "
+        '
+        'Label84
+        '
+        Me.Label84.AutoSize = True
+        Me.Label84.Location = New System.Drawing.Point(342, 1024)
+        Me.Label84.Name = "Label84"
+        Me.Label84.Size = New System.Drawing.Size(237, 13)
+        Me.Label84.TabIndex = 279
+        Me.Label84.Text = "seks måneder i områder der malaria forekommer?"
+        '
+        'Label85
+        '
+        Me.Label85.AutoSize = True
+        Me.Label85.Location = New System.Drawing.Point(342, 1011)
+        Me.Label85.Name = "Label85"
+        Me.Label85.Size = New System.Drawing.Size(229, 13)
+        Me.Label85.TabIndex = 276
+        Me.Label85.Text = "Har du oppholdt deg sammenhengende i minst "
+        '
+        'Label86
+        '
+        Me.Label86.AutoSize = True
+        Me.Label86.Location = New System.Drawing.Point(342, 989)
+        Me.Label86.Name = "Label86"
+        Me.Label86.Size = New System.Drawing.Size(104, 13)
+        Me.Label86.TabIndex = 275
+        Me.Label86.Text = "malaria forekommer?"
+        '
+        'Label87
+        '
+        Me.Label87.AutoSize = True
+        Me.Label87.Location = New System.Drawing.Point(342, 976)
+        Me.Label87.Name = "Label87"
+        Me.Label87.Size = New System.Drawing.Size(240, 13)
+        Me.Label87.TabIndex = 274
+        Me.Label87.Text = "Har du i løpet av de tre siste år vært i områder der"
+        '
+        'Label88
+        '
+        Me.Label88.AutoSize = True
+        Me.Label88.Location = New System.Drawing.Point(342, 951)
+        Me.Label88.Name = "Label88"
+        Me.Label88.Size = New System.Drawing.Size(215, 13)
+        Me.Label88.TabIndex = 273
+        Me.Label88.Text = "til sammen i perioden mellom 1980 og 1996?"
+        '
+        'Label89
+        '
+        Me.Label89.AutoSize = True
+        Me.Label89.Location = New System.Drawing.Point(342, 938)
+        Me.Label89.Name = "Label89"
+        Me.Label89.Size = New System.Drawing.Size(238, 13)
+        Me.Label89.TabIndex = 270
+        Me.Label89.Text = "Har du oppholdt deg i Storbritania i mer enn ett år"
+        '
+        'Label90
+        '
+        Me.Label90.AutoSize = True
+        Me.Label90.Location = New System.Drawing.Point(342, 918)
+        Me.Label90.Name = "Label90"
+        Me.Label90.Size = New System.Drawing.Size(129, 13)
+        Me.Label90.TabIndex = 269
+        Me.Label90.Text = "sykdom eller variant CJD?"
+        '
+        'Label91
+        '
+        Me.Label91.AutoSize = True
+        Me.Label91.Location = New System.Drawing.Point(342, 902)
+        Me.Label91.Name = "Label91"
+        Me.Label91.Size = New System.Drawing.Size(234, 13)
+        Me.Label91.TabIndex = 266
+        Me.Label91.Text = "Har du eller noen i familien hatt Creutzfeldt-jakob"
+        '
+        'Label92
+        '
+        Me.Label92.AutoSize = True
+        Me.Label92.Location = New System.Drawing.Point(610, 841)
+        Me.Label92.Name = "Label92"
+        Me.Label92.Size = New System.Drawing.Size(23, 13)
+        Me.Label92.TabIndex = 265
+        Me.Label92.Text = "Nei"
+        '
+        'Label93
+        '
+        Me.Label93.AutoSize = True
+        Me.Label93.Location = New System.Drawing.Point(590, 841)
+        Me.Label93.Name = "Label93"
+        Me.Label93.Size = New System.Drawing.Size(18, 13)
+        Me.Label93.TabIndex = 264
+        Me.Label93.Text = "Ja"
+        '
+        'Label94
+        '
+        Me.Label94.AutoSize = True
+        Me.Label94.Location = New System.Drawing.Point(342, 879)
+        Me.Label94.Name = "Label94"
+        Me.Label94.Size = New System.Drawing.Size(144, 13)
+        Me.Label94.TabIndex = 261
+        Me.Label94.Text = "ganger de siste 12 måneder?"
+        '
+        'Label95
+        '
+        Me.Label95.AutoSize = True
+        Me.Label95.Location = New System.Drawing.Point(342, 866)
+        Me.Label95.Name = "Label95"
+        Me.Label95.Size = New System.Drawing.Size(173, 13)
+        Me.Label95.TabIndex = 260
+        Me.Label95.Text = "Har du brukt narkotika en eller flere"
+        '
+        'Label96
+        '
+        Me.Label96.AutoSize = True
+        Me.Label96.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label96.Location = New System.Drawing.Point(342, 841)
+        Me.Label96.Name = "Label96"
+        Me.Label96.Size = New System.Drawing.Size(77, 13)
+        Me.Label96.TabIndex = 259
+        Me.Label96.Text = "Besvar også"
+        '
+        'Label97
+        '
+        Me.Label97.AutoSize = True
+        Me.Label97.Location = New System.Drawing.Point(342, 1130)
+        Me.Label97.Name = "Label97"
+        Me.Label97.Size = New System.Drawing.Size(240, 13)
+        Me.Label97.TabIndex = 291
+        Me.Label97.Text = "blodgiver enten du svarer ja eller nei. Blodbanken"
+        '
+        'Label98
+        '
+        Me.Label98.AutoSize = True
+        Me.Label98.Location = New System.Drawing.Point(342, 1143)
+        Me.Label98.Name = "Label98"
+        Me.Label98.Size = New System.Drawing.Size(249, 13)
+        Me.Label98.TabIndex = 292
+        Me.Label98.Text = "kan gi informasjon om aktuelle forskningsprosjekter."
+        '
+        'Label99
+        '
+        Me.Label99.AutoSize = True
+        Me.Label99.Location = New System.Drawing.Point(342, 1179)
+        Me.Label99.Name = "Label99"
+        Me.Label99.Size = New System.Drawing.Size(54, 13)
+        Me.Label99.TabIndex = 296
+        Me.Label99.Text = "måneder?"
+        '
+        'Label100
+        '
+        Me.Label100.AutoSize = True
+        Me.Label100.Location = New System.Drawing.Point(342, 1166)
+        Me.Label100.Name = "Label100"
+        Me.Label100.Size = New System.Drawing.Size(219, 13)
+        Me.Label100.TabIndex = 295
+        Me.Label100.Text = "Har du deltatt i medikamentforsøk de siste 12"
+        '
+        'Label101
+        '
+        Me.Label101.AutoSize = True
+        Me.Label101.Location = New System.Drawing.Point(342, 1214)
+        Me.Label101.Name = "Label101"
+        Me.Label101.Size = New System.Drawing.Size(124, 13)
+        Me.Label101.TabIndex = 300
+        Me.Label101.Text = "for legemiddelproduksjon"
+        '
+        'Label102
+        '
+        Me.Label102.AutoSize = True
+        Me.Label102.Location = New System.Drawing.Point(342, 1201)
+        Me.Label102.Name = "Label102"
+        Me.Label102.Size = New System.Drawing.Size(232, 13)
+        Me.Label102.TabIndex = 299
+        Me.Label102.Text = "Jeg samtykker i at mitt plasma føres ut av Norge"
+        '
+        'Label103
+        '
+        Me.Label103.AutoSize = True
+        Me.Label103.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label103.Location = New System.Drawing.Point(34, 976)
+        Me.Label103.Name = "Label103"
+        Me.Label103.Size = New System.Drawing.Size(223, 13)
+        Me.Label103.TabIndex = 303
+        Me.Label103.Text = "Har du på noe tidspunkt gjennom livet"
+        '
+        'Label104
+        '
+        Me.Label104.AutoSize = True
+        Me.Label104.Location = New System.Drawing.Point(300, 918)
+        Me.Label104.Name = "Label104"
+        Me.Label104.Size = New System.Drawing.Size(23, 13)
+        Me.Label104.TabIndex = 305
+        Me.Label104.Text = "Nei"
+        '
+        'Label105
+        '
+        Me.Label105.AutoSize = True
+        Me.Label105.Location = New System.Drawing.Point(276, 918)
+        Me.Label105.Name = "Label105"
+        Me.Label105.Size = New System.Drawing.Size(18, 13)
+        Me.Label105.TabIndex = 304
+        Me.Label105.Text = "Ja"
+        '
+        'Label106
+        '
+        Me.Label106.AutoSize = True
+        Me.Label106.Location = New System.Drawing.Point(300, 976)
+        Me.Label106.Name = "Label106"
+        Me.Label106.Size = New System.Drawing.Size(23, 13)
+        Me.Label106.TabIndex = 307
+        Me.Label106.Text = "Nei"
+        '
+        'Label107
+        '
+        Me.Label107.AutoSize = True
+        Me.Label107.Location = New System.Drawing.Point(276, 976)
+        Me.Label107.Name = "Label107"
+        Me.Label107.Size = New System.Drawing.Size(18, 13)
+        Me.Label107.TabIndex = 306
+        Me.Label107.Text = "Ja"
+        '
+        'Label108
+        '
+        Me.Label108.AutoSize = True
+        Me.Label108.Location = New System.Drawing.Point(34, 999)
+        Me.Label108.Name = "Label108"
+        Me.Label108.Size = New System.Drawing.Size(184, 13)
+        Me.Label108.TabIndex = 308
+        Me.Label108.Text = "Hatt hjerte-, lever, eller lungesykdom?"
+        '
+        'Label109
+        '
+        Me.Label109.AutoSize = True
+        Me.Label109.Location = New System.Drawing.Point(34, 1024)
+        Me.Label109.Name = "Label109"
+        Me.Label109.Size = New System.Drawing.Size(57, 13)
+        Me.Label109.TabIndex = 311
+        Me.Label109.Text = "Hatt kreft?"
+        '
+        'Label110
+        '
+        Me.Label110.AutoSize = True
+        Me.Label110.Location = New System.Drawing.Point(34, 1046)
+        Me.Label110.Name = "Label110"
+        Me.Label110.Size = New System.Drawing.Size(119, 13)
+        Me.Label110.TabIndex = 314
+        Me.Label110.Text = "Hatt blødningstendens?"
+        '
+        'Label111
+        '
+        Me.Label111.AutoSize = True
+        Me.Label111.Location = New System.Drawing.Point(34, 1069)
+        Me.Label111.Name = "Label111"
+        Me.Label111.Size = New System.Drawing.Size(172, 13)
+        Me.Label111.TabIndex = 317
+        Me.Label111.Text = "Hatt allergi mot mat eller medisiner?"
+        '
+        'Label112
+        '
+        Me.Label112.AutoSize = True
+        Me.Label112.Location = New System.Drawing.Point(34, 1091)
+        Me.Label112.Name = "Label112"
+        Me.Label112.Size = New System.Drawing.Size(69, 13)
+        Me.Label112.TabIndex = 320
+        Me.Label112.Text = "Hatt malaria?"
+        '
+        'Label113
+        '
+        Me.Label113.AutoSize = True
+        Me.Label113.Location = New System.Drawing.Point(34, 1117)
+        Me.Label113.Name = "Label113"
+        Me.Label113.Size = New System.Drawing.Size(113, 13)
+        Me.Label113.TabIndex = 323
+        Me.Label113.Text = "Hatt tropesykdommer?"
+        '
+        'Label114
+        '
+        Me.Label114.AutoSize = True
+        Me.Label114.Location = New System.Drawing.Point(34, 1143)
+        Me.Label114.Name = "Label114"
+        Me.Label114.Size = New System.Drawing.Size(230, 13)
+        Me.Label114.TabIndex = 326
+        Me.Label114.Text = "Hatt hepatitt (gulsott), HIV-infeksjon eller AIDS?"
+        '
+        'Label115
+        '
+        Me.Label115.AutoSize = True
+        Me.Label115.Location = New System.Drawing.Point(34, 1166)
+        Me.Label115.Name = "Label115"
+        Me.Label115.Size = New System.Drawing.Size(239, 13)
+        Me.Label115.TabIndex = 329
+        Me.Label115.Text = "Hatt positiv prøve for Hepatitt eller HIV-infeksjon?"
+        '
+        'Label116
+        '
+        Me.Label116.AutoSize = True
+        Me.Label116.Location = New System.Drawing.Point(34, 1190)
+        Me.Label116.Name = "Label116"
+        Me.Label116.Size = New System.Drawing.Size(101, 13)
+        Me.Label116.TabIndex = 332
+        Me.Label116.Text = "Fått blodoverføring?"
+        '
+        'Label117
+        '
+        Me.Label117.AutoSize = True
+        Me.Label117.Location = New System.Drawing.Point(34, 1214)
+        Me.Label117.Name = "Label117"
+        Me.Label117.Size = New System.Drawing.Size(95, 13)
+        Me.Label117.TabIndex = 335
+        Me.Label117.Text = "Fått veksthormon?"
+        '
+        'Label118
+        '
+        Me.Label118.AutoSize = True
+        Me.Label118.Location = New System.Drawing.Point(34, 1237)
+        Me.Label118.Name = "Label118"
+        Me.Label118.Size = New System.Drawing.Size(136, 13)
+        Me.Label118.TabIndex = 338
+        Me.Label118.Text = "Fått hornhinnetransplantat?"
+        '
+        'Label119
+        '
+        Me.Label119.AutoSize = True
+        Me.Label119.Location = New System.Drawing.Point(34, 1260)
+        Me.Label119.Name = "Label119"
+        Me.Label119.Size = New System.Drawing.Size(60, 13)
+        Me.Label119.TabIndex = 341
+        Me.Label119.Text = "Hatt syfilis?"
+        '
+        'Label120
+        '
+        Me.Label120.AutoSize = True
+        Me.Label120.Location = New System.Drawing.Point(34, 1282)
+        Me.Label120.Name = "Label120"
+        Me.Label120.Size = New System.Drawing.Size(213, 13)
+        Me.Label120.TabIndex = 344
+        Me.Label120.Text = "Hatt alvorlig sykdom som ikke er nevnt her?"
+        '
+        'Label121
+        '
+        Me.Label121.AutoSize = True
+        Me.Label121.Location = New System.Drawing.Point(34, 1319)
+        Me.Label121.Name = "Label121"
+        Me.Label121.Size = New System.Drawing.Size(72, 13)
+        Me.Label121.TabIndex = 348
+        Me.Label121.Text = "som sprøyter?"
+        '
+        'Label122
+        '
+        Me.Label122.AutoSize = True
+        Me.Label122.Location = New System.Drawing.Point(34, 1306)
+        Me.Label122.Name = "Label122"
+        Me.Label122.Size = New System.Drawing.Size(198, 13)
+        Me.Label122.TabIndex = 347
+        Me.Label122.Text = "Brukt dopingmidler eller narkotiske midler"
+        '
+        'Label123
+        '
+        Me.Label123.AutoSize = True
+        Me.Label123.Location = New System.Drawing.Point(34, 1356)
+        Me.Label123.Name = "Label123"
+        Me.Label123.Size = New System.Drawing.Size(44, 13)
+        Me.Label123.TabIndex = 352
+        Me.Label123.Text = "for sex?"
+        '
+        'Label124
+        '
+        Me.Label124.AutoSize = True
+        Me.Label124.Location = New System.Drawing.Point(34, 1343)
+        Me.Label124.Name = "Label124"
+        Me.Label124.Size = New System.Drawing.Size(214, 13)
+        Me.Label124.TabIndex = 351
+        Me.Label124.Text = "Mottat penger eller narkotika som gjenytelse"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(260, 1527)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(158, 23)
+        Me.Button1.TabIndex = 356
+        Me.Button1.Text = "Send inn Egenærklering"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.RadioButton14)
+        Me.Panel1.Controls.Add(Me.RadioButton4)
+        Me.Panel1.Location = New System.Drawing.Point(587, 300)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(46, 19)
+        Me.Panel1.TabIndex = 367
+        '
+        'RadioButton14
+        '
+        Me.RadioButton14.AutoSize = True
+        Me.RadioButton14.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton14.Name = "RadioButton14"
+        Me.RadioButton14.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton14.TabIndex = 4
+        Me.RadioButton14.TabStop = True
+        Me.RadioButton14.UseVisualStyleBackColor = True
+        '
+        'RadioButton4
+        '
+        Me.RadioButton4.AutoSize = True
+        Me.RadioButton4.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton4.Name = "RadioButton4"
+        Me.RadioButton4.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton4.TabIndex = 3
+        Me.RadioButton4.TabStop = True
+        Me.RadioButton4.UseVisualStyleBackColor = True
+        '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.RadioButton1)
+        Me.Panel2.Controls.Add(Me.RadioButton2)
+        Me.Panel2.Location = New System.Drawing.Point(587, 336)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(46, 19)
+        Me.Panel2.TabIndex = 368
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton1.TabIndex = 4
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.UseVisualStyleBackColor = True
+        '
+        'RadioButton2
+        '
+        Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton2.TabIndex = 3
+        Me.RadioButton2.TabStop = True
+        Me.RadioButton2.UseVisualStyleBackColor = True
+        '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.RadioButton3)
+        Me.Panel3.Controls.Add(Me.RadioButton5)
+        Me.Panel3.Location = New System.Drawing.Point(587, 404)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(46, 19)
+        Me.Panel3.TabIndex = 369
+        '
+        'RadioButton3
+        '
+        Me.RadioButton3.AutoSize = True
+        Me.RadioButton3.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton3.Name = "RadioButton3"
+        Me.RadioButton3.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton3.TabIndex = 4
+        Me.RadioButton3.TabStop = True
+        Me.RadioButton3.UseVisualStyleBackColor = True
+        '
+        'RadioButton5
+        '
+        Me.RadioButton5.AutoSize = True
+        Me.RadioButton5.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton5.Name = "RadioButton5"
+        Me.RadioButton5.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton5.TabIndex = 3
+        Me.RadioButton5.TabStop = True
+        Me.RadioButton5.UseVisualStyleBackColor = True
+        '
+        'Panel4
+        '
+        Me.Panel4.Controls.Add(Me.RadioButton6)
+        Me.Panel4.Controls.Add(Me.RadioButton7)
+        Me.Panel4.Location = New System.Drawing.Point(587, 465)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(46, 19)
+        Me.Panel4.TabIndex = 370
+        '
+        'RadioButton6
+        '
+        Me.RadioButton6.AutoSize = True
+        Me.RadioButton6.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton6.Name = "RadioButton6"
+        Me.RadioButton6.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton6.TabIndex = 4
+        Me.RadioButton6.TabStop = True
+        Me.RadioButton6.UseVisualStyleBackColor = True
+        '
+        'RadioButton7
+        '
+        Me.RadioButton7.AutoSize = True
+        Me.RadioButton7.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton7.Name = "RadioButton7"
+        Me.RadioButton7.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton7.TabIndex = 3
+        Me.RadioButton7.TabStop = True
+        Me.RadioButton7.UseVisualStyleBackColor = True
+        '
+        'Panel5
+        '
+        Me.Panel5.Controls.Add(Me.RadioButton8)
+        Me.Panel5.Controls.Add(Me.RadioButton9)
+        Me.Panel5.Location = New System.Drawing.Point(587, 510)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(46, 19)
+        Me.Panel5.TabIndex = 371
+        '
+        'RadioButton8
+        '
+        Me.RadioButton8.AutoSize = True
+        Me.RadioButton8.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton8.Name = "RadioButton8"
+        Me.RadioButton8.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton8.TabIndex = 4
+        Me.RadioButton8.TabStop = True
+        Me.RadioButton8.UseVisualStyleBackColor = True
+        '
+        'RadioButton9
+        '
+        Me.RadioButton9.AutoSize = True
+        Me.RadioButton9.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton9.Name = "RadioButton9"
+        Me.RadioButton9.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton9.TabIndex = 3
+        Me.RadioButton9.TabStop = True
+        Me.RadioButton9.UseVisualStyleBackColor = True
+        '
+        'Panel6
+        '
+        Me.Panel6.Controls.Add(Me.RadioButton10)
+        Me.Panel6.Controls.Add(Me.RadioButton11)
+        Me.Panel6.Location = New System.Drawing.Point(587, 538)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(46, 19)
+        Me.Panel6.TabIndex = 372
+        '
+        'RadioButton10
+        '
+        Me.RadioButton10.AutoSize = True
+        Me.RadioButton10.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton10.Name = "RadioButton10"
+        Me.RadioButton10.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton10.TabIndex = 4
+        Me.RadioButton10.TabStop = True
+        Me.RadioButton10.UseVisualStyleBackColor = True
+        '
+        'RadioButton11
+        '
+        Me.RadioButton11.AutoSize = True
+        Me.RadioButton11.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton11.Name = "RadioButton11"
+        Me.RadioButton11.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton11.TabIndex = 3
+        Me.RadioButton11.TabStop = True
+        Me.RadioButton11.UseVisualStyleBackColor = True
+        '
+        'Panel7
+        '
+        Me.Panel7.Controls.Add(Me.RadioButton12)
+        Me.Panel7.Controls.Add(Me.RadioButton13)
+        Me.Panel7.Location = New System.Drawing.Point(587, 361)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(46, 19)
+        Me.Panel7.TabIndex = 373
+        '
+        'RadioButton12
+        '
+        Me.RadioButton12.AutoSize = True
+        Me.RadioButton12.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton12.Name = "RadioButton12"
+        Me.RadioButton12.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton12.TabIndex = 4
+        Me.RadioButton12.TabStop = True
+        Me.RadioButton12.UseVisualStyleBackColor = True
+        '
+        'RadioButton13
+        '
+        Me.RadioButton13.AutoSize = True
+        Me.RadioButton13.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton13.Name = "RadioButton13"
+        Me.RadioButton13.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton13.TabIndex = 3
+        Me.RadioButton13.TabStop = True
+        Me.RadioButton13.UseVisualStyleBackColor = True
+        '
+        'Panel8
+        '
+        Me.Panel8.Controls.Add(Me.RadioButton15)
+        Me.Panel8.Controls.Add(Me.RadioButton16)
+        Me.Panel8.Location = New System.Drawing.Point(277, 353)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(46, 19)
+        Me.Panel8.TabIndex = 377
+        '
+        'RadioButton15
+        '
+        Me.RadioButton15.AutoSize = True
+        Me.RadioButton15.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton15.Name = "RadioButton15"
+        Me.RadioButton15.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton15.TabIndex = 4
+        Me.RadioButton15.TabStop = True
+        Me.RadioButton15.UseVisualStyleBackColor = True
+        '
+        'RadioButton16
+        '
+        Me.RadioButton16.AutoSize = True
+        Me.RadioButton16.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton16.Name = "RadioButton16"
+        Me.RadioButton16.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton16.TabIndex = 3
+        Me.RadioButton16.TabStop = True
+        Me.RadioButton16.UseVisualStyleBackColor = True
+        '
+        'Panel9
+        '
+        Me.Panel9.Controls.Add(Me.RadioButton17)
+        Me.Panel9.Controls.Add(Me.RadioButton18)
+        Me.Panel9.Location = New System.Drawing.Point(277, 386)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Size = New System.Drawing.Size(46, 19)
+        Me.Panel9.TabIndex = 376
+        '
+        'RadioButton17
+        '
+        Me.RadioButton17.AutoSize = True
+        Me.RadioButton17.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton17.Name = "RadioButton17"
+        Me.RadioButton17.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton17.TabIndex = 4
+        Me.RadioButton17.TabStop = True
+        Me.RadioButton17.UseVisualStyleBackColor = True
+        '
+        'RadioButton18
+        '
+        Me.RadioButton18.AutoSize = True
+        Me.RadioButton18.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton18.Name = "RadioButton18"
+        Me.RadioButton18.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton18.TabIndex = 3
+        Me.RadioButton18.TabStop = True
+        Me.RadioButton18.UseVisualStyleBackColor = True
+        '
+        'Panel10
+        '
+        Me.Panel10.Controls.Add(Me.RadioButton19)
+        Me.Panel10.Controls.Add(Me.RadioButton20)
+        Me.Panel10.Location = New System.Drawing.Point(277, 322)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(46, 19)
+        Me.Panel10.TabIndex = 375
+        '
+        'RadioButton19
+        '
+        Me.RadioButton19.AutoSize = True
+        Me.RadioButton19.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton19.Name = "RadioButton19"
+        Me.RadioButton19.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton19.TabIndex = 4
+        Me.RadioButton19.TabStop = True
+        Me.RadioButton19.UseVisualStyleBackColor = True
+        '
+        'RadioButton20
+        '
+        Me.RadioButton20.AutoSize = True
+        Me.RadioButton20.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton20.Name = "RadioButton20"
+        Me.RadioButton20.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton20.TabIndex = 3
+        Me.RadioButton20.TabStop = True
+        Me.RadioButton20.UseVisualStyleBackColor = True
+        '
+        'Panel11
+        '
+        Me.Panel11.Controls.Add(Me.RadioButton21)
+        Me.Panel11.Controls.Add(Me.RadioButton22)
+        Me.Panel11.Location = New System.Drawing.Point(277, 300)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Size = New System.Drawing.Size(46, 19)
+        Me.Panel11.TabIndex = 374
+        '
+        'RadioButton21
+        '
+        Me.RadioButton21.AutoSize = True
+        Me.RadioButton21.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton21.Name = "RadioButton21"
+        Me.RadioButton21.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton21.TabIndex = 4
+        Me.RadioButton21.TabStop = True
+        Me.RadioButton21.UseVisualStyleBackColor = True
+        '
+        'RadioButton22
+        '
+        Me.RadioButton22.AutoSize = True
+        Me.RadioButton22.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton22.Name = "RadioButton22"
+        Me.RadioButton22.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton22.TabIndex = 3
+        Me.RadioButton22.TabStop = True
+        Me.RadioButton22.UseVisualStyleBackColor = True
+        '
+        'Panel12
+        '
+        Me.Panel12.Controls.Add(Me.RadioButton23)
+        Me.Panel12.Controls.Add(Me.RadioButton24)
+        Me.Panel12.Location = New System.Drawing.Point(277, 499)
+        Me.Panel12.Name = "Panel12"
+        Me.Panel12.Size = New System.Drawing.Size(46, 19)
+        Me.Panel12.TabIndex = 377
+        '
+        'RadioButton23
+        '
+        Me.RadioButton23.AutoSize = True
+        Me.RadioButton23.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton23.Name = "RadioButton23"
+        Me.RadioButton23.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton23.TabIndex = 4
+        Me.RadioButton23.TabStop = True
+        Me.RadioButton23.UseVisualStyleBackColor = True
+        '
+        'RadioButton24
+        '
+        Me.RadioButton24.AutoSize = True
+        Me.RadioButton24.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton24.Name = "RadioButton24"
+        Me.RadioButton24.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton24.TabIndex = 3
+        Me.RadioButton24.TabStop = True
+        Me.RadioButton24.UseVisualStyleBackColor = True
+        '
+        'Panel14
+        '
+        Me.Panel14.Controls.Add(Me.RadioButton27)
+        Me.Panel14.Controls.Add(Me.RadioButton28)
+        Me.Panel14.Location = New System.Drawing.Point(277, 477)
+        Me.Panel14.Name = "Panel14"
+        Me.Panel14.Size = New System.Drawing.Size(46, 19)
+        Me.Panel14.TabIndex = 375
+        '
+        'RadioButton27
+        '
+        Me.RadioButton27.AutoSize = True
+        Me.RadioButton27.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton27.Name = "RadioButton27"
+        Me.RadioButton27.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton27.TabIndex = 4
+        Me.RadioButton27.TabStop = True
+        Me.RadioButton27.UseVisualStyleBackColor = True
+        '
+        'RadioButton28
+        '
+        Me.RadioButton28.AutoSize = True
+        Me.RadioButton28.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton28.Name = "RadioButton28"
+        Me.RadioButton28.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton28.TabIndex = 3
+        Me.RadioButton28.TabStop = True
+        Me.RadioButton28.UseVisualStyleBackColor = True
+        '
+        'Panel15
+        '
+        Me.Panel15.Controls.Add(Me.RadioButton29)
+        Me.Panel15.Controls.Add(Me.RadioButton30)
+        Me.Panel15.Location = New System.Drawing.Point(277, 455)
+        Me.Panel15.Name = "Panel15"
+        Me.Panel15.Size = New System.Drawing.Size(46, 19)
+        Me.Panel15.TabIndex = 374
+        '
+        'RadioButton29
+        '
+        Me.RadioButton29.AutoSize = True
+        Me.RadioButton29.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton29.Name = "RadioButton29"
+        Me.RadioButton29.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton29.TabIndex = 4
+        Me.RadioButton29.TabStop = True
+        Me.RadioButton29.UseVisualStyleBackColor = True
+        '
+        'RadioButton30
+        '
+        Me.RadioButton30.AutoSize = True
+        Me.RadioButton30.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton30.Name = "RadioButton30"
+        Me.RadioButton30.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton30.TabIndex = 3
+        Me.RadioButton30.TabStop = True
+        Me.RadioButton30.UseVisualStyleBackColor = True
+        '
+        'Panel13
+        '
+        Me.Panel13.Controls.Add(Me.RadioButton25)
+        Me.Panel13.Controls.Add(Me.RadioButton26)
+        Me.Panel13.Location = New System.Drawing.Point(277, 568)
+        Me.Panel13.Name = "Panel13"
+        Me.Panel13.Size = New System.Drawing.Size(46, 19)
+        Me.Panel13.TabIndex = 380
+        '
+        'RadioButton25
+        '
+        Me.RadioButton25.AutoSize = True
+        Me.RadioButton25.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton25.Name = "RadioButton25"
+        Me.RadioButton25.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton25.TabIndex = 4
+        Me.RadioButton25.TabStop = True
+        Me.RadioButton25.UseVisualStyleBackColor = True
+        '
+        'RadioButton26
+        '
+        Me.RadioButton26.AutoSize = True
+        Me.RadioButton26.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton26.Name = "RadioButton26"
+        Me.RadioButton26.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton26.TabIndex = 3
+        Me.RadioButton26.TabStop = True
+        Me.RadioButton26.UseVisualStyleBackColor = True
+        '
+        'Panel16
+        '
+        Me.Panel16.Controls.Add(Me.RadioButton31)
+        Me.Panel16.Controls.Add(Me.RadioButton32)
+        Me.Panel16.Location = New System.Drawing.Point(277, 546)
+        Me.Panel16.Name = "Panel16"
+        Me.Panel16.Size = New System.Drawing.Size(46, 19)
+        Me.Panel16.TabIndex = 379
+        '
+        'RadioButton31
+        '
+        Me.RadioButton31.AutoSize = True
+        Me.RadioButton31.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton31.Name = "RadioButton31"
+        Me.RadioButton31.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton31.TabIndex = 4
+        Me.RadioButton31.TabStop = True
+        Me.RadioButton31.UseVisualStyleBackColor = True
+        '
+        'RadioButton32
+        '
+        Me.RadioButton32.AutoSize = True
+        Me.RadioButton32.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton32.Name = "RadioButton32"
+        Me.RadioButton32.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton32.TabIndex = 3
+        Me.RadioButton32.TabStop = True
+        Me.RadioButton32.UseVisualStyleBackColor = True
+        '
+        'Panel17
+        '
+        Me.Panel17.Controls.Add(Me.RadioButton33)
+        Me.Panel17.Controls.Add(Me.RadioButton34)
+        Me.Panel17.Location = New System.Drawing.Point(277, 524)
+        Me.Panel17.Name = "Panel17"
+        Me.Panel17.Size = New System.Drawing.Size(46, 19)
+        Me.Panel17.TabIndex = 378
+        '
+        'RadioButton33
+        '
+        Me.RadioButton33.AutoSize = True
+        Me.RadioButton33.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton33.Name = "RadioButton33"
+        Me.RadioButton33.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton33.TabIndex = 4
+        Me.RadioButton33.TabStop = True
+        Me.RadioButton33.UseVisualStyleBackColor = True
+        '
+        'RadioButton34
+        '
+        Me.RadioButton34.AutoSize = True
+        Me.RadioButton34.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton34.Name = "RadioButton34"
+        Me.RadioButton34.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton34.TabIndex = 3
+        Me.RadioButton34.TabStop = True
+        Me.RadioButton34.UseVisualStyleBackColor = True
+        '
+        'Panel18
+        '
+        Me.Panel18.Controls.Add(Me.RadioButton35)
+        Me.Panel18.Controls.Add(Me.RadioButton36)
+        Me.Panel18.Location = New System.Drawing.Point(277, 696)
+        Me.Panel18.Name = "Panel18"
+        Me.Panel18.Size = New System.Drawing.Size(46, 19)
+        Me.Panel18.TabIndex = 383
+        '
+        'RadioButton35
+        '
+        Me.RadioButton35.AutoSize = True
+        Me.RadioButton35.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton35.Name = "RadioButton35"
+        Me.RadioButton35.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton35.TabIndex = 4
+        Me.RadioButton35.TabStop = True
+        Me.RadioButton35.UseVisualStyleBackColor = True
+        '
+        'RadioButton36
+        '
+        Me.RadioButton36.AutoSize = True
+        Me.RadioButton36.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton36.Name = "RadioButton36"
+        Me.RadioButton36.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton36.TabIndex = 3
+        Me.RadioButton36.TabStop = True
+        Me.RadioButton36.UseVisualStyleBackColor = True
+        '
+        'Panel19
+        '
+        Me.Panel19.Controls.Add(Me.RadioButton37)
+        Me.Panel19.Controls.Add(Me.RadioButton38)
+        Me.Panel19.Location = New System.Drawing.Point(277, 660)
+        Me.Panel19.Name = "Panel19"
+        Me.Panel19.Size = New System.Drawing.Size(46, 19)
+        Me.Panel19.TabIndex = 382
+        '
+        'RadioButton37
+        '
+        Me.RadioButton37.AutoSize = True
+        Me.RadioButton37.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton37.Name = "RadioButton37"
+        Me.RadioButton37.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton37.TabIndex = 4
+        Me.RadioButton37.TabStop = True
+        Me.RadioButton37.UseVisualStyleBackColor = True
+        '
+        'RadioButton38
+        '
+        Me.RadioButton38.AutoSize = True
+        Me.RadioButton38.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton38.Name = "RadioButton38"
+        Me.RadioButton38.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton38.TabIndex = 3
+        Me.RadioButton38.TabStop = True
+        Me.RadioButton38.UseVisualStyleBackColor = True
+        '
+        'Panel20
+        '
+        Me.Panel20.Controls.Add(Me.RadioButton39)
+        Me.Panel20.Controls.Add(Me.RadioButton40)
+        Me.Panel20.Location = New System.Drawing.Point(277, 628)
+        Me.Panel20.Name = "Panel20"
+        Me.Panel20.Size = New System.Drawing.Size(46, 19)
+        Me.Panel20.TabIndex = 381
+        '
+        'RadioButton39
+        '
+        Me.RadioButton39.AutoSize = True
+        Me.RadioButton39.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton39.Name = "RadioButton39"
+        Me.RadioButton39.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton39.TabIndex = 4
+        Me.RadioButton39.TabStop = True
+        Me.RadioButton39.UseVisualStyleBackColor = True
+        '
+        'RadioButton40
+        '
+        Me.RadioButton40.AutoSize = True
+        Me.RadioButton40.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton40.Name = "RadioButton40"
+        Me.RadioButton40.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton40.TabIndex = 3
+        Me.RadioButton40.TabStop = True
+        Me.RadioButton40.UseVisualStyleBackColor = True
+        '
+        'Panel21
+        '
+        Me.Panel21.Controls.Add(Me.RadioButton41)
+        Me.Panel21.Controls.Add(Me.RadioButton42)
+        Me.Panel21.Location = New System.Drawing.Point(277, 777)
+        Me.Panel21.Name = "Panel21"
+        Me.Panel21.Size = New System.Drawing.Size(46, 19)
+        Me.Panel21.TabIndex = 386
+        '
+        'RadioButton41
+        '
+        Me.RadioButton41.AutoSize = True
+        Me.RadioButton41.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton41.Name = "RadioButton41"
+        Me.RadioButton41.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton41.TabIndex = 4
+        Me.RadioButton41.TabStop = True
+        Me.RadioButton41.UseVisualStyleBackColor = True
+        '
+        'RadioButton42
+        '
+        Me.RadioButton42.AutoSize = True
+        Me.RadioButton42.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton42.Name = "RadioButton42"
+        Me.RadioButton42.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton42.TabIndex = 3
+        Me.RadioButton42.TabStop = True
+        Me.RadioButton42.UseVisualStyleBackColor = True
+        '
+        'Panel22
+        '
+        Me.Panel22.Controls.Add(Me.RadioButton43)
+        Me.Panel22.Controls.Add(Me.RadioButton44)
+        Me.Panel22.Location = New System.Drawing.Point(277, 746)
+        Me.Panel22.Name = "Panel22"
+        Me.Panel22.Size = New System.Drawing.Size(46, 19)
+        Me.Panel22.TabIndex = 385
+        '
+        'RadioButton43
+        '
+        Me.RadioButton43.AutoSize = True
+        Me.RadioButton43.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton43.Name = "RadioButton43"
+        Me.RadioButton43.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton43.TabIndex = 4
+        Me.RadioButton43.TabStop = True
+        Me.RadioButton43.UseVisualStyleBackColor = True
+        '
+        'RadioButton44
+        '
+        Me.RadioButton44.AutoSize = True
+        Me.RadioButton44.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton44.Name = "RadioButton44"
+        Me.RadioButton44.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton44.TabIndex = 3
+        Me.RadioButton44.TabStop = True
+        Me.RadioButton44.UseVisualStyleBackColor = True
+        '
+        'Panel23
+        '
+        Me.Panel23.Controls.Add(Me.RadioButton45)
+        Me.Panel23.Controls.Add(Me.RadioButton46)
+        Me.Panel23.Location = New System.Drawing.Point(277, 721)
+        Me.Panel23.Name = "Panel23"
+        Me.Panel23.Size = New System.Drawing.Size(46, 19)
+        Me.Panel23.TabIndex = 384
+        '
+        'RadioButton45
+        '
+        Me.RadioButton45.AutoSize = True
+        Me.RadioButton45.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton45.Name = "RadioButton45"
+        Me.RadioButton45.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton45.TabIndex = 4
+        Me.RadioButton45.TabStop = True
+        Me.RadioButton45.UseVisualStyleBackColor = True
+        '
+        'RadioButton46
+        '
+        Me.RadioButton46.AutoSize = True
+        Me.RadioButton46.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton46.Name = "RadioButton46"
+        Me.RadioButton46.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton46.TabIndex = 3
+        Me.RadioButton46.TabStop = True
+        Me.RadioButton46.UseVisualStyleBackColor = True
+        '
+        'Panel24
+        '
+        Me.Panel24.Controls.Add(Me.RadioButton47)
+        Me.Panel24.Controls.Add(Me.RadioButton48)
+        Me.Panel24.Location = New System.Drawing.Point(277, 802)
+        Me.Panel24.Name = "Panel24"
+        Me.Panel24.Size = New System.Drawing.Size(46, 19)
+        Me.Panel24.TabIndex = 387
+        '
+        'RadioButton47
+        '
+        Me.RadioButton47.AutoSize = True
+        Me.RadioButton47.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton47.Name = "RadioButton47"
+        Me.RadioButton47.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton47.TabIndex = 4
+        Me.RadioButton47.TabStop = True
+        Me.RadioButton47.UseVisualStyleBackColor = True
+        '
+        'RadioButton48
+        '
+        Me.RadioButton48.AutoSize = True
+        Me.RadioButton48.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton48.Name = "RadioButton48"
+        Me.RadioButton48.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton48.TabIndex = 3
+        Me.RadioButton48.TabStop = True
+        Me.RadioButton48.UseVisualStyleBackColor = True
+        '
+        'Panel25
+        '
+        Me.Panel25.Controls.Add(Me.RadioButton49)
+        Me.Panel25.Controls.Add(Me.RadioButton50)
+        Me.Panel25.Location = New System.Drawing.Point(277, 835)
+        Me.Panel25.Name = "Panel25"
+        Me.Panel25.Size = New System.Drawing.Size(46, 19)
+        Me.Panel25.TabIndex = 388
+        '
+        'RadioButton49
+        '
+        Me.RadioButton49.AutoSize = True
+        Me.RadioButton49.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton49.Name = "RadioButton49"
+        Me.RadioButton49.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton49.TabIndex = 4
+        Me.RadioButton49.TabStop = True
+        Me.RadioButton49.UseVisualStyleBackColor = True
+        '
+        'RadioButton50
+        '
+        Me.RadioButton50.AutoSize = True
+        Me.RadioButton50.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton50.Name = "RadioButton50"
+        Me.RadioButton50.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton50.TabIndex = 3
+        Me.RadioButton50.TabStop = True
+        Me.RadioButton50.UseVisualStyleBackColor = True
+        '
+        'Panel27
+        '
+        Me.Panel27.Controls.Add(Me.RadioButton53)
+        Me.Panel27.Controls.Add(Me.RadioButton54)
+        Me.Panel27.Location = New System.Drawing.Point(586, 737)
+        Me.Panel27.Name = "Panel27"
+        Me.Panel27.Size = New System.Drawing.Size(46, 19)
+        Me.Panel27.TabIndex = 392
+        '
+        'RadioButton53
+        '
+        Me.RadioButton53.AutoSize = True
+        Me.RadioButton53.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton53.Name = "RadioButton53"
+        Me.RadioButton53.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton53.TabIndex = 4
+        Me.RadioButton53.TabStop = True
+        Me.RadioButton53.UseVisualStyleBackColor = True
+        '
+        'RadioButton54
+        '
+        Me.RadioButton54.AutoSize = True
+        Me.RadioButton54.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton54.Name = "RadioButton54"
+        Me.RadioButton54.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton54.TabIndex = 3
+        Me.RadioButton54.TabStop = True
+        Me.RadioButton54.UseVisualStyleBackColor = True
+        '
+        'Panel28
+        '
+        Me.Panel28.Controls.Add(Me.RadioButton55)
+        Me.Panel28.Controls.Add(Me.RadioButton56)
+        Me.Panel28.Location = New System.Drawing.Point(586, 696)
+        Me.Panel28.Name = "Panel28"
+        Me.Panel28.Size = New System.Drawing.Size(46, 19)
+        Me.Panel28.TabIndex = 391
+        '
+        'RadioButton55
+        '
+        Me.RadioButton55.AutoSize = True
+        Me.RadioButton55.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton55.Name = "RadioButton55"
+        Me.RadioButton55.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton55.TabIndex = 4
+        Me.RadioButton55.TabStop = True
+        Me.RadioButton55.UseVisualStyleBackColor = True
+        '
+        'RadioButton56
+        '
+        Me.RadioButton56.AutoSize = True
+        Me.RadioButton56.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton56.Name = "RadioButton56"
+        Me.RadioButton56.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton56.TabIndex = 3
+        Me.RadioButton56.TabStop = True
+        Me.RadioButton56.UseVisualStyleBackColor = True
+        '
+        'Panel29
+        '
+        Me.Panel29.Controls.Add(Me.RadioButton57)
+        Me.Panel29.Controls.Add(Me.RadioButton58)
+        Me.Panel29.Location = New System.Drawing.Point(586, 660)
+        Me.Panel29.Name = "Panel29"
+        Me.Panel29.Size = New System.Drawing.Size(46, 19)
+        Me.Panel29.TabIndex = 390
+        '
+        'RadioButton57
+        '
+        Me.RadioButton57.AutoSize = True
+        Me.RadioButton57.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton57.Name = "RadioButton57"
+        Me.RadioButton57.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton57.TabIndex = 4
+        Me.RadioButton57.TabStop = True
+        Me.RadioButton57.UseVisualStyleBackColor = True
+        '
+        'RadioButton58
+        '
+        Me.RadioButton58.AutoSize = True
+        Me.RadioButton58.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton58.Name = "RadioButton58"
+        Me.RadioButton58.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton58.TabIndex = 3
+        Me.RadioButton58.TabStop = True
+        Me.RadioButton58.UseVisualStyleBackColor = True
+        '
+        'Panel30
+        '
+        Me.Panel30.Controls.Add(Me.RadioButton59)
+        Me.Panel30.Controls.Add(Me.RadioButton60)
+        Me.Panel30.Location = New System.Drawing.Point(586, 628)
+        Me.Panel30.Name = "Panel30"
+        Me.Panel30.Size = New System.Drawing.Size(46, 19)
+        Me.Panel30.TabIndex = 389
+        '
+        'RadioButton59
+        '
+        Me.RadioButton59.AutoSize = True
+        Me.RadioButton59.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton59.Name = "RadioButton59"
+        Me.RadioButton59.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton59.TabIndex = 4
+        Me.RadioButton59.TabStop = True
+        Me.RadioButton59.UseVisualStyleBackColor = True
+        '
+        'RadioButton60
+        '
+        Me.RadioButton60.AutoSize = True
+        Me.RadioButton60.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton60.Name = "RadioButton60"
+        Me.RadioButton60.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton60.TabIndex = 3
+        Me.RadioButton60.TabStop = True
+        Me.RadioButton60.UseVisualStyleBackColor = True
+        '
+        'Panel26
+        '
+        Me.Panel26.Controls.Add(Me.RadioButton51)
+        Me.Panel26.Controls.Add(Me.RadioButton52)
+        Me.Panel26.Location = New System.Drawing.Point(277, 938)
+        Me.Panel26.Name = "Panel26"
+        Me.Panel26.Size = New System.Drawing.Size(46, 19)
+        Me.Panel26.TabIndex = 393
+        '
+        'RadioButton51
+        '
+        Me.RadioButton51.AutoSize = True
+        Me.RadioButton51.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton51.Name = "RadioButton51"
+        Me.RadioButton51.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton51.TabIndex = 4
+        Me.RadioButton51.TabStop = True
+        Me.RadioButton51.UseVisualStyleBackColor = True
+        '
+        'RadioButton52
+        '
+        Me.RadioButton52.AutoSize = True
+        Me.RadioButton52.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton52.Name = "RadioButton52"
+        Me.RadioButton52.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton52.TabIndex = 3
+        Me.RadioButton52.TabStop = True
+        Me.RadioButton52.UseVisualStyleBackColor = True
+        '
+        'Panel31
+        '
+        Me.Panel31.Controls.Add(Me.RadioButton61)
+        Me.Panel31.Controls.Add(Me.RadioButton62)
+        Me.Panel31.Location = New System.Drawing.Point(587, 802)
+        Me.Panel31.Name = "Panel31"
+        Me.Panel31.Size = New System.Drawing.Size(46, 19)
+        Me.Panel31.TabIndex = 389
+        '
+        'RadioButton61
+        '
+        Me.RadioButton61.AutoSize = True
+        Me.RadioButton61.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton61.Name = "RadioButton61"
+        Me.RadioButton61.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton61.TabIndex = 4
+        Me.RadioButton61.TabStop = True
+        Me.RadioButton61.UseVisualStyleBackColor = True
+        '
+        'RadioButton62
+        '
+        Me.RadioButton62.AutoSize = True
+        Me.RadioButton62.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton62.Name = "RadioButton62"
+        Me.RadioButton62.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton62.TabIndex = 3
+        Me.RadioButton62.TabStop = True
+        Me.RadioButton62.UseVisualStyleBackColor = True
+        '
+        'Panel32
+        '
+        Me.Panel32.Controls.Add(Me.RadioButton63)
+        Me.Panel32.Controls.Add(Me.RadioButton64)
+        Me.Panel32.Location = New System.Drawing.Point(277, 1166)
+        Me.Panel32.Name = "Panel32"
+        Me.Panel32.Size = New System.Drawing.Size(46, 19)
+        Me.Panel32.TabIndex = 401
+        '
+        'RadioButton63
+        '
+        Me.RadioButton63.AutoSize = True
+        Me.RadioButton63.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton63.Name = "RadioButton63"
+        Me.RadioButton63.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton63.TabIndex = 4
+        Me.RadioButton63.TabStop = True
+        Me.RadioButton63.UseVisualStyleBackColor = True
+        '
+        'RadioButton64
+        '
+        Me.RadioButton64.AutoSize = True
+        Me.RadioButton64.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton64.Name = "RadioButton64"
+        Me.RadioButton64.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton64.TabIndex = 3
+        Me.RadioButton64.TabStop = True
+        Me.RadioButton64.UseVisualStyleBackColor = True
+        '
+        'Panel33
+        '
+        Me.Panel33.Controls.Add(Me.RadioButton65)
+        Me.Panel33.Controls.Add(Me.RadioButton66)
+        Me.Panel33.Location = New System.Drawing.Point(277, 1141)
+        Me.Panel33.Name = "Panel33"
+        Me.Panel33.Size = New System.Drawing.Size(46, 19)
+        Me.Panel33.TabIndex = 400
+        '
+        'RadioButton65
+        '
+        Me.RadioButton65.AutoSize = True
+        Me.RadioButton65.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton65.Name = "RadioButton65"
+        Me.RadioButton65.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton65.TabIndex = 4
+        Me.RadioButton65.TabStop = True
+        Me.RadioButton65.UseVisualStyleBackColor = True
+        '
+        'RadioButton66
+        '
+        Me.RadioButton66.AutoSize = True
+        Me.RadioButton66.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton66.Name = "RadioButton66"
+        Me.RadioButton66.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton66.TabIndex = 3
+        Me.RadioButton66.TabStop = True
+        Me.RadioButton66.UseVisualStyleBackColor = True
+        '
+        'Panel34
+        '
+        Me.Panel34.Controls.Add(Me.RadioButton67)
+        Me.Panel34.Controls.Add(Me.RadioButton68)
+        Me.Panel34.Location = New System.Drawing.Point(277, 1116)
+        Me.Panel34.Name = "Panel34"
+        Me.Panel34.Size = New System.Drawing.Size(46, 19)
+        Me.Panel34.TabIndex = 399
+        '
+        'RadioButton67
+        '
+        Me.RadioButton67.AutoSize = True
+        Me.RadioButton67.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton67.Name = "RadioButton67"
+        Me.RadioButton67.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton67.TabIndex = 4
+        Me.RadioButton67.TabStop = True
+        Me.RadioButton67.UseVisualStyleBackColor = True
+        '
+        'RadioButton68
+        '
+        Me.RadioButton68.AutoSize = True
+        Me.RadioButton68.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton68.Name = "RadioButton68"
+        Me.RadioButton68.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton68.TabIndex = 3
+        Me.RadioButton68.TabStop = True
+        Me.RadioButton68.UseVisualStyleBackColor = True
+        '
+        'Panel35
+        '
+        Me.Panel35.Controls.Add(Me.RadioButton69)
+        Me.Panel35.Controls.Add(Me.RadioButton70)
+        Me.Panel35.Location = New System.Drawing.Point(277, 1091)
+        Me.Panel35.Name = "Panel35"
+        Me.Panel35.Size = New System.Drawing.Size(46, 19)
+        Me.Panel35.TabIndex = 398
+        '
+        'RadioButton69
+        '
+        Me.RadioButton69.AutoSize = True
+        Me.RadioButton69.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton69.Name = "RadioButton69"
+        Me.RadioButton69.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton69.TabIndex = 4
+        Me.RadioButton69.TabStop = True
+        Me.RadioButton69.UseVisualStyleBackColor = True
+        '
+        'RadioButton70
+        '
+        Me.RadioButton70.AutoSize = True
+        Me.RadioButton70.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton70.Name = "RadioButton70"
+        Me.RadioButton70.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton70.TabIndex = 3
+        Me.RadioButton70.TabStop = True
+        Me.RadioButton70.UseVisualStyleBackColor = True
+        '
+        'Panel36
+        '
+        Me.Panel36.Controls.Add(Me.RadioButton71)
+        Me.Panel36.Controls.Add(Me.RadioButton72)
+        Me.Panel36.Location = New System.Drawing.Point(277, 1069)
+        Me.Panel36.Name = "Panel36"
+        Me.Panel36.Size = New System.Drawing.Size(46, 19)
+        Me.Panel36.TabIndex = 397
+        '
+        'RadioButton71
+        '
+        Me.RadioButton71.AutoSize = True
+        Me.RadioButton71.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton71.Name = "RadioButton71"
+        Me.RadioButton71.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton71.TabIndex = 4
+        Me.RadioButton71.TabStop = True
+        Me.RadioButton71.UseVisualStyleBackColor = True
+        '
+        'RadioButton72
+        '
+        Me.RadioButton72.AutoSize = True
+        Me.RadioButton72.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton72.Name = "RadioButton72"
+        Me.RadioButton72.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton72.TabIndex = 3
+        Me.RadioButton72.TabStop = True
+        Me.RadioButton72.UseVisualStyleBackColor = True
+        '
+        'Panel37
+        '
+        Me.Panel37.Controls.Add(Me.RadioButton73)
+        Me.Panel37.Controls.Add(Me.RadioButton74)
+        Me.Panel37.Location = New System.Drawing.Point(277, 1047)
+        Me.Panel37.Name = "Panel37"
+        Me.Panel37.Size = New System.Drawing.Size(46, 19)
+        Me.Panel37.TabIndex = 396
+        '
+        'RadioButton73
+        '
+        Me.RadioButton73.AutoSize = True
+        Me.RadioButton73.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton73.Name = "RadioButton73"
+        Me.RadioButton73.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton73.TabIndex = 4
+        Me.RadioButton73.TabStop = True
+        Me.RadioButton73.UseVisualStyleBackColor = True
+        '
+        'RadioButton74
+        '
+        Me.RadioButton74.AutoSize = True
+        Me.RadioButton74.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton74.Name = "RadioButton74"
+        Me.RadioButton74.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton74.TabIndex = 3
+        Me.RadioButton74.TabStop = True
+        Me.RadioButton74.UseVisualStyleBackColor = True
+        '
+        'Panel38
+        '
+        Me.Panel38.Controls.Add(Me.RadioButton75)
+        Me.Panel38.Controls.Add(Me.RadioButton76)
+        Me.Panel38.Location = New System.Drawing.Point(277, 1026)
+        Me.Panel38.Name = "Panel38"
+        Me.Panel38.Size = New System.Drawing.Size(46, 19)
+        Me.Panel38.TabIndex = 395
+        '
+        'RadioButton75
+        '
+        Me.RadioButton75.AutoSize = True
+        Me.RadioButton75.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton75.Name = "RadioButton75"
+        Me.RadioButton75.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton75.TabIndex = 4
+        Me.RadioButton75.TabStop = True
+        Me.RadioButton75.UseVisualStyleBackColor = True
+        '
+        'RadioButton76
+        '
+        Me.RadioButton76.AutoSize = True
+        Me.RadioButton76.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton76.Name = "RadioButton76"
+        Me.RadioButton76.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton76.TabIndex = 3
+        Me.RadioButton76.TabStop = True
+        Me.RadioButton76.UseVisualStyleBackColor = True
+        '
+        'Panel39
+        '
+        Me.Panel39.Controls.Add(Me.RadioButton77)
+        Me.Panel39.Controls.Add(Me.RadioButton78)
+        Me.Panel39.Location = New System.Drawing.Point(277, 999)
+        Me.Panel39.Name = "Panel39"
+        Me.Panel39.Size = New System.Drawing.Size(46, 19)
+        Me.Panel39.TabIndex = 394
+        '
+        'RadioButton77
+        '
+        Me.RadioButton77.AutoSize = True
+        Me.RadioButton77.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton77.Name = "RadioButton77"
+        Me.RadioButton77.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton77.TabIndex = 4
+        Me.RadioButton77.TabStop = True
+        Me.RadioButton77.UseVisualStyleBackColor = True
+        '
+        'RadioButton78
+        '
+        Me.RadioButton78.AutoSize = True
+        Me.RadioButton78.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton78.Name = "RadioButton78"
+        Me.RadioButton78.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton78.TabIndex = 3
+        Me.RadioButton78.TabStop = True
+        Me.RadioButton78.UseVisualStyleBackColor = True
+        '
+        'Panel40
+        '
+        Me.Panel40.Controls.Add(Me.RadioButton79)
+        Me.Panel40.Controls.Add(Me.RadioButton80)
+        Me.Panel40.Location = New System.Drawing.Point(277, 1236)
+        Me.Panel40.Name = "Panel40"
+        Me.Panel40.Size = New System.Drawing.Size(46, 19)
+        Me.Panel40.TabIndex = 404
+        '
+        'RadioButton79
+        '
+        Me.RadioButton79.AutoSize = True
+        Me.RadioButton79.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton79.Name = "RadioButton79"
+        Me.RadioButton79.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton79.TabIndex = 4
+        Me.RadioButton79.TabStop = True
+        Me.RadioButton79.UseVisualStyleBackColor = True
+        '
+        'RadioButton80
+        '
+        Me.RadioButton80.AutoSize = True
+        Me.RadioButton80.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton80.Name = "RadioButton80"
+        Me.RadioButton80.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton80.TabIndex = 3
+        Me.RadioButton80.TabStop = True
+        Me.RadioButton80.UseVisualStyleBackColor = True
+        '
+        'Panel41
+        '
+        Me.Panel41.Controls.Add(Me.RadioButton81)
+        Me.Panel41.Controls.Add(Me.RadioButton82)
+        Me.Panel41.Location = New System.Drawing.Point(277, 1214)
+        Me.Panel41.Name = "Panel41"
+        Me.Panel41.Size = New System.Drawing.Size(46, 19)
+        Me.Panel41.TabIndex = 403
+        '
+        'RadioButton81
+        '
+        Me.RadioButton81.AutoSize = True
+        Me.RadioButton81.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton81.Name = "RadioButton81"
+        Me.RadioButton81.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton81.TabIndex = 4
+        Me.RadioButton81.TabStop = True
+        Me.RadioButton81.UseVisualStyleBackColor = True
+        '
+        'RadioButton82
+        '
+        Me.RadioButton82.AutoSize = True
+        Me.RadioButton82.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton82.Name = "RadioButton82"
+        Me.RadioButton82.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton82.TabIndex = 3
+        Me.RadioButton82.TabStop = True
+        Me.RadioButton82.UseVisualStyleBackColor = True
+        '
+        'Panel42
+        '
+        Me.Panel42.Controls.Add(Me.RadioButton83)
+        Me.Panel42.Controls.Add(Me.RadioButton84)
+        Me.Panel42.Location = New System.Drawing.Point(277, 1189)
+        Me.Panel42.Name = "Panel42"
+        Me.Panel42.Size = New System.Drawing.Size(46, 19)
+        Me.Panel42.TabIndex = 402
+        '
+        'RadioButton83
+        '
+        Me.RadioButton83.AutoSize = True
+        Me.RadioButton83.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton83.Name = "RadioButton83"
+        Me.RadioButton83.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton83.TabIndex = 4
+        Me.RadioButton83.TabStop = True
+        Me.RadioButton83.UseVisualStyleBackColor = True
+        '
+        'RadioButton84
+        '
+        Me.RadioButton84.AutoSize = True
+        Me.RadioButton84.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton84.Name = "RadioButton84"
+        Me.RadioButton84.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton84.TabIndex = 3
+        Me.RadioButton84.TabStop = True
+        Me.RadioButton84.UseVisualStyleBackColor = True
+        '
+        'Panel43
+        '
+        Me.Panel43.Controls.Add(Me.RadioButton85)
+        Me.Panel43.Controls.Add(Me.RadioButton86)
+        Me.Panel43.Location = New System.Drawing.Point(277, 1304)
+        Me.Panel43.Name = "Panel43"
+        Me.Panel43.Size = New System.Drawing.Size(46, 19)
+        Me.Panel43.TabIndex = 407
+        '
+        'RadioButton85
+        '
+        Me.RadioButton85.AutoSize = True
+        Me.RadioButton85.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton85.Name = "RadioButton85"
+        Me.RadioButton85.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton85.TabIndex = 4
+        Me.RadioButton85.TabStop = True
+        Me.RadioButton85.UseVisualStyleBackColor = True
+        '
+        'RadioButton86
+        '
+        Me.RadioButton86.AutoSize = True
+        Me.RadioButton86.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton86.Name = "RadioButton86"
+        Me.RadioButton86.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton86.TabIndex = 3
+        Me.RadioButton86.TabStop = True
+        Me.RadioButton86.UseVisualStyleBackColor = True
+        '
+        'Panel44
+        '
+        Me.Panel44.Controls.Add(Me.RadioButton87)
+        Me.Panel44.Controls.Add(Me.RadioButton88)
+        Me.Panel44.Location = New System.Drawing.Point(277, 1281)
+        Me.Panel44.Name = "Panel44"
+        Me.Panel44.Size = New System.Drawing.Size(46, 19)
+        Me.Panel44.TabIndex = 406
+        '
+        'RadioButton87
+        '
+        Me.RadioButton87.AutoSize = True
+        Me.RadioButton87.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton87.Name = "RadioButton87"
+        Me.RadioButton87.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton87.TabIndex = 4
+        Me.RadioButton87.TabStop = True
+        Me.RadioButton87.UseVisualStyleBackColor = True
+        '
+        'RadioButton88
+        '
+        Me.RadioButton88.AutoSize = True
+        Me.RadioButton88.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton88.Name = "RadioButton88"
+        Me.RadioButton88.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton88.TabIndex = 3
+        Me.RadioButton88.TabStop = True
+        Me.RadioButton88.UseVisualStyleBackColor = True
+        '
+        'Panel45
+        '
+        Me.Panel45.Controls.Add(Me.RadioButton89)
+        Me.Panel45.Controls.Add(Me.RadioButton90)
+        Me.Panel45.Location = New System.Drawing.Point(277, 1258)
+        Me.Panel45.Name = "Panel45"
+        Me.Panel45.Size = New System.Drawing.Size(46, 19)
+        Me.Panel45.TabIndex = 405
+        '
+        'RadioButton89
+        '
+        Me.RadioButton89.AutoSize = True
+        Me.RadioButton89.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton89.Name = "RadioButton89"
+        Me.RadioButton89.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton89.TabIndex = 4
+        Me.RadioButton89.TabStop = True
+        Me.RadioButton89.UseVisualStyleBackColor = True
+        '
+        'RadioButton90
+        '
+        Me.RadioButton90.AutoSize = True
+        Me.RadioButton90.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton90.Name = "RadioButton90"
+        Me.RadioButton90.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton90.TabIndex = 3
+        Me.RadioButton90.TabStop = True
+        Me.RadioButton90.UseVisualStyleBackColor = True
+        '
+        'Panel48
+        '
+        Me.Panel48.Controls.Add(Me.RadioButton95)
+        Me.Panel48.Controls.Add(Me.RadioButton96)
+        Me.Panel48.Location = New System.Drawing.Point(277, 1343)
+        Me.Panel48.Name = "Panel48"
+        Me.Panel48.Size = New System.Drawing.Size(46, 19)
+        Me.Panel48.TabIndex = 408
+        '
+        'RadioButton95
+        '
+        Me.RadioButton95.AutoSize = True
+        Me.RadioButton95.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton95.Name = "RadioButton95"
+        Me.RadioButton95.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton95.TabIndex = 4
+        Me.RadioButton95.TabStop = True
+        Me.RadioButton95.UseVisualStyleBackColor = True
+        '
+        'RadioButton96
+        '
+        Me.RadioButton96.AutoSize = True
+        Me.RadioButton96.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton96.Name = "RadioButton96"
+        Me.RadioButton96.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton96.TabIndex = 3
+        Me.RadioButton96.TabStop = True
+        Me.RadioButton96.UseVisualStyleBackColor = True
+        '
+        'Panel46
+        '
+        Me.Panel46.Controls.Add(Me.RadioButton91)
+        Me.Panel46.Controls.Add(Me.RadioButton92)
+        Me.Panel46.Location = New System.Drawing.Point(587, 1201)
+        Me.Panel46.Name = "Panel46"
+        Me.Panel46.Size = New System.Drawing.Size(46, 19)
+        Me.Panel46.TabIndex = 418
+        '
+        'RadioButton91
+        '
+        Me.RadioButton91.AutoSize = True
+        Me.RadioButton91.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton91.Name = "RadioButton91"
+        Me.RadioButton91.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton91.TabIndex = 4
+        Me.RadioButton91.TabStop = True
+        Me.RadioButton91.UseVisualStyleBackColor = True
+        '
+        'RadioButton92
+        '
+        Me.RadioButton92.AutoSize = True
+        Me.RadioButton92.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton92.Name = "RadioButton92"
+        Me.RadioButton92.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton92.TabIndex = 3
+        Me.RadioButton92.TabStop = True
+        Me.RadioButton92.UseVisualStyleBackColor = True
+        '
+        'Panel47
+        '
+        Me.Panel47.Controls.Add(Me.RadioButton93)
+        Me.Panel47.Controls.Add(Me.RadioButton94)
+        Me.Panel47.Location = New System.Drawing.Point(587, 1166)
+        Me.Panel47.Name = "Panel47"
+        Me.Panel47.Size = New System.Drawing.Size(46, 19)
+        Me.Panel47.TabIndex = 417
+        '
+        'RadioButton93
+        '
+        Me.RadioButton93.AutoSize = True
+        Me.RadioButton93.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton93.Name = "RadioButton93"
+        Me.RadioButton93.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton93.TabIndex = 4
+        Me.RadioButton93.TabStop = True
+        Me.RadioButton93.UseVisualStyleBackColor = True
+        '
+        'RadioButton94
+        '
+        Me.RadioButton94.AutoSize = True
+        Me.RadioButton94.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton94.Name = "RadioButton94"
+        Me.RadioButton94.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton94.TabIndex = 3
+        Me.RadioButton94.TabStop = True
+        Me.RadioButton94.UseVisualStyleBackColor = True
+        '
+        'Panel49
+        '
+        Me.Panel49.Controls.Add(Me.RadioButton97)
+        Me.Panel49.Controls.Add(Me.RadioButton98)
+        Me.Panel49.Location = New System.Drawing.Point(587, 1119)
+        Me.Panel49.Name = "Panel49"
+        Me.Panel49.Size = New System.Drawing.Size(46, 19)
+        Me.Panel49.TabIndex = 416
+        '
+        'RadioButton97
+        '
+        Me.RadioButton97.AutoSize = True
+        Me.RadioButton97.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton97.Name = "RadioButton97"
+        Me.RadioButton97.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton97.TabIndex = 4
+        Me.RadioButton97.TabStop = True
+        Me.RadioButton97.UseVisualStyleBackColor = True
+        '
+        'RadioButton98
+        '
+        Me.RadioButton98.AutoSize = True
+        Me.RadioButton98.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton98.Name = "RadioButton98"
+        Me.RadioButton98.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton98.TabIndex = 3
+        Me.RadioButton98.TabStop = True
+        Me.RadioButton98.UseVisualStyleBackColor = True
+        '
+        'Panel50
+        '
+        Me.Panel50.Controls.Add(Me.RadioButton99)
+        Me.Panel50.Controls.Add(Me.RadioButton100)
+        Me.Panel50.Location = New System.Drawing.Point(587, 1076)
+        Me.Panel50.Name = "Panel50"
+        Me.Panel50.Size = New System.Drawing.Size(46, 19)
+        Me.Panel50.TabIndex = 415
+        '
+        'RadioButton99
+        '
+        Me.RadioButton99.AutoSize = True
+        Me.RadioButton99.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton99.Name = "RadioButton99"
+        Me.RadioButton99.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton99.TabIndex = 4
+        Me.RadioButton99.TabStop = True
+        Me.RadioButton99.UseVisualStyleBackColor = True
+        '
+        'RadioButton100
+        '
+        Me.RadioButton100.AutoSize = True
+        Me.RadioButton100.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton100.Name = "RadioButton100"
+        Me.RadioButton100.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton100.TabIndex = 3
+        Me.RadioButton100.TabStop = True
+        Me.RadioButton100.UseVisualStyleBackColor = True
+        '
+        'Panel51
+        '
+        Me.Panel51.Controls.Add(Me.RadioButton101)
+        Me.Panel51.Controls.Add(Me.RadioButton102)
+        Me.Panel51.Location = New System.Drawing.Point(587, 1053)
+        Me.Panel51.Name = "Panel51"
+        Me.Panel51.Size = New System.Drawing.Size(46, 19)
+        Me.Panel51.TabIndex = 414
+        '
+        'RadioButton101
+        '
+        Me.RadioButton101.AutoSize = True
+        Me.RadioButton101.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton101.Name = "RadioButton101"
+        Me.RadioButton101.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton101.TabIndex = 4
+        Me.RadioButton101.TabStop = True
+        Me.RadioButton101.UseVisualStyleBackColor = True
+        '
+        'RadioButton102
+        '
+        Me.RadioButton102.AutoSize = True
+        Me.RadioButton102.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton102.Name = "RadioButton102"
+        Me.RadioButton102.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton102.TabIndex = 3
+        Me.RadioButton102.TabStop = True
+        Me.RadioButton102.UseVisualStyleBackColor = True
+        '
+        'Panel52
+        '
+        Me.Panel52.Controls.Add(Me.RadioButton103)
+        Me.Panel52.Controls.Add(Me.RadioButton104)
+        Me.Panel52.Location = New System.Drawing.Point(587, 1018)
+        Me.Panel52.Name = "Panel52"
+        Me.Panel52.Size = New System.Drawing.Size(46, 19)
+        Me.Panel52.TabIndex = 413
+        '
+        'RadioButton103
+        '
+        Me.RadioButton103.AutoSize = True
+        Me.RadioButton103.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton103.Name = "RadioButton103"
+        Me.RadioButton103.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton103.TabIndex = 4
+        Me.RadioButton103.TabStop = True
+        Me.RadioButton103.UseVisualStyleBackColor = True
+        '
+        'RadioButton104
+        '
+        Me.RadioButton104.AutoSize = True
+        Me.RadioButton104.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton104.Name = "RadioButton104"
+        Me.RadioButton104.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton104.TabIndex = 3
+        Me.RadioButton104.TabStop = True
+        Me.RadioButton104.UseVisualStyleBackColor = True
+        '
+        'Panel53
+        '
+        Me.Panel53.Controls.Add(Me.RadioButton105)
+        Me.Panel53.Controls.Add(Me.RadioButton106)
+        Me.Panel53.Location = New System.Drawing.Point(587, 983)
+        Me.Panel53.Name = "Panel53"
+        Me.Panel53.Size = New System.Drawing.Size(46, 19)
+        Me.Panel53.TabIndex = 412
+        '
+        'RadioButton105
+        '
+        Me.RadioButton105.AutoSize = True
+        Me.RadioButton105.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton105.Name = "RadioButton105"
+        Me.RadioButton105.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton105.TabIndex = 4
+        Me.RadioButton105.TabStop = True
+        Me.RadioButton105.UseVisualStyleBackColor = True
+        '
+        'RadioButton106
+        '
+        Me.RadioButton106.AutoSize = True
+        Me.RadioButton106.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton106.Name = "RadioButton106"
+        Me.RadioButton106.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton106.TabIndex = 3
+        Me.RadioButton106.TabStop = True
+        Me.RadioButton106.UseVisualStyleBackColor = True
+        '
+        'Panel54
+        '
+        Me.Panel54.Controls.Add(Me.RadioButton107)
+        Me.Panel54.Controls.Add(Me.RadioButton108)
+        Me.Panel54.Location = New System.Drawing.Point(587, 945)
+        Me.Panel54.Name = "Panel54"
+        Me.Panel54.Size = New System.Drawing.Size(46, 19)
+        Me.Panel54.TabIndex = 411
+        '
+        'RadioButton107
+        '
+        Me.RadioButton107.AutoSize = True
+        Me.RadioButton107.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton107.Name = "RadioButton107"
+        Me.RadioButton107.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton107.TabIndex = 4
+        Me.RadioButton107.TabStop = True
+        Me.RadioButton107.UseVisualStyleBackColor = True
+        '
+        'RadioButton108
+        '
+        Me.RadioButton108.AutoSize = True
+        Me.RadioButton108.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton108.Name = "RadioButton108"
+        Me.RadioButton108.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton108.TabIndex = 3
+        Me.RadioButton108.TabStop = True
+        Me.RadioButton108.UseVisualStyleBackColor = True
+        '
+        'Panel55
+        '
+        Me.Panel55.Controls.Add(Me.RadioButton109)
+        Me.Panel55.Controls.Add(Me.RadioButton110)
+        Me.Panel55.Location = New System.Drawing.Point(587, 912)
+        Me.Panel55.Name = "Panel55"
+        Me.Panel55.Size = New System.Drawing.Size(46, 19)
+        Me.Panel55.TabIndex = 410
+        '
+        'RadioButton109
+        '
+        Me.RadioButton109.AutoSize = True
+        Me.RadioButton109.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton109.Name = "RadioButton109"
+        Me.RadioButton109.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton109.TabIndex = 4
+        Me.RadioButton109.TabStop = True
+        Me.RadioButton109.UseVisualStyleBackColor = True
+        '
+        'RadioButton110
+        '
+        Me.RadioButton110.AutoSize = True
+        Me.RadioButton110.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton110.Name = "RadioButton110"
+        Me.RadioButton110.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton110.TabIndex = 3
+        Me.RadioButton110.TabStop = True
+        Me.RadioButton110.UseVisualStyleBackColor = True
+        '
+        'Panel56
+        '
+        Me.Panel56.Controls.Add(Me.RadioButton111)
+        Me.Panel56.Controls.Add(Me.RadioButton112)
+        Me.Panel56.Location = New System.Drawing.Point(587, 873)
+        Me.Panel56.Name = "Panel56"
+        Me.Panel56.Size = New System.Drawing.Size(46, 19)
+        Me.Panel56.TabIndex = 409
+        '
+        'RadioButton111
+        '
+        Me.RadioButton111.AutoSize = True
+        Me.RadioButton111.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton111.Name = "RadioButton111"
+        Me.RadioButton111.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton111.TabIndex = 4
+        Me.RadioButton111.TabStop = True
+        Me.RadioButton111.UseVisualStyleBackColor = True
+        '
+        'RadioButton112
+        '
+        Me.RadioButton112.AutoSize = True
+        Me.RadioButton112.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton112.Name = "RadioButton112"
+        Me.RadioButton112.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton112.TabIndex = 3
+        Me.RadioButton112.TabStop = True
+        Me.RadioButton112.UseVisualStyleBackColor = True
+        '
+        'Label127
+        '
+        Me.Label127.AutoSize = True
+        Me.Label127.Location = New System.Drawing.Point(90, 234)
+        Me.Label127.Name = "Label127"
+        Me.Label127.Size = New System.Drawing.Size(506, 13)
+        Me.Label127.TabIndex = 419
+        Me.Label127.Text = "Tillater du at blodbanken sender deg epost(Innkalling, timepåminning, eventuelt a" &
+    "nnen viktig informasjon)?"
+        '
+        'Label125
+        '
+        Me.Label125.AutoSize = True
+        Me.Label125.Location = New System.Drawing.Point(90, 256)
+        Me.Label125.Name = "Label125"
+        Me.Label125.Size = New System.Drawing.Size(503, 13)
+        Me.Label125.TabIndex = 420
+        Me.Label125.Text = "Tillater du at blodbanken sender deg SMS(Innkalling, timepåminning, eventuelt ann" &
+    "en viktig informasjon)?"
+        '
+        'Panel57
+        '
+        Me.Panel57.Controls.Add(Me.rbEpostNei)
+        Me.Panel57.Controls.Add(Me.rbEpostJa)
+        Me.Panel57.Location = New System.Drawing.Point(41, 231)
+        Me.Panel57.Name = "Panel57"
+        Me.Panel57.Size = New System.Drawing.Size(46, 19)
+        Me.Panel57.TabIndex = 421
+        '
+        'rbEpostNei
+        '
+        Me.rbEpostNei.AutoSize = True
+        Me.rbEpostNei.Location = New System.Drawing.Point(29, 3)
+        Me.rbEpostNei.Name = "rbEpostNei"
+        Me.rbEpostNei.Size = New System.Drawing.Size(14, 13)
+        Me.rbEpostNei.TabIndex = 4
+        Me.rbEpostNei.TabStop = True
+        Me.rbEpostNei.UseVisualStyleBackColor = True
+        '
+        'rbEpostJa
+        '
+        Me.rbEpostJa.AutoSize = True
+        Me.rbEpostJa.Location = New System.Drawing.Point(5, 3)
+        Me.rbEpostJa.Name = "rbEpostJa"
+        Me.rbEpostJa.Size = New System.Drawing.Size(14, 13)
+        Me.rbEpostJa.TabIndex = 3
+        Me.rbEpostJa.TabStop = True
+        Me.rbEpostJa.UseVisualStyleBackColor = True
+        '
+        'Panel58
+        '
+        Me.Panel58.Controls.Add(Me.RadioButton115)
+        Me.Panel58.Controls.Add(Me.RadioButton116)
+        Me.Panel58.Location = New System.Drawing.Point(41, 253)
+        Me.Panel58.Name = "Panel58"
+        Me.Panel58.Size = New System.Drawing.Size(46, 19)
+        Me.Panel58.TabIndex = 375
+        '
+        'RadioButton115
+        '
+        Me.RadioButton115.AutoSize = True
+        Me.RadioButton115.Location = New System.Drawing.Point(29, 3)
+        Me.RadioButton115.Name = "RadioButton115"
+        Me.RadioButton115.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton115.TabIndex = 4
+        Me.RadioButton115.TabStop = True
+        Me.RadioButton115.UseVisualStyleBackColor = True
+        '
+        'RadioButton116
+        '
+        Me.RadioButton116.AutoSize = True
+        Me.RadioButton116.Location = New System.Drawing.Point(5, 3)
+        Me.RadioButton116.Name = "RadioButton116"
+        Me.RadioButton116.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton116.TabIndex = 3
+        Me.RadioButton116.TabStop = True
+        Me.RadioButton116.UseVisualStyleBackColor = True
+        '
+        'Label126
+        '
+        Me.Label126.AutoSize = True
+        Me.Label126.Location = New System.Drawing.Point(63, 212)
+        Me.Label126.Name = "Label126"
+        Me.Label126.Size = New System.Drawing.Size(23, 13)
+        Me.Label126.TabIndex = 423
+        Me.Label126.Text = "Nei"
+        '
+        'Label128
+        '
+        Me.Label128.AutoSize = True
+        Me.Label128.Location = New System.Drawing.Point(43, 212)
+        Me.Label128.Name = "Label128"
+        Me.Label128.Size = New System.Drawing.Size(18, 13)
+        Me.Label128.TabIndex = 422
+        Me.Label128.Text = "Ja"
+        '
         'egenerklering
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(671, 463)
+        Me.Controls.Add(Me.Label126)
+        Me.Controls.Add(Me.Label128)
+        Me.Controls.Add(Me.Panel58)
+        Me.Controls.Add(Me.Panel57)
+        Me.Controls.Add(Me.Label125)
+        Me.Controls.Add(Me.Label127)
+        Me.Controls.Add(Me.Panel46)
+        Me.Controls.Add(Me.Panel47)
+        Me.Controls.Add(Me.Panel49)
+        Me.Controls.Add(Me.Panel50)
+        Me.Controls.Add(Me.Panel51)
+        Me.Controls.Add(Me.Panel52)
+        Me.Controls.Add(Me.Panel53)
+        Me.Controls.Add(Me.Panel54)
+        Me.Controls.Add(Me.Panel55)
+        Me.Controls.Add(Me.Panel56)
+        Me.Controls.Add(Me.Panel48)
+        Me.Controls.Add(Me.Panel43)
+        Me.Controls.Add(Me.Panel44)
+        Me.Controls.Add(Me.Panel45)
+        Me.Controls.Add(Me.Panel40)
+        Me.Controls.Add(Me.Panel41)
+        Me.Controls.Add(Me.Panel42)
+        Me.Controls.Add(Me.Panel32)
+        Me.Controls.Add(Me.Panel33)
+        Me.Controls.Add(Me.Panel34)
+        Me.Controls.Add(Me.Panel35)
+        Me.Controls.Add(Me.Panel36)
+        Me.Controls.Add(Me.Panel37)
+        Me.Controls.Add(Me.Panel38)
+        Me.Controls.Add(Me.Panel39)
+        Me.Controls.Add(Me.Panel31)
+        Me.Controls.Add(Me.Panel26)
+        Me.Controls.Add(Me.Panel27)
+        Me.Controls.Add(Me.Panel28)
+        Me.Controls.Add(Me.Panel29)
+        Me.Controls.Add(Me.Panel30)
+        Me.Controls.Add(Me.Panel25)
+        Me.Controls.Add(Me.Panel24)
+        Me.Controls.Add(Me.Panel21)
+        Me.Controls.Add(Me.Panel22)
+        Me.Controls.Add(Me.Panel23)
+        Me.Controls.Add(Me.Panel18)
+        Me.Controls.Add(Me.Panel19)
+        Me.Controls.Add(Me.Panel20)
+        Me.Controls.Add(Me.Panel13)
+        Me.Controls.Add(Me.Panel16)
+        Me.Controls.Add(Me.Panel17)
+        Me.Controls.Add(Me.Panel12)
+        Me.Controls.Add(Me.Panel8)
+        Me.Controls.Add(Me.Panel9)
+        Me.Controls.Add(Me.Panel14)
+        Me.Controls.Add(Me.Panel15)
+        Me.Controls.Add(Me.Panel10)
+        Me.Controls.Add(Me.Panel11)
+        Me.Controls.Add(Me.Panel7)
+        Me.Controls.Add(Me.Panel6)
+        Me.Controls.Add(Me.Panel5)
+        Me.Controls.Add(Me.Panel4)
+        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Label123)
+        Me.Controls.Add(Me.Label124)
+        Me.Controls.Add(Me.Label121)
+        Me.Controls.Add(Me.Label122)
+        Me.Controls.Add(Me.Label120)
+        Me.Controls.Add(Me.Label119)
+        Me.Controls.Add(Me.Label118)
+        Me.Controls.Add(Me.Label117)
+        Me.Controls.Add(Me.Label116)
+        Me.Controls.Add(Me.Label115)
+        Me.Controls.Add(Me.Label114)
+        Me.Controls.Add(Me.Label113)
+        Me.Controls.Add(Me.Label112)
+        Me.Controls.Add(Me.Label111)
+        Me.Controls.Add(Me.Label110)
+        Me.Controls.Add(Me.Label109)
+        Me.Controls.Add(Me.Label108)
+        Me.Controls.Add(Me.Label106)
+        Me.Controls.Add(Me.Label107)
+        Me.Controls.Add(Me.Label104)
+        Me.Controls.Add(Me.Label105)
+        Me.Controls.Add(Me.Label103)
+        Me.Controls.Add(Me.Label101)
+        Me.Controls.Add(Me.Label102)
+        Me.Controls.Add(Me.Label99)
+        Me.Controls.Add(Me.Label100)
+        Me.Controls.Add(Me.Label98)
+        Me.Controls.Add(Me.Label97)
+        Me.Controls.Add(Me.Label79)
+        Me.Controls.Add(Me.Label80)
+        Me.Controls.Add(Me.Label81)
+        Me.Controls.Add(Me.Label82)
+        Me.Controls.Add(Me.Label83)
+        Me.Controls.Add(Me.Label84)
+        Me.Controls.Add(Me.Label85)
+        Me.Controls.Add(Me.Label86)
+        Me.Controls.Add(Me.Label87)
+        Me.Controls.Add(Me.Label88)
+        Me.Controls.Add(Me.Label89)
+        Me.Controls.Add(Me.Label90)
+        Me.Controls.Add(Me.Label91)
+        Me.Controls.Add(Me.Label92)
+        Me.Controls.Add(Me.Label93)
+        Me.Controls.Add(Me.Label94)
+        Me.Controls.Add(Me.Label95)
+        Me.Controls.Add(Me.Label96)
+        Me.Controls.Add(Me.Label78)
         Me.Controls.Add(Me.Label77)
-        Me.Controls.Add(Me.CheckBox63)
-        Me.Controls.Add(Me.CheckBox64)
         Me.Controls.Add(Me.Label76)
         Me.Controls.Add(Me.Label74)
         Me.Controls.Add(Me.Label75)
@@ -1560,44 +3442,16 @@ Partial Class egenerklering
         Me.Controls.Add(Me.Label63)
         Me.Controls.Add(Me.Label60)
         Me.Controls.Add(Me.Label61)
-        Me.Controls.Add(Me.CheckBox55)
-        Me.Controls.Add(Me.CheckBox56)
-        Me.Controls.Add(Me.CheckBox57)
-        Me.Controls.Add(Me.CheckBox58)
-        Me.Controls.Add(Me.CheckBox59)
-        Me.Controls.Add(Me.CheckBox60)
-        Me.Controls.Add(Me.CheckBox61)
-        Me.Controls.Add(Me.CheckBox62)
         Me.Controls.Add(Me.Label59)
         Me.Controls.Add(Me.Label58)
-        Me.Controls.Add(Me.CheckBox53)
-        Me.Controls.Add(Me.CheckBox54)
         Me.Controls.Add(Me.Label57)
-        Me.Controls.Add(Me.CheckBox51)
-        Me.Controls.Add(Me.CheckBox52)
         Me.Controls.Add(Me.Label56)
-        Me.Controls.Add(Me.CheckBox49)
-        Me.Controls.Add(Me.CheckBox50)
         Me.Controls.Add(Me.Label54)
         Me.Controls.Add(Me.Label55)
-        Me.Controls.Add(Me.CheckBox47)
-        Me.Controls.Add(Me.CheckBox48)
         Me.Controls.Add(Me.Label53)
         Me.Controls.Add(Me.Label51)
         Me.Controls.Add(Me.Label52)
         Me.Controls.Add(Me.Label50)
-        Me.Controls.Add(Me.CheckBox35)
-        Me.Controls.Add(Me.CheckBox36)
-        Me.Controls.Add(Me.CheckBox37)
-        Me.Controls.Add(Me.CheckBox38)
-        Me.Controls.Add(Me.CheckBox39)
-        Me.Controls.Add(Me.CheckBox40)
-        Me.Controls.Add(Me.CheckBox41)
-        Me.Controls.Add(Me.CheckBox42)
-        Me.Controls.Add(Me.CheckBox43)
-        Me.Controls.Add(Me.CheckBox44)
-        Me.Controls.Add(Me.CheckBox45)
-        Me.Controls.Add(Me.CheckBox46)
         Me.Controls.Add(Me.Label43)
         Me.Controls.Add(Me.Label44)
         Me.Controls.Add(Me.Label45)
@@ -1605,50 +3459,24 @@ Partial Class egenerklering
         Me.Controls.Add(Me.Label47)
         Me.Controls.Add(Me.Label48)
         Me.Controls.Add(Me.Label49)
-        Me.Controls.Add(Me.CheckBox33)
-        Me.Controls.Add(Me.CheckBox34)
         Me.Controls.Add(Me.Label42)
-        Me.Controls.Add(Me.CheckBox31)
-        Me.Controls.Add(Me.CheckBox32)
         Me.Controls.Add(Me.Label41)
         Me.Controls.Add(Me.Label40)
-        Me.Controls.Add(Me.CheckBox29)
-        Me.Controls.Add(Me.CheckBox30)
         Me.Controls.Add(Me.Label39)
         Me.Controls.Add(Me.Label38)
         Me.Controls.Add(Me.Label37)
-        Me.Controls.Add(Me.CheckBox27)
-        Me.Controls.Add(Me.CheckBox28)
         Me.Controls.Add(Me.Label36)
         Me.Controls.Add(Me.Label35)
         Me.Controls.Add(Me.Label34)
         Me.Controls.Add(Me.Label33)
-        Me.Controls.Add(Me.CheckBox25)
-        Me.Controls.Add(Me.CheckBox26)
         Me.Controls.Add(Me.Label32)
         Me.Controls.Add(Me.Label31)
-        Me.Controls.Add(Me.CheckBox23)
-        Me.Controls.Add(Me.CheckBox24)
         Me.Controls.Add(Me.Label30)
         Me.Controls.Add(Me.Label28)
         Me.Controls.Add(Me.Label29)
-        Me.Controls.Add(Me.CheckBox21)
-        Me.Controls.Add(Me.CheckBox22)
         Me.Controls.Add(Me.Label27)
         Me.Controls.Add(Me.Label26)
         Me.Controls.Add(Me.Label25)
-        Me.Controls.Add(Me.CheckBox20)
-        Me.Controls.Add(Me.CheckBox19)
-        Me.Controls.Add(Me.CheckBox18)
-        Me.Controls.Add(Me.CheckBox17)
-        Me.Controls.Add(Me.CheckBox16)
-        Me.Controls.Add(Me.CheckBox15)
-        Me.Controls.Add(Me.CheckBox14)
-        Me.Controls.Add(Me.CheckBox13)
-        Me.Controls.Add(Me.CheckBox12)
-        Me.Controls.Add(Me.CheckBox11)
-        Me.Controls.Add(Me.CheckBox2)
-        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Label24)
         Me.Controls.Add(Me.Label23)
         Me.Controls.Add(Me.Label22)
@@ -1657,36 +3485,26 @@ Partial Class egenerklering
         Me.Controls.Add(Me.Label19)
         Me.Controls.Add(Me.Label18)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.CheckBox10)
-        Me.Controls.Add(Me.CheckBox9)
         Me.Controls.Add(Me.Label17)
-        Me.Controls.Add(Me.CheckBox8)
-        Me.Controls.Add(Me.CheckBox7)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label15)
-        Me.Controls.Add(Me.CheckBox6)
-        Me.Controls.Add(Me.CheckBox5)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.CheckBox4)
-        Me.Controls.Add(Me.CheckBox3)
         Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.chkSMS)
-        Me.Controls.Add(Me.chkEpost)
-        Me.Controls.Add(Me.txtEpost)
+        Me.Controls.Add(Me.txtEpostE)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.txtTelefon)
+        Me.Controls.Add(Me.txtTelefonE)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.txtPostnummer)
+        Me.Controls.Add(Me.txtPostnummerE)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.txtPrivatAdresse)
+        Me.Controls.Add(Me.txtPrivatAdresseE)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.txtFodselsnummer)
+        Me.Controls.Add(Me.txtFodselsnummerE)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.txtFornavn)
-        Me.Controls.Add(Me.txtEtternavn)
+        Me.Controls.Add(Me.txtFornavnE)
+        Me.Controls.Add(Me.txtEtternavnE)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -1694,6 +3512,122 @@ Partial Class egenerklering
         Me.Name = "egenerklering"
         Me.Text = "egenerklering"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
+        Me.Panel7.ResumeLayout(False)
+        Me.Panel7.PerformLayout()
+        Me.Panel8.ResumeLayout(False)
+        Me.Panel8.PerformLayout()
+        Me.Panel9.ResumeLayout(False)
+        Me.Panel9.PerformLayout()
+        Me.Panel10.ResumeLayout(False)
+        Me.Panel10.PerformLayout()
+        Me.Panel11.ResumeLayout(False)
+        Me.Panel11.PerformLayout()
+        Me.Panel12.ResumeLayout(False)
+        Me.Panel12.PerformLayout()
+        Me.Panel14.ResumeLayout(False)
+        Me.Panel14.PerformLayout()
+        Me.Panel15.ResumeLayout(False)
+        Me.Panel15.PerformLayout()
+        Me.Panel13.ResumeLayout(False)
+        Me.Panel13.PerformLayout()
+        Me.Panel16.ResumeLayout(False)
+        Me.Panel16.PerformLayout()
+        Me.Panel17.ResumeLayout(False)
+        Me.Panel17.PerformLayout()
+        Me.Panel18.ResumeLayout(False)
+        Me.Panel18.PerformLayout()
+        Me.Panel19.ResumeLayout(False)
+        Me.Panel19.PerformLayout()
+        Me.Panel20.ResumeLayout(False)
+        Me.Panel20.PerformLayout()
+        Me.Panel21.ResumeLayout(False)
+        Me.Panel21.PerformLayout()
+        Me.Panel22.ResumeLayout(False)
+        Me.Panel22.PerformLayout()
+        Me.Panel23.ResumeLayout(False)
+        Me.Panel23.PerformLayout()
+        Me.Panel24.ResumeLayout(False)
+        Me.Panel24.PerformLayout()
+        Me.Panel25.ResumeLayout(False)
+        Me.Panel25.PerformLayout()
+        Me.Panel27.ResumeLayout(False)
+        Me.Panel27.PerformLayout()
+        Me.Panel28.ResumeLayout(False)
+        Me.Panel28.PerformLayout()
+        Me.Panel29.ResumeLayout(False)
+        Me.Panel29.PerformLayout()
+        Me.Panel30.ResumeLayout(False)
+        Me.Panel30.PerformLayout()
+        Me.Panel26.ResumeLayout(False)
+        Me.Panel26.PerformLayout()
+        Me.Panel31.ResumeLayout(False)
+        Me.Panel31.PerformLayout()
+        Me.Panel32.ResumeLayout(False)
+        Me.Panel32.PerformLayout()
+        Me.Panel33.ResumeLayout(False)
+        Me.Panel33.PerformLayout()
+        Me.Panel34.ResumeLayout(False)
+        Me.Panel34.PerformLayout()
+        Me.Panel35.ResumeLayout(False)
+        Me.Panel35.PerformLayout()
+        Me.Panel36.ResumeLayout(False)
+        Me.Panel36.PerformLayout()
+        Me.Panel37.ResumeLayout(False)
+        Me.Panel37.PerformLayout()
+        Me.Panel38.ResumeLayout(False)
+        Me.Panel38.PerformLayout()
+        Me.Panel39.ResumeLayout(False)
+        Me.Panel39.PerformLayout()
+        Me.Panel40.ResumeLayout(False)
+        Me.Panel40.PerformLayout()
+        Me.Panel41.ResumeLayout(False)
+        Me.Panel41.PerformLayout()
+        Me.Panel42.ResumeLayout(False)
+        Me.Panel42.PerformLayout()
+        Me.Panel43.ResumeLayout(False)
+        Me.Panel43.PerformLayout()
+        Me.Panel44.ResumeLayout(False)
+        Me.Panel44.PerformLayout()
+        Me.Panel45.ResumeLayout(False)
+        Me.Panel45.PerformLayout()
+        Me.Panel48.ResumeLayout(False)
+        Me.Panel48.PerformLayout()
+        Me.Panel46.ResumeLayout(False)
+        Me.Panel46.PerformLayout()
+        Me.Panel47.ResumeLayout(False)
+        Me.Panel47.PerformLayout()
+        Me.Panel49.ResumeLayout(False)
+        Me.Panel49.PerformLayout()
+        Me.Panel50.ResumeLayout(False)
+        Me.Panel50.PerformLayout()
+        Me.Panel51.ResumeLayout(False)
+        Me.Panel51.PerformLayout()
+        Me.Panel52.ResumeLayout(False)
+        Me.Panel52.PerformLayout()
+        Me.Panel53.ResumeLayout(False)
+        Me.Panel53.PerformLayout()
+        Me.Panel54.ResumeLayout(False)
+        Me.Panel54.PerformLayout()
+        Me.Panel55.ResumeLayout(False)
+        Me.Panel55.PerformLayout()
+        Me.Panel56.ResumeLayout(False)
+        Me.Panel56.PerformLayout()
+        Me.Panel57.ResumeLayout(False)
+        Me.Panel57.PerformLayout()
+        Me.Panel58.ResumeLayout(False)
+        Me.Panel58.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1703,36 +3637,26 @@ Partial Class egenerklering
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents txtEtternavn As TextBox
-    Friend WithEvents txtFornavn As TextBox
+    Friend WithEvents txtEtternavnE As TextBox
+    Friend WithEvents txtFornavnE As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents txtFodselsnummer As TextBox
+    Friend WithEvents txtFodselsnummerE As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents txtPrivatAdresse As TextBox
+    Friend WithEvents txtPrivatAdresseE As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents txtPostnummer As TextBox
+    Friend WithEvents txtPostnummerE As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents txtTelefon As TextBox
+    Friend WithEvents txtTelefonE As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents txtEpost As TextBox
-    Friend WithEvents chkEpost As CheckBox
-    Friend WithEvents chkSMS As CheckBox
+    Friend WithEvents txtEpostE As TextBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents CheckBox3 As CheckBox
-    Friend WithEvents CheckBox4 As CheckBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
-    Friend WithEvents CheckBox5 As CheckBox
-    Friend WithEvents CheckBox6 As CheckBox
     Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
-    Friend WithEvents CheckBox7 As CheckBox
-    Friend WithEvents CheckBox8 As CheckBox
     Friend WithEvents Label17 As Label
-    Friend WithEvents CheckBox9 As CheckBox
-    Friend WithEvents CheckBox10 As CheckBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label18 As Label
     Friend WithEvents Label19 As Label
@@ -1741,78 +3665,32 @@ Partial Class egenerklering
     Friend WithEvents Label22 As Label
     Friend WithEvents Label23 As Label
     Friend WithEvents Label24 As Label
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents CheckBox11 As CheckBox
-    Friend WithEvents CheckBox12 As CheckBox
-    Friend WithEvents CheckBox13 As CheckBox
-    Friend WithEvents CheckBox14 As CheckBox
-    Friend WithEvents CheckBox15 As CheckBox
-    Friend WithEvents CheckBox16 As CheckBox
-    Friend WithEvents CheckBox17 As CheckBox
-    Friend WithEvents CheckBox18 As CheckBox
-    Friend WithEvents CheckBox19 As CheckBox
-    Friend WithEvents CheckBox20 As CheckBox
     Friend WithEvents Label25 As Label
     Friend WithEvents Label26 As Label
     Friend WithEvents Label27 As Label
     Friend WithEvents Label28 As Label
     Friend WithEvents Label29 As Label
-    Friend WithEvents CheckBox21 As CheckBox
-    Friend WithEvents CheckBox22 As CheckBox
     Friend WithEvents Label30 As Label
-    Friend WithEvents CheckBox23 As CheckBox
-    Friend WithEvents CheckBox24 As CheckBox
     Friend WithEvents Label31 As Label
     Friend WithEvents Label32 As Label
-    Friend WithEvents CheckBox25 As CheckBox
-    Friend WithEvents CheckBox26 As CheckBox
     Friend WithEvents Label33 As Label
     Friend WithEvents Label34 As Label
     Friend WithEvents Label35 As Label
     Friend WithEvents Label36 As Label
-    Friend WithEvents CheckBox27 As CheckBox
-    Friend WithEvents CheckBox28 As CheckBox
     Friend WithEvents Label37 As Label
     Friend WithEvents Label38 As Label
     Friend WithEvents Label39 As Label
-    Friend WithEvents CheckBox29 As CheckBox
-    Friend WithEvents CheckBox30 As CheckBox
     Friend WithEvents Label40 As Label
     Friend WithEvents Label41 As Label
-    Friend WithEvents CheckBox31 As CheckBox
-    Friend WithEvents CheckBox32 As CheckBox
     Friend WithEvents Label42 As Label
-    Friend WithEvents CheckBox33 As CheckBox
-    Friend WithEvents CheckBox34 As CheckBox
-    Friend WithEvents CheckBox53 As CheckBox
-    Friend WithEvents CheckBox54 As CheckBox
     Friend WithEvents Label57 As Label
-    Friend WithEvents CheckBox51 As CheckBox
-    Friend WithEvents CheckBox52 As CheckBox
     Friend WithEvents Label56 As Label
-    Friend WithEvents CheckBox49 As CheckBox
-    Friend WithEvents CheckBox50 As CheckBox
     Friend WithEvents Label54 As Label
     Friend WithEvents Label55 As Label
-    Friend WithEvents CheckBox47 As CheckBox
-    Friend WithEvents CheckBox48 As CheckBox
     Friend WithEvents Label53 As Label
     Friend WithEvents Label51 As Label
     Friend WithEvents Label52 As Label
     Friend WithEvents Label50 As Label
-    Friend WithEvents CheckBox35 As CheckBox
-    Friend WithEvents CheckBox36 As CheckBox
-    Friend WithEvents CheckBox37 As CheckBox
-    Friend WithEvents CheckBox38 As CheckBox
-    Friend WithEvents CheckBox39 As CheckBox
-    Friend WithEvents CheckBox40 As CheckBox
-    Friend WithEvents CheckBox41 As CheckBox
-    Friend WithEvents CheckBox42 As CheckBox
-    Friend WithEvents CheckBox43 As CheckBox
-    Friend WithEvents CheckBox44 As CheckBox
-    Friend WithEvents CheckBox45 As CheckBox
-    Friend WithEvents CheckBox46 As CheckBox
     Friend WithEvents Label43 As Label
     Friend WithEvents Label44 As Label
     Friend WithEvents Label45 As Label
@@ -1822,14 +3700,6 @@ Partial Class egenerklering
     Friend WithEvents Label49 As Label
     Friend WithEvents Label58 As Label
     Friend WithEvents Label59 As Label
-    Friend WithEvents CheckBox55 As CheckBox
-    Friend WithEvents CheckBox56 As CheckBox
-    Friend WithEvents CheckBox57 As CheckBox
-    Friend WithEvents CheckBox58 As CheckBox
-    Friend WithEvents CheckBox59 As CheckBox
-    Friend WithEvents CheckBox60 As CheckBox
-    Friend WithEvents CheckBox61 As CheckBox
-    Friend WithEvents CheckBox62 As CheckBox
     Friend WithEvents Label60 As Label
     Friend WithEvents Label61 As Label
     Friend WithEvents Label62 As Label
@@ -1847,7 +3717,231 @@ Partial Class egenerklering
     Friend WithEvents Label74 As Label
     Friend WithEvents Label75 As Label
     Friend WithEvents Label76 As Label
-    Friend WithEvents CheckBox63 As CheckBox
-    Friend WithEvents CheckBox64 As CheckBox
     Friend WithEvents Label77 As Label
+    Friend WithEvents Label78 As Label
+    Friend WithEvents Label79 As Label
+    Friend WithEvents Label80 As Label
+    Friend WithEvents Label81 As Label
+    Friend WithEvents Label82 As Label
+    Friend WithEvents Label83 As Label
+    Friend WithEvents Label84 As Label
+    Friend WithEvents Label85 As Label
+    Friend WithEvents Label86 As Label
+    Friend WithEvents Label87 As Label
+    Friend WithEvents Label88 As Label
+    Friend WithEvents Label89 As Label
+    Friend WithEvents Label90 As Label
+    Friend WithEvents Label91 As Label
+    Friend WithEvents Label92 As Label
+    Friend WithEvents Label93 As Label
+    Friend WithEvents Label94 As Label
+    Friend WithEvents Label95 As Label
+    Friend WithEvents Label96 As Label
+    Friend WithEvents Label97 As Label
+    Friend WithEvents Label98 As Label
+    Friend WithEvents Label99 As Label
+    Friend WithEvents Label100 As Label
+    Friend WithEvents Label101 As Label
+    Friend WithEvents Label102 As Label
+    Friend WithEvents Label103 As Label
+    Friend WithEvents Label104 As Label
+    Friend WithEvents Label105 As Label
+    Friend WithEvents Label106 As Label
+    Friend WithEvents Label107 As Label
+    Friend WithEvents Label108 As Label
+    Friend WithEvents Label109 As Label
+    Friend WithEvents Label110 As Label
+    Friend WithEvents Label111 As Label
+    Friend WithEvents Label112 As Label
+    Friend WithEvents Label113 As Label
+    Friend WithEvents Label114 As Label
+    Friend WithEvents Label115 As Label
+    Friend WithEvents Label116 As Label
+    Friend WithEvents Label117 As Label
+    Friend WithEvents Label118 As Label
+    Friend WithEvents Label119 As Label
+    Friend WithEvents Label120 As Label
+    Friend WithEvents Label121 As Label
+    Friend WithEvents Label122 As Label
+    Friend WithEvents Label123 As Label
+    Friend WithEvents Label124 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents RadioButton14 As RadioButton
+    Friend WithEvents RadioButton4 As RadioButton
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents RadioButton3 As RadioButton
+    Friend WithEvents RadioButton5 As RadioButton
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents RadioButton6 As RadioButton
+    Friend WithEvents RadioButton7 As RadioButton
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents RadioButton8 As RadioButton
+    Friend WithEvents RadioButton9 As RadioButton
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents RadioButton10 As RadioButton
+    Friend WithEvents RadioButton11 As RadioButton
+    Friend WithEvents Panel7 As Panel
+    Friend WithEvents RadioButton12 As RadioButton
+    Friend WithEvents RadioButton13 As RadioButton
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents RadioButton15 As RadioButton
+    Friend WithEvents RadioButton16 As RadioButton
+    Friend WithEvents Panel9 As Panel
+    Friend WithEvents RadioButton17 As RadioButton
+    Friend WithEvents RadioButton18 As RadioButton
+    Friend WithEvents Panel10 As Panel
+    Friend WithEvents RadioButton19 As RadioButton
+    Friend WithEvents RadioButton20 As RadioButton
+    Friend WithEvents Panel11 As Panel
+    Friend WithEvents RadioButton21 As RadioButton
+    Friend WithEvents RadioButton22 As RadioButton
+    Friend WithEvents Panel12 As Panel
+    Friend WithEvents RadioButton23 As RadioButton
+    Friend WithEvents RadioButton24 As RadioButton
+    Friend WithEvents Panel14 As Panel
+    Friend WithEvents RadioButton27 As RadioButton
+    Friend WithEvents RadioButton28 As RadioButton
+    Friend WithEvents Panel15 As Panel
+    Friend WithEvents RadioButton29 As RadioButton
+    Friend WithEvents RadioButton30 As RadioButton
+    Friend WithEvents Panel13 As Panel
+    Friend WithEvents RadioButton25 As RadioButton
+    Friend WithEvents RadioButton26 As RadioButton
+    Friend WithEvents Panel16 As Panel
+    Friend WithEvents RadioButton31 As RadioButton
+    Friend WithEvents RadioButton32 As RadioButton
+    Friend WithEvents Panel17 As Panel
+    Friend WithEvents RadioButton33 As RadioButton
+    Friend WithEvents RadioButton34 As RadioButton
+    Friend WithEvents Panel18 As Panel
+    Friend WithEvents RadioButton35 As RadioButton
+    Friend WithEvents RadioButton36 As RadioButton
+    Friend WithEvents Panel19 As Panel
+    Friend WithEvents RadioButton37 As RadioButton
+    Friend WithEvents RadioButton38 As RadioButton
+    Friend WithEvents Panel20 As Panel
+    Friend WithEvents RadioButton39 As RadioButton
+    Friend WithEvents RadioButton40 As RadioButton
+    Friend WithEvents Panel21 As Panel
+    Friend WithEvents RadioButton41 As RadioButton
+    Friend WithEvents RadioButton42 As RadioButton
+    Friend WithEvents Panel22 As Panel
+    Friend WithEvents RadioButton43 As RadioButton
+    Friend WithEvents RadioButton44 As RadioButton
+    Friend WithEvents Panel23 As Panel
+    Friend WithEvents RadioButton45 As RadioButton
+    Friend WithEvents RadioButton46 As RadioButton
+    Friend WithEvents Panel24 As Panel
+    Friend WithEvents RadioButton47 As RadioButton
+    Friend WithEvents RadioButton48 As RadioButton
+    Friend WithEvents Panel25 As Panel
+    Friend WithEvents RadioButton49 As RadioButton
+    Friend WithEvents RadioButton50 As RadioButton
+    Friend WithEvents Panel27 As Panel
+    Friend WithEvents RadioButton53 As RadioButton
+    Friend WithEvents RadioButton54 As RadioButton
+    Friend WithEvents Panel28 As Panel
+    Friend WithEvents RadioButton55 As RadioButton
+    Friend WithEvents RadioButton56 As RadioButton
+    Friend WithEvents Panel29 As Panel
+    Friend WithEvents RadioButton57 As RadioButton
+    Friend WithEvents RadioButton58 As RadioButton
+    Friend WithEvents Panel30 As Panel
+    Friend WithEvents RadioButton59 As RadioButton
+    Friend WithEvents RadioButton60 As RadioButton
+    Friend WithEvents Panel26 As Panel
+    Friend WithEvents RadioButton51 As RadioButton
+    Friend WithEvents RadioButton52 As RadioButton
+    Friend WithEvents Panel31 As Panel
+    Friend WithEvents RadioButton61 As RadioButton
+    Friend WithEvents RadioButton62 As RadioButton
+    Friend WithEvents Panel32 As Panel
+    Friend WithEvents RadioButton63 As RadioButton
+    Friend WithEvents RadioButton64 As RadioButton
+    Friend WithEvents Panel33 As Panel
+    Friend WithEvents RadioButton65 As RadioButton
+    Friend WithEvents RadioButton66 As RadioButton
+    Friend WithEvents Panel34 As Panel
+    Friend WithEvents RadioButton67 As RadioButton
+    Friend WithEvents RadioButton68 As RadioButton
+    Friend WithEvents Panel35 As Panel
+    Friend WithEvents RadioButton69 As RadioButton
+    Friend WithEvents RadioButton70 As RadioButton
+    Friend WithEvents Panel36 As Panel
+    Friend WithEvents RadioButton71 As RadioButton
+    Friend WithEvents RadioButton72 As RadioButton
+    Friend WithEvents Panel37 As Panel
+    Friend WithEvents RadioButton73 As RadioButton
+    Friend WithEvents RadioButton74 As RadioButton
+    Friend WithEvents Panel38 As Panel
+    Friend WithEvents RadioButton75 As RadioButton
+    Friend WithEvents RadioButton76 As RadioButton
+    Friend WithEvents Panel39 As Panel
+    Friend WithEvents RadioButton77 As RadioButton
+    Friend WithEvents RadioButton78 As RadioButton
+    Friend WithEvents Panel40 As Panel
+    Friend WithEvents RadioButton79 As RadioButton
+    Friend WithEvents RadioButton80 As RadioButton
+    Friend WithEvents Panel41 As Panel
+    Friend WithEvents RadioButton81 As RadioButton
+    Friend WithEvents RadioButton82 As RadioButton
+    Friend WithEvents Panel42 As Panel
+    Friend WithEvents RadioButton83 As RadioButton
+    Friend WithEvents RadioButton84 As RadioButton
+    Friend WithEvents Panel43 As Panel
+    Friend WithEvents RadioButton85 As RadioButton
+    Friend WithEvents RadioButton86 As RadioButton
+    Friend WithEvents Panel44 As Panel
+    Friend WithEvents RadioButton87 As RadioButton
+    Friend WithEvents RadioButton88 As RadioButton
+    Friend WithEvents Panel45 As Panel
+    Friend WithEvents RadioButton89 As RadioButton
+    Friend WithEvents RadioButton90 As RadioButton
+    Friend WithEvents Panel48 As Panel
+    Friend WithEvents RadioButton95 As RadioButton
+    Friend WithEvents RadioButton96 As RadioButton
+    Friend WithEvents Panel46 As Panel
+    Friend WithEvents RadioButton91 As RadioButton
+    Friend WithEvents RadioButton92 As RadioButton
+    Friend WithEvents Panel47 As Panel
+    Friend WithEvents RadioButton93 As RadioButton
+    Friend WithEvents RadioButton94 As RadioButton
+    Friend WithEvents Panel49 As Panel
+    Friend WithEvents RadioButton97 As RadioButton
+    Friend WithEvents RadioButton98 As RadioButton
+    Friend WithEvents Panel50 As Panel
+    Friend WithEvents RadioButton99 As RadioButton
+    Friend WithEvents RadioButton100 As RadioButton
+    Friend WithEvents Panel51 As Panel
+    Friend WithEvents RadioButton101 As RadioButton
+    Friend WithEvents RadioButton102 As RadioButton
+    Friend WithEvents Panel52 As Panel
+    Friend WithEvents RadioButton103 As RadioButton
+    Friend WithEvents RadioButton104 As RadioButton
+    Friend WithEvents Panel53 As Panel
+    Friend WithEvents RadioButton105 As RadioButton
+    Friend WithEvents RadioButton106 As RadioButton
+    Friend WithEvents Panel54 As Panel
+    Friend WithEvents RadioButton107 As RadioButton
+    Friend WithEvents RadioButton108 As RadioButton
+    Friend WithEvents Panel55 As Panel
+    Friend WithEvents RadioButton109 As RadioButton
+    Friend WithEvents RadioButton110 As RadioButton
+    Friend WithEvents Panel56 As Panel
+    Friend WithEvents RadioButton111 As RadioButton
+    Friend WithEvents RadioButton112 As RadioButton
+    Friend WithEvents Label127 As Label
+    Friend WithEvents Label125 As Label
+    Friend WithEvents Panel57 As Panel
+    Friend WithEvents rbEpostNei As RadioButton
+    Friend WithEvents rbEpostJa As RadioButton
+    Friend WithEvents Panel58 As Panel
+    Friend WithEvents RadioButton115 As RadioButton
+    Friend WithEvents RadioButton116 As RadioButton
+    Friend WithEvents Label126 As Label
+    Friend WithEvents Label128 As Label
 End Class
