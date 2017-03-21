@@ -36,10 +36,9 @@ Partial Class Hjemmeside
         '
         Me.lbTelefon.AutoSize = True
         Me.lbTelefon.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbTelefon.Location = New System.Drawing.Point(310, 125)
-        Me.lbTelefon.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lbTelefon.Location = New System.Drawing.Point(465, 192)
         Me.lbTelefon.Name = "lbTelefon"
-        Me.lbTelefon.Size = New System.Drawing.Size(84, 25)
+        Me.lbTelefon.Size = New System.Drawing.Size(123, 37)
         Me.lbTelefon.TabIndex = 0
         Me.lbTelefon.Text = "Telefon"
         '
@@ -47,38 +46,34 @@ Partial Class Hjemmeside
         '
         Me.lbPassord.AutoSize = True
         Me.lbPassord.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbPassord.Location = New System.Drawing.Point(310, 165)
-        Me.lbPassord.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lbPassord.Location = New System.Drawing.Point(465, 254)
         Me.lbPassord.Name = "lbPassord"
-        Me.lbPassord.Size = New System.Drawing.Size(91, 25)
+        Me.lbPassord.Size = New System.Drawing.Size(135, 37)
         Me.lbPassord.TabIndex = 1
         Me.lbPassord.Text = "Passord"
         '
         'txtTelefon
         '
         Me.txtTelefon.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTelefon.Location = New System.Drawing.Point(423, 122)
-        Me.txtTelefon.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtTelefon.Location = New System.Drawing.Point(634, 188)
         Me.txtTelefon.Name = "txtTelefon"
-        Me.txtTelefon.Size = New System.Drawing.Size(133, 31)
+        Me.txtTelefon.Size = New System.Drawing.Size(198, 43)
         Me.txtTelefon.TabIndex = 2
         '
         'txtPassord
         '
         Me.txtPassord.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassord.Location = New System.Drawing.Point(423, 162)
-        Me.txtPassord.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtPassord.Location = New System.Drawing.Point(634, 249)
         Me.txtPassord.Name = "txtPassord"
-        Me.txtPassord.Size = New System.Drawing.Size(133, 31)
+        Me.txtPassord.Size = New System.Drawing.Size(198, 43)
         Me.txtPassord.TabIndex = 3
         '
         'btnLogginn
         '
         Me.btnLogginn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogginn.Location = New System.Drawing.Point(205, 245)
-        Me.btnLogginn.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnLogginn.Location = New System.Drawing.Point(308, 377)
         Me.btnLogginn.Name = "btnLogginn"
-        Me.btnLogginn.Size = New System.Drawing.Size(144, 77)
+        Me.btnLogginn.Size = New System.Drawing.Size(216, 118)
         Me.btnLogginn.TabIndex = 4
         Me.btnLogginn.Text = "Logg inn"
         Me.btnLogginn.UseVisualStyleBackColor = True
@@ -86,37 +81,39 @@ Partial Class Hjemmeside
         'btnRegistrer
         '
         Me.btnRegistrer.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRegistrer.Location = New System.Drawing.Point(442, 246)
-        Me.btnRegistrer.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnRegistrer.Location = New System.Drawing.Point(663, 378)
         Me.btnRegistrer.Name = "btnRegistrer"
-        Me.btnRegistrer.Size = New System.Drawing.Size(137, 76)
+        Me.btnRegistrer.Size = New System.Drawing.Size(206, 117)
         Me.btnRegistrer.TabIndex = 5
         Me.btnRegistrer.Text = "Registrer"
         Me.btnRegistrer.UseVisualStyleBackColor = True
         '
         'btnBlodgiver
         '
-        Me.btnBlodgiver.Location = New System.Drawing.Point(205, 150)
+        Me.btnBlodgiver.Location = New System.Drawing.Point(308, 231)
+        Me.btnBlodgiver.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnBlodgiver.Name = "btnBlodgiver"
-        Me.btnBlodgiver.Size = New System.Drawing.Size(176, 137)
+        Me.btnBlodgiver.Size = New System.Drawing.Size(264, 211)
         Me.btnBlodgiver.TabIndex = 6
         Me.btnBlodgiver.Text = "Blodgiver"
         Me.btnBlodgiver.UseVisualStyleBackColor = True
         '
         'btnAnsatt
         '
-        Me.btnAnsatt.Location = New System.Drawing.Point(423, 150)
+        Me.btnAnsatt.Location = New System.Drawing.Point(634, 231)
+        Me.btnAnsatt.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnAnsatt.Name = "btnAnsatt"
-        Me.btnAnsatt.Size = New System.Drawing.Size(176, 137)
+        Me.btnAnsatt.Size = New System.Drawing.Size(264, 211)
         Me.btnAnsatt.TabIndex = 7
         Me.btnAnsatt.Text = "Ansatt"
         Me.btnAnsatt.UseVisualStyleBackColor = True
         '
         'Hjemmeside
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AcceptButton = Me.btnLogginn
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(785, 462)
+        Me.ClientSize = New System.Drawing.Size(1178, 711)
         Me.Controls.Add(Me.btnAnsatt)
         Me.Controls.Add(Me.btnBlodgiver)
         Me.Controls.Add(Me.btnRegistrer)
@@ -125,7 +122,6 @@ Partial Class Hjemmeside
         Me.Controls.Add(Me.txtTelefon)
         Me.Controls.Add(Me.lbPassord)
         Me.Controls.Add(Me.lbTelefon)
-        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Hjemmeside"
         Me.Text = "Hjemmeside"
         Me.ResumeLayout(False)
