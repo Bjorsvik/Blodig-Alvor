@@ -38,7 +38,6 @@ Partial Class Ansattside
         Me.lblGivningDato = New System.Windows.Forms.Label()
         Me.lblMengde = New System.Windows.Forms.Label()
         Me.lblPersnr = New System.Windows.Forms.Label()
-        Me.txtMengde = New System.Windows.Forms.TextBox()
         Me.txtboxPersnr = New System.Windows.Forms.TextBox()
         Me.Innkalling = New System.Windows.Forms.TabPage()
         Me.txtboxTilgjengelig = New System.Windows.Forms.TextBox()
@@ -51,21 +50,28 @@ Partial Class Ansattside
         Me.btnInnkalling = New System.Windows.Forms.Button()
         Me.lblBlodtypeØnsket = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Statistikk.SuspendLayout()
         Me.Reservasjoner.SuspendLayout()
         Me.Lager.SuspendLayout()
         Me.Blodgivning.SuspendLayout()
         Me.Innkalling.SuspendLayout()
         Me.TabControl1.SuspendLayout()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Statistikk
         '
+        Me.Statistikk.Controls.Add(Me.TextBox1)
+        Me.Statistikk.Controls.Add(Me.Label1)
         Me.Statistikk.Location = New System.Drawing.Point(4, 25)
         Me.Statistikk.Name = "Statistikk"
         Me.Statistikk.Padding = New System.Windows.Forms.Padding(3)
         Me.Statistikk.Size = New System.Drawing.Size(886, 512)
         Me.Statistikk.TabIndex = 5
-        Me.Statistikk.Text = "Statistikk"
+        Me.Statistikk.Text = " "
         Me.Statistikk.UseVisualStyleBackColor = True
         '
         'Reservasjoner
@@ -157,12 +163,12 @@ Partial Class Ansattside
         '
         'Blodgivning
         '
+        Me.Blodgivning.Controls.Add(Me.NumericUpDown1)
         Me.Blodgivning.Controls.Add(Me.btnBlodgivning)
         Me.Blodgivning.Controls.Add(Me.KalenderGivning)
         Me.Blodgivning.Controls.Add(Me.lblGivningDato)
         Me.Blodgivning.Controls.Add(Me.lblMengde)
         Me.Blodgivning.Controls.Add(Me.lblPersnr)
-        Me.Blodgivning.Controls.Add(Me.txtMengde)
         Me.Blodgivning.Controls.Add(Me.txtboxPersnr)
         Me.Blodgivning.Location = New System.Drawing.Point(4, 25)
         Me.Blodgivning.Name = "Blodgivning"
@@ -214,13 +220,6 @@ Partial Class Ansattside
         Me.lblPersnr.TabIndex = 13
         Me.lblPersnr.Text = "Personnummer: "
         '
-        'txtMengde
-        '
-        Me.txtMengde.Location = New System.Drawing.Point(197, 104)
-        Me.txtMengde.Name = "txtMengde"
-        Me.txtMengde.Size = New System.Drawing.Size(137, 22)
-        Me.txtMengde.TabIndex = 12
-        '
         'txtboxPersnr
         '
         Me.txtboxPersnr.Location = New System.Drawing.Point(197, 54)
@@ -242,7 +241,7 @@ Partial Class Ansattside
         Me.Innkalling.Location = New System.Drawing.Point(4, 25)
         Me.Innkalling.Name = "Innkalling"
         Me.Innkalling.Padding = New System.Windows.Forms.Padding(3)
-        Me.Innkalling.Size = New System.Drawing.Size(886, 512)
+        Me.Innkalling.Size = New System.Drawing.Size(981, 530)
         Me.Innkalling.TabIndex = 0
         Me.Innkalling.Text = "Innkalling"
         Me.Innkalling.UseVisualStyleBackColor = True
@@ -335,17 +334,42 @@ Partial Class Ansattside
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(894, 541)
+        Me.TabControl1.Size = New System.Drawing.Size(989, 559)
         Me.TabControl1.TabIndex = 1
+        '
+        'NumericUpDown1
+        '
+        Me.NumericUpDown1.Location = New System.Drawing.Point(197, 107)
+        Me.NumericUpDown1.Name = "NumericUpDown1"
+        Me.NumericUpDown1.Size = New System.Drawing.Size(137, 22)
+        Me.NumericUpDown1.TabIndex = 18
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(37, 34)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(174, 17)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Antall registrerte donører: "
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(238, 34)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox1.TabIndex = 1
         '
         'Ansattside
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(889, 532)
+        Me.ClientSize = New System.Drawing.Size(982, 553)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "Ansattside"
         Me.Text = "Ansattside"
+        Me.Statistikk.ResumeLayout(False)
+        Me.Statistikk.PerformLayout()
         Me.Reservasjoner.ResumeLayout(False)
         Me.Reservasjoner.PerformLayout()
         Me.Lager.ResumeLayout(False)
@@ -355,6 +379,7 @@ Partial Class Ansattside
         Me.Innkalling.ResumeLayout(False)
         Me.Innkalling.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -374,7 +399,6 @@ Partial Class Ansattside
     Friend WithEvents lblGivningDato As Label
     Friend WithEvents lblMengde As Label
     Friend WithEvents lblPersnr As Label
-    Friend WithEvents txtMengde As TextBox
     Friend WithEvents txtboxPersnr As TextBox
     Friend WithEvents Innkalling As TabPage
     Friend WithEvents txtAntallGivere As TextBox
@@ -388,4 +412,7 @@ Partial Class Ansattside
     Friend WithEvents txtboxTilgjengelig As TextBox
     Friend WithEvents lblTilgjengeligeGivere As Label
     Friend WithEvents btnFjernBestilling As Button
+    Friend WithEvents NumericUpDown1 As NumericUpDown
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label1 As Label
 End Class
