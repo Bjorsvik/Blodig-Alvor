@@ -50,9 +50,10 @@ Partial Class Registreringsskjema
         '
         Me.lblFornavn.AutoSize = True
         Me.lblFornavn.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFornavn.Location = New System.Drawing.Point(143, 57)
+        Me.lblFornavn.Location = New System.Drawing.Point(191, 70)
+        Me.lblFornavn.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblFornavn.Name = "lblFornavn"
-        Me.lblFornavn.Size = New System.Drawing.Size(80, 24)
+        Me.lblFornavn.Size = New System.Drawing.Size(100, 29)
         Me.lblFornavn.TabIndex = 0
         Me.lblFornavn.Text = "Fornavn"
         '
@@ -60,9 +61,10 @@ Partial Class Registreringsskjema
         '
         Me.lblEtternavn.AutoSize = True
         Me.lblEtternavn.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEtternavn.Location = New System.Drawing.Point(415, 57)
+        Me.lblEtternavn.Location = New System.Drawing.Point(553, 70)
+        Me.lblEtternavn.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblEtternavn.Name = "lblEtternavn"
-        Me.lblEtternavn.Size = New System.Drawing.Size(89, 24)
+        Me.lblEtternavn.Size = New System.Drawing.Size(113, 29)
         Me.lblEtternavn.TabIndex = 1
         Me.lblEtternavn.Text = "Etternavn"
         '
@@ -70,9 +72,10 @@ Partial Class Registreringsskjema
         '
         Me.lblFødselsdato.AutoSize = True
         Me.lblFødselsdato.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFødselsdato.Location = New System.Drawing.Point(130, 102)
+        Me.lblFødselsdato.Location = New System.Drawing.Point(173, 126)
+        Me.lblFødselsdato.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblFødselsdato.Name = "lblFødselsdato"
-        Me.lblFødselsdato.Size = New System.Drawing.Size(113, 24)
+        Me.lblFødselsdato.Size = New System.Drawing.Size(147, 29)
         Me.lblFødselsdato.TabIndex = 2
         Me.lblFødselsdato.Text = "Fødslesdato"
         '
@@ -80,9 +83,10 @@ Partial Class Registreringsskjema
         '
         Me.lblAdresse.AutoSize = True
         Me.lblAdresse.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAdresse.Location = New System.Drawing.Point(163, 162)
+        Me.lblAdresse.Location = New System.Drawing.Point(217, 199)
+        Me.lblAdresse.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblAdresse.Name = "lblAdresse"
-        Me.lblAdresse.Size = New System.Drawing.Size(80, 24)
+        Me.lblAdresse.Size = New System.Drawing.Size(102, 29)
         Me.lblAdresse.TabIndex = 3
         Me.lblAdresse.Text = "Adresse"
         '
@@ -90,9 +94,10 @@ Partial Class Registreringsskjema
         '
         Me.lblPostnummer.AutoSize = True
         Me.lblPostnummer.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPostnummer.Location = New System.Drawing.Point(130, 198)
+        Me.lblPostnummer.Location = New System.Drawing.Point(173, 244)
+        Me.lblPostnummer.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPostnummer.Name = "lblPostnummer"
-        Me.lblPostnummer.Size = New System.Drawing.Size(117, 24)
+        Me.lblPostnummer.Size = New System.Drawing.Size(149, 29)
         Me.lblPostnummer.TabIndex = 4
         Me.lblPostnummer.Text = "Postnummer"
         '
@@ -100,58 +105,65 @@ Partial Class Registreringsskjema
         '
         Me.lblPoststed.AutoSize = True
         Me.lblPoststed.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPoststed.Location = New System.Drawing.Point(162, 235)
+        Me.lblPoststed.Location = New System.Drawing.Point(216, 289)
+        Me.lblPoststed.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPoststed.Name = "lblPoststed"
-        Me.lblPoststed.Size = New System.Drawing.Size(81, 24)
+        Me.lblPoststed.Size = New System.Drawing.Size(107, 29)
         Me.lblPoststed.TabIndex = 5
         Me.lblPoststed.Text = "Poststed"
         '
         'txtFornavn
         '
         Me.txtFornavn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFornavn.Location = New System.Drawing.Point(270, 61)
+        Me.txtFornavn.Location = New System.Drawing.Point(360, 75)
+        Me.txtFornavn.Margin = New System.Windows.Forms.Padding(4)
         Me.txtFornavn.Name = "txtFornavn"
-        Me.txtFornavn.Size = New System.Drawing.Size(100, 26)
+        Me.txtFornavn.Size = New System.Drawing.Size(132, 30)
         Me.txtFornavn.TabIndex = 6
         '
         'txtEtternavn
         '
         Me.txtEtternavn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEtternavn.Location = New System.Drawing.Point(507, 57)
+        Me.txtEtternavn.Location = New System.Drawing.Point(676, 70)
+        Me.txtEtternavn.Margin = New System.Windows.Forms.Padding(4)
         Me.txtEtternavn.Name = "txtEtternavn"
-        Me.txtEtternavn.Size = New System.Drawing.Size(100, 26)
+        Me.txtEtternavn.Size = New System.Drawing.Size(132, 30)
         Me.txtEtternavn.TabIndex = 7
         '
         'txtFodselsdato
         '
         Me.txtFodselsdato.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFodselsdato.Location = New System.Drawing.Point(270, 102)
+        Me.txtFodselsdato.Location = New System.Drawing.Point(360, 126)
+        Me.txtFodselsdato.Margin = New System.Windows.Forms.Padding(4)
         Me.txtFodselsdato.Name = "txtFodselsdato"
-        Me.txtFodselsdato.Size = New System.Drawing.Size(100, 26)
+        Me.txtFodselsdato.Size = New System.Drawing.Size(132, 30)
         Me.txtFodselsdato.TabIndex = 8
         '
         'txtAdresse
         '
         Me.txtAdresse.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAdresse.Location = New System.Drawing.Point(270, 162)
+        Me.txtAdresse.Location = New System.Drawing.Point(360, 199)
+        Me.txtAdresse.Margin = New System.Windows.Forms.Padding(4)
         Me.txtAdresse.Name = "txtAdresse"
-        Me.txtAdresse.Size = New System.Drawing.Size(100, 26)
+        Me.txtAdresse.Size = New System.Drawing.Size(132, 30)
         Me.txtAdresse.TabIndex = 9
         '
         'txtPostnummer
         '
         Me.txtPostnummer.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPostnummer.Location = New System.Drawing.Point(270, 199)
+        Me.txtPostnummer.Location = New System.Drawing.Point(360, 245)
+        Me.txtPostnummer.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPostnummer.Name = "txtPostnummer"
-        Me.txtPostnummer.Size = New System.Drawing.Size(100, 26)
+        Me.txtPostnummer.Size = New System.Drawing.Size(132, 30)
         Me.txtPostnummer.TabIndex = 10
         '
         'btnRegistrer
         '
         Me.btnRegistrer.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRegistrer.Location = New System.Drawing.Point(507, 314)
+        Me.btnRegistrer.Location = New System.Drawing.Point(676, 386)
+        Me.btnRegistrer.Margin = New System.Windows.Forms.Padding(4)
         Me.btnRegistrer.Name = "btnRegistrer"
-        Me.btnRegistrer.Size = New System.Drawing.Size(97, 41)
+        Me.btnRegistrer.Size = New System.Drawing.Size(129, 50)
         Me.btnRegistrer.TabIndex = 16
         Me.btnRegistrer.Text = "Registrer"
         Me.btnRegistrer.UseVisualStyleBackColor = True
@@ -159,36 +171,40 @@ Partial Class Registreringsskjema
         'txtTlf
         '
         Me.txtTlf.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTlf.Location = New System.Drawing.Point(507, 156)
+        Me.txtTlf.Location = New System.Drawing.Point(676, 192)
+        Me.txtTlf.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTlf.Name = "txtTlf"
-        Me.txtTlf.Size = New System.Drawing.Size(100, 26)
+        Me.txtTlf.Size = New System.Drawing.Size(132, 30)
         Me.txtTlf.TabIndex = 11
         '
         'lbTlf
         '
         Me.lbTlf.AutoSize = True
         Me.lbTlf.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbTlf.Location = New System.Drawing.Point(427, 158)
+        Me.lbTlf.Location = New System.Drawing.Point(569, 194)
+        Me.lbTlf.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbTlf.Name = "lbTlf"
-        Me.lbTlf.Size = New System.Drawing.Size(74, 24)
+        Me.lbTlf.Size = New System.Drawing.Size(96, 29)
         Me.lbTlf.TabIndex = 14
         Me.lbTlf.Text = "Telefon"
         '
         'txtPassord
         '
         Me.txtPassord.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassord.Location = New System.Drawing.Point(270, 294)
+        Me.txtPassord.Location = New System.Drawing.Point(360, 362)
+        Me.txtPassord.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPassord.Name = "txtPassord"
-        Me.txtPassord.Size = New System.Drawing.Size(100, 26)
+        Me.txtPassord.Size = New System.Drawing.Size(132, 30)
         Me.txtPassord.TabIndex = 14
         '
         'lbPassord
         '
         Me.lbPassord.AutoSize = True
         Me.lbPassord.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbPassord.Location = New System.Drawing.Point(186, 297)
+        Me.lbPassord.Location = New System.Drawing.Point(248, 366)
+        Me.lbPassord.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbPassord.Name = "lbPassord"
-        Me.lbPassord.Size = New System.Drawing.Size(78, 24)
+        Me.lbPassord.Size = New System.Drawing.Size(102, 29)
         Me.lbPassord.TabIndex = 18
         Me.lbPassord.Text = "Passord"
         '
@@ -196,63 +212,67 @@ Partial Class Registreringsskjema
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(125, 332)
+        Me.Label1.Location = New System.Drawing.Point(167, 409)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(139, 24)
+        Me.Label1.Size = New System.Drawing.Size(182, 29)
         Me.Label1.TabIndex = 19
         Me.Label1.Text = "Bekreft passord"
         '
         'txtBekreftPassord
         '
         Me.txtBekreftPassord.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBekreftPassord.Location = New System.Drawing.Point(270, 329)
+        Me.txtBekreftPassord.Location = New System.Drawing.Point(360, 405)
+        Me.txtBekreftPassord.Margin = New System.Windows.Forms.Padding(4)
         Me.txtBekreftPassord.Name = "txtBekreftPassord"
-        Me.txtBekreftPassord.Size = New System.Drawing.Size(100, 26)
+        Me.txtBekreftPassord.Size = New System.Drawing.Size(132, 30)
         Me.txtBekreftPassord.TabIndex = 15
         '
         'lbPoststed
         '
         Me.lbPoststed.AutoSize = True
         Me.lbPoststed.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbPoststed.Location = New System.Drawing.Point(268, 235)
-        Me.lbPoststed.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lbPoststed.Location = New System.Drawing.Point(357, 289)
         Me.lbPoststed.Name = "lbPoststed"
-        Me.lbPoststed.Size = New System.Drawing.Size(0, 24)
+        Me.lbPoststed.Size = New System.Drawing.Size(0, 29)
         Me.lbPoststed.TabIndex = 21
         '
         'lbEpost
         '
         Me.lbEpost.AutoSize = True
         Me.lbEpost.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbEpost.Location = New System.Drawing.Point(443, 199)
+        Me.lbEpost.Location = New System.Drawing.Point(591, 245)
+        Me.lbEpost.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbEpost.Name = "lbEpost"
-        Me.lbEpost.Size = New System.Drawing.Size(58, 24)
+        Me.lbEpost.Size = New System.Drawing.Size(75, 29)
         Me.lbEpost.TabIndex = 22
         Me.lbEpost.Text = "Epost"
         '
         'txtEpost
         '
         Me.txtEpost.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEpost.Location = New System.Drawing.Point(507, 199)
+        Me.txtEpost.Location = New System.Drawing.Point(676, 245)
+        Me.txtEpost.Margin = New System.Windows.Forms.Padding(4)
         Me.txtEpost.Name = "txtEpost"
-        Me.txtEpost.Size = New System.Drawing.Size(100, 26)
+        Me.txtEpost.Size = New System.Drawing.Size(132, 30)
         Me.txtEpost.TabIndex = 12
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(275, 131)
+        Me.Label2.Location = New System.Drawing.Point(367, 161)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(94, 16)
+        Me.Label2.Size = New System.Drawing.Size(115, 20)
         Me.Label2.TabIndex = 24
         Me.Label2.Text = "YYYY-MM-DD"
         '
         'Registreringsskjema
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(714, 470)
+        Me.ClientSize = New System.Drawing.Size(982, 553)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtEpost)
         Me.Controls.Add(Me.lbEpost)
@@ -275,6 +295,7 @@ Partial Class Registreringsskjema
         Me.Controls.Add(Me.lblFødselsdato)
         Me.Controls.Add(Me.lblEtternavn)
         Me.Controls.Add(Me.lblFornavn)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Registreringsskjema"
         Me.Text = "Registreringsskjema"
         Me.ResumeLayout(False)
