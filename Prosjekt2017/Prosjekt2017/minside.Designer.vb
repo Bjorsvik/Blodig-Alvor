@@ -235,7 +235,7 @@ Partial Class minside
         Me.TabControl1.Multiline = True
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1059, 548)
+        Me.TabControl1.Size = New System.Drawing.Size(990, 548)
         Me.TabControl1.TabIndex = 20
         '
         'tabBrukerinfo
@@ -260,7 +260,7 @@ Partial Class minside
         Me.tabBrukerinfo.Margin = New System.Windows.Forms.Padding(4)
         Me.tabBrukerinfo.Name = "tabBrukerinfo"
         Me.tabBrukerinfo.Padding = New System.Windows.Forms.Padding(4)
-        Me.tabBrukerinfo.Size = New System.Drawing.Size(1051, 519)
+        Me.tabBrukerinfo.Size = New System.Drawing.Size(982, 519)
         Me.tabBrukerinfo.TabIndex = 0
         Me.tabBrukerinfo.Text = "Brukerinfo"
         Me.tabBrukerinfo.UseVisualStyleBackColor = True
@@ -314,7 +314,7 @@ Partial Class minside
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(1067, 586)
+        Me.ClientSize = New System.Drawing.Size(982, 553)
         Me.Controls.Add(Me.TabControl1)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "minside"
