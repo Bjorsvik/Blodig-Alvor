@@ -80,5 +80,17 @@ Public Class Registreringsskjema
 
     Private Sub txtFornavn_TextChanged(sender As Object, e As EventArgs) Handles txtFornavn.TextChanged
         txtFornavn.Text = ToUpperFirst(txtFornavn.Text)
+        txtFornavn.Select(txtFornavn.Text.Length, 0)
     End Sub
+
+    Private Sub txtEtternavn_TextChanged(sender As Object, e As EventArgs) Handles txtEtternavn.TextChanged
+        txtEtternavn.Text = ToUpperFirst(txtEtternavn.Text)
+        txtEtternavn.Select(txtEtternavn.Text.Length, 0)
+    End Sub
+    Private Sub txtAdresse_TextChanged(sender As Object, e As EventArgs) Handles txtAdresse.TextChanged
+        txtAdresse.Text = ToUpperFirst(txtAdresse.Text)
+        txtAdresse.Select(txtAdresse.Text.Length, 0)
+    End Sub
+
+
 End Class
