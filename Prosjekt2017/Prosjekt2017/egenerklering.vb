@@ -5,21 +5,8 @@ Public Class egenerklering
     Private Sub egenerklering_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=g_oops_23;Uid=g_oops_23;Pwd=3d4CcHvg")
         tilkobling.Open()
-        lblDato.Text = Date.Now.ToString("yyyy-mm-dd")
-
+        lblDato.Text = Date.Now
     End Sub
-
-    'Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-    '    Dim sqlSporring = "insert into Egenerklering (sporsmal, ja, nei) values (@sporsmal, @ja, @nei)"
-    '    Dim sqlSendInfo As New MySqlCommand(sqlSporring, tilkobling)
-    '    Dim sporsmalEpost As String = ""
-    '    sqlSendInfo.Parameters.AddWithValue("@sporsmal", "Tillater du at blodbanken sender deg epost(Innkalling, timepåminning, eventuelt annen viktig informasjon)?")
-    '    sqlSendInfo.Parameters.AddWithValue("@nei", rbEpostNei.Checked)
-    '    sqlSendInfo.Parameters.AddWithValue("@ja", rbEpostJa.Checked)
-
-
-    '    sqlSendInfo.ExecuteNonQuery()
-    'End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
 #Region "bolk1"
@@ -158,17 +145,165 @@ Public Class egenerklering
         End If
         Dim bolk3 As String = spm31 + spm32 + spm33 + spm34 + spm35 + spm36 + spm37 + spm38 + spm39 + spm310
 #End Region
+#Region "bolk4"
+        Dim spm41 As String
+        If rb411.Checked Then
+            spm41 = 1
+        Else
+            spm41 = 0
+        End If
+        Dim bolk4 As String = spm41
+#End Region
+#Region "bolk5"
+        Dim spm51 As String
+        Dim spm52 As String
+        Dim spm53 As String
+        Dim spm54 As String
+        Dim spm55 As String
+        Dim spm56 As String
+        Dim spm57 As String
+        Dim spm58 As String
+        Dim spm59 As String
+        Dim spm510 As String
+        Dim spm511 As String
+        Dim spm512 As String
+        Dim spm513 As String
+        Dim spm514 As String
+        Dim spm515 As String
 
+        If rb511.Checked Then
+            spm51 = 1
+        Else
+            spm51 = 0
+        End If
+        If rb521.Checked Then
+            spm52 = 1
+        Else
+            spm52 = 0
+        End If
+        If rb531.Checked Then
+            spm53 = 1
+        Else
+            spm53 = 0
+        End If
+        If rb541.Checked Then
+            spm54 = 1
+        Else
+            spm54 = 0
+        End If
+        If rb551.Checked Then
+            spm55 = 1
+        Else
+            spm55 = 0
+        End If
+        If rb561.Checked Then
+            spm56 = 1
+        Else
+            spm56 = 0
+        End If
+        If rb571.Checked Then
+            spm57 = 1
+        Else
+            spm57 = 0
+        End If
+        If rb581.Checked Then
+            spm58 = 1
+        Else
+            spm58 = 0
+        End If
+        If rb591.Checked Then
+            spm59 = 1
+        Else
+            spm59 = 0
+        End If
+        If rb5101.Checked Then
+            spm510 = 1
+        Else
+            spm510 = 0
+        End If
+        If rb5111.Checked Then
+            spm511 = 1
+        Else
+            spm511 = 0
+        End If
+        If rb5121.Checked Then
+            spm512 = 1
+        Else
+            spm512 = 0
+        End If
+        If rb5131.Checked Then
+            spm513 = 1
+        Else
+            spm513 = 0
+        End If
+        If rb5141.Checked Then
+            spm514 = 1
+        Else
+            spm514 = 0
+        End If
+        If rb5151.Checked Then
+            spm515 = 1
+        Else
+            spm515 = 0
+        End If
+        Dim bolk5 As String = spm51 + spm52 + spm53 + spm54 + spm55 + spm56 + spm57 + spm58 + spm59 + spm510 + spm511 + spm512 + spm513 + spm514 + spm515
+#End Region
+#Region "bolk6"
+        Dim spm61 As String
+        Dim spm62 As String
+        Dim spm63 As String
+        Dim spm64 As String
+        Dim spm65 As String
+        Dim spm66 As String
+        Dim spm67 As String
 
+        If rb611.Checked Then
+            spm61 = 1
+        Else
+            spm61 = 0
+        End If
+        If rb621.Checked Then
+            spm62 = 1
+        Else
+            spm62 = 0
+        End If
+        If rb631.Checked Then
+            spm63 = 1
+        Else
+            spm63 = 0
+        End If
+        If rb631.Checked Then
+            spm64 = 1
+        Else
+            spm64 = 0
+        End If
+        If rb651.Checked Then
+            spm65 = 1
+        Else
+            spm65 = 0
+        End If
+        If rb661.Checked Then
+            spm66 = 1
+        Else
+            spm66 = 0
+        End If
+        If rb671.Checked Then
+            spm67 = 1
+        Else
+            spm67 = 0
+        End If
+        Dim bolk6 As String = spm61 + spm62 + spm63 + spm64 + spm65 + spm66 + spm67
+#End Region
 
-
-
-        Dim sqlSporring1 = "insert into Egenerklering_blodgiver (bolk1, bolk2, bolk3) values (@bolk1, @bolk2, @bolk3)"
-        Dim sqlbolk1 As New MySqlCommand(sqlSporring1, tilkobling)
+        Dim sqlSporring = "insert into Egenerklering_blodgiver (bolk1, bolk2, bolk3, bolk4, bolk5, bolk6, dato) values (@bolk1, @bolk2, @bolk3, @bolk4, @bolk5, @bolk6, CURDATE())"
+        Dim sqlbolk1 As New MySqlCommand(sqlSporring, tilkobling)
 
         sqlbolk1.Parameters.AddWithValue("@bolk1", bolk1)
         sqlbolk1.Parameters.AddWithValue("@bolk2", bolk2)
         sqlbolk1.Parameters.AddWithValue("@bolk3", bolk3)
+        sqlbolk1.Parameters.AddWithValue("@bolk4", bolk4)
+        sqlbolk1.Parameters.AddWithValue("@bolk5", bolk5)
+        sqlbolk1.Parameters.AddWithValue("@bolk6", bolk6)
         sqlbolk1.ExecuteNonQuery()
     End Sub
     Private Sub btnInfo_Click(sender As Object, e As EventArgs) Handles btnInfo.Click
