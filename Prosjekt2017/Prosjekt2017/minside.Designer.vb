@@ -53,7 +53,7 @@ Partial Class minside
         Me.tabBrukerinfo.Controls.Add(Me.DataGridView1)
         Me.tabBrukerinfo.Location = New System.Drawing.Point(4, 22)
         Me.tabBrukerinfo.Name = "tabBrukerinfo"
-        Me.tabBrukerinfo.Padding = New System.Windows.Forms.P
+        Me.tabBrukerinfo.Padding = New System.Windows.Forms.Padding
         Me.tabBrukerinfo.Size = New System.Drawing.Size(786, 41)
         Me.tabBrukerinfo.TabIndex = 0
         Me.tabBrukerinfo.Text = "Brukerinfo"
