@@ -339,9 +339,8 @@ Partial Class egenerklering
         Me.Panel60 = New System.Windows.Forms.Panel()
         Me.rb392 = New System.Windows.Forms.RadioButton()
         Me.rb391 = New System.Windows.Forms.RadioButton()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.btnInfo = New System.Windows.Forms.Button()
-        Me.btnLukk = New System.Windows.Forms.Button()
+        Me.lblDato = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -3377,14 +3376,6 @@ Partial Class egenerklering
         Me.rb391.TabStop = True
         Me.rb391.UseVisualStyleBackColor = True
         '
-        'ListBox1
-        '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(12, 14)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(630, 407)
-        Me.ListBox1.TabIndex = 425
-        '
         'btnInfo
         '
         Me.btnInfo.Location = New System.Drawing.Point(491, 165)
@@ -3394,24 +3385,23 @@ Partial Class egenerklering
         Me.btnInfo.Text = "Litt viktig informasjon"
         Me.btnInfo.UseVisualStyleBackColor = True
         '
-        'btnLukk
+        'lblDato
         '
-        Me.btnLukk.Location = New System.Drawing.Point(535, 375)
-        Me.btnLukk.Name = "btnLukk"
-        Me.btnLukk.Size = New System.Drawing.Size(75, 23)
-        Me.btnLukk.TabIndex = 427
-        Me.btnLukk.Text = "Lukk"
-        Me.btnLukk.UseVisualStyleBackColor = True
+        Me.lblDato.AutoSize = True
+        Me.lblDato.Location = New System.Drawing.Point(34, 1432)
+        Me.lblDato.Name = "lblDato"
+        Me.lblDato.Size = New System.Drawing.Size(30, 13)
+        Me.lblDato.TabIndex = 428
+        Me.lblDato.Text = "Dato"
         '
         'egenerklering
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(671, 463)
-        Me.Controls.Add(Me.btnLukk)
+        Me.ClientSize = New System.Drawing.Size(688, 463)
+        Me.Controls.Add(Me.lblDato)
         Me.Controls.Add(Me.btnInfo)
-        Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Panel60)
         Me.Controls.Add(Me.Panel59)
         Me.Controls.Add(Me.Label126)
@@ -4054,7 +4044,6 @@ Partial Class egenerklering
     Friend WithEvents Panel60 As Panel
     Friend WithEvents rb392 As RadioButton
     Friend WithEvents rb391 As RadioButton
-    Friend WithEvents ListBox1 As ListBox
     Friend WithEvents btnInfo As Button
-    Friend WithEvents btnLukk As Button
+    Friend WithEvents lblDato As Label
 End Class
