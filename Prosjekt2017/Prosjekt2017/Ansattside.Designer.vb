@@ -23,6 +23,8 @@ Partial Class Ansattside
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Statistikk = New System.Windows.Forms.TabPage()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Reservasjoner = New System.Windows.Forms.TabPage()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
@@ -33,6 +35,7 @@ Partial Class Ansattside
         Me.lblOversiktRes = New System.Windows.Forms.Label()
         Me.ListBox2 = New System.Windows.Forms.ListBox()
         Me.Blodgivning = New System.Windows.Forms.TabPage()
+        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.btnBlodgivning = New System.Windows.Forms.Button()
         Me.KalenderGivning = New System.Windows.Forms.MonthCalendar()
         Me.lblGivningDato = New System.Windows.Forms.Label()
@@ -50,16 +53,13 @@ Partial Class Ansattside
         Me.btnInnkalling = New System.Windows.Forms.Button()
         Me.lblBlodtypeØnsket = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Statistikk.SuspendLayout()
         Me.Reservasjoner.SuspendLayout()
         Me.Lager.SuspendLayout()
         Me.Blodgivning.SuspendLayout()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Innkalling.SuspendLayout()
         Me.TabControl1.SuspendLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Statistikk
@@ -69,10 +69,26 @@ Partial Class Ansattside
         Me.Statistikk.Location = New System.Drawing.Point(4, 25)
         Me.Statistikk.Name = "Statistikk"
         Me.Statistikk.Padding = New System.Windows.Forms.Padding(3)
-        Me.Statistikk.Size = New System.Drawing.Size(886, 512)
+        Me.Statistikk.Size = New System.Drawing.Size(981, 530)
         Me.Statistikk.TabIndex = 5
-        Me.Statistikk.Text = " "
+        Me.Statistikk.Text = " Statistikk"
         Me.Statistikk.UseVisualStyleBackColor = True
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(238, 34)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox1.TabIndex = 1
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(37, 34)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(174, 17)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Antall registrerte donører: "
         '
         'Reservasjoner
         '
@@ -82,7 +98,7 @@ Partial Class Ansattside
         Me.Reservasjoner.Location = New System.Drawing.Point(4, 25)
         Me.Reservasjoner.Name = "Reservasjoner"
         Me.Reservasjoner.Padding = New System.Windows.Forms.Padding(3)
-        Me.Reservasjoner.Size = New System.Drawing.Size(886, 512)
+        Me.Reservasjoner.Size = New System.Drawing.Size(981, 530)
         Me.Reservasjoner.TabIndex = 4
         Me.Reservasjoner.Text = "Reservasjoner"
         Me.Reservasjoner.UseVisualStyleBackColor = True
@@ -116,7 +132,7 @@ Partial Class Ansattside
         Me.Lageroppdatering.Location = New System.Drawing.Point(4, 25)
         Me.Lageroppdatering.Name = "Lageroppdatering"
         Me.Lageroppdatering.Padding = New System.Windows.Forms.Padding(3)
-        Me.Lageroppdatering.Size = New System.Drawing.Size(886, 512)
+        Me.Lageroppdatering.Size = New System.Drawing.Size(981, 530)
         Me.Lageroppdatering.TabIndex = 3
         Me.Lageroppdatering.Text = "Lageroppdatering"
         Me.Lageroppdatering.UseVisualStyleBackColor = True
@@ -129,7 +145,7 @@ Partial Class Ansattside
         Me.Lager.Location = New System.Drawing.Point(4, 25)
         Me.Lager.Name = "Lager"
         Me.Lager.Padding = New System.Windows.Forms.Padding(3)
-        Me.Lager.Size = New System.Drawing.Size(886, 512)
+        Me.Lager.Size = New System.Drawing.Size(981, 530)
         Me.Lager.TabIndex = 2
         Me.Lager.Text = "Lager"
         Me.Lager.UseVisualStyleBackColor = True
@@ -173,10 +189,17 @@ Partial Class Ansattside
         Me.Blodgivning.Location = New System.Drawing.Point(4, 25)
         Me.Blodgivning.Name = "Blodgivning"
         Me.Blodgivning.Padding = New System.Windows.Forms.Padding(3)
-        Me.Blodgivning.Size = New System.Drawing.Size(886, 512)
+        Me.Blodgivning.Size = New System.Drawing.Size(981, 530)
         Me.Blodgivning.TabIndex = 1
         Me.Blodgivning.Text = "Blodgivning"
         Me.Blodgivning.UseVisualStyleBackColor = True
+        '
+        'NumericUpDown1
+        '
+        Me.NumericUpDown1.Location = New System.Drawing.Point(197, 107)
+        Me.NumericUpDown1.Name = "NumericUpDown1"
+        Me.NumericUpDown1.Size = New System.Drawing.Size(137, 22)
+        Me.NumericUpDown1.TabIndex = 18
         '
         'btnBlodgivning
         '
@@ -337,29 +360,6 @@ Partial Class Ansattside
         Me.TabControl1.Size = New System.Drawing.Size(989, 559)
         Me.TabControl1.TabIndex = 1
         '
-        'NumericUpDown1
-        '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(197, 107)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(137, 22)
-        Me.NumericUpDown1.TabIndex = 18
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(37, 34)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(174, 17)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Antall registrerte donører: "
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(238, 34)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox1.TabIndex = 1
-        '
         'Ansattside
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -376,10 +376,10 @@ Partial Class Ansattside
         Me.Lager.PerformLayout()
         Me.Blodgivning.ResumeLayout(False)
         Me.Blodgivning.PerformLayout()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Innkalling.ResumeLayout(False)
         Me.Innkalling.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
