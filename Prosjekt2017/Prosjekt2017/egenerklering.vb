@@ -295,7 +295,7 @@ Public Class egenerklering
         Dim bolk6 As String = spm61 + spm62 + spm63 + spm64 + spm65 + spm66 + spm67
 #End Region
 
-        Dim sqlSporring = "insert into Egenerklering_blodgiver (bolk1, bolk2, bolk3, bolk4, bolk5, bolk6) values (@bolk1, @bolk2, @bolk3, @bolk4, @bolk5, @bolk6)"
+        Dim sqlSporring = "insert into Egenerklering_blodgiver (bolk1, bolk2, bolk3, bolk4, bolk5, bolk6, dato) values (@bolk1, @bolk2, @bolk3, @bolk4, @bolk5, @bolk6, CURDATE())"
         Dim sqlbolk1 As New MySqlCommand(sqlSporring, tilkobling)
 
         sqlbolk1.Parameters.AddWithValue("@bolk1", bolk1)
