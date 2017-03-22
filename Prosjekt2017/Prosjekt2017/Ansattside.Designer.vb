@@ -26,9 +26,10 @@ Partial Class Ansattside
         Me.Reservasjoner = New System.Windows.Forms.TabPage()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.MonthCalendar2 = New System.Windows.Forms.MonthCalendar()
+        Me.Reservasjonskalender = New System.Windows.Forms.MonthCalendar()
         Me.Lageroppdatering = New System.Windows.Forms.TabPage()
         Me.Lager = New System.Windows.Forms.TabPage()
+        Me.btnFjernBestilling = New System.Windows.Forms.Button()
         Me.lblOversiktRes = New System.Windows.Forms.Label()
         Me.ListBox2 = New System.Windows.Forms.ListBox()
         Me.Blodgivning = New System.Windows.Forms.TabPage()
@@ -40,6 +41,8 @@ Partial Class Ansattside
         Me.txtMengde = New System.Windows.Forms.TextBox()
         Me.txtboxPersnr = New System.Windows.Forms.TextBox()
         Me.Innkalling = New System.Windows.Forms.TabPage()
+        Me.txtboxTilgjengelig = New System.Windows.Forms.TextBox()
+        Me.lblTilgjengeligeGivere = New System.Windows.Forms.Label()
         Me.txtAntallGivere = New System.Windows.Forms.TextBox()
         Me.lblØnskedeGivere = New System.Windows.Forms.Label()
         Me.cboxRhesus = New System.Windows.Forms.ComboBox()
@@ -48,9 +51,6 @@ Partial Class Ansattside
         Me.btnInnkalling = New System.Windows.Forms.Button()
         Me.lblBlodtypeØnsket = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.txtboxTilgjengelig = New System.Windows.Forms.TextBox()
-        Me.lblTilgjengeligeGivere = New System.Windows.Forms.Label()
-        Me.btnFjernBestilling = New System.Windows.Forms.Button()
         Me.Reservasjoner.SuspendLayout()
         Me.Lager.SuspendLayout()
         Me.Blodgivning.SuspendLayout()
@@ -72,7 +72,7 @@ Partial Class Ansattside
         '
         Me.Reservasjoner.Controls.Add(Me.Label2)
         Me.Reservasjoner.Controls.Add(Me.ListBox1)
-        Me.Reservasjoner.Controls.Add(Me.MonthCalendar2)
+        Me.Reservasjoner.Controls.Add(Me.Reservasjonskalender)
         Me.Reservasjoner.Location = New System.Drawing.Point(4, 25)
         Me.Reservasjoner.Name = "Reservasjoner"
         Me.Reservasjoner.Padding = New System.Windows.Forms.Padding(3)
@@ -84,26 +84,26 @@ Partial Class Ansattside
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(509, 72)
+        Me.Label2.Location = New System.Drawing.Point(446, 66)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(51, 17)
+        Me.Label2.Size = New System.Drawing.Size(191, 17)
         Me.Label2.TabIndex = 15
-        Me.Label2.Text = "Label2"
+        Me.Label2.Text = "Reservasjoner for valgt dato:"
         '
         'ListBox1
         '
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 16
-        Me.ListBox1.Location = New System.Drawing.Point(483, 103)
+        Me.ListBox1.Location = New System.Drawing.Point(449, 103)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(115, 212)
+        Me.ListBox1.Size = New System.Drawing.Size(266, 212)
         Me.ListBox1.TabIndex = 14
         '
-        'MonthCalendar2
+        'Reservasjonskalender
         '
-        Me.MonthCalendar2.Location = New System.Drawing.Point(90, 78)
-        Me.MonthCalendar2.Name = "MonthCalendar2"
-        Me.MonthCalendar2.TabIndex = 13
+        Me.Reservasjonskalender.Location = New System.Drawing.Point(85, 103)
+        Me.Reservasjonskalender.Name = "Reservasjonskalender"
+        Me.Reservasjonskalender.TabIndex = 13
         '
         'Lageroppdatering
         '
@@ -127,6 +127,15 @@ Partial Class Ansattside
         Me.Lager.TabIndex = 2
         Me.Lager.Text = "Lager"
         Me.Lager.UseVisualStyleBackColor = True
+        '
+        'btnFjernBestilling
+        '
+        Me.btnFjernBestilling.Location = New System.Drawing.Point(57, 427)
+        Me.btnFjernBestilling.Name = "btnFjernBestilling"
+        Me.btnFjernBestilling.Size = New System.Drawing.Size(291, 23)
+        Me.btnFjernBestilling.TabIndex = 3
+        Me.btnFjernBestilling.Text = "Fjern bestilling"
+        Me.btnFjernBestilling.UseVisualStyleBackColor = True
         '
         'lblOversiktRes
         '
@@ -238,6 +247,22 @@ Partial Class Ansattside
         Me.Innkalling.Text = "Innkalling"
         Me.Innkalling.UseVisualStyleBackColor = True
         '
+        'txtboxTilgjengelig
+        '
+        Me.txtboxTilgjengelig.Location = New System.Drawing.Point(579, 149)
+        Me.txtboxTilgjengelig.Name = "txtboxTilgjengelig"
+        Me.txtboxTilgjengelig.Size = New System.Drawing.Size(121, 22)
+        Me.txtboxTilgjengelig.TabIndex = 14
+        '
+        'lblTilgjengeligeGivere
+        '
+        Me.lblTilgjengeligeGivere.AutoSize = True
+        Me.lblTilgjengeligeGivere.Location = New System.Drawing.Point(411, 154)
+        Me.lblTilgjengeligeGivere.Name = "lblTilgjengeligeGivere"
+        Me.lblTilgjengeligeGivere.Size = New System.Drawing.Size(162, 17)
+        Me.lblTilgjengeligeGivere.TabIndex = 13
+        Me.lblTilgjengeligeGivere.Text = "Tilgjengelige blodgivere:"
+        '
         'txtAntallGivere
         '
         Me.txtAntallGivere.Location = New System.Drawing.Point(239, 139)
@@ -258,7 +283,7 @@ Partial Class Ansattside
         '
         Me.cboxRhesus.FormattingEnabled = True
         Me.cboxRhesus.Items.AddRange(New Object() {"+", "-"})
-        Me.cboxRhesus.Location = New System.Drawing.Point(579, 84)
+        Me.cboxRhesus.Location = New System.Drawing.Point(579, 78)
         Me.cboxRhesus.Name = "cboxRhesus"
         Me.cboxRhesus.Size = New System.Drawing.Size(109, 24)
         Me.cboxRhesus.TabIndex = 10
@@ -266,7 +291,7 @@ Partial Class Ansattside
         'lblRhesus
         '
         Me.lblRhesus.AutoSize = True
-        Me.lblRhesus.Location = New System.Drawing.Point(509, 91)
+        Me.lblRhesus.Location = New System.Drawing.Point(509, 78)
         Me.lblRhesus.Name = "lblRhesus"
         Me.lblRhesus.Size = New System.Drawing.Size(64, 17)
         Me.lblRhesus.TabIndex = 9
@@ -313,31 +338,6 @@ Partial Class Ansattside
         Me.TabControl1.Size = New System.Drawing.Size(894, 541)
         Me.TabControl1.TabIndex = 1
         '
-        'txtboxTilgjengelig
-        '
-        Me.txtboxTilgjengelig.Location = New System.Drawing.Point(579, 149)
-        Me.txtboxTilgjengelig.Name = "txtboxTilgjengelig"
-        Me.txtboxTilgjengelig.Size = New System.Drawing.Size(121, 22)
-        Me.txtboxTilgjengelig.TabIndex = 14
-        '
-        'lblTilgjengeligeGivere
-        '
-        Me.lblTilgjengeligeGivere.AutoSize = True
-        Me.lblTilgjengeligeGivere.Location = New System.Drawing.Point(411, 154)
-        Me.lblTilgjengeligeGivere.Name = "lblTilgjengeligeGivere"
-        Me.lblTilgjengeligeGivere.Size = New System.Drawing.Size(162, 17)
-        Me.lblTilgjengeligeGivere.TabIndex = 13
-        Me.lblTilgjengeligeGivere.Text = "Tilgjengelige blodgivere:"
-        '
-        'btnFjernBestilling
-        '
-        Me.btnFjernBestilling.Location = New System.Drawing.Point(57, 427)
-        Me.btnFjernBestilling.Name = "btnFjernBestilling"
-        Me.btnFjernBestilling.Size = New System.Drawing.Size(291, 23)
-        Me.btnFjernBestilling.TabIndex = 3
-        Me.btnFjernBestilling.Text = "Fjern bestilling"
-        Me.btnFjernBestilling.UseVisualStyleBackColor = True
-        '
         'Ansattside
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -363,7 +363,7 @@ Partial Class Ansattside
     Friend WithEvents Reservasjoner As TabPage
     Friend WithEvents Label2 As Label
     Friend WithEvents ListBox1 As ListBox
-    Friend WithEvents MonthCalendar2 As MonthCalendar
+    Friend WithEvents Reservasjonskalender As MonthCalendar
     Friend WithEvents Lageroppdatering As TabPage
     Friend WithEvents Lager As TabPage
     Friend WithEvents lblOversiktRes As Label
