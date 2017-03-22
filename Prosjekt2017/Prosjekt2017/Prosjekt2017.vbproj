@@ -76,6 +76,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ansattside.Designer.vb">
+      <DependentUpon>Ansattside.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ansattside.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Database.vb" />
     <Compile Include="egenerklering.Designer.vb">
       <DependentUpon>egenerklering.vb</DependentUpon>
@@ -127,6 +133,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Ansattside.resx">
+      <DependentUpon>Ansattside.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="egenerklering.resx">
       <DependentUpon>egenerklering.vb</DependentUpon>
     </EmbeddedResource>
