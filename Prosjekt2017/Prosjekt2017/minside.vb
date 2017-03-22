@@ -123,4 +123,5 @@ Public Class minside
         'End Try
 
     End Sub
+
 End Class
