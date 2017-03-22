@@ -103,6 +103,7 @@
     </Compile>
     <Compile Include="PubVar.vb" />
     <Compile Include="Bruker.vb" />
+    <Compile Include="Reader.vb" />
     <Compile Include="Registreringsskjema.Designer.vb">
       <DependentUpon>Registreringsskjema.vb</DependentUpon>
     </Compile>

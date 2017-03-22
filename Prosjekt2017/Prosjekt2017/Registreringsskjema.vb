@@ -39,19 +39,6 @@ Public Class Registreringsskjema
 
     End Sub
 
-    Private Sub txtPassord_TextChanged(sender As Object, e As EventArgs) Handles txtPassord.TextChanged
-        'txtPassord.PasswordChar = "*"
-    End Sub
-
-    Private Sub Registreringsskjema_Close(sender As Object, e As EventArgs) Handles MyBase.Closed
-        tilkobling.Close()
-        tilkobling.Dispose()
-    End Sub
-
-    Private Sub txtBekreftPassord_TextChanged(sender As Object, e As EventArgs) Handles txtBekreftPassord.TextChanged
-        'txtBekreftPassord.PasswordChar = "*"
-    End Sub
-
     Private Sub txtPostnummer_TextChanged(sender As Object, e As EventArgs) Handles txtPostnummer.TextChanged
 
         If txtPostnummer.TextLength = 4 Then
@@ -87,10 +74,15 @@ Public Class Registreringsskjema
         txtEtternavn.Text = ToUpperFirst(txtEtternavn.Text)
         txtEtternavn.Select(txtEtternavn.Text.Length, 0)
     End Sub
-    Private Sub txtAdresse_TextChanged(sender As Object, e As EventArgs) Handles txtAdresse.TextChanged
-        txtAdresse.Text = ToUpperFirst(txtAdresse.Text)
-        txtAdresse.Select(txtAdresse.Text.Length, 0)
+    Private Sub Registreringsskjema_Close(sender As Object, e As EventArgs) Handles MyBase.Closed
+        tilkobling.Close()
+        tilkobling.Dispose()
     End Sub
 
-
+    Private Sub txtPassord_TextChanged(sender As Object, e As EventArgs) Handles txtPassord.TextChanged
+        'txtPassord.PasswordChar = "*"
+    End Sub
+    Private Sub txtBekreftPassord_TextChanged(sender As Object, e As EventArgs) Handles txtBekreftPassord.TextChanged
+        'txtBekreftPassord.PasswordChar = "*"
+    End Sub
 End Class

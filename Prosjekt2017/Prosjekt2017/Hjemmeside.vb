@@ -3,6 +3,7 @@ Imports System.Data
 Public Class Hjemmeside
     'Oppretter en mySQL-connection til databasen.
     Private tilkobling As MySqlConnection
+    Dim bruker As New Bruker()
 
     Private Sub Hjemmeside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lbTelefon.Hide()
@@ -20,43 +21,46 @@ Public Class Hjemmeside
         Me.AcceptButton = btnLogginn
     End Sub
 
-
     Private Sub Registreringsknapp_Click(sender As Object, e As EventArgs) Handles btnRegistrer.Click
         Registreringsskjema.Show()
     End Sub
 
     Private Sub Logginnknapp_Click(sender As Object, e As EventArgs) Handles btnLogginn.Click
 
-        If txtTelefon.Text = "" Or Not IsNumeric(txtTelefon.Text) Then
-            MsgBox("Ugyldig telefonnummer.")
-        Else
+        Dim telefon = txtTelefon.Text
+        Dim passord = txtPassord.Text
+        PubVar.telefon = telefon
 
-            Dim passord = txtPassord.Text
-            Dim telefon = txtTelefon.Text
-            PubVar.telefon = telefon
+        Dim brukerTabell As New DataTable
+        Dim sjekkPassord As String
+        Dim sjekkTelefon As String
+        Dim brukerid As String
+        Dim riktigPass As Boolean = False
 
-            ' brukerType er by default "Blodgiver", men endres til "Ansatt" ved ansatt-innlogging.
-            Dim sqlSporringBruker = "SELECT * from " & brukerType & " where telefon=@telefon " & "AND passord=@passord"
+        brukerTabell = bruker.getAlleBrukere
+        For Each row In brukerTabell.Rows
+            sjekkTelefon = row("telefon")
+            sjekkPassord = row("passord")
+            brukerid = row("brukerid")
 
-            Dim sql As New MySqlCommand(sqlSporringBruker, tilkobling)
-            sql.Parameters.AddWithValue("@telefon", telefon)
-            sql.Parameters.AddWithValue("@passord", passord)
+            If telefon = sjekkTelefon And passord = sjekkPassord Then
 
-            Dim reader As MySqlDataReader
-            reader = sql.ExecuteReader
-            If reader.Read Then
-                MsgBox("Velkommen til Min Side!")
-                reader.Close()
+                riktigPass = True
+
+                txtTelefon.Clear()
+                txtPassord.Clear()
                 Me.Hide()
+                MsgBox("Velkommen til minside!")
                 minside.Show()
-            Else
-                reader.Close()
-                MsgBox("Feil telefonnummer eller passord.")
             End If
+        Next row
+
+        If riktigPass = False Then
+            MsgBox("Feil brukernavn eller passord")
         End If
 
-
     End Sub
+
     Private Sub Hjemmeside_Closed(sender As Object, e As EventArgs) Handles MyBase.Closed
         tilkobling.Close()
         tilkobling.Dispose()
