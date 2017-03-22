@@ -12,7 +12,4 @@
 
     End Sub
 
-    Private Sub TabPage3_Click(sender As Object, e As EventArgs) Handles TabPage3.Click, Lagerbeholdning.Click
-
-    End Sub
 End Class
