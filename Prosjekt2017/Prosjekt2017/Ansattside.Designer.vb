@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Ansattside
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Ansattside
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Statistikk = New System.Windows.Forms.TabPage()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -58,6 +58,8 @@ Partial Class Ansattside
         Me.txtSok = New System.Windows.Forms.TextBox()
         Me.lblSok = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.btnSlett = New System.Windows.Forms.Button()
+        Me.btnOppdater = New System.Windows.Forms.Button()
         Me.Statistikk.SuspendLayout()
         Me.Reservasjoner.SuspendLayout()
         Me.Lager.SuspendLayout()
@@ -76,7 +78,7 @@ Partial Class Ansattside
         Me.Statistikk.Location = New System.Drawing.Point(4, 25)
         Me.Statistikk.Name = "Statistikk"
         Me.Statistikk.Padding = New System.Windows.Forms.Padding(3)
-        Me.Statistikk.Size = New System.Drawing.Size(981, 530)
+        Me.Statistikk.Size = New System.Drawing.Size(1004, 530)
         Me.Statistikk.TabIndex = 5
         Me.Statistikk.Text = " Statistikk"
         Me.Statistikk.UseVisualStyleBackColor = True
@@ -370,6 +372,8 @@ Partial Class Ansattside
         '
         'Søk
         '
+        Me.Søk.Controls.Add(Me.btnOppdater)
+        Me.Søk.Controls.Add(Me.btnSlett)
         Me.Søk.Controls.Add(Me.DataGridView1)
         Me.Søk.Controls.Add(Me.btnSok)
         Me.Søk.Controls.Add(Me.txtSok)
@@ -384,7 +388,7 @@ Partial Class Ansattside
         '
         'btnSok
         '
-        Me.btnSok.Location = New System.Drawing.Point(532, 102)
+        Me.btnSok.Location = New System.Drawing.Point(551, 102)
         Me.btnSok.Name = "btnSok"
         Me.btnSok.Size = New System.Drawing.Size(75, 23)
         Me.btnSok.TabIndex = 2
@@ -395,7 +399,7 @@ Partial Class Ansattside
         '
         Me.txtSok.Location = New System.Drawing.Point(324, 103)
         Me.txtSok.Name = "txtSok"
-        Me.txtSok.Size = New System.Drawing.Size(181, 22)
+        Me.txtSok.Size = New System.Drawing.Size(206, 22)
         Me.txtSok.TabIndex = 1
         '
         'lblSok
@@ -411,11 +415,29 @@ Partial Class Ansattside
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.Control
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 165)
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 154)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(1004, 88)
+        Me.DataGridView1.Size = New System.Drawing.Size(1008, 88)
         Me.DataGridView1.TabIndex = 4
+        '
+        'btnSlett
+        '
+        Me.btnSlett.Location = New System.Drawing.Point(632, 103)
+        Me.btnSlett.Name = "btnSlett"
+        Me.btnSlett.Size = New System.Drawing.Size(75, 23)
+        Me.btnSlett.TabIndex = 5
+        Me.btnSlett.Text = "Slett"
+        Me.btnSlett.UseVisualStyleBackColor = True
+        '
+        'btnOppdater
+        '
+        Me.btnOppdater.Location = New System.Drawing.Point(728, 105)
+        Me.btnOppdater.Name = "btnOppdater"
+        Me.btnOppdater.Size = New System.Drawing.Size(89, 23)
+        Me.btnOppdater.TabIndex = 6
+        Me.btnOppdater.Text = "Oppdater"
+        Me.btnOppdater.UseVisualStyleBackColor = True
         '
         'Ansattside
         '
@@ -480,4 +502,6 @@ Partial Class Ansattside
     Friend WithEvents txtSok As TextBox
     Friend WithEvents lblSok As Label
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents btnOppdater As Button
+    Friend WithEvents btnSlett As Button
 End Class

@@ -44,4 +44,8 @@ Public Class Ansattside
         tilkobling.Close()
         tilkobling.Dispose()
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnSlett.Click
+
+    End Sub
 End Class
