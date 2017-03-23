@@ -6,15 +6,27 @@ Public Class egenerklering
         tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=g_oops_23;Uid=g_oops_23;Pwd=3d4CcHvg")
         tilkobling.Open()
         lblDato.Text = Date.Now
+        Me.Show()
+        Label1.Select()
     End Sub
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
+        'Vi har valgt å dele inn spørsmålene i bolker. 
+        'Vi regner en ny bolk for hver tjukke overskrift.
+        'Vi starter med venstre side nedover før vi hopper 
+        'over på høyreside.
+        'Radioknappene er navngitt etter bolk, spørsmål, ja (1) og nei (2).
+        'Ja-kanppen på første spørsmål i første bolk for derfor rb111.
+        'Første tallet står for bolk, andre tallet står for spørsmål og tredje tall står for ja.
 #Region "bolk1"
 
         Dim spm11 As String
         Dim spm12 As String
         Dim spm13 As String
         Dim spm14 As String
+        Dim spm15 As String
+        Dim spm16 As String
 
         If rb111.Checked Then
             spm11 = 1
@@ -26,17 +38,27 @@ Public Class egenerklering
         Else
             spm12 = 0
         End If
-        If rb111.Checked Then
+        If rb131.Checked Then
             spm13 = 1
         Else
             spm13 = 0
         End If
-        If rb121.Checked Then
+        If rb141.Checked Then
             spm14 = 1
         Else
             spm14 = 0
         End If
-        Dim bolk1 As String = spm11 + spm12 + spm13 + spm14
+        If rb151.Checked Then
+            spm15 = 1
+        Else
+            spm15 = 0
+        End If
+        If rb161.Checked Then
+            spm16 = 1
+        Else
+            spm16 = 0
+        End If
+        Dim bolk1 As String = spm11 + spm12 + spm13 + spm14 + spm15 + spm16
 
 #End Region
 #Region "bolk2"
@@ -46,7 +68,7 @@ Public Class egenerklering
         Dim spm23 As String
         Dim spm24 As String
         Dim spm25 As String
-        Dim spm26 As String
+
 
         If rb211.Checked Then
             spm21 = 1
@@ -73,12 +95,8 @@ Public Class egenerklering
         Else
             spm25 = 0
         End If
-        If rb261.Checked Then
-                    spm26 = 1
-                Else
-                    spm26 = 0
-                End If
-        Dim bolk2 As String = spm11 + spm12 + spm13 + spm14 + spm25 + spm26
+
+        Dim bolk2 As String = spm11 + spm12 + spm13 + spm14 + spm25
 
 #End Region
 #Region "bolk3"
@@ -294,8 +312,113 @@ Public Class egenerklering
         End If
         Dim bolk6 As String = spm61 + spm62 + spm63 + spm64 + spm65 + spm66 + spm67
 #End Region
+#Region "bolk7"
+        Dim spm71 As String
+        Dim spm72 As String
+        Dim spm73 As String
+        Dim spm74 As String
 
-        Dim sqlSporring = "insert into Egenerklering_blodgiver (bolk1, bolk2, bolk3, bolk4, bolk5, bolk6, dato) values (@bolk1, @bolk2, @bolk3, @bolk4, @bolk5, @bolk6, CURDATE())"
+        If rb711.Checked Then
+            spm71 = 1
+        Else
+            spm71 = 0
+        End If
+        If rb721.Checked Then
+            spm72 = 1
+        Else
+            spm72 = 0
+        End If
+        If rb731.Checked Then
+            spm73 = 1
+        Else
+            spm73 = 0
+        End If
+        If rb741.Checked Then
+            spm74 = 1
+        Else
+            spm74 = 0
+        End If
+        Dim bolk7 As String = spm71 + spm72 + spm73 + spm74
+#End Region
+#Region "bolk8"
+        Dim spm81 As String
+
+        If rb711.Checked Then
+            rb811.Checked = False
+        End If
+        If rb811.Checked Then
+            spm81 = 1
+        Else
+            spm81 = 0
+        End If
+        Dim bolk8 As String = spm81
+#End Region
+#Region "bolk9"
+        Dim spm91 As String
+        Dim spm92 As String
+        Dim spm93 As String
+        Dim spm94 As String
+        Dim spm95 As String
+        Dim spm96 As String
+        Dim spm97 As String
+        Dim spm98 As String
+        Dim spm99 As String
+        Dim spm910 As String
+
+        If rb911.Checked Then
+            spm91 = 1
+        Else
+            spm91 = 0
+        End If
+        If rb921.Checked Then
+            spm92 = 1
+        Else
+            spm92 = 0
+        End If
+        If rb931.Checked Then
+            spm93 = 1
+        Else
+            spm93 = 0
+        End If
+        If rb941.Checked Then
+            spm94 = 1
+        Else
+            spm94 = 0
+        End If
+        If rb951.Checked Then
+            spm95 = 1
+        Else
+            spm95 = 0
+        End If
+        If rb961.Checked Then
+            spm96 = 1
+        Else
+            spm96 = 0
+        End If
+        If rb371.Checked Then
+            spm97 = 1
+        Else
+            spm97 = 0
+        End If
+        If rb981.Checked Then
+            spm98 = 1
+        Else
+            spm98 = 0
+        End If
+        If rb991.Checked Then
+            spm99 = 1
+        Else
+            spm99 = 0
+        End If
+        If rb9101.Checked Then
+            spm910 = 1
+        Else
+            spm910 = 0
+        End If
+        Dim bolk9 As String = spm91 + spm92 + spm93 + spm94 + spm95 + spm96 + spm97 + spm98 + spm99 + spm910
+#End Region
+
+        Dim sqlSporring = "insert into Egenerklering_blodgiver (dato, bolk1, bolk2, bolk3, bolk4, bolk5, bolk6, bolk7, bolk8, bolk9) values (CURDATE(), @bolk1, @bolk2, @bolk3, @bolk4, @bolk5, @bolk6, @bolk7, @bolk8, @bolk9)"
         Dim sqlbolk1 As New MySqlCommand(sqlSporring, tilkobling)
 
         sqlbolk1.Parameters.AddWithValue("@bolk1", bolk1)
@@ -304,9 +427,44 @@ Public Class egenerklering
         sqlbolk1.Parameters.AddWithValue("@bolk4", bolk4)
         sqlbolk1.Parameters.AddWithValue("@bolk5", bolk5)
         sqlbolk1.Parameters.AddWithValue("@bolk6", bolk6)
+        sqlbolk1.Parameters.AddWithValue("@bolk7", bolk7)
+        sqlbolk1.Parameters.AddWithValue("@bolk8", bolk8)
+        sqlbolk1.Parameters.AddWithValue("@bolk9", bolk9)
         sqlbolk1.ExecuteNonQuery()
     End Sub
     Private Sub btnInfo_Click(sender As Object, e As EventArgs) Handles btnInfo.Click
         listbox1_egenerklering.Show()
     End Sub
+    ''Denne suben gjør at når man trykker på en av radioknappene i bolk7 (besvares av kvinner)
+    'vil det ikke være mulig å trykke på noen av spørsmålene i bolk 8 (besvares av menn)
+    Private Sub rb711_CheckedChanged(sender As Object, e As EventArgs) Handles rb711.CheckedChanged,
+        rb712.CheckedChanged, rb721.CheckedChanged, rb722.CheckedChanged, rb731.CheckedChanged,
+        rb732.CheckedChanged, rb741.CheckedChanged, rb741.CheckedChanged
+
+        If rb711.Checked = True Or rb712.Checked = True Or rb811.Checked = True Or
+            rb721.Checked = True Or rb722.Checked = True Or rb731.Checked = True Or
+            rb732.Checked = True Or rb741.Checked = True Or rb742.Checked = True Then
+
+            rb811.Enabled = False
+            rb812.Enabled = False
+        End If
+
+    End Sub
+
+    'Denne suben gjør at når man trykker på en av radioknappene i bolk8 (besvares av herrer)
+    'vil det ikke være mulig å trykke på noen av spørsmålene i bolk 7 (besvares av kvinner)
+    Private Sub rb811_CheckedChanged(sender As Object, e As EventArgs) Handles rb811.CheckedChanged, rb812.CheckedChanged
+        If rb811.Checked = True Or rb812.Checked Then
+            rb711.Enabled = False
+            rb712.Enabled = False
+            rb721.Enabled = False
+            rb722.Enabled = False
+            rb731.Enabled = False
+            rb732.Enabled = False
+            rb741.Enabled = False
+            rb742.Enabled = False
+        End If
+    End Sub
+
+
 End Class
