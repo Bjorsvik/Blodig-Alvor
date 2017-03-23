@@ -28,11 +28,12 @@ Partial Class minside
         Me.tabReservasjon = New System.Windows.Forms.TabPage()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnSkjema = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.txtFornavn = New System.Windows.Forms.TextBox()
+        Me.txtEtternavn = New System.Windows.Forms.TextBox()
+        Me.txtTelefon = New System.Windows.Forms.TextBox()
         Me.TabControl1.SuspendLayout()
         Me.tabBrukerinfo.SuspendLayout()
         Me.tabReservasjon.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -44,17 +45,17 @@ Partial Class minside
         Me.TabControl1.Multiline = True
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-
         Me.TabControl1.Size = New System.Drawing.Size(794, 445)
         Me.TabControl1.TabIndex = 20
         '
         'tabBrukerinfo
         '
-        Me.tabBrukerinfo.Controls.Add(Me.DataGridView1)
+        Me.tabBrukerinfo.Controls.Add(Me.txtTelefon)
+        Me.tabBrukerinfo.Controls.Add(Me.txtEtternavn)
+        Me.tabBrukerinfo.Controls.Add(Me.txtFornavn)
         Me.tabBrukerinfo.Location = New System.Drawing.Point(4, 22)
         Me.tabBrukerinfo.Name = "tabBrukerinfo"
-        Me.tabBrukerinfo.Padding = New System.Windows.Forms.Padding
-        Me.tabBrukerinfo.Size = New System.Drawing.Size(786, 41)
+        Me.tabBrukerinfo.Size = New System.Drawing.Size(786, 419)
         Me.tabBrukerinfo.TabIndex = 0
         Me.tabBrukerinfo.Text = "Brukerinfo"
         Me.tabBrukerinfo.UseVisualStyleBackColor = True
@@ -99,28 +100,40 @@ Partial Class minside
         Me.btnSkjema.Text = "Egenerklæring"
         Me.btnSkjema.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'txtFornavn
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(102, 21)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(569, 341)
-        Me.DataGridView1.TabIndex = 20
+        Me.txtFornavn.Location = New System.Drawing.Point(364, 187)
+        Me.txtFornavn.Name = "txtFornavn"
+        Me.txtFornavn.Size = New System.Drawing.Size(100, 20)
+        Me.txtFornavn.TabIndex = 21
+        '
+        'txtEtternavn
+        '
+        Me.txtEtternavn.Location = New System.Drawing.Point(364, 230)
+        Me.txtEtternavn.Name = "txtEtternavn"
+        Me.txtEtternavn.Size = New System.Drawing.Size(100, 20)
+        Me.txtEtternavn.TabIndex = 22
+        '
+        'txtTelefon
+        '
+        Me.txtTelefon.Location = New System.Drawing.Point(364, 267)
+        Me.txtTelefon.Name = "txtTelefon"
+        Me.txtTelefon.Size = New System.Drawing.Size(100, 20)
+        Me.txtTelefon.TabIndex = 23
         '
         'minside
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-
         Me.ClientSize = New System.Drawing.Size(800, 476)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "minside"
         Me.Text = "minside"
         Me.TabControl1.ResumeLayout(False)
         Me.tabBrukerinfo.ResumeLayout(False)
+        Me.tabBrukerinfo.PerformLayout()
         Me.tabReservasjon.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -130,5 +143,7 @@ Partial Class minside
     Friend WithEvents tabReservasjon As TabPage
     Friend WithEvents Button1 As Button
     Friend WithEvents btnSkjema As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents txtEtternavn As TextBox
+    Friend WithEvents txtFornavn As TextBox
+    Friend WithEvents txtTelefon As TextBox
 End Class
