@@ -1,6 +1,11 @@
+
 ﻿Public Class Ansattside
     Dim Blodlager As New Blodlager()
+
     Private Sub Ansattside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=g_oops_23;Uid=g_oops_23;Pwd=3d4CcHvg")
+
         KalenderGivning.MaxSelectionCount = 1 'Kalender for blodgivning
     End Sub
 
@@ -8,6 +13,7 @@
     Private Sub MonthCalendar1_DateChanged(sender As Object, e As DateRangeEventArgs)
         lblOversiktRes.Text = "Reservasjoner for: " & KalenderGivning.SelectionRange.Start.ToString
     End Sub
+
 
     Private Sub Lager_Click(sender As Object, e As EventArgs) Handles Lager.Click
         Dim blodlagerTab As New DataTable()
@@ -55,6 +61,7 @@
         '    salgspris = rad("pris")
         '    innkjopspris = rad("innkjopspris")
         'Next rad
+
 
         'For i As Integer = 0 To teller - 1
         '    utstyr.regUtstyr(varenavn, salgspris, "0", innkjopspris)

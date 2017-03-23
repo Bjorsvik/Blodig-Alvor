@@ -57,4 +57,8 @@ Public Class minside
 
         Next row
     End Sub
+
+    Private Sub tabBrukerinfo_Click(sender As Object, e As EventArgs) Handles tabBrukerinfo.Click
+
+    End Sub
 End Class
