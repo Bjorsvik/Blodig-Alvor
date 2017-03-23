@@ -76,11 +76,24 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ansattside.Designer.vb">
+      <DependentUpon>Ansattside.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ansattside.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blodlager.vb" />
     <Compile Include="Database.vb" />
     <Compile Include="egenerklering.Designer.vb">
       <DependentUpon>egenerklering.vb</DependentUpon>
     </Compile>
     <Compile Include="egenerklering.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listbox1-egenerklering.Designer.vb">
+      <DependentUpon>listbox1-egenerklering.vb</DependentUpon>
+    </Compile>
+    <Compile Include="listbox1-egenerklering.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="minside.Designer.vb">
@@ -91,6 +104,7 @@
     </Compile>
     <Compile Include="PubVar.vb" />
     <Compile Include="Bruker.vb" />
+    <Compile Include="Reader.vb" />
     <Compile Include="Registreringsskjema.Designer.vb">
       <DependentUpon>Registreringsskjema.vb</DependentUpon>
     </Compile>
@@ -121,8 +135,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Ansattside.resx">
+      <DependentUpon>Ansattside.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="egenerklering.resx">
       <DependentUpon>egenerklering.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listbox1-egenerklering.resx">
+      <DependentUpon>listbox1-egenerklering.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="minside.resx">
       <DependentUpon>minside.vb</DependentUpon>

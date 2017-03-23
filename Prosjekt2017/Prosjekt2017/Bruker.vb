@@ -10,6 +10,10 @@ Public Class Bruker
     Private adresse As String
     Private postnummer As Integer
     Private epost As String
+    Private globaltelefon As String = PubVar.telefon
+
+    Public Sub New()
+    End Sub
 
     Public Sub New(passord As String, fornavn As String, etternavn As String, fodselsdato As String,
                    telefon As Integer, adresse As String, postnummer As Integer, epost As String)
@@ -21,12 +25,18 @@ Public Class Bruker
         Me.adresse = adresse
         Me.postnummer = postnummer
         Me.epost = epost
-
-
     End Sub
 
     Public Sub regBruker()
         db.Query("INSERT INTO Blodgiver(fornavn, etternavn, telefon, epost, postnummer, adresse, fodselsdato, passord) VALUES('" & fornavn & "', '" & etternavn &
                  "', '" & telefon & "', '" & epost & "', '" & postnummer & "', '" & adresse & "', '" & fodselsdato & "',  '" & passord & "')")
     End Sub
+
+    Public Function getAlleBrukere() As DataTable
+        Return db.Query("SELECT * FROM Blodgiver")
+    End Function
+
+    Public Function GetTelefon() As DataTable
+        Return db.Query("SELECT * From Blodgiver WHERE telefon = " & "'" & globaltelefon & "'")
+    End Function
 End Class

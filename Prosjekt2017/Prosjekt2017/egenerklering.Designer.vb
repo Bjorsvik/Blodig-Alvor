@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class egenerklering
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,24 +20,10 @@ Partial Class egenerklering
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtEtternavnE = New System.Windows.Forms.TextBox()
-        Me.txtFornavnE = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtFodselsnummerE = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtPrivatAdresseE = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtPostnummerE = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtTelefonE = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.txtEpostE = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -46,10 +32,8 @@ Partial Class egenerklering
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
@@ -197,9 +181,6 @@ Partial Class egenerklering
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.rb212 = New System.Windows.Forms.RadioButton()
         Me.rb211 = New System.Windows.Forms.RadioButton()
-        Me.Panel13 = New System.Windows.Forms.Panel()
-        Me.rb262 = New System.Windows.Forms.RadioButton()
-        Me.rb261 = New System.Windows.Forms.RadioButton()
         Me.Panel16 = New System.Windows.Forms.Panel()
         Me.rb252 = New System.Windows.Forms.RadioButton()
         Me.rb251 = New System.Windows.Forms.RadioButton()
@@ -331,18 +312,23 @@ Partial Class egenerklering
         Me.Panel58 = New System.Windows.Forms.Panel()
         Me.rbSMSNei = New System.Windows.Forms.RadioButton()
         Me.rbSMSJa = New System.Windows.Forms.RadioButton()
-        Me.Label126 = New System.Windows.Forms.Label()
-        Me.Label128 = New System.Windows.Forms.Label()
         Me.Panel59 = New System.Windows.Forms.Panel()
         Me.rb1102 = New System.Windows.Forms.RadioButton()
         Me.rb3101 = New System.Windows.Forms.RadioButton()
         Me.Panel60 = New System.Windows.Forms.Panel()
         Me.rb392 = New System.Windows.Forms.RadioButton()
         Me.rb391 = New System.Windows.Forms.RadioButton()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.btnInfo = New System.Windows.Forms.Button()
-        Me.btnLukk = New System.Windows.Forms.Button()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.lblDato = New System.Windows.Forms.Label()
+        Me.Label129 = New System.Windows.Forms.Label()
+        Me.Panel61 = New System.Windows.Forms.Panel()
+        Me.rb152 = New System.Windows.Forms.RadioButton()
+        Me.rb151 = New System.Windows.Forms.RadioButton()
+        Me.Label130 = New System.Windows.Forms.Label()
+        Me.Panel62 = New System.Windows.Forms.Panel()
+        Me.rb162 = New System.Windows.Forms.RadioButton()
+        Me.rb161 = New System.Windows.Forms.RadioButton()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -357,7 +343,6 @@ Partial Class egenerklering
         Me.Panel12.SuspendLayout()
         Me.Panel14.SuspendLayout()
         Me.Panel15.SuspendLayout()
-        Me.Panel13.SuspendLayout()
         Me.Panel16.SuspendLayout()
         Me.Panel17.SuspendLayout()
         Me.Panel18.SuspendLayout()
@@ -403,144 +388,34 @@ Partial Class egenerklering
         Me.Panel58.SuspendLayout()
         Me.Panel59.SuspendLayout()
         Me.Panel60.SuspendLayout()
+        Me.Panel61.SuspendLayout()
+        Me.Panel62.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(107, 9)
+        Me.Label1.Location = New System.Drawing.Point(199, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(329, 29)
+        Me.Label1.Size = New System.Drawing.Size(346, 29)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Velkommen til blodbanken!"
+        Me.Label1.Text = "Spørreskjema for blodgivere"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(34, 47)
+        Me.Label2.Location = New System.Drawing.Point(56, 95)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(41, 13)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Fyll ut"
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(34, 79)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(53, 13)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Etternavn"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(185, 79)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(46, 13)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Fornavn"
-        '
-        'txtEtternavnE
-        '
-        Me.txtEtternavnE.Location = New System.Drawing.Point(93, 76)
-        Me.txtEtternavnE.Name = "txtEtternavnE"
-        Me.txtEtternavnE.Size = New System.Drawing.Size(86, 20)
-        Me.txtEtternavnE.TabIndex = 4
-        '
-        'txtFornavnE
-        '
-        Me.txtFornavnE.Location = New System.Drawing.Point(237, 76)
-        Me.txtFornavnE.Name = "txtFornavnE"
-        Me.txtFornavnE.Size = New System.Drawing.Size(86, 20)
-        Me.txtFornavnE.TabIndex = 5
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(338, 79)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(126, 13)
-        Me.Label5.TabIndex = 6
-        Me.Label5.Text = "Fødselsnummer (11 siffer)"
-        '
-        'txtFodselsnummerE
-        '
-        Me.txtFodselsnummerE.Location = New System.Drawing.Point(470, 76)
-        Me.txtFodselsnummerE.Name = "txtFodselsnummerE"
-        Me.txtFodselsnummerE.Size = New System.Drawing.Size(86, 20)
-        Me.txtFodselsnummerE.TabIndex = 7
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(34, 125)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(71, 13)
-        Me.Label6.TabIndex = 8
-        Me.Label6.Text = "Privatadresse"
-        '
-        'txtPrivatAdresseE
-        '
-        Me.txtPrivatAdresseE.Location = New System.Drawing.Point(112, 122)
-        Me.txtPrivatAdresseE.Name = "txtPrivatAdresseE"
-        Me.txtPrivatAdresseE.Size = New System.Drawing.Size(211, 20)
-        Me.txtPrivatAdresseE.TabIndex = 9
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(338, 125)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(65, 13)
-        Me.Label7.TabIndex = 10
-        Me.Label7.Text = "Postnummer"
-        '
-        'txtPostnummerE
-        '
-        Me.txtPostnummerE.Location = New System.Drawing.Point(409, 122)
-        Me.txtPostnummerE.Name = "txtPostnummerE"
-        Me.txtPostnummerE.Size = New System.Drawing.Size(86, 20)
-        Me.txtPostnummerE.TabIndex = 11
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(34, 170)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(43, 13)
-        Me.Label8.TabIndex = 12
-        Me.Label8.Text = "Telefon"
-        '
-        'txtTelefonE
-        '
-        Me.txtTelefonE.Location = New System.Drawing.Point(93, 167)
-        Me.txtTelefonE.Name = "txtTelefonE"
-        Me.txtTelefonE.Size = New System.Drawing.Size(86, 20)
-        Me.txtTelefonE.TabIndex = 13
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(194, 170)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(37, 13)
-        Me.Label9.TabIndex = 14
-        Me.Label9.Text = "E-post"
-        '
-        'txtEpostE
-        '
-        Me.txtEpostE.Location = New System.Drawing.Point(237, 167)
-        Me.txtEpostE.Name = "txtEpostE"
-        Me.txtEpostE.Size = New System.Drawing.Size(166, 20)
-        Me.txtEpostE.TabIndex = 15
-        '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(34, 300)
+        Me.Label10.Location = New System.Drawing.Point(56, 198)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(193, 13)
         Me.Label10.TabIndex = 20
@@ -549,7 +424,7 @@ Partial Class egenerklering
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(280, 284)
+        Me.Label11.Location = New System.Drawing.Point(302, 182)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(18, 13)
         Me.Label11.TabIndex = 23
@@ -558,7 +433,7 @@ Partial Class egenerklering
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(300, 284)
+        Me.Label12.Location = New System.Drawing.Point(322, 182)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(23, 13)
         Me.Label12.TabIndex = 24
@@ -568,7 +443,7 @@ Partial Class egenerklering
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(34, 284)
+        Me.Label13.Location = New System.Drawing.Point(56, 182)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(101, 13)
         Me.Label13.TabIndex = 25
@@ -577,7 +452,7 @@ Partial Class egenerklering
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(34, 322)
+        Me.Label14.Location = New System.Drawing.Point(56, 220)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(109, 13)
         Me.Label14.TabIndex = 26
@@ -586,16 +461,16 @@ Partial Class egenerklering
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(34, 346)
+        Me.Label15.Location = New System.Drawing.Point(56, 244)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(177, 13)
+        Me.Label15.Size = New System.Drawing.Size(176, 13)
         Me.Label15.TabIndex = 29
-        Me.Label15.Text = "Visst du har gitt blod tidligere, har du"
+        Me.Label15.Text = "Hvis du har gitt blod tidligere, har du"
         '
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(34, 359)
+        Me.Label16.Location = New System.Drawing.Point(56, 257)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(210, 13)
         Me.Label16.TabIndex = 30
@@ -604,26 +479,17 @@ Partial Class egenerklering
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(34, 386)
+        Me.Label17.Location = New System.Drawing.Point(56, 284)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(124, 13)
         Me.Label17.TabIndex = 33
         Me.Label17.Text = "Veier du 50 kg eller mer?"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.PictureBox1.Location = New System.Drawing.Point(378, 3000)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(58, 53)
-        Me.PictureBox1.TabIndex = 36
-        Me.PictureBox1.TabStop = False
-        '
         'Label18
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(34, 432)
+        Me.Label18.Location = New System.Drawing.Point(56, 369)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(201, 13)
         Me.Label18.TabIndex = 37
@@ -632,25 +498,16 @@ Partial Class egenerklering
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(34, 458)
+        Me.Label19.Location = New System.Drawing.Point(56, 395)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(85, 13)
         Me.Label19.TabIndex = 38
         Me.Label19.Text = "Brukt medisiner?"
         '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(34, 570)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(85, 13)
-        Me.Label20.TabIndex = 39
-        Me.Label20.Text = "Brukt medisiner?"
-        '
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(34, 548)
+        Me.Label21.Location = New System.Drawing.Point(56, 485)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(171, 13)
         Me.Label21.TabIndex = 40
@@ -659,7 +516,7 @@ Partial Class egenerklering
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(34, 525)
+        Me.Label22.Location = New System.Drawing.Point(56, 462)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(71, 13)
         Me.Label22.TabIndex = 41
@@ -668,7 +525,7 @@ Partial Class egenerklering
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(34, 502)
+        Me.Label23.Location = New System.Drawing.Point(56, 439)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(90, 13)
         Me.Label23.TabIndex = 42
@@ -677,7 +534,7 @@ Partial Class egenerklering
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(34, 480)
+        Me.Label24.Location = New System.Drawing.Point(56, 417)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(125, 13)
         Me.Label24.TabIndex = 43
@@ -687,7 +544,7 @@ Partial Class egenerklering
         '
         Me.Label25.AutoSize = True
         Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(339, 284)
+        Me.Label25.Location = New System.Drawing.Point(361, 182)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(232, 13)
         Me.Label25.TabIndex = 56
@@ -696,7 +553,7 @@ Partial Class egenerklering
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(339, 300)
+        Me.Label26.Location = New System.Drawing.Point(361, 198)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(210, 13)
         Me.Label26.TabIndex = 57
@@ -705,7 +562,7 @@ Partial Class egenerklering
         'Label27
         '
         Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(339, 313)
+        Me.Label27.Location = New System.Drawing.Point(361, 211)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(164, 13)
         Me.Label27.TabIndex = 58
@@ -714,7 +571,7 @@ Partial Class egenerklering
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(610, 284)
+        Me.Label28.Location = New System.Drawing.Point(632, 182)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(23, 13)
         Me.Label28.TabIndex = 62
@@ -723,7 +580,7 @@ Partial Class egenerklering
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(586, 284)
+        Me.Label29.Location = New System.Drawing.Point(608, 182)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(18, 13)
         Me.Label29.TabIndex = 61
@@ -732,7 +589,7 @@ Partial Class egenerklering
         'Label30
         '
         Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(339, 336)
+        Me.Label30.Location = New System.Drawing.Point(361, 234)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(149, 13)
         Me.Label30.TabIndex = 63
@@ -741,7 +598,7 @@ Partial Class egenerklering
         'Label31
         '
         Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(339, 359)
+        Me.Label31.Location = New System.Drawing.Point(361, 257)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(210, 13)
         Me.Label31.TabIndex = 66
@@ -750,7 +607,7 @@ Partial Class egenerklering
         'Label32
         '
         Me.Label32.AutoSize = True
-        Me.Label32.Location = New System.Drawing.Point(339, 372)
+        Me.Label32.Location = New System.Drawing.Point(361, 270)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(80, 13)
         Me.Label32.TabIndex = 67
@@ -759,7 +616,7 @@ Partial Class egenerklering
         'Label33
         '
         Me.Label33.AutoSize = True
-        Me.Label33.Location = New System.Drawing.Point(339, 397)
+        Me.Label33.Location = New System.Drawing.Point(361, 295)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(227, 13)
         Me.Label33.TabIndex = 70
@@ -768,7 +625,7 @@ Partial Class egenerklering
         'Label34
         '
         Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(339, 410)
+        Me.Label34.Location = New System.Drawing.Point(361, 308)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(192, 13)
         Me.Label34.TabIndex = 71
@@ -777,7 +634,7 @@ Partial Class egenerklering
         'Label35
         '
         Me.Label35.AutoSize = True
-        Me.Label35.Location = New System.Drawing.Point(339, 423)
+        Me.Label35.Location = New System.Drawing.Point(361, 321)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(221, 13)
         Me.Label35.TabIndex = 72
@@ -786,7 +643,7 @@ Partial Class egenerklering
         'Label36
         '
         Me.Label36.AutoSize = True
-        Me.Label36.Location = New System.Drawing.Point(339, 436)
+        Me.Label36.Location = New System.Drawing.Point(361, 334)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(147, 13)
         Me.Label36.TabIndex = 73
@@ -795,7 +652,7 @@ Partial Class egenerklering
         'Label37
         '
         Me.Label37.AutoSize = True
-        Me.Label37.Location = New System.Drawing.Point(339, 458)
+        Me.Label37.Location = New System.Drawing.Point(361, 356)
         Me.Label37.Name = "Label37"
         Me.Label37.Size = New System.Drawing.Size(235, 13)
         Me.Label37.TabIndex = 76
@@ -804,7 +661,7 @@ Partial Class egenerklering
         'Label38
         '
         Me.Label38.AutoSize = True
-        Me.Label38.Location = New System.Drawing.Point(339, 471)
+        Me.Label38.Location = New System.Drawing.Point(361, 369)
         Me.Label38.Name = "Label38"
         Me.Label38.Size = New System.Drawing.Size(207, 13)
         Me.Label38.TabIndex = 77
@@ -813,7 +670,7 @@ Partial Class egenerklering
         'Label39
         '
         Me.Label39.AutoSize = True
-        Me.Label39.Location = New System.Drawing.Point(339, 484)
+        Me.Label39.Location = New System.Drawing.Point(361, 382)
         Me.Label39.Name = "Label39"
         Me.Label39.Size = New System.Drawing.Size(102, 13)
         Me.Label39.TabIndex = 78
@@ -822,7 +679,7 @@ Partial Class egenerklering
         'Label40
         '
         Me.Label40.AutoSize = True
-        Me.Label40.Location = New System.Drawing.Point(339, 503)
+        Me.Label40.Location = New System.Drawing.Point(361, 401)
         Me.Label40.Name = "Label40"
         Me.Label40.Size = New System.Drawing.Size(207, 13)
         Me.Label40.TabIndex = 81
@@ -831,7 +688,7 @@ Partial Class egenerklering
         'Label41
         '
         Me.Label41.AutoSize = True
-        Me.Label41.Location = New System.Drawing.Point(342, 516)
+        Me.Label41.Location = New System.Drawing.Point(364, 414)
         Me.Label41.Name = "Label41"
         Me.Label41.Size = New System.Drawing.Size(104, 13)
         Me.Label41.TabIndex = 82
@@ -840,7 +697,7 @@ Partial Class egenerklering
         'Label42
         '
         Me.Label42.AutoSize = True
-        Me.Label42.Location = New System.Drawing.Point(342, 538)
+        Me.Label42.Location = New System.Drawing.Point(364, 436)
         Me.Label42.Name = "Label42"
         Me.Label42.Size = New System.Drawing.Size(224, 13)
         Me.Label42.TabIndex = 85
@@ -849,7 +706,7 @@ Partial Class egenerklering
         'Label57
         '
         Me.Label57.AutoSize = True
-        Me.Label57.Location = New System.Drawing.Point(34, 889)
+        Me.Label57.Location = New System.Drawing.Point(56, 816)
         Me.Label57.Name = "Label57"
         Me.Label57.Size = New System.Drawing.Size(133, 13)
         Me.Label57.TabIndex = 222
@@ -858,7 +715,7 @@ Partial Class egenerklering
         'Label56
         '
         Me.Label56.AutoSize = True
-        Me.Label56.Location = New System.Drawing.Point(34, 866)
+        Me.Label56.Location = New System.Drawing.Point(56, 793)
         Me.Label56.Name = "Label56"
         Me.Label56.Size = New System.Drawing.Size(119, 13)
         Me.Label56.TabIndex = 219
@@ -867,7 +724,7 @@ Partial Class egenerklering
         'Label54
         '
         Me.Label54.AutoSize = True
-        Me.Label54.Location = New System.Drawing.Point(34, 828)
+        Me.Label54.Location = New System.Drawing.Point(56, 755)
         Me.Label54.Name = "Label54"
         Me.Label54.Size = New System.Drawing.Size(220, 13)
         Me.Label54.TabIndex = 216
@@ -876,7 +733,7 @@ Partial Class egenerklering
         'Label55
         '
         Me.Label55.AutoSize = True
-        Me.Label55.Location = New System.Drawing.Point(34, 841)
+        Me.Label55.Location = New System.Drawing.Point(56, 768)
         Me.Label55.Name = "Label55"
         Me.Label55.Size = New System.Drawing.Size(215, 13)
         Me.Label55.TabIndex = 215
@@ -885,7 +742,7 @@ Partial Class egenerklering
         'Label53
         '
         Me.Label53.AutoSize = True
-        Me.Label53.Location = New System.Drawing.Point(34, 805)
+        Me.Label53.Location = New System.Drawing.Point(56, 732)
         Me.Label53.Name = "Label53"
         Me.Label53.Size = New System.Drawing.Size(191, 13)
         Me.Label53.TabIndex = 212
@@ -894,7 +751,7 @@ Partial Class egenerklering
         'Label51
         '
         Me.Label51.AutoSize = True
-        Me.Label51.Location = New System.Drawing.Point(34, 770)
+        Me.Label51.Location = New System.Drawing.Point(56, 697)
         Me.Label51.Name = "Label51"
         Me.Label51.Size = New System.Drawing.Size(210, 13)
         Me.Label51.TabIndex = 211
@@ -903,7 +760,7 @@ Partial Class egenerklering
         'Label52
         '
         Me.Label52.AutoSize = True
-        Me.Label52.Location = New System.Drawing.Point(34, 783)
+        Me.Label52.Location = New System.Drawing.Point(56, 710)
         Me.Label52.Name = "Label52"
         Me.Label52.Size = New System.Drawing.Size(224, 13)
         Me.Label52.TabIndex = 210
@@ -912,7 +769,7 @@ Partial Class egenerklering
         'Label50
         '
         Me.Label50.AutoSize = True
-        Me.Label50.Location = New System.Drawing.Point(34, 747)
+        Me.Label50.Location = New System.Drawing.Point(56, 674)
         Me.Label50.Name = "Label50"
         Me.Label50.Size = New System.Drawing.Size(82, 13)
         Me.Label50.TabIndex = 209
@@ -921,7 +778,7 @@ Partial Class egenerklering
         'Label43
         '
         Me.Label43.AutoSize = True
-        Me.Label43.Location = New System.Drawing.Point(34, 653)
+        Me.Label43.Location = New System.Drawing.Point(56, 580)
         Me.Label43.Name = "Label43"
         Me.Label43.Size = New System.Drawing.Size(214, 13)
         Me.Label43.TabIndex = 196
@@ -930,7 +787,7 @@ Partial Class egenerklering
         'Label44
         '
         Me.Label44.AutoSize = True
-        Me.Label44.Location = New System.Drawing.Point(34, 666)
+        Me.Label44.Location = New System.Drawing.Point(56, 593)
         Me.Label44.Name = "Label44"
         Me.Label44.Size = New System.Drawing.Size(217, 13)
         Me.Label44.TabIndex = 195
@@ -939,7 +796,7 @@ Partial Class egenerklering
         'Label45
         '
         Me.Label45.AutoSize = True
-        Me.Label45.Location = New System.Drawing.Point(34, 689)
+        Me.Label45.Location = New System.Drawing.Point(56, 616)
         Me.Label45.Name = "Label45"
         Me.Label45.Size = New System.Drawing.Size(194, 13)
         Me.Label45.TabIndex = 194
@@ -948,7 +805,7 @@ Partial Class egenerklering
         'Label46
         '
         Me.Label46.AutoSize = True
-        Me.Label46.Location = New System.Drawing.Point(34, 702)
+        Me.Label46.Location = New System.Drawing.Point(56, 629)
         Me.Label46.Name = "Label46"
         Me.Label46.Size = New System.Drawing.Size(98, 13)
         Me.Label46.TabIndex = 193
@@ -957,7 +814,7 @@ Partial Class egenerklering
         'Label47
         '
         Me.Label47.AutoSize = True
-        Me.Label47.Location = New System.Drawing.Point(34, 724)
+        Me.Label47.Location = New System.Drawing.Point(56, 651)
         Me.Label47.Name = "Label47"
         Me.Label47.Size = New System.Drawing.Size(209, 13)
         Me.Label47.TabIndex = 192
@@ -966,7 +823,7 @@ Partial Class egenerklering
         'Label48
         '
         Me.Label48.AutoSize = True
-        Me.Label48.Location = New System.Drawing.Point(34, 631)
+        Me.Label48.Location = New System.Drawing.Point(56, 558)
         Me.Label48.Name = "Label48"
         Me.Label48.Size = New System.Drawing.Size(88, 13)
         Me.Label48.TabIndex = 191
@@ -976,7 +833,7 @@ Partial Class egenerklering
         '
         Me.Label49.AutoSize = True
         Me.Label49.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label49.Location = New System.Drawing.Point(34, 605)
+        Me.Label49.Location = New System.Drawing.Point(56, 532)
         Me.Label49.Name = "Label49"
         Me.Label49.Size = New System.Drawing.Size(232, 13)
         Me.Label49.TabIndex = 190
@@ -986,7 +843,7 @@ Partial Class egenerklering
         '
         Me.Label58.AutoSize = True
         Me.Label58.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label58.Location = New System.Drawing.Point(342, 605)
+        Me.Label58.Location = New System.Drawing.Point(364, 503)
         Me.Label58.Name = "Label58"
         Me.Label58.Size = New System.Drawing.Size(123, 13)
         Me.Label58.TabIndex = 225
@@ -995,7 +852,7 @@ Partial Class egenerklering
         'Label59
         '
         Me.Label59.AutoSize = True
-        Me.Label59.Location = New System.Drawing.Point(342, 631)
+        Me.Label59.Location = New System.Drawing.Point(364, 529)
         Me.Label59.Name = "Label59"
         Me.Label59.Size = New System.Drawing.Size(70, 13)
         Me.Label59.TabIndex = 226
@@ -1004,7 +861,7 @@ Partial Class egenerklering
         'Label60
         '
         Me.Label60.AutoSize = True
-        Me.Label60.Location = New System.Drawing.Point(342, 653)
+        Me.Label60.Location = New System.Drawing.Point(364, 551)
         Me.Label60.Name = "Label60"
         Me.Label60.Size = New System.Drawing.Size(201, 13)
         Me.Label60.TabIndex = 236
@@ -1013,7 +870,7 @@ Partial Class egenerklering
         'Label61
         '
         Me.Label61.AutoSize = True
-        Me.Label61.Location = New System.Drawing.Point(342, 666)
+        Me.Label61.Location = New System.Drawing.Point(364, 564)
         Me.Label61.Name = "Label61"
         Me.Label61.Size = New System.Drawing.Size(143, 13)
         Me.Label61.TabIndex = 235
@@ -1022,7 +879,7 @@ Partial Class egenerklering
         'Label62
         '
         Me.Label62.AutoSize = True
-        Me.Label62.Location = New System.Drawing.Point(342, 689)
+        Me.Label62.Location = New System.Drawing.Point(364, 587)
         Me.Label62.Name = "Label62"
         Me.Label62.Size = New System.Drawing.Size(179, 13)
         Me.Label62.TabIndex = 238
@@ -1031,7 +888,7 @@ Partial Class egenerklering
         'Label63
         '
         Me.Label63.AutoSize = True
-        Me.Label63.Location = New System.Drawing.Point(342, 702)
+        Me.Label63.Location = New System.Drawing.Point(364, 600)
         Me.Label63.Name = "Label63"
         Me.Label63.Size = New System.Drawing.Size(159, 13)
         Me.Label63.TabIndex = 237
@@ -1040,7 +897,7 @@ Partial Class egenerklering
         'Label64
         '
         Me.Label64.AutoSize = True
-        Me.Label64.Location = New System.Drawing.Point(342, 750)
+        Me.Label64.Location = New System.Drawing.Point(364, 648)
         Me.Label64.Name = "Label64"
         Me.Label64.Size = New System.Drawing.Size(193, 13)
         Me.Label64.TabIndex = 241
@@ -1049,7 +906,7 @@ Partial Class egenerklering
         'Label65
         '
         Me.Label65.AutoSize = True
-        Me.Label65.Location = New System.Drawing.Point(342, 737)
+        Me.Label65.Location = New System.Drawing.Point(364, 635)
         Me.Label65.Name = "Label65"
         Me.Label65.Size = New System.Drawing.Size(224, 13)
         Me.Label65.TabIndex = 240
@@ -1058,7 +915,7 @@ Partial Class egenerklering
         'Label66
         '
         Me.Label66.AutoSize = True
-        Me.Label66.Location = New System.Drawing.Point(342, 724)
+        Me.Label66.Location = New System.Drawing.Point(364, 622)
         Me.Label66.Name = "Label66"
         Me.Label66.Size = New System.Drawing.Size(214, 13)
         Me.Label66.TabIndex = 239
@@ -1068,7 +925,7 @@ Partial Class egenerklering
         '
         Me.Label67.AutoSize = True
         Me.Label67.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label67.Location = New System.Drawing.Point(342, 783)
+        Me.Label67.Location = New System.Drawing.Point(364, 681)
         Me.Label67.Name = "Label67"
         Me.Label67.Size = New System.Drawing.Size(111, 13)
         Me.Label67.TabIndex = 242
@@ -1077,7 +934,7 @@ Partial Class egenerklering
         'Label68
         '
         Me.Label68.AutoSize = True
-        Me.Label68.Location = New System.Drawing.Point(300, 432)
+        Me.Label68.Location = New System.Drawing.Point(322, 369)
         Me.Label68.Name = "Label68"
         Me.Label68.Size = New System.Drawing.Size(23, 13)
         Me.Label68.TabIndex = 244
@@ -1086,7 +943,7 @@ Partial Class egenerklering
         'Label69
         '
         Me.Label69.AutoSize = True
-        Me.Label69.Location = New System.Drawing.Point(276, 432)
+        Me.Label69.Location = New System.Drawing.Point(298, 369)
         Me.Label69.Name = "Label69"
         Me.Label69.Size = New System.Drawing.Size(18, 13)
         Me.Label69.TabIndex = 243
@@ -1095,7 +952,7 @@ Partial Class egenerklering
         'Label70
         '
         Me.Label70.AutoSize = True
-        Me.Label70.Location = New System.Drawing.Point(300, 605)
+        Me.Label70.Location = New System.Drawing.Point(322, 532)
         Me.Label70.Name = "Label70"
         Me.Label70.Size = New System.Drawing.Size(23, 13)
         Me.Label70.TabIndex = 246
@@ -1104,7 +961,7 @@ Partial Class egenerklering
         'Label71
         '
         Me.Label71.AutoSize = True
-        Me.Label71.Location = New System.Drawing.Point(276, 605)
+        Me.Label71.Location = New System.Drawing.Point(298, 532)
         Me.Label71.Name = "Label71"
         Me.Label71.Size = New System.Drawing.Size(18, 13)
         Me.Label71.TabIndex = 245
@@ -1113,7 +970,7 @@ Partial Class egenerklering
         'Label72
         '
         Me.Label72.AutoSize = True
-        Me.Label72.Location = New System.Drawing.Point(610, 605)
+        Me.Label72.Location = New System.Drawing.Point(632, 503)
         Me.Label72.Name = "Label72"
         Me.Label72.Size = New System.Drawing.Size(23, 13)
         Me.Label72.TabIndex = 248
@@ -1122,7 +979,7 @@ Partial Class egenerklering
         'Label73
         '
         Me.Label73.AutoSize = True
-        Me.Label73.Location = New System.Drawing.Point(586, 605)
+        Me.Label73.Location = New System.Drawing.Point(608, 503)
         Me.Label73.Name = "Label73"
         Me.Label73.Size = New System.Drawing.Size(18, 13)
         Me.Label73.TabIndex = 247
@@ -1131,7 +988,7 @@ Partial Class egenerklering
         'Label74
         '
         Me.Label74.AutoSize = True
-        Me.Label74.Location = New System.Drawing.Point(610, 783)
+        Me.Label74.Location = New System.Drawing.Point(632, 681)
         Me.Label74.Name = "Label74"
         Me.Label74.Size = New System.Drawing.Size(23, 13)
         Me.Label74.TabIndex = 250
@@ -1140,7 +997,7 @@ Partial Class egenerklering
         'Label75
         '
         Me.Label75.AutoSize = True
-        Me.Label75.Location = New System.Drawing.Point(586, 783)
+        Me.Label75.Location = New System.Drawing.Point(608, 681)
         Me.Label75.Name = "Label75"
         Me.Label75.Size = New System.Drawing.Size(18, 13)
         Me.Label75.TabIndex = 249
@@ -1149,7 +1006,7 @@ Partial Class egenerklering
         'Label76
         '
         Me.Label76.AutoSize = True
-        Me.Label76.Location = New System.Drawing.Point(342, 805)
+        Me.Label76.Location = New System.Drawing.Point(364, 703)
         Me.Label76.Name = "Label76"
         Me.Label76.Size = New System.Drawing.Size(228, 13)
         Me.Label76.TabIndex = 252
@@ -1159,7 +1016,7 @@ Partial Class egenerklering
         '
         Me.Label77.AutoSize = True
         Me.Label77.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label77.Location = New System.Drawing.Point(34, 918)
+        Me.Label77.Location = New System.Drawing.Point(56, 859)
         Me.Label77.Name = "Label77"
         Me.Label77.Size = New System.Drawing.Size(180, 13)
         Me.Label77.TabIndex = 255
@@ -1168,7 +1025,7 @@ Partial Class egenerklering
         'Label78
         '
         Me.Label78.AutoSize = True
-        Me.Label78.Location = New System.Drawing.Point(34, 941)
+        Me.Label78.Location = New System.Drawing.Point(56, 882)
         Me.Label78.Name = "Label78"
         Me.Label78.Size = New System.Drawing.Size(237, 13)
         Me.Label78.TabIndex = 256
@@ -1177,7 +1034,7 @@ Partial Class egenerklering
         'Label79
         '
         Me.Label79.AutoSize = True
-        Me.Label79.Location = New System.Drawing.Point(342, 1117)
+        Me.Label79.Location = New System.Drawing.Point(364, 1015)
         Me.Label79.Name = "Label79"
         Me.Label79.Size = New System.Drawing.Size(228, 13)
         Me.Label79.TabIndex = 288
@@ -1186,7 +1043,7 @@ Partial Class egenerklering
         'Label80
         '
         Me.Label80.AutoSize = True
-        Me.Label80.Location = New System.Drawing.Point(342, 1104)
+        Me.Label80.Location = New System.Drawing.Point(364, 1002)
         Me.Label80.Name = "Label80"
         Me.Label80.Size = New System.Drawing.Size(241, 13)
         Me.Label80.TabIndex = 285
@@ -1195,7 +1052,7 @@ Partial Class egenerklering
         'Label81
         '
         Me.Label81.AutoSize = True
-        Me.Label81.Location = New System.Drawing.Point(342, 1078)
+        Me.Label81.Location = New System.Drawing.Point(364, 976)
         Me.Label81.Name = "Label81"
         Me.Label81.Size = New System.Drawing.Size(221, 13)
         Me.Label81.TabIndex = 284
@@ -1204,7 +1061,7 @@ Partial Class egenerklering
         'Label82
         '
         Me.Label82.AutoSize = True
-        Me.Label82.Location = New System.Drawing.Point(342, 1059)
+        Me.Label82.Location = New System.Drawing.Point(364, 957)
         Me.Label82.Name = "Label82"
         Me.Label82.Size = New System.Drawing.Size(94, 13)
         Me.Label82.TabIndex = 281
@@ -1213,7 +1070,7 @@ Partial Class egenerklering
         'Label83
         '
         Me.Label83.AutoSize = True
-        Me.Label83.Location = New System.Drawing.Point(342, 1046)
+        Me.Label83.Location = New System.Drawing.Point(364, 944)
         Me.Label83.Name = "Label83"
         Me.Label83.Size = New System.Drawing.Size(167, 13)
         Me.Label83.TabIndex = 280
@@ -1222,7 +1079,7 @@ Partial Class egenerklering
         'Label84
         '
         Me.Label84.AutoSize = True
-        Me.Label84.Location = New System.Drawing.Point(342, 1024)
+        Me.Label84.Location = New System.Drawing.Point(364, 922)
         Me.Label84.Name = "Label84"
         Me.Label84.Size = New System.Drawing.Size(237, 13)
         Me.Label84.TabIndex = 279
@@ -1231,7 +1088,7 @@ Partial Class egenerklering
         'Label85
         '
         Me.Label85.AutoSize = True
-        Me.Label85.Location = New System.Drawing.Point(342, 1011)
+        Me.Label85.Location = New System.Drawing.Point(364, 909)
         Me.Label85.Name = "Label85"
         Me.Label85.Size = New System.Drawing.Size(229, 13)
         Me.Label85.TabIndex = 276
@@ -1240,7 +1097,7 @@ Partial Class egenerklering
         'Label86
         '
         Me.Label86.AutoSize = True
-        Me.Label86.Location = New System.Drawing.Point(342, 989)
+        Me.Label86.Location = New System.Drawing.Point(364, 887)
         Me.Label86.Name = "Label86"
         Me.Label86.Size = New System.Drawing.Size(104, 13)
         Me.Label86.TabIndex = 275
@@ -1249,7 +1106,7 @@ Partial Class egenerklering
         'Label87
         '
         Me.Label87.AutoSize = True
-        Me.Label87.Location = New System.Drawing.Point(342, 976)
+        Me.Label87.Location = New System.Drawing.Point(364, 874)
         Me.Label87.Name = "Label87"
         Me.Label87.Size = New System.Drawing.Size(240, 13)
         Me.Label87.TabIndex = 274
@@ -1258,7 +1115,7 @@ Partial Class egenerklering
         'Label88
         '
         Me.Label88.AutoSize = True
-        Me.Label88.Location = New System.Drawing.Point(342, 951)
+        Me.Label88.Location = New System.Drawing.Point(364, 849)
         Me.Label88.Name = "Label88"
         Me.Label88.Size = New System.Drawing.Size(215, 13)
         Me.Label88.TabIndex = 273
@@ -1267,7 +1124,7 @@ Partial Class egenerklering
         'Label89
         '
         Me.Label89.AutoSize = True
-        Me.Label89.Location = New System.Drawing.Point(342, 938)
+        Me.Label89.Location = New System.Drawing.Point(364, 836)
         Me.Label89.Name = "Label89"
         Me.Label89.Size = New System.Drawing.Size(238, 13)
         Me.Label89.TabIndex = 270
@@ -1276,7 +1133,7 @@ Partial Class egenerklering
         'Label90
         '
         Me.Label90.AutoSize = True
-        Me.Label90.Location = New System.Drawing.Point(342, 918)
+        Me.Label90.Location = New System.Drawing.Point(364, 816)
         Me.Label90.Name = "Label90"
         Me.Label90.Size = New System.Drawing.Size(129, 13)
         Me.Label90.TabIndex = 269
@@ -1285,7 +1142,7 @@ Partial Class egenerklering
         'Label91
         '
         Me.Label91.AutoSize = True
-        Me.Label91.Location = New System.Drawing.Point(342, 902)
+        Me.Label91.Location = New System.Drawing.Point(364, 800)
         Me.Label91.Name = "Label91"
         Me.Label91.Size = New System.Drawing.Size(234, 13)
         Me.Label91.TabIndex = 266
@@ -1294,7 +1151,7 @@ Partial Class egenerklering
         'Label92
         '
         Me.Label92.AutoSize = True
-        Me.Label92.Location = New System.Drawing.Point(610, 841)
+        Me.Label92.Location = New System.Drawing.Point(632, 739)
         Me.Label92.Name = "Label92"
         Me.Label92.Size = New System.Drawing.Size(23, 13)
         Me.Label92.TabIndex = 265
@@ -1303,7 +1160,7 @@ Partial Class egenerklering
         'Label93
         '
         Me.Label93.AutoSize = True
-        Me.Label93.Location = New System.Drawing.Point(590, 841)
+        Me.Label93.Location = New System.Drawing.Point(612, 739)
         Me.Label93.Name = "Label93"
         Me.Label93.Size = New System.Drawing.Size(18, 13)
         Me.Label93.TabIndex = 264
@@ -1312,7 +1169,7 @@ Partial Class egenerklering
         'Label94
         '
         Me.Label94.AutoSize = True
-        Me.Label94.Location = New System.Drawing.Point(342, 879)
+        Me.Label94.Location = New System.Drawing.Point(364, 777)
         Me.Label94.Name = "Label94"
         Me.Label94.Size = New System.Drawing.Size(144, 13)
         Me.Label94.TabIndex = 261
@@ -1321,7 +1178,7 @@ Partial Class egenerklering
         'Label95
         '
         Me.Label95.AutoSize = True
-        Me.Label95.Location = New System.Drawing.Point(342, 866)
+        Me.Label95.Location = New System.Drawing.Point(364, 764)
         Me.Label95.Name = "Label95"
         Me.Label95.Size = New System.Drawing.Size(173, 13)
         Me.Label95.TabIndex = 260
@@ -1331,7 +1188,7 @@ Partial Class egenerklering
         '
         Me.Label96.AutoSize = True
         Me.Label96.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label96.Location = New System.Drawing.Point(342, 841)
+        Me.Label96.Location = New System.Drawing.Point(364, 739)
         Me.Label96.Name = "Label96"
         Me.Label96.Size = New System.Drawing.Size(77, 13)
         Me.Label96.TabIndex = 259
@@ -1340,7 +1197,7 @@ Partial Class egenerklering
         'Label97
         '
         Me.Label97.AutoSize = True
-        Me.Label97.Location = New System.Drawing.Point(342, 1130)
+        Me.Label97.Location = New System.Drawing.Point(364, 1028)
         Me.Label97.Name = "Label97"
         Me.Label97.Size = New System.Drawing.Size(240, 13)
         Me.Label97.TabIndex = 291
@@ -1349,7 +1206,7 @@ Partial Class egenerklering
         'Label98
         '
         Me.Label98.AutoSize = True
-        Me.Label98.Location = New System.Drawing.Point(342, 1143)
+        Me.Label98.Location = New System.Drawing.Point(364, 1041)
         Me.Label98.Name = "Label98"
         Me.Label98.Size = New System.Drawing.Size(249, 13)
         Me.Label98.TabIndex = 292
@@ -1358,7 +1215,7 @@ Partial Class egenerklering
         'Label99
         '
         Me.Label99.AutoSize = True
-        Me.Label99.Location = New System.Drawing.Point(342, 1179)
+        Me.Label99.Location = New System.Drawing.Point(364, 1077)
         Me.Label99.Name = "Label99"
         Me.Label99.Size = New System.Drawing.Size(54, 13)
         Me.Label99.TabIndex = 296
@@ -1367,7 +1224,7 @@ Partial Class egenerklering
         'Label100
         '
         Me.Label100.AutoSize = True
-        Me.Label100.Location = New System.Drawing.Point(342, 1166)
+        Me.Label100.Location = New System.Drawing.Point(364, 1064)
         Me.Label100.Name = "Label100"
         Me.Label100.Size = New System.Drawing.Size(219, 13)
         Me.Label100.TabIndex = 295
@@ -1376,7 +1233,7 @@ Partial Class egenerklering
         'Label101
         '
         Me.Label101.AutoSize = True
-        Me.Label101.Location = New System.Drawing.Point(342, 1214)
+        Me.Label101.Location = New System.Drawing.Point(364, 1112)
         Me.Label101.Name = "Label101"
         Me.Label101.Size = New System.Drawing.Size(124, 13)
         Me.Label101.TabIndex = 300
@@ -1385,7 +1242,7 @@ Partial Class egenerklering
         'Label102
         '
         Me.Label102.AutoSize = True
-        Me.Label102.Location = New System.Drawing.Point(342, 1201)
+        Me.Label102.Location = New System.Drawing.Point(364, 1099)
         Me.Label102.Name = "Label102"
         Me.Label102.Size = New System.Drawing.Size(232, 13)
         Me.Label102.TabIndex = 299
@@ -1395,7 +1252,7 @@ Partial Class egenerklering
         '
         Me.Label103.AutoSize = True
         Me.Label103.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label103.Location = New System.Drawing.Point(34, 976)
+        Me.Label103.Location = New System.Drawing.Point(56, 922)
         Me.Label103.Name = "Label103"
         Me.Label103.Size = New System.Drawing.Size(223, 13)
         Me.Label103.TabIndex = 303
@@ -1404,7 +1261,7 @@ Partial Class egenerklering
         'Label104
         '
         Me.Label104.AutoSize = True
-        Me.Label104.Location = New System.Drawing.Point(300, 918)
+        Me.Label104.Location = New System.Drawing.Point(322, 859)
         Me.Label104.Name = "Label104"
         Me.Label104.Size = New System.Drawing.Size(23, 13)
         Me.Label104.TabIndex = 305
@@ -1413,7 +1270,7 @@ Partial Class egenerklering
         'Label105
         '
         Me.Label105.AutoSize = True
-        Me.Label105.Location = New System.Drawing.Point(276, 918)
+        Me.Label105.Location = New System.Drawing.Point(298, 859)
         Me.Label105.Name = "Label105"
         Me.Label105.Size = New System.Drawing.Size(18, 13)
         Me.Label105.TabIndex = 304
@@ -1422,7 +1279,7 @@ Partial Class egenerklering
         'Label106
         '
         Me.Label106.AutoSize = True
-        Me.Label106.Location = New System.Drawing.Point(300, 976)
+        Me.Label106.Location = New System.Drawing.Point(322, 922)
         Me.Label106.Name = "Label106"
         Me.Label106.Size = New System.Drawing.Size(23, 13)
         Me.Label106.TabIndex = 307
@@ -1431,7 +1288,7 @@ Partial Class egenerklering
         'Label107
         '
         Me.Label107.AutoSize = True
-        Me.Label107.Location = New System.Drawing.Point(276, 976)
+        Me.Label107.Location = New System.Drawing.Point(298, 922)
         Me.Label107.Name = "Label107"
         Me.Label107.Size = New System.Drawing.Size(18, 13)
         Me.Label107.TabIndex = 306
@@ -1440,7 +1297,7 @@ Partial Class egenerklering
         'Label108
         '
         Me.Label108.AutoSize = True
-        Me.Label108.Location = New System.Drawing.Point(34, 999)
+        Me.Label108.Location = New System.Drawing.Point(56, 945)
         Me.Label108.Name = "Label108"
         Me.Label108.Size = New System.Drawing.Size(184, 13)
         Me.Label108.TabIndex = 308
@@ -1449,7 +1306,7 @@ Partial Class egenerklering
         'Label109
         '
         Me.Label109.AutoSize = True
-        Me.Label109.Location = New System.Drawing.Point(34, 1024)
+        Me.Label109.Location = New System.Drawing.Point(56, 970)
         Me.Label109.Name = "Label109"
         Me.Label109.Size = New System.Drawing.Size(57, 13)
         Me.Label109.TabIndex = 311
@@ -1458,7 +1315,7 @@ Partial Class egenerklering
         'Label110
         '
         Me.Label110.AutoSize = True
-        Me.Label110.Location = New System.Drawing.Point(34, 1046)
+        Me.Label110.Location = New System.Drawing.Point(56, 992)
         Me.Label110.Name = "Label110"
         Me.Label110.Size = New System.Drawing.Size(119, 13)
         Me.Label110.TabIndex = 314
@@ -1467,7 +1324,7 @@ Partial Class egenerklering
         'Label111
         '
         Me.Label111.AutoSize = True
-        Me.Label111.Location = New System.Drawing.Point(34, 1069)
+        Me.Label111.Location = New System.Drawing.Point(56, 1015)
         Me.Label111.Name = "Label111"
         Me.Label111.Size = New System.Drawing.Size(172, 13)
         Me.Label111.TabIndex = 317
@@ -1476,7 +1333,7 @@ Partial Class egenerklering
         'Label112
         '
         Me.Label112.AutoSize = True
-        Me.Label112.Location = New System.Drawing.Point(34, 1091)
+        Me.Label112.Location = New System.Drawing.Point(56, 1037)
         Me.Label112.Name = "Label112"
         Me.Label112.Size = New System.Drawing.Size(69, 13)
         Me.Label112.TabIndex = 320
@@ -1485,7 +1342,7 @@ Partial Class egenerklering
         'Label113
         '
         Me.Label113.AutoSize = True
-        Me.Label113.Location = New System.Drawing.Point(34, 1117)
+        Me.Label113.Location = New System.Drawing.Point(56, 1063)
         Me.Label113.Name = "Label113"
         Me.Label113.Size = New System.Drawing.Size(113, 13)
         Me.Label113.TabIndex = 323
@@ -1494,7 +1351,7 @@ Partial Class egenerklering
         'Label114
         '
         Me.Label114.AutoSize = True
-        Me.Label114.Location = New System.Drawing.Point(34, 1143)
+        Me.Label114.Location = New System.Drawing.Point(56, 1089)
         Me.Label114.Name = "Label114"
         Me.Label114.Size = New System.Drawing.Size(230, 13)
         Me.Label114.TabIndex = 326
@@ -1503,7 +1360,7 @@ Partial Class egenerklering
         'Label115
         '
         Me.Label115.AutoSize = True
-        Me.Label115.Location = New System.Drawing.Point(34, 1166)
+        Me.Label115.Location = New System.Drawing.Point(56, 1112)
         Me.Label115.Name = "Label115"
         Me.Label115.Size = New System.Drawing.Size(239, 13)
         Me.Label115.TabIndex = 329
@@ -1512,7 +1369,7 @@ Partial Class egenerklering
         'Label116
         '
         Me.Label116.AutoSize = True
-        Me.Label116.Location = New System.Drawing.Point(34, 1190)
+        Me.Label116.Location = New System.Drawing.Point(56, 1136)
         Me.Label116.Name = "Label116"
         Me.Label116.Size = New System.Drawing.Size(101, 13)
         Me.Label116.TabIndex = 332
@@ -1521,7 +1378,7 @@ Partial Class egenerklering
         'Label117
         '
         Me.Label117.AutoSize = True
-        Me.Label117.Location = New System.Drawing.Point(34, 1214)
+        Me.Label117.Location = New System.Drawing.Point(56, 1160)
         Me.Label117.Name = "Label117"
         Me.Label117.Size = New System.Drawing.Size(95, 13)
         Me.Label117.TabIndex = 335
@@ -1530,7 +1387,7 @@ Partial Class egenerklering
         'Label118
         '
         Me.Label118.AutoSize = True
-        Me.Label118.Location = New System.Drawing.Point(34, 1237)
+        Me.Label118.Location = New System.Drawing.Point(56, 1183)
         Me.Label118.Name = "Label118"
         Me.Label118.Size = New System.Drawing.Size(136, 13)
         Me.Label118.TabIndex = 338
@@ -1539,7 +1396,7 @@ Partial Class egenerklering
         'Label119
         '
         Me.Label119.AutoSize = True
-        Me.Label119.Location = New System.Drawing.Point(34, 1260)
+        Me.Label119.Location = New System.Drawing.Point(56, 1206)
         Me.Label119.Name = "Label119"
         Me.Label119.Size = New System.Drawing.Size(60, 13)
         Me.Label119.TabIndex = 341
@@ -1548,7 +1405,7 @@ Partial Class egenerklering
         'Label120
         '
         Me.Label120.AutoSize = True
-        Me.Label120.Location = New System.Drawing.Point(34, 1282)
+        Me.Label120.Location = New System.Drawing.Point(56, 1228)
         Me.Label120.Name = "Label120"
         Me.Label120.Size = New System.Drawing.Size(213, 13)
         Me.Label120.TabIndex = 344
@@ -1557,7 +1414,7 @@ Partial Class egenerklering
         'Label121
         '
         Me.Label121.AutoSize = True
-        Me.Label121.Location = New System.Drawing.Point(34, 1319)
+        Me.Label121.Location = New System.Drawing.Point(56, 1265)
         Me.Label121.Name = "Label121"
         Me.Label121.Size = New System.Drawing.Size(72, 13)
         Me.Label121.TabIndex = 348
@@ -1566,7 +1423,7 @@ Partial Class egenerklering
         'Label122
         '
         Me.Label122.AutoSize = True
-        Me.Label122.Location = New System.Drawing.Point(34, 1306)
+        Me.Label122.Location = New System.Drawing.Point(56, 1252)
         Me.Label122.Name = "Label122"
         Me.Label122.Size = New System.Drawing.Size(198, 13)
         Me.Label122.TabIndex = 347
@@ -1575,7 +1432,7 @@ Partial Class egenerklering
         'Label123
         '
         Me.Label123.AutoSize = True
-        Me.Label123.Location = New System.Drawing.Point(34, 1356)
+        Me.Label123.Location = New System.Drawing.Point(56, 1302)
         Me.Label123.Name = "Label123"
         Me.Label123.Size = New System.Drawing.Size(44, 13)
         Me.Label123.TabIndex = 352
@@ -1584,7 +1441,7 @@ Partial Class egenerklering
         'Label124
         '
         Me.Label124.AutoSize = True
-        Me.Label124.Location = New System.Drawing.Point(34, 1343)
+        Me.Label124.Location = New System.Drawing.Point(56, 1289)
         Me.Label124.Name = "Label124"
         Me.Label124.Size = New System.Drawing.Size(214, 13)
         Me.Label124.TabIndex = 351
@@ -1592,7 +1449,7 @@ Partial Class egenerklering
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(260, 1527)
+        Me.Button1.Location = New System.Drawing.Point(282, 1425)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(158, 23)
         Me.Button1.TabIndex = 356
@@ -1603,7 +1460,7 @@ Partial Class egenerklering
         '
         Me.Panel1.Controls.Add(Me.rb612)
         Me.Panel1.Controls.Add(Me.rb611)
-        Me.Panel1.Location = New System.Drawing.Point(587, 300)
+        Me.Panel1.Location = New System.Drawing.Point(609, 198)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(46, 19)
         Me.Panel1.TabIndex = 367
@@ -1632,7 +1489,7 @@ Partial Class egenerklering
         '
         Me.Panel2.Controls.Add(Me.rb622)
         Me.Panel2.Controls.Add(Me.rb621)
-        Me.Panel2.Location = New System.Drawing.Point(587, 336)
+        Me.Panel2.Location = New System.Drawing.Point(609, 234)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(46, 19)
         Me.Panel2.TabIndex = 368
@@ -1661,7 +1518,7 @@ Partial Class egenerklering
         '
         Me.Panel3.Controls.Add(Me.rb642)
         Me.Panel3.Controls.Add(Me.rb641)
-        Me.Panel3.Location = New System.Drawing.Point(587, 404)
+        Me.Panel3.Location = New System.Drawing.Point(609, 302)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(46, 19)
         Me.Panel3.TabIndex = 369
@@ -1690,7 +1547,7 @@ Partial Class egenerklering
         '
         Me.Panel4.Controls.Add(Me.rb652)
         Me.Panel4.Controls.Add(Me.rb651)
-        Me.Panel4.Location = New System.Drawing.Point(587, 465)
+        Me.Panel4.Location = New System.Drawing.Point(609, 363)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(46, 19)
         Me.Panel4.TabIndex = 370
@@ -1719,7 +1576,7 @@ Partial Class egenerklering
         '
         Me.Panel5.Controls.Add(Me.rb662)
         Me.Panel5.Controls.Add(Me.rb661)
-        Me.Panel5.Location = New System.Drawing.Point(587, 510)
+        Me.Panel5.Location = New System.Drawing.Point(609, 408)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(46, 19)
         Me.Panel5.TabIndex = 371
@@ -1748,7 +1605,7 @@ Partial Class egenerklering
         '
         Me.Panel6.Controls.Add(Me.rb672)
         Me.Panel6.Controls.Add(Me.rb671)
-        Me.Panel6.Location = New System.Drawing.Point(587, 538)
+        Me.Panel6.Location = New System.Drawing.Point(609, 436)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(46, 19)
         Me.Panel6.TabIndex = 372
@@ -1777,7 +1634,7 @@ Partial Class egenerklering
         '
         Me.Panel7.Controls.Add(Me.rb632)
         Me.Panel7.Controls.Add(Me.rb631)
-        Me.Panel7.Location = New System.Drawing.Point(587, 361)
+        Me.Panel7.Location = New System.Drawing.Point(609, 259)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(46, 19)
         Me.Panel7.TabIndex = 373
@@ -1806,7 +1663,7 @@ Partial Class egenerklering
         '
         Me.Panel8.Controls.Add(Me.rb132)
         Me.Panel8.Controls.Add(Me.rb131)
-        Me.Panel8.Location = New System.Drawing.Point(277, 353)
+        Me.Panel8.Location = New System.Drawing.Point(299, 251)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(46, 19)
         Me.Panel8.TabIndex = 377
@@ -1835,7 +1692,7 @@ Partial Class egenerklering
         '
         Me.Panel9.Controls.Add(Me.rb142)
         Me.Panel9.Controls.Add(Me.rb141)
-        Me.Panel9.Location = New System.Drawing.Point(277, 386)
+        Me.Panel9.Location = New System.Drawing.Point(299, 284)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(46, 19)
         Me.Panel9.TabIndex = 376
@@ -1864,7 +1721,7 @@ Partial Class egenerklering
         '
         Me.Panel10.Controls.Add(Me.rb122)
         Me.Panel10.Controls.Add(Me.rb121)
-        Me.Panel10.Location = New System.Drawing.Point(277, 322)
+        Me.Panel10.Location = New System.Drawing.Point(299, 220)
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Size = New System.Drawing.Size(46, 19)
         Me.Panel10.TabIndex = 375
@@ -1893,7 +1750,7 @@ Partial Class egenerklering
         '
         Me.Panel11.Controls.Add(Me.rb112)
         Me.Panel11.Controls.Add(Me.rb111)
-        Me.Panel11.Location = New System.Drawing.Point(277, 300)
+        Me.Panel11.Location = New System.Drawing.Point(299, 198)
         Me.Panel11.Name = "Panel11"
         Me.Panel11.Size = New System.Drawing.Size(46, 19)
         Me.Panel11.TabIndex = 374
@@ -1922,7 +1779,7 @@ Partial Class egenerklering
         '
         Me.Panel12.Controls.Add(Me.rb232)
         Me.Panel12.Controls.Add(Me.rb231)
-        Me.Panel12.Location = New System.Drawing.Point(277, 499)
+        Me.Panel12.Location = New System.Drawing.Point(299, 436)
         Me.Panel12.Name = "Panel12"
         Me.Panel12.Size = New System.Drawing.Size(46, 19)
         Me.Panel12.TabIndex = 377
@@ -1951,7 +1808,7 @@ Partial Class egenerklering
         '
         Me.Panel14.Controls.Add(Me.rb222)
         Me.Panel14.Controls.Add(Me.rb221)
-        Me.Panel14.Location = New System.Drawing.Point(277, 477)
+        Me.Panel14.Location = New System.Drawing.Point(299, 414)
         Me.Panel14.Name = "Panel14"
         Me.Panel14.Size = New System.Drawing.Size(46, 19)
         Me.Panel14.TabIndex = 375
@@ -1980,7 +1837,7 @@ Partial Class egenerklering
         '
         Me.Panel15.Controls.Add(Me.rb212)
         Me.Panel15.Controls.Add(Me.rb211)
-        Me.Panel15.Location = New System.Drawing.Point(277, 455)
+        Me.Panel15.Location = New System.Drawing.Point(299, 392)
         Me.Panel15.Name = "Panel15"
         Me.Panel15.Size = New System.Drawing.Size(46, 19)
         Me.Panel15.TabIndex = 374
@@ -2005,40 +1862,11 @@ Partial Class egenerklering
         Me.rb211.TabStop = True
         Me.rb211.UseVisualStyleBackColor = True
         '
-        'Panel13
-        '
-        Me.Panel13.Controls.Add(Me.rb262)
-        Me.Panel13.Controls.Add(Me.rb261)
-        Me.Panel13.Location = New System.Drawing.Point(277, 568)
-        Me.Panel13.Name = "Panel13"
-        Me.Panel13.Size = New System.Drawing.Size(46, 19)
-        Me.Panel13.TabIndex = 380
-        '
-        'rb262
-        '
-        Me.rb262.AutoSize = True
-        Me.rb262.Location = New System.Drawing.Point(29, 3)
-        Me.rb262.Name = "rb262"
-        Me.rb262.Size = New System.Drawing.Size(14, 13)
-        Me.rb262.TabIndex = 4
-        Me.rb262.TabStop = True
-        Me.rb262.UseVisualStyleBackColor = True
-        '
-        'rb261
-        '
-        Me.rb261.AutoSize = True
-        Me.rb261.Location = New System.Drawing.Point(5, 3)
-        Me.rb261.Name = "rb261"
-        Me.rb261.Size = New System.Drawing.Size(14, 13)
-        Me.rb261.TabIndex = 3
-        Me.rb261.TabStop = True
-        Me.rb261.UseVisualStyleBackColor = True
-        '
         'Panel16
         '
         Me.Panel16.Controls.Add(Me.rb252)
         Me.Panel16.Controls.Add(Me.rb251)
-        Me.Panel16.Location = New System.Drawing.Point(277, 546)
+        Me.Panel16.Location = New System.Drawing.Point(299, 483)
         Me.Panel16.Name = "Panel16"
         Me.Panel16.Size = New System.Drawing.Size(46, 19)
         Me.Panel16.TabIndex = 379
@@ -2067,7 +1895,7 @@ Partial Class egenerklering
         '
         Me.Panel17.Controls.Add(Me.rb242)
         Me.Panel17.Controls.Add(Me.rb241)
-        Me.Panel17.Location = New System.Drawing.Point(277, 524)
+        Me.Panel17.Location = New System.Drawing.Point(299, 461)
         Me.Panel17.Name = "Panel17"
         Me.Panel17.Size = New System.Drawing.Size(46, 19)
         Me.Panel17.TabIndex = 378
@@ -2096,7 +1924,7 @@ Partial Class egenerklering
         '
         Me.Panel18.Controls.Add(Me.rb332)
         Me.Panel18.Controls.Add(Me.rb331)
-        Me.Panel18.Location = New System.Drawing.Point(277, 696)
+        Me.Panel18.Location = New System.Drawing.Point(299, 623)
         Me.Panel18.Name = "Panel18"
         Me.Panel18.Size = New System.Drawing.Size(46, 19)
         Me.Panel18.TabIndex = 383
@@ -2125,7 +1953,7 @@ Partial Class egenerklering
         '
         Me.Panel19.Controls.Add(Me.rb322)
         Me.Panel19.Controls.Add(Me.rb321)
-        Me.Panel19.Location = New System.Drawing.Point(277, 660)
+        Me.Panel19.Location = New System.Drawing.Point(299, 587)
         Me.Panel19.Name = "Panel19"
         Me.Panel19.Size = New System.Drawing.Size(46, 19)
         Me.Panel19.TabIndex = 382
@@ -2154,7 +1982,7 @@ Partial Class egenerklering
         '
         Me.Panel20.Controls.Add(Me.rb312)
         Me.Panel20.Controls.Add(Me.rb311)
-        Me.Panel20.Location = New System.Drawing.Point(277, 628)
+        Me.Panel20.Location = New System.Drawing.Point(299, 555)
         Me.Panel20.Name = "Panel20"
         Me.Panel20.Size = New System.Drawing.Size(46, 19)
         Me.Panel20.TabIndex = 381
@@ -2183,7 +2011,7 @@ Partial Class egenerklering
         '
         Me.Panel21.Controls.Add(Me.rb362)
         Me.Panel21.Controls.Add(Me.rb361)
-        Me.Panel21.Location = New System.Drawing.Point(277, 777)
+        Me.Panel21.Location = New System.Drawing.Point(299, 704)
         Me.Panel21.Name = "Panel21"
         Me.Panel21.Size = New System.Drawing.Size(46, 19)
         Me.Panel21.TabIndex = 386
@@ -2212,7 +2040,7 @@ Partial Class egenerklering
         '
         Me.Panel22.Controls.Add(Me.rb352)
         Me.Panel22.Controls.Add(Me.rb351)
-        Me.Panel22.Location = New System.Drawing.Point(277, 746)
+        Me.Panel22.Location = New System.Drawing.Point(299, 673)
         Me.Panel22.Name = "Panel22"
         Me.Panel22.Size = New System.Drawing.Size(46, 19)
         Me.Panel22.TabIndex = 385
@@ -2241,7 +2069,7 @@ Partial Class egenerklering
         '
         Me.Panel23.Controls.Add(Me.rb342)
         Me.Panel23.Controls.Add(Me.rb341)
-        Me.Panel23.Location = New System.Drawing.Point(277, 721)
+        Me.Panel23.Location = New System.Drawing.Point(299, 648)
         Me.Panel23.Name = "Panel23"
         Me.Panel23.Size = New System.Drawing.Size(46, 19)
         Me.Panel23.TabIndex = 384
@@ -2270,7 +2098,7 @@ Partial Class egenerklering
         '
         Me.Panel24.Controls.Add(Me.rb372)
         Me.Panel24.Controls.Add(Me.rb371)
-        Me.Panel24.Location = New System.Drawing.Point(277, 802)
+        Me.Panel24.Location = New System.Drawing.Point(299, 729)
         Me.Panel24.Name = "Panel24"
         Me.Panel24.Size = New System.Drawing.Size(46, 19)
         Me.Panel24.TabIndex = 387
@@ -2299,7 +2127,7 @@ Partial Class egenerklering
         '
         Me.Panel25.Controls.Add(Me.rb382)
         Me.Panel25.Controls.Add(Me.rb381)
-        Me.Panel25.Location = New System.Drawing.Point(277, 835)
+        Me.Panel25.Location = New System.Drawing.Point(299, 762)
         Me.Panel25.Name = "Panel25"
         Me.Panel25.Size = New System.Drawing.Size(46, 19)
         Me.Panel25.TabIndex = 388
@@ -2328,7 +2156,7 @@ Partial Class egenerklering
         '
         Me.Panel27.Controls.Add(Me.rb742)
         Me.Panel27.Controls.Add(Me.rb741)
-        Me.Panel27.Location = New System.Drawing.Point(586, 737)
+        Me.Panel27.Location = New System.Drawing.Point(608, 635)
         Me.Panel27.Name = "Panel27"
         Me.Panel27.Size = New System.Drawing.Size(46, 19)
         Me.Panel27.TabIndex = 392
@@ -2357,7 +2185,7 @@ Partial Class egenerklering
         '
         Me.Panel28.Controls.Add(Me.rb732)
         Me.Panel28.Controls.Add(Me.rb731)
-        Me.Panel28.Location = New System.Drawing.Point(586, 696)
+        Me.Panel28.Location = New System.Drawing.Point(608, 594)
         Me.Panel28.Name = "Panel28"
         Me.Panel28.Size = New System.Drawing.Size(46, 19)
         Me.Panel28.TabIndex = 391
@@ -2386,7 +2214,7 @@ Partial Class egenerklering
         '
         Me.Panel29.Controls.Add(Me.rb722)
         Me.Panel29.Controls.Add(Me.rb721)
-        Me.Panel29.Location = New System.Drawing.Point(586, 660)
+        Me.Panel29.Location = New System.Drawing.Point(608, 558)
         Me.Panel29.Name = "Panel29"
         Me.Panel29.Size = New System.Drawing.Size(46, 19)
         Me.Panel29.TabIndex = 390
@@ -2415,7 +2243,7 @@ Partial Class egenerklering
         '
         Me.Panel30.Controls.Add(Me.rb712)
         Me.Panel30.Controls.Add(Me.rb711)
-        Me.Panel30.Location = New System.Drawing.Point(586, 628)
+        Me.Panel30.Location = New System.Drawing.Point(608, 526)
         Me.Panel30.Name = "Panel30"
         Me.Panel30.Size = New System.Drawing.Size(46, 19)
         Me.Panel30.TabIndex = 389
@@ -2444,7 +2272,7 @@ Partial Class egenerklering
         '
         Me.Panel26.Controls.Add(Me.rb412)
         Me.Panel26.Controls.Add(Me.rb411)
-        Me.Panel26.Location = New System.Drawing.Point(277, 938)
+        Me.Panel26.Location = New System.Drawing.Point(299, 879)
         Me.Panel26.Name = "Panel26"
         Me.Panel26.Size = New System.Drawing.Size(46, 19)
         Me.Panel26.TabIndex = 393
@@ -2473,7 +2301,7 @@ Partial Class egenerklering
         '
         Me.Panel31.Controls.Add(Me.rb812)
         Me.Panel31.Controls.Add(Me.rb811)
-        Me.Panel31.Location = New System.Drawing.Point(587, 802)
+        Me.Panel31.Location = New System.Drawing.Point(609, 700)
         Me.Panel31.Name = "Panel31"
         Me.Panel31.Size = New System.Drawing.Size(46, 19)
         Me.Panel31.TabIndex = 389
@@ -2502,7 +2330,7 @@ Partial Class egenerklering
         '
         Me.Panel32.Controls.Add(Me.rb582)
         Me.Panel32.Controls.Add(Me.rb581)
-        Me.Panel32.Location = New System.Drawing.Point(277, 1166)
+        Me.Panel32.Location = New System.Drawing.Point(299, 1112)
         Me.Panel32.Name = "Panel32"
         Me.Panel32.Size = New System.Drawing.Size(46, 19)
         Me.Panel32.TabIndex = 401
@@ -2531,7 +2359,7 @@ Partial Class egenerklering
         '
         Me.Panel33.Controls.Add(Me.rb572)
         Me.Panel33.Controls.Add(Me.rb571)
-        Me.Panel33.Location = New System.Drawing.Point(277, 1141)
+        Me.Panel33.Location = New System.Drawing.Point(299, 1087)
         Me.Panel33.Name = "Panel33"
         Me.Panel33.Size = New System.Drawing.Size(46, 19)
         Me.Panel33.TabIndex = 400
@@ -2560,7 +2388,7 @@ Partial Class egenerklering
         '
         Me.Panel34.Controls.Add(Me.rb562)
         Me.Panel34.Controls.Add(Me.rb561)
-        Me.Panel34.Location = New System.Drawing.Point(277, 1116)
+        Me.Panel34.Location = New System.Drawing.Point(299, 1062)
         Me.Panel34.Name = "Panel34"
         Me.Panel34.Size = New System.Drawing.Size(46, 19)
         Me.Panel34.TabIndex = 399
@@ -2589,7 +2417,7 @@ Partial Class egenerklering
         '
         Me.Panel35.Controls.Add(Me.rb552)
         Me.Panel35.Controls.Add(Me.rb551)
-        Me.Panel35.Location = New System.Drawing.Point(277, 1091)
+        Me.Panel35.Location = New System.Drawing.Point(299, 1037)
         Me.Panel35.Name = "Panel35"
         Me.Panel35.Size = New System.Drawing.Size(46, 19)
         Me.Panel35.TabIndex = 398
@@ -2618,7 +2446,7 @@ Partial Class egenerklering
         '
         Me.Panel36.Controls.Add(Me.rb542)
         Me.Panel36.Controls.Add(Me.rb541)
-        Me.Panel36.Location = New System.Drawing.Point(277, 1069)
+        Me.Panel36.Location = New System.Drawing.Point(299, 1015)
         Me.Panel36.Name = "Panel36"
         Me.Panel36.Size = New System.Drawing.Size(46, 19)
         Me.Panel36.TabIndex = 397
@@ -2647,7 +2475,7 @@ Partial Class egenerklering
         '
         Me.Panel37.Controls.Add(Me.rb532)
         Me.Panel37.Controls.Add(Me.rb531)
-        Me.Panel37.Location = New System.Drawing.Point(277, 1047)
+        Me.Panel37.Location = New System.Drawing.Point(299, 993)
         Me.Panel37.Name = "Panel37"
         Me.Panel37.Size = New System.Drawing.Size(46, 19)
         Me.Panel37.TabIndex = 396
@@ -2676,7 +2504,7 @@ Partial Class egenerklering
         '
         Me.Panel38.Controls.Add(Me.rb522)
         Me.Panel38.Controls.Add(Me.rb521)
-        Me.Panel38.Location = New System.Drawing.Point(277, 1026)
+        Me.Panel38.Location = New System.Drawing.Point(299, 972)
         Me.Panel38.Name = "Panel38"
         Me.Panel38.Size = New System.Drawing.Size(46, 19)
         Me.Panel38.TabIndex = 395
@@ -2705,7 +2533,7 @@ Partial Class egenerklering
         '
         Me.Panel39.Controls.Add(Me.rb512)
         Me.Panel39.Controls.Add(Me.rb511)
-        Me.Panel39.Location = New System.Drawing.Point(277, 999)
+        Me.Panel39.Location = New System.Drawing.Point(299, 945)
         Me.Panel39.Name = "Panel39"
         Me.Panel39.Size = New System.Drawing.Size(46, 19)
         Me.Panel39.TabIndex = 394
@@ -2734,7 +2562,7 @@ Partial Class egenerklering
         '
         Me.Panel40.Controls.Add(Me.rb5112)
         Me.Panel40.Controls.Add(Me.rb5111)
-        Me.Panel40.Location = New System.Drawing.Point(277, 1236)
+        Me.Panel40.Location = New System.Drawing.Point(299, 1182)
         Me.Panel40.Name = "Panel40"
         Me.Panel40.Size = New System.Drawing.Size(46, 19)
         Me.Panel40.TabIndex = 404
@@ -2763,7 +2591,7 @@ Partial Class egenerklering
         '
         Me.Panel41.Controls.Add(Me.rb5102)
         Me.Panel41.Controls.Add(Me.rb5101)
-        Me.Panel41.Location = New System.Drawing.Point(277, 1214)
+        Me.Panel41.Location = New System.Drawing.Point(299, 1160)
         Me.Panel41.Name = "Panel41"
         Me.Panel41.Size = New System.Drawing.Size(46, 19)
         Me.Panel41.TabIndex = 403
@@ -2792,7 +2620,7 @@ Partial Class egenerklering
         '
         Me.Panel42.Controls.Add(Me.rb592)
         Me.Panel42.Controls.Add(Me.rb591)
-        Me.Panel42.Location = New System.Drawing.Point(277, 1189)
+        Me.Panel42.Location = New System.Drawing.Point(299, 1135)
         Me.Panel42.Name = "Panel42"
         Me.Panel42.Size = New System.Drawing.Size(46, 19)
         Me.Panel42.TabIndex = 402
@@ -2821,7 +2649,7 @@ Partial Class egenerklering
         '
         Me.Panel43.Controls.Add(Me.rb5142)
         Me.Panel43.Controls.Add(Me.rb5141)
-        Me.Panel43.Location = New System.Drawing.Point(277, 1304)
+        Me.Panel43.Location = New System.Drawing.Point(299, 1250)
         Me.Panel43.Name = "Panel43"
         Me.Panel43.Size = New System.Drawing.Size(46, 19)
         Me.Panel43.TabIndex = 407
@@ -2850,7 +2678,7 @@ Partial Class egenerklering
         '
         Me.Panel44.Controls.Add(Me.rb5132)
         Me.Panel44.Controls.Add(Me.rb5131)
-        Me.Panel44.Location = New System.Drawing.Point(277, 1281)
+        Me.Panel44.Location = New System.Drawing.Point(299, 1227)
         Me.Panel44.Name = "Panel44"
         Me.Panel44.Size = New System.Drawing.Size(46, 19)
         Me.Panel44.TabIndex = 406
@@ -2879,7 +2707,7 @@ Partial Class egenerklering
         '
         Me.Panel45.Controls.Add(Me.rb5122)
         Me.Panel45.Controls.Add(Me.rb5121)
-        Me.Panel45.Location = New System.Drawing.Point(277, 1258)
+        Me.Panel45.Location = New System.Drawing.Point(299, 1204)
         Me.Panel45.Name = "Panel45"
         Me.Panel45.Size = New System.Drawing.Size(46, 19)
         Me.Panel45.TabIndex = 405
@@ -2908,7 +2736,7 @@ Partial Class egenerklering
         '
         Me.Panel48.Controls.Add(Me.rb5152)
         Me.Panel48.Controls.Add(Me.rb5151)
-        Me.Panel48.Location = New System.Drawing.Point(277, 1343)
+        Me.Panel48.Location = New System.Drawing.Point(299, 1289)
         Me.Panel48.Name = "Panel48"
         Me.Panel48.Size = New System.Drawing.Size(46, 19)
         Me.Panel48.TabIndex = 408
@@ -2937,7 +2765,7 @@ Partial Class egenerklering
         '
         Me.Panel46.Controls.Add(Me.rb9102)
         Me.Panel46.Controls.Add(Me.rb9101)
-        Me.Panel46.Location = New System.Drawing.Point(587, 1201)
+        Me.Panel46.Location = New System.Drawing.Point(609, 1099)
         Me.Panel46.Name = "Panel46"
         Me.Panel46.Size = New System.Drawing.Size(46, 19)
         Me.Panel46.TabIndex = 418
@@ -2966,7 +2794,7 @@ Partial Class egenerklering
         '
         Me.Panel47.Controls.Add(Me.rb992)
         Me.Panel47.Controls.Add(Me.rb991)
-        Me.Panel47.Location = New System.Drawing.Point(587, 1166)
+        Me.Panel47.Location = New System.Drawing.Point(609, 1064)
         Me.Panel47.Name = "Panel47"
         Me.Panel47.Size = New System.Drawing.Size(46, 19)
         Me.Panel47.TabIndex = 417
@@ -2995,7 +2823,7 @@ Partial Class egenerklering
         '
         Me.Panel49.Controls.Add(Me.rb982)
         Me.Panel49.Controls.Add(Me.rb981)
-        Me.Panel49.Location = New System.Drawing.Point(587, 1119)
+        Me.Panel49.Location = New System.Drawing.Point(609, 1017)
         Me.Panel49.Name = "Panel49"
         Me.Panel49.Size = New System.Drawing.Size(46, 19)
         Me.Panel49.TabIndex = 416
@@ -3024,7 +2852,7 @@ Partial Class egenerklering
         '
         Me.Panel50.Controls.Add(Me.rb972)
         Me.Panel50.Controls.Add(Me.rb971)
-        Me.Panel50.Location = New System.Drawing.Point(587, 1076)
+        Me.Panel50.Location = New System.Drawing.Point(609, 974)
         Me.Panel50.Name = "Panel50"
         Me.Panel50.Size = New System.Drawing.Size(46, 19)
         Me.Panel50.TabIndex = 415
@@ -3053,7 +2881,7 @@ Partial Class egenerklering
         '
         Me.Panel51.Controls.Add(Me.rb962)
         Me.Panel51.Controls.Add(Me.rb961)
-        Me.Panel51.Location = New System.Drawing.Point(587, 1053)
+        Me.Panel51.Location = New System.Drawing.Point(609, 951)
         Me.Panel51.Name = "Panel51"
         Me.Panel51.Size = New System.Drawing.Size(46, 19)
         Me.Panel51.TabIndex = 414
@@ -3082,7 +2910,7 @@ Partial Class egenerklering
         '
         Me.Panel52.Controls.Add(Me.rb952)
         Me.Panel52.Controls.Add(Me.rb951)
-        Me.Panel52.Location = New System.Drawing.Point(587, 1018)
+        Me.Panel52.Location = New System.Drawing.Point(609, 916)
         Me.Panel52.Name = "Panel52"
         Me.Panel52.Size = New System.Drawing.Size(46, 19)
         Me.Panel52.TabIndex = 413
@@ -3111,7 +2939,7 @@ Partial Class egenerklering
         '
         Me.Panel53.Controls.Add(Me.rb942)
         Me.Panel53.Controls.Add(Me.rb941)
-        Me.Panel53.Location = New System.Drawing.Point(587, 983)
+        Me.Panel53.Location = New System.Drawing.Point(609, 881)
         Me.Panel53.Name = "Panel53"
         Me.Panel53.Size = New System.Drawing.Size(46, 19)
         Me.Panel53.TabIndex = 412
@@ -3140,7 +2968,7 @@ Partial Class egenerklering
         '
         Me.Panel54.Controls.Add(Me.rb932)
         Me.Panel54.Controls.Add(Me.rb931)
-        Me.Panel54.Location = New System.Drawing.Point(587, 945)
+        Me.Panel54.Location = New System.Drawing.Point(609, 843)
         Me.Panel54.Name = "Panel54"
         Me.Panel54.Size = New System.Drawing.Size(46, 19)
         Me.Panel54.TabIndex = 411
@@ -3169,7 +2997,7 @@ Partial Class egenerklering
         '
         Me.Panel55.Controls.Add(Me.rb922)
         Me.Panel55.Controls.Add(Me.rb921)
-        Me.Panel55.Location = New System.Drawing.Point(587, 912)
+        Me.Panel55.Location = New System.Drawing.Point(609, 810)
         Me.Panel55.Name = "Panel55"
         Me.Panel55.Size = New System.Drawing.Size(46, 19)
         Me.Panel55.TabIndex = 410
@@ -3198,7 +3026,7 @@ Partial Class egenerklering
         '
         Me.Panel56.Controls.Add(Me.rb912)
         Me.Panel56.Controls.Add(Me.rb911)
-        Me.Panel56.Location = New System.Drawing.Point(587, 873)
+        Me.Panel56.Location = New System.Drawing.Point(609, 771)
         Me.Panel56.Name = "Panel56"
         Me.Panel56.Size = New System.Drawing.Size(46, 19)
         Me.Panel56.TabIndex = 409
@@ -3226,7 +3054,7 @@ Partial Class egenerklering
         'Label127
         '
         Me.Label127.AutoSize = True
-        Me.Label127.Location = New System.Drawing.Point(90, 234)
+        Me.Label127.Location = New System.Drawing.Point(112, 132)
         Me.Label127.Name = "Label127"
         Me.Label127.Size = New System.Drawing.Size(506, 13)
         Me.Label127.TabIndex = 419
@@ -3236,7 +3064,7 @@ Partial Class egenerklering
         'Label125
         '
         Me.Label125.AutoSize = True
-        Me.Label125.Location = New System.Drawing.Point(90, 256)
+        Me.Label125.Location = New System.Drawing.Point(112, 154)
         Me.Label125.Name = "Label125"
         Me.Label125.Size = New System.Drawing.Size(503, 13)
         Me.Label125.TabIndex = 420
@@ -3247,7 +3075,7 @@ Partial Class egenerklering
         '
         Me.Panel57.Controls.Add(Me.rbEpostNei)
         Me.Panel57.Controls.Add(Me.rbEpostJa)
-        Me.Panel57.Location = New System.Drawing.Point(41, 231)
+        Me.Panel57.Location = New System.Drawing.Point(63, 129)
         Me.Panel57.Name = "Panel57"
         Me.Panel57.Size = New System.Drawing.Size(46, 19)
         Me.Panel57.TabIndex = 421
@@ -3276,7 +3104,7 @@ Partial Class egenerklering
         '
         Me.Panel58.Controls.Add(Me.rbSMSNei)
         Me.Panel58.Controls.Add(Me.rbSMSJa)
-        Me.Panel58.Location = New System.Drawing.Point(41, 253)
+        Me.Panel58.Location = New System.Drawing.Point(63, 151)
         Me.Panel58.Name = "Panel58"
         Me.Panel58.Size = New System.Drawing.Size(46, 19)
         Me.Panel58.TabIndex = 375
@@ -3301,29 +3129,11 @@ Partial Class egenerklering
         Me.rbSMSJa.TabStop = True
         Me.rbSMSJa.UseVisualStyleBackColor = True
         '
-        'Label126
-        '
-        Me.Label126.AutoSize = True
-        Me.Label126.Location = New System.Drawing.Point(63, 212)
-        Me.Label126.Name = "Label126"
-        Me.Label126.Size = New System.Drawing.Size(23, 13)
-        Me.Label126.TabIndex = 423
-        Me.Label126.Text = "Nei"
-        '
-        'Label128
-        '
-        Me.Label128.AutoSize = True
-        Me.Label128.Location = New System.Drawing.Point(43, 212)
-        Me.Label128.Name = "Label128"
-        Me.Label128.Size = New System.Drawing.Size(18, 13)
-        Me.Label128.TabIndex = 422
-        Me.Label128.Text = "Ja"
-        '
         'Panel59
         '
         Me.Panel59.Controls.Add(Me.rb1102)
         Me.Panel59.Controls.Add(Me.rb3101)
-        Me.Panel59.Location = New System.Drawing.Point(277, 885)
+        Me.Panel59.Location = New System.Drawing.Point(299, 812)
         Me.Panel59.Name = "Panel59"
         Me.Panel59.Size = New System.Drawing.Size(46, 19)
         Me.Panel59.TabIndex = 424
@@ -3352,7 +3162,7 @@ Partial Class egenerklering
         '
         Me.Panel60.Controls.Add(Me.rb392)
         Me.Panel60.Controls.Add(Me.rb391)
-        Me.Panel60.Location = New System.Drawing.Point(277, 863)
+        Me.Panel60.Location = New System.Drawing.Point(299, 790)
         Me.Panel60.Name = "Panel60"
         Me.Panel60.Size = New System.Drawing.Size(46, 19)
         Me.Panel60.TabIndex = 389
@@ -3377,45 +3187,123 @@ Partial Class egenerklering
         Me.rb391.TabStop = True
         Me.rb391.UseVisualStyleBackColor = True
         '
-        'ListBox1
-        '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(12, 14)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(630, 407)
-        Me.ListBox1.TabIndex = 425
-        '
         'btnInfo
         '
-        Me.btnInfo.Location = New System.Drawing.Point(491, 165)
+        Me.btnInfo.Location = New System.Drawing.Point(257, 53)
         Me.btnInfo.Name = "btnInfo"
-        Me.btnInfo.Size = New System.Drawing.Size(115, 23)
+        Me.btnInfo.Size = New System.Drawing.Size(224, 55)
         Me.btnInfo.TabIndex = 426
         Me.btnInfo.Text = "Litt viktig informasjon"
         Me.btnInfo.UseVisualStyleBackColor = True
         '
-        'btnLukk
+        'lblDato
         '
-        Me.btnLukk.Location = New System.Drawing.Point(535, 375)
-        Me.btnLukk.Name = "btnLukk"
-        Me.btnLukk.Size = New System.Drawing.Size(75, 23)
-        Me.btnLukk.TabIndex = 427
-        Me.btnLukk.Text = "Lukk"
-        Me.btnLukk.UseVisualStyleBackColor = True
+        Me.lblDato.AutoSize = True
+        Me.lblDato.Location = New System.Drawing.Point(56, 1425)
+        Me.lblDato.Name = "lblDato"
+        Me.lblDato.Size = New System.Drawing.Size(30, 13)
+        Me.lblDato.TabIndex = 428
+        Me.lblDato.Text = "Dato"
+        '
+        'Label129
+        '
+        Me.Label129.AutoSize = True
+        Me.Label129.Location = New System.Drawing.Point(56, 308)
+        Me.Label129.Name = "Label129"
+        Me.Label129.Size = New System.Drawing.Size(205, 13)
+        Me.Label129.TabIndex = 429
+        Me.Label129.Text = "Har du åpne sår, eksem eller hudsykdom?"
+        '
+        'Panel61
+        '
+        Me.Panel61.Controls.Add(Me.rb152)
+        Me.Panel61.Controls.Add(Me.rb151)
+        Me.Panel61.Location = New System.Drawing.Point(299, 306)
+        Me.Panel61.Name = "Panel61"
+        Me.Panel61.Size = New System.Drawing.Size(46, 19)
+        Me.Panel61.TabIndex = 430
+        '
+        'rb152
+        '
+        Me.rb152.AutoSize = True
+        Me.rb152.Location = New System.Drawing.Point(29, 3)
+        Me.rb152.Name = "rb152"
+        Me.rb152.Size = New System.Drawing.Size(14, 13)
+        Me.rb152.TabIndex = 4
+        Me.rb152.TabStop = True
+        Me.rb152.UseVisualStyleBackColor = True
+        '
+        'rb151
+        '
+        Me.rb151.AutoSize = True
+        Me.rb151.Location = New System.Drawing.Point(5, 3)
+        Me.rb151.Name = "rb151"
+        Me.rb151.Size = New System.Drawing.Size(14, 13)
+        Me.rb151.TabIndex = 3
+        Me.rb151.TabStop = True
+        Me.rb151.UseVisualStyleBackColor = True
+        '
+        'Label130
+        '
+        Me.Label130.AutoSize = True
+        Me.Label130.Location = New System.Drawing.Point(56, 334)
+        Me.Label130.Name = "Label130"
+        Me.Label130.Size = New System.Drawing.Size(136, 13)
+        Me.Label130.TabIndex = 431
+        Me.Label130.Text = "Har du piercing i slimhinne?"
+        '
+        'Panel62
+        '
+        Me.Panel62.Controls.Add(Me.rb162)
+        Me.Panel62.Controls.Add(Me.rb161)
+        Me.Panel62.Location = New System.Drawing.Point(299, 331)
+        Me.Panel62.Name = "Panel62"
+        Me.Panel62.Size = New System.Drawing.Size(46, 19)
+        Me.Panel62.TabIndex = 432
+        '
+        'rb162
+        '
+        Me.rb162.AutoSize = True
+        Me.rb162.Location = New System.Drawing.Point(29, 3)
+        Me.rb162.Name = "rb162"
+        Me.rb162.Size = New System.Drawing.Size(14, 13)
+        Me.rb162.TabIndex = 4
+        Me.rb162.TabStop = True
+        Me.rb162.UseVisualStyleBackColor = True
+        '
+        'rb161
+        '
+        Me.rb161.AutoSize = True
+        Me.rb161.Location = New System.Drawing.Point(5, 3)
+        Me.rb161.Name = "rb161"
+        Me.rb161.Size = New System.Drawing.Size(14, 13)
+        Me.rb161.TabIndex = 3
+        Me.rb161.TabStop = True
+        Me.rb161.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(342, 1499)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(0, 13)
+        Me.Label3.TabIndex = 433
         '
         'egenerklering
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(671, 463)
-        Me.Controls.Add(Me.btnLukk)
+        Me.ClientSize = New System.Drawing.Size(705, 463)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Panel62)
+        Me.Controls.Add(Me.Label130)
+        Me.Controls.Add(Me.Panel61)
+        Me.Controls.Add(Me.Label129)
+        Me.Controls.Add(Me.lblDato)
         Me.Controls.Add(Me.btnInfo)
-        Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Panel60)
         Me.Controls.Add(Me.Panel59)
-        Me.Controls.Add(Me.Label126)
-        Me.Controls.Add(Me.Label128)
         Me.Controls.Add(Me.Panel58)
         Me.Controls.Add(Me.Panel57)
         Me.Controls.Add(Me.Label125)
@@ -3459,7 +3347,6 @@ Partial Class egenerklering
         Me.Controls.Add(Me.Panel18)
         Me.Controls.Add(Me.Panel19)
         Me.Controls.Add(Me.Panel20)
-        Me.Controls.Add(Me.Panel13)
         Me.Controls.Add(Me.Panel16)
         Me.Controls.Add(Me.Panel17)
         Me.Controls.Add(Me.Panel12)
@@ -3581,10 +3468,8 @@ Partial Class egenerklering
         Me.Controls.Add(Me.Label23)
         Me.Controls.Add(Me.Label22)
         Me.Controls.Add(Me.Label21)
-        Me.Controls.Add(Me.Label20)
         Me.Controls.Add(Me.Label19)
         Me.Controls.Add(Me.Label18)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label15)
@@ -3593,25 +3478,10 @@ Partial Class egenerklering
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.txtEpostE)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.txtTelefonE)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.txtPostnummerE)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.txtPrivatAdresseE)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.txtFodselsnummerE)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.txtFornavnE)
-        Me.Controls.Add(Me.txtEtternavnE)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "egenerklering"
         Me.Text = "egenerklering"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
@@ -3640,8 +3510,6 @@ Partial Class egenerklering
         Me.Panel14.PerformLayout()
         Me.Panel15.ResumeLayout(False)
         Me.Panel15.PerformLayout()
-        Me.Panel13.ResumeLayout(False)
-        Me.Panel13.PerformLayout()
         Me.Panel16.ResumeLayout(False)
         Me.Panel16.PerformLayout()
         Me.Panel17.ResumeLayout(False)
@@ -3732,6 +3600,10 @@ Partial Class egenerklering
         Me.Panel59.PerformLayout()
         Me.Panel60.ResumeLayout(False)
         Me.Panel60.PerformLayout()
+        Me.Panel61.ResumeLayout(False)
+        Me.Panel61.PerformLayout()
+        Me.Panel62.ResumeLayout(False)
+        Me.Panel62.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -3739,20 +3611,6 @@ Partial Class egenerklering
 
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents txtEtternavnE As TextBox
-    Friend WithEvents txtFornavnE As TextBox
-    Friend WithEvents Label5 As Label
-    Friend WithEvents txtFodselsnummerE As TextBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents txtPrivatAdresseE As TextBox
-    Friend WithEvents Label7 As Label
-    Friend WithEvents txtPostnummerE As TextBox
-    Friend WithEvents Label8 As Label
-    Friend WithEvents txtTelefonE As TextBox
-    Friend WithEvents Label9 As Label
-    Friend WithEvents txtEpostE As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
@@ -3761,10 +3619,8 @@ Partial Class egenerklering
     Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents Label17 As Label
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label18 As Label
     Friend WithEvents Label19 As Label
-    Friend WithEvents Label20 As Label
     Friend WithEvents Label21 As Label
     Friend WithEvents Label22 As Label
     Friend WithEvents Label23 As Label
@@ -3912,9 +3768,6 @@ Partial Class egenerklering
     Friend WithEvents Panel15 As Panel
     Friend WithEvents rb212 As RadioButton
     Friend WithEvents rb211 As RadioButton
-    Friend WithEvents Panel13 As Panel
-    Friend WithEvents rb262 As RadioButton
-    Friend WithEvents rb261 As RadioButton
     Friend WithEvents Panel16 As Panel
     Friend WithEvents rb252 As RadioButton
     Friend WithEvents rb251 As RadioButton
@@ -4046,15 +3899,21 @@ Partial Class egenerklering
     Friend WithEvents Panel58 As Panel
     Friend WithEvents rbSMSNei As RadioButton
     Friend WithEvents rbSMSJa As RadioButton
-    Friend WithEvents Label126 As Label
-    Friend WithEvents Label128 As Label
     Friend WithEvents Panel59 As Panel
     Friend WithEvents rb1102 As RadioButton
     Friend WithEvents rb3101 As RadioButton
     Friend WithEvents Panel60 As Panel
     Friend WithEvents rb392 As RadioButton
     Friend WithEvents rb391 As RadioButton
-    Friend WithEvents ListBox1 As ListBox
     Friend WithEvents btnInfo As Button
-    Friend WithEvents btnLukk As Button
+    Friend WithEvents lblDato As Label
+    Friend WithEvents Label129 As Label
+    Friend WithEvents Panel61 As Panel
+    Friend WithEvents rb152 As RadioButton
+    Friend WithEvents rb151 As RadioButton
+    Friend WithEvents Label130 As Label
+    Friend WithEvents Panel62 As Panel
+    Friend WithEvents rb162 As RadioButton
+    Friend WithEvents rb161 As RadioButton
+    Friend WithEvents Label3 As Label
 End Class
