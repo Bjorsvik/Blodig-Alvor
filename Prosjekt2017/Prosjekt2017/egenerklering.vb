@@ -19,6 +19,28 @@ Public Class egenerklering
         'Radioknappene er navngitt etter bolk, spørsmål, ja (1) og nei (2).
         'Ja-kanppen på første spørsmål i første bolk for derfor rb111.
         'Første tallet står for bolk, andre tallet står for spørsmål og tredje tall står for ja.
+
+
+#Region "varsling_epost"
+        Dim spmEpost As String
+        If rbEpostJa.Checked Then
+            spmEpost = 1
+        Else
+            spmEpost = 0
+        End If
+
+        Dim varslingEpost As String = spmEpost
+#End Region
+#Region "varsling_sms"
+        Dim spmSMS As String
+        If rbSMSJa.Checked Then
+            spmSMS = 1
+        Else
+            spmSMS = 0
+        End If
+
+        Dim varslingSMS As String = spmSMS
+#End Region
 #Region "bolk1"
 
         Dim spm11 As String
@@ -418,9 +440,12 @@ Public Class egenerklering
         Dim bolk9 As String = spm91 + spm92 + spm93 + spm94 + spm95 + spm96 + spm97 + spm98 + spm99 + spm910
 #End Region
 
-        Dim sqlSporring = "insert into Egenerklering_blodgiver (dato, bolk1, bolk2, bolk3, bolk4, bolk5, bolk6, bolk7, bolk8, bolk9) values (CURDATE(), @bolk1, @bolk2, @bolk3, @bolk4, @bolk5, @bolk6, @bolk7, @bolk8, @bolk9)"
+        Dim sqlSporring = "insert into Egenerklering_blodgiver (dato, varslingEpost, varslingSMS, bolk1, bolk2, bolk3, bolk4, bolk5, bolk6, bolk7, bolk8, bolk9) 
+                           values (CURDATE(), @varslingEpost, @varslingSMS, @bolk1, @bolk2, @bolk3, @bolk4, @bolk5, @bolk6, @bolk7, @bolk8, @bolk9)"
         Dim sqlbolk1 As New MySqlCommand(sqlSporring, tilkobling)
 
+        sqlbolk1.Parameters.AddWithValue("@varslingEpost", varslingEpost)
+        sqlbolk1.Parameters.AddWithValue("@varslingSMS", varslingSMS)
         sqlbolk1.Parameters.AddWithValue("@bolk1", bolk1)
         sqlbolk1.Parameters.AddWithValue("@bolk2", bolk2)
         sqlbolk1.Parameters.AddWithValue("@bolk3", bolk3)
@@ -430,6 +455,7 @@ Public Class egenerklering
         sqlbolk1.Parameters.AddWithValue("@bolk7", bolk7)
         sqlbolk1.Parameters.AddWithValue("@bolk8", bolk8)
         sqlbolk1.Parameters.AddWithValue("@bolk9", bolk9)
+
         sqlbolk1.ExecuteNonQuery()
     End Sub
     Private Sub btnInfo_Click(sender As Object, e As EventArgs) Handles btnInfo.Click
