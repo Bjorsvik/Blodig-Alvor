@@ -36,4 +36,8 @@ Public Class minside
             tilkobling.Dispose()
         End Try
     End Sub
+
+    Private Sub tabBrukerinfo_Click(sender As Object, e As EventArgs) Handles tabBrukerinfo.Click
+
+    End Sub
 End Class

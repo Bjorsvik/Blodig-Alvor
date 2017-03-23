@@ -53,6 +53,11 @@ Partial Class Ansattside
         Me.btnInnkalling = New System.Windows.Forms.Button()
         Me.lblBlodtypeØnsket = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.Søk = New System.Windows.Forms.TabPage()
+        Me.btnSok = New System.Windows.Forms.Button()
+        Me.txtSok = New System.Windows.Forms.TextBox()
+        Me.lblSok = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Statistikk.SuspendLayout()
         Me.Reservasjoner.SuspendLayout()
         Me.Lager.SuspendLayout()
@@ -60,6 +65,8 @@ Partial Class Ansattside
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Innkalling.SuspendLayout()
         Me.TabControl1.SuspendLayout()
+        Me.Søk.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Statistikk
@@ -354,17 +361,67 @@ Partial Class Ansattside
         Me.TabControl1.Controls.Add(Me.Lageroppdatering)
         Me.TabControl1.Controls.Add(Me.Reservasjoner)
         Me.TabControl1.Controls.Add(Me.Statistikk)
+        Me.TabControl1.Controls.Add(Me.Søk)
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(989, 559)
+        Me.TabControl1.Size = New System.Drawing.Size(1012, 559)
         Me.TabControl1.TabIndex = 1
+        '
+        'Søk
+        '
+        Me.Søk.Controls.Add(Me.DataGridView1)
+        Me.Søk.Controls.Add(Me.btnSok)
+        Me.Søk.Controls.Add(Me.txtSok)
+        Me.Søk.Controls.Add(Me.lblSok)
+        Me.Søk.Location = New System.Drawing.Point(4, 25)
+        Me.Søk.Name = "Søk"
+        Me.Søk.Padding = New System.Windows.Forms.Padding(3)
+        Me.Søk.Size = New System.Drawing.Size(1004, 530)
+        Me.Søk.TabIndex = 6
+        Me.Søk.Text = "Søk/Endre"
+        Me.Søk.UseVisualStyleBackColor = True
+        '
+        'btnSok
+        '
+        Me.btnSok.Location = New System.Drawing.Point(532, 102)
+        Me.btnSok.Name = "btnSok"
+        Me.btnSok.Size = New System.Drawing.Size(75, 23)
+        Me.btnSok.TabIndex = 2
+        Me.btnSok.Text = "Søk!"
+        Me.btnSok.UseVisualStyleBackColor = True
+        '
+        'txtSok
+        '
+        Me.txtSok.Location = New System.Drawing.Point(324, 103)
+        Me.txtSok.Name = "txtSok"
+        Me.txtSok.Size = New System.Drawing.Size(181, 22)
+        Me.txtSok.TabIndex = 1
+        '
+        'lblSok
+        '
+        Me.lblSok.AutoSize = True
+        Me.lblSok.Location = New System.Drawing.Point(151, 105)
+        Me.lblSok.Name = "lblSok"
+        Me.lblSok.Size = New System.Drawing.Size(167, 17)
+        Me.lblSok.TabIndex = 0
+        Me.lblSok.Text = "Søk etter telefonnummer:"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.GridColor = System.Drawing.SystemColors.Control
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 165)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowTemplate.Height = 24
+        Me.DataGridView1.Size = New System.Drawing.Size(1004, 88)
+        Me.DataGridView1.TabIndex = 4
         '
         'Ansattside
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(982, 553)
+        Me.ClientSize = New System.Drawing.Size(1013, 556)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "Ansattside"
         Me.Text = "Ansattside"
@@ -380,6 +437,9 @@ Partial Class Ansattside
         Me.Innkalling.ResumeLayout(False)
         Me.Innkalling.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
+        Me.Søk.ResumeLayout(False)
+        Me.Søk.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -415,4 +475,9 @@ Partial Class Ansattside
     Friend WithEvents NumericUpDown1 As NumericUpDown
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents Søk As TabPage
+    Friend WithEvents btnSok As Button
+    Friend WithEvents txtSok As TextBox
+    Friend WithEvents lblSok As Label
+    Friend WithEvents DataGridView1 As DataGridView
 End Class
