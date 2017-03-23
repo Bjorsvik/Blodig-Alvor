@@ -10,6 +10,7 @@ Public Class Bruker
     Private adresse As String
     Private postnummer As Integer
     Private epost As String
+    Private telefondb As String = PubVar.telefon
 
     Public Sub New()
     End Sub
@@ -36,6 +37,6 @@ Public Class Bruker
     End Function
 
     Public Function GetTelefon() As DataTable
-        Return db.Query("SELECT * From Blodgiver WHERE telefon = " & "'" & telefon & "'")
+        Return db.Query("SELECT * From Blodgiver WHERE telefon = " & "'" & telefondb & "'")
     End Function
 End Class

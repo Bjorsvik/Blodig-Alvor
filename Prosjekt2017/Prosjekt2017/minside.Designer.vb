@@ -29,9 +29,13 @@ Partial Class minside
         Me.tabReservasjon = New System.Windows.Forms.TabPage()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnSkjema = New System.Windows.Forms.Button()
+
+        Me.txtFornavn = New System.Windows.Forms.TextBox()
+        Me.txtEtternavn = New System.Windows.Forms.TextBox()
+        Me.txtTelefon = New System.Windows.Forms.TextBox()
         Me.TabControl1.SuspendLayout()
         Me.tabBrukerinfo.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+
         Me.tabReservasjon.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -45,16 +49,22 @@ Partial Class minside
         Me.TabControl1.Multiline = True
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1059, 548)
+
+        Me.TabControl1.Size = New System.Drawing.Size(794, 445)
+
+
         Me.TabControl1.TabIndex = 20
         '
         'tabBrukerinfo
         '
-        Me.tabBrukerinfo.Controls.Add(Me.DataGridView1)
-        Me.tabBrukerinfo.Location = New System.Drawing.Point(4, 25)
-        Me.tabBrukerinfo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+
+        Me.tabBrukerinfo.Controls.Add(Me.txtTelefon)
+        Me.tabBrukerinfo.Controls.Add(Me.txtEtternavn)
+        Me.tabBrukerinfo.Controls.Add(Me.txtFornavn)
+        Me.tabBrukerinfo.Location = New System.Drawing.Point(4, 22)
         Me.tabBrukerinfo.Name = "tabBrukerinfo"
-        Me.tabBrukerinfo.Size = New System.Drawing.Size(1051, 519)
+        Me.tabBrukerinfo.Size = New System.Drawing.Size(786, 419)
+
         Me.tabBrukerinfo.TabIndex = 0
         Me.tabBrukerinfo.Text = "Brukerinfo"
         Me.tabBrukerinfo.UseVisualStyleBackColor = True
@@ -112,19 +122,45 @@ Partial Class minside
         Me.btnSkjema.Text = "Egenerklæring"
         Me.btnSkjema.UseVisualStyleBackColor = True
         '
+
+        'txtFornavn
+        '
+        Me.txtFornavn.Location = New System.Drawing.Point(364, 187)
+        Me.txtFornavn.Name = "txtFornavn"
+        Me.txtFornavn.Size = New System.Drawing.Size(100, 20)
+        Me.txtFornavn.TabIndex = 21
+        '
+        'txtEtternavn
+        '
+        Me.txtEtternavn.Location = New System.Drawing.Point(364, 230)
+        Me.txtEtternavn.Name = "txtEtternavn"
+        Me.txtEtternavn.Size = New System.Drawing.Size(100, 20)
+        Me.txtEtternavn.TabIndex = 22
+        '
+        'txtTelefon
+        '
+        Me.txtTelefon.Location = New System.Drawing.Point(364, 267)
+        Me.txtTelefon.Name = "txtTelefon"
+        Me.txtTelefon.Size = New System.Drawing.Size(100, 20)
+        Me.txtTelefon.TabIndex = 23
+
         'minside
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(1067, 586)
+
+        Me.ClientSize = New System.Drawing.Size(800, 476)
+
         Me.Controls.Add(Me.TabControl1)
         Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "minside"
         Me.Text = "minside"
         Me.TabControl1.ResumeLayout(False)
         Me.tabBrukerinfo.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+
+        Me.tabBrukerinfo.PerformLayout()
+
         Me.tabReservasjon.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -135,5 +171,7 @@ Partial Class minside
     Friend WithEvents tabReservasjon As TabPage
     Friend WithEvents Button1 As Button
     Friend WithEvents btnSkjema As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents txtEtternavn As TextBox
+    Friend WithEvents txtFornavn As TextBox
+    Friend WithEvents txtTelefon As TextBox
 End Class
