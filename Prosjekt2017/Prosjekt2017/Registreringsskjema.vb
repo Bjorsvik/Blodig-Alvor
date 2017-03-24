@@ -28,9 +28,9 @@ Public Class Registreringsskjema
         Dim bpassord = txtBekreftPassord.Text
 
         If bpassord = passord Then
-            Dim nyBruker As New Bruker(txtPassord.Text, txtFornavn.Text, txtEtternavn.Text, txtFodselsdato.Text,
+            Dim nyBruker As New Blodgiver(txtPassord.Text, txtFornavn.Text, txtEtternavn.Text, txtFodselsdato.Text,
                                          txtTlf.Text, txtAdresse.Text, txtPostnummer.Text, txtEpost.Text)
-            nyBruker.regBruker()
+            nyBruker.regBlodgiver()
             Me.Close()
         Else
             MsgBox("Passordene er ikke like")

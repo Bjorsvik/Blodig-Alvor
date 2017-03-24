@@ -2,6 +2,7 @@
 Public Class Ansattside
     Private tilkobling As MySqlConnection
     Dim Blodlager As New Blodlager()
+    Dim Bruker As New Blodgiver()
 
     Private Sub Ansattside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -11,6 +12,14 @@ Public Class Ansattside
     Private Sub Ansattside_Close(sender As Object, e As EventArgs) Handles MyBase.Closed
         tilkobling.Close()
         tilkobling.Dispose()
+    End Sub
+    Private Sub btnSok_Click(sender As Object, e As EventArgs) Handles btnSok.Click
+        visBruker()
+    End Sub
+
+    Private Sub btnOppdater_Click(sender As Object, e As EventArgs) Handles btnOppdater.Click
+        endreInfo()
+        visBruker()
     End Sub
 
     Private Sub Lager_Click(sender As Object, e As EventArgs) Handles Lager.Click
@@ -40,31 +49,70 @@ Public Class Ansattside
         Next row
     End Sub
 
+    Private Sub visBruker()
+        Dim brukerTab As New DataTable()
+        Dim postnummere As New DataTable()
 
-    'Private Sub btnSok_Click(sender As Object, e As EventArgs) Handles btnSok.Click
-    '    Dim SDA As New MySqlDataAdapter
-    '    Dim dbDataset As New DataTable
-    '    Dim bSource As New BindingSource
-    '    Try
-    '        tilkobling.Open()
-    '        Dim tuddle As String = "'"
-    '        Dim telefon As String = txtSok.Text
-    '        telefon = tuddle & telefon & tuddle
-    '        Dim Query As String
-    '        Query = "SELECT fornavn, etternavn, adresse, telefon, fodselsdato, Blodgiver.postnummer, Postnummer.poststed from Blodgiver JOIN Postnummer ON Postnummer.postnummer = Blodgiver.postnummer WHERE Blodgiver.telefon = " & telefon
-    '        Dim command As New MySqlCommand(Query, tilkobling)
-    '        SDA.SelectCommand = command
-    '        SDA.Fill(dbDataset)
-    '        bSource.DataSource = dbDataset
-    '        DataGridView1.DataSource = bSource
-    '        SDA.Update(dbDataset)
+        Dim fornavn As String
+        Dim etternavn As String
+        Dim fodselsdato As Date
+        Dim telefon As Integer
+        Dim adresse As String
+        Dim postnummer As Integer
 
-    '        tilkobling.Close()
-    '    Catch ex As MySqlException
-    '        MessageBox.Show(ex.Message)
-    '    Finally
-    '        tilkobling.Dispose()
-    '    End Try
-    'End Sub
+
+        brukerTab = Bruker.GetBruker(txtSok.Text)
+
+        For Each row In brukerTab.Rows
+            fornavn = row("fornavn")
+            etternavn = row("etternavn")
+            fodselsdato = row("fodselsdato")
+            telefon = row("telefon")
+            adresse = row("adresse")
+            postnummer = row("postnummer")
+
+            txtFornavn.Text = fornavn
+            txtEtternavn.Text = etternavn
+            txtFodselsdato.Text = fodselsdato
+            txtTelefon.Text = telefon
+            txtAdresse.Text = adresse
+            txtPostnummer.Text = postnummer
+
+        Next row
+
+    End Sub
+
+    Private Sub endreInfo()
+        Dim brukerTab As New DataTable()
+        Dim postnummere As New DataTable()
+
+        Dim fornavn As String
+        Dim etternavn As String
+        Dim fodselsdato As Date
+        Dim telefon As Integer
+        Dim adresse As String
+        Dim postnummer As Integer
+
+        brukerTab = Bruker.GetBruker(txtSok.Text)
+
+        For Each row In brukerTab.Rows
+
+            fornavn = row("fornavn")
+            etternavn = row("etternavn")
+            fodselsdato = row("fodselsdato")
+            telefon = row("telefon")
+            adresse = row("adresse")
+            postnummer = row("postnummer")
+
+            Bruker.endreFornavn(txtFornavn.Text)
+            Bruker.endreEtternavn(txtEtternavn.Text)
+            Bruker.endreFodselsdato(txtFodselsdato.Text)
+            Bruker.endreTelefon(txtTelefon.Text)
+            Bruker.endreAdresse(txtAdresse.Text)
+            Bruker.endrePostnummer(txtPostnummer.Text)
+
+        Next row
+    End Sub
+
 
 End Class

@@ -2,8 +2,7 @@
 Imports System.Data
 Public Class Hjemmeside
     'Oppretter en mySQL-connection til databasen.
-    Private tilkobling As MySqlConnection
-    Dim bruker As New Bruker()
+    Dim bruker As New Blodgiver()
 
     Private Sub Hjemmeside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lbTelefon.Hide()
@@ -12,10 +11,6 @@ Public Class Hjemmeside
         txtPassord.Hide()
         btnLogginn.Hide()
         btnRegistrer.Hide()
-
-        'Tilkoblingen blir koblet direkte slik at brukeren har tilgang til databasen ved oppstart.
-        tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=g_oops_23;Uid=g_oops_23;Pwd=3d4CcHvg")
-        tilkobling.Open()
     End Sub
     Private Sub SetDefault(ByVal btnLogginn As Button)
         Me.AcceptButton = btnLogginn
@@ -34,14 +29,12 @@ Public Class Hjemmeside
         Dim brukerTabell As New DataTable
         Dim sjekkPassord As String
         Dim sjekkTelefon As String
-        Dim brukerid As String
         Dim riktigPass As Boolean = False
 
         brukerTabell = bruker.getAlleBrukere
         For Each row In brukerTabell.Rows
             sjekkTelefon = row("telefon")
-            sjekkPassord = row("passord")
-            brukerid = row("brukerid")
+            sjekkPassord = row("Bpassord")
 
             If telefon = sjekkTelefon And passord = sjekkPassord Then
 
@@ -60,12 +53,6 @@ Public Class Hjemmeside
         End If
 
     End Sub
-
-    Private Sub Hjemmeside_Closed(sender As Object, e As EventArgs) Handles MyBase.Closed
-        tilkobling.Close()
-        tilkobling.Dispose()
-    End Sub
-
     Private Sub txtPassord_TextChanged(sender As Object, e As EventArgs) Handles txtPassord.TextChanged
         txtPassord.PasswordChar = "*"
     End Sub
