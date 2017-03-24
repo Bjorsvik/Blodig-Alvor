@@ -26,7 +26,6 @@ Partial Class minside
         Me.tabBrukerinfo = New System.Windows.Forms.TabPage()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnEndreInfo = New System.Windows.Forms.Button()
-        Me.lbPoststed = New System.Windows.Forms.Label()
         Me.txtPostnummer = New System.Windows.Forms.TextBox()
         Me.txtAdresse = New System.Windows.Forms.TextBox()
         Me.lbPoststedLabel = New System.Windows.Forms.Label()
@@ -44,6 +43,7 @@ Partial Class minside
         Me.tabReservasjon = New System.Windows.Forms.TabPage()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnSkjema = New System.Windows.Forms.Button()
+        Me.lbPoststed = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.tabBrukerinfo.SuspendLayout()
         Me.tabReservasjon.SuspendLayout()
@@ -63,9 +63,9 @@ Partial Class minside
         '
         'tabBrukerinfo
         '
+        Me.tabBrukerinfo.Controls.Add(Me.lbPoststed)
         Me.tabBrukerinfo.Controls.Add(Me.Label1)
         Me.tabBrukerinfo.Controls.Add(Me.btnEndreInfo)
-        Me.tabBrukerinfo.Controls.Add(Me.lbPoststed)
         Me.tabBrukerinfo.Controls.Add(Me.txtPostnummer)
         Me.tabBrukerinfo.Controls.Add(Me.txtAdresse)
         Me.tabBrukerinfo.Controls.Add(Me.lbPoststedLabel)
@@ -105,14 +105,6 @@ Partial Class minside
         Me.btnEndreInfo.Text = "Endre info"
         Me.btnEndreInfo.UseVisualStyleBackColor = True
         '
-        'lbPoststed
-        '
-        Me.lbPoststed.AutoSize = True
-        Me.lbPoststed.Location = New System.Drawing.Point(509, 209)
-        Me.lbPoststed.Name = "lbPoststed"
-        Me.lbPoststed.Size = New System.Drawing.Size(0, 13)
-        Me.lbPoststed.TabIndex = 13
-        '
         'txtPostnummer
         '
         Me.txtPostnummer.Location = New System.Drawing.Point(509, 165)
@@ -130,7 +122,7 @@ Partial Class minside
         'lbPoststedLabel
         '
         Me.lbPoststedLabel.AutoSize = True
-        Me.lbPoststedLabel.Location = New System.Drawing.Point(455, 209)
+        Me.lbPoststedLabel.Location = New System.Drawing.Point(455, 206)
         Me.lbPoststedLabel.Name = "lbPoststedLabel"
         Me.lbPoststedLabel.Size = New System.Drawing.Size(48, 13)
         Me.lbPoststedLabel.TabIndex = 10
@@ -258,6 +250,15 @@ Partial Class minside
         Me.btnSkjema.Text = "Egenerklæring"
         Me.btnSkjema.UseVisualStyleBackColor = True
         '
+        'lbPoststed
+        '
+        Me.lbPoststed.AutoSize = True
+        Me.lbPoststed.Location = New System.Drawing.Point(509, 208)
+        Me.lbPoststed.Name = "lbPoststed"
+        Me.lbPoststed.Size = New System.Drawing.Size(39, 13)
+        Me.lbPoststed.TabIndex = 16
+        Me.lbPoststed.Text = "Label2"
+        '
         'minside
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -291,9 +292,9 @@ Partial Class minside
     Friend WithEvents lbFornavn As Label
     Friend WithEvents txtFodselsdato As TextBox
     Friend WithEvents btnEndreInfo As Button
-    Friend WithEvents lbPoststed As Label
     Friend WithEvents txtPostnummer As TextBox
     Friend WithEvents txtAdresse As TextBox
     Friend WithEvents lbPoststedLabel As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents lbPoststed As Label
 End Class
