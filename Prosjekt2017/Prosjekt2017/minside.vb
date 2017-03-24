@@ -15,6 +15,7 @@ Public Class minside
     Private Sub btnEndreInfo_Click(sender As Object, e As EventArgs) Handles btnEndreInfo.Click
         endreInfo()
         visBruker()
+        visPoststed()
     End Sub
 
     Private Sub visBruker()
