@@ -24,13 +24,26 @@ Partial Class minside
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tabBrukerinfo = New System.Windows.Forms.TabPage()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnEndreInfo = New System.Windows.Forms.Button()
+        Me.lbPoststed = New System.Windows.Forms.Label()
+        Me.txtPostnummer = New System.Windows.Forms.TextBox()
+        Me.txtAdresse = New System.Windows.Forms.TextBox()
+        Me.lbPoststedLabel = New System.Windows.Forms.Label()
+        Me.txtFodselsdato = New System.Windows.Forms.TextBox()
+        Me.lbPostnummer = New System.Windows.Forms.Label()
+        Me.lbAdresse = New System.Windows.Forms.Label()
+        Me.lbFodselsdato = New System.Windows.Forms.Label()
+        Me.lbTelefon = New System.Windows.Forms.Label()
+        Me.lbEtternavn = New System.Windows.Forms.Label()
+        Me.lbFornavn = New System.Windows.Forms.Label()
+        Me.txtTelefon = New System.Windows.Forms.TextBox()
+        Me.txtEtternavn = New System.Windows.Forms.TextBox()
+        Me.txtFornavn = New System.Windows.Forms.TextBox()
         Me.tabHistorikk = New System.Windows.Forms.TabPage()
         Me.tabReservasjon = New System.Windows.Forms.TabPage()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnSkjema = New System.Windows.Forms.Button()
-        Me.txtFornavn = New System.Windows.Forms.TextBox()
-        Me.txtEtternavn = New System.Windows.Forms.TextBox()
-        Me.txtTelefon = New System.Windows.Forms.TextBox()
         Me.TabControl1.SuspendLayout()
         Me.tabBrukerinfo.SuspendLayout()
         Me.tabReservasjon.SuspendLayout()
@@ -50,6 +63,19 @@ Partial Class minside
         '
         'tabBrukerinfo
         '
+        Me.tabBrukerinfo.Controls.Add(Me.Label1)
+        Me.tabBrukerinfo.Controls.Add(Me.btnEndreInfo)
+        Me.tabBrukerinfo.Controls.Add(Me.lbPoststed)
+        Me.tabBrukerinfo.Controls.Add(Me.txtPostnummer)
+        Me.tabBrukerinfo.Controls.Add(Me.txtAdresse)
+        Me.tabBrukerinfo.Controls.Add(Me.lbPoststedLabel)
+        Me.tabBrukerinfo.Controls.Add(Me.txtFodselsdato)
+        Me.tabBrukerinfo.Controls.Add(Me.lbPostnummer)
+        Me.tabBrukerinfo.Controls.Add(Me.lbAdresse)
+        Me.tabBrukerinfo.Controls.Add(Me.lbFodselsdato)
+        Me.tabBrukerinfo.Controls.Add(Me.lbTelefon)
+        Me.tabBrukerinfo.Controls.Add(Me.lbEtternavn)
+        Me.tabBrukerinfo.Controls.Add(Me.lbFornavn)
         Me.tabBrukerinfo.Controls.Add(Me.txtTelefon)
         Me.tabBrukerinfo.Controls.Add(Me.txtEtternavn)
         Me.tabBrukerinfo.Controls.Add(Me.txtFornavn)
@@ -60,11 +86,143 @@ Partial Class minside
         Me.tabBrukerinfo.Text = "Brukerinfo"
         Me.tabBrukerinfo.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(25, 14)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(153, 33)
+        Me.Label1.TabIndex = 15
+        Me.Label1.Text = "Personalia"
+        '
+        'btnEndreInfo
+        '
+        Me.btnEndreInfo.Location = New System.Drawing.Point(527, 243)
+        Me.btnEndreInfo.Name = "btnEndreInfo"
+        Me.btnEndreInfo.Size = New System.Drawing.Size(82, 26)
+        Me.btnEndreInfo.TabIndex = 14
+        Me.btnEndreInfo.Text = "Endre info"
+        Me.btnEndreInfo.UseVisualStyleBackColor = True
+        '
+        'lbPoststed
+        '
+        Me.lbPoststed.AutoSize = True
+        Me.lbPoststed.Location = New System.Drawing.Point(509, 209)
+        Me.lbPoststed.Name = "lbPoststed"
+        Me.lbPoststed.Size = New System.Drawing.Size(0, 13)
+        Me.lbPoststed.TabIndex = 13
+        '
+        'txtPostnummer
+        '
+        Me.txtPostnummer.Location = New System.Drawing.Point(509, 165)
+        Me.txtPostnummer.Name = "txtPostnummer"
+        Me.txtPostnummer.Size = New System.Drawing.Size(100, 20)
+        Me.txtPostnummer.TabIndex = 12
+        '
+        'txtAdresse
+        '
+        Me.txtAdresse.Location = New System.Drawing.Point(509, 123)
+        Me.txtAdresse.Name = "txtAdresse"
+        Me.txtAdresse.Size = New System.Drawing.Size(148, 20)
+        Me.txtAdresse.TabIndex = 11
+        '
+        'lbPoststedLabel
+        '
+        Me.lbPoststedLabel.AutoSize = True
+        Me.lbPoststedLabel.Location = New System.Drawing.Point(455, 209)
+        Me.lbPoststedLabel.Name = "lbPoststedLabel"
+        Me.lbPoststedLabel.Size = New System.Drawing.Size(48, 13)
+        Me.lbPoststedLabel.TabIndex = 10
+        Me.lbPoststedLabel.Text = "Poststed"
+        '
+        'txtFodselsdato
+        '
+        Me.txtFodselsdato.Location = New System.Drawing.Point(219, 206)
+        Me.txtFodselsdato.Name = "txtFodselsdato"
+        Me.txtFodselsdato.Size = New System.Drawing.Size(100, 20)
+        Me.txtFodselsdato.TabIndex = 9
+        '
+        'lbPostnummer
+        '
+        Me.lbPostnummer.AutoSize = True
+        Me.lbPostnummer.Location = New System.Drawing.Point(438, 168)
+        Me.lbPostnummer.Name = "lbPostnummer"
+        Me.lbPostnummer.Size = New System.Drawing.Size(65, 13)
+        Me.lbPostnummer.TabIndex = 8
+        Me.lbPostnummer.Text = "Postnummer"
+        '
+        'lbAdresse
+        '
+        Me.lbAdresse.AutoSize = True
+        Me.lbAdresse.Location = New System.Drawing.Point(458, 127)
+        Me.lbAdresse.Name = "lbAdresse"
+        Me.lbAdresse.Size = New System.Drawing.Size(45, 13)
+        Me.lbAdresse.TabIndex = 7
+        Me.lbAdresse.Text = "Adresse"
+        '
+        'lbFodselsdato
+        '
+        Me.lbFodselsdato.AutoSize = True
+        Me.lbFodselsdato.Location = New System.Drawing.Point(143, 209)
+        Me.lbFodselsdato.Name = "lbFodselsdato"
+        Me.lbFodselsdato.Size = New System.Drawing.Size(64, 13)
+        Me.lbFodselsdato.TabIndex = 6
+        Me.lbFodselsdato.Text = "Fødselsdato"
+        '
+        'lbTelefon
+        '
+        Me.lbTelefon.AutoSize = True
+        Me.lbTelefon.Location = New System.Drawing.Point(161, 250)
+        Me.lbTelefon.Name = "lbTelefon"
+        Me.lbTelefon.Size = New System.Drawing.Size(43, 13)
+        Me.lbTelefon.TabIndex = 5
+        Me.lbTelefon.Text = "Telefon"
+        '
+        'lbEtternavn
+        '
+        Me.lbEtternavn.AutoSize = True
+        Me.lbEtternavn.Location = New System.Drawing.Point(154, 172)
+        Me.lbEtternavn.Name = "lbEtternavn"
+        Me.lbEtternavn.Size = New System.Drawing.Size(53, 13)
+        Me.lbEtternavn.TabIndex = 4
+        Me.lbEtternavn.Text = "Etternavn"
+        '
+        'lbFornavn
+        '
+        Me.lbFornavn.AutoSize = True
+        Me.lbFornavn.Location = New System.Drawing.Point(161, 130)
+        Me.lbFornavn.Name = "lbFornavn"
+        Me.lbFornavn.Size = New System.Drawing.Size(46, 13)
+        Me.lbFornavn.TabIndex = 3
+        Me.lbFornavn.Text = "Fornavn"
+        '
+        'txtTelefon
+        '
+        Me.txtTelefon.Location = New System.Drawing.Point(219, 247)
+        Me.txtTelefon.Name = "txtTelefon"
+        Me.txtTelefon.Size = New System.Drawing.Size(100, 20)
+        Me.txtTelefon.TabIndex = 2
+        '
+        'txtEtternavn
+        '
+        Me.txtEtternavn.Location = New System.Drawing.Point(219, 169)
+        Me.txtEtternavn.Name = "txtEtternavn"
+        Me.txtEtternavn.Size = New System.Drawing.Size(100, 20)
+        Me.txtEtternavn.TabIndex = 1
+        '
+        'txtFornavn
+        '
+        Me.txtFornavn.Location = New System.Drawing.Point(219, 127)
+        Me.txtFornavn.Name = "txtFornavn"
+        Me.txtFornavn.Size = New System.Drawing.Size(100, 20)
+        Me.txtFornavn.TabIndex = 0
+        '
         'tabHistorikk
         '
         Me.tabHistorikk.Location = New System.Drawing.Point(4, 22)
         Me.tabHistorikk.Name = "tabHistorikk"
-        Me.tabHistorikk.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.tabHistorikk.Padding = New System.Windows.Forms.Padding(3)
         Me.tabHistorikk.Size = New System.Drawing.Size(786, 419)
         Me.tabHistorikk.TabIndex = 1
         Me.tabHistorikk.Text = "Min Historikk"
@@ -76,7 +234,7 @@ Partial Class minside
         Me.tabReservasjon.Controls.Add(Me.btnSkjema)
         Me.tabReservasjon.Location = New System.Drawing.Point(4, 22)
         Me.tabReservasjon.Name = "tabReservasjon"
-        Me.tabReservasjon.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.tabReservasjon.Padding = New System.Windows.Forms.Padding(3)
         Me.tabReservasjon.Size = New System.Drawing.Size(786, 419)
         Me.tabReservasjon.TabIndex = 2
         Me.tabReservasjon.Text = "Reserver Time"
@@ -99,27 +257,6 @@ Partial Class minside
         Me.btnSkjema.TabIndex = 0
         Me.btnSkjema.Text = "Egenerklæring"
         Me.btnSkjema.UseVisualStyleBackColor = True
-        '
-        'txtFornavn
-        '
-        Me.txtFornavn.Location = New System.Drawing.Point(444, 160)
-        Me.txtFornavn.Name = "txtFornavn"
-        Me.txtFornavn.Size = New System.Drawing.Size(100, 20)
-        Me.txtFornavn.TabIndex = 0
-        '
-        'txtEtternavn
-        '
-        Me.txtEtternavn.Location = New System.Drawing.Point(444, 200)
-        Me.txtEtternavn.Name = "txtEtternavn"
-        Me.txtEtternavn.Size = New System.Drawing.Size(100, 20)
-        Me.txtEtternavn.TabIndex = 1
-        '
-        'txtTelefon
-        '
-        Me.txtTelefon.Location = New System.Drawing.Point(444, 240)
-        Me.txtTelefon.Name = "txtTelefon"
-        Me.txtTelefon.Size = New System.Drawing.Size(100, 20)
-        Me.txtTelefon.TabIndex = 2
         '
         'minside
         '
@@ -146,4 +283,17 @@ Partial Class minside
     Friend WithEvents txtTelefon As TextBox
     Friend WithEvents txtEtternavn As TextBox
     Friend WithEvents txtFornavn As TextBox
+    Friend WithEvents lbPostnummer As Label
+    Friend WithEvents lbAdresse As Label
+    Friend WithEvents lbFodselsdato As Label
+    Friend WithEvents lbTelefon As Label
+    Friend WithEvents lbEtternavn As Label
+    Friend WithEvents lbFornavn As Label
+    Friend WithEvents txtFodselsdato As TextBox
+    Friend WithEvents btnEndreInfo As Button
+    Friend WithEvents lbPoststed As Label
+    Friend WithEvents txtPostnummer As TextBox
+    Friend WithEvents txtAdresse As TextBox
+    Friend WithEvents lbPoststedLabel As Label
+    Friend WithEvents Label1 As Label
 End Class
