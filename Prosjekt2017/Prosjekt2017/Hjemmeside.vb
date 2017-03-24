@@ -2,7 +2,7 @@
 Imports System.Data
 Public Class Hjemmeside
     'Oppretter en mySQL-connection til databasen.
-    Dim bruker As New Bruker()
+    Dim bruker As New Blodgiver()
 
     Private Sub Hjemmeside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lbTelefon.Hide()
@@ -29,14 +29,12 @@ Public Class Hjemmeside
         Dim brukerTabell As New DataTable
         Dim sjekkPassord As String
         Dim sjekkTelefon As String
-        Dim brukerid As String
         Dim riktigPass As Boolean = False
 
         brukerTabell = bruker.getAlleBrukere
         For Each row In brukerTabell.Rows
             sjekkTelefon = row("telefon")
-            sjekkPassord = row("passord")
-            brukerid = row("brukerid")
+            sjekkPassord = row("Bpassord")
 
             If telefon = sjekkTelefon And passord = sjekkPassord Then
 
