@@ -31,6 +31,7 @@ Partial Class Ansattside
         Me.Reservasjonskalender = New System.Windows.Forms.MonthCalendar()
         Me.Lageroppdatering = New System.Windows.Forms.TabPage()
         Me.Lager = New System.Windows.Forms.TabPage()
+        Me.gridBlodlager = New System.Windows.Forms.DataGridView()
         Me.Blodgivning = New System.Windows.Forms.TabPage()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.btnBlodgivning = New System.Windows.Forms.Button()
@@ -57,17 +58,16 @@ Partial Class Ansattside
         Me.btnSok = New System.Windows.Forms.Button()
         Me.txtSok = New System.Windows.Forms.TextBox()
         Me.lblSok = New System.Windows.Forms.Label()
-        Me.gridBlodlager = New System.Windows.Forms.DataGridView()
         Me.Statistikk.SuspendLayout()
         Me.Reservasjoner.SuspendLayout()
         Me.Lager.SuspendLayout()
+        CType(Me.gridBlodlager, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Blodgivning.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Innkalling.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.Søk.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.gridBlodlager, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Statistikk
@@ -163,6 +163,14 @@ Partial Class Ansattside
         Me.Lager.TabIndex = 2
         Me.Lager.Text = "Lager"
         Me.Lager.UseVisualStyleBackColor = True
+        '
+        'gridBlodlager
+        '
+        Me.gridBlodlager.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.gridBlodlager.Location = New System.Drawing.Point(192, 75)
+        Me.gridBlodlager.Name = "gridBlodlager"
+        Me.gridBlodlager.Size = New System.Drawing.Size(323, 213)
+        Me.gridBlodlager.TabIndex = 0
         '
         'Blodgivning
         '
@@ -443,14 +451,6 @@ Partial Class Ansattside
         Me.lblSok.TabIndex = 0
         Me.lblSok.Text = "Søk etter telefonnummer:"
         '
-        'gridBlodlager
-        '
-        Me.gridBlodlager.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.gridBlodlager.Location = New System.Drawing.Point(192, 75)
-        Me.gridBlodlager.Name = "gridBlodlager"
-        Me.gridBlodlager.Size = New System.Drawing.Size(323, 213)
-        Me.gridBlodlager.TabIndex = 0
-        '
         'Ansattside
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -465,6 +465,7 @@ Partial Class Ansattside
         Me.Reservasjoner.ResumeLayout(False)
         Me.Reservasjoner.PerformLayout()
         Me.Lager.ResumeLayout(False)
+        CType(Me.gridBlodlager, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Blodgivning.ResumeLayout(False)
         Me.Blodgivning.PerformLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -474,7 +475,6 @@ Partial Class Ansattside
         Me.Søk.ResumeLayout(False)
         Me.Søk.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.gridBlodlager, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
