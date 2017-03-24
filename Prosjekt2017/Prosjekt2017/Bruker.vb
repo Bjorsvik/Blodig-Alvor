@@ -31,6 +31,24 @@ Public Class Bruker
         db.Query("INSERT INTO Blodgiver(fornavn, etternavn, telefon, epost, postnummer, adresse, fodselsdato, passord) VALUES('" & fornavn & "', '" & etternavn &
                  "', '" & telefon & "', '" & epost & "', '" & postnummer & "', '" & adresse & "', '" & fodselsdato & "',  '" & passord & "')")
     End Sub
+    Public Sub endreFornavn(fornavn As String)
+        db.Query("UPDATE Blodgiver SET fornavn = '" & fornavn & "' WHERE telefon = " & globaltelefon)
+    End Sub
+    Public Sub endreEtternavn(etternavn As String)
+        db.Query("UPDATE Blodgiver SET etternavn = '" & etternavn & "' WHERE telefon = " & globaltelefon)
+    End Sub
+    Public Sub endreFodselsdato(fodselsdato As String)
+        db.Query("UPDATE Blodgiver SET fodselsdato = '" & fodselsdato & "' WHERE telefon = " & globaltelefon)
+    End Sub
+    Public Sub endreTelefon(telefon As Integer)
+        db.Query("UPDATE Blodgiver SET telefon = '" & telefon & "' WHERE telefon = " & globaltelefon)
+    End Sub
+    Public Sub endreAdresse(adresse As String)
+        db.Query("UPDATE Blodgiver SET adresse = '" & adresse & "' WHERE telefon = " & globaltelefon)
+    End Sub
+    Public Sub endrePostnummer(postnummer As String)
+        db.Query("UPDATE Blodgiver SET postnummer = '" & postnummer & "' WHERE telefon = " & globaltelefon)
+    End Sub
 
     Public Function getAlleBrukere() As DataTable
         Return db.Query("SELECT * FROM Blodgiver")
@@ -38,5 +56,9 @@ Public Class Bruker
 
     Public Function GetTelefon() As DataTable
         Return db.Query("SELECT * From Blodgiver WHERE telefon = " & "'" & globaltelefon & "'")
+    End Function
+
+    Public Function GetBrukeridByTelefon() As DataTable
+        Return db.Query("SELECT brukerid FROM Blodgiver WHERE telefon = " & "'" & globaltelefon & "'")
     End Function
 End Class
