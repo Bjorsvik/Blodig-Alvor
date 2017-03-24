@@ -1,8 +1,9 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.Data
 Public Class Hjemmeside
-    'Oppretter en mysql connection til databasen
+    'Oppretter en mySQL-connection til databasen.
     Private tilkobling As MySqlConnection
+    Dim bruker As New Bruker()
 
     Private Sub Hjemmeside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lbTelefon.Hide()
@@ -12,9 +13,12 @@ Public Class Hjemmeside
         btnLogginn.Hide()
         btnRegistrer.Hide()
 
-        'tilkoblingingen blir koblet direkte sånn at brukeren har tilgang til databasen ved oppstart
+        'Tilkoblingen blir koblet direkte slik at brukeren har tilgang til databasen ved oppstart.
         tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=g_oops_23;Uid=g_oops_23;Pwd=3d4CcHvg")
         tilkobling.Open()
+    End Sub
+    Private Sub SetDefault(ByVal btnLogginn As Button)
+        Me.AcceptButton = btnLogginn
     End Sub
 
     Private Sub Registreringsknapp_Click(sender As Object, e As EventArgs) Handles btnRegistrer.Click
@@ -22,26 +26,41 @@ Public Class Hjemmeside
     End Sub
 
     Private Sub Logginnknapp_Click(sender As Object, e As EventArgs) Handles btnLogginn.Click
-        Dim passord = txtPassord.Text
+
         Dim telefon = txtTelefon.Text
+        Dim passord = txtPassord.Text
         PubVar.telefon = telefon
 
-        Dim sqlSporringBruker = "SELECT * from Blodgiver where telefon=@telefon " & "AND passord=@passord"
+        Dim brukerTabell As New DataTable
+        Dim sjekkPassord As String
+        Dim sjekkTelefon As String
+        Dim brukerid As String
+        Dim riktigPass As Boolean = False
 
-        Dim sql As New MySqlCommand(sqlSporringBruker, tilkobling)
-        sql.Parameters.AddWithValue("@telefon", telefon)
-        sql.Parameters.AddWithValue("@passord", passord)
+        brukerTabell = bruker.getAlleBrukere
+        For Each row In brukerTabell.Rows
+            sjekkTelefon = row("telefon")
+            sjekkPassord = row("passord")
+            brukerid = row("brukerid")
 
-        Dim READER As MySqlDataReader
-        READER = sql.ExecuteReader
-        If READER.Read Then
-            MsgBox("Brukeren er logget på")
-            READER.Close()
-            Me.Hide()
-            minside.Show()
+            If telefon = sjekkTelefon And passord = sjekkPassord Then
+
+                riktigPass = True
+
+                txtTelefon.Clear()
+                txtPassord.Clear()
+                Me.Hide()
+                MsgBox("Velkommen til minside!")
+                minside.Show()
+            End If
+        Next row
+
+        If riktigPass = False Then
+            MsgBox("Feil brukernavn eller passord")
         End If
 
     End Sub
+
     Private Sub Hjemmeside_Closed(sender As Object, e As EventArgs) Handles MyBase.Closed
         tilkobling.Close()
         tilkobling.Dispose()
@@ -60,6 +79,9 @@ Public Class Hjemmeside
         txtPassord.Show()
         btnLogginn.Show()
         btnRegistrer.Show()
+
+        txtTelefon.Select()
+        PubVar.brukerType = "Blodgiver"
     End Sub
 
     Private Sub btnAnsatt_Click(sender As Object, e As EventArgs) Handles btnAnsatt.Click
@@ -71,5 +93,8 @@ Public Class Hjemmeside
         txtPassord.Show()
         btnLogginn.Show()
         btnRegistrer.Hide()
+
+        txtTelefon.Select()
+        PubVar.brukerType = "Blodgiver" ' <- Endre til "Ansatt" når databasetabellen er klar.
     End Sub
 End Class

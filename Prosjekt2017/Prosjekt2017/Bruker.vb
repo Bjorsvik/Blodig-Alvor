@@ -1,5 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Bruker
+    Private db As New Database()
+
     Private passord As String
     Private fornavn As String
     Private etternavn As String
@@ -8,6 +10,10 @@ Public Class Bruker
     Private adresse As String
     Private postnummer As Integer
     Private epost As String
+    Private globaltelefon As String = PubVar.telefon
+
+    Public Sub New()
+    End Sub
 
     Public Sub New(passord As String, fornavn As String, etternavn As String, fodselsdato As String,
                    telefon As Integer, adresse As String, postnummer As Integer, epost As String)
@@ -19,40 +25,40 @@ Public Class Bruker
         Me.adresse = adresse
         Me.postnummer = postnummer
         Me.epost = epost
-
-        Dim tilkobling As MySqlConnection
-        tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=g_oops_23;Uid=g_oops_23;Pwd=3d4CcHvg")
-        tilkobling.Open()
-
-        Dim sqlSporring = "insert into Blodgiver (passord, fornavn, etternavn, fodselsdato,
-                           telefon, adresse, postnummer, epost) values (@passord, @fornavn, 
-                           @etternavn, @fodselsdato, @telefon, @adresse, @postnummer, @epost)"
-
-        Dim sqlSporringBrukernavn = "select * from Blodgiver where telefon=@telefon"
-
-        Dim sqlRegistrer As New MySqlCommand(sqlSporring, tilkobling)
-
-        Dim sqlSjekk As New MySqlCommand(sqlSporringBrukernavn, tilkobling)
-        sqlSjekk.Parameters.AddWithValue("@telefon", telefon)
-
-
-        Dim reader = sqlSjekk.ExecuteReader()
-        If reader.HasRows Then
-            MsgBox("Personnummer er i bruk")
-            reader.Close()
-        Else
-            reader.Close()
-            sqlRegistrer.Parameters.AddWithValue("@passord", passord)
-            sqlRegistrer.Parameters.AddWithValue("@fornavn", fornavn)
-            sqlRegistrer.Parameters.AddWithValue("@etternavn", etternavn)
-            sqlRegistrer.Parameters.AddWithValue("@fodselsdato", fodselsdato)
-            sqlRegistrer.Parameters.AddWithValue("@telefon", telefon)
-            sqlRegistrer.Parameters.AddWithValue("@adresse", adresse)
-            sqlRegistrer.Parameters.AddWithValue("@postnummer", postnummer)
-            sqlRegistrer.Parameters.AddWithValue("@epost", epost)
-            sqlRegistrer.ExecuteNonQuery()
-            reader.Close()
-        End If
-
     End Sub
+
+    Public Sub regBruker()
+        db.Query("INSERT INTO Blodgiver(fornavn, etternavn, telefon, epost, postnummer, adresse, fodselsdato, passord) VALUES('" & fornavn & "', '" & etternavn &
+                 "', '" & telefon & "', '" & epost & "', '" & postnummer & "', '" & adresse & "', '" & fodselsdato & "',  '" & passord & "')")
+    End Sub
+    Public Sub endreFornavn(fornavn As String)
+        db.Query("UPDATE Blodgiver SET fornavn = '" & fornavn & "' WHERE telefon = " & globaltelefon)
+    End Sub
+    Public Sub endreEtternavn(etternavn As String)
+        db.Query("UPDATE Blodgiver SET etternavn = '" & etternavn & "' WHERE telefon = " & globaltelefon)
+    End Sub
+    Public Sub endreFodselsdato(fodselsdato As String)
+        db.Query("UPDATE Blodgiver SET fodselsdato = '" & fodselsdato & "' WHERE telefon = " & globaltelefon)
+    End Sub
+    Public Sub endreTelefon(telefon As Integer)
+        db.Query("UPDATE Blodgiver SET telefon = '" & telefon & "' WHERE telefon = " & globaltelefon)
+    End Sub
+    Public Sub endreAdresse(adresse As String)
+        db.Query("UPDATE Blodgiver SET adresse = '" & adresse & "' WHERE telefon = " & globaltelefon)
+    End Sub
+    Public Sub endrePostnummer(postnummer As String)
+        db.Query("UPDATE Blodgiver SET postnummer = '" & postnummer & "' WHERE telefon = " & globaltelefon)
+    End Sub
+
+    Public Function getAlleBrukere() As DataTable
+        Return db.Query("SELECT * FROM Blodgiver")
+    End Function
+
+    Public Function GetTelefon() As DataTable
+        Return db.Query("SELECT * From Blodgiver WHERE telefon = " & "'" & globaltelefon & "'")
+    End Function
+
+    Public Function GetBrukeridByTelefon() As DataTable
+        Return db.Query("SELECT brukerid FROM Blodgiver WHERE telefon = " & "'" & globaltelefon & "'")
+    End Function
 End Class
