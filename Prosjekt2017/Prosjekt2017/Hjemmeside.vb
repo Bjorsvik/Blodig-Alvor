@@ -3,11 +3,13 @@ Imports System.Data
 Public Class Hjemmeside
     'Oppretter en mySQL-connection til databasen.
     Dim bruker As New Blodgiver()
+    Dim ansatt As New Ansatt()
+
 
     Private Sub Hjemmeside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lbTelefon.Hide()
+        lbInput.Hide()
         lbPassord.Hide()
-        txtTelefon.Hide()
+        txtInput.Hide()
         txtPassord.Hide()
         btnLogginn.Hide()
         btnRegistrer.Hide()
@@ -21,67 +23,102 @@ Public Class Hjemmeside
     End Sub
 
     Private Sub Logginnknapp_Click(sender As Object, e As EventArgs) Handles btnLogginn.Click
-
-        Dim telefon = txtTelefon.Text
         Dim passord = txtPassord.Text
-        PubVar.telefon = telefon
+        Dim brukertype As String = PubVar.brukerType
 
-        Dim brukerTabell As New DataTable
-        Dim sjekkPassord As String
-        Dim sjekkTelefon As String
-        Dim riktigPass As Boolean = False
+        If PubVar.brukerType = "Blodgiver" Then
+            Dim telefon = txtInput.Text
+            PubVar.telefon = telefon
 
-        brukerTabell = bruker.getAlleBrukere
-        For Each row In brukerTabell.Rows
-            sjekkTelefon = row("telefon")
-            sjekkPassord = row("Bpassord")
+            Dim brukerTabell As New DataTable
+            Dim sjekkPassord As String
+            Dim sjekkTelefon As String
+            Dim riktigPass As Boolean = False
 
-            If telefon = sjekkTelefon And passord = sjekkPassord Then
+            brukerTabell = bruker.getAlleBlodgivere
+            For Each row In brukerTabell.Rows
+                sjekkTelefon = row("telefon")
+                sjekkPassord = row("Bpassord")
 
-                riktigPass = True
+                If telefon = sjekkTelefon And passord = sjekkPassord Then
 
-                txtTelefon.Clear()
-                txtPassord.Clear()
-                Me.Hide()
-                MsgBox("Velkommen til minside!")
-                minside.Show()
+                    riktigPass = True
+
+                    txtInput.Clear()
+                    txtPassord.Clear()
+                    Me.Hide()
+                    MsgBox("Velkommen til minside!")
+                    minside.Show()
+                End If
+
+            Next row
+
+            If riktigPass = False Then
+                MsgBox("Feil brukernavn eller passord")
             End If
-        Next row
 
-        If riktigPass = False Then
-            MsgBox("Feil brukernavn eller passord")
+        Else
+            Dim Abrukernavn As String = txtInput.Text
+            PubVar.ansattBruker = txtInput.Text
+
+            Dim ansattTabell As New DataTable
+            Dim sjekkAbrukernavn As String
+            Dim sjekkApassord As String
+            Dim riktigPass As Boolean = False
+
+            ansattTabell = ansatt.getAlleAnsatt
+            For Each row In ansattTabell.Rows
+                sjekkAbrukernavn = row("Abrukernavn")
+                sjekkApassord = row("Apassord")
+
+                If Abrukernavn = sjekkAbrukernavn And passord = sjekkApassord Then
+
+                    riktigPass = True
+
+                    txtInput.Clear()
+                    txtPassord.Clear()
+                    Me.Hide()
+                    MsgBox("Velkommen til minside!")
+                    Ansattside.Show()
+                End If
+
+            Next row
+
         End If
 
     End Sub
-    Private Sub txtPassord_TextChanged(sender As Object, e As EventArgs) Handles txtPassord.TextChanged
-        txtPassord.PasswordChar = "*"
-    End Sub
 
     Private Sub btnBlodgiver_Click(sender As Object, e As EventArgs) Handles btnBlodgiver.Click
-        lbTelefon.Show()
+        lbInput.Show()
         lbPassord.Show()
         btnBlodgiver.Hide()
         btnAnsatt.Hide()
-        txtTelefon.Show()
+        txtInput.Show()
         txtPassord.Show()
         btnLogginn.Show()
         btnRegistrer.Show()
 
-        txtTelefon.Select()
+        txtInput.Select()
+        lbInput.Text = "Telefon"
         PubVar.brukerType = "Blodgiver"
     End Sub
 
     Private Sub btnAnsatt_Click(sender As Object, e As EventArgs) Handles btnAnsatt.Click
-        lbTelefon.Show()
+        lbInput.Show()
         lbPassord.Show()
         btnBlodgiver.Hide()
         btnAnsatt.Hide()
-        txtTelefon.Show()
+        txtInput.Show()
         txtPassord.Show()
         btnLogginn.Show()
         btnRegistrer.Hide()
 
-        txtTelefon.Select()
-        PubVar.brukerType = "Blodgiver" ' <- Endre til "Ansatt" når databasetabellen er klar.
+        txtInput.Select()
+        lbInput.Text = "Brukernavn"
+        PubVar.brukerType = "Ansatt" ' <- Endre til "Ansatt" når databasetabellen er klar.
+    End Sub
+
+    Private Sub txtPassord_TextChanged(sender As Object, e As EventArgs) Handles txtPassord.TextChanged
+        txtPassord.PasswordChar = "*"
     End Sub
 End Class
