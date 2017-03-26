@@ -24,8 +24,8 @@ Partial Class minside
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tabBrukerinfo = New System.Windows.Forms.TabPage()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.btnEndreInfo = New System.Windows.Forms.Button()
-        Me.lbPoststed = New System.Windows.Forms.Label()
         Me.txtPostnummer = New System.Windows.Forms.TextBox()
         Me.txtAdresse = New System.Windows.Forms.TextBox()
         Me.lbPoststedLabel = New System.Windows.Forms.Label()
@@ -43,7 +43,7 @@ Partial Class minside
         Me.tabReservasjon = New System.Windows.Forms.TabPage()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnSkjema = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lbPoststed = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.tabBrukerinfo.SuspendLayout()
         Me.tabReservasjon.SuspendLayout()
@@ -63,9 +63,9 @@ Partial Class minside
         '
         'tabBrukerinfo
         '
+        Me.tabBrukerinfo.Controls.Add(Me.lbPoststed)
         Me.tabBrukerinfo.Controls.Add(Me.Label1)
         Me.tabBrukerinfo.Controls.Add(Me.btnEndreInfo)
-        Me.tabBrukerinfo.Controls.Add(Me.lbPoststed)
         Me.tabBrukerinfo.Controls.Add(Me.txtPostnummer)
         Me.tabBrukerinfo.Controls.Add(Me.txtAdresse)
         Me.tabBrukerinfo.Controls.Add(Me.lbPoststedLabel)
@@ -86,6 +86,16 @@ Partial Class minside
         Me.tabBrukerinfo.Text = "Brukerinfo"
         Me.tabBrukerinfo.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(25, 14)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(153, 33)
+        Me.Label1.TabIndex = 15
+        Me.Label1.Text = "Personalia"
+        '
         'btnEndreInfo
         '
         Me.btnEndreInfo.Location = New System.Drawing.Point(527, 243)
@@ -94,14 +104,6 @@ Partial Class minside
         Me.btnEndreInfo.TabIndex = 14
         Me.btnEndreInfo.Text = "Endre info"
         Me.btnEndreInfo.UseVisualStyleBackColor = True
-        '
-        'lbPoststed
-        '
-        Me.lbPoststed.AutoSize = True
-        Me.lbPoststed.Location = New System.Drawing.Point(509, 209)
-        Me.lbPoststed.Name = "lbPoststed"
-        Me.lbPoststed.Size = New System.Drawing.Size(0, 13)
-        Me.lbPoststed.TabIndex = 13
         '
         'txtPostnummer
         '
@@ -114,13 +116,13 @@ Partial Class minside
         '
         Me.txtAdresse.Location = New System.Drawing.Point(509, 123)
         Me.txtAdresse.Name = "txtAdresse"
-        Me.txtAdresse.Size = New System.Drawing.Size(100, 20)
+        Me.txtAdresse.Size = New System.Drawing.Size(148, 20)
         Me.txtAdresse.TabIndex = 11
         '
         'lbPoststedLabel
         '
         Me.lbPoststedLabel.AutoSize = True
-        Me.lbPoststedLabel.Location = New System.Drawing.Point(455, 209)
+        Me.lbPoststedLabel.Location = New System.Drawing.Point(455, 206)
         Me.lbPoststedLabel.Name = "lbPoststedLabel"
         Me.lbPoststedLabel.Size = New System.Drawing.Size(48, 13)
         Me.lbPoststedLabel.TabIndex = 10
@@ -248,15 +250,14 @@ Partial Class minside
         Me.btnSkjema.Text = "Egenerklæring"
         Me.btnSkjema.UseVisualStyleBackColor = True
         '
-        'Label1
+        'lbPoststed
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(25, 14)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(153, 33)
-        Me.Label1.TabIndex = 15
-        Me.Label1.Text = "Personalia"
+        Me.lbPoststed.AutoSize = True
+        Me.lbPoststed.Location = New System.Drawing.Point(509, 208)
+        Me.lbPoststed.Name = "lbPoststed"
+        Me.lbPoststed.Size = New System.Drawing.Size(39, 13)
+        Me.lbPoststed.TabIndex = 16
+        Me.lbPoststed.Text = "Label2"
         '
         'minside
         '
@@ -291,9 +292,9 @@ Partial Class minside
     Friend WithEvents lbFornavn As Label
     Friend WithEvents txtFodselsdato As TextBox
     Friend WithEvents btnEndreInfo As Button
-    Friend WithEvents lbPoststed As Label
     Friend WithEvents txtPostnummer As TextBox
     Friend WithEvents txtAdresse As TextBox
     Friend WithEvents lbPoststedLabel As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents lbPoststed As Label
 End Class

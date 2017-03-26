@@ -1,11 +1,9 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class minside
-    Private tilkobling As MySqlConnection
-    Dim bruker As New Bruker()
+    Dim bruker As New Blodgiver()
+    Dim postnr As New Postnummer()
 
     Private Sub minside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=g_oops_23;Uid=g_oops_23;Pwd=3d4CcHvg")
         Dim telefon = PubVar.telefon
 
         visBruker()
@@ -15,6 +13,7 @@ Public Class minside
     Private Sub btnEndreInfo_Click(sender As Object, e As EventArgs) Handles btnEndreInfo.Click
         endreInfo()
         visBruker()
+        visPoststed()
     End Sub
 
     Private Sub visBruker()
@@ -54,30 +53,19 @@ Public Class minside
     End Sub
 
     Private Sub visPoststed()
-        If txtPostnummer.TextLength = 4 Then
 
-            Dim READER As MySqlDataReader
-            Try
-                tilkobling.Open()
-                Dim postnummer As String = txtPostnummer.Text
-                Dim tuddle As String = "'"
-                Dim Query As String
-                Query = "SELECT poststed from Postnummer WHERE postnummer = " & tuddle & postnummer & tuddle
-                Dim command As New MySqlCommand(Query, tilkobling)
-                READER = command.ExecuteReader
+        Dim postnummerTab As New DataTable()
 
-                If READER.Read() Then
-                    lbPoststed.Text = READER.GetString(0)
-                End If
+        Dim poststed As String
 
-                tilkobling.Close()
-            Catch ex As MySqlException
-                MessageBox.Show(ex.Message)
-            Finally
-                tilkobling.Dispose()
-            End Try
+        postnummerTab = postnr.GetPoststed(txtPostnummer.Text)
 
-        End If
+        For Each row In postnummerTab.Rows
+            poststed = row("poststed")
+
+            lbPoststed.Text = poststed
+        Next row
+
     End Sub
 
     Private Sub endreInfo()
