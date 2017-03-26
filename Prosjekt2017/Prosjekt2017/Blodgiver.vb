@@ -4,7 +4,6 @@ Public Class Blodgiver
     Private db As New Database()
 
     Private passord As String
-    Private globaltelefon As String = PubVar.telefon
 
     Public Sub New()
     End Sub
@@ -31,11 +30,12 @@ Public Class Blodgiver
         Return db.Query("INSERT INTO Blodgiver(Bpassord) VALUES('" & passord & "')")
     End Function
     Public Function GetBruker(telefonSok As String) As DataTable
-        Return db.Query("SELECT * From Blodgiver WHERE telefon = " & "'" & telefonSok & "'")
+        Return db.Query("SELECT * FROM Person JOIN Blodgiver ON Person.personID = Blodgiver.personID WHERE telefon = " & "'" & telefonSok & "'")
     End Function
-
-
+    Public Function getAlleBlodgivere() As DataTable
+        Return db.Query("SELECT * FROM Person JOIN Blodgiver ON Person.personID = Blodgiver.personID")
+    End Function
     Public Function GetBrukeridByTelefon() As DataTable
-        Return db.Query("SELECT brukerid FROM Blodgiver WHERE telefon = " & "'" & globaltelefon & "'")
+        Return db.Query("SELECT brukerid FROM Blodgiver WHERE telefon = " & "'" & PubVar.telefon & "'")
     End Function
 End Class

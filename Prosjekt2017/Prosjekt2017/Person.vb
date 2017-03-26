@@ -8,7 +8,6 @@
     Private adresse As String
     Private postnummer As Integer
     Private epost As String
-    Private globaltelefon As String = PubVar.telefon
 
     Public Sub New()
 
@@ -32,32 +31,28 @@
                  "', '" & telefon & "', '" & epost & "', '" & postnummer & "', '" & adresse & "', '" & fodselsdato & "')")
     End Sub
     Public Sub endreFornavn(fornavn As String)
-        db.Query("UPDATE Person SET fornavn = '" & fornavn & "' WHERE telefon = " & globaltelefon)
+        db.Query("UPDATE Person SET fornavn = '" & fornavn & "' WHERE telefon = '" & PubVar.telefon & "'")
     End Sub
     Public Sub endreEtternavn(etternavn As String)
-        db.Query("UPDATE Person SET etternavn = '" & etternavn & "' WHERE telefon = " & globaltelefon)
+        db.Query("UPDATE Person SET etternavn = '" & etternavn & "' WHERE telefon = '" & PubVar.telefon & "'")
     End Sub
     Public Sub endreFodselsdato(fodselsdato As String)
-        db.Query("UPDATE Person SET fodselsdato = '" & fodselsdato & "' WHERE telefon = " & globaltelefon)
+        db.Query("UPDATE Person SET fodselsdato = '" & fodselsdato & "' WHERE telefon = '" & PubVar.telefon & "'")
     End Sub
     Public Sub endreTelefon(telefon As Integer)
-        db.Query("UPDATE Person SET telefon = '" & telefon & "' WHERE telefon = " & globaltelefon)
+        db.Query("UPDATE Person SET telefon = '" & telefon & "' WHERE telefon = '" & PubVar.telefon & "'")
     End Sub
     Public Sub endreAdresse(adresse As String)
-        db.Query("UPDATE Person SET adresse = '" & adresse & "' WHERE telefon = " & globaltelefon)
+        db.Query("UPDATE Person SET adresse = '" & adresse & "' WHERE telefon = '" & PubVar.telefon & "'")
     End Sub
     Public Sub endrePostnummer(postnummer As String)
-        db.Query("UPDATE Person SET postnummer = '" & postnummer & "' WHERE telefon = " & globaltelefon)
+        db.Query("UPDATE Person SET postnummer = '" & postnummer & "' WHERE telefon = '" & PubVar.telefon & "'")
     End Sub
     Public Function GetTelefon() As DataTable
-        Return db.Query("SELECT * FROM Person JOIN Blodgiver WHERE Person.personID = Blodgiver.personID AND telefon = " & "'" & globaltelefon & "'")
+        Return db.Query("SELECT * FROM Person JOIN Blodgiver WHERE Person.personID = Blodgiver.personID AND telefon = " & "'" & PubVar.telefon & "'")
     End Function
 
     Public Function getLastPersonID() As DataTable
         Return db.Query("SELECT MAX(personID) FROM Person")
-    End Function
-
-    Public Function getAlleBrukere() As DataTable
-        Return db.Query("SELECT * FROM Person JOIN Blodgiver ON Person.personID = Blodgiver.personID")
     End Function
 End Class
