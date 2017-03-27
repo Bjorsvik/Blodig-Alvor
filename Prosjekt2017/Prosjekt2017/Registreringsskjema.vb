@@ -31,6 +31,7 @@ Public Class Registreringsskjema
             Dim nyBruker As New Blodgiver(txtPassord.Text, txtFornavn.Text, txtEtternavn.Text, txtFodselsdato.Text,
                                          txtTlf.Text, txtAdresse.Text, txtPostnummer.Text, txtEpost.Text)
             nyBruker.regBlodgiver()
+
             Me.Close()
         Else
             MsgBox("Passordene er ikke like")
