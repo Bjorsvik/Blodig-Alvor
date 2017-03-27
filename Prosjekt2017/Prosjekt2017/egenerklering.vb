@@ -2,6 +2,7 @@
 
 Public Class egenerklering
     Private tilkobling As MySqlConnection
+
     Private Sub egenerklering_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=g_oops_23;Uid=g_oops_23;Pwd=3d4CcHvg")
         tilkobling.Open()
@@ -433,7 +434,7 @@ Public Class egenerklering
             Dim bolk9 As String = spm91 + spm92 + spm93 + spm94 + spm95 + spm96 + spm97 + spm98 + spm99 + spm910
 #End Region
 
-            Dim sqlSporring = "insert into Egenerklering_blodgiver (dato, varslingEpost, varslingSMS, bolk1, bolk2, bolk3, bolk4, bolk5, bolk6, bolk7, bolk8, bolk9) 
+            Dim sqlSporring = "insert into Egenerklering (dato, varsling_epost, varsling_sms, bolk1, bolk2, bolk3, bolk4, bolk5, bolk6, bolk7, bolk8, bolk9) 
                            values (CURDATE(), @varslingEpost, @varslingSMS, @bolk1, @bolk2, @bolk3, @bolk4, @bolk5, @bolk6, @bolk7, @bolk8, @bolk9)"
             Dim sqlbolker As New MySqlCommand(sqlSporring, tilkobling)
 
