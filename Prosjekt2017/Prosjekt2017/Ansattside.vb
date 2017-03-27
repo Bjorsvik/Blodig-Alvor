@@ -3,23 +3,17 @@ Public Class Ansattside
     Private tilkobling As MySqlConnection
     Dim Blodlager As New Blodlager()
     Dim Bruker As New Blodgiver()
+    Dim postnr As New Postnummer()
 
-    Private Sub Ansattside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=g_oops_23;Uid=g_oops_23;Pwd=3d4CcHvg")
-
-    End Sub
-    Private Sub Ansattside_Close(sender As Object, e As EventArgs) Handles MyBase.Closed
-        tilkobling.Close()
-        tilkobling.Dispose()
-    End Sub
     Private Sub btnSok_Click(sender As Object, e As EventArgs) Handles btnSok.Click
         visBruker()
+        visPoststed()
     End Sub
 
-    Private Sub btnOppdater_Click(sender As Object, e As EventArgs) Handles btnOppdater.Click
+    Private Sub btnEndreInfo_Click(sender As Object, e As EventArgs) Handles btnEndreInfo.Click
         endreInfo()
         visBruker()
+        visPoststed()
     End Sub
 
     Private Sub Lager_Click(sender As Object, e As EventArgs) Handles Lager.Click
@@ -83,6 +77,8 @@ Public Class Ansattside
     End Sub
 
     Private Sub endreInfo()
+        PubVar.telefon = txtSok.Text
+
         Dim brukerTab As New DataTable()
         Dim postnummere As New DataTable()
 
@@ -113,6 +109,19 @@ Public Class Ansattside
 
         Next row
     End Sub
+    Private Sub visPoststed()
 
+        Dim postnummerTab As New DataTable()
 
+        Dim poststed As String
+
+        postnummerTab = postnr.GetPoststed(txtPostnummer.Text)
+
+        For Each row In postnummerTab.Rows
+            poststed = row("poststed")
+
+            lbPoststed.Text = poststed
+        Next row
+
+    End Sub
 End Class

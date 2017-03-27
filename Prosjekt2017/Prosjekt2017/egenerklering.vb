@@ -9,10 +9,6 @@ Public Class egenerklering
         Me.Show()
         Label1.Select() 'Får formen til å loade øverst på siden
     End Sub
-
-
-
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
 
@@ -458,6 +454,7 @@ Public Class egenerklering
             MsgBox("Du må bekrefte at du har lest informasjonen øverst i spørreskjemaet", MsgBoxStyle.Information)
         End If
     End Sub
+    'Knappen som sender inn spørreskjemaet
     Private Sub btnInfo_Click(sender As Object, e As EventArgs) Handles btnInfo.Click
         listbox1_egenerklering.Show()
         'Denne knappen åpner formen listbox1_egenerklering
@@ -477,7 +474,6 @@ Public Class egenerklering
         End If
 
     End Sub
-
     'Denne suben gjør at når man trykker på en av radioknappene i bolk8 (besvares av herrer)
     'vil det ikke være mulig å trykke på noen av spørsmålene i bolk 7 (besvares av kvinner)
     Private Sub rb811_CheckedChanged(sender As Object, e As EventArgs) Handles rb811.CheckedChanged, rb812.CheckedChanged
