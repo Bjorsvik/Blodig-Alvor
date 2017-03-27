@@ -75,6 +75,12 @@ Public Class Registreringsskjema
         txtEtternavn.Text = ToUpperFirst(txtEtternavn.Text)
         txtEtternavn.Select(txtEtternavn.Text.Length, 0)
     End Sub
+
+    Private Sub txtAdresse_TextChanged(sender As Object, e As EventArgs) Handles txtAdresse.TextChanged
+        txtAdresse.Text = ToUpperFirst(txtAdresse.Text)
+        txtAdresse.Select(txtAdresse.Text.Length, 0)
+    End Sub
+
     Private Sub Registreringsskjema_Close(sender As Object, e As EventArgs) Handles MyBase.Closed
         tilkobling.Close()
         tilkobling.Dispose()
