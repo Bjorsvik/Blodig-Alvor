@@ -136,6 +136,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Reservasjoner.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Ansattside.resx">
