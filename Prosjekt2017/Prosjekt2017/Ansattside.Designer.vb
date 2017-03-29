@@ -34,8 +34,6 @@ Partial Class Ansattside
         Me.Blodgivning = New System.Windows.Forms.TabPage()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.btnBlodgivning = New System.Windows.Forms.Button()
-        Me.KalenderGivning = New System.Windows.Forms.MonthCalendar()
-        Me.lblGivningDato = New System.Windows.Forms.Label()
         Me.lblMengde = New System.Windows.Forms.Label()
         Me.lblPersnr = New System.Windows.Forms.Label()
         Me.txtboxPersnr = New System.Windows.Forms.TextBox()
@@ -168,17 +166,15 @@ Partial Class Ansattside
         'gridBlodlager
         '
         Me.gridBlodlager.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.gridBlodlager.Location = New System.Drawing.Point(192, 75)
+        Me.gridBlodlager.Location = New System.Drawing.Point(28, 16)
         Me.gridBlodlager.Name = "gridBlodlager"
-        Me.gridBlodlager.Size = New System.Drawing.Size(323, 213)
+        Me.gridBlodlager.Size = New System.Drawing.Size(323, 377)
         Me.gridBlodlager.TabIndex = 0
         '
         'Blodgivning
         '
         Me.Blodgivning.Controls.Add(Me.NumericUpDown1)
         Me.Blodgivning.Controls.Add(Me.btnBlodgivning)
-        Me.Blodgivning.Controls.Add(Me.KalenderGivning)
-        Me.Blodgivning.Controls.Add(Me.lblGivningDato)
         Me.Blodgivning.Controls.Add(Me.lblMengde)
         Me.Blodgivning.Controls.Add(Me.lblPersnr)
         Me.Blodgivning.Controls.Add(Me.txtboxPersnr)
@@ -201,30 +197,13 @@ Partial Class Ansattside
         '
         'btnBlodgivning
         '
-        Me.btnBlodgivning.Location = New System.Drawing.Point(299, 82)
+        Me.btnBlodgivning.Location = New System.Drawing.Point(273, 26)
         Me.btnBlodgivning.Margin = New System.Windows.Forms.Padding(2)
         Me.btnBlodgivning.Name = "btnBlodgivning"
-        Me.btnBlodgivning.Size = New System.Drawing.Size(266, 226)
+        Me.btnBlodgivning.Size = New System.Drawing.Size(171, 115)
         Me.btnBlodgivning.TabIndex = 17
         Me.btnBlodgivning.Text = "Send inn"
         Me.btnBlodgivning.UseVisualStyleBackColor = True
-        '
-        'KalenderGivning
-        '
-        Me.KalenderGivning.Location = New System.Drawing.Point(44, 140)
-        Me.KalenderGivning.Margin = New System.Windows.Forms.Padding(7)
-        Me.KalenderGivning.Name = "KalenderGivning"
-        Me.KalenderGivning.TabIndex = 16
-        '
-        'lblGivningDato
-        '
-        Me.lblGivningDato.AutoSize = True
-        Me.lblGivningDato.Location = New System.Drawing.Point(41, 119)
-        Me.lblGivningDato.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.lblGivningDato.Name = "lblGivningDato"
-        Me.lblGivningDato.Size = New System.Drawing.Size(36, 13)
-        Me.lblGivningDato.TabIndex = 15
-        Me.lblGivningDato.Text = "Dato: "
         '
         'lblMengde
         '
@@ -613,8 +592,6 @@ Partial Class Ansattside
     Friend WithEvents Lager As TabPage
     Friend WithEvents Blodgivning As TabPage
     Friend WithEvents btnBlodgivning As Button
-    Friend WithEvents KalenderGivning As MonthCalendar
-    Friend WithEvents lblGivningDato As Label
     Friend WithEvents lblMengde As Label
     Friend WithEvents lblPersnr As Label
     Friend WithEvents txtboxPersnr As TextBox

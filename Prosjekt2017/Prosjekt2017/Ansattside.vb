@@ -127,4 +127,8 @@ Public Class Ansattside
 
     Private Sub Innkalling_Click(sender As Object, e As EventArgs) Handles Innkalling.Click
     End Sub
+
+    Private Sub Ansattside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
