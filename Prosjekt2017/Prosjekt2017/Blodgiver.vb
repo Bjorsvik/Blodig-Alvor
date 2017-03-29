@@ -8,9 +8,9 @@ Public Class Blodgiver
     Public Sub New()
     End Sub
 
-    Public Sub New(passord As String, ByVal fornavn As String, ByVal etternavn As String, ByVal personnummer As String, ByVal telefon As Integer,
+    Public Sub New(passord As String, ByVal fornavn As String, ByVal etternavn As String, ByVal fodselsdato As String, ByVal personnummer As String, ByVal telefon As Integer,
                    ByVal adresse As String, ByVal postnummer As Integer, ByVal epost As String)
-        MyBase.New(fornavn, etternavn, personnummer, telefon, adresse, postnummer, epost)
+        MyBase.New(fornavn, etternavn, fodselsdato, personnummer, telefon, adresse, postnummer, epost)
         Me.passord = passord
     End Sub
 
