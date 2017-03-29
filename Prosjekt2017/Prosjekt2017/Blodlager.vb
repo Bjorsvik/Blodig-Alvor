@@ -16,5 +16,4 @@
     Public Sub regBlod()
         db.Query("INSERT INTO Blodlager (blodtype, blodplasma, blodplater, blodlegeme) VALUES ('" & blodtype & "', '" & blodplasma & "', '" & blodplater & "' , '" & blodlegeme & "')")
     End Sub
-
 End Class
