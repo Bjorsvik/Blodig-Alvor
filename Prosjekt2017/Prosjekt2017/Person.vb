@@ -55,4 +55,5 @@
     Public Function getLastPersonID() As DataTable
         Return db.Query("SELECT MAX(personID) FROM Person")
     End Function
+
 End Class

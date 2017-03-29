@@ -5,16 +5,34 @@
     Dim blodgiver As New Blodgiver()
 
 
-    Public Sub oppdater()
-        db.Query("DELETE * from Reservasjoner WHERE dato < GETDATE()-1")
+    Public Sub getGjeldendeReservasjoner()
+        db.Query("SELECT * from Reservasjoner WHERE dato >= GETDATE()")
     End Sub
 
     Public Function getAlleReservasjoner() As DataTable
         Return db.Query("SELECT * from Reservasjoner")
     End Function
+    Public Function getLastResID() As DataTable
+        Return db.Query("SELECT MAX(resID) FROM Reservasjon")
+    End Function
 
-    Public Sub reserver()
+    Public Sub reserver(ByVal dato As Date, ByVal personID As Integer)
 
+        Dim resID As DataTable = getLastResID()
+        Dim reservasjonID As String = ""
+
+
+        For Each id In resID.Rows
+            reservasjonID = id(0).ToString()
+        Next id
+
+        If reservasjonID = "" Then
+            reservasjonID = "0"
+        End If
+
+        MsgBox(CInt(reservasjonID))
+
+        db.Query("INSERT INTO Reservasjon (resID, dato, personID) VALUES ('" & CInt(reservasjonID) & "', '" & dato & "', '" & personID & "');")
     End Sub
 
 End Class
