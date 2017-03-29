@@ -317,7 +317,7 @@ Partial Class minside
         '
         'MonthCalendar1
         '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(411, 96)
+        Me.MonthCalendar1.Location = New System.Drawing.Point(389, 82)
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 5
         '
