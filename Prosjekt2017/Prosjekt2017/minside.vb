@@ -24,28 +24,35 @@ Public Class minside
 
         Dim fornavn As String
         Dim etternavn As String
+        Dim fodselsdato As String
         Dim personnummer As String
         Dim telefon As Integer
         Dim adresse As String
         Dim postnummer As Integer
+        Dim personID As Integer
 
-        brukerTab = bruker.GetTelefon()
+        brukerTab = bruker.GetPersonnummer()
 
         For Each row In brukerTab.Rows
 
             fornavn = row("fornavn")
             etternavn = row("etternavn")
+            fodselsdato = row("fodselsdato")
             personnummer = row("personnummer")
             telefon = row("telefon")
             adresse = row("adresse")
             postnummer = row("postnummer")
+            personID = row("personID")
 
             txtFornavn.Text = fornavn
             txtEtternavn.Text = etternavn
+            txtFodselsdato.Text = fodselsdato
             txtPersonnummer.Text = personnummer
             txtTelefon.Text = telefon
             txtAdresse.Text = adresse
             txtPostnummer.Text = postnummer
+            lbPersonID.Text = personID
+
 
 
         Next row
@@ -76,25 +83,27 @@ Public Class minside
 
         Dim fornavn As String
         Dim etternavn As String
-        Dim fodselsdato As Date
+        Dim fodselsdato As String
+        Dim personnummer As String
         Dim telefon As Integer
         Dim adresse As String
         Dim postnummer As Integer
 
-        brukerTab = bruker.GetTelefon()
+        brukerTab = bruker.GetPersonnummer()
 
         For Each row In brukerTab.Rows
 
             fornavn = row("fornavn")
             etternavn = row("etternavn")
             fodselsdato = row("fodselsdato")
+            personnummer = row("personnummer")
             telefon = row("telefon")
             adresse = row("adresse")
             postnummer = row("postnummer")
 
             bruker.endreFornavn(txtFornavn.Text)
             bruker.endreEtternavn(txtEtternavn.Text)
-            bruker.endreFodselsdato(txtPersonnummer.Text)
+            bruker.endreFodselsdato(txtFodselsdato.Text)
             bruker.endreTelefon(txtTelefon.Text)
             bruker.endreAdresse(txtAdresse.Text)
             bruker.endrePostnummer(txtPostnummer.Text)
