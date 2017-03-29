@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class minside
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,10 +20,11 @@ Partial Class minside
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tabBrukerinfo = New System.Windows.Forms.TabPage()
+        Me.lbPoststed = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnEndreInfo = New System.Windows.Forms.Button()
         Me.txtPostnummer = New System.Windows.Forms.TextBox()
@@ -43,7 +44,7 @@ Partial Class minside
         Me.tabReservasjon = New System.Windows.Forms.TabPage()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnSkjema = New System.Windows.Forms.Button()
-        Me.lbPoststed = New System.Windows.Forms.Label()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.TabControl1.SuspendLayout()
         Me.tabBrukerinfo.SuspendLayout()
         Me.tabReservasjon.SuspendLayout()
@@ -85,6 +86,15 @@ Partial Class minside
         Me.tabBrukerinfo.TabIndex = 0
         Me.tabBrukerinfo.Text = "Brukerinfo"
         Me.tabBrukerinfo.UseVisualStyleBackColor = True
+        '
+        'lbPoststed
+        '
+        Me.lbPoststed.AutoSize = True
+        Me.lbPoststed.Location = New System.Drawing.Point(509, 208)
+        Me.lbPoststed.Name = "lbPoststed"
+        Me.lbPoststed.Size = New System.Drawing.Size(39, 13)
+        Me.lbPoststed.TabIndex = 16
+        Me.lbPoststed.Text = "Label2"
         '
         'Label1
         '
@@ -222,6 +232,7 @@ Partial Class minside
         '
         'tabReservasjon
         '
+        Me.tabReservasjon.Controls.Add(Me.DateTimePicker1)
         Me.tabReservasjon.Controls.Add(Me.Button1)
         Me.tabReservasjon.Controls.Add(Me.btnSkjema)
         Me.tabReservasjon.Location = New System.Drawing.Point(4, 22)
@@ -250,14 +261,12 @@ Partial Class minside
         Me.btnSkjema.Text = "Egenerklæring"
         Me.btnSkjema.UseVisualStyleBackColor = True
         '
-        'lbPoststed
+        'DateTimePicker1
         '
-        Me.lbPoststed.AutoSize = True
-        Me.lbPoststed.Location = New System.Drawing.Point(509, 208)
-        Me.lbPoststed.Name = "lbPoststed"
-        Me.lbPoststed.Size = New System.Drawing.Size(39, 13)
-        Me.lbPoststed.TabIndex = 16
-        Me.lbPoststed.Text = "Label2"
+        Me.DateTimePicker1.Location = New System.Drawing.Point(158, 124)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
+        Me.DateTimePicker1.TabIndex = 4
         '
         'minside
         '
@@ -297,4 +306,5 @@ Partial Class minside
     Friend WithEvents lbPoststedLabel As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents lbPoststed As Label
+    Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class
