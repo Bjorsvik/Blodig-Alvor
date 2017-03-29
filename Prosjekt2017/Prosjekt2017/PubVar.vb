@@ -1,5 +1,5 @@
 ﻿Module PubVar
-    Public telefon As Integer
+    Public personnummer As String
     Public brukerType As String
     Public ansattBruker As String
 End Module

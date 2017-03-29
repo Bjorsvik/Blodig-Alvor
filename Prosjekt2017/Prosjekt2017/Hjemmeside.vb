@@ -27,20 +27,20 @@ Public Class Hjemmeside
         Dim brukertype As String = PubVar.brukerType
 
         If PubVar.brukerType = "Blodgiver" Then
-            Dim telefon = txtInput.Text
-            PubVar.telefon = telefon
+            Dim personnummer As String = txtInput.Text
+            PubVar.personnummer = personnummer
 
             Dim brukerTabell As New DataTable
             Dim sjekkPassord As String
-            Dim sjekkTelefon As String
+            Dim sjekkPersonnummer As String
             Dim riktigPass As Boolean = False
 
             brukerTabell = bruker.getAlleBlodgivere
             For Each row In brukerTabell.Rows
-                sjekkTelefon = row("telefon")
+                sjekkPersonnummer = row("personnummer")
                 sjekkPassord = row("Bpassord")
 
-                If telefon = sjekkTelefon And passord = sjekkPassord Then
+                If personnummer = sjekkPersonnummer And passord = sjekkPassord Then
 
                     riktigPass = True
 
