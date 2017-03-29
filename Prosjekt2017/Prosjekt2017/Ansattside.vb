@@ -20,10 +20,7 @@ Public Class Ansattside
         Dim blodlagerTab As New DataTable()
         Dim blodtypeTab As New DataTable()
 
-        Dim blodtype As String
-        Dim blodplasma As String
-        Dim blodlegeme As String
-        Dim blodplater As String
+        Dim blodtype, blodplasma, blodlegeme, blodplater As String
 
         gridBlodlager.Rows.Clear()
         blodlagerTab = Blodlager.getAlleBlod()
@@ -47,12 +44,9 @@ Public Class Ansattside
         Dim brukerTab As New DataTable()
         Dim postnummere As New DataTable()
 
-        Dim fornavn As String
-        Dim etternavn As String
+        Dim fornavn, etternavn, adresse As String
         Dim fodselsdato As Date
-        Dim telefon As Integer
-        Dim adresse As String
-        Dim postnummer As Integer
+        Dim telefon, postnummer As Integer
 
 
         brukerTab = Bruker.GetBruker(txtSok.Text)
@@ -82,12 +76,9 @@ Public Class Ansattside
         Dim brukerTab As New DataTable()
         Dim postnummere As New DataTable()
 
-        Dim fornavn As String
-        Dim etternavn As String
+        Dim fornavn, etternavn, adresse As String
         Dim fodselsdato As Date
-        Dim telefon As Integer
-        Dim adresse As String
-        Dim postnummer As Integer
+        Dim telefon, postnummer As Integer
 
         brukerTab = Bruker.GetBruker(txtSok.Text)
 

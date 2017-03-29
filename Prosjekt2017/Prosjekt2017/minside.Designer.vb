@@ -42,9 +42,9 @@ Partial Class minside
         Me.txtFornavn = New System.Windows.Forms.TextBox()
         Me.tabHistorikk = New System.Windows.Forms.TabPage()
         Me.tabReservasjon = New System.Windows.Forms.TabPage()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnSkjema = New System.Windows.Forms.Button()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.TabControl1.SuspendLayout()
         Me.tabBrukerinfo.SuspendLayout()
         Me.tabReservasjon.SuspendLayout()
@@ -55,11 +55,12 @@ Partial Class minside
         Me.TabControl1.Controls.Add(Me.tabBrukerinfo)
         Me.TabControl1.Controls.Add(Me.tabHistorikk)
         Me.TabControl1.Controls.Add(Me.tabReservasjon)
-        Me.TabControl1.Location = New System.Drawing.Point(0, 12)
+        Me.TabControl1.Location = New System.Drawing.Point(0, 15)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TabControl1.Multiline = True
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(794, 445)
+        Me.TabControl1.Size = New System.Drawing.Size(1059, 548)
         Me.TabControl1.TabIndex = 20
         '
         'tabBrukerinfo
@@ -80,9 +81,10 @@ Partial Class minside
         Me.tabBrukerinfo.Controls.Add(Me.txtTelefon)
         Me.tabBrukerinfo.Controls.Add(Me.txtEtternavn)
         Me.tabBrukerinfo.Controls.Add(Me.txtFornavn)
-        Me.tabBrukerinfo.Location = New System.Drawing.Point(4, 22)
+        Me.tabBrukerinfo.Location = New System.Drawing.Point(4, 25)
+        Me.tabBrukerinfo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.tabBrukerinfo.Name = "tabBrukerinfo"
-        Me.tabBrukerinfo.Size = New System.Drawing.Size(786, 419)
+        Me.tabBrukerinfo.Size = New System.Drawing.Size(1051, 519)
         Me.tabBrukerinfo.TabIndex = 0
         Me.tabBrukerinfo.Text = "Brukerinfo"
         Me.tabBrukerinfo.UseVisualStyleBackColor = True
@@ -90,9 +92,10 @@ Partial Class minside
         'lbPoststed
         '
         Me.lbPoststed.AutoSize = True
-        Me.lbPoststed.Location = New System.Drawing.Point(509, 208)
+        Me.lbPoststed.Location = New System.Drawing.Point(679, 256)
+        Me.lbPoststed.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbPoststed.Name = "lbPoststed"
-        Me.lbPoststed.Size = New System.Drawing.Size(39, 13)
+        Me.lbPoststed.Size = New System.Drawing.Size(51, 17)
         Me.lbPoststed.TabIndex = 16
         Me.lbPoststed.Text = "Label2"
         '
@@ -100,132 +103,148 @@ Partial Class minside
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(25, 14)
+        Me.Label1.Location = New System.Drawing.Point(33, 17)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(153, 33)
+        Me.Label1.Size = New System.Drawing.Size(195, 42)
         Me.Label1.TabIndex = 15
         Me.Label1.Text = "Personalia"
         '
         'btnEndreInfo
         '
-        Me.btnEndreInfo.Location = New System.Drawing.Point(527, 243)
+        Me.btnEndreInfo.Location = New System.Drawing.Point(703, 299)
+        Me.btnEndreInfo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnEndreInfo.Name = "btnEndreInfo"
-        Me.btnEndreInfo.Size = New System.Drawing.Size(82, 26)
+        Me.btnEndreInfo.Size = New System.Drawing.Size(109, 32)
         Me.btnEndreInfo.TabIndex = 14
         Me.btnEndreInfo.Text = "Endre info"
         Me.btnEndreInfo.UseVisualStyleBackColor = True
         '
         'txtPostnummer
         '
-        Me.txtPostnummer.Location = New System.Drawing.Point(509, 165)
+        Me.txtPostnummer.Location = New System.Drawing.Point(679, 203)
+        Me.txtPostnummer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtPostnummer.Name = "txtPostnummer"
-        Me.txtPostnummer.Size = New System.Drawing.Size(100, 20)
+        Me.txtPostnummer.Size = New System.Drawing.Size(132, 22)
         Me.txtPostnummer.TabIndex = 12
         '
         'txtAdresse
         '
-        Me.txtAdresse.Location = New System.Drawing.Point(509, 123)
+        Me.txtAdresse.Location = New System.Drawing.Point(679, 151)
+        Me.txtAdresse.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtAdresse.Name = "txtAdresse"
-        Me.txtAdresse.Size = New System.Drawing.Size(148, 20)
+        Me.txtAdresse.Size = New System.Drawing.Size(196, 22)
         Me.txtAdresse.TabIndex = 11
         '
         'lbPoststedLabel
         '
         Me.lbPoststedLabel.AutoSize = True
-        Me.lbPoststedLabel.Location = New System.Drawing.Point(455, 206)
+        Me.lbPoststedLabel.Location = New System.Drawing.Point(607, 254)
+        Me.lbPoststedLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbPoststedLabel.Name = "lbPoststedLabel"
-        Me.lbPoststedLabel.Size = New System.Drawing.Size(48, 13)
+        Me.lbPoststedLabel.Size = New System.Drawing.Size(63, 17)
         Me.lbPoststedLabel.TabIndex = 10
         Me.lbPoststedLabel.Text = "Poststed"
         '
         'txtFodselsdato
         '
-        Me.txtFodselsdato.Location = New System.Drawing.Point(219, 206)
+        Me.txtFodselsdato.Location = New System.Drawing.Point(292, 254)
+        Me.txtFodselsdato.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtFodselsdato.Name = "txtFodselsdato"
-        Me.txtFodselsdato.Size = New System.Drawing.Size(100, 20)
+        Me.txtFodselsdato.Size = New System.Drawing.Size(132, 22)
         Me.txtFodselsdato.TabIndex = 9
         '
         'lbPostnummer
         '
         Me.lbPostnummer.AutoSize = True
-        Me.lbPostnummer.Location = New System.Drawing.Point(438, 168)
+        Me.lbPostnummer.Location = New System.Drawing.Point(584, 207)
+        Me.lbPostnummer.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbPostnummer.Name = "lbPostnummer"
-        Me.lbPostnummer.Size = New System.Drawing.Size(65, 13)
+        Me.lbPostnummer.Size = New System.Drawing.Size(87, 17)
         Me.lbPostnummer.TabIndex = 8
         Me.lbPostnummer.Text = "Postnummer"
         '
         'lbAdresse
         '
         Me.lbAdresse.AutoSize = True
-        Me.lbAdresse.Location = New System.Drawing.Point(458, 127)
+        Me.lbAdresse.Location = New System.Drawing.Point(611, 156)
+        Me.lbAdresse.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbAdresse.Name = "lbAdresse"
-        Me.lbAdresse.Size = New System.Drawing.Size(45, 13)
+        Me.lbAdresse.Size = New System.Drawing.Size(60, 17)
         Me.lbAdresse.TabIndex = 7
         Me.lbAdresse.Text = "Adresse"
         '
         'lbFodselsdato
         '
         Me.lbFodselsdato.AutoSize = True
-        Me.lbFodselsdato.Location = New System.Drawing.Point(143, 209)
+        Me.lbFodselsdato.Location = New System.Drawing.Point(191, 257)
+        Me.lbFodselsdato.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbFodselsdato.Name = "lbFodselsdato"
-        Me.lbFodselsdato.Size = New System.Drawing.Size(64, 13)
+        Me.lbFodselsdato.Size = New System.Drawing.Size(85, 17)
         Me.lbFodselsdato.TabIndex = 6
         Me.lbFodselsdato.Text = "Fødselsdato"
         '
         'lbTelefon
         '
         Me.lbTelefon.AutoSize = True
-        Me.lbTelefon.Location = New System.Drawing.Point(161, 250)
+        Me.lbTelefon.Location = New System.Drawing.Point(215, 308)
+        Me.lbTelefon.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbTelefon.Name = "lbTelefon"
-        Me.lbTelefon.Size = New System.Drawing.Size(43, 13)
+        Me.lbTelefon.Size = New System.Drawing.Size(56, 17)
         Me.lbTelefon.TabIndex = 5
         Me.lbTelefon.Text = "Telefon"
         '
         'lbEtternavn
         '
         Me.lbEtternavn.AutoSize = True
-        Me.lbEtternavn.Location = New System.Drawing.Point(154, 172)
+        Me.lbEtternavn.Location = New System.Drawing.Point(205, 212)
+        Me.lbEtternavn.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbEtternavn.Name = "lbEtternavn"
-        Me.lbEtternavn.Size = New System.Drawing.Size(53, 13)
+        Me.lbEtternavn.Size = New System.Drawing.Size(69, 17)
         Me.lbEtternavn.TabIndex = 4
         Me.lbEtternavn.Text = "Etternavn"
         '
         'lbFornavn
         '
         Me.lbFornavn.AutoSize = True
-        Me.lbFornavn.Location = New System.Drawing.Point(161, 130)
+        Me.lbFornavn.Location = New System.Drawing.Point(215, 160)
+        Me.lbFornavn.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbFornavn.Name = "lbFornavn"
-        Me.lbFornavn.Size = New System.Drawing.Size(46, 13)
+        Me.lbFornavn.Size = New System.Drawing.Size(60, 17)
         Me.lbFornavn.TabIndex = 3
         Me.lbFornavn.Text = "Fornavn"
         '
         'txtTelefon
         '
-        Me.txtTelefon.Location = New System.Drawing.Point(219, 247)
+        Me.txtTelefon.Location = New System.Drawing.Point(292, 304)
+        Me.txtTelefon.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtTelefon.Name = "txtTelefon"
-        Me.txtTelefon.Size = New System.Drawing.Size(100, 20)
+        Me.txtTelefon.Size = New System.Drawing.Size(132, 22)
         Me.txtTelefon.TabIndex = 2
         '
         'txtEtternavn
         '
-        Me.txtEtternavn.Location = New System.Drawing.Point(219, 169)
+        Me.txtEtternavn.Location = New System.Drawing.Point(292, 208)
+        Me.txtEtternavn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtEtternavn.Name = "txtEtternavn"
-        Me.txtEtternavn.Size = New System.Drawing.Size(100, 20)
+        Me.txtEtternavn.Size = New System.Drawing.Size(132, 22)
         Me.txtEtternavn.TabIndex = 1
         '
         'txtFornavn
         '
-        Me.txtFornavn.Location = New System.Drawing.Point(219, 127)
+        Me.txtFornavn.Location = New System.Drawing.Point(292, 156)
+        Me.txtFornavn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtFornavn.Name = "txtFornavn"
-        Me.txtFornavn.Size = New System.Drawing.Size(100, 20)
+        Me.txtFornavn.Size = New System.Drawing.Size(132, 22)
         Me.txtFornavn.TabIndex = 0
         '
         'tabHistorikk
         '
-        Me.tabHistorikk.Location = New System.Drawing.Point(4, 22)
+        Me.tabHistorikk.Location = New System.Drawing.Point(4, 25)
+        Me.tabHistorikk.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.tabHistorikk.Name = "tabHistorikk"
-        Me.tabHistorikk.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabHistorikk.Size = New System.Drawing.Size(786, 419)
+        Me.tabHistorikk.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tabHistorikk.Size = New System.Drawing.Size(1051, 519)
         Me.tabHistorikk.TabIndex = 1
         Me.tabHistorikk.Text = "Min Historikk"
         Me.tabHistorikk.UseVisualStyleBackColor = True
@@ -235,46 +254,51 @@ Partial Class minside
         Me.tabReservasjon.Controls.Add(Me.DateTimePicker1)
         Me.tabReservasjon.Controls.Add(Me.Button1)
         Me.tabReservasjon.Controls.Add(Me.btnSkjema)
-        Me.tabReservasjon.Location = New System.Drawing.Point(4, 22)
+        Me.tabReservasjon.Location = New System.Drawing.Point(4, 25)
+        Me.tabReservasjon.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.tabReservasjon.Name = "tabReservasjon"
-        Me.tabReservasjon.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabReservasjon.Size = New System.Drawing.Size(786, 419)
+        Me.tabReservasjon.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tabReservasjon.Size = New System.Drawing.Size(1051, 519)
         Me.tabReservasjon.TabIndex = 2
         Me.tabReservasjon.Text = "Reserver Time"
         Me.tabReservasjon.UseVisualStyleBackColor = True
         '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(211, 153)
+        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(265, 22)
+        Me.DateTimePicker1.TabIndex = 4
+        '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(525, 357)
+        Me.Button1.Location = New System.Drawing.Point(700, 439)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(94, 43)
+        Me.Button1.Size = New System.Drawing.Size(125, 53)
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "Reserver"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'btnSkjema
         '
-        Me.btnSkjema.Location = New System.Drawing.Point(653, 356)
+        Me.btnSkjema.Location = New System.Drawing.Point(871, 438)
+        Me.btnSkjema.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnSkjema.Name = "btnSkjema"
-        Me.btnSkjema.Size = New System.Drawing.Size(101, 44)
+        Me.btnSkjema.Size = New System.Drawing.Size(135, 54)
         Me.btnSkjema.TabIndex = 0
         Me.btnSkjema.Text = "Egenerklæring"
         Me.btnSkjema.UseVisualStyleBackColor = True
         '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(158, 124)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker1.TabIndex = 4
-        '
         'minside
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(800, 476)
+        Me.ClientSize = New System.Drawing.Size(1067, 586)
         Me.Controls.Add(Me.TabControl1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "minside"
         Me.Text = "minside"
         Me.TabControl1.ResumeLayout(False)
