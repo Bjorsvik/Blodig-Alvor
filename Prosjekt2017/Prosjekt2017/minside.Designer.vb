@@ -46,9 +46,9 @@ Partial Class minside
         Me.txtFornavn = New System.Windows.Forms.TextBox()
         Me.tabHistorikk = New System.Windows.Forms.TabPage()
         Me.tabReservasjon = New System.Windows.Forms.TabPage()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnSkjema = New System.Windows.Forms.Button()
+        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.TabControl1.SuspendLayout()
         Me.tabBrukerinfo.SuspendLayout()
         Me.tabReservasjon.SuspendLayout()
@@ -277,7 +277,7 @@ Partial Class minside
         '
         'tabReservasjon
         '
-        Me.tabReservasjon.Controls.Add(Me.DateTimePicker1)
+        Me.tabReservasjon.Controls.Add(Me.MonthCalendar1)
         Me.tabReservasjon.Controls.Add(Me.Button1)
         Me.tabReservasjon.Controls.Add(Me.btnSkjema)
         Me.tabReservasjon.Location = New System.Drawing.Point(4, 22)
@@ -287,13 +287,6 @@ Partial Class minside
         Me.tabReservasjon.TabIndex = 2
         Me.tabReservasjon.Text = "Reserver Time"
         Me.tabReservasjon.UseVisualStyleBackColor = True
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(158, 124)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker1.TabIndex = 4
         '
         'Button1
         '
@@ -312,6 +305,12 @@ Partial Class minside
         Me.btnSkjema.TabIndex = 0
         Me.btnSkjema.Text = "Egenerklæring"
         Me.btnSkjema.UseVisualStyleBackColor = True
+        '
+        'MonthCalendar1
+        '
+        Me.MonthCalendar1.Location = New System.Drawing.Point(155, 60)
+        Me.MonthCalendar1.Name = "MonthCalendar1"
+        Me.MonthCalendar1.TabIndex = 5
         '
         'minside
         '
@@ -351,9 +350,9 @@ Partial Class minside
     Friend WithEvents lbPoststedLabel As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents lbPoststed As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents txtFodselsdato As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents lbPersonID As Label
+    Friend WithEvents MonthCalendar1 As MonthCalendar
 End Class
