@@ -9,7 +9,6 @@
     Private adresse As String
     Private postnummer As Integer
     Private epost As String
-    Private globalPersonnummer As Integer = PubVar.personnummer
 
     Public Sub New()
 
