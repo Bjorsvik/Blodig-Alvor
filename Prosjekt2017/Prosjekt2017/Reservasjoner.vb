@@ -16,7 +16,7 @@
         Return db.Query("SELECT MAX(resID) FROM Reservasjon")
     End Function
 
-    Public Sub reserver(ByVal dato As Date, ByVal personID As Integer)
+    Public Sub reserver(ByVal Dato As String, ByVal personID As Integer)
 
         Dim resID As DataTable = getLastResID()
         Dim reservasjonID As String = ""
@@ -32,7 +32,7 @@
 
         MsgBox(CInt(reservasjonID))
 
-        db.Query("INSERT INTO Reservasjon (resID, dato, personID) VALUES ('" & CInt(reservasjonID) & "', '" & dato & "', '" & personID & "');")
+        db.Query("INSERT INTO Reservasjon (resID, dato, personID) VALUES ('" & CInt(reservasjonID) & "', '" & Dato & "', '" & personID & "');")
     End Sub
 
 End Class

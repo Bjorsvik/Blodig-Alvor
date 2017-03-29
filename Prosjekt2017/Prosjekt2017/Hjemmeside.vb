@@ -99,7 +99,7 @@ Public Class Hjemmeside
         btnRegistrer.Show()
 
         txtInput.Select()
-        lbInput.Text = "Telefon"
+        lbInput.Text = "Personnummer"
         PubVar.brukerType = "Blodgiver"
     End Sub
 

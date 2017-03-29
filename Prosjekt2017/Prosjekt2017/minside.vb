@@ -24,28 +24,35 @@ Public Class minside
 
         Dim fornavn As String
         Dim etternavn As String
+        Dim fodselsdato As String
         Dim personnummer As String
         Dim telefon As Integer
         Dim adresse As String
         Dim postnummer As Integer
+        Dim personID As Integer
 
-        brukerTab = bruker.GetTelefon()
+        brukerTab = bruker.GetPersonnummer()
 
         For Each row In brukerTab.Rows
 
             fornavn = row("fornavn")
             etternavn = row("etternavn")
+            fodselsdato = row("fodselsdato")
             personnummer = row("personnummer")
             telefon = row("telefon")
             adresse = row("adresse")
             postnummer = row("postnummer")
+            personID = row("personID")
 
             txtFornavn.Text = fornavn
             txtEtternavn.Text = etternavn
+            txtFodselsdato.Text = fodselsdato
             txtPersonnummer.Text = personnummer
             txtTelefon.Text = telefon
             txtAdresse.Text = adresse
             txtPostnummer.Text = postnummer
+            lbPersonID.Text = personID
+
 
 
         Next row
@@ -76,25 +83,27 @@ Public Class minside
 
         Dim fornavn As String
         Dim etternavn As String
-        Dim fodselsdato As Date
+        Dim fodselsdato As String
+        Dim personnummer As String
         Dim telefon As Integer
         Dim adresse As String
         Dim postnummer As Integer
 
-        brukerTab = bruker.GetTelefon()
+        brukerTab = bruker.GetPersonnummer()
 
         For Each row In brukerTab.Rows
 
             fornavn = row("fornavn")
             etternavn = row("etternavn")
             fodselsdato = row("fodselsdato")
+            personnummer = row("personnummer")
             telefon = row("telefon")
             adresse = row("adresse")
             postnummer = row("postnummer")
 
             bruker.endreFornavn(txtFornavn.Text)
             bruker.endreEtternavn(txtEtternavn.Text)
-            bruker.endreFodselsdato(txtPersonnummer.Text)
+            bruker.endreFodselsdato(txtFodselsdato.Text)
             bruker.endreTelefon(txtTelefon.Text)
             bruker.endreAdresse(txtAdresse.Text)
             bruker.endrePostnummer(txtPostnummer.Text)
@@ -107,10 +116,10 @@ Public Class minside
         Dim blodgiver As New Blodgiver
         Dim personID As String
         Dim res As New Reservasjoner
-        Dim dato As New Date()
-        Dim resDato As Date
+        Dim dato As String
+        'Dim resDato As Date
         Dim id As New DataTable()
-
+        Dim format As String = "yyyy-MM-dd"
         id = blodgiver.GetBrukeridByTelefon(45464856)
 
         For Each rad In id.Rows
@@ -118,10 +127,12 @@ Public Class minside
         Next rad
 
         Dim tempID As Integer = CInt(personID)
-        dato = DateTimePicker1.Value()
-        resDato = dato.Year & "-" & dato.Month & "-" & dato.Day
-        res.reserver(resDato, tempID)
-        MsgBox(resDato.ToString)
+        dato = MonthCalendar1.SelectionRange.Start.ToString("yyyy-MM-dd")
+        ' resDato = dato.Year & "-" & dato.Month & "-" & dato.Day
+        res.reserver(dato, tempID)
+        'MsgBox(resDato.ToString)
+        'MsgBox(MonthCalendar1.SelectionRange.Start)
+        MsgBox(dato)
 
     End Sub
 

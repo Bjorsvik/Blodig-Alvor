@@ -24,6 +24,10 @@ Partial Class minside
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tabBrukerinfo = New System.Windows.Forms.TabPage()
+        Me.lbPersonID = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtFodselsdato = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.lbPoststed = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnEndreInfo = New System.Windows.Forms.Button()
@@ -45,6 +49,7 @@ Partial Class minside
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnSkjema = New System.Windows.Forms.Button()
+        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.TabControl1.SuspendLayout()
         Me.tabBrukerinfo.SuspendLayout()
         Me.tabReservasjon.SuspendLayout()
@@ -64,6 +69,10 @@ Partial Class minside
         '
         'tabBrukerinfo
         '
+        Me.tabBrukerinfo.Controls.Add(Me.lbPersonID)
+        Me.tabBrukerinfo.Controls.Add(Me.Label3)
+        Me.tabBrukerinfo.Controls.Add(Me.txtFodselsdato)
+        Me.tabBrukerinfo.Controls.Add(Me.Label2)
         Me.tabBrukerinfo.Controls.Add(Me.lbPoststed)
         Me.tabBrukerinfo.Controls.Add(Me.Label1)
         Me.tabBrukerinfo.Controls.Add(Me.btnEndreInfo)
@@ -87,10 +96,46 @@ Partial Class minside
         Me.tabBrukerinfo.Text = "Brukerinfo"
         Me.tabBrukerinfo.UseVisualStyleBackColor = True
         '
+        'lbPersonID
+        '
+        Me.lbPersonID.AutoSize = True
+        Me.lbPersonID.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbPersonID.Location = New System.Drawing.Point(700, 27)
+        Me.lbPersonID.Name = "lbPersonID"
+        Me.lbPersonID.Size = New System.Drawing.Size(0, 29)
+        Me.lbPersonID.TabIndex = 20
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(522, 27)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(178, 29)
+        Me.Label3.TabIndex = 19
+        Me.Label3.Text = "Brukernummer:"
+        '
+        'txtFodselsdato
+        '
+        Me.txtFodselsdato.Enabled = False
+        Me.txtFodselsdato.Location = New System.Drawing.Point(218, 199)
+        Me.txtFodselsdato.Name = "txtFodselsdato"
+        Me.txtFodselsdato.Size = New System.Drawing.Size(100, 20)
+        Me.txtFodselsdato.TabIndex = 18
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(149, 206)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(64, 13)
+        Me.Label2.TabIndex = 17
+        Me.Label2.Text = "Fødselsdato"
+        '
         'lbPoststed
         '
         Me.lbPoststed.AutoSize = True
-        Me.lbPoststed.Location = New System.Drawing.Point(509, 208)
+        Me.lbPoststed.Location = New System.Drawing.Point(509, 206)
         Me.lbPoststed.Name = "lbPoststed"
         Me.lbPoststed.Size = New System.Drawing.Size(39, 13)
         Me.lbPoststed.TabIndex = 16
@@ -140,7 +185,8 @@ Partial Class minside
         '
         'txtPersonnummer
         '
-        Me.txtPersonnummer.Location = New System.Drawing.Point(219, 206)
+        Me.txtPersonnummer.Enabled = False
+        Me.txtPersonnummer.Location = New System.Drawing.Point(219, 231)
         Me.txtPersonnummer.Name = "txtPersonnummer"
         Me.txtPersonnummer.Size = New System.Drawing.Size(100, 20)
         Me.txtPersonnummer.TabIndex = 9
@@ -166,7 +212,7 @@ Partial Class minside
         'lbPersonnummer
         '
         Me.lbPersonnummer.AutoSize = True
-        Me.lbPersonnummer.Location = New System.Drawing.Point(136, 209)
+        Me.lbPersonnummer.Location = New System.Drawing.Point(137, 234)
         Me.lbPersonnummer.Name = "lbPersonnummer"
         Me.lbPersonnummer.Size = New System.Drawing.Size(77, 13)
         Me.lbPersonnummer.TabIndex = 6
@@ -184,7 +230,7 @@ Partial Class minside
         'lbEtternavn
         '
         Me.lbEtternavn.AutoSize = True
-        Me.lbEtternavn.Location = New System.Drawing.Point(160, 172)
+        Me.lbEtternavn.Location = New System.Drawing.Point(158, 166)
         Me.lbEtternavn.Name = "lbEtternavn"
         Me.lbEtternavn.Size = New System.Drawing.Size(53, 13)
         Me.lbEtternavn.TabIndex = 4
@@ -193,7 +239,7 @@ Partial Class minside
         'lbFornavn
         '
         Me.lbFornavn.AutoSize = True
-        Me.lbFornavn.Location = New System.Drawing.Point(161, 130)
+        Me.lbFornavn.Location = New System.Drawing.Point(163, 130)
         Me.lbFornavn.Name = "lbFornavn"
         Me.lbFornavn.Size = New System.Drawing.Size(46, 13)
         Me.lbFornavn.TabIndex = 3
@@ -208,7 +254,7 @@ Partial Class minside
         '
         'txtEtternavn
         '
-        Me.txtEtternavn.Location = New System.Drawing.Point(219, 169)
+        Me.txtEtternavn.Location = New System.Drawing.Point(218, 164)
         Me.txtEtternavn.Name = "txtEtternavn"
         Me.txtEtternavn.Size = New System.Drawing.Size(100, 20)
         Me.txtEtternavn.TabIndex = 1
@@ -232,6 +278,7 @@ Partial Class minside
         '
         'tabReservasjon
         '
+        Me.tabReservasjon.Controls.Add(Me.MonthCalendar1)
         Me.tabReservasjon.Controls.Add(Me.DateTimePicker1)
         Me.tabReservasjon.Controls.Add(Me.Button1)
         Me.tabReservasjon.Controls.Add(Me.btnSkjema)
@@ -245,7 +292,7 @@ Partial Class minside
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(158, 124)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(80, 82)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
         Me.DateTimePicker1.TabIndex = 4
@@ -267,6 +314,12 @@ Partial Class minside
         Me.btnSkjema.TabIndex = 0
         Me.btnSkjema.Text = "Egenerklæring"
         Me.btnSkjema.UseVisualStyleBackColor = True
+        '
+        'MonthCalendar1
+        '
+        Me.MonthCalendar1.Location = New System.Drawing.Point(411, 96)
+        Me.MonthCalendar1.Name = "MonthCalendar1"
+        Me.MonthCalendar1.TabIndex = 5
         '
         'minside
         '
@@ -307,4 +360,8 @@ Partial Class minside
     Friend WithEvents Label1 As Label
     Friend WithEvents lbPoststed As Label
     Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents txtFodselsdato As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents lbPersonID As Label
 End Class
