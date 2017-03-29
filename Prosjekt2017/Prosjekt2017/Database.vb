@@ -7,7 +7,7 @@ Public Class Database
                                         & "Database=g_oops_23;" _
                                         & "Uid=g_oops_23;" _
                                         & "Pwd=3d4CcHvg;" _
-                                        & "Convert Zero Datetime=True;" '12345
+                                        & "Convert Zero Datetime=True;"
 
     Private tilkobling As New MySqlConnection
 
@@ -19,11 +19,11 @@ Public Class Database
         Dim myData As New DataTable
 
         If connectionOK = False Then
-            'MsgBox("ikke ok")
+
         End If
 
         If connectionOK Then
-            'MsgBox("conecction ok")
+
         End If
 
         Try
@@ -34,8 +34,6 @@ Public Class Database
 
             myCommand.Connection = tilkobling
             myCommand.CommandText = sql
-
-            'MsgBox(connectionOK)
 
             myAdapter.SelectCommand = myCommand
             myAdapter.Fill(myData)
