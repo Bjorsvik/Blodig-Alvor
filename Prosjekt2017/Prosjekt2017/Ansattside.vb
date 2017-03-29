@@ -77,7 +77,7 @@ Public Class Ansattside
     End Sub
 
     Private Sub endreInfo()
-        PubVar.telefon = txtSok.Text
+        PubVar.personnummer = txtSok.Text
 
         Dim brukerTab As New DataTable()
         Dim postnummere As New DataTable()
@@ -123,5 +123,8 @@ Public Class Ansattside
             lbPoststed.Text = poststed
         Next row
 
+    End Sub
+
+    Private Sub Innkalling_Click(sender As Object, e As EventArgs) Handles Innkalling.Click
     End Sub
 End Class

@@ -4,7 +4,7 @@ Public Class minside
     Dim postnr As New Postnummer()
 
     Private Sub minside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim telefon = PubVar.telefon
+        Dim personnummer = PubVar.personnummer
 
         visBruker()
         visPoststed()
@@ -24,7 +24,7 @@ Public Class minside
 
         Dim fornavn As String
         Dim etternavn As String
-        Dim fodselsdato As Date
+        Dim personnummer As String
         Dim telefon As Integer
         Dim adresse As String
         Dim postnummer As Integer
@@ -35,14 +35,14 @@ Public Class minside
 
             fornavn = row("fornavn")
             etternavn = row("etternavn")
-            fodselsdato = row("fodselsdato")
+            personnummer = row("personnummer")
             telefon = row("telefon")
             adresse = row("adresse")
             postnummer = row("postnummer")
 
             txtFornavn.Text = fornavn
             txtEtternavn.Text = etternavn
-            txtFodselsdato.Text = fodselsdato
+            txtPersonnummer.Text = personnummer
             txtTelefon.Text = telefon
             txtAdresse.Text = adresse
             txtPostnummer.Text = postnummer
@@ -94,7 +94,7 @@ Public Class minside
 
             bruker.endreFornavn(txtFornavn.Text)
             bruker.endreEtternavn(txtEtternavn.Text)
-            bruker.endreFodselsdato(txtFodselsdato.Text)
+            bruker.endreFodselsdato(txtPersonnummer.Text)
             bruker.endreTelefon(txtTelefon.Text)
             bruker.endreAdresse(txtAdresse.Text)
             bruker.endrePostnummer(txtPostnummer.Text)

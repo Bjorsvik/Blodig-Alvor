@@ -28,7 +28,7 @@ Public Class Registreringsskjema
         Dim bpassord = txtBekreftPassord.Text
 
         If bpassord = passord Then
-            Dim nyBruker As New Blodgiver(txtPassord.Text, txtFornavn.Text, txtEtternavn.Text, txtFodselsdato.Text,
+            Dim nyBruker As New Blodgiver(txtPassord.Text, txtFornavn.Text, txtEtternavn.Text, txtPersonnummer.Text,
                                          txtTlf.Text, txtAdresse.Text, txtPostnummer.Text, txtEpost.Text)
             nyBruker.regBlodgiver()
 
