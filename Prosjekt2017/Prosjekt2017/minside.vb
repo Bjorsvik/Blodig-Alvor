@@ -4,7 +4,7 @@ Public Class minside
     Dim postnr As New Postnummer()
 
     Private Sub minside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim telefon = PubVar.telefon
+        Dim personnummer = PubVar.personnummer
 
         visBruker()
         visPoststed()
@@ -24,28 +24,35 @@ Public Class minside
 
         Dim fornavn As String
         Dim etternavn As String
-        Dim fodselsdato As Date
+        Dim fodselsdato As String
+        Dim personnummer As String
         Dim telefon As Integer
         Dim adresse As String
         Dim postnummer As Integer
+        Dim personID As Integer
 
-        brukerTab = bruker.GetTelefon()
+        brukerTab = bruker.GetPersonnummer()
 
         For Each row In brukerTab.Rows
 
             fornavn = row("fornavn")
             etternavn = row("etternavn")
             fodselsdato = row("fodselsdato")
+            personnummer = row("personnummer")
             telefon = row("telefon")
             adresse = row("adresse")
             postnummer = row("postnummer")
+            personID = row("personID")
 
             txtFornavn.Text = fornavn
             txtEtternavn.Text = etternavn
             txtFodselsdato.Text = fodselsdato
+            txtPersonnummer.Text = personnummer
             txtTelefon.Text = telefon
             txtAdresse.Text = adresse
             txtPostnummer.Text = postnummer
+            lbPersonID.Text = personID
+
 
 
         Next row
@@ -76,18 +83,20 @@ Public Class minside
 
         Dim fornavn As String
         Dim etternavn As String
-        Dim fodselsdato As Date
+        Dim fodselsdato As String
+        Dim personnummer As String
         Dim telefon As Integer
         Dim adresse As String
         Dim postnummer As Integer
 
-        brukerTab = bruker.GetTelefon()
+        brukerTab = bruker.GetPersonnummer()
 
         For Each row In brukerTab.Rows
 
             fornavn = row("fornavn")
             etternavn = row("etternavn")
             fodselsdato = row("fodselsdato")
+            personnummer = row("personnummer")
             telefon = row("telefon")
             adresse = row("adresse")
             postnummer = row("postnummer")

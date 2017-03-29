@@ -36,12 +36,12 @@ Partial Class Hjemmeside
         '
         Me.lbInput.AutoSize = True
         Me.lbInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbInput.Location = New System.Drawing.Point(298, 125)
+        Me.lbInput.Location = New System.Drawing.Point(250, 125)
         Me.lbInput.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbInput.Name = "lbInput"
-        Me.lbInput.Size = New System.Drawing.Size(84, 25)
+        Me.lbInput.Size = New System.Drawing.Size(157, 25)
         Me.lbInput.TabIndex = 0
-        Me.lbInput.Text = "Telefon"
+        Me.lbInput.Text = "Personnummer"
         '
         'lbPassord
         '
