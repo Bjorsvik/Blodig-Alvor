@@ -3,14 +3,14 @@
 Public Class egenerklering
     Private tilkobling As MySqlConnection
 
+    'Dim bolks As New egenerkleringClass
+
     Private Sub egenerklering_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=g_oops_23;Uid=g_oops_23;Pwd=3d4CcHvg")
-        tilkobling.Open()
         lblDato.Text = Date.Now
         Me.Show()
         Label1.Select() 'Får formen til å loade øverst på siden
     End Sub
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnSendInn.Click
 
 
         If chkSjekk.Checked Then
@@ -435,7 +435,8 @@ Public Class egenerklering
 #End Region
 
             Dim sqlSporring = "insert into Egenerklering (dato, varsling_epost, varsling_sms, bolk1, bolk2, bolk3, bolk4, bolk5, bolk6, bolk7, bolk8, bolk9) 
-                           values (CURDATE(), @varslingEpost, @varslingSMS, @bolk1, @bolk2, @bolk3, @bolk4, @bolk5, @bolk6, @bolk7, @bolk8, @bolk9)"
+            '               values (CURDATE(), @varslingEpost, @varslingSMS, @bolk1, @bolk2, @bolk3, @bolk4, @bolk5, @bolk6, @bolk7, @bolk8, @bolk9)"
+
             Dim sqlbolker As New MySqlCommand(sqlSporring, tilkobling)
 
             sqlbolker.Parameters.AddWithValue("@varslingEpost", varslingEpost)

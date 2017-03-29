@@ -138,7 +138,7 @@ Partial Class egenerklering
         Me.Label122 = New System.Windows.Forms.Label()
         Me.Label123 = New System.Windows.Forms.Label()
         Me.Label124 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnSendInn = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.rb612 = New System.Windows.Forms.RadioButton()
         Me.rb611 = New System.Windows.Forms.RadioButton()
@@ -1448,14 +1448,14 @@ Partial Class egenerklering
         Me.Label124.TabIndex = 351
         Me.Label124.Text = "Mottat penger eller narkotika som gjenytelse"
         '
-        'Button1
+        'btnSendInn
         '
-        Me.Button1.Location = New System.Drawing.Point(282, 1451)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(158, 23)
-        Me.Button1.TabIndex = 356
-        Me.Button1.Text = "Send inn Egenærklering"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnSendInn.Location = New System.Drawing.Point(282, 1451)
+        Me.btnSendInn.Name = "btnSendInn"
+        Me.btnSendInn.Size = New System.Drawing.Size(158, 23)
+        Me.btnSendInn.TabIndex = 356
+        Me.btnSendInn.Text = "Send inn Egenærklering"
+        Me.btnSendInn.UseVisualStyleBackColor = True
         '
         'Panel1
         '
@@ -3375,7 +3375,7 @@ Partial Class egenerklering
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnSendInn)
         Me.Controls.Add(Me.Label123)
         Me.Controls.Add(Me.Label124)
         Me.Controls.Add(Me.Label121)
@@ -3737,7 +3737,7 @@ Partial Class egenerklering
     Friend WithEvents Label122 As Label
     Friend WithEvents Label123 As Label
     Friend WithEvents Label124 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnSendInn As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents rb612 As RadioButton
     Friend WithEvents rb611 As RadioButton
