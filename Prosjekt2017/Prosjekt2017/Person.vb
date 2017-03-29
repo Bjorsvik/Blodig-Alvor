@@ -9,6 +9,7 @@
     Private adresse As String
     Private postnummer As Integer
     Private epost As String
+    Private globalPersonnummer As Integer = PubVar.personnummer
 
     Public Sub New()
 
@@ -61,4 +62,7 @@
         Return db.Query("SELECT MAX(personID) FROM Person")
     End Function
 
+    Public Function getPersonID(ByVal personnummer As String) As DataTable
+        Return db.Query("SELECT personID FROM Person WHERE personnummer = '" & personnummer & "'")
+    End Function
 End Class
