@@ -9,7 +9,7 @@ Public Class minside
         visBruker()
         visPoststed()
 
-        DateTimePicker1.MinDate = Date.Today() 'Gjør slik at dato fra fortiden ikke kan velges.
+        MonthCalendar1.MinDate = Date.Today() 'Gjør slik at dato fra fortiden ikke kan velges.
 
     End Sub
     Private Sub btnEndreInfo_Click(sender As Object, e As EventArgs) Handles btnEndreInfo.Click
@@ -117,7 +117,7 @@ Public Class minside
         Dim personID As String
         Dim res As New Reservasjoner
         Dim dato As New Date()
-        Dim resDato As Date
+        Dim resDato As String
         Dim id As New DataTable()
 
         id = blodgiver.GetBrukeridByTelefon(45464856)
@@ -127,10 +127,10 @@ Public Class minside
         Next rad
 
         Dim tempID As Integer = CInt(personID)
-        dato = DateTimePicker1.Value()
+        dato = MonthCalendar1.SelectionRange.Start
         resDato = dato.Year & "-" & dato.Month & "-" & dato.Day
         res.reserver(resDato, tempID)
-        MsgBox(resDato.ToString)
+        'MsgBox(resDato)
 
     End Sub
 
