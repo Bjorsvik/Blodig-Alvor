@@ -22,12 +22,9 @@ Public Class minside
         Dim brukerTab As New DataTable()
         Dim postnummere As New DataTable()
 
-        Dim fornavn As String
-        Dim etternavn As String
+        Dim fornavn, etternavn, adresse As String
         Dim fodselsdato As Date
-        Dim telefon As Integer
-        Dim adresse As String
-        Dim postnummer As Integer
+        Dim telefon, postnummer As Integer
 
         brukerTab = bruker.GetTelefon()
 
@@ -47,11 +44,7 @@ Public Class minside
             txtAdresse.Text = adresse
             txtPostnummer.Text = postnummer
 
-
         Next row
-
-
-
     End Sub
 
     Private Sub visPoststed()
@@ -74,12 +67,9 @@ Public Class minside
         Dim brukerTab As New DataTable()
         Dim postnummere As New DataTable()
 
-        Dim fornavn As String
-        Dim etternavn As String
+        Dim fornavn, etternavn, adresse As String
         Dim fodselsdato As Date
-        Dim telefon As Integer
-        Dim adresse As String
-        Dim postnummer As Integer
+        Dim telefon, postnummer As Integer
 
         brukerTab = bruker.GetTelefon()
 
@@ -124,6 +114,8 @@ Public Class minside
         MsgBox(resDato.ToString)
 
     End Sub
+
+
 
     'Private Sub visBrukeren()
     '    Dim SDA As New MySqlDataAdapter
