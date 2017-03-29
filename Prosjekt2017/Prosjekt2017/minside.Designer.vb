@@ -45,6 +45,7 @@ Partial Class minside
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnSkjema = New System.Windows.Forms.Button()
+        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.TabControl1.SuspendLayout()
         Me.tabBrukerinfo.SuspendLayout()
         Me.tabReservasjon.SuspendLayout()
@@ -232,6 +233,7 @@ Partial Class minside
         '
         'tabReservasjon
         '
+        Me.tabReservasjon.Controls.Add(Me.MonthCalendar1)
         Me.tabReservasjon.Controls.Add(Me.DateTimePicker1)
         Me.tabReservasjon.Controls.Add(Me.Button1)
         Me.tabReservasjon.Controls.Add(Me.btnSkjema)
@@ -245,7 +247,7 @@ Partial Class minside
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(158, 124)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(80, 82)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
         Me.DateTimePicker1.TabIndex = 4
@@ -267,6 +269,12 @@ Partial Class minside
         Me.btnSkjema.TabIndex = 0
         Me.btnSkjema.Text = "Egenerklæring"
         Me.btnSkjema.UseVisualStyleBackColor = True
+        '
+        'MonthCalendar1
+        '
+        Me.MonthCalendar1.Location = New System.Drawing.Point(411, 96)
+        Me.MonthCalendar1.Name = "MonthCalendar1"
+        Me.MonthCalendar1.TabIndex = 5
         '
         'minside
         '
@@ -307,4 +315,5 @@ Partial Class minside
     Friend WithEvents Label1 As Label
     Friend WithEvents lbPoststed As Label
     Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents MonthCalendar1 As MonthCalendar
 End Class

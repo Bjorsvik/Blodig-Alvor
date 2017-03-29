@@ -107,10 +107,10 @@ Public Class minside
         Dim blodgiver As New Blodgiver
         Dim personID As String
         Dim res As New Reservasjoner
-        Dim dato As New Date()
-        Dim resDato As Date
+        Dim dato As String
+        'Dim resDato As Date
         Dim id As New DataTable()
-
+        Dim format As String = "yyyy-MM-dd"
         id = blodgiver.GetBrukeridByTelefon(45464856)
 
         For Each rad In id.Rows
@@ -118,10 +118,12 @@ Public Class minside
         Next rad
 
         Dim tempID As Integer = CInt(personID)
-        dato = DateTimePicker1.Value()
-        resDato = dato.Year & "-" & dato.Month & "-" & dato.Day
-        res.reserver(resDato, tempID)
-        MsgBox(resDato.ToString)
+        dato = MonthCalendar1.SelectionRange.Start.ToString("yyyy-MM-dd")
+        ' resDato = dato.Year & "-" & dato.Month & "-" & dato.Day
+        res.reserver(dato, tempID)
+        'MsgBox(resDato.ToString)
+        'MsgBox(MonthCalendar1.SelectionRange.Start)
+        MsgBox(dato)
 
     End Sub
 
