@@ -76,6 +76,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ansatt.vb" />
     <Compile Include="Ansattside.Designer.vb">
       <DependentUpon>Ansattside.vb</DependentUpon>
     </Compile>
@@ -90,6 +91,7 @@
     <Compile Include="egenerklering.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="egenerkleringClass.vb" />
     <Compile Include="listbox1-egenerklering.Designer.vb">
       <DependentUpon>listbox1-egenerklering.vb</DependentUpon>
     </Compile>
@@ -102,8 +104,10 @@
     <Compile Include="minside.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Person.vb" />
+    <Compile Include="Postnummer.vb" />
     <Compile Include="PubVar.vb" />
-    <Compile Include="Bruker.vb" />
+    <Compile Include="Blodgiver.vb" />
     <Compile Include="Reader.vb" />
     <Compile Include="Registreringsskjema.Designer.vb">
       <DependentUpon>Registreringsskjema.vb</DependentUpon>
@@ -133,6 +137,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Reservasjoner.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Ansattside.resx">

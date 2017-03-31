@@ -2,69 +2,161 @@
 Public Class Ansattside
     Private tilkobling As MySqlConnection
     Dim Blodlager As New Blodlager()
+    Dim Bruker As New Blodgiver()
+    Dim Postnr As New Postnummer()
+    Dim Blodprodukter As New Blodlager()
+    Dim BlodInsert As New Blodlager()
+    Dim personID As New Person()
+    Dim blodID As New Blodlager()
 
     Private Sub Ansattside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        visAlleBlodprodukter()
+    End Sub
+    Private Sub btnTest_Click(sender As Object, e As EventArgs) Handles btnTest.Click
+        leggTilBlodProdukter()
+    End Sub
+    Private Sub btnSok_Click(sender As Object, e As EventArgs) Handles btnSok.Click
+        visBruker()
+        visPoststed()
+    End Sub
 
-        tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=g_oops_23;Uid=g_oops_23;Pwd=3d4CcHvg")
+    Private Sub btnEndreInfo_Click(sender As Object, e As EventArgs) Handles btnEndreInfo.Click
+        endreInfo()
+        visBruker()
+        visPoststed()
+    End Sub
+
+    Private Sub leggTilBlodProdukter()
+        Dim personnummer As String = txtLagerPersonnummer.Text
+        Dim pID As String = ""
+        Dim bID As String = ""
+        Dim personIDTab As New DataTable
+        Dim blodIDTab As New DataTable
+
+        personIDTab = personID.getPersonID(personnummer)
+
+        For Each row In personIDTab.Rows
+            pID = row("personID")
+ 
+        Next
+        MsgBox(pID)
+
+        blodIDTab = blodID.getLastBlodIDByPersonID(pID)
+
+        For Each row In blodIDTab.Rows
+            bID = row("blodID")
+        Next
+
+        MsgBox(bID)
 
     End Sub
-    Private Sub Ansattside_Close(sender As Object, e As EventArgs) Handles MyBase.Closed
-        tilkobling.Close()
-        tilkobling.Dispose()
+
+    Private Sub skrivUtBlodProdukter()
+
     End Sub
 
-    Private Sub Lager_Click(sender As Object, e As EventArgs) Handles Lager.Click
-        Dim blodlagerTab As New DataTable()
-        Dim blodtypeTab As New DataTable()
+    Private Sub visBruker()
+        Dim brukerTab As New DataTable()
+        Dim postnummere As New DataTable()
 
+        Dim fornavn As String
+        Dim etternavn As String
+        Dim fodselsdato As Date
+        Dim telefon As Integer
+        Dim adresse As String
+        Dim postnummer As Integer
+
+
+        brukerTab = Bruker.GetBruker(txtSok.Text)
+
+        For Each row In brukerTab.Rows
+            fornavn = row("fornavn")
+            etternavn = row("etternavn")
+            fodselsdato = row("fodselsdato")
+            telefon = row("telefon")
+            adresse = row("adresse")
+            postnummer = row("postnummer")
+
+            txtFornavn.Text = fornavn
+            txtEtternavn.Text = etternavn
+            txtFodselsdato.Text = fodselsdato
+            txtTelefon.Text = telefon
+            txtAdresse.Text = adresse
+            txtPostnummer.Text = postnummer
+
+        Next row
+
+    End Sub
+
+    Private Sub endreInfo()
+        PubVar.personnummer = txtSok.Text
+
+        Dim brukerTab As New DataTable()
+        Dim postnummere As New DataTable()
+
+        Dim fornavn As String
+        Dim etternavn As String
+        Dim fodselsdato As Date
+        Dim telefon As Integer
+        Dim adresse As String
+        Dim postnummer As Integer
+
+        brukerTab = Bruker.GetBruker(txtSok.Text)
+
+        For Each row In brukerTab.Rows
+
+            fornavn = row("fornavn")
+            etternavn = row("etternavn")
+            fodselsdato = row("fodselsdato")
+            telefon = row("telefon")
+            adresse = row("adresse")
+            postnummer = row("postnummer")
+
+            Bruker.endreFornavn(txtFornavn.Text)
+            Bruker.endreEtternavn(txtEtternavn.Text)
+            Bruker.endreFodselsdato(txtFodselsdato.Text)
+            Bruker.endreTelefon(txtTelefon.Text)
+            Bruker.endreAdresse(txtAdresse.Text)
+            Bruker.endrePostnummer(txtPostnummer.Text)
+
+        Next row
+    End Sub
+    Private Sub visPoststed()
+
+        Dim postnummerTab As New DataTable()
+
+        Dim poststed As String
+
+        postnummerTab = Postnr.GetPoststed(txtPostnummer.Text)
+
+        For Each row In postnummerTab.Rows
+            poststed = row("poststed")
+
+            lbPoststed.Text = poststed
+        Next row
+
+    End Sub
+
+    Private Sub visAlleBlodprodukter()
+        Dim blodproduktTab As New DataTable()
         Dim blodtype As String
         Dim blodplasma As String
-        Dim blodlegeme As String
         Dim blodplater As String
+        Dim blodceller As String
 
         gridBlodlager.Rows.Clear()
-        blodlagerTab = Blodlager.getAlleBlod()
 
-        For Each row In blodlagerTab.Rows
+        blodproduktTab = Blodprodukter.getAlleBlodProdukter()
+        For Each row In blodproduktTab.Rows
+            blodtype = row("Blodtype")
+            blodplasma = row("Plasmaposer")
+            blodplater = row("Plateposer")
+            blodceller = row("Celleposer")
 
-            blodplasma = row("blodplasma")
-            blodlegeme = row("blodlegeme")
-            blodplater = row("blodplater")
-
-            blodtypeTab = Blodlager.getAlleBlod
-            For Each rad In blodtypeTab.Rows
-                blodtype = rad("blodtype")
-                gridBlodlager.Rows.Add(blodtype, blodplasma, blodlegeme, blodplater)
-            Next rad
+            gridBlodlager.Rows.Add(blodtype, blodplasma, blodplater, blodceller)
 
         Next row
     End Sub
 
-
-    'Private Sub btnSok_Click(sender As Object, e As EventArgs) Handles btnSok.Click
-    '    Dim SDA As New MySqlDataAdapter
-    '    Dim dbDataset As New DataTable
-    '    Dim bSource As New BindingSource
-    '    Try
-    '        tilkobling.Open()
-    '        Dim tuddle As String = "'"
-    '        Dim telefon As String = txtSok.Text
-    '        telefon = tuddle & telefon & tuddle
-    '        Dim Query As String
-    '        Query = "SELECT fornavn, etternavn, adresse, telefon, fodselsdato, Blodgiver.postnummer, Postnummer.poststed from Blodgiver JOIN Postnummer ON Postnummer.postnummer = Blodgiver.postnummer WHERE Blodgiver.telefon = " & telefon
-    '        Dim command As New MySqlCommand(Query, tilkobling)
-    '        SDA.SelectCommand = command
-    '        SDA.Fill(dbDataset)
-    '        bSource.DataSource = dbDataset
-    '        DataGridView1.DataSource = bSource
-    '        SDA.Update(dbDataset)
-
-    '        tilkobling.Close()
-    '    Catch ex As MySqlException
-    '        MessageBox.Show(ex.Message)
-    '    Finally
-    '        tilkobling.Dispose()
-    '    End Try
-    'End Sub
 
 End Class

@@ -1,37 +1,137 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class minside
-    Private tilkobling As MySqlConnection
-    Dim bruker As New Bruker()
+    Dim bruker As New Blodgiver()
+    Dim postnr As New Postnummer()
 
     Private Sub minside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=g_oops_23;Uid=g_oops_23;Pwd=3d4CcHvg")
-        Dim telefon = PubVar.telefon
+        Dim personnummer = PubVar.personnummer
 
         visBruker()
+        visPoststed()
 
+        MonthCalendar1.MinDate = Date.Today() 'Gjør slik at dato fra fortiden ikke kan velges.
+
+    End Sub
+    Private Sub btnEndreInfo_Click(sender As Object, e As EventArgs) Handles btnEndreInfo.Click
+        endreInfo()
+        visBruker()
+        visPoststed()
     End Sub
 
     Private Sub visBruker()
-        Dim blodlagerTab As New DataTable()
+        Dim brukerTab As New DataTable()
+        Dim postnummere As New DataTable()
 
         Dim fornavn As String
         Dim etternavn As String
-        Dim telefon As String
+        Dim fodselsdato As String
+        Dim personnummer As String
+        Dim telefon As Integer
+        Dim adresse As String
+        Dim postnummer As Integer
+        Dim personID As Integer
 
-        blodlagerTab = bruker.GetTelefon()
+        brukerTab = bruker.GetPersonnummer()
 
-        For Each row In blodlagerTab.Rows
+        For Each row In brukerTab.Rows
 
             fornavn = row("fornavn")
             etternavn = row("etternavn")
+            fodselsdato = row("fodselsdato")
+            personnummer = row("personnummer")
             telefon = row("telefon")
+            adresse = row("adresse")
+            postnummer = row("postnummer")
+            personID = row("personID")
 
             txtFornavn.Text = fornavn
             txtEtternavn.Text = etternavn
+            txtFodselsdato.Text = fodselsdato
+            txtPersonnummer.Text = personnummer
             txtTelefon.Text = telefon
+            txtAdresse.Text = adresse
+            txtPostnummer.Text = postnummer
+            lbPersonID.Text = personID
+
+
 
         Next row
+
+
+
+    End Sub
+
+    Private Sub visPoststed()
+
+        Dim postnummerTab As New DataTable()
+
+        Dim poststed As String
+
+        postnummerTab = postnr.GetPoststed(txtPostnummer.Text)
+
+        For Each row In postnummerTab.Rows
+            poststed = row("poststed")
+
+            lbPoststed.Text = poststed
+        Next row
+
+    End Sub
+
+    Private Sub endreInfo()
+        Dim brukerTab As New DataTable()
+        Dim postnummere As New DataTable()
+
+        Dim fornavn As String
+        Dim etternavn As String
+        Dim fodselsdato As String
+        Dim personnummer As String
+        Dim telefon As Integer
+        Dim adresse As String
+        Dim postnummer As Integer
+
+        brukerTab = bruker.GetPersonnummer()
+
+        For Each row In brukerTab.Rows
+
+            fornavn = row("fornavn")
+            etternavn = row("etternavn")
+            fodselsdato = row("fodselsdato")
+            personnummer = row("personnummer")
+            telefon = row("telefon")
+            adresse = row("adresse")
+            postnummer = row("postnummer")
+
+            bruker.endreFornavn(txtFornavn.Text)
+            bruker.endreEtternavn(txtEtternavn.Text)
+            bruker.endreFodselsdato(txtFodselsdato.Text)
+            bruker.endreTelefon(txtTelefon.Text)
+            bruker.endreAdresse(txtAdresse.Text)
+            bruker.endrePostnummer(txtPostnummer.Text)
+
+        Next row
+    End Sub
+
+    Public Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        Dim blodgiver As New Blodgiver
+        Dim personID As String
+        Dim res As New Reservasjoner
+        Dim dato As New Date()
+        Dim resDato As String
+        Dim id As New DataTable()
+
+        id = blodgiver.GetBrukeridByTelefon(45464856)
+
+        For Each rad In id.Rows
+            personID = rad(0).ToString()
+        Next rad
+
+        Dim tempID As Integer = CInt(personID)
+        dato = MonthCalendar1.SelectionRange.Start
+        resDato = dato.Year & "-" & dato.Month & "-" & dato.Day
+        res.reserver(resDato, tempID)
+        'MsgBox(resDato)
+
     End Sub
 
     'Private Sub visBrukeren()

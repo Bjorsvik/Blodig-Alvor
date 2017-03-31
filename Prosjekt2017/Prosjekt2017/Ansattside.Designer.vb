@@ -29,13 +29,15 @@ Partial Class Ansattside
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Reservasjonskalender = New System.Windows.Forms.MonthCalendar()
-        Me.Lageroppdatering = New System.Windows.Forms.TabPage()
         Me.Lager = New System.Windows.Forms.TabPage()
+        Me.gridBlodlager = New System.Windows.Forms.DataGridView()
+        Me.Blodtype = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Blodplasma = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Blodplater = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Blodceller = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Blodgivning = New System.Windows.Forms.TabPage()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.btnBlodgivning = New System.Windows.Forms.Button()
-        Me.KalenderGivning = New System.Windows.Forms.MonthCalendar()
-        Me.lblGivningDato = New System.Windows.Forms.Label()
         Me.lblMengde = New System.Windows.Forms.Label()
         Me.lblPersnr = New System.Windows.Forms.Label()
         Me.txtboxPersnr = New System.Windows.Forms.TextBox()
@@ -44,30 +46,53 @@ Partial Class Ansattside
         Me.lblTilgjengeligeGivere = New System.Windows.Forms.Label()
         Me.txtAntallGivere = New System.Windows.Forms.TextBox()
         Me.lblØnskedeGivere = New System.Windows.Forms.Label()
-        Me.cboxRhesus = New System.Windows.Forms.ComboBox()
+        Me.cboRhesus = New System.Windows.Forms.ComboBox()
         Me.lblRhesus = New System.Windows.Forms.Label()
-        Me.cboxBlodtypeØnsket = New System.Windows.Forms.ComboBox()
+        Me.cboBlodtypeInnkalling = New System.Windows.Forms.ComboBox()
         Me.btnInnkalling = New System.Windows.Forms.Button()
         Me.lblBlodtypeØnsket = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.Søk = New System.Windows.Forms.TabPage()
+        Me.btnEndreInfo = New System.Windows.Forms.Button()
+        Me.lbPoststed = New System.Windows.Forms.Label()
+        Me.txtPostnummer = New System.Windows.Forms.TextBox()
+        Me.txtAdresse = New System.Windows.Forms.TextBox()
+        Me.lbPoststedLabel = New System.Windows.Forms.Label()
+        Me.txtFodselsdato = New System.Windows.Forms.TextBox()
+        Me.lbPostnummer = New System.Windows.Forms.Label()
+        Me.lbAdresse = New System.Windows.Forms.Label()
+        Me.lbFodselsdato = New System.Windows.Forms.Label()
+        Me.lbTelefon = New System.Windows.Forms.Label()
+        Me.lbEtternavn = New System.Windows.Forms.Label()
+        Me.lbFornavn = New System.Windows.Forms.Label()
+        Me.txtTelefon = New System.Windows.Forms.TextBox()
+        Me.txtEtternavn = New System.Windows.Forms.TextBox()
+        Me.txtFornavn = New System.Windows.Forms.TextBox()
         Me.btnOppdater = New System.Windows.Forms.Button()
         Me.btnSlett = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.btnSok = New System.Windows.Forms.Button()
         Me.txtSok = New System.Windows.Forms.TextBox()
         Me.lblSok = New System.Windows.Forms.Label()
-        Me.gridBlodlager = New System.Windows.Forms.DataGridView()
+        Me.cboBlodlegeme = New System.Windows.Forms.ComboBox()
+        Me.cboBlodplasma = New System.Windows.Forms.ComboBox()
+        Me.cboBlodplater = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtLagerPersonnummer = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.btnTest = New System.Windows.Forms.Button()
+        Me.btnSettInn = New System.Windows.Forms.Button()
         Me.Statistikk.SuspendLayout()
         Me.Reservasjoner.SuspendLayout()
         Me.Lager.SuspendLayout()
+        CType(Me.gridBlodlager, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Blodgivning.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Innkalling.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.Søk.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.gridBlodlager, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Statistikk
@@ -141,19 +166,19 @@ Partial Class Ansattside
         Me.Reservasjonskalender.Name = "Reservasjonskalender"
         Me.Reservasjonskalender.TabIndex = 13
         '
-        'Lageroppdatering
-        '
-        Me.Lageroppdatering.Location = New System.Drawing.Point(4, 22)
-        Me.Lageroppdatering.Margin = New System.Windows.Forms.Padding(2)
-        Me.Lageroppdatering.Name = "Lageroppdatering"
-        Me.Lageroppdatering.Padding = New System.Windows.Forms.Padding(2)
-        Me.Lageroppdatering.Size = New System.Drawing.Size(751, 428)
-        Me.Lageroppdatering.TabIndex = 3
-        Me.Lageroppdatering.Text = "Lageroppdatering"
-        Me.Lageroppdatering.UseVisualStyleBackColor = True
-        '
         'Lager
         '
+        Me.Lager.Controls.Add(Me.btnSettInn)
+        Me.Lager.Controls.Add(Me.btnTest)
+        Me.Lager.Controls.Add(Me.Label7)
+        Me.Lager.Controls.Add(Me.txtLagerPersonnummer)
+        Me.Lager.Controls.Add(Me.Label6)
+        Me.Lager.Controls.Add(Me.Label5)
+        Me.Lager.Controls.Add(Me.Label4)
+        Me.Lager.Controls.Add(Me.Label3)
+        Me.Lager.Controls.Add(Me.cboBlodplater)
+        Me.Lager.Controls.Add(Me.cboBlodplasma)
+        Me.Lager.Controls.Add(Me.cboBlodlegeme)
         Me.Lager.Controls.Add(Me.gridBlodlager)
         Me.Lager.Location = New System.Drawing.Point(4, 22)
         Me.Lager.Margin = New System.Windows.Forms.Padding(2)
@@ -164,12 +189,44 @@ Partial Class Ansattside
         Me.Lager.Text = "Lager"
         Me.Lager.UseVisualStyleBackColor = True
         '
+        'gridBlodlager
+        '
+        Me.gridBlodlager.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
+        Me.gridBlodlager.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.gridBlodlager.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Blodtype, Me.Blodplasma, Me.Blodplater, Me.Blodceller})
+        Me.gridBlodlager.Location = New System.Drawing.Point(8, 19)
+        Me.gridBlodlager.Name = "gridBlodlager"
+        Me.gridBlodlager.Size = New System.Drawing.Size(443, 377)
+        Me.gridBlodlager.TabIndex = 0
+        '
+        'Blodtype
+        '
+        Me.Blodtype.HeaderText = "Blodtype"
+        Me.Blodtype.Name = "Blodtype"
+        Me.Blodtype.ReadOnly = True
+        '
+        'Blodplasma
+        '
+        Me.Blodplasma.HeaderText = "Blodplasma"
+        Me.Blodplasma.Name = "Blodplasma"
+        Me.Blodplasma.ReadOnly = True
+        '
+        'Blodplater
+        '
+        Me.Blodplater.HeaderText = "Blodplater"
+        Me.Blodplater.Name = "Blodplater"
+        Me.Blodplater.ReadOnly = True
+        '
+        'Blodceller
+        '
+        Me.Blodceller.HeaderText = "Blodceller"
+        Me.Blodceller.Name = "Blodceller"
+        Me.Blodceller.ReadOnly = True
+        '
         'Blodgivning
         '
         Me.Blodgivning.Controls.Add(Me.NumericUpDown1)
         Me.Blodgivning.Controls.Add(Me.btnBlodgivning)
-        Me.Blodgivning.Controls.Add(Me.KalenderGivning)
-        Me.Blodgivning.Controls.Add(Me.lblGivningDato)
         Me.Blodgivning.Controls.Add(Me.lblMengde)
         Me.Blodgivning.Controls.Add(Me.lblPersnr)
         Me.Blodgivning.Controls.Add(Me.txtboxPersnr)
@@ -192,30 +249,13 @@ Partial Class Ansattside
         '
         'btnBlodgivning
         '
-        Me.btnBlodgivning.Location = New System.Drawing.Point(299, 82)
+        Me.btnBlodgivning.Location = New System.Drawing.Point(273, 26)
         Me.btnBlodgivning.Margin = New System.Windows.Forms.Padding(2)
         Me.btnBlodgivning.Name = "btnBlodgivning"
-        Me.btnBlodgivning.Size = New System.Drawing.Size(266, 226)
+        Me.btnBlodgivning.Size = New System.Drawing.Size(171, 115)
         Me.btnBlodgivning.TabIndex = 17
         Me.btnBlodgivning.Text = "Send inn"
         Me.btnBlodgivning.UseVisualStyleBackColor = True
-        '
-        'KalenderGivning
-        '
-        Me.KalenderGivning.Location = New System.Drawing.Point(44, 140)
-        Me.KalenderGivning.Margin = New System.Windows.Forms.Padding(7)
-        Me.KalenderGivning.Name = "KalenderGivning"
-        Me.KalenderGivning.TabIndex = 16
-        '
-        'lblGivningDato
-        '
-        Me.lblGivningDato.AutoSize = True
-        Me.lblGivningDato.Location = New System.Drawing.Point(41, 119)
-        Me.lblGivningDato.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.lblGivningDato.Name = "lblGivningDato"
-        Me.lblGivningDato.Size = New System.Drawing.Size(36, 13)
-        Me.lblGivningDato.TabIndex = 15
-        Me.lblGivningDato.Text = "Dato: "
         '
         'lblMengde
         '
@@ -251,9 +291,9 @@ Partial Class Ansattside
         Me.Innkalling.Controls.Add(Me.lblTilgjengeligeGivere)
         Me.Innkalling.Controls.Add(Me.txtAntallGivere)
         Me.Innkalling.Controls.Add(Me.lblØnskedeGivere)
-        Me.Innkalling.Controls.Add(Me.cboxRhesus)
+        Me.Innkalling.Controls.Add(Me.cboRhesus)
         Me.Innkalling.Controls.Add(Me.lblRhesus)
-        Me.Innkalling.Controls.Add(Me.cboxBlodtypeØnsket)
+        Me.Innkalling.Controls.Add(Me.cboBlodtypeInnkalling)
         Me.Innkalling.Controls.Add(Me.btnInnkalling)
         Me.Innkalling.Controls.Add(Me.lblBlodtypeØnsket)
         Me.Innkalling.Location = New System.Drawing.Point(4, 22)
@@ -267,7 +307,7 @@ Partial Class Ansattside
         '
         'txtboxTilgjengelig
         '
-        Me.txtboxTilgjengelig.Location = New System.Drawing.Point(434, 121)
+        Me.txtboxTilgjengelig.Location = New System.Drawing.Point(434, 113)
         Me.txtboxTilgjengelig.Margin = New System.Windows.Forms.Padding(2)
         Me.txtboxTilgjengelig.Name = "txtboxTilgjengelig"
         Me.txtboxTilgjengelig.Size = New System.Drawing.Size(92, 20)
@@ -276,7 +316,7 @@ Partial Class Ansattside
         'lblTilgjengeligeGivere
         '
         Me.lblTilgjengeligeGivere.AutoSize = True
-        Me.lblTilgjengeligeGivere.Location = New System.Drawing.Point(308, 125)
+        Me.lblTilgjengeligeGivere.Location = New System.Drawing.Point(310, 116)
         Me.lblTilgjengeligeGivere.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblTilgjengeligeGivere.Name = "lblTilgjengeligeGivere"
         Me.lblTilgjengeligeGivere.Size = New System.Drawing.Size(121, 13)
@@ -301,15 +341,16 @@ Partial Class Ansattside
         Me.lblØnskedeGivere.TabIndex = 11
         Me.lblØnskedeGivere.Text = "Antall blodgivere ønsket: "
         '
-        'cboxRhesus
+        'cboRhesus
         '
-        Me.cboxRhesus.FormattingEnabled = True
-        Me.cboxRhesus.Items.AddRange(New Object() {"+", "-"})
-        Me.cboxRhesus.Location = New System.Drawing.Point(434, 63)
-        Me.cboxRhesus.Margin = New System.Windows.Forms.Padding(2)
-        Me.cboxRhesus.Name = "cboxRhesus"
-        Me.cboxRhesus.Size = New System.Drawing.Size(83, 21)
-        Me.cboxRhesus.TabIndex = 10
+        Me.cboRhesus.FormattingEnabled = True
+        Me.cboRhesus.Items.AddRange(New Object() {"+", "-"})
+        Me.cboRhesus.Location = New System.Drawing.Point(434, 63)
+        Me.cboRhesus.Margin = New System.Windows.Forms.Padding(2)
+        Me.cboRhesus.Name = "cboRhesus"
+        Me.cboRhesus.Size = New System.Drawing.Size(83, 21)
+        Me.cboRhesus.TabIndex = 10
+        Me.cboRhesus.Text = "+"
         '
         'lblRhesus
         '
@@ -321,15 +362,16 @@ Partial Class Ansattside
         Me.lblRhesus.TabIndex = 9
         Me.lblRhesus.Text = "Rhesus: "
         '
-        'cboxBlodtypeØnsket
+        'cboBlodtypeInnkalling
         '
-        Me.cboxBlodtypeØnsket.FormattingEnabled = True
-        Me.cboxBlodtypeØnsket.Items.AddRange(New Object() {"A", "B", "AB", "0"})
-        Me.cboxBlodtypeØnsket.Location = New System.Drawing.Point(179, 66)
-        Me.cboxBlodtypeØnsket.Margin = New System.Windows.Forms.Padding(2)
-        Me.cboxBlodtypeØnsket.Name = "cboxBlodtypeØnsket"
-        Me.cboxBlodtypeØnsket.Size = New System.Drawing.Size(92, 21)
-        Me.cboxBlodtypeØnsket.TabIndex = 8
+        Me.cboBlodtypeInnkalling.FormattingEnabled = True
+        Me.cboBlodtypeInnkalling.Items.AddRange(New Object() {"A", "B", "AB", "0"})
+        Me.cboBlodtypeInnkalling.Location = New System.Drawing.Point(179, 66)
+        Me.cboBlodtypeInnkalling.Margin = New System.Windows.Forms.Padding(2)
+        Me.cboBlodtypeInnkalling.Name = "cboBlodtypeInnkalling"
+        Me.cboBlodtypeInnkalling.Size = New System.Drawing.Size(92, 21)
+        Me.cboBlodtypeInnkalling.TabIndex = 8
+        Me.cboBlodtypeInnkalling.Text = "A"
         '
         'btnInnkalling
         '
@@ -354,12 +396,11 @@ Partial Class Ansattside
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.Innkalling)
+        Me.TabControl1.Controls.Add(Me.Søk)
         Me.TabControl1.Controls.Add(Me.Blodgivning)
         Me.TabControl1.Controls.Add(Me.Lager)
-        Me.TabControl1.Controls.Add(Me.Lageroppdatering)
         Me.TabControl1.Controls.Add(Me.Reservasjoner)
         Me.TabControl1.Controls.Add(Me.Statistikk)
-        Me.TabControl1.Controls.Add(Me.Søk)
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(2)
         Me.TabControl1.Name = "TabControl1"
@@ -369,9 +410,23 @@ Partial Class Ansattside
         '
         'Søk
         '
+        Me.Søk.Controls.Add(Me.btnEndreInfo)
+        Me.Søk.Controls.Add(Me.lbPoststed)
+        Me.Søk.Controls.Add(Me.txtPostnummer)
+        Me.Søk.Controls.Add(Me.txtAdresse)
+        Me.Søk.Controls.Add(Me.lbPoststedLabel)
+        Me.Søk.Controls.Add(Me.txtFodselsdato)
+        Me.Søk.Controls.Add(Me.lbPostnummer)
+        Me.Søk.Controls.Add(Me.lbAdresse)
+        Me.Søk.Controls.Add(Me.lbFodselsdato)
+        Me.Søk.Controls.Add(Me.lbTelefon)
+        Me.Søk.Controls.Add(Me.lbEtternavn)
+        Me.Søk.Controls.Add(Me.lbFornavn)
+        Me.Søk.Controls.Add(Me.txtTelefon)
+        Me.Søk.Controls.Add(Me.txtEtternavn)
+        Me.Søk.Controls.Add(Me.txtFornavn)
         Me.Søk.Controls.Add(Me.btnOppdater)
         Me.Søk.Controls.Add(Me.btnSlett)
-        Me.Søk.Controls.Add(Me.DataGridView1)
         Me.Søk.Controls.Add(Me.btnSok)
         Me.Søk.Controls.Add(Me.txtSok)
         Me.Søk.Controls.Add(Me.lblSok)
@@ -383,6 +438,128 @@ Partial Class Ansattside
         Me.Søk.TabIndex = 6
         Me.Søk.Text = "Søk/Endre"
         Me.Søk.UseVisualStyleBackColor = True
+        '
+        'btnEndreInfo
+        '
+        Me.btnEndreInfo.Location = New System.Drawing.Point(502, 261)
+        Me.btnEndreInfo.Name = "btnEndreInfo"
+        Me.btnEndreInfo.Size = New System.Drawing.Size(82, 26)
+        Me.btnEndreInfo.TabIndex = 29
+        Me.btnEndreInfo.Text = "Endre info"
+        Me.btnEndreInfo.UseVisualStyleBackColor = True
+        '
+        'lbPoststed
+        '
+        Me.lbPoststed.AutoSize = True
+        Me.lbPoststed.Location = New System.Drawing.Point(484, 227)
+        Me.lbPoststed.Name = "lbPoststed"
+        Me.lbPoststed.Size = New System.Drawing.Size(0, 13)
+        Me.lbPoststed.TabIndex = 28
+        '
+        'txtPostnummer
+        '
+        Me.txtPostnummer.Location = New System.Drawing.Point(484, 183)
+        Me.txtPostnummer.Name = "txtPostnummer"
+        Me.txtPostnummer.Size = New System.Drawing.Size(100, 20)
+        Me.txtPostnummer.TabIndex = 27
+        '
+        'txtAdresse
+        '
+        Me.txtAdresse.Location = New System.Drawing.Point(484, 141)
+        Me.txtAdresse.Name = "txtAdresse"
+        Me.txtAdresse.Size = New System.Drawing.Size(148, 20)
+        Me.txtAdresse.TabIndex = 26
+        '
+        'lbPoststedLabel
+        '
+        Me.lbPoststedLabel.AutoSize = True
+        Me.lbPoststedLabel.Location = New System.Drawing.Point(430, 227)
+        Me.lbPoststedLabel.Name = "lbPoststedLabel"
+        Me.lbPoststedLabel.Size = New System.Drawing.Size(48, 13)
+        Me.lbPoststedLabel.TabIndex = 25
+        Me.lbPoststedLabel.Text = "Poststed"
+        '
+        'txtFodselsdato
+        '
+        Me.txtFodselsdato.Location = New System.Drawing.Point(194, 224)
+        Me.txtFodselsdato.Name = "txtFodselsdato"
+        Me.txtFodselsdato.Size = New System.Drawing.Size(100, 20)
+        Me.txtFodselsdato.TabIndex = 24
+        '
+        'lbPostnummer
+        '
+        Me.lbPostnummer.AutoSize = True
+        Me.lbPostnummer.Location = New System.Drawing.Point(413, 186)
+        Me.lbPostnummer.Name = "lbPostnummer"
+        Me.lbPostnummer.Size = New System.Drawing.Size(65, 13)
+        Me.lbPostnummer.TabIndex = 23
+        Me.lbPostnummer.Text = "Postnummer"
+        '
+        'lbAdresse
+        '
+        Me.lbAdresse.AutoSize = True
+        Me.lbAdresse.Location = New System.Drawing.Point(433, 145)
+        Me.lbAdresse.Name = "lbAdresse"
+        Me.lbAdresse.Size = New System.Drawing.Size(45, 13)
+        Me.lbAdresse.TabIndex = 22
+        Me.lbAdresse.Text = "Adresse"
+        '
+        'lbFodselsdato
+        '
+        Me.lbFodselsdato.AutoSize = True
+        Me.lbFodselsdato.Location = New System.Drawing.Point(118, 227)
+        Me.lbFodselsdato.Name = "lbFodselsdato"
+        Me.lbFodselsdato.Size = New System.Drawing.Size(64, 13)
+        Me.lbFodselsdato.TabIndex = 21
+        Me.lbFodselsdato.Text = "Fødselsdato"
+        '
+        'lbTelefon
+        '
+        Me.lbTelefon.AutoSize = True
+        Me.lbTelefon.Location = New System.Drawing.Point(136, 268)
+        Me.lbTelefon.Name = "lbTelefon"
+        Me.lbTelefon.Size = New System.Drawing.Size(43, 13)
+        Me.lbTelefon.TabIndex = 20
+        Me.lbTelefon.Text = "Telefon"
+        '
+        'lbEtternavn
+        '
+        Me.lbEtternavn.AutoSize = True
+        Me.lbEtternavn.Location = New System.Drawing.Point(129, 190)
+        Me.lbEtternavn.Name = "lbEtternavn"
+        Me.lbEtternavn.Size = New System.Drawing.Size(53, 13)
+        Me.lbEtternavn.TabIndex = 19
+        Me.lbEtternavn.Text = "Etternavn"
+        '
+        'lbFornavn
+        '
+        Me.lbFornavn.AutoSize = True
+        Me.lbFornavn.Location = New System.Drawing.Point(136, 148)
+        Me.lbFornavn.Name = "lbFornavn"
+        Me.lbFornavn.Size = New System.Drawing.Size(46, 13)
+        Me.lbFornavn.TabIndex = 18
+        Me.lbFornavn.Text = "Fornavn"
+        '
+        'txtTelefon
+        '
+        Me.txtTelefon.Location = New System.Drawing.Point(194, 265)
+        Me.txtTelefon.Name = "txtTelefon"
+        Me.txtTelefon.Size = New System.Drawing.Size(100, 20)
+        Me.txtTelefon.TabIndex = 17
+        '
+        'txtEtternavn
+        '
+        Me.txtEtternavn.Location = New System.Drawing.Point(194, 187)
+        Me.txtEtternavn.Name = "txtEtternavn"
+        Me.txtEtternavn.Size = New System.Drawing.Size(100, 20)
+        Me.txtEtternavn.TabIndex = 16
+        '
+        'txtFornavn
+        '
+        Me.txtFornavn.Location = New System.Drawing.Point(194, 145)
+        Me.txtFornavn.Name = "txtFornavn"
+        Me.txtFornavn.Size = New System.Drawing.Size(100, 20)
+        Me.txtFornavn.TabIndex = 15
         '
         'btnOppdater
         '
@@ -403,17 +580,6 @@ Partial Class Ansattside
         Me.btnSlett.TabIndex = 5
         Me.btnSlett.Text = "Slett"
         Me.btnSlett.UseVisualStyleBackColor = True
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.GridColor = System.Drawing.SystemColors.Control
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 125)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(756, 72)
-        Me.DataGridView1.TabIndex = 4
         '
         'btnSok
         '
@@ -443,19 +609,105 @@ Partial Class Ansattside
         Me.lblSok.TabIndex = 0
         Me.lblSok.Text = "Søk etter telefonnummer:"
         '
-        'gridBlodlager
+        'cboBlodlegeme
         '
-        Me.gridBlodlager.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.gridBlodlager.Location = New System.Drawing.Point(192, 75)
-        Me.gridBlodlager.Name = "gridBlodlager"
-        Me.gridBlodlager.Size = New System.Drawing.Size(323, 213)
-        Me.gridBlodlager.TabIndex = 0
+        Me.cboBlodlegeme.FormattingEnabled = True
+        Me.cboBlodlegeme.Location = New System.Drawing.Point(600, 167)
+        Me.cboBlodlegeme.Name = "cboBlodlegeme"
+        Me.cboBlodlegeme.Size = New System.Drawing.Size(121, 21)
+        Me.cboBlodlegeme.TabIndex = 2
+        '
+        'cboBlodplasma
+        '
+        Me.cboBlodplasma.FormattingEnabled = True
+        Me.cboBlodplasma.Location = New System.Drawing.Point(600, 199)
+        Me.cboBlodplasma.Name = "cboBlodplasma"
+        Me.cboBlodplasma.Size = New System.Drawing.Size(121, 21)
+        Me.cboBlodplasma.TabIndex = 3
+        '
+        'cboBlodplater
+        '
+        Me.cboBlodplater.FormattingEnabled = True
+        Me.cboBlodplater.Location = New System.Drawing.Point(600, 228)
+        Me.cboBlodplater.Name = "cboBlodplater"
+        Me.cboBlodplater.Size = New System.Drawing.Size(121, 21)
+        Me.cboBlodplater.TabIndex = 4
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(535, 144)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(48, 13)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Blodtype"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(490, 170)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(93, 13)
+        Me.Label4.TabIndex = 6
+        Me.Label4.Text = "Røde blodlegemer"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(522, 202)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(61, 13)
+        Me.Label5.TabIndex = 7
+        Me.Label5.Text = "Blodplasma"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(529, 231)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(54, 13)
+        Me.Label6.TabIndex = 8
+        Me.Label6.Text = "Blodplater"
+        '
+        'txtLagerPersonnummer
+        '
+        Me.txtLagerPersonnummer.Location = New System.Drawing.Point(600, 114)
+        Me.txtLagerPersonnummer.Name = "txtLagerPersonnummer"
+        Me.txtLagerPersonnummer.Size = New System.Drawing.Size(100, 20)
+        Me.txtLagerPersonnummer.TabIndex = 9
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(517, 117)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(77, 13)
+        Me.Label7.TabIndex = 10
+        Me.Label7.Text = "Personnummer"
+        '
+        'btnTest
+        '
+        Me.btnTest.Location = New System.Drawing.Point(509, 360)
+        Me.btnTest.Name = "btnTest"
+        Me.btnTest.Size = New System.Drawing.Size(75, 23)
+        Me.btnTest.TabIndex = 11
+        Me.btnTest.Text = "Skriv Ut"
+        Me.btnTest.UseVisualStyleBackColor = True
+        '
+        'btnSettInn
+        '
+        Me.btnSettInn.Location = New System.Drawing.Point(646, 360)
+        Me.btnSettInn.Name = "btnSettInn"
+        Me.btnSettInn.Size = New System.Drawing.Size(75, 23)
+        Me.btnSettInn.TabIndex = 12
+        Me.btnSettInn.Text = "Sett Inn"
+        Me.btnSettInn.UseVisualStyleBackColor = True
         '
         'Ansattside
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(760, 452)
+        Me.ClientSize = New System.Drawing.Size(760, 471)
         Me.Controls.Add(Me.TabControl1)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Ansattside"
@@ -465,6 +717,8 @@ Partial Class Ansattside
         Me.Reservasjoner.ResumeLayout(False)
         Me.Reservasjoner.PerformLayout()
         Me.Lager.ResumeLayout(False)
+        Me.Lager.PerformLayout()
+        CType(Me.gridBlodlager, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Blodgivning.ResumeLayout(False)
         Me.Blodgivning.PerformLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -473,8 +727,6 @@ Partial Class Ansattside
         Me.TabControl1.ResumeLayout(False)
         Me.Søk.ResumeLayout(False)
         Me.Søk.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.gridBlodlager, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -484,21 +736,18 @@ Partial Class Ansattside
     Friend WithEvents Label2 As Label
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Reservasjonskalender As MonthCalendar
-    Friend WithEvents Lageroppdatering As TabPage
     Friend WithEvents Lager As TabPage
     Friend WithEvents Blodgivning As TabPage
     Friend WithEvents btnBlodgivning As Button
-    Friend WithEvents KalenderGivning As MonthCalendar
-    Friend WithEvents lblGivningDato As Label
     Friend WithEvents lblMengde As Label
     Friend WithEvents lblPersnr As Label
     Friend WithEvents txtboxPersnr As TextBox
     Friend WithEvents Innkalling As TabPage
     Friend WithEvents txtAntallGivere As TextBox
     Friend WithEvents lblØnskedeGivere As Label
-    Friend WithEvents cboxRhesus As ComboBox
+    Friend WithEvents cboRhesus As ComboBox
     Friend WithEvents lblRhesus As Label
-    Friend WithEvents cboxBlodtypeØnsket As ComboBox
+    Friend WithEvents cboBlodtypeInnkalling As ComboBox
     Friend WithEvents btnInnkalling As Button
     Friend WithEvents lblBlodtypeØnsket As Label
     Friend WithEvents TabControl1 As TabControl
@@ -511,8 +760,37 @@ Partial Class Ansattside
     Friend WithEvents btnSok As Button
     Friend WithEvents txtSok As TextBox
     Friend WithEvents lblSok As Label
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents btnOppdater As Button
     Friend WithEvents btnSlett As Button
     Friend WithEvents gridBlodlager As DataGridView
+    Friend WithEvents btnEndreInfo As Button
+    Friend WithEvents lbPoststed As Label
+    Friend WithEvents txtPostnummer As TextBox
+    Friend WithEvents txtAdresse As TextBox
+    Friend WithEvents lbPoststedLabel As Label
+    Friend WithEvents txtFodselsdato As TextBox
+    Friend WithEvents lbPostnummer As Label
+    Friend WithEvents lbAdresse As Label
+    Friend WithEvents lbFodselsdato As Label
+    Friend WithEvents lbTelefon As Label
+    Friend WithEvents lbEtternavn As Label
+    Friend WithEvents lbFornavn As Label
+    Friend WithEvents txtTelefon As TextBox
+    Friend WithEvents txtEtternavn As TextBox
+    Friend WithEvents txtFornavn As TextBox
+    Friend WithEvents Blodtype As DataGridViewTextBoxColumn
+    Friend WithEvents Blodplasma As DataGridViewTextBoxColumn
+    Friend WithEvents Blodplater As DataGridViewTextBoxColumn
+    Friend WithEvents Blodceller As DataGridViewTextBoxColumn
+    Friend WithEvents btnSettInn As Button
+    Friend WithEvents btnTest As Button
+    Friend WithEvents Label7 As Label
+    Friend WithEvents txtLagerPersonnummer As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents cboBlodplater As ComboBox
+    Friend WithEvents cboBlodplasma As ComboBox
+    Friend WithEvents cboBlodlegeme As ComboBox
 End Class
