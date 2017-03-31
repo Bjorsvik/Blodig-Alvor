@@ -16,7 +16,7 @@
         Return db.Query("SELECT MAX(resID) FROM Reservasjon")
     End Function
 
-    Public Sub reserver(ByVal dato As Date, ByVal personID As Integer)
+    Public Sub reserver(ByVal dato As String, ByVal personID As Integer)
 
         Dim resID As DataTable = getLastResID()
         Dim reservasjonID As String = ""

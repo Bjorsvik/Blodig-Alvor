@@ -3,8 +3,18 @@ Public Class Ansattside
     Private tilkobling As MySqlConnection
     Dim Blodlager As New Blodlager()
     Dim Bruker As New Blodgiver()
-    Dim postnr As New Postnummer()
+    Dim Postnr As New Postnummer()
+    Dim Blodprodukter As New Blodlager()
+    Dim BlodInsert As New Blodlager()
+    Dim personID As New Person()
+    Dim blodID As New Blodlager()
 
+    Private Sub Ansattside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        visAlleBlodprodukter()
+    End Sub
+    Private Sub btnTest_Click(sender As Object, e As EventArgs) Handles btnTest.Click
+        leggTilBlodProdukter()
+    End Sub
     Private Sub btnSok_Click(sender As Object, e As EventArgs) Handles btnSok.Click
         visBruker()
         visPoststed()
@@ -16,31 +26,33 @@ Public Class Ansattside
         visPoststed()
     End Sub
 
-    Private Sub Lager_Click(sender As Object, e As EventArgs) Handles Lager.Click
-        Dim blodlagerTab As New DataTable()
-        Dim blodtypeTab As New DataTable()
+    Private Sub leggTilBlodProdukter()
+        Dim personnummer As String = txtLagerPersonnummer.Text
+        Dim pID As String = ""
+        Dim bID As String = ""
+        Dim personIDTab As New DataTable
+        Dim blodIDTab As New DataTable
 
-        Dim blodtype As String
-        Dim blodplasma As String
-        Dim blodlegeme As String
-        Dim blodplater As String
+        personIDTab = personID.getPersonID(personnummer)
 
-        gridBlodlager.Rows.Clear()
-        blodlagerTab = Blodlager.getAlleBlod()
+        For Each row In personIDTab.Rows
+            pID = row("personID")
+ 
+        Next
+        MsgBox(pID)
 
-        For Each row In blodlagerTab.Rows
+        blodIDTab = blodID.getLastBlodIDByPersonID(pID)
 
-            blodplasma = row("blodplasma")
-            blodlegeme = row("blodlegeme")
-            blodplater = row("blodplater")
+        For Each row In blodIDTab.Rows
+            bID = row("blodID")
+        Next
 
-            blodtypeTab = Blodlager.getAlleBlod
-            For Each rad In blodtypeTab.Rows
-                blodtype = rad("blodtype")
-                gridBlodlager.Rows.Add(blodtype, blodplasma, blodlegeme, blodplater)
-            Next rad
+        MsgBox(bID)
 
-        Next row
+    End Sub
+
+    Private Sub skrivUtBlodProdukter()
+
     End Sub
 
     Private Sub visBruker()
@@ -115,7 +127,7 @@ Public Class Ansattside
 
         Dim poststed As String
 
-        postnummerTab = postnr.GetPoststed(txtPostnummer.Text)
+        postnummerTab = Postnr.GetPoststed(txtPostnummer.Text)
 
         For Each row In postnummerTab.Rows
             poststed = row("poststed")
@@ -125,10 +137,26 @@ Public Class Ansattside
 
     End Sub
 
-    Private Sub Innkalling_Click(sender As Object, e As EventArgs) Handles Innkalling.Click
+    Private Sub visAlleBlodprodukter()
+        Dim blodproduktTab As New DataTable()
+        Dim blodtype As String
+        Dim blodplasma As String
+        Dim blodplater As String
+        Dim blodceller As String
+
+        gridBlodlager.Rows.Clear()
+
+        blodproduktTab = Blodprodukter.getAlleBlodProdukter()
+        For Each row In blodproduktTab.Rows
+            blodtype = row("Blodtype")
+            blodplasma = row("Plasmaposer")
+            blodplater = row("Plateposer")
+            blodceller = row("Celleposer")
+
+            gridBlodlager.Rows.Add(blodtype, blodplasma, blodplater, blodceller)
+
+        Next row
     End Sub
 
-    Private Sub Ansattside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-    End Sub
 End Class
