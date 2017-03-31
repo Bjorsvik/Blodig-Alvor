@@ -30,6 +30,17 @@ Partial Class Ansattside
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Reservasjonskalender = New System.Windows.Forms.MonthCalendar()
         Me.Lager = New System.Windows.Forms.TabPage()
+        Me.btnSettInn = New System.Windows.Forms.Button()
+        Me.btnTest = New System.Windows.Forms.Button()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.txtLagerPersonnummer = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.cboBlodplater = New System.Windows.Forms.ComboBox()
+        Me.cboBlodplasma = New System.Windows.Forms.ComboBox()
+        Me.cboBlodlegeme = New System.Windows.Forms.ComboBox()
         Me.gridBlodlager = New System.Windows.Forms.DataGridView()
         Me.Blodtype = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Blodplasma = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -73,17 +84,6 @@ Partial Class Ansattside
         Me.btnSok = New System.Windows.Forms.Button()
         Me.txtSok = New System.Windows.Forms.TextBox()
         Me.lblSok = New System.Windows.Forms.Label()
-        Me.cboBlodlegeme = New System.Windows.Forms.ComboBox()
-        Me.cboBlodplasma = New System.Windows.Forms.ComboBox()
-        Me.cboBlodplater = New System.Windows.Forms.ComboBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtLagerPersonnummer = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.btnTest = New System.Windows.Forms.Button()
-        Me.btnSettInn = New System.Windows.Forms.Button()
         Me.Statistikk.SuspendLayout()
         Me.Reservasjoner.SuspendLayout()
         Me.Lager.SuspendLayout()
@@ -188,6 +188,106 @@ Partial Class Ansattside
         Me.Lager.TabIndex = 2
         Me.Lager.Text = "Lager"
         Me.Lager.UseVisualStyleBackColor = True
+        '
+        'btnSettInn
+        '
+        Me.btnSettInn.Location = New System.Drawing.Point(646, 360)
+        Me.btnSettInn.Name = "btnSettInn"
+        Me.btnSettInn.Size = New System.Drawing.Size(75, 23)
+        Me.btnSettInn.TabIndex = 12
+        Me.btnSettInn.Text = "Sett Inn"
+        Me.btnSettInn.UseVisualStyleBackColor = True
+        '
+        'btnTest
+        '
+        Me.btnTest.Location = New System.Drawing.Point(509, 360)
+        Me.btnTest.Name = "btnTest"
+        Me.btnTest.Size = New System.Drawing.Size(75, 23)
+        Me.btnTest.TabIndex = 11
+        Me.btnTest.Text = "Skriv Ut"
+        Me.btnTest.UseVisualStyleBackColor = True
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(517, 117)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(77, 13)
+        Me.Label7.TabIndex = 10
+        Me.Label7.Text = "Personnummer"
+        '
+        'txtLagerPersonnummer
+        '
+        Me.txtLagerPersonnummer.Location = New System.Drawing.Point(600, 114)
+        Me.txtLagerPersonnummer.Name = "txtLagerPersonnummer"
+        Me.txtLagerPersonnummer.Size = New System.Drawing.Size(100, 20)
+        Me.txtLagerPersonnummer.TabIndex = 9
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(529, 231)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(54, 13)
+        Me.Label6.TabIndex = 8
+        Me.Label6.Text = "Blodplater"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(522, 202)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(61, 13)
+        Me.Label5.TabIndex = 7
+        Me.Label5.Text = "Blodplasma"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(490, 170)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(93, 13)
+        Me.Label4.TabIndex = 6
+        Me.Label4.Text = "Røde blodlegemer"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(535, 144)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(48, 13)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Blodtype"
+        '
+        'cboBlodplater
+        '
+        Me.cboBlodplater.FormattingEnabled = True
+        Me.cboBlodplater.Items.AddRange(New Object() {"1", "2", "3", "4"})
+        Me.cboBlodplater.Location = New System.Drawing.Point(600, 228)
+        Me.cboBlodplater.Name = "cboBlodplater"
+        Me.cboBlodplater.Size = New System.Drawing.Size(121, 21)
+        Me.cboBlodplater.TabIndex = 4
+        Me.cboBlodplater.Text = "1"
+        '
+        'cboBlodplasma
+        '
+        Me.cboBlodplasma.FormattingEnabled = True
+        Me.cboBlodplasma.Items.AddRange(New Object() {"1", "2", "3", "4"})
+        Me.cboBlodplasma.Location = New System.Drawing.Point(600, 199)
+        Me.cboBlodplasma.Name = "cboBlodplasma"
+        Me.cboBlodplasma.Size = New System.Drawing.Size(121, 21)
+        Me.cboBlodplasma.TabIndex = 3
+        Me.cboBlodplasma.Text = "1"
+        '
+        'cboBlodlegeme
+        '
+        Me.cboBlodlegeme.FormattingEnabled = True
+        Me.cboBlodlegeme.Items.AddRange(New Object() {"1", "2", "3", "4"})
+        Me.cboBlodlegeme.Location = New System.Drawing.Point(600, 167)
+        Me.cboBlodlegeme.Name = "cboBlodlegeme"
+        Me.cboBlodlegeme.Size = New System.Drawing.Size(121, 21)
+        Me.cboBlodlegeme.TabIndex = 2
+        Me.cboBlodlegeme.Text = "1"
         '
         'gridBlodlager
         '
@@ -608,100 +708,6 @@ Partial Class Ansattside
         Me.lblSok.Size = New System.Drawing.Size(125, 13)
         Me.lblSok.TabIndex = 0
         Me.lblSok.Text = "Søk etter telefonnummer:"
-        '
-        'cboBlodlegeme
-        '
-        Me.cboBlodlegeme.FormattingEnabled = True
-        Me.cboBlodlegeme.Location = New System.Drawing.Point(600, 167)
-        Me.cboBlodlegeme.Name = "cboBlodlegeme"
-        Me.cboBlodlegeme.Size = New System.Drawing.Size(121, 21)
-        Me.cboBlodlegeme.TabIndex = 2
-        '
-        'cboBlodplasma
-        '
-        Me.cboBlodplasma.FormattingEnabled = True
-        Me.cboBlodplasma.Location = New System.Drawing.Point(600, 199)
-        Me.cboBlodplasma.Name = "cboBlodplasma"
-        Me.cboBlodplasma.Size = New System.Drawing.Size(121, 21)
-        Me.cboBlodplasma.TabIndex = 3
-        '
-        'cboBlodplater
-        '
-        Me.cboBlodplater.FormattingEnabled = True
-        Me.cboBlodplater.Location = New System.Drawing.Point(600, 228)
-        Me.cboBlodplater.Name = "cboBlodplater"
-        Me.cboBlodplater.Size = New System.Drawing.Size(121, 21)
-        Me.cboBlodplater.TabIndex = 4
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(535, 144)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(48, 13)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Blodtype"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(490, 170)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(93, 13)
-        Me.Label4.TabIndex = 6
-        Me.Label4.Text = "Røde blodlegemer"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(522, 202)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(61, 13)
-        Me.Label5.TabIndex = 7
-        Me.Label5.Text = "Blodplasma"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(529, 231)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(54, 13)
-        Me.Label6.TabIndex = 8
-        Me.Label6.Text = "Blodplater"
-        '
-        'txtLagerPersonnummer
-        '
-        Me.txtLagerPersonnummer.Location = New System.Drawing.Point(600, 114)
-        Me.txtLagerPersonnummer.Name = "txtLagerPersonnummer"
-        Me.txtLagerPersonnummer.Size = New System.Drawing.Size(100, 20)
-        Me.txtLagerPersonnummer.TabIndex = 9
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(517, 117)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(77, 13)
-        Me.Label7.TabIndex = 10
-        Me.Label7.Text = "Personnummer"
-        '
-        'btnTest
-        '
-        Me.btnTest.Location = New System.Drawing.Point(509, 360)
-        Me.btnTest.Name = "btnTest"
-        Me.btnTest.Size = New System.Drawing.Size(75, 23)
-        Me.btnTest.TabIndex = 11
-        Me.btnTest.Text = "Skriv Ut"
-        Me.btnTest.UseVisualStyleBackColor = True
-        '
-        'btnSettInn
-        '
-        Me.btnSettInn.Location = New System.Drawing.Point(646, 360)
-        Me.btnSettInn.Name = "btnSettInn"
-        Me.btnSettInn.Size = New System.Drawing.Size(75, 23)
-        Me.btnSettInn.TabIndex = 12
-        Me.btnSettInn.Text = "Sett Inn"
-        Me.btnSettInn.UseVisualStyleBackColor = True
         '
         'Ansattside
         '
