@@ -1,19 +1,24 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Ansattside
     Private tilkobling As MySqlConnection
+
+    Dim Postnr As New Postnummer()
+
     Dim Blodlager As New Blodlager()
     Dim Bruker As New Blodgiver()
-    Dim Postnr As New Postnummer()
     Dim Blodprodukter As New Blodlager()
     Dim BlodInsert As New Blodlager()
-    Dim personID As New Person()
     Dim blodID As New Blodlager()
+
+    Dim personID As New Person()
+
 
     Private Sub Ansattside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         visAlleBlodprodukter()
     End Sub
     Private Sub btnTest_Click(sender As Object, e As EventArgs) Handles btnTest.Click
         leggTilBlodProdukter()
+        visAlleBlodprodukter()
     End Sub
     Private Sub btnSok_Click(sender As Object, e As EventArgs) Handles btnSok.Click
         visBruker()
@@ -30,6 +35,7 @@ Public Class Ansattside
         Dim personnummer As String = txtLagerPersonnummer.Text
         Dim pID As String = ""
         Dim bID As String = ""
+        Dim lagerID As Integer = "1"
         Dim personIDTab As New DataTable
         Dim blodIDTab As New DataTable
 
@@ -48,6 +54,20 @@ Public Class Ansattside
         Next
 
         MsgBox(bID)
+
+        Dim celleposer As Integer = cboBlodlegeme.Text
+        Dim plasmaposer As Integer = cboBlodplasma.Text
+        Dim plateposer As Integer = cboBlodplater.Text
+
+        MsgBox("Celleposer:" & celleposer)
+        MsgBox("Plasmaposer:" & plasmaposer)
+        MsgBox("Plateposer:" & plateposer)
+
+        BlodInsert.leggInnBlodlegeme(lagerID, bID, celleposer)
+        BlodInsert.leggInnBlodplasma(lagerID, bID, plasmaposer)
+        BlodInsert.leggInnBlodplater(lagerID, bID, plateposer)
+
+
 
     End Sub
 
