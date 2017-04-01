@@ -30,7 +30,6 @@ Partial Class Ansattside
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Reservasjonskalender = New System.Windows.Forms.MonthCalendar()
         Me.Lager = New System.Windows.Forms.TabPage()
-        Me.btnSettInn = New System.Windows.Forms.Button()
         Me.btnTest = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtLagerPersonnummer = New System.Windows.Forms.TextBox()
@@ -168,7 +167,6 @@ Partial Class Ansattside
         '
         'Lager
         '
-        Me.Lager.Controls.Add(Me.btnSettInn)
         Me.Lager.Controls.Add(Me.btnTest)
         Me.Lager.Controls.Add(Me.Label7)
         Me.Lager.Controls.Add(Me.txtLagerPersonnummer)
@@ -189,22 +187,13 @@ Partial Class Ansattside
         Me.Lager.Text = "Lager"
         Me.Lager.UseVisualStyleBackColor = True
         '
-        'btnSettInn
-        '
-        Me.btnSettInn.Location = New System.Drawing.Point(646, 360)
-        Me.btnSettInn.Name = "btnSettInn"
-        Me.btnSettInn.Size = New System.Drawing.Size(75, 23)
-        Me.btnSettInn.TabIndex = 12
-        Me.btnSettInn.Text = "Sett Inn"
-        Me.btnSettInn.UseVisualStyleBackColor = True
-        '
         'btnTest
         '
-        Me.btnTest.Location = New System.Drawing.Point(509, 360)
+        Me.btnTest.Location = New System.Drawing.Point(556, 363)
         Me.btnTest.Name = "btnTest"
-        Me.btnTest.Size = New System.Drawing.Size(75, 23)
+        Me.btnTest.Size = New System.Drawing.Size(116, 23)
         Me.btnTest.TabIndex = 11
-        Me.btnTest.Text = "Skriv Ut"
+        Me.btnTest.Text = "Sett inn blodprodukt"
         Me.btnTest.UseVisualStyleBackColor = True
         '
         'Label7
@@ -788,7 +777,6 @@ Partial Class Ansattside
     Friend WithEvents Blodplasma As DataGridViewTextBoxColumn
     Friend WithEvents Blodplater As DataGridViewTextBoxColumn
     Friend WithEvents Blodceller As DataGridViewTextBoxColumn
-    Friend WithEvents btnSettInn As Button
     Friend WithEvents btnTest As Button
     Friend WithEvents Label7 As Label
     Friend WithEvents txtLagerPersonnummer As TextBox
