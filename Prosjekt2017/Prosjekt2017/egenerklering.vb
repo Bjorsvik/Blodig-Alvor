@@ -21,7 +21,6 @@ Public Class egenerklering
         Dim fornavn As String
         Dim etternavn As String
 
-
         brukerTab = bruker.GetPersonnummer()
 
         For Each row In brukerTab.Rows
