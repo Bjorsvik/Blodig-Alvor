@@ -2,16 +2,40 @@
 
 Public Class egenerklering
     Private tilkobling As MySqlConnection
-
+    Dim bruker As New Blodgiver()
+    Dim personID As Integer
 
     Private Sub egenerklering_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Dim personnummer = PubVar.personnummer
+        visBrukerEgenerklering()
         tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=g_oops_23;Uid=g_oops_23;Pwd=3d4CcHvg")
         tilkobling.Open()
         lblDato.Text = Date.Now
         Me.Show()
         Label1.Select() 'Får formen til å loade øverst på siden
     End Sub
+    'Legger inn navn, etternavn og brukernummer i formen automatisk
+    Private Sub visBrukerEgenerklering()
+        Dim brukerTab As New DataTable()
+
+        Dim fornavn As String
+        Dim etternavn As String
+
+
+        brukerTab = bruker.GetPersonnummer()
+
+        For Each row In brukerTab.Rows
+
+            fornavn = row("fornavn")
+            etternavn = row("etternavn")
+            personID = row("personID")
+
+            lblFornavn.Text = fornavn
+            lblEtternavn.Text = etternavn
+            lblPersonID.Text = personID
+        Next row
+    End Sub
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnSendInn.Click
 
 
@@ -437,18 +461,8 @@ Public Class egenerklering
 #End Region
 
 
-            Dim blodgiver As New Blodgiver
-            Dim id As String
-            Dim personID As New DataTable()
-
-            personID = blodgiver.GetBrukeridByTelefon(45464856)
-
-            For Each rad In personID.Rows
-                id = rad(0).ToString()
-            Next rad
-
             Dim sqlSporring = "insert into Egenerklering (dato, varsling_epost, varsling_sms, bolk1, bolk2, bolk3, bolk4, bolk5, bolk6, bolk7, bolk8, bolk9, personID) 
-                               values (CURDATE(), @varsling_epost, @varsling_sms, @bolk1, @bolk2, @bolk3, @bolk4, @bolk5, @bolk6, @bolk7, @bolk8, @bolk9, personID)"
+                               values (CURDATE(), @varsling_epost, @varsling_sms, @bolk1, @bolk2, @bolk3, @bolk4, @bolk5, @bolk6, @bolk7, @bolk8, @bolk9, @personID)"
 
             Dim sqlbolker As New MySqlCommand(sqlSporring, tilkobling)
 
