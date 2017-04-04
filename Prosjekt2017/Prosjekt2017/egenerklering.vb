@@ -3,9 +3,11 @@
 Public Class egenerklering
     Private tilkobling As MySqlConnection
 
-    'Dim bolks As New egenerkleringClass
 
     Private Sub egenerklering_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=g_oops_23;Uid=g_oops_23;Pwd=3d4CcHvg")
+        tilkobling.Open()
         lblDato.Text = Date.Now
         Me.Show()
         Label1.Select() 'Får formen til å loade øverst på siden
@@ -23,7 +25,7 @@ Public Class egenerklering
                 spmEpost = 0
             End If
 
-            Dim varslingEpost As String = spmEpost
+            Dim varsling_epost As String = spmEpost
 #End Region 'Vi har valgt å dele inn spørsmålene i bolker.
 #Region "varsling_sms"
             Dim spmSMS As String
@@ -33,7 +35,7 @@ Public Class egenerklering
                 spmSMS = 0
             End If
 
-            Dim varslingSMS As String = spmSMS
+            Dim varsling_sms As String = spmSMS
 #End Region   'Vi regner en ny bolk for hver tjukke overskrift.
 #Region "bolk1"
 
@@ -434,13 +436,24 @@ Public Class egenerklering
             Dim bolk9 As String = spm91 + spm92 + spm93 + spm94 + spm95 + spm96 + spm97 + spm98 + spm99 + spm910
 #End Region
 
-            Dim sqlSporring = "insert into Egenerklering (dato, varsling_epost, varsling_sms, bolk1, bolk2, bolk3, bolk4, bolk5, bolk6, bolk7, bolk8, bolk9) 
-            '               values (CURDATE(), @varslingEpost, @varslingSMS, @bolk1, @bolk2, @bolk3, @bolk4, @bolk5, @bolk6, @bolk7, @bolk8, @bolk9)"
+
+            Dim blodgiver As New Blodgiver
+            Dim id As String
+            Dim personID As New DataTable()
+
+            personID = blodgiver.GetBrukeridByTelefon(45464856)
+
+            For Each rad In personID.Rows
+                id = rad(0).ToString()
+            Next rad
+
+            Dim sqlSporring = "insert into Egenerklering (dato, varsling_epost, varsling_sms, bolk1, bolk2, bolk3, bolk4, bolk5, bolk6, bolk7, bolk8, bolk9, personID) 
+                               values (CURDATE(), @varsling_epost, @varsling_sms, @bolk1, @bolk2, @bolk3, @bolk4, @bolk5, @bolk6, @bolk7, @bolk8, @bolk9, personID)"
 
             Dim sqlbolker As New MySqlCommand(sqlSporring, tilkobling)
 
-            sqlbolker.Parameters.AddWithValue("@varslingEpost", varslingEpost)
-            sqlbolker.Parameters.AddWithValue("@varslingSMS", varslingSMS)
+            sqlbolker.Parameters.AddWithValue("@varsling_epost", varsling_epost)
+            sqlbolker.Parameters.AddWithValue("@varsling_sms", varsling_sms)
             sqlbolker.Parameters.AddWithValue("@bolk1", bolk1)
             sqlbolker.Parameters.AddWithValue("@bolk2", bolk2)
             sqlbolker.Parameters.AddWithValue("@bolk3", bolk3)
@@ -450,6 +463,8 @@ Public Class egenerklering
             sqlbolker.Parameters.AddWithValue("@bolk7", bolk7)
             sqlbolker.Parameters.AddWithValue("@bolk8", bolk8)
             sqlbolker.Parameters.AddWithValue("@bolk9", bolk9)
+            sqlbolker.Parameters.AddWithValue("@personID", personID)
+
 
             sqlbolker.ExecuteNonQuery()
         Else
