@@ -21,6 +21,9 @@
     Public Function getMuligeTidspunkt(ByVal resdato) As DataTable
         Return db.Query("")
     End Function
+    Public Function getLastResIDByPersonID(personID As Integer) As DataTable
+        Return db.Query("SELECT MAX(resID) As resID FROM Reservasjon JOIN Person ON Reservasjon.personID = Person.personID WHERE Person.personID = '" & personID & "'")
+    End Function
 
     Public Sub reserver(ByVal dato As String, ByVal personID As Integer)
 

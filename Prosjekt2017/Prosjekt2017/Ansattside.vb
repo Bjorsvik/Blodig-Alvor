@@ -11,6 +11,7 @@ Public Class Ansattside
     Dim blodID As New Blodlager()
 
     Dim personID As New Person()
+    Dim resID As New Reservasjoner()
 
 
     Private Sub Ansattside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -35,19 +36,29 @@ Public Class Ansattside
         Dim personnummer As String = txtLagerPersonnummer.Text
         Dim pID As String = ""
         Dim bID As String = ""
+        Dim rID As String = ""
         Dim lagerID As Integer = "1"
         Dim personIDTab As New DataTable
         Dim blodIDTab As New DataTable
+        Dim resIDTab As New DataTable
 
         personIDTab = personID.getPersonID(personnummer)
 
         For Each row In personIDTab.Rows
             pID = row("personID")
- 
+
         Next
         MsgBox(pID)
 
-        blodIDTab = blodID.getLastBlodIDByPersonID(pID)
+        resIDTab = resID.getLastResIDByPersonID(pID)
+
+        For Each row In resIDTab.Rows
+            rID = row("resID")
+        Next
+
+        MsgBox(rID)
+
+        blodIDTab = blodID.getLastBlodIDByResID(rID)
 
         For Each row In blodIDTab.Rows
             bID = row("blodID")
@@ -58,11 +69,12 @@ Public Class Ansattside
         Dim celleposer As Integer = cboBlodlegeme.Text
         Dim plasmaposer As Integer = cboBlodplasma.Text
         Dim plateposer As Integer = cboBlodplater.Text
-        Dim dato As String = Date.Now.ToString("YYYY-MM-DD")
+        Dim dato As String = Date.Now.ToString("yyyy-MM-dd")
 
         MsgBox("Celleposer:" & celleposer)
         MsgBox("Plasmaposer:" & plasmaposer)
         MsgBox("Plateposer:" & plateposer)
+        MsgBox(dato)
 
         BlodInsert.leggInnBlodlegeme(lagerID, bID, celleposer, dato)
         BlodInsert.leggInnBlodplasma(lagerID, bID, plasmaposer)
