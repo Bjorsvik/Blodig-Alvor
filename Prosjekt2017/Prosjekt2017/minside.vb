@@ -134,6 +134,10 @@ Public Class minside
 
     End Sub
 
+    Private Sub btnSkjema_Click(sender As Object, e As EventArgs) Handles btnSkjema.Click
+        egenerklering.Show()
+    End Sub
+
     'Private Sub visBrukeren()
     '    Dim SDA As New MySqlDataAdapter
     '    Dim dbDataset As New DataTable

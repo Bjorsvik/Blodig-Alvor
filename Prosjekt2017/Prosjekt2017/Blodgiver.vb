@@ -35,4 +35,7 @@ Public Class Blodgiver
     Public Function GetBrukeridByTelefon(ByVal tlf As Integer) As DataTable
         Return db.Query("SELECT personID FROM Person WHERE telefon = " & "'" & tlf & "'")
     End Function
+    'Public Function getpersonIDbyPassord(ByVal bPassord As Integer) As DataTable
+    '    Return db.Query("SELECT personID FROM blodgiver WHERE personID = " & "'" & bPassord & "'")
+    'End Function
 End Class
