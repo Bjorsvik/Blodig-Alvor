@@ -15,6 +15,12 @@
     Public Function getLastResID() As DataTable
         Return db.Query("SELECT MAX(resID) FROM Reservasjon")
     End Function
+    Public Function getAlleTidspunkt() As DataTable
+        Return db.Query("SELECT * from Tidspunkt")
+    End Function
+    Public Function getMuligeTidspunkt(ByVal resdato) As DataTable
+        Return db.Query("")
+    End Function
 
     Public Sub reserver(ByVal dato As String, ByVal personID As Integer)
 
