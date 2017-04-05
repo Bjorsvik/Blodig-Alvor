@@ -114,7 +114,7 @@ Public Class minside
 
         Dim id As New DataTable()
 
-        id = bg.GetBrukeridByTelefon(45464856)
+        id = bg.GetBrukeridByTelefon(PubVar.personnummer)
 
         For Each rad In id.Rows
             personID = rad(0).ToString()
