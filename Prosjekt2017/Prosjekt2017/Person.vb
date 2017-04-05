@@ -12,7 +12,6 @@
 
     Public Sub New()
 
-
     End Sub
     Public Sub New(fornavn As String, etternavn As String, fodselsdato As String, personnummer As String,
                    telefon As Integer, adresse As String, postnummer As Integer, epost As String)
@@ -53,6 +52,10 @@
     Public Sub endrePostnummer(postnummer As String)
         db.Query("UPDATE Person SET postnummer = '" & postnummer & "' WHERE personnummer = '" & PubVar.personnummer & "'")
     End Sub
+    Public Sub endreBlodtype(blodtype As String)
+        db.Query("UPDATE Person SET blodtype = '" & blodtype & "' WHERE personnummer = '" & PubVar.personnummer & "'")
+    End Sub
+
     Public Function GetPersonnummer() As DataTable
         Return db.Query("SELECT * FROM Person JOIN Blodgiver WHERE Person.personID = Blodgiver.personID AND personnummer = " & "'" & PubVar.personnummer & "'")
     End Function

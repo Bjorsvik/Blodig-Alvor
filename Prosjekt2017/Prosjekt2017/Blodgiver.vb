@@ -32,8 +32,8 @@ Public Class Blodgiver
     Public Function getAlleBlodgivere() As DataTable
         Return db.Query("SELECT * FROM Person JOIN Blodgiver ON Person.personID = Blodgiver.personID")
     End Function
-    Public Function GetBrukeridByTelefon(ByVal tlf As Integer) As DataTable
-        Return db.Query("SELECT personID FROM Person WHERE telefon = " & "'" & tlf & "'")
+    Public Function GetBrukeridByTelefon(ByVal personnummer As String) As DataTable
+        Return db.Query("SELECT personID FROM Person WHERE personnummer = " & "'" & personnummer & "'")
     End Function
     Public Function GetIDByPersonNr(ByVal personnummer As Integer) As DataTable
         Return db.Query("SELECT personID FROM Person WHERE personnummer = " & "'" & personnummer & "'")
