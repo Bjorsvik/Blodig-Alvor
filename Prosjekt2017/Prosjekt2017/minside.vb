@@ -1,7 +1,9 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class minside
-    Dim bruker As New Blodgiver()
+    Dim bg As New Blodgiver()
     Dim postnr As New Postnummer()
+    Dim res As New Reservasjoner
+    Dim resDato As String
 
     Private Sub minside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim personnummer = PubVar.personnummer
@@ -31,7 +33,7 @@ Public Class minside
         Dim postnummer As Integer
         Dim personID As Integer
 
-        brukerTab = bruker.GetPersonnummer()
+        brukerTab = bg.GetPersonnummer()
 
         For Each row In brukerTab.Rows
 
@@ -83,7 +85,7 @@ Public Class minside
         Dim adresse As String
         Dim postnummer As Integer
 
-        brukerTab = bruker.GetPersonnummer()
+        brukerTab = bg.GetPersonnummer()
 
         For Each row In brukerTab.Rows
 
@@ -95,34 +97,30 @@ Public Class minside
             adresse = row("adresse")
             postnummer = row("postnummer")
 
-            bruker.endreFornavn(txtFornavn.Text)
-            bruker.endreEtternavn(txtEtternavn.Text)
-            bruker.endreFodselsdato(txtFodselsdato.Text)
-            bruker.endreTelefon(txtTelefon.Text)
-            bruker.endreAdresse(txtAdresse.Text)
-            bruker.endrePostnummer(txtPostnummer.Text)
+            bg.endreFornavn(txtFornavn.Text)
+            bg.endreEtternavn(txtEtternavn.Text)
+            bg.endreFodselsdato(txtFodselsdato.Text)
+            bg.endreTelefon(txtTelefon.Text)
+            bg.endreAdresse(txtAdresse.Text)
+            bg.endrePostnummer(txtPostnummer.Text)
 
         Next row
     End Sub
 
     Public Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-        Dim blodgiver As New Blodgiver
         Dim personID As String
-        Dim res As New Reservasjoner
-        Dim dato As New Date()
-        Dim resDato As String
+
+
         Dim id As New DataTable()
 
-        id = blodgiver.GetBrukeridByTelefon(45464856)
+        id = bg.GetBrukeridByTelefon(45464856)
 
         For Each rad In id.Rows
             personID = rad(0).ToString()
         Next rad
 
         Dim tempID As Integer = CInt(personID)
-        dato = MonthCalendar1.SelectionRange.Start
-        resDato = dato.Year & "-" & dato.Month & "-" & dato.Day
         res.reserver(resDato, tempID)
         'MsgBox(resDato)
 
@@ -130,6 +128,14 @@ Public Class minside
 
     Private Sub btnSkjema_Click(sender As Object, e As EventArgs) Handles btnSkjema.Click
         egenerklering.Show()
+    End Sub
+
+    Public Sub MonthCalendar1_DateChanged(sender As Object, e As DateRangeEventArgs) Handles MonthCalendar1.DateChanged
+        Dim dato As New Date()
+        dato = MonthCalendar1.SelectionRange.Start
+        resDato = dato.Year & "-" & dato.Month & "-" & dato.Day
+        ComboBox1.DataSource = res.getAlleReservasjoner()
+        ComboBox1.DisplayMember = "Tidspunkt"
     End Sub
 
     'Private Sub visBrukeren()

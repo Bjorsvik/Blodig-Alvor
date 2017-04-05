@@ -15,11 +15,18 @@
     Public Function getLastResID() As DataTable
         Return db.Query("SELECT MAX(resID) FROM Reservasjon")
     End Function
+    Public Function getAlleTidspunkt() As DataTable
+        Return db.Query("SELECT * from Tidspunkt")
+    End Function
+    Public Function getMuligeTidspunkt(ByVal resdato) As DataTable
+        Return db.Query("")
+    End Function
 
     Public Sub reserver(ByVal dato As String, ByVal personID As Integer)
 
         Dim resID As DataTable = getLastResID()
         Dim reservasjonID As String = ""
+        Dim nextresID As Integer
 
 
         For Each id In resID.Rows
@@ -30,9 +37,11 @@
             reservasjonID = "0"
         End If
 
-        MsgBox(CInt(reservasjonID))
+        nextresID = CInt(reservasjonID) + 1
 
-        db.Query("INSERT INTO Reservasjon (resID, dato, personID) VALUES ('" & CInt(reservasjonID) & "', '" & dato & "', '" & personID & "');")
+        'MsgBox(CInt(reservasjonID))
+
+        db.Query("INSERT INTO Reservasjon (resID, dato, personID) VALUES ('" & nextresID & "', '" & dato & "', '" & personID & "');")
     End Sub
 
 End Class

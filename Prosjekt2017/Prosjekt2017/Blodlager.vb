@@ -36,12 +36,12 @@
         db.Query("INSERT INTO Blodplasma(lagerID, blodID, plasma_poser) VALUES ('" & lagerID & "', '" & blodID & "', '" & plasmaposer & "' )")
     End Sub
 
-    Public Sub leggInnBlodlegeme(ByVal lagerID As Integer, ByVal blodID As Integer, celleposer As Integer)
-        db.Query("INSERT INTO Blodceller(lagerID, blodID, celler_poser) VALUES ('" & lagerID & "', '" & blodID & "', '" & celleposer & "' )")
+    Public Sub leggInnBlodlegeme(ByVal lagerID As Integer, ByVal blodID As Integer, celleposer As Integer, dato As String)
+        db.Query("INSERT INTO Blodceller(lagerID, blodID, celler_poser) VALUES ('" & lagerID & "', '" & blodID & "', '" & celleposer & "', '" & dato & "' )")
     End Sub
 
-    Public Sub leggInnBlodplater(ByVal lagerID As Integer, ByVal blodID As Integer, plateposer As Integer)
-        db.Query("INSERT INTO Blodplater(lagerID, blodID, plater_poser) VALUES ('" & lagerID & "', '" & blodID & "', '" & plateposer & "' )")
+    Public Sub leggInnBlodplater(ByVal lagerID As Integer, ByVal blodID As Integer, plateposer As Integer, dato As String)
+        db.Query("INSERT INTO Blodplater(lagerID, blodID, plater_poser) VALUES ('" & lagerID & "', '" & blodID & "', '" & plateposer & "', '" & dato & "' )")
     End Sub
 
 End Class

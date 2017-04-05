@@ -58,14 +58,15 @@ Public Class Ansattside
         Dim celleposer As Integer = cboBlodlegeme.Text
         Dim plasmaposer As Integer = cboBlodplasma.Text
         Dim plateposer As Integer = cboBlodplater.Text
+        Dim dato As String = Date.Now.ToString("YYYY-MM-DD")
 
         MsgBox("Celleposer:" & celleposer)
         MsgBox("Plasmaposer:" & plasmaposer)
         MsgBox("Plateposer:" & plateposer)
 
-        BlodInsert.leggInnBlodlegeme(lagerID, bID, celleposer)
+        BlodInsert.leggInnBlodlegeme(lagerID, bID, celleposer, dato)
         BlodInsert.leggInnBlodplasma(lagerID, bID, plasmaposer)
-        BlodInsert.leggInnBlodplater(lagerID, bID, plateposer)
+        BlodInsert.leggInnBlodplater(lagerID, bID, plateposer, dato)
 
 
 
@@ -85,6 +86,7 @@ Public Class Ansattside
         Dim telefon As Integer
         Dim adresse As String
         Dim postnummer As Integer
+        Dim blodtype As String
 
 
         brukerTab = Bruker.GetBruker(txtSok.Text)
@@ -96,6 +98,7 @@ Public Class Ansattside
             telefon = row("telefon")
             adresse = row("adresse")
             postnummer = row("postnummer")
+            blodtype = row("blodtype")
 
             txtFornavn.Text = fornavn
             txtEtternavn.Text = etternavn
@@ -103,6 +106,7 @@ Public Class Ansattside
             txtTelefon.Text = telefon
             txtAdresse.Text = adresse
             txtPostnummer.Text = postnummer
+            cboBlodType.Text = blodtype
 
         Next row
 
@@ -120,6 +124,7 @@ Public Class Ansattside
         Dim telefon As Integer
         Dim adresse As String
         Dim postnummer As Integer
+        Dim blodtype As String
 
         brukerTab = Bruker.GetBruker(txtSok.Text)
 
@@ -131,6 +136,7 @@ Public Class Ansattside
             telefon = row("telefon")
             adresse = row("adresse")
             postnummer = row("postnummer")
+            blodtype = row("blodtype")
 
             Bruker.endreFornavn(txtFornavn.Text)
             Bruker.endreEtternavn(txtEtternavn.Text)
@@ -138,6 +144,7 @@ Public Class Ansattside
             Bruker.endreTelefon(txtTelefon.Text)
             Bruker.endreAdresse(txtAdresse.Text)
             Bruker.endrePostnummer(txtPostnummer.Text)
+            Bruker.endreBlodtype(cboBlodType.Text)
 
         Next row
     End Sub
