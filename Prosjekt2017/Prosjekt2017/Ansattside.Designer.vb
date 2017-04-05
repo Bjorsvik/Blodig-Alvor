@@ -83,6 +83,8 @@ Partial Class Ansattside
         Me.btnSok = New System.Windows.Forms.Button()
         Me.txtSok = New System.Windows.Forms.TextBox()
         Me.lblSok = New System.Windows.Forms.Label()
+        Me.cboBlodType = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Statistikk.SuspendLayout()
         Me.Reservasjoner.SuspendLayout()
         Me.Lager.SuspendLayout()
@@ -499,6 +501,8 @@ Partial Class Ansattside
         '
         'Søk
         '
+        Me.Søk.Controls.Add(Me.Label8)
+        Me.Søk.Controls.Add(Me.cboBlodType)
         Me.Søk.Controls.Add(Me.btnEndreInfo)
         Me.Søk.Controls.Add(Me.lbPoststed)
         Me.Søk.Controls.Add(Me.txtPostnummer)
@@ -530,7 +534,7 @@ Partial Class Ansattside
         '
         'btnEndreInfo
         '
-        Me.btnEndreInfo.Location = New System.Drawing.Point(502, 261)
+        Me.btnEndreInfo.Location = New System.Drawing.Point(531, 268)
         Me.btnEndreInfo.Name = "btnEndreInfo"
         Me.btnEndreInfo.Size = New System.Drawing.Size(82, 26)
         Me.btnEndreInfo.TabIndex = 29
@@ -698,6 +702,25 @@ Partial Class Ansattside
         Me.lblSok.TabIndex = 0
         Me.lblSok.Text = "Søk etter telefonnummer:"
         '
+        'cboBlodType
+        '
+        Me.cboBlodType.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboBlodType.FormattingEnabled = True
+        Me.cboBlodType.Items.AddRange(New Object() {"A+", "A-", "B+", "B-", "0+", "0-", "AB+", "AB-"})
+        Me.cboBlodType.Location = New System.Drawing.Point(194, 304)
+        Me.cboBlodType.Name = "cboBlodType"
+        Me.cboBlodType.Size = New System.Drawing.Size(44, 23)
+        Me.cboBlodType.TabIndex = 30
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(136, 309)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(48, 13)
+        Me.Label8.TabIndex = 31
+        Me.Label8.Text = "Blodtype"
+        '
         'Ansattside
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -787,4 +810,6 @@ Partial Class Ansattside
     Friend WithEvents cboBlodplater As ComboBox
     Friend WithEvents cboBlodplasma As ComboBox
     Friend WithEvents cboBlodlegeme As ComboBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents cboBlodType As ComboBox
 End Class
