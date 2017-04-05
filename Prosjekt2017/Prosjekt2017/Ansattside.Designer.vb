@@ -63,6 +63,8 @@ Partial Class Ansattside
         Me.lblBlodtypeØnsket = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.Søk = New System.Windows.Forms.TabPage()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.cboBlodType = New System.Windows.Forms.ComboBox()
         Me.btnEndreInfo = New System.Windows.Forms.Button()
         Me.lbPoststed = New System.Windows.Forms.Label()
         Me.txtPostnummer = New System.Windows.Forms.TextBox()
@@ -78,13 +80,9 @@ Partial Class Ansattside
         Me.txtTelefon = New System.Windows.Forms.TextBox()
         Me.txtEtternavn = New System.Windows.Forms.TextBox()
         Me.txtFornavn = New System.Windows.Forms.TextBox()
-        Me.btnOppdater = New System.Windows.Forms.Button()
-        Me.btnSlett = New System.Windows.Forms.Button()
         Me.btnSok = New System.Windows.Forms.Button()
         Me.txtSok = New System.Windows.Forms.TextBox()
         Me.lblSok = New System.Windows.Forms.Label()
-        Me.cboBlodType = New System.Windows.Forms.ComboBox()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Statistikk.SuspendLayout()
         Me.Reservasjoner.SuspendLayout()
         Me.Lager.SuspendLayout()
@@ -100,30 +98,29 @@ Partial Class Ansattside
         '
         Me.Statistikk.Controls.Add(Me.TextBox1)
         Me.Statistikk.Controls.Add(Me.Label1)
-        Me.Statistikk.Location = New System.Drawing.Point(4, 22)
-        Me.Statistikk.Margin = New System.Windows.Forms.Padding(2)
+        Me.Statistikk.Location = New System.Drawing.Point(4, 25)
+        Me.Statistikk.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Statistikk.Name = "Statistikk"
-        Me.Statistikk.Padding = New System.Windows.Forms.Padding(2)
-        Me.Statistikk.Size = New System.Drawing.Size(751, 428)
+        Me.Statistikk.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Statistikk.Size = New System.Drawing.Size(1004, 530)
         Me.Statistikk.TabIndex = 5
         Me.Statistikk.Text = " Statistikk"
         Me.Statistikk.UseVisualStyleBackColor = True
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(178, 28)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox1.Location = New System.Drawing.Point(237, 34)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(76, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(100, 22)
         Me.TextBox1.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(28, 28)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(37, 34)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(127, 13)
+        Me.Label1.Size = New System.Drawing.Size(174, 17)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Antall registrerte donører: "
         '
@@ -132,11 +129,11 @@ Partial Class Ansattside
         Me.Reservasjoner.Controls.Add(Me.Label2)
         Me.Reservasjoner.Controls.Add(Me.ListBox1)
         Me.Reservasjoner.Controls.Add(Me.Reservasjonskalender)
-        Me.Reservasjoner.Location = New System.Drawing.Point(4, 22)
-        Me.Reservasjoner.Margin = New System.Windows.Forms.Padding(2)
+        Me.Reservasjoner.Location = New System.Drawing.Point(4, 25)
+        Me.Reservasjoner.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Reservasjoner.Name = "Reservasjoner"
-        Me.Reservasjoner.Padding = New System.Windows.Forms.Padding(2)
-        Me.Reservasjoner.Size = New System.Drawing.Size(751, 428)
+        Me.Reservasjoner.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Reservasjoner.Size = New System.Drawing.Size(1004, 530)
         Me.Reservasjoner.TabIndex = 4
         Me.Reservasjoner.Text = "Reservasjoner"
         Me.Reservasjoner.UseVisualStyleBackColor = True
@@ -144,26 +141,25 @@ Partial Class Ansattside
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(334, 54)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(445, 66)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(143, 13)
+        Me.Label2.Size = New System.Drawing.Size(191, 17)
         Me.Label2.TabIndex = 15
         Me.Label2.Text = "Reservasjoner for valgt dato:"
         '
         'ListBox1
         '
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(337, 84)
-        Me.ListBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.ListBox1.ItemHeight = 16
+        Me.ListBox1.Location = New System.Drawing.Point(449, 103)
+        Me.ListBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(200, 173)
+        Me.ListBox1.Size = New System.Drawing.Size(265, 212)
         Me.ListBox1.TabIndex = 14
         '
         'Reservasjonskalender
         '
-        Me.Reservasjonskalender.Location = New System.Drawing.Point(64, 84)
-        Me.Reservasjonskalender.Margin = New System.Windows.Forms.Padding(7)
+        Me.Reservasjonskalender.Location = New System.Drawing.Point(85, 103)
         Me.Reservasjonskalender.Name = "Reservasjonskalender"
         Me.Reservasjonskalender.TabIndex = 13
         '
@@ -180,20 +176,21 @@ Partial Class Ansattside
         Me.Lager.Controls.Add(Me.cboBlodplasma)
         Me.Lager.Controls.Add(Me.cboBlodlegeme)
         Me.Lager.Controls.Add(Me.gridBlodlager)
-        Me.Lager.Location = New System.Drawing.Point(4, 22)
-        Me.Lager.Margin = New System.Windows.Forms.Padding(2)
+        Me.Lager.Location = New System.Drawing.Point(4, 25)
+        Me.Lager.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Lager.Name = "Lager"
-        Me.Lager.Padding = New System.Windows.Forms.Padding(2)
-        Me.Lager.Size = New System.Drawing.Size(751, 428)
+        Me.Lager.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Lager.Size = New System.Drawing.Size(1004, 530)
         Me.Lager.TabIndex = 2
         Me.Lager.Text = "Lager"
         Me.Lager.UseVisualStyleBackColor = True
         '
         'btnTest
         '
-        Me.btnTest.Location = New System.Drawing.Point(556, 363)
+        Me.btnTest.Location = New System.Drawing.Point(741, 447)
+        Me.btnTest.Margin = New System.Windows.Forms.Padding(4)
         Me.btnTest.Name = "btnTest"
-        Me.btnTest.Size = New System.Drawing.Size(116, 23)
+        Me.btnTest.Size = New System.Drawing.Size(155, 28)
         Me.btnTest.TabIndex = 11
         Me.btnTest.Text = "Sett inn blodprodukt"
         Me.btnTest.UseVisualStyleBackColor = True
@@ -201,52 +198,58 @@ Partial Class Ansattside
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(517, 117)
+        Me.Label7.Location = New System.Drawing.Point(689, 144)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(77, 13)
+        Me.Label7.Size = New System.Drawing.Size(104, 17)
         Me.Label7.TabIndex = 10
         Me.Label7.Text = "Personnummer"
         '
         'txtLagerPersonnummer
         '
-        Me.txtLagerPersonnummer.Location = New System.Drawing.Point(600, 114)
+        Me.txtLagerPersonnummer.Location = New System.Drawing.Point(800, 140)
+        Me.txtLagerPersonnummer.Margin = New System.Windows.Forms.Padding(4)
         Me.txtLagerPersonnummer.Name = "txtLagerPersonnummer"
-        Me.txtLagerPersonnummer.Size = New System.Drawing.Size(100, 20)
+        Me.txtLagerPersonnummer.Size = New System.Drawing.Size(132, 22)
         Me.txtLagerPersonnummer.TabIndex = 9
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(529, 231)
+        Me.Label6.Location = New System.Drawing.Point(705, 284)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(54, 13)
+        Me.Label6.Size = New System.Drawing.Size(72, 17)
         Me.Label6.TabIndex = 8
         Me.Label6.Text = "Blodplater"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(522, 202)
+        Me.Label5.Location = New System.Drawing.Point(696, 249)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(61, 13)
+        Me.Label5.Size = New System.Drawing.Size(81, 17)
         Me.Label5.TabIndex = 7
         Me.Label5.Text = "Blodplasma"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(490, 170)
+        Me.Label4.Location = New System.Drawing.Point(653, 209)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(93, 13)
+        Me.Label4.Size = New System.Drawing.Size(124, 17)
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Røde blodlegemer"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(535, 144)
+        Me.Label3.Location = New System.Drawing.Point(713, 177)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(48, 13)
+        Me.Label3.Size = New System.Drawing.Size(63, 17)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Blodtype"
         '
@@ -254,9 +257,10 @@ Partial Class Ansattside
         '
         Me.cboBlodplater.FormattingEnabled = True
         Me.cboBlodplater.Items.AddRange(New Object() {"1", "2", "3", "4"})
-        Me.cboBlodplater.Location = New System.Drawing.Point(600, 228)
+        Me.cboBlodplater.Location = New System.Drawing.Point(800, 281)
+        Me.cboBlodplater.Margin = New System.Windows.Forms.Padding(4)
         Me.cboBlodplater.Name = "cboBlodplater"
-        Me.cboBlodplater.Size = New System.Drawing.Size(121, 21)
+        Me.cboBlodplater.Size = New System.Drawing.Size(160, 24)
         Me.cboBlodplater.TabIndex = 4
         Me.cboBlodplater.Text = "1"
         '
@@ -264,9 +268,10 @@ Partial Class Ansattside
         '
         Me.cboBlodplasma.FormattingEnabled = True
         Me.cboBlodplasma.Items.AddRange(New Object() {"1", "2", "3", "4"})
-        Me.cboBlodplasma.Location = New System.Drawing.Point(600, 199)
+        Me.cboBlodplasma.Location = New System.Drawing.Point(800, 245)
+        Me.cboBlodplasma.Margin = New System.Windows.Forms.Padding(4)
         Me.cboBlodplasma.Name = "cboBlodplasma"
-        Me.cboBlodplasma.Size = New System.Drawing.Size(121, 21)
+        Me.cboBlodplasma.Size = New System.Drawing.Size(160, 24)
         Me.cboBlodplasma.TabIndex = 3
         Me.cboBlodplasma.Text = "1"
         '
@@ -274,9 +279,10 @@ Partial Class Ansattside
         '
         Me.cboBlodlegeme.FormattingEnabled = True
         Me.cboBlodlegeme.Items.AddRange(New Object() {"1", "2", "3", "4"})
-        Me.cboBlodlegeme.Location = New System.Drawing.Point(600, 167)
+        Me.cboBlodlegeme.Location = New System.Drawing.Point(800, 206)
+        Me.cboBlodlegeme.Margin = New System.Windows.Forms.Padding(4)
         Me.cboBlodlegeme.Name = "cboBlodlegeme"
-        Me.cboBlodlegeme.Size = New System.Drawing.Size(121, 21)
+        Me.cboBlodlegeme.Size = New System.Drawing.Size(160, 24)
         Me.cboBlodlegeme.TabIndex = 2
         Me.cboBlodlegeme.Text = "1"
         '
@@ -285,9 +291,10 @@ Partial Class Ansattside
         Me.gridBlodlager.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.gridBlodlager.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.gridBlodlager.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Blodtype, Me.Blodplasma, Me.Blodplater, Me.Blodceller})
-        Me.gridBlodlager.Location = New System.Drawing.Point(8, 19)
+        Me.gridBlodlager.Location = New System.Drawing.Point(11, 23)
+        Me.gridBlodlager.Margin = New System.Windows.Forms.Padding(4)
         Me.gridBlodlager.Name = "gridBlodlager"
-        Me.gridBlodlager.Size = New System.Drawing.Size(443, 377)
+        Me.gridBlodlager.Size = New System.Drawing.Size(591, 464)
         Me.gridBlodlager.TabIndex = 0
         '
         'Blodtype
@@ -321,29 +328,29 @@ Partial Class Ansattside
         Me.Blodgivning.Controls.Add(Me.lblMengde)
         Me.Blodgivning.Controls.Add(Me.lblPersnr)
         Me.Blodgivning.Controls.Add(Me.txtboxPersnr)
-        Me.Blodgivning.Location = New System.Drawing.Point(4, 22)
-        Me.Blodgivning.Margin = New System.Windows.Forms.Padding(2)
+        Me.Blodgivning.Location = New System.Drawing.Point(4, 25)
+        Me.Blodgivning.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Blodgivning.Name = "Blodgivning"
-        Me.Blodgivning.Padding = New System.Windows.Forms.Padding(2)
-        Me.Blodgivning.Size = New System.Drawing.Size(751, 428)
+        Me.Blodgivning.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Blodgivning.Size = New System.Drawing.Size(1004, 530)
         Me.Blodgivning.TabIndex = 1
         Me.Blodgivning.Text = "Blodgivning"
         Me.Blodgivning.UseVisualStyleBackColor = True
         '
         'NumericUpDown1
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(148, 87)
-        Me.NumericUpDown1.Margin = New System.Windows.Forms.Padding(2)
+        Me.NumericUpDown1.Location = New System.Drawing.Point(197, 107)
+        Me.NumericUpDown1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(103, 20)
+        Me.NumericUpDown1.Size = New System.Drawing.Size(137, 22)
         Me.NumericUpDown1.TabIndex = 18
         '
         'btnBlodgivning
         '
-        Me.btnBlodgivning.Location = New System.Drawing.Point(273, 26)
-        Me.btnBlodgivning.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnBlodgivning.Location = New System.Drawing.Point(364, 32)
+        Me.btnBlodgivning.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnBlodgivning.Name = "btnBlodgivning"
-        Me.btnBlodgivning.Size = New System.Drawing.Size(171, 115)
+        Me.btnBlodgivning.Size = New System.Drawing.Size(228, 142)
         Me.btnBlodgivning.TabIndex = 17
         Me.btnBlodgivning.Text = "Send inn"
         Me.btnBlodgivning.UseVisualStyleBackColor = True
@@ -351,29 +358,27 @@ Partial Class Ansattside
         'lblMengde
         '
         Me.lblMengde.AutoSize = True
-        Me.lblMengde.Location = New System.Drawing.Point(41, 87)
-        Me.lblMengde.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblMengde.Location = New System.Drawing.Point(55, 107)
         Me.lblMengde.Name = "lblMengde"
-        Me.lblMengde.Size = New System.Drawing.Size(98, 13)
+        Me.lblMengde.Size = New System.Drawing.Size(130, 17)
         Me.lblMengde.TabIndex = 14
         Me.lblMengde.Text = "Mengde blod (DL): "
         '
         'lblPersnr
         '
         Me.lblPersnr.AutoSize = True
-        Me.lblPersnr.Location = New System.Drawing.Point(41, 44)
-        Me.lblPersnr.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblPersnr.Location = New System.Drawing.Point(55, 54)
         Me.lblPersnr.Name = "lblPersnr"
-        Me.lblPersnr.Size = New System.Drawing.Size(83, 13)
+        Me.lblPersnr.Size = New System.Drawing.Size(112, 17)
         Me.lblPersnr.TabIndex = 13
         Me.lblPersnr.Text = "Personnummer: "
         '
         'txtboxPersnr
         '
-        Me.txtboxPersnr.Location = New System.Drawing.Point(148, 44)
-        Me.txtboxPersnr.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtboxPersnr.Location = New System.Drawing.Point(197, 54)
+        Me.txtboxPersnr.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtboxPersnr.Name = "txtboxPersnr"
-        Me.txtboxPersnr.Size = New System.Drawing.Size(104, 20)
+        Me.txtboxPersnr.Size = New System.Drawing.Size(137, 22)
         Me.txtboxPersnr.TabIndex = 11
         '
         'Innkalling
@@ -387,48 +392,46 @@ Partial Class Ansattside
         Me.Innkalling.Controls.Add(Me.cboBlodtypeInnkalling)
         Me.Innkalling.Controls.Add(Me.btnInnkalling)
         Me.Innkalling.Controls.Add(Me.lblBlodtypeØnsket)
-        Me.Innkalling.Location = New System.Drawing.Point(4, 22)
-        Me.Innkalling.Margin = New System.Windows.Forms.Padding(2)
+        Me.Innkalling.Location = New System.Drawing.Point(4, 25)
+        Me.Innkalling.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Innkalling.Name = "Innkalling"
-        Me.Innkalling.Padding = New System.Windows.Forms.Padding(2)
-        Me.Innkalling.Size = New System.Drawing.Size(751, 428)
+        Me.Innkalling.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Innkalling.Size = New System.Drawing.Size(1004, 530)
         Me.Innkalling.TabIndex = 0
         Me.Innkalling.Text = "Innkalling"
         Me.Innkalling.UseVisualStyleBackColor = True
         '
         'txtboxTilgjengelig
         '
-        Me.txtboxTilgjengelig.Location = New System.Drawing.Point(434, 113)
-        Me.txtboxTilgjengelig.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtboxTilgjengelig.Location = New System.Drawing.Point(579, 139)
+        Me.txtboxTilgjengelig.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtboxTilgjengelig.Name = "txtboxTilgjengelig"
-        Me.txtboxTilgjengelig.Size = New System.Drawing.Size(92, 20)
+        Me.txtboxTilgjengelig.Size = New System.Drawing.Size(121, 22)
         Me.txtboxTilgjengelig.TabIndex = 14
         '
         'lblTilgjengeligeGivere
         '
         Me.lblTilgjengeligeGivere.AutoSize = True
-        Me.lblTilgjengeligeGivere.Location = New System.Drawing.Point(310, 116)
-        Me.lblTilgjengeligeGivere.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblTilgjengeligeGivere.Location = New System.Drawing.Point(413, 143)
         Me.lblTilgjengeligeGivere.Name = "lblTilgjengeligeGivere"
-        Me.lblTilgjengeligeGivere.Size = New System.Drawing.Size(121, 13)
+        Me.lblTilgjengeligeGivere.Size = New System.Drawing.Size(162, 17)
         Me.lblTilgjengeligeGivere.TabIndex = 13
         Me.lblTilgjengeligeGivere.Text = "Tilgjengelige blodgivere:"
         '
         'txtAntallGivere
         '
-        Me.txtAntallGivere.Location = New System.Drawing.Point(179, 113)
-        Me.txtAntallGivere.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtAntallGivere.Location = New System.Drawing.Point(239, 139)
+        Me.txtAntallGivere.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtAntallGivere.Name = "txtAntallGivere"
-        Me.txtAntallGivere.Size = New System.Drawing.Size(92, 20)
+        Me.txtAntallGivere.Size = New System.Drawing.Size(121, 22)
         Me.txtAntallGivere.TabIndex = 12
         '
         'lblØnskedeGivere
         '
         Me.lblØnskedeGivere.AutoSize = True
-        Me.lblØnskedeGivere.Location = New System.Drawing.Point(50, 115)
-        Me.lblØnskedeGivere.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblØnskedeGivere.Location = New System.Drawing.Point(67, 142)
         Me.lblØnskedeGivere.Name = "lblØnskedeGivere"
-        Me.lblØnskedeGivere.Size = New System.Drawing.Size(126, 13)
+        Me.lblØnskedeGivere.Size = New System.Drawing.Size(167, 17)
         Me.lblØnskedeGivere.TabIndex = 11
         Me.lblØnskedeGivere.Text = "Antall blodgivere ønsket: "
         '
@@ -436,20 +439,19 @@ Partial Class Ansattside
         '
         Me.cboRhesus.FormattingEnabled = True
         Me.cboRhesus.Items.AddRange(New Object() {"+", "-"})
-        Me.cboRhesus.Location = New System.Drawing.Point(434, 63)
-        Me.cboRhesus.Margin = New System.Windows.Forms.Padding(2)
+        Me.cboRhesus.Location = New System.Drawing.Point(579, 78)
+        Me.cboRhesus.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cboRhesus.Name = "cboRhesus"
-        Me.cboRhesus.Size = New System.Drawing.Size(83, 21)
+        Me.cboRhesus.Size = New System.Drawing.Size(109, 24)
         Me.cboRhesus.TabIndex = 10
         Me.cboRhesus.Text = "+"
         '
         'lblRhesus
         '
         Me.lblRhesus.AutoSize = True
-        Me.lblRhesus.Location = New System.Drawing.Point(382, 63)
-        Me.lblRhesus.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblRhesus.Location = New System.Drawing.Point(509, 78)
         Me.lblRhesus.Name = "lblRhesus"
-        Me.lblRhesus.Size = New System.Drawing.Size(49, 13)
+        Me.lblRhesus.Size = New System.Drawing.Size(64, 17)
         Me.lblRhesus.TabIndex = 9
         Me.lblRhesus.Text = "Rhesus: "
         '
@@ -457,19 +459,19 @@ Partial Class Ansattside
         '
         Me.cboBlodtypeInnkalling.FormattingEnabled = True
         Me.cboBlodtypeInnkalling.Items.AddRange(New Object() {"A", "B", "AB", "0"})
-        Me.cboBlodtypeInnkalling.Location = New System.Drawing.Point(179, 66)
-        Me.cboBlodtypeInnkalling.Margin = New System.Windows.Forms.Padding(2)
+        Me.cboBlodtypeInnkalling.Location = New System.Drawing.Point(239, 81)
+        Me.cboBlodtypeInnkalling.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cboBlodtypeInnkalling.Name = "cboBlodtypeInnkalling"
-        Me.cboBlodtypeInnkalling.Size = New System.Drawing.Size(92, 21)
+        Me.cboBlodtypeInnkalling.Size = New System.Drawing.Size(121, 24)
         Me.cboBlodtypeInnkalling.TabIndex = 8
         Me.cboBlodtypeInnkalling.Text = "A"
         '
         'btnInnkalling
         '
-        Me.btnInnkalling.Location = New System.Drawing.Point(179, 233)
-        Me.btnInnkalling.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnInnkalling.Location = New System.Drawing.Point(239, 287)
+        Me.btnInnkalling.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnInnkalling.Name = "btnInnkalling"
-        Me.btnInnkalling.Size = New System.Drawing.Size(312, 19)
+        Me.btnInnkalling.Size = New System.Drawing.Size(416, 23)
         Me.btnInnkalling.TabIndex = 7
         Me.btnInnkalling.Text = "Send innkalling"
         Me.btnInnkalling.UseVisualStyleBackColor = True
@@ -477,10 +479,9 @@ Partial Class Ansattside
         'lblBlodtypeØnsket
         '
         Me.lblBlodtypeØnsket.AutoSize = True
-        Me.lblBlodtypeØnsket.Location = New System.Drawing.Point(86, 66)
-        Me.lblBlodtypeØnsket.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblBlodtypeØnsket.Location = New System.Drawing.Point(115, 81)
         Me.lblBlodtypeØnsket.Name = "lblBlodtypeØnsket"
-        Me.lblBlodtypeØnsket.Size = New System.Drawing.Size(90, 13)
+        Me.lblBlodtypeØnsket.Size = New System.Drawing.Size(119, 17)
         Me.lblBlodtypeØnsket.TabIndex = 6
         Me.lblBlodtypeØnsket.Text = "Ønsket blodtype: "
         '
@@ -493,10 +494,10 @@ Partial Class Ansattside
         Me.TabControl1.Controls.Add(Me.Reservasjoner)
         Me.TabControl1.Controls.Add(Me.Statistikk)
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
-        Me.TabControl1.Margin = New System.Windows.Forms.Padding(2)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(759, 454)
+        Me.TabControl1.Size = New System.Drawing.Size(1012, 559)
         Me.TabControl1.TabIndex = 1
         '
         'Søk
@@ -518,25 +519,45 @@ Partial Class Ansattside
         Me.Søk.Controls.Add(Me.txtTelefon)
         Me.Søk.Controls.Add(Me.txtEtternavn)
         Me.Søk.Controls.Add(Me.txtFornavn)
-        Me.Søk.Controls.Add(Me.btnOppdater)
-        Me.Søk.Controls.Add(Me.btnSlett)
         Me.Søk.Controls.Add(Me.btnSok)
         Me.Søk.Controls.Add(Me.txtSok)
         Me.Søk.Controls.Add(Me.lblSok)
-        Me.Søk.Location = New System.Drawing.Point(4, 22)
-        Me.Søk.Margin = New System.Windows.Forms.Padding(2)
+        Me.Søk.Location = New System.Drawing.Point(4, 25)
+        Me.Søk.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Søk.Name = "Søk"
-        Me.Søk.Padding = New System.Windows.Forms.Padding(2)
-        Me.Søk.Size = New System.Drawing.Size(751, 428)
+        Me.Søk.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Søk.Size = New System.Drawing.Size(1004, 530)
         Me.Søk.TabIndex = 6
         Me.Søk.Text = "Søk/Endre"
         Me.Søk.UseVisualStyleBackColor = True
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(181, 380)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(63, 17)
+        Me.Label8.TabIndex = 31
+        Me.Label8.Text = "Blodtype"
+        '
+        'cboBlodType
+        '
+        Me.cboBlodType.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboBlodType.FormattingEnabled = True
+        Me.cboBlodType.Items.AddRange(New Object() {"A+", "A-", "B+", "B-", "0+", "0-", "AB+", "AB-"})
+        Me.cboBlodType.Location = New System.Drawing.Point(259, 374)
+        Me.cboBlodType.Margin = New System.Windows.Forms.Padding(4)
+        Me.cboBlodType.Name = "cboBlodType"
+        Me.cboBlodType.Size = New System.Drawing.Size(57, 26)
+        Me.cboBlodType.TabIndex = 30
+        '
         'btnEndreInfo
         '
-        Me.btnEndreInfo.Location = New System.Drawing.Point(531, 268)
+        Me.btnEndreInfo.Location = New System.Drawing.Point(708, 330)
+        Me.btnEndreInfo.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEndreInfo.Name = "btnEndreInfo"
-        Me.btnEndreInfo.Size = New System.Drawing.Size(82, 26)
+        Me.btnEndreInfo.Size = New System.Drawing.Size(109, 32)
         Me.btnEndreInfo.TabIndex = 29
         Me.btnEndreInfo.Text = "Endre info"
         Me.btnEndreInfo.UseVisualStyleBackColor = True
@@ -544,190 +565,164 @@ Partial Class Ansattside
         'lbPoststed
         '
         Me.lbPoststed.AutoSize = True
-        Me.lbPoststed.Location = New System.Drawing.Point(484, 227)
+        Me.lbPoststed.Location = New System.Drawing.Point(645, 279)
+        Me.lbPoststed.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbPoststed.Name = "lbPoststed"
-        Me.lbPoststed.Size = New System.Drawing.Size(0, 13)
+        Me.lbPoststed.Size = New System.Drawing.Size(0, 17)
         Me.lbPoststed.TabIndex = 28
         '
         'txtPostnummer
         '
-        Me.txtPostnummer.Location = New System.Drawing.Point(484, 183)
+        Me.txtPostnummer.Location = New System.Drawing.Point(645, 225)
+        Me.txtPostnummer.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPostnummer.Name = "txtPostnummer"
-        Me.txtPostnummer.Size = New System.Drawing.Size(100, 20)
+        Me.txtPostnummer.Size = New System.Drawing.Size(132, 22)
         Me.txtPostnummer.TabIndex = 27
         '
         'txtAdresse
         '
-        Me.txtAdresse.Location = New System.Drawing.Point(484, 141)
+        Me.txtAdresse.Location = New System.Drawing.Point(645, 174)
+        Me.txtAdresse.Margin = New System.Windows.Forms.Padding(4)
         Me.txtAdresse.Name = "txtAdresse"
-        Me.txtAdresse.Size = New System.Drawing.Size(148, 20)
+        Me.txtAdresse.Size = New System.Drawing.Size(196, 22)
         Me.txtAdresse.TabIndex = 26
         '
         'lbPoststedLabel
         '
         Me.lbPoststedLabel.AutoSize = True
-        Me.lbPoststedLabel.Location = New System.Drawing.Point(430, 227)
+        Me.lbPoststedLabel.Location = New System.Drawing.Point(573, 279)
+        Me.lbPoststedLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbPoststedLabel.Name = "lbPoststedLabel"
-        Me.lbPoststedLabel.Size = New System.Drawing.Size(48, 13)
+        Me.lbPoststedLabel.Size = New System.Drawing.Size(63, 17)
         Me.lbPoststedLabel.TabIndex = 25
         Me.lbPoststedLabel.Text = "Poststed"
         '
         'txtFodselsdato
         '
-        Me.txtFodselsdato.Location = New System.Drawing.Point(194, 224)
+        Me.txtFodselsdato.Location = New System.Drawing.Point(259, 276)
+        Me.txtFodselsdato.Margin = New System.Windows.Forms.Padding(4)
         Me.txtFodselsdato.Name = "txtFodselsdato"
-        Me.txtFodselsdato.Size = New System.Drawing.Size(100, 20)
+        Me.txtFodselsdato.Size = New System.Drawing.Size(132, 22)
         Me.txtFodselsdato.TabIndex = 24
         '
         'lbPostnummer
         '
         Me.lbPostnummer.AutoSize = True
-        Me.lbPostnummer.Location = New System.Drawing.Point(413, 186)
+        Me.lbPostnummer.Location = New System.Drawing.Point(551, 229)
+        Me.lbPostnummer.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbPostnummer.Name = "lbPostnummer"
-        Me.lbPostnummer.Size = New System.Drawing.Size(65, 13)
+        Me.lbPostnummer.Size = New System.Drawing.Size(87, 17)
         Me.lbPostnummer.TabIndex = 23
         Me.lbPostnummer.Text = "Postnummer"
         '
         'lbAdresse
         '
         Me.lbAdresse.AutoSize = True
-        Me.lbAdresse.Location = New System.Drawing.Point(433, 145)
+        Me.lbAdresse.Location = New System.Drawing.Point(577, 178)
+        Me.lbAdresse.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbAdresse.Name = "lbAdresse"
-        Me.lbAdresse.Size = New System.Drawing.Size(45, 13)
+        Me.lbAdresse.Size = New System.Drawing.Size(60, 17)
         Me.lbAdresse.TabIndex = 22
         Me.lbAdresse.Text = "Adresse"
         '
         'lbFodselsdato
         '
         Me.lbFodselsdato.AutoSize = True
-        Me.lbFodselsdato.Location = New System.Drawing.Point(118, 227)
+        Me.lbFodselsdato.Location = New System.Drawing.Point(157, 279)
+        Me.lbFodselsdato.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbFodselsdato.Name = "lbFodselsdato"
-        Me.lbFodselsdato.Size = New System.Drawing.Size(64, 13)
+        Me.lbFodselsdato.Size = New System.Drawing.Size(85, 17)
         Me.lbFodselsdato.TabIndex = 21
         Me.lbFodselsdato.Text = "Fødselsdato"
         '
         'lbTelefon
         '
         Me.lbTelefon.AutoSize = True
-        Me.lbTelefon.Location = New System.Drawing.Point(136, 268)
+        Me.lbTelefon.Location = New System.Drawing.Point(181, 330)
+        Me.lbTelefon.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbTelefon.Name = "lbTelefon"
-        Me.lbTelefon.Size = New System.Drawing.Size(43, 13)
+        Me.lbTelefon.Size = New System.Drawing.Size(56, 17)
         Me.lbTelefon.TabIndex = 20
         Me.lbTelefon.Text = "Telefon"
         '
         'lbEtternavn
         '
         Me.lbEtternavn.AutoSize = True
-        Me.lbEtternavn.Location = New System.Drawing.Point(129, 190)
+        Me.lbEtternavn.Location = New System.Drawing.Point(172, 234)
+        Me.lbEtternavn.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbEtternavn.Name = "lbEtternavn"
-        Me.lbEtternavn.Size = New System.Drawing.Size(53, 13)
+        Me.lbEtternavn.Size = New System.Drawing.Size(69, 17)
         Me.lbEtternavn.TabIndex = 19
         Me.lbEtternavn.Text = "Etternavn"
         '
         'lbFornavn
         '
         Me.lbFornavn.AutoSize = True
-        Me.lbFornavn.Location = New System.Drawing.Point(136, 148)
+        Me.lbFornavn.Location = New System.Drawing.Point(181, 182)
+        Me.lbFornavn.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbFornavn.Name = "lbFornavn"
-        Me.lbFornavn.Size = New System.Drawing.Size(46, 13)
+        Me.lbFornavn.Size = New System.Drawing.Size(60, 17)
         Me.lbFornavn.TabIndex = 18
         Me.lbFornavn.Text = "Fornavn"
         '
         'txtTelefon
         '
-        Me.txtTelefon.Location = New System.Drawing.Point(194, 265)
+        Me.txtTelefon.Location = New System.Drawing.Point(259, 326)
+        Me.txtTelefon.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTelefon.Name = "txtTelefon"
-        Me.txtTelefon.Size = New System.Drawing.Size(100, 20)
+        Me.txtTelefon.Size = New System.Drawing.Size(132, 22)
         Me.txtTelefon.TabIndex = 17
         '
         'txtEtternavn
         '
-        Me.txtEtternavn.Location = New System.Drawing.Point(194, 187)
+        Me.txtEtternavn.Location = New System.Drawing.Point(259, 230)
+        Me.txtEtternavn.Margin = New System.Windows.Forms.Padding(4)
         Me.txtEtternavn.Name = "txtEtternavn"
-        Me.txtEtternavn.Size = New System.Drawing.Size(100, 20)
+        Me.txtEtternavn.Size = New System.Drawing.Size(132, 22)
         Me.txtEtternavn.TabIndex = 16
         '
         'txtFornavn
         '
-        Me.txtFornavn.Location = New System.Drawing.Point(194, 145)
+        Me.txtFornavn.Location = New System.Drawing.Point(259, 178)
+        Me.txtFornavn.Margin = New System.Windows.Forms.Padding(4)
         Me.txtFornavn.Name = "txtFornavn"
-        Me.txtFornavn.Size = New System.Drawing.Size(100, 20)
+        Me.txtFornavn.Size = New System.Drawing.Size(132, 22)
         Me.txtFornavn.TabIndex = 15
-        '
-        'btnOppdater
-        '
-        Me.btnOppdater.Location = New System.Drawing.Point(546, 85)
-        Me.btnOppdater.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnOppdater.Name = "btnOppdater"
-        Me.btnOppdater.Size = New System.Drawing.Size(67, 19)
-        Me.btnOppdater.TabIndex = 6
-        Me.btnOppdater.Text = "Oppdater"
-        Me.btnOppdater.UseVisualStyleBackColor = True
-        '
-        'btnSlett
-        '
-        Me.btnSlett.Location = New System.Drawing.Point(474, 84)
-        Me.btnSlett.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnSlett.Name = "btnSlett"
-        Me.btnSlett.Size = New System.Drawing.Size(56, 19)
-        Me.btnSlett.TabIndex = 5
-        Me.btnSlett.Text = "Slett"
-        Me.btnSlett.UseVisualStyleBackColor = True
         '
         'btnSok
         '
-        Me.btnSok.Location = New System.Drawing.Point(413, 83)
-        Me.btnSok.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnSok.Location = New System.Drawing.Point(551, 102)
+        Me.btnSok.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnSok.Name = "btnSok"
-        Me.btnSok.Size = New System.Drawing.Size(56, 19)
+        Me.btnSok.Size = New System.Drawing.Size(75, 23)
         Me.btnSok.TabIndex = 2
         Me.btnSok.Text = "Søk!"
         Me.btnSok.UseVisualStyleBackColor = True
         '
         'txtSok
         '
-        Me.txtSok.Location = New System.Drawing.Point(243, 84)
-        Me.txtSok.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtSok.Location = New System.Drawing.Point(324, 103)
+        Me.txtSok.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtSok.Name = "txtSok"
-        Me.txtSok.Size = New System.Drawing.Size(156, 20)
+        Me.txtSok.Size = New System.Drawing.Size(207, 22)
         Me.txtSok.TabIndex = 1
         '
         'lblSok
         '
         Me.lblSok.AutoSize = True
-        Me.lblSok.Location = New System.Drawing.Point(113, 85)
-        Me.lblSok.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblSok.Location = New System.Drawing.Point(151, 105)
         Me.lblSok.Name = "lblSok"
-        Me.lblSok.Size = New System.Drawing.Size(125, 13)
+        Me.lblSok.Size = New System.Drawing.Size(168, 17)
         Me.lblSok.TabIndex = 0
-        Me.lblSok.Text = "Søk etter telefonnummer:"
-        '
-        'cboBlodType
-        '
-        Me.cboBlodType.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboBlodType.FormattingEnabled = True
-        Me.cboBlodType.Items.AddRange(New Object() {"A+", "A-", "B+", "B-", "0+", "0-", "AB+", "AB-"})
-        Me.cboBlodType.Location = New System.Drawing.Point(194, 304)
-        Me.cboBlodType.Name = "cboBlodType"
-        Me.cboBlodType.Size = New System.Drawing.Size(44, 23)
-        Me.cboBlodType.TabIndex = 30
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(136, 309)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(48, 13)
-        Me.Label8.TabIndex = 31
-        Me.Label8.Text = "Blodtype"
+        Me.lblSok.Text = "Søk etter personnummer:"
         '
         'Ansattside
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(760, 471)
+        Me.ClientSize = New System.Drawing.Size(1013, 580)
         Me.Controls.Add(Me.TabControl1)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Ansattside"
         Me.Text = "Ansattside"
         Me.Statistikk.ResumeLayout(False)
@@ -778,8 +773,6 @@ Partial Class Ansattside
     Friend WithEvents btnSok As Button
     Friend WithEvents txtSok As TextBox
     Friend WithEvents lblSok As Label
-    Friend WithEvents btnOppdater As Button
-    Friend WithEvents btnSlett As Button
     Friend WithEvents gridBlodlager As DataGridView
     Friend WithEvents btnEndreInfo As Button
     Friend WithEvents lbPoststed As Label
