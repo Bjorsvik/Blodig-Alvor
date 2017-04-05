@@ -197,5 +197,4 @@ Public Class Ansattside
         Next row
     End Sub
 
-
 End Class

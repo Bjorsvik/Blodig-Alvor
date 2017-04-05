@@ -408,30 +408,47 @@ Public Class egenerklering
             End If
             Dim bolk9 As String = spm91 + spm92 + spm93 + spm94 + spm95 + spm96 + spm97 + spm98 + spm99 + spm910
 #End Region
+#Region "karantene"
+            Dim karantene As Integer
+            If rb811.Checked Then
+                karantene = 1000000
+
+            ElseIf rb311.Checked Or rb311.Checked Or rb321.Checked Or rb331.Checked Or rb341.Checked Or
+                        rb351.Checked Or rb361.Checked Or rb371.Checked Or rb381.Checked Or rb311.Checked Or
+                        rb311.Checked Then
+                karantene = 365
+
+            ElseIf rb211.Checked Or rb212.Checked Or rb231.Checked Or rb241.Checked Or rb251.Checked Then
+                karantene = 28
+                End If
+#End Region
 
 
-            Dim sqlSporring = "insert into Egenerklering (dato, varsling_epost, varsling_sms, bolk1, bolk2, bolk3, bolk4, bolk5, bolk6, bolk7, bolk8, bolk9, personID) 
-                               values (CURDATE(), @varsling_epost, @varsling_sms, @bolk1, @bolk2, @bolk3, @bolk4, @bolk5, @bolk6, @bolk7, @bolk8, @bolk9, @personID)"
+                Dim sqlSporring = "insert into Egenerklering (dato, varsling_epost, varsling_sms, bolk1, bolk2, bolk3, bolk4, bolk5, bolk6, bolk7, bolk8, bolk9, personID, karantene) 
+                               values (CURDATE(), @varsling_epost, @varsling_sms, @bolk1, @bolk2, @bolk3, @bolk4, @bolk5, @bolk6, @bolk7, @bolk8, @bolk9, @personID, DATE_ADD(CURDATE(), INTERVAL + @karantene DAY))"
 
-            Dim sqlbolker As New MySqlCommand(sqlSporring, tilkobling)
+                Dim sqlbolker As New MySqlCommand(sqlSporring, tilkobling)
 
-            sqlbolker.Parameters.AddWithValue("@varsling_epost", varsling_epost)
-            sqlbolker.Parameters.AddWithValue("@varsling_sms", varsling_sms)
-            sqlbolker.Parameters.AddWithValue("@bolk1", bolk1)
-            sqlbolker.Parameters.AddWithValue("@bolk2", bolk2)
-            sqlbolker.Parameters.AddWithValue("@bolk3", bolk3)
-            sqlbolker.Parameters.AddWithValue("@bolk4", bolk4)
-            sqlbolker.Parameters.AddWithValue("@bolk5", bolk5)
-            sqlbolker.Parameters.AddWithValue("@bolk6", bolk6)
-            sqlbolker.Parameters.AddWithValue("@bolk7", bolk7)
-            sqlbolker.Parameters.AddWithValue("@bolk8", bolk8)
-            sqlbolker.Parameters.AddWithValue("@bolk9", bolk9)
-            sqlbolker.Parameters.AddWithValue("@personID", personID)
+                sqlbolker.Parameters.AddWithValue("@varsling_epost", varsling_epost)
+                sqlbolker.Parameters.AddWithValue("@varsling_sms", varsling_sms)
+                sqlbolker.Parameters.AddWithValue("@bolk1", bolk1)
+                sqlbolker.Parameters.AddWithValue("@bolk2", bolk2)
+                sqlbolker.Parameters.AddWithValue("@bolk3", bolk3)
+                sqlbolker.Parameters.AddWithValue("@bolk4", bolk4)
+                sqlbolker.Parameters.AddWithValue("@bolk5", bolk5)
+                sqlbolker.Parameters.AddWithValue("@bolk6", bolk6)
+                sqlbolker.Parameters.AddWithValue("@bolk7", bolk7)
+                sqlbolker.Parameters.AddWithValue("@bolk8", bolk8)
+                sqlbolker.Parameters.AddWithValue("@bolk9", bolk9)
+                sqlbolker.Parameters.AddWithValue("@personID", personID)
+                sqlbolker.Parameters.AddWithValue("@karantene", karantene)
 
 
-            sqlbolker.ExecuteNonQuery()
-        Else
-            MsgBox("Du må bekrefte at du har lest informasjonen øverst i spørreskjemaet", MsgBoxStyle.Information)
+                sqlbolker.ExecuteNonQuery()
+                MsgBox("Din egenerklæring er nå registrert.")
+                Me.Close()
+            Else
+                MsgBox("Du må bekrefte at du har lest informasjonen øverst i spørreskjemaet", MsgBoxStyle.Information)
         End If
     End Sub
     'Knappen som sender inn spørreskjemaet
