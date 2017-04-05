@@ -53,14 +53,8 @@ Public Class minside
             txtPostnummer.Text = postnummer
             lbPersonID.Text = personID
 
-
-
         Next row
-
-
-
     End Sub
-
     Private Sub visPoststed()
 
         Dim postnummerTab As New DataTable()
