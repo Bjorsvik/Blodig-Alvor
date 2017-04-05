@@ -49,6 +49,7 @@ Partial Class minside
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnSkjema = New System.Windows.Forms.Button()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TabControl1.SuspendLayout()
         Me.tabBrukerinfo.SuspendLayout()
         Me.tabReservasjon.SuspendLayout()
@@ -277,6 +278,7 @@ Partial Class minside
         '
         'tabReservasjon
         '
+        Me.tabReservasjon.Controls.Add(Me.ComboBox1)
         Me.tabReservasjon.Controls.Add(Me.MonthCalendar1)
         Me.tabReservasjon.Controls.Add(Me.Button1)
         Me.tabReservasjon.Controls.Add(Me.btnSkjema)
@@ -311,6 +313,14 @@ Partial Class minside
         Me.btnSkjema.TabIndex = 0
         Me.btnSkjema.Text = "Egenerklæring"
         Me.btnSkjema.UseVisualStyleBackColor = True
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(427, 60)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 6
         '
         'minside
         '
@@ -355,4 +365,5 @@ Partial Class minside
     Friend WithEvents Label3 As Label
     Friend WithEvents lbPersonID As Label
     Friend WithEvents MonthCalendar1 As MonthCalendar
+    Friend WithEvents ComboBox1 As ComboBox
 End Class
