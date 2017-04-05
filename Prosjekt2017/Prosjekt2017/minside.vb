@@ -1,7 +1,17 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class minside
-    Dim bruker As New Blodgiver()
+    Dim bg As New Blodgiver()
     Dim postnr As New Postnummer()
+    Dim res As New Reservasjoner
+    Dim resDato As String
+    Dim fornavn As String
+    Dim etternavn As String
+    Dim fodselsdato As String
+    Dim personnummer As String
+    Dim telefon As Integer
+    Dim adresse As String
+    Dim postnummer As Integer
+    Dim personID As Integer
 
     Private Sub minside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim personnummer = PubVar.personnummer
@@ -22,16 +32,7 @@ Public Class minside
         Dim brukerTab As New DataTable()
         Dim postnummere As New DataTable()
 
-        Dim fornavn As String
-        Dim etternavn As String
-        Dim fodselsdato As String
-        Dim personnummer As String
-        Dim telefon As Integer
-        Dim adresse As String
-        Dim postnummer As Integer
-        Dim personID As Integer
-
-        brukerTab = bruker.GetPersonnummer()
+        brukerTab = bg.GetPersonnummer()
 
         For Each row In brukerTab.Rows
 
@@ -75,15 +76,7 @@ Public Class minside
         Dim brukerTab As New DataTable()
         Dim postnummere As New DataTable()
 
-        Dim fornavn As String
-        Dim etternavn As String
-        Dim fodselsdato As String
-        Dim personnummer As String
-        Dim telefon As Integer
-        Dim adresse As String
-        Dim postnummer As Integer
-
-        brukerTab = bruker.GetPersonnummer()
+        brukerTab = bg.GetPersonnummer()
 
         For Each row In brukerTab.Rows
 
@@ -95,41 +88,86 @@ Public Class minside
             adresse = row("adresse")
             postnummer = row("postnummer")
 
-            bruker.endreFornavn(txtFornavn.Text)
-            bruker.endreEtternavn(txtEtternavn.Text)
-            bruker.endreFodselsdato(txtFodselsdato.Text)
-            bruker.endreTelefon(txtTelefon.Text)
-            bruker.endreAdresse(txtAdresse.Text)
-            bruker.endrePostnummer(txtPostnummer.Text)
+            bg.endreFornavn(txtFornavn.Text)
+            bg.endreEtternavn(txtEtternavn.Text)
+            bg.endreFodselsdato(txtFodselsdato.Text)
+            bg.endreTelefon(txtTelefon.Text)
+            bg.endreAdresse(txtAdresse.Text)
+            bg.endrePostnummer(txtPostnummer.Text)
 
         Next row
     End Sub
 
     Public Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-        Dim blodgiver As New Blodgiver
         Dim personID As String
-        Dim res As New Reservasjoner
-        Dim dato As New Date()
-        Dim resDato As String
+        Dim tid As String = ComboBox1.SelectedValue.ToString()
+
+
         Dim id As New DataTable()
 
-        id = blodgiver.GetBrukeridByTelefon(45464856)
+        id = bg.GetIDByPersonNr(personnummer)
 
         For Each rad In id.Rows
             personID = rad(0).ToString()
         Next rad
-
         Dim tempID As Integer = CInt(personID)
-        dato = MonthCalendar1.SelectionRange.Start
-        resDato = dato.Year & "-" & dato.Month & "-" & dato.Day
-        res.reserver(resDato, tempID)
-        'MsgBox(resDato)
+        res.reserver(resDato, tempID, tid)
+        'MsgBox(tid)
+
 
     End Sub
 
     Private Sub btnSkjema_Click(sender As Object, e As EventArgs) Handles btnSkjema.Click
         egenerklering.Show()
+    End Sub
+
+    Public Sub MonthCalendar1_DateChanged(sender As Object, e As DateRangeEventArgs) Handles MonthCalendar1.DateChanged
+        Dim dato As New Date()
+        dato = MonthCalendar1.SelectionRange.Start
+        resDato = dato.Year & "-" & dato.Month & "-" & dato.Day
+        Dim timer As DataTable = res.getAlleTidspunkt()
+        Dim opptattTimer As DataTable = res.getOpptattTimer(resDato)
+        Dim comboTimer As New ArrayList()
+        Dim opptattArray As New ArrayList()
+        Dim timeArray As New ArrayList()
+
+
+        ComboBox1.DataSource = Nothing
+        'MsgBox(opptattTimer.ToString)
+
+        ' For Each time In timer.Rows
+        '    For Each opptatt In opptattTimer.Rows
+        '   If time(0).ToString <> opptatt(0).ToString Then
+        ' If comboTimer.Contains(time(0).ToString) = False Then
+        '  comboTimer.Add(time(0).ToString)
+        ' End If
+        'End If
+        'Next
+        'Next
+        For Each time In timer.Rows
+            timeArray.Add(time(0).ToString)
+        Next
+        For Each opptatt In opptattTimer.Rows
+            opptattArray.Add(opptatt(0).ToString)
+        Next
+
+        MsgBox(opptattArray.Count.ToString)
+        For i = 0 To opptattArray.Count - 1
+            If timeArray.Contains(opptattArray(i).ToString) Then
+                timeArray.Remove(opptattArray(i).ToString)
+            End If
+        Next
+
+
+        'If opptattTimer.Rows.Count < 1 Then
+        '    ComboBox1.DataSource = timer
+        'Else
+        '    ComboBox1.DataSource = comboTimer
+        'End If
+
+        ComboBox1.DataSource = timeArray
+        ComboBox1.DisplayMember = "Tidspunkt"
     End Sub
 
     'Private Sub visBrukeren()

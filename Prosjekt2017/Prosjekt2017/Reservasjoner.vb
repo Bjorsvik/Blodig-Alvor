@@ -15,11 +15,28 @@
     Public Function getLastResID() As DataTable
         Return db.Query("SELECT MAX(resID) FROM Reservasjon")
     End Function
+    Public Function getAlleTidspunkt() As DataTable
+        Return db.Query("SELECT * from Tidspunkt")
+    End Function
+    Public Function getMuligeTidspunkt(ByVal resdato) As DataTable
+        Return db.Query("")
+    End Function
+    Public Function getOpptattTimer(ByVal resDato) As DataTable
+        Return db.Query("Select *
+From Tidspunkt, Reservasjon
+Where Tidspunkt.tidspunkt = Reservasjon.tidspunkt
+And dato = '" & resDato & "'
+And (SELECT COUNT(*) FROM Tidspunkt, Reservasjon
+Where Tidspunkt.tidspunkt = Reservasjon.tidspunkt
+And dato = '" & resDato & "') >=5
+Group by Tidspunkt.tidspunkt")
+    End Function
 
-    Public Sub reserver(ByVal dato As String, ByVal personID As Integer)
+    Public Sub reserver(ByVal dato As String, ByVal personID As Integer, ByVal tid As String)
 
         Dim resID As DataTable = getLastResID()
         Dim reservasjonID As String = ""
+        Dim nextresID As Integer
 
 
         For Each id In resID.Rows
@@ -30,9 +47,11 @@
             reservasjonID = "0"
         End If
 
-        MsgBox(CInt(reservasjonID))
+        nextresID = CInt(reservasjonID) + 1
 
-        db.Query("INSERT INTO Reservasjon (resID, dato, personID) VALUES ('" & CInt(reservasjonID) & "', '" & dato & "', '" & personID & "');")
+        'MsgBox(CInt(reservasjonID))
+
+        db.Query("INSERT INTO Reservasjon (resID, dato, personID, tidspunkt) VALUES ('" & nextresID & "', '" & dato & "', '" & personID & "', '" & tid & "');")
     End Sub
 
 End Class
