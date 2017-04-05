@@ -134,7 +134,7 @@ Public Class minside
         Dim dato As New Date()
         dato = MonthCalendar1.SelectionRange.Start
         resDato = dato.Year & "-" & dato.Month & "-" & dato.Day
-        ComboBox1.DataSource = res.getAlleReservasjoner()
+        ComboBox1.DataSource = res.getAlleTidspunkt()
         ComboBox1.DisplayMember = "Tidspunkt"
     End Sub
 
