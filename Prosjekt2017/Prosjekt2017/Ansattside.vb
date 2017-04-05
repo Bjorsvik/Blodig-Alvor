@@ -50,7 +50,7 @@ Public Class Ansattside
         Next
         MsgBox(pID)
 
-        'resIDTab = resID.getLastResIDByPersonID(pID)
+        resIDTab = resID.getLastResIDByPersonID(pID)
 
         For Each row In resIDTab.Rows
             rID = row("resID")
