@@ -2,14 +2,39 @@
 
 Public Class egenerklering
     Private tilkobling As MySqlConnection
-
-    'Dim bolks As New egenerkleringClass
+    Dim bruker As New Blodgiver()
+    Dim personID As Integer
 
     Private Sub egenerklering_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim personnummer = PubVar.personnummer
+        visBrukerEgenerklering()
+        tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=g_oops_23;Uid=g_oops_23;Pwd=3d4CcHvg")
+        tilkobling.Open()
         lblDato.Text = Date.Now
         Me.Show()
         Label1.Select() 'Får formen til å loade øverst på siden
     End Sub
+    'Legger inn navn, etternavn og brukernummer i formen automatisk
+    Private Sub visBrukerEgenerklering()
+        Dim brukerTab As New DataTable()
+
+        Dim fornavn As String
+        Dim etternavn As String
+
+        brukerTab = bruker.GetPersonnummer()
+
+        For Each row In brukerTab.Rows
+
+            fornavn = row("fornavn")
+            etternavn = row("etternavn")
+            personID = row("personID")
+
+            lblFornavn.Text = fornavn
+            lblEtternavn.Text = etternavn
+            lblPersonID.Text = personID
+        Next row
+    End Sub
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnSendInn.Click
 
 
@@ -23,7 +48,7 @@ Public Class egenerklering
                 spmEpost = 0
             End If
 
-            Dim varslingEpost As String = spmEpost
+            Dim varsling_epost As String = spmEpost
 #End Region 'Vi har valgt å dele inn spørsmålene i bolker.
 #Region "varsling_sms"
             Dim spmSMS As String
@@ -33,16 +58,11 @@ Public Class egenerklering
                 spmSMS = 0
             End If
 
-            Dim varslingSMS As String = spmSMS
+            Dim varsling_sms As String = spmSMS
 #End Region   'Vi regner en ny bolk for hver tjukke overskrift.
 #Region "bolk1"
 
-            Dim spm11 As String
-            Dim spm12 As String
-            Dim spm13 As String
-            Dim spm14 As String
-            Dim spm15 As String
-            Dim spm16 As String
+            Dim spm11, spm12, spm13, spm14, spm15, spm16 As String
 
             If rb111.Checked Then
                 spm11 = 1
@@ -79,12 +99,7 @@ Public Class egenerklering
 #End Region          'Vi starter med venstre side nedover før vi hopper
 #Region "bolk2"
 
-            Dim spm21 As String
-            Dim spm22 As String
-            Dim spm23 As String
-            Dim spm24 As String
-            Dim spm25 As String
-
+            Dim spm21, spm22, spm23, spm24, spm25 As String
 
             If rb211.Checked Then
                 spm21 = 1
@@ -101,7 +116,7 @@ Public Class egenerklering
             Else
                 spm23 = 0
             End If
-            If rb231.Checked Then
+            If rb241.Checked Then
                 spm24 = 1
             Else
                 spm24 = 0
@@ -112,20 +127,11 @@ Public Class egenerklering
                 spm25 = 0
             End If
 
-            Dim bolk2 As String = spm11 + spm12 + spm13 + spm14 + spm25
+            Dim bolk2 As String = spm21 + spm22 + spm23 + spm24 + spm25
 
 #End Region          'Vi starter med venstre side nedover før vi hopper
 #Region "bolk3"
-            Dim spm31 As String
-            Dim spm32 As String
-            Dim spm33 As String
-            Dim spm34 As String
-            Dim spm35 As String
-            Dim spm36 As String
-            Dim spm37 As String
-            Dim spm38 As String
-            Dim spm39 As String
-            Dim spm310 As String
+            Dim spm31, spm32, spm33, spm34, spm35, spm36, spm37, spm38, spm39, spm310 As String
 
             If rb311.Checked Then
                 spm31 = 1
@@ -189,21 +195,8 @@ Public Class egenerklering
             Dim bolk4 As String = spm41
 #End Region          'Radioknappene er navngitt etter bolk, spørsmål, ja (1) og nei (2).
 #Region "bolk5"
-            Dim spm51 As String
-            Dim spm52 As String
-            Dim spm53 As String
-            Dim spm54 As String
-            Dim spm55 As String
-            Dim spm56 As String
-            Dim spm57 As String
-            Dim spm58 As String
-            Dim spm59 As String
-            Dim spm510 As String
-            Dim spm511 As String
-            Dim spm512 As String
-            Dim spm513 As String
-            Dim spm514 As String
-            Dim spm515 As String
+            Dim spm51, spm52, spm53, spm54, spm55, spm56, spm57, spm58, spm59,
+                spm510, spm511, spm512, spm513, spm514, spm515 As String
 
             If rb511.Checked Then
                 spm51 = 1
@@ -283,13 +276,7 @@ Public Class egenerklering
             Dim bolk5 As String = spm51 + spm52 + spm53 + spm54 + spm55 + spm56 + spm57 + spm58 + spm59 + spm510 + spm511 + spm512 + spm513 + spm514 + spm515
 #End Region          'Ja-kanppen på første spørsmål i første bolk for derfor rb111.
 #Region "bolk6"
-            Dim spm61 As String
-            Dim spm62 As String
-            Dim spm63 As String
-            Dim spm64 As String
-            Dim spm65 As String
-            Dim spm66 As String
-            Dim spm67 As String
+            Dim spm61, spm62, spm63, spm64, spm65, spm66, spm67 As String
 
             If rb611.Checked Then
                 spm61 = 1
@@ -329,10 +316,7 @@ Public Class egenerklering
             Dim bolk6 As String = spm61 + spm62 + spm63 + spm64 + spm65 + spm66 + spm67
 #End Region          'Første tallet står for bolk, andre tallet står for spørsmål og tredje tall står for ja.
 #Region "bolk7"
-            Dim spm71 As String
-            Dim spm72 As String
-            Dim spm73 As String
-            Dim spm74 As String
+            Dim spm71, spm72, spm73, spm74 As String
 
             If rb711.Checked Then
                 spm71 = 1
@@ -370,16 +354,7 @@ Public Class egenerklering
             Dim bolk8 As String = spm81
 #End Region
 #Region "bolk9"
-            Dim spm91 As String
-            Dim spm92 As String
-            Dim spm93 As String
-            Dim spm94 As String
-            Dim spm95 As String
-            Dim spm96 As String
-            Dim spm97 As String
-            Dim spm98 As String
-            Dim spm99 As String
-            Dim spm910 As String
+            Dim spm91, spm92, spm93, spm94, spm95, spm96, spm97, spm98, spm99, spm910 As String
 
             If rb911.Checked Then
                 spm91 = 1
@@ -434,13 +409,14 @@ Public Class egenerklering
             Dim bolk9 As String = spm91 + spm92 + spm93 + spm94 + spm95 + spm96 + spm97 + spm98 + spm99 + spm910
 #End Region
 
-            Dim sqlSporring = "insert into Egenerklering (dato, varsling_epost, varsling_sms, bolk1, bolk2, bolk3, bolk4, bolk5, bolk6, bolk7, bolk8, bolk9) 
-            '               values (CURDATE(), @varslingEpost, @varslingSMS, @bolk1, @bolk2, @bolk3, @bolk4, @bolk5, @bolk6, @bolk7, @bolk8, @bolk9)"
+
+            Dim sqlSporring = "insert into Egenerklering (dato, varsling_epost, varsling_sms, bolk1, bolk2, bolk3, bolk4, bolk5, bolk6, bolk7, bolk8, bolk9, personID) 
+                               values (CURDATE(), @varsling_epost, @varsling_sms, @bolk1, @bolk2, @bolk3, @bolk4, @bolk5, @bolk6, @bolk7, @bolk8, @bolk9, @personID)"
 
             Dim sqlbolker As New MySqlCommand(sqlSporring, tilkobling)
 
-            sqlbolker.Parameters.AddWithValue("@varslingEpost", varslingEpost)
-            sqlbolker.Parameters.AddWithValue("@varslingSMS", varslingSMS)
+            sqlbolker.Parameters.AddWithValue("@varsling_epost", varsling_epost)
+            sqlbolker.Parameters.AddWithValue("@varsling_sms", varsling_sms)
             sqlbolker.Parameters.AddWithValue("@bolk1", bolk1)
             sqlbolker.Parameters.AddWithValue("@bolk2", bolk2)
             sqlbolker.Parameters.AddWithValue("@bolk3", bolk3)
@@ -450,6 +426,8 @@ Public Class egenerklering
             sqlbolker.Parameters.AddWithValue("@bolk7", bolk7)
             sqlbolker.Parameters.AddWithValue("@bolk8", bolk8)
             sqlbolker.Parameters.AddWithValue("@bolk9", bolk9)
+            sqlbolker.Parameters.AddWithValue("@personID", personID)
+
 
             sqlbolker.ExecuteNonQuery()
         Else

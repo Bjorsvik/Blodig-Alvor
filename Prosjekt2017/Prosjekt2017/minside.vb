@@ -53,14 +53,8 @@ Public Class minside
             txtPostnummer.Text = postnummer
             lbPersonID.Text = personID
 
-
-
         Next row
-
-
-
     End Sub
-
     Private Sub visPoststed()
 
         Dim postnummerTab As New DataTable()
@@ -132,6 +126,10 @@ Public Class minside
         res.reserver(resDato, tempID)
         'MsgBox(resDato)
 
+    End Sub
+
+    Private Sub btnSkjema_Click(sender As Object, e As EventArgs) Handles btnSkjema.Click
+        egenerklering.Show()
     End Sub
 
     'Private Sub visBrukeren()

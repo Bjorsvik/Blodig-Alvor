@@ -31,6 +31,17 @@
                          JOIN Person ON Reservasjon.personID = Person.personID
                          Where Person.personID = '" & personID & "'")
     End Function
-    Private Sub leggInnBlodProdukter()
+
+    Public Sub leggInnBlodplasma(ByVal lagerID As Integer, ByVal blodID As Integer, plasmaposer As Integer)
+        db.Query("INSERT INTO Blodplasma(lagerID, blodID, plasma_poser) VALUES ('" & lagerID & "', '" & blodID & "', '" & plasmaposer & "' )")
     End Sub
+
+    Public Sub leggInnBlodlegeme(ByVal lagerID As Integer, ByVal blodID As Integer, celleposer As Integer)
+        db.Query("INSERT INTO Blodceller(lagerID, blodID, celler_poser) VALUES ('" & lagerID & "', '" & blodID & "', '" & celleposer & "' )")
+    End Sub
+
+    Public Sub leggInnBlodplater(ByVal lagerID As Integer, ByVal blodID As Integer, plateposer As Integer)
+        db.Query("INSERT INTO Blodplater(lagerID, blodID, plater_poser) VALUES ('" & lagerID & "', '" & blodID & "', '" & plateposer & "' )")
+    End Sub
+
 End Class

@@ -26,8 +26,8 @@ Public Class Blodgiver
         MsgBox(personID)
         db.Query("INSERT INTO Blodgiver(personID, Bpassord) VALUES('" & personID & "', '" & passord & "' )")
     End Sub
-    Public Function GetBruker(telefonSok As String) As DataTable
-        Return db.Query("SELECT * FROM Person JOIN Blodgiver ON Person.personID = Blodgiver.personID WHERE telefon = " & "'" & telefonSok & "'")
+    Public Function GetBruker(personnummer As String) As DataTable
+        Return db.Query("SELECT * FROM Person JOIN Blodgiver ON Person.personID = Blodgiver.personID WHERE personnummer = " & "'" & personnummer & "'")
     End Function
     Public Function getAlleBlodgivere() As DataTable
         Return db.Query("SELECT * FROM Person JOIN Blodgiver ON Person.personID = Blodgiver.personID")
@@ -35,4 +35,7 @@ Public Class Blodgiver
     Public Function GetBrukeridByTelefon(ByVal tlf As Integer) As DataTable
         Return db.Query("SELECT personID FROM Person WHERE telefon = " & "'" & tlf & "'")
     End Function
+    'Public Function getpersonIDbyPassord(ByVal bPassord As Integer) As DataTable
+    '    Return db.Query("SELECT personID FROM blodgiver WHERE personID = " & "'" & bPassord & "'")
+    'End Function
 End Class
