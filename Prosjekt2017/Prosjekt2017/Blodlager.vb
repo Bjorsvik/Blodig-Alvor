@@ -16,38 +16,55 @@
                          ORDER BY blodtype")
     End Function
 
-    Public Function getAlleTilgjengeligeBlodPlasma()
-        Return db.Query("SELECT blodtype, plasma_poser From Blodtype JOIN Blodplasma ON Blodtype.blodID = Blodplasma.blodID")
+    Public Sub skrivUtBlodplasma(antall As Integer, blodtype As String)
+        db.Query("UPDATE Blodplasma JOIN Blodtype ON Blodplasma.blodID = Blodtype.blodID
+                  SET plasma_poser = plasma_poser - " & antall & " WHERE blodtype = '" & blodtype & "'")
+    End Sub
+
+    Public Sub skrivUtBlodplater(antall As Integer, blodtype As String)
+        db.Query("UPDATE Blodplater JOIN Blodtype ON Blodplater.blodID = Blodtype.blodID
+                  SET plater_poser = plater_poser - " & antall & " WHERE blodtype = '" & blodtype & "'")
+    End Sub
+
+    Public Sub skrivUtBlodceller(antall As Integer, blodtype As String)
+        db.Query("UPDATE Blodceller JOIN Blodtype ON Blodceller.blodID = Blodtype.blodID
+                  SET celler_poser = celler_poser - " & antall & " WHERE blodtype = '" & blodtype & "'")
+    End Sub
+
+    Public Function getAlleTilgjengeligeBlodPlasma() As DataTable
+        Return db.Query("SELECT blodtype, SUM(plasma_poser) As Plasmaposer From Blodtype JOIN Blodplasma ON Blodtype.blodID = Blodplasma.blodID
+                         Group By blodtype")
     End Function
 
-    Public Function getAlleTilgjengeligeBlodceller()
+    Public Function getAlleTilgjengeligeBlodceller() As DataTable
         Return db.Query("SELECT * From (
     SELECT
     blodtype,
-    celler_poser,
+    SUM(celler_poser) As Cellerposer,
     Blodceller.dato As dato,
     DATEDIFF(Blodceller.dato, CURDATE()) As diffCeller
     
      FROM Blodtype
-                         Join Blodceller ON Blodtype.blodID = Blodceller.blodID                   
+                         Join Blodceller ON Blodtype.blodID = Blodceller.blodID  
+    Group By blodtype                 
     ) As innertable
 
-    Where diffCeller < 7")
+    Where diffCeller < 36")
     End Function
 
-    Public Function getAlleTilgjengeligeBlodplater()
+    Public Function getAlleTilgjengeligeBlodplater() As DataTable
         Return db.Query("SELECT * From (
     SELECT
     blodtype,
-    plater_poser,
+    SUM(plater_poser) As Platerposer,
     Blodplater.dato As dato,
     DATEDIFF(Blodplater.dato, CURDATE()) As diffPlater
     
      FROM Blodtype
-                         Join Blodplater ON Blodtype.blodID = Blodplater.blodID                   
+                         Join Blodplater ON Blodtype.blodID = Blodplater.blodID  
+     Group By blodtype                 
     ) As innertable
-
-    Where diffPlater < 30")
+    Where diffPlater < 8")
     End Function
 
     Public Function getLastBlodIDByResID(ByVal reservasjonsID As String) As DataTable
