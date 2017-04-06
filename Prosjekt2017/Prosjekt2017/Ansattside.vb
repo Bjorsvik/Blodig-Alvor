@@ -7,6 +7,7 @@ Public Class Ansattside
     Dim Blodlager As New Blodlager()
     Dim Bruker As New Blodgiver()
     Dim Blodprodukter As New Blodlager()
+    Dim BlodposeInsert As New Blodlager()
     Dim BlodInsert As New Blodlager()
     Dim BlodUtskrift As New Blodlager()
     Dim blodID As New Blodlager()
@@ -37,6 +38,41 @@ Public Class Ansattside
         visPoststed()
     End Sub
 
+    Private Sub LeggtilBlod()
+        Dim personnummer As String = txtPersonnr.Text
+        Dim pID As String = ""
+        Dim blodtype As String = ""
+        Dim bID As String = ""
+        Dim rID As String = ""
+        Dim blodposer As Integer = numBlodmengde.Text
+        Dim personIDTab As New Datatable 
+        Dim blodIDTab As New DataTable
+        Dim resIDTab As New DataTable
+
+        personIDTab = personID.getPersonID(personnummer)
+
+        For Each row In personIDTab.Rows
+            pID = row("personID")
+            blodtype = row("blodtype")
+
+        Next
+        MsgBox(pID)
+
+        resIDTab = resID.getLastResIDByPersonID(pID)
+
+        For Each row In resIDTab.Rows
+            rID = row("resID")
+        Next
+
+        MsgBox(rID)
+
+        BlodposeInsert.leggInnBlodposer(blodtype, blodposer, rID)
+
+
+
+
+
+    End Sub
     Private Sub leggTilBlodProdukter()
         Dim personnummer As String = txtLagerPersonnummer.Text
         Dim pID As String = ""
@@ -250,5 +286,9 @@ Public Class Ansattside
         visAlleBlodCeller()
         visAlleBlodplasma()
         visAlleBlodplater()
+    End Sub
+
+    Private Sub btnBlodgivning_Click(sender As Object, e As EventArgs) Handles btnBlodgivning.Click
+        LeggtilBlod()
     End Sub
 End Class
