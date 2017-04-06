@@ -53,11 +53,11 @@ Partial Class Ansattside
         Me.Blodtype = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Blodplasma = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Blodgivning = New System.Windows.Forms.TabPage()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.numBlodmengde = New System.Windows.Forms.NumericUpDown()
         Me.btnBlodgivning = New System.Windows.Forms.Button()
         Me.lblMengde = New System.Windows.Forms.Label()
         Me.lblPersnr = New System.Windows.Forms.Label()
-        Me.txtboxPersnr = New System.Windows.Forms.TextBox()
+        Me.txtPersonnr = New System.Windows.Forms.TextBox()
         Me.Innkalling = New System.Windows.Forms.TabPage()
         Me.txtboxTilgjengelig = New System.Windows.Forms.TextBox()
         Me.lblTilgjengeligeGivere = New System.Windows.Forms.Label()
@@ -97,7 +97,7 @@ Partial Class Ansattside
         CType(Me.gridBlodceller, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gridBlodplasma, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Blodgivning.SuspendLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numBlodmengde, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Innkalling.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.Søk.SuspendLayout()
@@ -389,11 +389,11 @@ Partial Class Ansattside
         '
         'Blodgivning
         '
-        Me.Blodgivning.Controls.Add(Me.NumericUpDown1)
+        Me.Blodgivning.Controls.Add(Me.numBlodmengde)
         Me.Blodgivning.Controls.Add(Me.btnBlodgivning)
         Me.Blodgivning.Controls.Add(Me.lblMengde)
         Me.Blodgivning.Controls.Add(Me.lblPersnr)
-        Me.Blodgivning.Controls.Add(Me.txtboxPersnr)
+        Me.Blodgivning.Controls.Add(Me.txtPersonnr)
         Me.Blodgivning.Location = New System.Drawing.Point(4, 22)
         Me.Blodgivning.Margin = New System.Windows.Forms.Padding(2)
         Me.Blodgivning.Name = "Blodgivning"
@@ -403,13 +403,13 @@ Partial Class Ansattside
         Me.Blodgivning.Text = "Blodgivning"
         Me.Blodgivning.UseVisualStyleBackColor = True
         '
-        'NumericUpDown1
+        'numBlodmengde
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(148, 87)
-        Me.NumericUpDown1.Margin = New System.Windows.Forms.Padding(2)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(103, 20)
-        Me.NumericUpDown1.TabIndex = 18
+        Me.numBlodmengde.Location = New System.Drawing.Point(148, 87)
+        Me.numBlodmengde.Margin = New System.Windows.Forms.Padding(2)
+        Me.numBlodmengde.Name = "numBlodmengde"
+        Me.numBlodmengde.Size = New System.Drawing.Size(103, 20)
+        Me.numBlodmengde.TabIndex = 18
         '
         'btnBlodgivning
         '
@@ -441,13 +441,13 @@ Partial Class Ansattside
         Me.lblPersnr.TabIndex = 13
         Me.lblPersnr.Text = "Personnummer: "
         '
-        'txtboxPersnr
+        'txtPersonnr
         '
-        Me.txtboxPersnr.Location = New System.Drawing.Point(148, 44)
-        Me.txtboxPersnr.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtboxPersnr.Name = "txtboxPersnr"
-        Me.txtboxPersnr.Size = New System.Drawing.Size(104, 20)
-        Me.txtboxPersnr.TabIndex = 11
+        Me.txtPersonnr.Location = New System.Drawing.Point(148, 44)
+        Me.txtPersonnr.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtPersonnr.Name = "txtPersonnr"
+        Me.txtPersonnr.Size = New System.Drawing.Size(104, 20)
+        Me.txtPersonnr.TabIndex = 11
         '
         'Innkalling
         '
@@ -792,7 +792,7 @@ Partial Class Ansattside
         CType(Me.gridBlodplasma, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Blodgivning.ResumeLayout(False)
         Me.Blodgivning.PerformLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numBlodmengde, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Innkalling.ResumeLayout(False)
         Me.Innkalling.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
@@ -812,7 +812,7 @@ Partial Class Ansattside
     Friend WithEvents btnBlodgivning As Button
     Friend WithEvents lblMengde As Label
     Friend WithEvents lblPersnr As Label
-    Friend WithEvents txtboxPersnr As TextBox
+    Friend WithEvents txtPersonnr As TextBox
     Friend WithEvents Innkalling As TabPage
     Friend WithEvents txtAntallGivere As TextBox
     Friend WithEvents lblØnskedeGivere As Label
@@ -824,7 +824,7 @@ Partial Class Ansattside
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents txtboxTilgjengelig As TextBox
     Friend WithEvents lblTilgjengeligeGivere As Label
-    Friend WithEvents NumericUpDown1 As NumericUpDown
+    Friend WithEvents numBlodmengde As NumericUpDown
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Søk As TabPage

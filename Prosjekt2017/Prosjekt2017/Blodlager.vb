@@ -6,9 +6,13 @@
     Public Function getAlleBlod() As DataTable
         Return db.Query("SELECT * FROM Blodlager")
     End Function
+    Public Sub leggInnBlodposer(blodtype As String, blodposer As Integer, resID As Integer)
+        db.Query("INSERT INTO Blodtype(blodtype, blodposer, resID) Values ('" & blodtype & "', '" & blodposer & "', '" & resID & "')")
+    End Sub
+
 
     Public Function getAlleBlodProdukter()
-        Return db.Query("SELECT DISTINCT blodtype AS Blodtype, SUM(plasma_poser) As Plasmaposer, SUM(plater_poser) As Plateposer, SUM(celler_poser) AS Celleposer FROM Blodtype
+        Return db.Query("Select DISTINCT blodtype As Blodtype, SUM(plasma_poser) As Plasmaposer, SUM(plater_poser) As Plateposer, SUM(celler_poser) AS Celleposer FROM Blodtype
                          Join Blodplasma ON Blodtype.blodID = Blodplasma.blodID
                          Join Blodplater ON Blodtype.blodID = Blodplater.blodID
                          Join Blodceller ON Blodtype.blodID = Blodceller.blodID

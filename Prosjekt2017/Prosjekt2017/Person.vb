@@ -65,6 +65,6 @@
     End Function
 
     Public Function getPersonID(ByVal personnummer As String) As DataTable
-        Return db.Query("SELECT personID FROM Person WHERE personnummer = '" & personnummer & "'")
+        Return db.Query("SELECT * FROM Person WHERE personnummer = '" & personnummer & "'")
     End Function
 End Class
