@@ -31,8 +31,13 @@ Where Tidspunkt.tidspunkt = Reservasjon.tidspunkt
 And dato = '" & resDato & "') >=5
 Group by Tidspunkt.tidspunkt")
     End Function
+<<<<<<< HEAD
     Public Function getKarantene()
         Return db.Query("Select")
+=======
+    Public Function getLastResIDByPersonID(personID As Integer) As DataTable
+        Return db.Query("SELECT MAX(resID) As resID FROM Reservasjon JOIN Person ON Reservasjon.personID = Person.personID WHERE Person.personID = '" & personID & "'")
+>>>>>>> refs/remotes/origin/master
     End Function
 
     Public Sub reserver(ByVal dato As String, ByVal personID As Integer, ByVal tid As String)
