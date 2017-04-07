@@ -31,6 +31,9 @@ Where Tidspunkt.tidspunkt = Reservasjon.tidspunkt
 And dato = '" & resDato & "') >=5
 Group by Tidspunkt.tidspunkt")
     End Function
+    Public Function getKarantene()
+        Return db.Query("Select")
+    End Function
 
     Public Sub reserver(ByVal dato As String, ByVal personID As Integer, ByVal tid As String)
 
