@@ -486,5 +486,10 @@ Public Class egenerklering
         End If
     End Sub
 
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim egen As New EgenerkleringKlasse
 
+        'MsgBox(egen.loopcb())
+
+    End Sub
 End Class

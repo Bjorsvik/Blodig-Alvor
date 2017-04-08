@@ -7,7 +7,9 @@ Public Class Ansattside
     Dim Blodlager As New Blodlager()
     Dim Bruker As New Blodgiver()
     Dim Blodprodukter As New Blodlager()
+    Dim BlodposeInsert As New Blodlager()
     Dim BlodInsert As New Blodlager()
+    Dim BlodUtskrift As New Blodlager()
     Dim blodID As New Blodlager()
 
     Dim personID As New Person()
@@ -15,11 +17,15 @@ Public Class Ansattside
 
 
     Private Sub Ansattside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        visAlleBlodprodukter()
+        visAlleBlodplasma()
+        visAlleBlodCeller()
+        visAlleBlodplater()
     End Sub
-    Private Sub btnTest_Click(sender As Object, e As EventArgs) Handles btnTest.Click
+    Private Sub btnTest_Click(sender As Object, e As EventArgs) Handles btnInsert.Click
         leggTilBlodProdukter()
-        visAlleBlodprodukter()
+        visAlleBlodplasma()
+        visAlleBlodplater()
+        visAlleBlodCeller()
     End Sub
     Private Sub btnSok_Click(sender As Object, e As EventArgs) Handles btnSok.Click
         visBruker()
@@ -32,6 +38,41 @@ Public Class Ansattside
         visPoststed()
     End Sub
 
+    Private Sub LeggtilBlod()
+        Dim personnummer As String = txtPersonnr.Text
+        Dim pID As String = ""
+        Dim blodtype As String = ""
+        Dim bID As String = ""
+        Dim rID As String = ""
+        Dim blodposer As Integer = numBlodmengde.Text
+        Dim personIDTab As New Datatable 
+        Dim blodIDTab As New DataTable
+        Dim resIDTab As New DataTable
+
+        personIDTab = personID.getPersonID(personnummer)
+
+        For Each row In personIDTab.Rows
+            pID = row("personID")
+            blodtype = row("blodtype")
+
+        Next
+        MsgBox(pID)
+
+        resIDTab = resID.getLastResIDByPersonID(pID)
+
+        For Each row In resIDTab.Rows
+            rID = row("resID")
+        Next
+
+        MsgBox(rID)
+
+        BlodposeInsert.leggInnBlodposer(blodtype, blodposer, rID)
+
+
+
+
+
+    End Sub
     Private Sub leggTilBlodProdukter()
         Dim personnummer As String = txtLagerPersonnummer.Text
         Dim pID As String = ""
@@ -50,7 +91,7 @@ Public Class Ansattside
         Next
         MsgBox(pID)
 
-        resIDTab = resID.getLastResIDByPersonID(pID)
+        'resIDTab = resID.getLastResIDByPersonID(pID)
 
         For Each row In resIDTab.Rows
             rID = row("resID")
@@ -85,7 +126,14 @@ Public Class Ansattside
     End Sub
 
     Private Sub skrivUtBlodProdukter()
+        Dim ant_plasmaposer As Integer = cboBlodplasma.Text
+        Dim ant_celleposer As Integer = cboBlodlegeme.Text
+        Dim ant_plateposer As Integer = cboBlodplater.Text
+        Dim blodtype As String = cboBlod.Text
 
+        BlodUtskrift.skrivUtBlodceller(ant_celleposer, blodtype)
+        BlodUtskrift.skrivUtBlodplater(ant_plateposer, blodtype)
+        BlodUtskrift.skrivUtBlodplasma(ant_plasmaposer, blodtype)
     End Sub
 
     Private Sub visBruker()
@@ -176,25 +224,71 @@ Public Class Ansattside
 
     End Sub
 
-    Private Sub visAlleBlodprodukter()
-        Dim blodproduktTab As New DataTable()
+    Private Sub visAlleBlodplasma()
+        Dim blodPlasmaTab As New DataTable()
+
         Dim blodtype As String
         Dim blodplasma As String
+
+        gridBlodplasma.Rows.Clear()
+
+        blodPlasmaTab = Blodprodukter.getAlleTilgjengeligeBlodPlasma()
+
+
+
+        For Each row In blodPlasmaTab.Rows
+            blodtype = row("blodtype")
+            blodplasma = row("Plasmaposer")
+
+            gridBlodplasma.Rows.Add(blodtype, blodplasma)
+
+        Next row
+
+    End Sub
+
+    Private Sub visAlleBlodplater()
+        Dim blodPlaterTab As New DataTable()
+
+        Dim blodtype As String
         Dim blodplater As String
+
+        gridBlodplater.Rows.Clear()
+
+        blodPlaterTab = Blodprodukter.getAlleTilgjengeligeBlodplater
+        For Each row In blodPlaterTab.Rows
+            blodtype = row("blodtype")
+            blodplater = row("PlaterPoser")
+
+            gridBlodplater.Rows.Add(blodtype, blodplater)
+        Next row
+
+    End Sub
+
+    Private Sub visAlleBlodCeller()
+        Dim blodCellerTab As New DataTable()
+
+        Dim blodtype As String
         Dim blodceller As String
 
-        gridBlodlager.Rows.Clear()
+        gridBlodceller.Rows.Clear()
 
-        blodproduktTab = Blodprodukter.getAlleBlodProdukter()
-        For Each row In blodproduktTab.Rows
-            blodtype = row("Blodtype")
-            blodplasma = row("Plasmaposer")
-            blodplater = row("Plateposer")
-            blodceller = row("Celleposer")
+        blodCellerTab = Blodprodukter.getAlleTilgjengeligeBlodceller
+        For Each row In blodCellerTab.Rows
+            blodtype = row("blodtype")
+            blodceller = row("Cellerposer")
 
-            gridBlodlager.Rows.Add(blodtype, blodplasma, blodplater, blodceller)
-
+            gridBlodceller.Rows.Add(blodtype, blodceller)
         Next row
     End Sub
 
+    Private Sub btnSkrivUt_Click(sender As Object, e As EventArgs) Handles btnSkrivUt.Click
+        skrivUtBlodProdukter()
+        visAlleBlodCeller()
+        visAlleBlodplasma()
+        visAlleBlodplater()
+    End Sub
+
+    Private Sub btnBlodgivning_Click(sender As Object, e As EventArgs) Handles btnBlodgivning.Click
+        LeggtilBlod()
+    End Sub
 End Class
