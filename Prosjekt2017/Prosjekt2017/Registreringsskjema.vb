@@ -20,44 +20,79 @@ Public Class Registreringsskjema
         End If
     End Function
 
+
     Private Sub btnRegistrer_Click(sender As Object, e As EventArgs) Handles btnRegistrer.Click
         Dim passord = txtPassord.Text
         Dim bpassord = txtBekreftPassord.Text
 
+
+        If txtFornavn.Text = "" Then
+            lblFornavnFeil.Text = ("Fyll ut")
+        End If
+
+        If txtEtternavn.Text = "" Then
+            lblEtternavnFeil.Text = ("Fyll ut")
+        End If
+
+        If txtAdresse.Text = "" Then
+            lblAdresseFeil.Text = ("Fyll ut")
+        End If
+
+        If txtPostnummer.Text = "" Then
+            lblPostnrFeil.Text = ("Fyll ut")
+        End If
+
+        If txtFodselsdato.Text = "" Then
+            lblFodselFeil.Text = ("Fyll ut")
+        End If
+
+        If txtPersonnummer.Text = "" Then
+            lblPersnrFeil.Text = ("Fyll ut")
+        End If
+
+        If txtTlf.Text = "" Then
+            lblTelefonFeil.Text = ("Fyll ut")
+        End If
+
+        If txtEpost.Text = "" Then
+            lblEpostFeil.Text = ("Fyll ut")
+        End If
+
+        If txtPassord.Text = "" Then
+            lblPwFeil.Text = ("Fyll ut")
+        End If
+
+        If txtBekreftPassord.Text = "" Then
+            lblPw2Feil.Text = ("Fyll ut")
+        End If
+
         If bpassord = passord Then
             Dim nyBruker As New Blodgiver(txtPassord.Text, txtFornavn.Text, txtEtternavn.Text, txtFodselsdato.Text, txtPersonnummer.Text,
-                                         txtTlf.Text, txtAdresse.Text, txtPostnummer.Text, txtEpost.Text)
+                                             txtTlf.Text, txtAdresse.Text, txtPostnummer.Text, txtEpost.Text)
             nyBruker.regBlodgiver()
 
             Me.Close()
         Else
             MsgBox("Passordene er ikke like")
         End If
-
-
     End Sub
 
     Private Sub txtPostnummer_TextChanged(sender As Object, e As EventArgs) Handles txtPostnummer.TextChanged
-
         If txtPostnummer.TextLength = 4 Then
             visPoststed()
         End If
     End Sub
 
     Private Sub visPoststed()
-
         Dim postnummerTab As New DataTable()
-
         Dim poststed As String
 
         postnummerTab = postnr.GetPoststed(txtPostnummer.Text)
 
         For Each row In postnummerTab.Rows
             poststed = row("poststed")
-
             lbPoststed.Text = poststed
         Next row
-
     End Sub
 
     Private Sub txtPassord_TextChanged(sender As Object, e As EventArgs) Handles txtPassord.TextChanged
@@ -76,4 +111,11 @@ Public Class Registreringsskjema
         txtEtternavn.Text = ToUpperFirst(txtEtternavn.Text)
         txtEtternavn.Select(txtEtternavn.Text.Length, 0)
     End Sub
+
+    Private Sub txtAdresse_TextChanged(sender As Object, e As EventArgs) Handles txtAdresse.TextChanged
+        txtAdresse.Text = ToUpperFirst(txtAdresse.Text)
+        txtAdresse.Select(txtAdresse.Text.Length, 0)
+    End Sub
+
+
 End Class
