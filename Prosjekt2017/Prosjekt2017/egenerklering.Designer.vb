@@ -336,6 +336,7 @@ Partial Class egenerklering
         Me.lblEtternavn = New System.Windows.Forms.Label()
         Me.label4030 = New System.Windows.Forms.Label()
         Me.lblPersonID = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -3357,12 +3358,22 @@ Partial Class egenerklering
         Me.lblPersonID.Size = New System.Drawing.Size(0, 13)
         Me.lblPersonID.TabIndex = 440
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(579, 91)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 441
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'egenerklering
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(705, 463)
+        Me.ClientSize = New System.Drawing.Size(722, 463)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lblPersonID)
         Me.Controls.Add(Me.label4030)
         Me.Controls.Add(Me.lblEtternavn)
@@ -3998,4 +4009,5 @@ Partial Class egenerklering
     Friend WithEvents lblEtternavn As Label
     Friend WithEvents label4030 As Label
     Friend WithEvents lblPersonID As Label
+    Friend WithEvents Button1 As Button
 End Class
