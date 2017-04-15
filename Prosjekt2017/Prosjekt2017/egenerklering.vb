@@ -431,13 +431,26 @@ Public Class egenerklering
 
 #Region "karantene"
             Dim karantene As Integer
-            If rb811.Checked Then
-                karantene = 1000000
+            If rb811.Checked Or rb511.Checked Or rb521.Checked Or rb531.Checked Or rb541.Checked Or
+                rb551.Checked Or rb561.Checked Or rb571.Checked Or rb581.Checked Or rb591.Checked Or
+                rb5101.Checked Or rb5111.Checked Or rb5121.Checked Or rb5131.Checked Or rb5141.Checked Or
+                rb5151.Checked Or rb911.Checked Or rb921.Checked Then
+                karantene = 1000000 'Utestenges
+
+            ElseIf rb411.Checked Then
+                karantene = 730 'To års karantene
 
             ElseIf rb311.Checked Or rb311.Checked Or rb321.Checked Or rb331.Checked Or rb341.Checked Or
                         rb351.Checked Or rb361.Checked Or rb371.Checked Or rb381.Checked Or rb311.Checked Or
-                        rb311.Checked Then
+                        rb311.Checked Or rb711.Checked Or rb721.Checked Then
                 karantene = 365
+
+            ElseIf rb311.Checked Or rb321.Checked Or rb331.Checked Or rb341.Checked Or rb351.Checked Or
+                rb361.Checked Or rb371.Checked Or rb381.Checked Or rb391.Checked Or rb3101.Checked Or
+                rb611.Checked Or rb621.Checked Or rb631.Checked Or rb641.Checked Or rb651.Checked Or
+                rb661.Checked Or rb671.Checked Or rb741.Checked Then
+
+                karantene = 183 'Halvt års karantene
 
             ElseIf rb211.Checked Or rb212.Checked Or rb231.Checked Or rb241.Checked Or rb251.Checked Then
                 karantene = 28

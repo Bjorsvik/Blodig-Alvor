@@ -644,9 +644,9 @@ Partial Class egenerklering
         Me.Label35.AutoSize = True
         Me.Label35.Location = New System.Drawing.Point(360, 455)
         Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(221, 13)
+        Me.Label35.Size = New System.Drawing.Size(213, 13)
         Me.Label35.TabIndex = 72
-        Me.Label35.Text = "eller med en person som har hatt posotov test"
+        Me.Label35.Text = "eller med en person som har hatt positiv test"
         '
         'Label36
         '
