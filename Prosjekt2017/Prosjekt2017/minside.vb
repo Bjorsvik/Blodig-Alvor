@@ -13,13 +13,49 @@ Public Class minside
     Dim postnummer As Integer
     Dim personID As Integer
 
+
     Private Sub minside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim personnummer = PubVar.personnummer
 
         visBruker()
         visPoststed()
 
-        MonthCalendar1.MinDate = Date.Today() 'Gjør slik at dato fra fortiden ikke kan velges.
+        MonthCalendar1.MinDate = Date.Today() 'Gjør slik at dato fra fortiden ikke kan velges
+
+        'Henter karantene.
+        Dim karanteneTabell As DataTable = bg.getKarantene(personID)
+        Dim karantene As New ArrayList()
+        Dim k As Date
+
+        For Each i In karanteneTabell.Rows
+            karantene.Add(i(0).ToString)
+        Next
+        k = (karantene(0))
+        'MsgBox(k.ToString)
+
+        If Date.Today() < k Then
+            MonthCalendar1.MinDate = k
+        End If
+
+        'henter livstid.
+        Dim livstidTabell As DataTable = bg.getLivstid(personID)
+        Dim livstid As New ArrayList()
+        Dim li As Boolean
+
+        For Each i In livstidTabell.Rows
+            livstid.Add(i(0).ToString)
+        Next
+        li = (livstid(0))
+        'MsgBox(li.ToString)
+        If li = True Then
+            MonthCalendar1.Hide()
+            Label4.Show()
+            ComboBox1.Hide()
+            MsgBox("Din karantene for å gi blod er på livstid")
+            MsgBox("Du vil nå bli logget ut")
+            Me.Close()
+        End If
+
 
     End Sub
     Private Sub btnEndreInfo_Click(sender As Object, e As EventArgs) Handles btnEndreInfo.Click
@@ -152,7 +188,7 @@ Public Class minside
             opptattArray.Add(opptatt(0).ToString)
         Next
 
-        MsgBox(opptattArray.Count.ToString)
+        'MsgBox(opptattArray.Count.ToString)
         For i = 0 To opptattArray.Count - 1
             If timeArray.Contains(opptattArray(i).ToString) Then
                 timeArray.Remove(opptattArray(i).ToString)
