@@ -23,62 +23,93 @@ Partial Class SplashScreen
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SplashScreen))
-        Me.pbLoad = New System.Windows.Forms.ProgressBar()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.lblProsent = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pbLoad = New System.Windows.Forms.ProgressBar()
         Me.SuspendLayout()
-        '
-        'pbLoad
-        '
-        Me.pbLoad.Location = New System.Drawing.Point(114, 418)
-        Me.pbLoad.Name = "pbLoad"
-        Me.pbLoad.Size = New System.Drawing.Size(447, 23)
-        Me.pbLoad.TabIndex = 1
         '
         'Timer1
         '
+        Me.Timer1.Enabled = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Arial Narrow", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(123, 66)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(191, 42)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Blodig Alvor"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(309, 88)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(60, 13)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Versjon 1.0"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(181, 184)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(78, 20)
+        Me.Label3.TabIndex = 4
+        Me.Label3.Text = "Loading..."
         '
         'lblProsent
         '
         Me.lblProsent.AutoSize = True
-        Me.lblProsent.BackColor = System.Drawing.Color.Transparent
-        Me.lblProsent.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblProsent.Location = New System.Drawing.Point(517, 357)
+        Me.lblProsent.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblProsent.ForeColor = System.Drawing.Color.White
+        Me.lblProsent.Location = New System.Drawing.Point(180, 125)
         Me.lblProsent.Name = "lblProsent"
-        Me.lblProsent.Size = New System.Drawing.Size(0, 31)
-        Me.lblProsent.TabIndex = 3
+        Me.lblProsent.Size = New System.Drawing.Size(0, 25)
+        Me.lblProsent.TabIndex = 5
         '
-        'PictureBox1
+        'pbLoad
         '
-        Me.PictureBox1.ErrorImage = Nothing
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(75, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(516, 409)
-        Me.PictureBox1.TabIndex = 4
-        Me.PictureBox1.TabStop = False
+        Me.pbLoad.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.pbLoad.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.pbLoad.Location = New System.Drawing.Point(12, 153)
+        Me.pbLoad.Name = "pbLoad"
+        Me.pbLoad.Size = New System.Drawing.Size(422, 15)
+        Me.pbLoad.Style = System.Windows.Forms.ProgressBarStyle.Continuous
+        Me.pbLoad.TabIndex = 2
         '
         'SplashScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(719, 444)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(446, 228)
         Me.Controls.Add(Me.lblProsent)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.pbLoad)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "SplashScreen"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "SplashScreen"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents pbLoad As ProgressBar
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
     Friend WithEvents lblProsent As Label
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents pbLoad As ProgressBar
 End Class
