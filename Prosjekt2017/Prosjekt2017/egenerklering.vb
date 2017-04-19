@@ -125,28 +125,6 @@ Public Class egenerklering
 
             blodgiver.registrerEgenerklering(dbDato, spmEpost, spmSMS, controllListe, personID)
 
-
-
-            'db.Query("insert into Egenerklering (dato, varsling_epost, varsling_sms, bolk1, bolk2, bolk3, bolk4, bolk5, bolk6, bolk7, bolk8, bolk9, personID, karantene) 
-            '               values (CURDATE(), @varsling_epost, @varsling_sms, @bolk1, @bolk2, @bolk3, @bolk4, @bolk5, @bolk6, @bolk7, @bolk8, @bolk9, @personID, DATE_ADD(CURDATE(), INTERVAL + @karantene DAY))")
-
-            'Dim sqlbolker As New MySqlCommand(sqlSporring, tilkobling)
-
-            'sqlbolker.Parameters.AddWithValue("@varsling_epost", varsling_epost)
-            'sqlbolker.Parameters.AddWithValue("@varsling_sms", varsling_sms)
-            'sqlbolker.Parameters.AddWithValue("@bolk1", bolk1)
-            'sqlbolker.Parameters.AddWithValue("@bolk2", bolk2)
-            'sqlbolker.Parameters.AddWithValue("@bolk3", bolk3)
-            'sqlbolker.Parameters.AddWithValue("@bolk4", bolk4)
-            'sqlbolker.Parameters.AddWithValue("@bolk5", bolk5)
-            'sqlbolker.Parameters.AddWithValue("@bolk6", bolk6)
-            'sqlbolker.Parameters.AddWithValue("@bolk7", bolk7)
-            'sqlbolker.Parameters.AddWithValue("@bolk8", bolk8)
-            'sqlbolker.Parameters.AddWithValue("@bolk9", bolk9)
-            'sqlbolker.Parameters.AddWithValue("@personID", personID)
-            'sqlbolker.Parameters.AddWithValue("@karantene", karantene)
-
-
             'sqlbolker.ExecuteNonQuery()
             MsgBox("Din egenerklæring er nå registrert.")
                 Me.Close()
