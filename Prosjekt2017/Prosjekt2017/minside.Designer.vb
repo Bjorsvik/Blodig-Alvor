@@ -49,7 +49,6 @@ Partial Class minside
         Me.Dato = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Blodposer = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tabReservasjon = New System.Windows.Forms.TabPage()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.btnReserverTime = New System.Windows.Forms.Button()
@@ -305,7 +304,6 @@ Partial Class minside
         '
         'tabReservasjon
         '
-        Me.tabReservasjon.Controls.Add(Me.Label4)
         Me.tabReservasjon.Controls.Add(Me.ComboBox1)
         Me.tabReservasjon.Controls.Add(Me.MonthCalendar1)
         Me.tabReservasjon.Controls.Add(Me.btnReserverTime)
@@ -317,18 +315,6 @@ Partial Class minside
         Me.tabReservasjon.TabIndex = 2
         Me.tabReservasjon.Text = "Reserver Time"
         Me.tabReservasjon.UseVisualStyleBackColor = True
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(424, 151)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(275, 25)
-        Me.Label4.TabIndex = 7
-        Me.Label4.Text = "Du er nektet å gi blod på livstid"
-        Me.Label4.Visible = False
         '
         'ComboBox1
         '
@@ -387,7 +373,6 @@ Partial Class minside
         Me.tabHistorikk.ResumeLayout(False)
         CType(Me.gridHistorikk, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabReservasjon.ResumeLayout(False)
-        Me.tabReservasjon.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -419,7 +404,6 @@ Partial Class minside
     Friend WithEvents lbPersonID As Label
     Friend WithEvents MonthCalendar1 As MonthCalendar
     Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Label4 As Label
     Friend WithEvents gridHistorikk As DataGridView
     Friend WithEvents Dato As DataGridViewTextBoxColumn
     Friend WithEvents Blodposer As DataGridViewTextBoxColumn
