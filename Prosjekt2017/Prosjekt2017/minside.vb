@@ -19,6 +19,7 @@ Public Class minside
 
         visBruker()
         visPoststed()
+        visHistorikk()
 
         MonthCalendar1.MinDate = Date.Today() 'Gjør slik at dato fra fortiden ikke kan velges
 
@@ -206,9 +207,6 @@ Public Class minside
         ComboBox1.DisplayMember = "Tidspunkt"
     End Sub
 
-    Public Sub visHistorikk()
-
-    End Sub
 
     Private Sub btnLogUt_Click(sender As Object, e As EventArgs) Handles btnLogUt.Click
         Me.Close()
@@ -221,5 +219,22 @@ Public Class minside
         Hjemmeside.btnBlodgiver.Show()
         Hjemmeside.btnAnsatt.Show()
         Hjemmeside.Show()
+    End Sub
+
+    Private Sub visHistorikk()
+        Dim historikkTab As New DataTable
+        Dim dato As String
+        Dim blodposer As Integer
+
+        gridHistorikk.Rows.Clear()
+
+        historikkTab = bg.visHistorikk(personID)
+        For Each row In historikkTab.Rows
+            dato = row("dato")
+            blodposer = row("blodposer")
+
+            gridHistorikk.Rows.Add(dato, blodposer)
+        Next row
+
     End Sub
 End Class
