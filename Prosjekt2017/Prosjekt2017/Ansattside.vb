@@ -334,4 +334,17 @@ Public Class Ansattside
         Hjemmeside.btnAnsatt.Show()
         Hjemmeside.Show()
     End Sub
+
+    Private Sub btnLogUt_Click(sender As Object, e As EventArgs) Handles btnLogUt.Click
+        Me.Close()
+        Hjemmeside.lbInput.Hide()
+        Hjemmeside.lbPassord.Hide()
+        Hjemmeside.txtInput.Hide()
+        Hjemmeside.txtPassord.Hide()
+        Hjemmeside.btnLogginn.Hide()
+        Hjemmeside.btnRegistrer.Hide()
+        Hjemmeside.btnBlodgiver.Show()
+        Hjemmeside.btnAnsatt.Show()
+        Hjemmeside.Show()
+    End Sub
 End Class
