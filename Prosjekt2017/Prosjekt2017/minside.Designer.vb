@@ -45,14 +45,20 @@ Partial Class minside
         Me.txtEtternavn = New System.Windows.Forms.TextBox()
         Me.txtFornavn = New System.Windows.Forms.TextBox()
         Me.tabHistorikk = New System.Windows.Forms.TabPage()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Dato = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Blodposer = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tabReservasjon = New System.Windows.Forms.TabPage()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnReserverTime = New System.Windows.Forms.Button()
         Me.btnSkjema = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.btnLogUt = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.tabBrukerinfo.SuspendLayout()
+        Me.tabHistorikk.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabReservasjon.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -269,6 +275,7 @@ Partial Class minside
         '
         'tabHistorikk
         '
+        Me.tabHistorikk.Controls.Add(Me.DataGridView1)
         Me.tabHistorikk.Location = New System.Drawing.Point(4, 22)
         Me.tabHistorikk.Name = "tabHistorikk"
         Me.tabHistorikk.Padding = New System.Windows.Forms.Padding(3)
@@ -277,12 +284,31 @@ Partial Class minside
         Me.tabHistorikk.Text = "Min Historikk"
         Me.tabHistorikk.UseVisualStyleBackColor = True
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Dato, Me.Blodposer})
+        Me.DataGridView1.Location = New System.Drawing.Point(236, 100)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(240, 150)
+        Me.DataGridView1.TabIndex = 0
+        '
+        'Dato
+        '
+        Me.Dato.HeaderText = "Dato"
+        Me.Dato.Name = "Dato"
+        '
+        'Blodposer
+        '
+        Me.Blodposer.HeaderText = "Blodposer"
+        Me.Blodposer.Name = "Blodposer"
+        '
         'tabReservasjon
         '
         Me.tabReservasjon.Controls.Add(Me.Label4)
         Me.tabReservasjon.Controls.Add(Me.ComboBox1)
         Me.tabReservasjon.Controls.Add(Me.MonthCalendar1)
-        Me.tabReservasjon.Controls.Add(Me.Button1)
+        Me.tabReservasjon.Controls.Add(Me.btnReserverTime)
         Me.tabReservasjon.Controls.Add(Me.btnSkjema)
         Me.tabReservasjon.Location = New System.Drawing.Point(4, 22)
         Me.tabReservasjon.Name = "tabReservasjon"
@@ -291,6 +317,18 @@ Partial Class minside
         Me.tabReservasjon.TabIndex = 2
         Me.tabReservasjon.Text = "Reserver Time"
         Me.tabReservasjon.UseVisualStyleBackColor = True
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Location = New System.Drawing.Point(424, 151)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(275, 25)
+        Me.Label4.TabIndex = 7
+        Me.Label4.Text = "Du er nektet å gi blod på livstid"
+        Me.Label4.Visible = False
         '
         'ComboBox1
         '
@@ -306,14 +344,14 @@ Partial Class minside
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 5
         '
-        'Button1
+        'btnReserverTime
         '
-        Me.Button1.Location = New System.Drawing.Point(525, 357)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(94, 43)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Reserver"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnReserverTime.Location = New System.Drawing.Point(525, 357)
+        Me.btnReserverTime.Name = "btnReserverTime"
+        Me.btnReserverTime.Size = New System.Drawing.Size(94, 43)
+        Me.btnReserverTime.TabIndex = 1
+        Me.btnReserverTime.Text = "Reserver"
+        Me.btnReserverTime.UseVisualStyleBackColor = True
         '
         'btnSkjema
         '
@@ -324,30 +362,30 @@ Partial Class minside
         Me.btnSkjema.Text = "Egenerklæring"
         Me.btnSkjema.UseVisualStyleBackColor = True
         '
-        'Label4
+        'btnLogUt
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(424, 151)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(275, 25)
-        Me.Label4.TabIndex = 7
-        Me.Label4.Text = "Du er nektet å gi blod på livstid"
-        Me.Label4.Visible = False
+        Me.btnLogUt.Location = New System.Drawing.Point(714, 9)
+        Me.btnLogUt.Name = "btnLogUt"
+        Me.btnLogUt.Size = New System.Drawing.Size(75, 23)
+        Me.btnLogUt.TabIndex = 8
+        Me.btnLogUt.Text = "Log ut"
+        Me.btnLogUt.UseVisualStyleBackColor = True
         '
         'minside
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(800, 476)
+        Me.ClientSize = New System.Drawing.Size(798, 464)
+        Me.Controls.Add(Me.btnLogUt)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "minside"
         Me.Text = "minside"
         Me.TabControl1.ResumeLayout(False)
         Me.tabBrukerinfo.ResumeLayout(False)
         Me.tabBrukerinfo.PerformLayout()
+        Me.tabHistorikk.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabReservasjon.ResumeLayout(False)
         Me.tabReservasjon.PerformLayout()
         Me.ResumeLayout(False)
@@ -357,7 +395,7 @@ Partial Class minside
     Friend WithEvents tabBrukerinfo As TabPage
     Friend WithEvents tabHistorikk As TabPage
     Friend WithEvents tabReservasjon As TabPage
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnReserverTime As Button
     Friend WithEvents btnSkjema As Button
     Friend WithEvents txtTelefon As TextBox
     Friend WithEvents txtEtternavn As TextBox
@@ -382,4 +420,8 @@ Partial Class minside
     Friend WithEvents MonthCalendar1 As MonthCalendar
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Dato As DataGridViewTextBoxColumn
+    Friend WithEvents Blodposer As DataGridViewTextBoxColumn
+    Friend WithEvents btnLogUt As Button
 End Class

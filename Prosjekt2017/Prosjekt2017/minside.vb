@@ -134,9 +134,9 @@ Public Class minside
         Next row
     End Sub
 
-    Public Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Public Sub btnReserverTime_Click(sender As Object, e As EventArgs) Handles btnReserverTime.Click
 
-        Dim personID As String
+        Dim personID As String = ""
         Dim tid As String = ComboBox1.SelectedValue.ToString()
 
 
@@ -147,7 +147,7 @@ Public Class minside
         For Each rad In id.Rows
             personID = rad(0).ToString()
         Next rad
-        Dim tempID As Integer = CInt(personID)
+        Dim tempID As String = personID
         res.reserver(resDato, tempID, tid)
         'MsgBox(tid)
 
@@ -206,28 +206,20 @@ Public Class minside
         ComboBox1.DisplayMember = "Tidspunkt"
     End Sub
 
-    'Private Sub visBrukeren()
-    '    Dim SDA As New MySqlDataAdapter
-    '    Dim dbDataset As New DataTable
-    '    Dim bSource As New BindingSource
-    '    Try
-    '        tilkobling.Open()
-    '        Dim tuddle As String = "'"
-    '        Dim telefondb As String = tuddle & telefon & tuddle
-    '        Dim Query As String
-    '        Query = "SELECT fornavn, etternavn, adresse, telefon, fodselsdato, Blodgiver.postnummer, Postnummer.poststed from Blodgiver JOIN Postnummer ON Postnummer.postnummer = Blodgiver.postnummer WHERE Blodgiver.telefon = " & telefondb
-    '        Dim command As New MySqlCommand(Query, tilkobling)
-    '        SDA.SelectCommand = command
-    '        SDA.Fill(dbDataset)
-    '        bSource.DataSource = dbDataset
-    '        DataGridView1.DataSource = bSource
-    '        SDA.Update(dbDataset)
+    Public Sub visHistorikk()
 
-    '        tilkobling.Close()
-    '    Catch ex As MySqlException
-    '        MessageBox.Show(ex.Message)
-    '    Finally
-    '        tilkobling.Dispose()
-    '    End Try
-    'End Sub
+    End Sub
+
+    Private Sub btnLogUt_Click(sender As Object, e As EventArgs) Handles btnLogUt.Click
+        Me.Close()
+        Hjemmeside.lbInput.Hide()
+        Hjemmeside.lbPassord.Hide()
+        Hjemmeside.txtInput.Hide()
+        Hjemmeside.txtPassord.Hide()
+        Hjemmeside.btnLogginn.Hide()
+        Hjemmeside.btnRegistrer.Hide()
+        Hjemmeside.btnBlodgiver.Show()
+        Hjemmeside.btnAnsatt.Show()
+        Hjemmeside.Show()
+    End Sub
 End Class
