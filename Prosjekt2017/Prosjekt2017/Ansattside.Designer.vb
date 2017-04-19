@@ -23,7 +23,6 @@ Partial Class Ansattside
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Statistikk = New System.Windows.Forms.TabPage()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Reservasjoner = New System.Windows.Forms.TabPage()
         Me.ResGrid = New System.Windows.Forms.DataGridView()
@@ -63,14 +62,12 @@ Partial Class Ansattside
         Me.lblPersnr = New System.Windows.Forms.Label()
         Me.txtPersonnr = New System.Windows.Forms.TextBox()
         Me.Innkalling = New System.Windows.Forms.TabPage()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.txtboxTilgjengelig = New System.Windows.Forms.TextBox()
         Me.lblTilgjengeligeGivere = New System.Windows.Forms.Label()
         Me.txtAntallGivere = New System.Windows.Forms.TextBox()
         Me.lblØnskedeGivere = New System.Windows.Forms.Label()
-        Me.cboRhesus = New System.Windows.Forms.ComboBox()
-        Me.lblRhesus = New System.Windows.Forms.Label()
         Me.cboBlodtypeInnkalling = New System.Windows.Forms.ComboBox()
-        Me.btnInnkalling = New System.Windows.Forms.Button()
         Me.lblBlodtypeØnsket = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.Søk = New System.Windows.Forms.TabPage()
@@ -94,8 +91,10 @@ Partial Class Ansattside
         Me.btnSok = New System.Windows.Forms.Button()
         Me.txtSok = New System.Windows.Forms.TextBox()
         Me.lblSok = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.btnLogUt = New System.Windows.Forms.Button()
+        Me.lbAntallDonorer = New System.Windows.Forms.Label()
+        Me.btnNormalProsedyre = New System.Windows.Forms.Button()
+        Me.btnHasteProsedyre = New System.Windows.Forms.Button()
         Me.Statistikk.SuspendLayout()
         Me.Reservasjoner.SuspendLayout()
         CType(Me.ResGrid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -112,29 +111,21 @@ Partial Class Ansattside
         '
         'Statistikk
         '
-        Me.Statistikk.Controls.Add(Me.TextBox1)
+        Me.Statistikk.Controls.Add(Me.lbAntallDonorer)
         Me.Statistikk.Controls.Add(Me.Label1)
         Me.Statistikk.Location = New System.Drawing.Point(4, 22)
         Me.Statistikk.Margin = New System.Windows.Forms.Padding(2)
         Me.Statistikk.Name = "Statistikk"
         Me.Statistikk.Padding = New System.Windows.Forms.Padding(2)
-        Me.Statistikk.Size = New System.Drawing.Size(827, 561)
+        Me.Statistikk.Size = New System.Drawing.Size(823, 550)
         Me.Statistikk.TabIndex = 5
         Me.Statistikk.Text = " Statistikk"
         Me.Statistikk.UseVisualStyleBackColor = True
         '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(178, 28)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(76, 20)
-        Me.TextBox1.TabIndex = 1
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(28, 28)
+        Me.Label1.Location = New System.Drawing.Point(30, 31)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(127, 13)
@@ -150,7 +141,7 @@ Partial Class Ansattside
         Me.Reservasjoner.Margin = New System.Windows.Forms.Padding(2)
         Me.Reservasjoner.Name = "Reservasjoner"
         Me.Reservasjoner.Padding = New System.Windows.Forms.Padding(2)
-        Me.Reservasjoner.Size = New System.Drawing.Size(827, 561)
+        Me.Reservasjoner.Size = New System.Drawing.Size(823, 550)
         Me.Reservasjoner.TabIndex = 4
         Me.Reservasjoner.Text = "Reservasjoner"
         Me.Reservasjoner.UseVisualStyleBackColor = True
@@ -223,7 +214,7 @@ Partial Class Ansattside
         Me.Lager.Margin = New System.Windows.Forms.Padding(2)
         Me.Lager.Name = "Lager"
         Me.Lager.Padding = New System.Windows.Forms.Padding(2)
-        Me.Lager.Size = New System.Drawing.Size(827, 561)
+        Me.Lager.Size = New System.Drawing.Size(823, 550)
         Me.Lager.TabIndex = 2
         Me.Lager.Text = "Lager"
         Me.Lager.UseVisualStyleBackColor = True
@@ -425,7 +416,7 @@ Partial Class Ansattside
         Me.Blodgivning.Margin = New System.Windows.Forms.Padding(2)
         Me.Blodgivning.Name = "Blodgivning"
         Me.Blodgivning.Padding = New System.Windows.Forms.Padding(2)
-        Me.Blodgivning.Size = New System.Drawing.Size(827, 561)
+        Me.Blodgivning.Size = New System.Drawing.Size(823, 550)
         Me.Blodgivning.TabIndex = 1
         Me.Blodgivning.Text = "Blodgivning"
         Me.Blodgivning.UseVisualStyleBackColor = True
@@ -478,28 +469,36 @@ Partial Class Ansattside
         '
         'Innkalling
         '
+        Me.Innkalling.Controls.Add(Me.btnHasteProsedyre)
+        Me.Innkalling.Controls.Add(Me.btnNormalProsedyre)
         Me.Innkalling.Controls.Add(Me.Button1)
         Me.Innkalling.Controls.Add(Me.txtboxTilgjengelig)
         Me.Innkalling.Controls.Add(Me.lblTilgjengeligeGivere)
         Me.Innkalling.Controls.Add(Me.txtAntallGivere)
         Me.Innkalling.Controls.Add(Me.lblØnskedeGivere)
-        Me.Innkalling.Controls.Add(Me.cboRhesus)
-        Me.Innkalling.Controls.Add(Me.lblRhesus)
         Me.Innkalling.Controls.Add(Me.cboBlodtypeInnkalling)
-        Me.Innkalling.Controls.Add(Me.btnInnkalling)
         Me.Innkalling.Controls.Add(Me.lblBlodtypeØnsket)
         Me.Innkalling.Location = New System.Drawing.Point(4, 22)
         Me.Innkalling.Margin = New System.Windows.Forms.Padding(2)
         Me.Innkalling.Name = "Innkalling"
         Me.Innkalling.Padding = New System.Windows.Forms.Padding(2)
-        Me.Innkalling.Size = New System.Drawing.Size(823, 550)
+        Me.Innkalling.Size = New System.Drawing.Size(833, 552)
         Me.Innkalling.TabIndex = 0
         Me.Innkalling.Text = "Innkalling"
         Me.Innkalling.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(646, -23)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 15
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'txtboxTilgjengelig
         '
-        Me.txtboxTilgjengelig.Location = New System.Drawing.Point(434, 113)
+        Me.txtboxTilgjengelig.Location = New System.Drawing.Point(559, 240)
         Me.txtboxTilgjengelig.Margin = New System.Windows.Forms.Padding(2)
         Me.txtboxTilgjengelig.Name = "txtboxTilgjengelig"
         Me.txtboxTilgjengelig.Size = New System.Drawing.Size(92, 20)
@@ -508,7 +507,7 @@ Partial Class Ansattside
         'lblTilgjengeligeGivere
         '
         Me.lblTilgjengeligeGivere.AutoSize = True
-        Me.lblTilgjengeligeGivere.Location = New System.Drawing.Point(310, 116)
+        Me.lblTilgjengeligeGivere.Location = New System.Drawing.Point(435, 243)
         Me.lblTilgjengeligeGivere.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblTilgjengeligeGivere.Name = "lblTilgjengeligeGivere"
         Me.lblTilgjengeligeGivere.Size = New System.Drawing.Size(121, 13)
@@ -517,7 +516,7 @@ Partial Class Ansattside
         '
         'txtAntallGivere
         '
-        Me.txtAntallGivere.Location = New System.Drawing.Point(179, 113)
+        Me.txtAntallGivere.Location = New System.Drawing.Point(304, 240)
         Me.txtAntallGivere.Margin = New System.Windows.Forms.Padding(2)
         Me.txtAntallGivere.Name = "txtAntallGivere"
         Me.txtAntallGivere.Size = New System.Drawing.Size(92, 20)
@@ -526,59 +525,28 @@ Partial Class Ansattside
         'lblØnskedeGivere
         '
         Me.lblØnskedeGivere.AutoSize = True
-        Me.lblØnskedeGivere.Location = New System.Drawing.Point(50, 115)
+        Me.lblØnskedeGivere.Location = New System.Drawing.Point(175, 242)
         Me.lblØnskedeGivere.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblØnskedeGivere.Name = "lblØnskedeGivere"
         Me.lblØnskedeGivere.Size = New System.Drawing.Size(126, 13)
         Me.lblØnskedeGivere.TabIndex = 11
         Me.lblØnskedeGivere.Text = "Antall blodgivere ønsket: "
         '
-        'cboRhesus
-        '
-        Me.cboRhesus.FormattingEnabled = True
-        Me.cboRhesus.Items.AddRange(New Object() {"+", "-"})
-        Me.cboRhesus.Location = New System.Drawing.Point(434, 63)
-        Me.cboRhesus.Margin = New System.Windows.Forms.Padding(2)
-        Me.cboRhesus.Name = "cboRhesus"
-        Me.cboRhesus.Size = New System.Drawing.Size(83, 21)
-        Me.cboRhesus.TabIndex = 10
-        Me.cboRhesus.Text = "+"
-        '
-        'lblRhesus
-        '
-        Me.lblRhesus.AutoSize = True
-        Me.lblRhesus.Location = New System.Drawing.Point(382, 63)
-        Me.lblRhesus.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.lblRhesus.Name = "lblRhesus"
-        Me.lblRhesus.Size = New System.Drawing.Size(49, 13)
-        Me.lblRhesus.TabIndex = 9
-        Me.lblRhesus.Text = "Rhesus: "
-        '
         'cboBlodtypeInnkalling
         '
         Me.cboBlodtypeInnkalling.FormattingEnabled = True
         Me.cboBlodtypeInnkalling.Items.AddRange(New Object() {"A", "B", "AB", "0"})
-        Me.cboBlodtypeInnkalling.Location = New System.Drawing.Point(179, 66)
+        Me.cboBlodtypeInnkalling.Location = New System.Drawing.Point(304, 193)
         Me.cboBlodtypeInnkalling.Margin = New System.Windows.Forms.Padding(2)
         Me.cboBlodtypeInnkalling.Name = "cboBlodtypeInnkalling"
         Me.cboBlodtypeInnkalling.Size = New System.Drawing.Size(92, 21)
         Me.cboBlodtypeInnkalling.TabIndex = 8
         Me.cboBlodtypeInnkalling.Text = "A"
         '
-        'btnInnkalling
-        '
-        Me.btnInnkalling.Location = New System.Drawing.Point(179, 233)
-        Me.btnInnkalling.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnInnkalling.Name = "btnInnkalling"
-        Me.btnInnkalling.Size = New System.Drawing.Size(312, 19)
-        Me.btnInnkalling.TabIndex = 7
-        Me.btnInnkalling.Text = "Send innkalling"
-        Me.btnInnkalling.UseVisualStyleBackColor = True
-        '
         'lblBlodtypeØnsket
         '
         Me.lblBlodtypeØnsket.AutoSize = True
-        Me.lblBlodtypeØnsket.Location = New System.Drawing.Point(86, 66)
+        Me.lblBlodtypeØnsket.Location = New System.Drawing.Point(211, 193)
         Me.lblBlodtypeØnsket.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblBlodtypeØnsket.Name = "lblBlodtypeØnsket"
         Me.lblBlodtypeØnsket.Size = New System.Drawing.Size(90, 13)
@@ -597,7 +565,7 @@ Partial Class Ansattside
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(2)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(831, 576)
+        Me.TabControl1.Size = New System.Drawing.Size(841, 578)
         Me.TabControl1.TabIndex = 1
         '
         'Søk
@@ -626,7 +594,7 @@ Partial Class Ansattside
         Me.Søk.Margin = New System.Windows.Forms.Padding(2)
         Me.Søk.Name = "Søk"
         Me.Søk.Padding = New System.Windows.Forms.Padding(2)
-        Me.Søk.Size = New System.Drawing.Size(827, 561)
+        Me.Søk.Size = New System.Drawing.Size(823, 550)
         Me.Søk.TabIndex = 6
         Me.Søk.Text = "Søk/Endre"
         Me.Søk.UseVisualStyleBackColor = True
@@ -800,15 +768,6 @@ Partial Class Ansattside
         Me.lblSok.TabIndex = 0
         Me.lblSok.Text = "Søk etter personnummer:"
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(646, -23)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 15
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'btnLogUt
         '
         Me.btnLogUt.Location = New System.Drawing.Point(749, 5)
@@ -817,6 +776,33 @@ Partial Class Ansattside
         Me.btnLogUt.TabIndex = 16
         Me.btnLogUt.Text = "Log Ut"
         Me.btnLogUt.UseVisualStyleBackColor = True
+        '
+        'lbAntallDonorer
+        '
+        Me.lbAntallDonorer.AutoSize = True
+        Me.lbAntallDonorer.Location = New System.Drawing.Point(152, 31)
+        Me.lbAntallDonorer.Name = "lbAntallDonorer"
+        Me.lbAntallDonorer.Size = New System.Drawing.Size(74, 13)
+        Me.lbAntallDonorer.TabIndex = 1
+        Me.lbAntallDonorer.Text = "Antall Donører"
+        '
+        'btnNormalProsedyre
+        '
+        Me.btnNormalProsedyre.Location = New System.Drawing.Point(591, 499)
+        Me.btnNormalProsedyre.Name = "btnNormalProsedyre"
+        Me.btnNormalProsedyre.Size = New System.Drawing.Size(108, 23)
+        Me.btnNormalProsedyre.TabIndex = 16
+        Me.btnNormalProsedyre.Text = "Normalprosedyre"
+        Me.btnNormalProsedyre.UseVisualStyleBackColor = True
+        '
+        'btnHasteProsedyre
+        '
+        Me.btnHasteProsedyre.Location = New System.Drawing.Point(705, 499)
+        Me.btnHasteProsedyre.Name = "btnHasteProsedyre"
+        Me.btnHasteProsedyre.Size = New System.Drawing.Size(115, 23)
+        Me.btnHasteProsedyre.TabIndex = 17
+        Me.btnHasteProsedyre.Text = "Hasteprosedyre"
+        Me.btnHasteProsedyre.UseVisualStyleBackColor = True
         '
         'Ansattside
         '
@@ -863,16 +849,12 @@ Partial Class Ansattside
     Friend WithEvents Innkalling As TabPage
     Friend WithEvents txtAntallGivere As TextBox
     Friend WithEvents lblØnskedeGivere As Label
-    Friend WithEvents cboRhesus As ComboBox
-    Friend WithEvents lblRhesus As Label
     Friend WithEvents cboBlodtypeInnkalling As ComboBox
-    Friend WithEvents btnInnkalling As Button
     Friend WithEvents lblBlodtypeØnsket As Label
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents txtboxTilgjengelig As TextBox
     Friend WithEvents lblTilgjengeligeGivere As Label
     Friend WithEvents numBlodmengde As NumericUpDown
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Søk As TabPage
     Friend WithEvents btnSok As Button
@@ -924,4 +906,7 @@ Partial Class Ansattside
     Friend WithEvents resID As DataGridViewTextBoxColumn
     Friend WithEvents Button1 As Button
     Friend WithEvents btnLogUt As Button
+    Friend WithEvents lbAntallDonorer As Label
+    Friend WithEvents btnHasteProsedyre As Button
+    Friend WithEvents btnNormalProsedyre As Button
 End Class

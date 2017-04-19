@@ -45,7 +45,7 @@ Partial Class minside
         Me.txtEtternavn = New System.Windows.Forms.TextBox()
         Me.txtFornavn = New System.Windows.Forms.TextBox()
         Me.tabHistorikk = New System.Windows.Forms.TabPage()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.gridHistorikk = New System.Windows.Forms.DataGridView()
         Me.Dato = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Blodposer = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tabReservasjon = New System.Windows.Forms.TabPage()
@@ -58,7 +58,7 @@ Partial Class minside
         Me.TabControl1.SuspendLayout()
         Me.tabBrukerinfo.SuspendLayout()
         Me.tabHistorikk.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gridHistorikk, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabReservasjon.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -275,7 +275,7 @@ Partial Class minside
         '
         'tabHistorikk
         '
-        Me.tabHistorikk.Controls.Add(Me.DataGridView1)
+        Me.tabHistorikk.Controls.Add(Me.gridHistorikk)
         Me.tabHistorikk.Location = New System.Drawing.Point(4, 22)
         Me.tabHistorikk.Name = "tabHistorikk"
         Me.tabHistorikk.Padding = New System.Windows.Forms.Padding(3)
@@ -284,14 +284,14 @@ Partial Class minside
         Me.tabHistorikk.Text = "Min Historikk"
         Me.tabHistorikk.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'gridHistorikk
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Dato, Me.Blodposer})
-        Me.DataGridView1.Location = New System.Drawing.Point(236, 100)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(240, 150)
-        Me.DataGridView1.TabIndex = 0
+        Me.gridHistorikk.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.gridHistorikk.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Dato, Me.Blodposer})
+        Me.gridHistorikk.Location = New System.Drawing.Point(236, 100)
+        Me.gridHistorikk.Name = "gridHistorikk"
+        Me.gridHistorikk.Size = New System.Drawing.Size(240, 150)
+        Me.gridHistorikk.TabIndex = 0
         '
         'Dato
         '
@@ -385,7 +385,7 @@ Partial Class minside
         Me.tabBrukerinfo.ResumeLayout(False)
         Me.tabBrukerinfo.PerformLayout()
         Me.tabHistorikk.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gridHistorikk, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabReservasjon.ResumeLayout(False)
         Me.tabReservasjon.PerformLayout()
         Me.ResumeLayout(False)
@@ -420,7 +420,7 @@ Partial Class minside
     Friend WithEvents MonthCalendar1 As MonthCalendar
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents gridHistorikk As DataGridView
     Friend WithEvents Dato As DataGridViewTextBoxColumn
     Friend WithEvents Blodposer As DataGridViewTextBoxColumn
     Friend WithEvents btnLogUt As Button

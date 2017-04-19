@@ -26,6 +26,14 @@ Public Class Blodgiver
         MsgBox(personID)
         db.Query("INSERT INTO Blodgiver(personID, Bpassord) VALUES('" & personID & "', '" & passord & "' )")
     End Sub
+
+    Public Function visHistorikk(personID As Integer)
+        Return db.Query("SELECT Reservasjon.dato, Blodtype.blodposer FROM Person
+                         JOIN Reservasjon ON Person.personID = Reservasjon.personID
+                         JOIN Blodtype ON Reservasjon.resID = Blodtype.resID
+                         WHERE Person.personID = " & "'" & personID & "' " &
+                         "Group By Blodtype.blodID")
+    End Function
     Public Function GetBruker(personnummer As String) As DataTable
         Return db.Query("SELECT * FROM Person JOIN Blodgiver ON Person.personID = Blodgiver.personID WHERE personnummer = " & "'" & personnummer & "'")
     End Function
