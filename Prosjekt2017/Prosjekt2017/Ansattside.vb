@@ -1,9 +1,17 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Ansattside
+    Private tilkobling As MySqlConnection
 
     Dim Postnr As New Postnummer()
+
     Dim Blodlager As New Blodlager()
     Dim Bruker As New Blodgiver()
+    Dim Blodprodukter As New Blodlager()
+    Dim BlodposeInsert As New Blodlager()
+    Dim BlodInsert As New Blodlager()
+    Dim BlodUtskrift As New Blodlager()
+    Dim blodID As New Blodlager()
+
     Dim personID As New Person()
     Dim res As New Reservasjoner()
 
@@ -37,7 +45,7 @@ Public Class Ansattside
         Dim bID As String = ""
         Dim rID As String = ""
         Dim blodposer As Integer = numBlodmengde.Text
-        Dim personIDTab As New DataTable
+        Dim personIDTab As New Datatable 
         Dim blodIDTab As New DataTable
         Dim resIDTab As New DataTable
 
@@ -48,8 +56,7 @@ Public Class Ansattside
             blodtype = row("blodtype")
 
         Next
-
-        'MsgBox(pID)
+        MsgBox(pID)
 
         resIDTab = res.getLastResIDByPersonID(pID)
 
@@ -57,10 +64,10 @@ Public Class Ansattside
             rID = row("resID")
         Next
 
-        'MsgBox(rID)
+        MsgBox(rID)
 
-        Blodlager.leggInnBlodposer(blodtype, blodposer, rID)
-        MessageBox.Show("Blodpose har blitt lagt inn", "Fullført")
+        BlodposeInsert.leggInnBlodposer(blodtype, blodposer, rID)
+
 
 
 
@@ -82,24 +89,23 @@ Public Class Ansattside
             pID = row("personID")
 
         Next
+        MsgBox(pID)
 
-        'MsgBox(pID)
-
-        resIDTab = res.getLastResIDByPersonID(pID)
+        'resIDTab = resID.getLastResIDByPersonID(pID)
 
         For Each row In resIDTab.Rows
             rID = row("resID")
         Next
 
-        'MsgBox(rID)
+        MsgBox(rID)
 
-        blodIDTab = Blodlager.getLastBlodIDByResID(rID)
+        blodIDTab = blodID.getLastBlodIDByResID(rID)
 
         For Each row In blodIDTab.Rows
             bID = row("blodID")
         Next
 
-        'MsgBox(bID)
+        MsgBox(bID)
 
         Dim celleposer As Integer = cboBlodlegeme.Text
         Dim plasmaposer As Integer = cboBlodplasma.Text
@@ -109,12 +115,11 @@ Public Class Ansattside
         MsgBox("Celleposer:" & celleposer)
         MsgBox("Plasmaposer:" & plasmaposer)
         MsgBox("Plateposer:" & plateposer)
+        MsgBox(dato)
 
-        'MsgBox(dato)
-
-        Blodlager.leggInnBlodlegeme(lagerID, bID, celleposer, dato)
-        Blodlager.leggInnBlodplasma(lagerID, bID, plasmaposer)
-        Blodlager.leggInnBlodplater(lagerID, bID, plateposer, dato)
+        BlodInsert.leggInnBlodlegeme(lagerID, bID, celleposer, dato)
+        BlodInsert.leggInnBlodplasma(lagerID, bID, plasmaposer)
+        BlodInsert.leggInnBlodplater(lagerID, bID, plateposer, dato)
 
 
 
@@ -126,9 +131,9 @@ Public Class Ansattside
         Dim ant_plateposer As Integer = cboBlodplater.Text
         Dim blodtype As String = cboBlod.Text
 
-        Blodlager.skrivUtBlodceller(ant_celleposer, blodtype)
-        Blodlager.skrivUtBlodplater(ant_plateposer, blodtype)
-        Blodlager.skrivUtBlodplasma(ant_plasmaposer, blodtype)
+        BlodUtskrift.skrivUtBlodceller(ant_celleposer, blodtype)
+        BlodUtskrift.skrivUtBlodplater(ant_plateposer, blodtype)
+        BlodUtskrift.skrivUtBlodplasma(ant_plasmaposer, blodtype)
     End Sub
 
     Private Sub visBruker()
@@ -227,7 +232,7 @@ Public Class Ansattside
 
         gridBlodplasma.Rows.Clear()
 
-        blodPlasmaTab = Blodlager.getAlleTilgjengeligeBlodPlasma()
+        blodPlasmaTab = Blodprodukter.getAlleTilgjengeligeBlodPlasma()
 
 
 
@@ -249,7 +254,7 @@ Public Class Ansattside
 
         gridBlodplater.Rows.Clear()
 
-        blodPlaterTab = Blodlager.getAlleTilgjengeligeBlodplater
+        blodPlaterTab = Blodprodukter.getAlleTilgjengeligeBlodplater
         For Each row In blodPlaterTab.Rows
             blodtype = row("blodtype")
             blodplater = row("PlaterPoser")
@@ -267,7 +272,7 @@ Public Class Ansattside
 
         gridBlodceller.Rows.Clear()
 
-        blodCellerTab = Blodlager.getAlleTilgjengeligeBlodceller
+        blodCellerTab = Blodprodukter.getAlleTilgjengeligeBlodceller
         For Each row In blodCellerTab.Rows
             blodtype = row("blodtype")
             blodceller = row("Cellerposer")
@@ -291,6 +296,7 @@ Public Class Ansattside
         Dim resDato As Date = Reservasjonskalender.SelectionRange.Start
         Dim dbDato As String = resDato.ToString("yyyy-MM-dd")
         Dim reservasjonsTabell As New DataTable
+        Dim resArray As New ArrayList()
         Dim dato As Date
         Dim persid As String
         Dim tidspunkt As String
@@ -308,31 +314,9 @@ Public Class Ansattside
             ResGrid.Rows.Add(dato.ToString("yyyy-MM-dd"), tidspunkt, persid, resid)
         Next
 
-    End Sub
-
-    Private Sub ResGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles ResGrid.CellContentClick
-        If e.ColumnIndex <> 4 Then
-            Exit Sub
-        End If
-
-        If e.ColumnIndex = 4 Then
-            ResGrid.Rows.RemoveAt(e.RowIndex)
-        End If
 
 
-    End Sub
 
-    Private Sub btnLogUt_Click(sender As Object, e As EventArgs) Handles btnLogUt.Click
-        Me.Close()
-        Hjemmeside.lbInput.Hide()
-        Hjemmeside.lbPassord.Hide()
-        Hjemmeside.txtInput.Hide()
-        Hjemmeside.txtPassord.Hide()
-        Hjemmeside.btnLogginn.Hide()
-        Hjemmeside.btnRegistrer.Hide()
-        Hjemmeside.btnBlodgiver.Show()
-        Hjemmeside.btnAnsatt.Show()
-        Hjemmeside.Show()
     End Sub
 
     Private Sub btnLogUt_Click(sender As Object, e As EventArgs) Handles btnLogUt.Click

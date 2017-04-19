@@ -26,14 +26,6 @@ Public Class Blodgiver
         MsgBox(personID)
         db.Query("INSERT INTO Blodgiver(personID, Bpassord) VALUES('" & personID & "', '" & passord & "' )")
     End Sub
-
-    Public Function visHistorikk(personID As Integer)
-        Return db.Query("SELECT Reservasjon.dato, Blodtype.blodposer FROM Person
-                         JOIN Reservasjon ON Person.personID = Reservasjon.personID
-                         JOIN Blodtype ON Reservasjon.resID = Blodtype.resID
-                         WHERE Person.personID = " & "'" & personID & "' " &
-                         "Group By Blodtype.blodID")
-    End Function
     Public Function GetBruker(personnummer As String) As DataTable
         Return db.Query("SELECT * FROM Person JOIN Blodgiver ON Person.personID = Blodgiver.personID WHERE personnummer = " & "'" & personnummer & "'")
     End Function
@@ -46,9 +38,14 @@ Public Class Blodgiver
         Return db.Query("SELECT personID FROM Person WHERE personnummer = " & "'" & personnummer & "'")
     End Function
 
-    Public Function GetIDByPersonNr(ByVal personnummer As String) As DataTable
+    Public Function GetIDByPersonNr(ByVal personnummer As Integer) As DataTable
         Return db.Query("SELECT personID FROM Person WHERE personnummer = " & "'" & personnummer & "'")
     End Function
+
+    'Public Function getpersonIDbyPassord(ByVal bPassord As Integer) As DataTable
+    '    Return db.Query("SELECT personID FROM blodgiver WHERE personID = " & "'" & bPassord & "'")
+    'End Function
+
     Public Sub addKarantene(ByVal dbKDato As Date, ByVal personID As Integer)
         db.Query("UPDATE Blodgiver SET karantene = '" & dbKDato.ToString("yyyy-MM-dd") & "' WHERE personID = '" & personID & "'")
     End Sub
@@ -69,8 +66,4 @@ Public Class Blodgiver
         Return db.Query("SELECT livstid from Blodgiver WHERE personID = '" & personID & "'")
     End Function
     'db.Query("Insert into Egenerklering (dato, varsling_epost, varsling_sms, bolk1, personID, karanteneID) values ('" & dbDato.ToString("yyyy-MM-dd") & "', " & spmEpost & ", " & spmSMS & ", '" & liste & "', " & personID & ");")
-
-    'Public Function getHistorikkByPersonID()
-
-    'End Function
 End Class
