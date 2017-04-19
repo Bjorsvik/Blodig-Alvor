@@ -643,9 +643,9 @@ Partial Class egenerklering
         Me.Label35.AutoSize = True
         Me.Label35.Location = New System.Drawing.Point(360, 455)
         Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(221, 13)
+        Me.Label35.Size = New System.Drawing.Size(213, 13)
         Me.Label35.TabIndex = 72
-        Me.Label35.Text = "eller med en person som har hatt posotov test"
+        Me.Label35.Text = "eller med en person som har hatt positiv test"
         '
         'Label36
         '
@@ -3362,7 +3362,7 @@ Partial Class egenerklering
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(705, 463)
+        Me.ClientSize = New System.Drawing.Size(722, 463)
         Me.Controls.Add(Me.lblPersonID)
         Me.Controls.Add(Me.label4030)
         Me.Controls.Add(Me.lblEtternavn)

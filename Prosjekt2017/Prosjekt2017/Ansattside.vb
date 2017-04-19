@@ -13,7 +13,7 @@ Public Class Ansattside
     Dim blodID As New Blodlager()
 
     Dim personID As New Person()
-    Dim resID As New Reservasjoner()
+    Dim res As New Reservasjoner()
 
 
     Private Sub Ansattside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -58,7 +58,7 @@ Public Class Ansattside
         Next
         MsgBox(pID)
 
-        resIDTab = resID.getLastResIDByPersonID(pID)
+        resIDTab = res.getLastResIDByPersonID(pID)
 
         For Each row In resIDTab.Rows
             rID = row("resID")
@@ -91,7 +91,7 @@ Public Class Ansattside
         Next
         MsgBox(pID)
 
-        resIDTab = resID.getLastResIDByPersonID(pID)
+        'resIDTab = resID.getLastResIDByPersonID(pID)
 
         For Each row In resIDTab.Rows
             rID = row("resID")
@@ -290,5 +290,32 @@ Public Class Ansattside
 
     Private Sub btnBlodgivning_Click(sender As Object, e As EventArgs) Handles btnBlodgivning.Click
         LeggtilBlod()
+    End Sub
+
+    Private Sub Reservasjonskalender_DateChanged(sender As Object, e As DateRangeEventArgs) Handles Reservasjonskalender.DateChanged
+        Dim resDato As Date = Reservasjonskalender.SelectionRange.Start
+        Dim dbDato As String = resDato.ToString("yyyy-MM-dd")
+        Dim reservasjonsTabell As New DataTable
+        Dim resArray As New ArrayList()
+        Dim dato As Date
+        Dim persid As String
+        Dim tidspunkt As String
+        Dim resid As String
+        reservasjonsTabell = res.getResValgtDato(dbDato)
+        ResGrid.Rows.Clear()
+
+        'MsgBox(dbDato)
+
+        For Each reserv In reservasjonsTabell.Rows()
+            resid = reserv(0).ToString
+            dato = reserv(1).ToString
+            persid = reserv(2).ToString
+            tidspunkt = reserv(3).ToString
+            ResGrid.Rows.Add(dato.ToString("yyyy-MM-dd"), tidspunkt, persid, resid)
+        Next
+
+
+
+
     End Sub
 End Class

@@ -27,7 +27,6 @@ Partial Class Ansattside
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Reservasjoner = New System.Windows.Forms.TabPage()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Reservasjonskalender = New System.Windows.Forms.MonthCalendar()
         Me.Lager = New System.Windows.Forms.TabPage()
         Me.cboBlod = New System.Windows.Forms.ComboBox()
@@ -90,6 +89,11 @@ Partial Class Ansattside
         Me.btnSok = New System.Windows.Forms.Button()
         Me.txtSok = New System.Windows.Forms.TextBox()
         Me.lblSok = New System.Windows.Forms.Label()
+        Me.ResGrid = New System.Windows.Forms.DataGridView()
+        Me.Dato = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Tidspunkt = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.resID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Statistikk.SuspendLayout()
         Me.Reservasjoner.SuspendLayout()
         Me.Lager.SuspendLayout()
@@ -101,6 +105,7 @@ Partial Class Ansattside
         Me.Innkalling.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.Søk.SuspendLayout()
+        CType(Me.ResGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Statistikk
@@ -136,8 +141,8 @@ Partial Class Ansattside
         '
         'Reservasjoner
         '
+        Me.Reservasjoner.Controls.Add(Me.ResGrid)
         Me.Reservasjoner.Controls.Add(Me.Label2)
-        Me.Reservasjoner.Controls.Add(Me.ListBox1)
         Me.Reservasjoner.Controls.Add(Me.Reservasjonskalender)
         Me.Reservasjoner.Location = New System.Drawing.Point(4, 22)
         Me.Reservasjoner.Margin = New System.Windows.Forms.Padding(2)
@@ -157,15 +162,6 @@ Partial Class Ansattside
         Me.Label2.Size = New System.Drawing.Size(143, 13)
         Me.Label2.TabIndex = 15
         Me.Label2.Text = "Reservasjoner for valgt dato:"
-        '
-        'ListBox1
-        '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(337, 84)
-        Me.ListBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(200, 173)
-        Me.ListBox1.TabIndex = 14
         '
         'Reservasjonskalender
         '
@@ -772,6 +768,35 @@ Partial Class Ansattside
         Me.lblSok.TabIndex = 0
         Me.lblSok.Text = "Søk etter personnummer:"
         '
+        'ResGrid
+        '
+        Me.ResGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.ResGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Dato, Me.Tidspunkt, Me.ID, Me.resID})
+        Me.ResGrid.Location = New System.Drawing.Point(315, 84)
+        Me.ResGrid.Name = "ResGrid"
+        Me.ResGrid.Size = New System.Drawing.Size(448, 162)
+        Me.ResGrid.TabIndex = 16
+        '
+        'Dato
+        '
+        Me.Dato.HeaderText = "Dato"
+        Me.Dato.Name = "Dato"
+        '
+        'Tidspunkt
+        '
+        Me.Tidspunkt.HeaderText = "Tidspunkt"
+        Me.Tidspunkt.Name = "Tidspunkt"
+        '
+        'ID
+        '
+        Me.ID.HeaderText = "ID"
+        Me.ID.Name = "ID"
+        '
+        'resID
+        '
+        Me.resID.HeaderText = "resID"
+        Me.resID.Name = "resID"
+        '
         'Ansattside
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -798,6 +823,7 @@ Partial Class Ansattside
         Me.TabControl1.ResumeLayout(False)
         Me.Søk.ResumeLayout(False)
         Me.Søk.PerformLayout()
+        CType(Me.ResGrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -805,7 +831,6 @@ Partial Class Ansattside
     Friend WithEvents Statistikk As TabPage
     Friend WithEvents Reservasjoner As TabPage
     Friend WithEvents Label2 As Label
-    Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Reservasjonskalender As MonthCalendar
     Friend WithEvents Lager As TabPage
     Friend WithEvents Blodgivning As TabPage
@@ -870,4 +895,9 @@ Partial Class Ansattside
     Friend WithEvents Label9 As Label
     Friend WithEvents btnSkrivUt As Button
     Friend WithEvents cboBlod As ComboBox
+    Friend WithEvents ResGrid As DataGridView
+    Friend WithEvents Dato As DataGridViewTextBoxColumn
+    Friend WithEvents Tidspunkt As DataGridViewTextBoxColumn
+    Friend WithEvents ID As DataGridViewTextBoxColumn
+    Friend WithEvents resID As DataGridViewTextBoxColumn
 End Class
