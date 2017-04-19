@@ -9,8 +9,8 @@
         Return db.Query("SELECT * from Reservasjon WHERE dato >= GETDATE()")
     End Function
 
-    Public Function getResValgtDato(ByVal dbDato As String)
-        Return db.Query("SELECT * from Reservasjon WHERE dato = '" & dbDato & "'")
+    Public Function getResValgtDato(ByVal resDato As String)
+        Return db.Query("SELECT * from Reservasjon WHERE dato = '" & resDato & "'")
     End Function
 
     Public Function getAlleReservasjoner() As DataTable
@@ -60,6 +60,34 @@ Group by Tidspunkt.tidspunkt")
         'MsgBox(CInt(reservasjonID))
 
         db.Query("INSERT INTO Reservasjon (resID, dato, personID, tidspunkt) VALUES ('" & nextresID & "', '" & dato & "', '" & personID & "', '" & tid & "');")
+    End Sub
+
+
+    Public Sub fyllCombobox(ByVal resDato, ByRef comboBox)
+        Dim timer As DataTable = getAlleTidspunkt()
+        Dim opptattTimer As DataTable = getOpptattTimer(resDato)
+        Dim comboTimer As New ArrayList()
+        Dim opptattArray As New ArrayList()
+        Dim timeArray As New ArrayList()
+
+        comboBox.DataSource = Nothing
+
+        For Each time In timer.Rows
+            timeArray.Add(time(0).ToString)
+        Next
+        For Each opptatt In opptattTimer.Rows
+            opptattArray.Add(opptatt(0).ToString)
+        Next
+
+        'MsgBox(opptattArray.Count.ToString)
+        For i = 0 To opptattArray.Count - 1
+            If timeArray.Contains(opptattArray(i).ToString) Then
+                timeArray.Remove(opptattArray(i).ToString)
+            End If
+        Next
+
+        comboBox.DataSource = timeArray
+        comboBox.DisplayMember = "Tidspunkt"
     End Sub
 
 End Class

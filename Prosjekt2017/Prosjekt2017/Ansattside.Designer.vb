@@ -23,13 +23,20 @@ Partial Class Ansattside
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Statistikk = New System.Windows.Forms.TabPage()
+        Me.lbAntallDonorer = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Reservasjoner = New System.Windows.Forms.TabPage()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.personnummer = New System.Windows.Forms.TextBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.ResGrid = New System.Windows.Forms.DataGridView()
         Me.Dato = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Tidspunkt = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.resID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Slett = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Reservasjonskalender = New System.Windows.Forms.MonthCalendar()
         Me.Lager = New System.Windows.Forms.TabPage()
@@ -62,6 +69,8 @@ Partial Class Ansattside
         Me.lblPersnr = New System.Windows.Forms.Label()
         Me.txtPersonnr = New System.Windows.Forms.TextBox()
         Me.Innkalling = New System.Windows.Forms.TabPage()
+        Me.btnHasteProsedyre = New System.Windows.Forms.Button()
+        Me.btnNormalProsedyre = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.txtboxTilgjengelig = New System.Windows.Forms.TextBox()
         Me.lblTilgjengeligeGivere = New System.Windows.Forms.Label()
@@ -92,9 +101,6 @@ Partial Class Ansattside
         Me.txtSok = New System.Windows.Forms.TextBox()
         Me.lblSok = New System.Windows.Forms.Label()
         Me.btnLogUt = New System.Windows.Forms.Button()
-        Me.lbAntallDonorer = New System.Windows.Forms.Label()
-        Me.btnNormalProsedyre = New System.Windows.Forms.Button()
-        Me.btnHasteProsedyre = New System.Windows.Forms.Button()
         Me.Statistikk.SuspendLayout()
         Me.Reservasjoner.SuspendLayout()
         CType(Me.ResGrid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -117,10 +123,19 @@ Partial Class Ansattside
         Me.Statistikk.Margin = New System.Windows.Forms.Padding(2)
         Me.Statistikk.Name = "Statistikk"
         Me.Statistikk.Padding = New System.Windows.Forms.Padding(2)
-        Me.Statistikk.Size = New System.Drawing.Size(823, 550)
+        Me.Statistikk.Size = New System.Drawing.Size(833, 552)
         Me.Statistikk.TabIndex = 5
         Me.Statistikk.Text = " Statistikk"
         Me.Statistikk.UseVisualStyleBackColor = True
+        '
+        'lbAntallDonorer
+        '
+        Me.lbAntallDonorer.AutoSize = True
+        Me.lbAntallDonorer.Location = New System.Drawing.Point(152, 31)
+        Me.lbAntallDonorer.Name = "lbAntallDonorer"
+        Me.lbAntallDonorer.Size = New System.Drawing.Size(74, 13)
+        Me.lbAntallDonorer.TabIndex = 1
+        Me.lbAntallDonorer.Text = "Antall Donører"
         '
         'Label1
         '
@@ -134,6 +149,11 @@ Partial Class Ansattside
         '
         'Reservasjoner
         '
+        Me.Reservasjoner.Controls.Add(Me.Button2)
+        Me.Reservasjoner.Controls.Add(Me.Label11)
+        Me.Reservasjoner.Controls.Add(Me.Label10)
+        Me.Reservasjoner.Controls.Add(Me.personnummer)
+        Me.Reservasjoner.Controls.Add(Me.ComboBox1)
         Me.Reservasjoner.Controls.Add(Me.ResGrid)
         Me.Reservasjoner.Controls.Add(Me.Label2)
         Me.Reservasjoner.Controls.Add(Me.Reservasjonskalender)
@@ -141,39 +161,95 @@ Partial Class Ansattside
         Me.Reservasjoner.Margin = New System.Windows.Forms.Padding(2)
         Me.Reservasjoner.Name = "Reservasjoner"
         Me.Reservasjoner.Padding = New System.Windows.Forms.Padding(2)
-        Me.Reservasjoner.Size = New System.Drawing.Size(823, 550)
+        Me.Reservasjoner.Size = New System.Drawing.Size(833, 552)
         Me.Reservasjoner.TabIndex = 4
         Me.Reservasjoner.Text = "Reservasjoner"
         Me.Reservasjoner.UseVisualStyleBackColor = True
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(216, 339)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(165, 28)
+        Me.Button2.TabIndex = 21
+        Me.Button2.Text = "Legg inn ny reservasjon"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(324, 279)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(115, 13)
+        Me.Label11.TabIndex = 20
+        Me.Label11.Text = "Tilgjengelige tidspunkt:"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(166, 279)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(80, 13)
+        Me.Label10.TabIndex = 19
+        Me.Label10.Text = "Personnummer:"
+        '
+        'personnummer
+        '
+        Me.personnummer.Location = New System.Drawing.Point(166, 298)
+        Me.personnummer.Name = "personnummer"
+        Me.personnummer.Size = New System.Drawing.Size(100, 20)
+        Me.personnummer.TabIndex = 18
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(324, 298)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 17
+        '
         'ResGrid
         '
         Me.ResGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.ResGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Dato, Me.Tidspunkt, Me.ID, Me.resID})
-        Me.ResGrid.Location = New System.Drawing.Point(315, 84)
+        Me.ResGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Dato, Me.Tidspunkt, Me.ID, Me.resID, Me.Slett})
+        Me.ResGrid.Location = New System.Drawing.Point(324, 84)
         Me.ResGrid.Name = "ResGrid"
-        Me.ResGrid.Size = New System.Drawing.Size(448, 162)
+        Me.ResGrid.Size = New System.Drawing.Size(356, 162)
         Me.ResGrid.TabIndex = 16
         '
         'Dato
         '
         Me.Dato.HeaderText = "Dato"
         Me.Dato.Name = "Dato"
+        Me.Dato.ReadOnly = True
         '
         'Tidspunkt
         '
         Me.Tidspunkt.HeaderText = "Tidspunkt"
         Me.Tidspunkt.Name = "Tidspunkt"
+        Me.Tidspunkt.ReadOnly = True
+        Me.Tidspunkt.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Tidspunkt.Width = 70
         '
         'ID
         '
         Me.ID.HeaderText = "ID"
         Me.ID.Name = "ID"
+        Me.ID.ReadOnly = True
+        Me.ID.Width = 40
         '
         'resID
         '
         Me.resID.HeaderText = "resID"
         Me.resID.Name = "resID"
+        Me.resID.ReadOnly = True
+        Me.resID.Width = 50
+        '
+        'Slett
+        '
+        Me.Slett.HeaderText = "Slett"
+        Me.Slett.Name = "Slett"
+        Me.Slett.Width = 50
         '
         'Label2
         '
@@ -187,7 +263,7 @@ Partial Class Ansattside
         '
         'Reservasjonskalender
         '
-        Me.Reservasjonskalender.Location = New System.Drawing.Point(64, 84)
+        Me.Reservasjonskalender.Location = New System.Drawing.Point(25, 84)
         Me.Reservasjonskalender.Margin = New System.Windows.Forms.Padding(7)
         Me.Reservasjonskalender.Name = "Reservasjonskalender"
         Me.Reservasjonskalender.TabIndex = 13
@@ -214,7 +290,7 @@ Partial Class Ansattside
         Me.Lager.Margin = New System.Windows.Forms.Padding(2)
         Me.Lager.Name = "Lager"
         Me.Lager.Padding = New System.Windows.Forms.Padding(2)
-        Me.Lager.Size = New System.Drawing.Size(823, 550)
+        Me.Lager.Size = New System.Drawing.Size(833, 552)
         Me.Lager.TabIndex = 2
         Me.Lager.Text = "Lager"
         Me.Lager.UseVisualStyleBackColor = True
@@ -416,7 +492,7 @@ Partial Class Ansattside
         Me.Blodgivning.Margin = New System.Windows.Forms.Padding(2)
         Me.Blodgivning.Name = "Blodgivning"
         Me.Blodgivning.Padding = New System.Windows.Forms.Padding(2)
-        Me.Blodgivning.Size = New System.Drawing.Size(823, 550)
+        Me.Blodgivning.Size = New System.Drawing.Size(833, 552)
         Me.Blodgivning.TabIndex = 1
         Me.Blodgivning.Text = "Blodgivning"
         Me.Blodgivning.UseVisualStyleBackColor = True
@@ -486,6 +562,24 @@ Partial Class Ansattside
         Me.Innkalling.TabIndex = 0
         Me.Innkalling.Text = "Innkalling"
         Me.Innkalling.UseVisualStyleBackColor = True
+        '
+        'btnHasteProsedyre
+        '
+        Me.btnHasteProsedyre.Location = New System.Drawing.Point(705, 499)
+        Me.btnHasteProsedyre.Name = "btnHasteProsedyre"
+        Me.btnHasteProsedyre.Size = New System.Drawing.Size(115, 23)
+        Me.btnHasteProsedyre.TabIndex = 17
+        Me.btnHasteProsedyre.Text = "Hasteprosedyre"
+        Me.btnHasteProsedyre.UseVisualStyleBackColor = True
+        '
+        'btnNormalProsedyre
+        '
+        Me.btnNormalProsedyre.Location = New System.Drawing.Point(591, 499)
+        Me.btnNormalProsedyre.Name = "btnNormalProsedyre"
+        Me.btnNormalProsedyre.Size = New System.Drawing.Size(108, 23)
+        Me.btnNormalProsedyre.TabIndex = 16
+        Me.btnNormalProsedyre.Text = "Normalprosedyre"
+        Me.btnNormalProsedyre.UseVisualStyleBackColor = True
         '
         'Button1
         '
@@ -594,7 +688,7 @@ Partial Class Ansattside
         Me.Søk.Margin = New System.Windows.Forms.Padding(2)
         Me.Søk.Name = "Søk"
         Me.Søk.Padding = New System.Windows.Forms.Padding(2)
-        Me.Søk.Size = New System.Drawing.Size(823, 550)
+        Me.Søk.Size = New System.Drawing.Size(833, 552)
         Me.Søk.TabIndex = 6
         Me.Søk.Text = "Søk/Endre"
         Me.Søk.UseVisualStyleBackColor = True
@@ -777,33 +871,6 @@ Partial Class Ansattside
         Me.btnLogUt.Text = "Log Ut"
         Me.btnLogUt.UseVisualStyleBackColor = True
         '
-        'lbAntallDonorer
-        '
-        Me.lbAntallDonorer.AutoSize = True
-        Me.lbAntallDonorer.Location = New System.Drawing.Point(152, 31)
-        Me.lbAntallDonorer.Name = "lbAntallDonorer"
-        Me.lbAntallDonorer.Size = New System.Drawing.Size(74, 13)
-        Me.lbAntallDonorer.TabIndex = 1
-        Me.lbAntallDonorer.Text = "Antall Donører"
-        '
-        'btnNormalProsedyre
-        '
-        Me.btnNormalProsedyre.Location = New System.Drawing.Point(591, 499)
-        Me.btnNormalProsedyre.Name = "btnNormalProsedyre"
-        Me.btnNormalProsedyre.Size = New System.Drawing.Size(108, 23)
-        Me.btnNormalProsedyre.TabIndex = 16
-        Me.btnNormalProsedyre.Text = "Normalprosedyre"
-        Me.btnNormalProsedyre.UseVisualStyleBackColor = True
-        '
-        'btnHasteProsedyre
-        '
-        Me.btnHasteProsedyre.Location = New System.Drawing.Point(705, 499)
-        Me.btnHasteProsedyre.Name = "btnHasteProsedyre"
-        Me.btnHasteProsedyre.Size = New System.Drawing.Size(115, 23)
-        Me.btnHasteProsedyre.TabIndex = 17
-        Me.btnHasteProsedyre.Text = "Hasteprosedyre"
-        Me.btnHasteProsedyre.UseVisualStyleBackColor = True
-        '
         'Ansattside
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -900,13 +967,19 @@ Partial Class Ansattside
     Friend WithEvents btnSkrivUt As Button
     Friend WithEvents cboBlod As ComboBox
     Friend WithEvents ResGrid As DataGridView
-    Friend WithEvents Dato As DataGridViewTextBoxColumn
-    Friend WithEvents Tidspunkt As DataGridViewTextBoxColumn
-    Friend WithEvents ID As DataGridViewTextBoxColumn
-    Friend WithEvents resID As DataGridViewTextBoxColumn
     Friend WithEvents Button1 As Button
     Friend WithEvents btnLogUt As Button
     Friend WithEvents lbAntallDonorer As Label
     Friend WithEvents btnHasteProsedyre As Button
     Friend WithEvents btnNormalProsedyre As Button
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents personnummer As TextBox
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Dato As DataGridViewTextBoxColumn
+    Friend WithEvents Tidspunkt As DataGridViewTextBoxColumn
+    Friend WithEvents ID As DataGridViewTextBoxColumn
+    Friend WithEvents resID As DataGridViewTextBoxColumn
+    Friend WithEvents Slett As DataGridViewButtonColumn
 End Class

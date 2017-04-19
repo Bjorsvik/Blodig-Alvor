@@ -49,12 +49,10 @@ Public Class minside
         li = (livstid(0))
         'MsgBox(li.ToString)
         If li = True Then
-            MonthCalendar1.Hide()
-            Label4.Show()
-            ComboBox1.Hide()
             MsgBox("Din karantene for å gi blod er på livstid")
             MsgBox("Du vil nå bli logget ut")
             Me.Close()
+            Application.Exit()
         End If
 
 
@@ -163,48 +161,7 @@ Public Class minside
         Dim dato As New Date()
         dato = MonthCalendar1.SelectionRange.Start
         resDato = dato.Year & "-" & dato.Month & "-" & dato.Day
-        Dim timer As DataTable = res.getAlleTidspunkt()
-        Dim opptattTimer As DataTable = res.getOpptattTimer(resDato)
-        Dim comboTimer As New ArrayList()
-        Dim opptattArray As New ArrayList()
-        Dim timeArray As New ArrayList()
-
-
-        ComboBox1.DataSource = Nothing
-        'MsgBox(opptattTimer.ToString)
-
-        ' For Each time In timer.Rows
-        '    For Each opptatt In opptattTimer.Rows
-        '   If time(0).ToString <> opptatt(0).ToString Then
-        ' If comboTimer.Contains(time(0).ToString) = False Then
-        '  comboTimer.Add(time(0).ToString)
-        ' End If
-        'End If
-        'Next
-        'Next
-        For Each time In timer.Rows
-            timeArray.Add(time(0).ToString)
-        Next
-        For Each opptatt In opptattTimer.Rows
-            opptattArray.Add(opptatt(0).ToString)
-        Next
-
-        'MsgBox(opptattArray.Count.ToString)
-        For i = 0 To opptattArray.Count - 1
-            If timeArray.Contains(opptattArray(i).ToString) Then
-                timeArray.Remove(opptattArray(i).ToString)
-            End If
-        Next
-
-
-        'If opptattTimer.Rows.Count < 1 Then
-        '    ComboBox1.DataSource = timer
-        'Else
-        '    ComboBox1.DataSource = comboTimer
-        'End If
-
-        ComboBox1.DataSource = timeArray
-        ComboBox1.DisplayMember = "Tidspunkt"
+        res.fyllCombobox(resDato, ComboBox1)
     End Sub
 
 
