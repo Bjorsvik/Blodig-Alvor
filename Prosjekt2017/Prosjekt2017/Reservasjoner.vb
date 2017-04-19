@@ -5,22 +5,26 @@
     Dim blodgiver As New Blodgiver()
 
 
-    Public Sub getGjeldendeReservasjoner()
-        db.Query("SELECT * from Reservasjoner WHERE dato >= GETDATE()")
-    End Sub
+    Public Function getGjeldendeReservasjoner()
+        Return db.Query("SELECT * from Reservasjon WHERE dato >= GETDATE()")
+    End Function
+
+    Public Function getResValgtDato(ByVal dbDato As String)
+        Return db.Query("SELECT * from Reservasjon WHERE dato = '" & dbDato & "'")
+    End Function
 
     Public Function getAlleReservasjoner() As DataTable
-        Return db.Query("SELECT * from Reservasjoner")
+        Return db.Query("SELECT * from Reservasjon")
     End Function
+
     Public Function getLastResID() As DataTable
         Return db.Query("SELECT MAX(resID) FROM Reservasjon")
     End Function
+
     Public Function getAlleTidspunkt() As DataTable
         Return db.Query("SELECT * from Tidspunkt")
     End Function
-    Public Function getMuligeTidspunkt(ByVal resdato) As DataTable
-        Return db.Query("")
-    End Function
+
     Public Function getOpptattTimer(ByVal resDato) As DataTable
         Return db.Query("Select *
 From Tidspunkt, Reservasjon
@@ -31,14 +35,9 @@ Where Tidspunkt.tidspunkt = Reservasjon.tidspunkt
 And dato = '" & resDato & "') >=5
 Group by Tidspunkt.tidspunkt")
     End Function
-    '<<<<<<< HEAD
-    Public Function getKarantene()
-        Return db.Query("Select")
-    End Function
-    '=======
+
     Public Function getLastResIDByPersonID(personID As Integer) As DataTable
         Return db.Query("SELECT MAX(resID) As resID FROM Reservasjon JOIN Person ON Reservasjon.personID = Person.personID WHERE Person.personID = '" & personID & "'")
-        '>>>>>>> refs/remotes/origin/master
     End Function
 
     Public Sub reserver(ByVal dato As String, ByVal personID As Integer, ByVal tid As String)
