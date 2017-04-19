@@ -291,7 +291,6 @@ Public Class Ansattside
         Dim resDato As Date = Reservasjonskalender.SelectionRange.Start
         Dim dbDato As String = resDato.ToString("yyyy-MM-dd")
         Dim reservasjonsTabell As New DataTable
-        Dim resArray As New ArrayList()
         Dim dato As Date
         Dim persid As String
         Dim tidspunkt As String
@@ -309,9 +308,31 @@ Public Class Ansattside
             ResGrid.Rows.Add(dato.ToString("yyyy-MM-dd"), tidspunkt, persid, resid)
         Next
 
+    End Sub
+
+    Private Sub ResGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles ResGrid.CellContentClick
+        If e.ColumnIndex <> 4 Then
+            Exit Sub
+        End If
+
+        If e.ColumnIndex = 4 Then
+            ResGrid.Rows.RemoveAt(e.RowIndex)
+        End If
 
 
+    End Sub
 
+    Private Sub btnLogUt_Click(sender As Object, e As EventArgs) Handles btnLogUt.Click
+        Me.Close()
+        Hjemmeside.lbInput.Hide()
+        Hjemmeside.lbPassord.Hide()
+        Hjemmeside.txtInput.Hide()
+        Hjemmeside.txtPassord.Hide()
+        Hjemmeside.btnLogginn.Hide()
+        Hjemmeside.btnRegistrer.Hide()
+        Hjemmeside.btnBlodgiver.Show()
+        Hjemmeside.btnAnsatt.Show()
+        Hjemmeside.Show()
     End Sub
 
     Private Sub btnLogUt_Click(sender As Object, e As EventArgs) Handles btnLogUt.Click

@@ -26,10 +26,13 @@ Partial Class Ansattside
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Reservasjoner = New System.Windows.Forms.TabPage()
         Me.ResGrid = New System.Windows.Forms.DataGridView()
+<<<<<<< HEAD
+=======
         Me.Dato = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Tidspunkt = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.resID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+>>>>>>> refs/remotes/origin/master
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Reservasjonskalender = New System.Windows.Forms.MonthCalendar()
         Me.Lager = New System.Windows.Forms.TabPage()
@@ -91,10 +94,23 @@ Partial Class Ansattside
         Me.btnSok = New System.Windows.Forms.Button()
         Me.txtSok = New System.Windows.Forms.TextBox()
         Me.lblSok = New System.Windows.Forms.Label()
+<<<<<<< HEAD
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Dato = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Tidspunkt = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.resID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Slett = New System.Windows.Forms.DataGridViewButtonColumn()
+=======
         Me.btnLogUt = New System.Windows.Forms.Button()
         Me.lbAntallDonorer = New System.Windows.Forms.Label()
         Me.btnNormalProsedyre = New System.Windows.Forms.Button()
         Me.btnHasteProsedyre = New System.Windows.Forms.Button()
+>>>>>>> refs/remotes/origin/master
         Me.Statistikk.SuspendLayout()
         Me.Reservasjoner.SuspendLayout()
         CType(Me.ResGrid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -134,6 +150,11 @@ Partial Class Ansattside
         '
         'Reservasjoner
         '
+        Me.Reservasjoner.Controls.Add(Me.Label11)
+        Me.Reservasjoner.Controls.Add(Me.Button1)
+        Me.Reservasjoner.Controls.Add(Me.Label10)
+        Me.Reservasjoner.Controls.Add(Me.TextBox2)
+        Me.Reservasjoner.Controls.Add(Me.ComboBox1)
         Me.Reservasjoner.Controls.Add(Me.ResGrid)
         Me.Reservasjoner.Controls.Add(Me.Label2)
         Me.Reservasjoner.Controls.Add(Me.Reservasjonskalender)
@@ -149,6 +170,14 @@ Partial Class Ansattside
         'ResGrid
         '
         Me.ResGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+<<<<<<< HEAD
+        Me.ResGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Dato, Me.Tidspunkt, Me.ID, Me.resID, Me.Slett})
+        Me.ResGrid.Location = New System.Drawing.Point(322, 84)
+        Me.ResGrid.Name = "ResGrid"
+        Me.ResGrid.Size = New System.Drawing.Size(345, 160)
+        Me.ResGrid.TabIndex = 16
+        '
+=======
         Me.ResGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Dato, Me.Tidspunkt, Me.ID, Me.resID})
         Me.ResGrid.Location = New System.Drawing.Point(315, 84)
         Me.ResGrid.Name = "ResGrid"
@@ -175,6 +204,7 @@ Partial Class Ansattside
         Me.resID.HeaderText = "resID"
         Me.resID.Name = "resID"
         '
+>>>>>>> refs/remotes/origin/master
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -187,7 +217,7 @@ Partial Class Ansattside
         '
         'Reservasjonskalender
         '
-        Me.Reservasjonskalender.Location = New System.Drawing.Point(64, 84)
+        Me.Reservasjonskalender.Location = New System.Drawing.Point(21, 84)
         Me.Reservasjonskalender.Margin = New System.Windows.Forms.Padding(7)
         Me.Reservasjonskalender.Name = "Reservasjonskalender"
         Me.Reservasjonskalender.TabIndex = 13
@@ -768,6 +798,49 @@ Partial Class Ansattside
         Me.lblSok.TabIndex = 0
         Me.lblSok.Text = "Søk etter personnummer:"
         '
+<<<<<<< HEAD
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(356, 307)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 17
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(185, 308)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(131, 20)
+        Me.TextBox2.TabIndex = 18
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(182, 292)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(80, 13)
+        Me.Label10.TabIndex = 19
+        Me.Label10.Text = "Personnummer:"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(268, 348)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(136, 32)
+        Me.Button1.TabIndex = 20
+        Me.Button1.Text = "Legg inn ny reservasjon"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(353, 291)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(57, 13)
+        Me.Label11.TabIndex = 21
+        Me.Label11.Text = "Tidspunkt:"
+=======
         'btnLogUt
         '
         Me.btnLogUt.Location = New System.Drawing.Point(749, 5)
@@ -776,33 +849,67 @@ Partial Class Ansattside
         Me.btnLogUt.TabIndex = 16
         Me.btnLogUt.Text = "Log Ut"
         Me.btnLogUt.UseVisualStyleBackColor = True
+>>>>>>> refs/remotes/origin/master
         '
         'lbAntallDonorer
         '
+<<<<<<< HEAD
+        Me.Dato.HeaderText = "Dato"
+        Me.Dato.Name = "Dato"
+        '
+        'Tidspunkt
+        '
+        Me.Tidspunkt.HeaderText = "Tidspunkt"
+        Me.Tidspunkt.Name = "Tidspunkt"
+        Me.Tidspunkt.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Tidspunkt.Width = 70
+=======
         Me.lbAntallDonorer.AutoSize = True
         Me.lbAntallDonorer.Location = New System.Drawing.Point(152, 31)
         Me.lbAntallDonorer.Name = "lbAntallDonorer"
         Me.lbAntallDonorer.Size = New System.Drawing.Size(74, 13)
         Me.lbAntallDonorer.TabIndex = 1
         Me.lbAntallDonorer.Text = "Antall Donører"
+>>>>>>> refs/remotes/origin/master
         '
         'btnNormalProsedyre
         '
+<<<<<<< HEAD
+        Me.ID.HeaderText = "ID"
+        Me.ID.Name = "ID"
+        Me.ID.Width = 30
+=======
         Me.btnNormalProsedyre.Location = New System.Drawing.Point(591, 499)
         Me.btnNormalProsedyre.Name = "btnNormalProsedyre"
         Me.btnNormalProsedyre.Size = New System.Drawing.Size(108, 23)
         Me.btnNormalProsedyre.TabIndex = 16
         Me.btnNormalProsedyre.Text = "Normalprosedyre"
         Me.btnNormalProsedyre.UseVisualStyleBackColor = True
+>>>>>>> refs/remotes/origin/master
         '
         'btnHasteProsedyre
         '
+<<<<<<< HEAD
+        Me.resID.HeaderText = "resID"
+        Me.resID.Name = "resID"
+        Me.resID.Width = 50
+        '
+        'Slett
+        '
+        Me.Slett.DataPropertyName = "Slett"
+        Me.Slett.HeaderText = "Slett"
+        Me.Slett.Name = "Slett"
+        Me.Slett.Text = "Slett"
+        Me.Slett.UseColumnTextForButtonValue = True
+        Me.Slett.Width = 50
+=======
         Me.btnHasteProsedyre.Location = New System.Drawing.Point(705, 499)
         Me.btnHasteProsedyre.Name = "btnHasteProsedyre"
         Me.btnHasteProsedyre.Size = New System.Drawing.Size(115, 23)
         Me.btnHasteProsedyre.TabIndex = 17
         Me.btnHasteProsedyre.Text = "Hasteprosedyre"
         Me.btnHasteProsedyre.UseVisualStyleBackColor = True
+>>>>>>> refs/remotes/origin/master
         '
         'Ansattside
         '
@@ -900,13 +1007,22 @@ Partial Class Ansattside
     Friend WithEvents btnSkrivUt As Button
     Friend WithEvents cboBlod As ComboBox
     Friend WithEvents ResGrid As DataGridView
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Button1 As Button
     Friend WithEvents Dato As DataGridViewTextBoxColumn
     Friend WithEvents Tidspunkt As DataGridViewTextBoxColumn
     Friend WithEvents ID As DataGridViewTextBoxColumn
     Friend WithEvents resID As DataGridViewTextBoxColumn
+<<<<<<< HEAD
+    Friend WithEvents Slett As DataGridViewButtonColumn
+=======
     Friend WithEvents Button1 As Button
     Friend WithEvents btnLogUt As Button
     Friend WithEvents lbAntallDonorer As Label
     Friend WithEvents btnHasteProsedyre As Button
     Friend WithEvents btnNormalProsedyre As Button
+>>>>>>> refs/remotes/origin/master
 End Class
