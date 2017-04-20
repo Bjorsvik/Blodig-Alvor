@@ -358,7 +358,7 @@ Partial Class minside
         Me.btnLogUt.Name = "btnLogUt"
         Me.btnLogUt.Size = New System.Drawing.Size(75, 23)
         Me.btnLogUt.TabIndex = 8
-        Me.btnLogUt.Text = "Log ut"
+        Me.btnLogUt.Text = "Logg ut"
         Me.btnLogUt.UseVisualStyleBackColor = True
         '
         'txtEpost

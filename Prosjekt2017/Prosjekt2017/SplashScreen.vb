@@ -1,7 +1,7 @@
 ﻿Public Class SplashScreen
     Private Sub SplashScreen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToScreen()
-        Timer1.Interval = 50
+        Timer1.Interval = 10
         Timer1.Enabled = True
         pbLoad.BackColor = Color.Orange
         pbLoad.ForeColor = Color.OrangeRed
