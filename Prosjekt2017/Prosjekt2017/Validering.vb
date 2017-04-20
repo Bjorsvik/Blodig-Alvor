@@ -43,4 +43,12 @@
             Return False
         End If
     End Function
+
+    Public Function ValidereBlodtype(blodtype As String) As Boolean
+        If blodtype.Contains("A+" Or "A-" Or "B+" Or "B-" Or "0+" Or "0-" Or "AB+" Or "AB-") Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
 End Class

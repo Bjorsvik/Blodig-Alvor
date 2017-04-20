@@ -22,13 +22,13 @@
 
     Public Function getOpptattTimer(ByVal resDato) As DataTable
         Return db.Query("Select *
-From Tidspunkt, Reservasjon
-Where Tidspunkt.tidspunkt = Reservasjon.tidspunkt
-And dato = '" & resDato & "'
-And (SELECT COUNT(*) FROM Tidspunkt, Reservasjon
-Where Tidspunkt.tidspunkt = Reservasjon.tidspunkt
-And dato = '" & resDato & "') >=5
-Group by Tidspunkt.tidspunkt")
+                         From Tidspunkt, Reservasjon
+                         Where Tidspunkt.tidspunkt = Reservasjon.tidspunkt
+                         And dato = '" & resDato & "'
+                         And (SELECT COUNT(*) FROM Tidspunkt, Reservasjon
+                         Where Tidspunkt.tidspunkt = Reservasjon.tidspunkt
+                         And dato = '" & resDato & "') >=5
+                         Group by Tidspunkt.tidspunkt")
     End Function
 
     Public Function getLastResIDByPersonID(personID As Integer) As DataTable

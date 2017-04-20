@@ -1,5 +1,8 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Ansattside
+    'PersonID her blir satt til 0 for å feilsjekke om ukjent personnummer
+    'Oppretter tomme variabler
+    'Oppretter tomme konstruktører koblet opp mot klassene for å hente ut funskjoner og prosedyrer 
     Dim Postnr As New Postnummer()
     Dim Blodlager As New Blodlager()
     Dim blodgiver As New Blodgiver()
@@ -19,7 +22,8 @@ Public Class Ansattside
         Reservasjonskalender.MinDate = Date.Now
 
     End Sub
-    Private Sub btnTest_Click(sender As Object, e As EventArgs) Handles btnInsert.Click
+    Private Sub btnInsert_Click(sender As Object, e As EventArgs) Handles btnInsert.Click
+        'Knapp som legger inn blodprodukter og oppdaterer datagrid
         leggTilBlodProdukter()
         visAlleBlodplasma()
         visAlleBlodplater()
@@ -36,7 +40,13 @@ Public Class Ansattside
         visPoststed()
     End Sub
 
+    Private Sub btnBlodgivning_Click(sender As Object, e As EventArgs) Handles btnBlodgivning.Click
+        'Knapp som legger inn blodposer fra tappingen
+        LeggtilBlod()
+    End Sub
     Private Sub LeggtilBlod()
+        'Oppretter tomme variabler og tabeller
+        'Kobler personnummer til txtLagerpersonnummer for senere bruk og blodposer til numBlodmengde
         Dim personnummer As String = txtPersonnr.Text
         Dim pID As String = ""
         Dim blodtype As String = ""
@@ -47,32 +57,33 @@ Public Class Ansattside
         Dim blodIDTab As New DataTable
         Dim resIDTab As New DataTable
 
+        'Henter ut hele brukeren ved å kalle opp funksjonen GetBruker og legger det inn i en tabell
         personIDTab = person.getPersonID(personnummer)
 
+        'Løkke for å lese alle verdiene i tabellen og setter det inn i variabler.
         For Each row In personIDTab.Rows
             pID = row("personID")
             blodtype = row("blodtype")
 
         Next
 
-        'MsgBox(pID)
-
+        'Henter ut siste reservasjonsID som er koblet til personID
         resIDTab = res.getLastResIDByPersonID(pID)
 
+        'Leser reservasjonsID og legger det inn i en variabel
         For Each row In resIDTab.Rows
             rID = row("resID")
         Next
 
-        'MsgBox(rID)
-
+        'Legger inn blodposer
         Blodlager.leggInnBlodposer(blodtype, blodposer, rID)
         MessageBox.Show("Blodpose har blitt lagt inn", "Fullført")
 
-
-
-
     End Sub
     Private Sub leggTilBlodProdukter()
+        'Oppretter tomme variabler og tabeller.
+        'Kobler personnummer til txtLagerpersonnummer for senere bruk
+        'lagerID er uansett 1 siden vi har nå bare 1 lager, kan utvides om det kommer flere lagere.
         Dim personnummer As String = txtLagerPersonnummer.Text
         Dim pID As String = ""
         Dim bID As String = ""
@@ -82,6 +93,7 @@ Public Class Ansattside
         Dim blodIDTab As New DataTable
         Dim resIDTab As New DataTable
 
+        'Finner personID utifra personnummeret som blir skrevet inn
         personIDTab = person.getPersonID(personnummer)
 
         For Each row In personIDTab.Rows
@@ -89,36 +101,43 @@ Public Class Ansattside
 
         Next
 
-        'MsgBox(pID)
-
+        'Finner siste reservasjonID ved bruk av personID
         resIDTab = res.getLastResIDByPersonID(pID)
 
         For Each row In resIDTab.Rows
             rID = row("resID")
         Next
 
-        'MsgBox(rID)
 
+        'Finner siste blodtappingsID ved bruk av reservasjonsID
         blodIDTab = Blodlager.getLastBlodIDByResID(rID)
 
         For Each row In blodIDTab.Rows
             bID = row("blodID")
         Next
 
-        'MsgBox(bID)
+        'Validerer checkbox blodlegeme
+        If validering.ValidereTall(cboBlodlegeme.Text) = False Then
+            MessageBox.Show("Fyll inn blodlegeme med riktig format", "Feilmelding")
+        End If
 
+        'Validerer checkbox blodplasma
+        If validering.ValidereTall(cboBlodplasma.Text) = False Then
+            MessageBox.Show("Fyll inn blodplasma med riktig format", "Feilmelding")
+        End If
+
+        'Validerer checkbox blodplater
+        If validering.ValidereTall(cboBlodplater.Text) = False Then
+            MessageBox.Show("Fyll inn blodplater med riktig format", "Feilmelding")
+        End If
+
+        'Legger inn checkbox verdiene inn i integer variabler
         Dim celleposer As Integer = cboBlodlegeme.Text
         Dim plasmaposer As Integer = cboBlodplasma.Text
         Dim plateposer As Integer = cboBlodplater.Text
         Dim dato As String = Date.Now.ToString("yyyy-MM-dd")
 
-
-        'MsgBox("Celleposer:" & celleposer)
-        'MsgBox("Plasmaposer:" & plasmaposer)
-        'MsgBox("Plateposer:" & plateposer)
-
-        'MsgBox(dato)
-
+        'Henter ut prosedyrer for å legg inn verdiene rett inn i databasen
         Blodlager.leggInnBlodlegeme(lagerID, bID, celleposer, dato)
         Blodlager.leggInnBlodplasma(lagerID, bID, plasmaposer)
         Blodlager.leggInnBlodplater(lagerID, bID, plateposer, dato)
@@ -128,17 +147,20 @@ Public Class Ansattside
     End Sub
 
     Private Sub skrivUtBlodProdukter()
+        'Legger inn checkbox verdiene inn i integer variabler
         Dim ant_plasmaposer As Integer = cboBlodplasma.Text
         Dim ant_celleposer As Integer = cboBlodlegeme.Text
         Dim ant_plateposer As Integer = cboBlodplater.Text
         Dim blodtype As String = cboBlod.Text
 
+        'Henter ut prosedyrer for å trekke fra verdiene i databasen
         Blodlager.skrivUtBlodceller(ant_celleposer, blodtype)
         Blodlager.skrivUtBlodplater(ant_plateposer, blodtype)
         Blodlager.skrivUtBlodplasma(ant_plasmaposer, blodtype)
     End Sub
 
     Private Sub visBruker()
+        'Oppretter tomme variabler og tabeller
         Dim brukerTab As New DataTable()
         Dim postnummere As New DataTable()
 
@@ -149,10 +171,12 @@ Public Class Ansattside
         Dim adresse As String
         Dim postnummer As Integer
         Dim blodtype As String
+        Dim epost As String
 
-
+        'Henter ut hele brukeren ved å kalle opp funksjonen GetBruker og legger det inn i en tabell
         brukerTab = blodgiver.GetBruker(txtSok.Text)
 
+        'Løkke for å lese alle verdiene i tabellen og setter det inn i variabler.
         For Each row In brukerTab.Rows
             fornavn = row("fornavn")
             etternavn = row("etternavn")
@@ -161,7 +185,9 @@ Public Class Ansattside
             adresse = row("adresse")
             postnummer = row("postnummer")
             blodtype = row("blodtype")
+            epost = row("epost")
 
+            'Framvisning i tekstbokser ved å legge variabel verdiene inn
             txtFornavn.Text = fornavn
             txtEtternavn.Text = etternavn
             txtFodselsdato.Text = fodselsdato
@@ -169,14 +195,17 @@ Public Class Ansattside
             txtAdresse.Text = adresse
             txtPostnummer.Text = postnummer
             cboBlodType.Text = blodtype
+            txtEpost.Text = epost
 
         Next row
 
     End Sub
 
     Private Sub endreInfo()
+        'Global variabel personnummer blir skrevet over av txtSok.text for senere bruk
         PubVar.personnummer = txtSok.Text
 
+        'Oppretter tomme variabler og tabeller
         Dim brukerTab As New DataTable()
         Dim postnummere As New DataTable()
 
@@ -187,31 +216,92 @@ Public Class Ansattside
         Dim adresse As String
         Dim postnummer As Integer
         Dim blodtype As String
+        Dim epost As String
 
-        brukerTab = blodgiver.GetBruker(txtSok.Text)
+        Try
 
-        For Each row In brukerTab.Rows
+            'Henter ut hele brukeren ved å kalle opp funksjonen GetBruker og legger det inn i en tabell
+            brukerTab = blodgiver.GetBruker(txtSok.Text)
 
-            fornavn = row("fornavn")
-            etternavn = row("etternavn")
-            fodselsdato = row("fodselsdato")
-            telefon = row("telefon")
-            adresse = row("adresse")
-            postnummer = row("postnummer")
-            blodtype = row("blodtype")
+            'Løkke for å lese alle verdiene i tabellen og setter det inn i variabler.
+            For Each row In brukerTab.Rows
 
-            blodgiver.endreFornavn(txtFornavn.Text)
-            blodgiver.endreEtternavn(txtEtternavn.Text)
-            blodgiver.endreFodselsdato(txtFodselsdato.Text)
-            blodgiver.endreTelefon(txtTelefon.Text)
-            blodgiver.endreAdresse(txtAdresse.Text)
-            blodgiver.endrePostnummer(txtPostnummer.Text)
-            blodgiver.endreBlodtype(cboBlodType.Text)
+                fornavn = row("fornavn")
+                etternavn = row("etternavn")
+                fodselsdato = row("fodselsdato")
+                telefon = row("telefon")
+                adresse = row("adresse")
+                postnummer = row("postnummer")
+                blodtype = row("blodtype")
+                epost = row("epost")
 
-        Next row
+                'Validerer postnummer
+                If validering.ValidereUtfylt(txtPostnummer.Text) = False Then
+                    MessageBox.Show("Fyll ut postnummer", "Feilmelding")
+                ElseIf validering.ValidereTall(txtPostnummer.Text) = False Then
+                    MessageBox.Show("Postnummer skal bare inneholde tall", "Feilmelding")
+                End If
+
+                'Validerer telefon
+                If validering.ValidereUtfylt(txtTelefon.Text) = False Then
+                    MessageBox.Show("Fyll ut telefonnummer", "Feilmelding")
+                ElseIf validering.ValidereTall(txtTelefon.Text) = False Then
+                    MessageBox.Show("Telefonnummer skal bare inneholde tall", "Feilmelding")
+                End If
+
+                'Validerer fornavn
+                If validering.ValidereUtfylt(txtFornavn.Text) = False Then
+                    MessageBox.Show("Fyll ut Fornavn", "Feilmelding")
+                ElseIf validering.ValidereTall(txtFornavn.Text) = True Then
+                    MessageBox.Show("Fornavn skal ikke inneholde tall", "Feilmelding")
+                End If
+
+                'Validerer etternavn
+                If validering.ValidereUtfylt(txtEtternavn.Text) = False Then
+                    MessageBox.Show("Fyll ut etternavn", "Feilmelding")
+                ElseIf validering.ValidereTall(txtEtternavn.Text) = True Then
+                    MessageBox.Show("Etternavn skal ikke inneholde tall", "Feilmelding")
+                End If
+
+                'Validerer fødselsdato
+                If validering.ValidereUtfylt(txtFodselsdato.Text) = False Then
+                    MessageBox.Show("Fyll ut Fødselsdato", "Feilmelding")
+                End If
+
+                If validering.ValidereUtfylt(txtAdresse.Text) = False Then
+                    MessageBox.Show("Fyll ut adresse", "Feilmelding")
+                End If
+
+                'Validerer epost
+                If validering.ValidereUtfylt(txtEpost.Text) = False Then
+                    MessageBox.Show("Fyll ut Epost", "Feilmelding")
+                ElseIf validering.ValidereEmail(txtEpost.Text) = False Then
+                    MessageBox.Show("Fyll inn epost med riktig format", "Feilmelding")
+                End If
+
+                If validering.ValidereBlodtype(cboBlod.Text) = False Then
+                    MessageBox.Show("Blodtypen finns ikke", "Feilmelding")
+                End If
+
+                'Kaller opp prosedyrer og bruker verdiene i tekstboksene for å endre det som ligger i databasen
+                person.endreFornavn(txtFornavn.Text)
+                person.endreEtternavn(txtEtternavn.Text)
+                person.endreFodselsdato(txtFodselsdato.Text)
+                person.endreTelefon(txtTelefon.Text)
+                person.endreAdresse(txtAdresse.Text)
+                person.endrePostnummer(txtPostnummer.Text)
+                person.endreBlodtype(cboBlodType.Text)
+                person.endreEpost(txtEpost.Text)
+
+
+            Next row
+
+        Catch ex As Exception
+
+        End Try
     End Sub
     Private Sub visPoststed()
-
+        'Henter ut poststedet som postnummeret er koblet til og viser det fram i en tekstboks
         Dim postnummerTab As New DataTable()
 
         Dim poststed As String
@@ -227,21 +317,25 @@ Public Class Ansattside
     End Sub
 
     Private Sub visAlleBlodplasma()
+        'Oppretter en tom tabell
         Dim blodPlasmaTab As New DataTable()
 
         Dim blodtype As String
         Dim blodplasma As String
 
+        'Tømmer datagridview
         gridBlodplasma.Rows.Clear()
 
+        'Fyller blodplasma tabell med verdier fra databasen på antall tilgjengelige blodplasma
         blodPlasmaTab = Blodlager.getAlleTilgjengeligeBlodPlasma()
 
 
-
+        'Løkke for å lese alle verdiene i tabellen og setter det inn i variabler.
         For Each row In blodPlasmaTab.Rows
             blodtype = row("blodtype")
             blodplasma = row("Plasmaposer")
 
+            'Legger inn verdier i datagrid
             gridBlodplasma.Rows.Add(blodtype, blodplasma)
 
         Next row
@@ -249,49 +343,55 @@ Public Class Ansattside
     End Sub
 
     Private Sub visAlleBlodplater()
+        'Oppretter en tom tabell
         Dim blodPlaterTab As New DataTable()
 
         Dim blodtype As String
         Dim blodplater As String
 
+        'Tømmer datagridview
         gridBlodplater.Rows.Clear()
 
+        'Fyller blodplatertabellen med verdier fra databasen på antall tilgjengelige blodplater
         blodPlaterTab = Blodlager.getAlleTilgjengeligeBlodplater
         For Each row In blodPlaterTab.Rows
             blodtype = row("blodtype")
             blodplater = row("PlaterPoser")
 
+            'Legger inn verdier i datagrid
             gridBlodplater.Rows.Add(blodtype, blodplater)
         Next row
 
     End Sub
 
     Private Sub visAlleBlodCeller()
+        'Oppretter en tom tabell
         Dim blodCellerTab As New DataTable()
 
         Dim blodtype As String
         Dim blodceller As String
 
+        'Tømmer datagridview
         gridBlodceller.Rows.Clear()
 
+        'Fyller blodcellertabellen med verdier fra databasen på antall tilgjengelige blodceller
         blodCellerTab = Blodlager.getAlleTilgjengeligeBlodceller
         For Each row In blodCellerTab.Rows
             blodtype = row("blodtype")
             blodceller = row("Cellerposer")
 
+            'Legger inn verdier i datagrid
             gridBlodceller.Rows.Add(blodtype, blodceller)
         Next row
     End Sub
 
     Private Sub btnSkrivUt_Click(sender As Object, e As EventArgs) Handles btnSkrivUt.Click
+        'Knapp som skriver ut blodprodukter og oppdaterer datagrid
+
         skrivUtBlodProdukter()
         visAlleBlodCeller()
         visAlleBlodplasma()
         visAlleBlodplater()
-    End Sub
-
-    Private Sub btnBlodgivning_Click(sender As Object, e As EventArgs) Handles btnBlodgivning.Click
-        LeggtilBlod()
     End Sub
 
     Private Sub Reservasjonskalender_DateChanged(sender As Object, e As DateRangeEventArgs) Handles Reservasjonskalender.DateChanged
@@ -309,6 +409,7 @@ Public Class Ansattside
     End Sub
 
     Private Sub btnLogUt_Click(sender As Object, e As EventArgs) Handles btnLogUt.Click
+        'Log ut knapp, fører brukeren til startsiden
         Me.Close()
         Hjemmeside.lbInput.Hide()
         Hjemmeside.lbPassord.Hide()
@@ -360,14 +461,20 @@ Public Class Ansattside
 
 
     Private Sub txtLagerPersonnummer_TextChanged(sender As Object, e As EventArgs) Handles txtLagerPersonnummer.TextChanged
+        'Oppgir max grense for lengden på personnummer tekstboksen
         txtLagerPersonnummer.MaxLength = 11
+
+        'Når tekstboksen når 11 bokstaver så hentes blodtypen til blodgiveren inn automatisk
+        'Checkboks blodtype blir da låst for å hindre registrering av feil blodtype
         If txtLagerPersonnummer.TextLength = 11 Then
             Dim BlodtypeTab As New DataTable()
             Dim blodtype As String
             Dim personID As Integer
 
+            'Henter ut hele brukeren ved å kalle opp funksjonen getPersonByPersonnummer og legger det inn i en tabell
             BlodtypeTab = person.getPersonByPersonnummer(txtLagerPersonnummer.Text)
 
+            'Løkke for å lese alle verdiene i tabellen og setter det inn i variabler.
             For Each row In BlodtypeTab.Rows
                 blodtype = row("blodtype")
                 personID = row("personID")
@@ -375,6 +482,7 @@ Public Class Ansattside
                 cboBlod.Enabled = False
             Next row
 
+            'Feilsjekk om personnummeret ikke finnes ved å se om personID = 0
             If personID = "0" Then
                 MsgBox("Personnummeret du søker etter eksisterer ikke")
             End If
@@ -382,17 +490,19 @@ Public Class Ansattside
         End If
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub btnLeggInnReservasjon_Click(sender As Object, e As EventArgs) Handles btnLeggInnReservasjon.Click
         res.addReservasjon(ComboBox1, personnummer.Text, resDato)
         Dim reservasjonsTabell As New DataTable
         reservasjonsTabell = res.getResValgtDato(resDato)
         res.fyllDatagrid(idato, Reservasjonskalender, resDato, ResGrid, reservasjonsTabell)
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub btnSokPersonnummer_Click(sender As Object, e As EventArgs) Handles btnSokPersonnummer.Click
         Dim reservasjonsTabell As New DataTable
         reservasjonsTabell = res.getPersResByPersID(personID)
         res.fyllDatagrid(idato, Reservasjonskalender, resDato, ResGrid, reservasjonsTabell)
 
     End Sub
+
+
 End Class
