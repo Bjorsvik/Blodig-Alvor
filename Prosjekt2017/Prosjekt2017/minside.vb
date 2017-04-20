@@ -49,7 +49,7 @@ Public Class minside
         li = (livstid(0))
         'MsgBox(li.ToString)
         If li = True Then
-            MsgBox("Din karantene for å gi blod er på livstid")
+            MsgBox("Din karantene for å gi blod er på livstid. Ta kontakt med betjeningen for mer informasjon")
             MsgBox("Du vil nå bli logget ut")
             Me.Close()
             Application.Exit()
