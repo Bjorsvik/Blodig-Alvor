@@ -19,6 +19,7 @@ Public Class minside
 
         visBruker()
         visPoststed()
+        visHistorikk()
 
         MonthCalendar1.MinDate = Date.Today() 'Gjør slik at dato fra fortiden ikke kan velges
 
@@ -48,12 +49,10 @@ Public Class minside
         li = (livstid(0))
         'MsgBox(li.ToString)
         If li = True Then
-            MonthCalendar1.Hide()
-            Label4.Show()
-            ComboBox1.Hide()
             MsgBox("Din karantene for å gi blod er på livstid")
             MsgBox("Du vil nå bli logget ut")
             Me.Close()
+            Application.Exit()
         End If
 
 
@@ -134,9 +133,9 @@ Public Class minside
         Next row
     End Sub
 
-    Public Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Public Sub btnReserverTime_Click(sender As Object, e As EventArgs) Handles btnReserverTime.Click
 
-        Dim personID As String
+        Dim personID As String = ""
         Dim tid As String = ComboBox1.SelectedValue.ToString()
 
 
@@ -147,7 +146,7 @@ Public Class minside
         For Each rad In id.Rows
             personID = rad(0).ToString()
         Next rad
-        Dim tempID As Integer = CInt(personID)
+        Dim tempID As String = personID
         res.reserver(resDato, tempID, tid)
         'MsgBox(tid)
 
@@ -162,72 +161,37 @@ Public Class minside
         Dim dato As New Date()
         dato = MonthCalendar1.SelectionRange.Start
         resDato = dato.Year & "-" & dato.Month & "-" & dato.Day
-        Dim timer As DataTable = res.getAlleTidspunkt()
-        Dim opptattTimer As DataTable = res.getOpptattTimer(resDato)
-        Dim comboTimer As New ArrayList()
-        Dim opptattArray As New ArrayList()
-        Dim timeArray As New ArrayList()
-
-
-        ComboBox1.DataSource = Nothing
-        'MsgBox(opptattTimer.ToString)
-
-        ' For Each time In timer.Rows
-        '    For Each opptatt In opptattTimer.Rows
-        '   If time(0).ToString <> opptatt(0).ToString Then
-        ' If comboTimer.Contains(time(0).ToString) = False Then
-        '  comboTimer.Add(time(0).ToString)
-        ' End If
-        'End If
-        'Next
-        'Next
-        For Each time In timer.Rows
-            timeArray.Add(time(0).ToString)
-        Next
-        For Each opptatt In opptattTimer.Rows
-            opptattArray.Add(opptatt(0).ToString)
-        Next
-
-        'MsgBox(opptattArray.Count.ToString)
-        For i = 0 To opptattArray.Count - 1
-            If timeArray.Contains(opptattArray(i).ToString) Then
-                timeArray.Remove(opptattArray(i).ToString)
-            End If
-        Next
-
-
-        'If opptattTimer.Rows.Count < 1 Then
-        '    ComboBox1.DataSource = timer
-        'Else
-        '    ComboBox1.DataSource = comboTimer
-        'End If
-
-        ComboBox1.DataSource = timeArray
-        ComboBox1.DisplayMember = "Tidspunkt"
+        res.fyllCombobox(resDato, ComboBox1)
     End Sub
 
-    'Private Sub visBrukeren()
-    '    Dim SDA As New MySqlDataAdapter
-    '    Dim dbDataset As New DataTable
-    '    Dim bSource As New BindingSource
-    '    Try
-    '        tilkobling.Open()
-    '        Dim tuddle As String = "'"
-    '        Dim telefondb As String = tuddle & telefon & tuddle
-    '        Dim Query As String
-    '        Query = "SELECT fornavn, etternavn, adresse, telefon, fodselsdato, Blodgiver.postnummer, Postnummer.poststed from Blodgiver JOIN Postnummer ON Postnummer.postnummer = Blodgiver.postnummer WHERE Blodgiver.telefon = " & telefondb
-    '        Dim command As New MySqlCommand(Query, tilkobling)
-    '        SDA.SelectCommand = command
-    '        SDA.Fill(dbDataset)
-    '        bSource.DataSource = dbDataset
-    '        DataGridView1.DataSource = bSource
-    '        SDA.Update(dbDataset)
 
-    '        tilkobling.Close()
-    '    Catch ex As MySqlException
-    '        MessageBox.Show(ex.Message)
-    '    Finally
-    '        tilkobling.Dispose()
-    '    End Try
-    'End Sub
+    Private Sub btnLogUt_Click(sender As Object, e As EventArgs) Handles btnLogUt.Click
+        Me.Close()
+        Hjemmeside.lbInput.Hide()
+        Hjemmeside.lbPassord.Hide()
+        Hjemmeside.txtInput.Hide()
+        Hjemmeside.txtPassord.Hide()
+        Hjemmeside.btnLogginn.Hide()
+        Hjemmeside.btnRegistrer.Hide()
+        Hjemmeside.btnBlodgiver.Show()
+        Hjemmeside.btnAnsatt.Show()
+        Hjemmeside.Show()
+    End Sub
+
+    Private Sub visHistorikk()
+        Dim historikkTab As New DataTable
+        Dim dato As String
+        Dim blodposer As Integer
+
+        gridHistorikk.Rows.Clear()
+
+        historikkTab = bg.visHistorikk(personID)
+        For Each row In historikkTab.Rows
+            dato = row("dato")
+            blodposer = row("blodposer")
+
+            gridHistorikk.Rows.Add(dato, blodposer)
+        Next row
+
+    End Sub
 End Class

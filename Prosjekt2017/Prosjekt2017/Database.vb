@@ -4,9 +4,9 @@ Public Class Database
 
     Private connectionOK As Boolean = True
     Private connString As String = "Server=mysql.stud.iie.ntnu.no;" _
-                                        & "Database=tormoli;" _
-                                        & "Uid=tormoli;" _
-                                        & "Pwd=5o2FlZ6c;" _
+                                        & "Database=g_oops_23;" _
+                                        & "Uid=g_oops_23;" _
+                                        & "Pwd=3d4CcHvg;" _
                                         & "Convert Zero Datetime=True;"
 
     Private tilkobling As New MySqlConnection
