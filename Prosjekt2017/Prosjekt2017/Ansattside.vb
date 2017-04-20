@@ -6,6 +6,7 @@ Public Class Ansattside
     Dim person As New Person()
     Dim res As New Reservasjoner()
     Dim ansatt As New Ansatt()
+    Dim validering As New Validering()
     Dim personID As String = "0"
 
 
@@ -109,9 +110,10 @@ Public Class Ansattside
         Dim plateposer As Integer = cboBlodplater.Text
         Dim dato As String = Date.Now.ToString("yyyy-MM-dd")
 
-        MsgBox("Celleposer:" & celleposer)
-        MsgBox("Plasmaposer:" & plasmaposer)
-        MsgBox("Plateposer:" & plateposer)
+
+        'MsgBox("Celleposer:" & celleposer)
+        'MsgBox("Plasmaposer:" & plasmaposer)
+        'MsgBox("Plateposer:" & plateposer)
 
         'MsgBox(dato)
 
@@ -359,6 +361,30 @@ Public Class Ansattside
             For Each row In IDTab.Rows
                 personID = row(0)
                 MsgBox(personID)
+            Next row
+
+            If personID = "0" Then
+                MsgBox("Personnummeret du søker etter eksisterer ikke")
+            End If
+
+        End If
+    End Sub
+
+
+    Private Sub txtLagerPersonnummer_TextChanged(sender As Object, e As EventArgs) Handles txtLagerPersonnummer.TextChanged
+        txtLagerPersonnummer.MaxLength = 11
+        If txtLagerPersonnummer.TextLength = 11 Then
+            Dim BlodtypeTab As New DataTable()
+            Dim blodtype As String
+            Dim personID As Integer
+
+            BlodtypeTab = person.getPersonByPersonnummer(txtLagerPersonnummer.Text)
+
+            For Each row In BlodtypeTab.Rows
+                blodtype = row("blodtype")
+                personID = row("personID")
+                cboBlod.Text = blodtype
+                cboBlod.Enabled = False
             Next row
 
             If personID = "0" Then

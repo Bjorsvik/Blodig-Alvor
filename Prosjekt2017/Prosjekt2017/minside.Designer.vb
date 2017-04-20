@@ -54,6 +54,8 @@ Partial Class minside
         Me.btnReserverTime = New System.Windows.Forms.Button()
         Me.btnSkjema = New System.Windows.Forms.Button()
         Me.btnLogUt = New System.Windows.Forms.Button()
+        Me.txtEpost = New System.Windows.Forms.TextBox()
+        Me.lbEpost = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.tabBrukerinfo.SuspendLayout()
         Me.tabHistorikk.SuspendLayout()
@@ -75,6 +77,8 @@ Partial Class minside
         '
         'tabBrukerinfo
         '
+        Me.tabBrukerinfo.Controls.Add(Me.lbEpost)
+        Me.tabBrukerinfo.Controls.Add(Me.txtEpost)
         Me.tabBrukerinfo.Controls.Add(Me.lbPersonID)
         Me.tabBrukerinfo.Controls.Add(Me.Label3)
         Me.tabBrukerinfo.Controls.Add(Me.txtFodselsdato)
@@ -159,7 +163,7 @@ Partial Class minside
         '
         'btnEndreInfo
         '
-        Me.btnEndreInfo.Location = New System.Drawing.Point(527, 243)
+        Me.btnEndreInfo.Location = New System.Drawing.Point(554, 258)
         Me.btnEndreInfo.Name = "btnEndreInfo"
         Me.btnEndreInfo.Size = New System.Drawing.Size(82, 26)
         Me.btnEndreInfo.TabIndex = 14
@@ -227,7 +231,7 @@ Partial Class minside
         'lbTelefon
         '
         Me.lbTelefon.AutoSize = True
-        Me.lbTelefon.Location = New System.Drawing.Point(161, 267)
+        Me.lbTelefon.Location = New System.Drawing.Point(168, 267)
         Me.lbTelefon.Name = "lbTelefon"
         Me.lbTelefon.Size = New System.Drawing.Size(43, 13)
         Me.lbTelefon.TabIndex = 5
@@ -357,6 +361,22 @@ Partial Class minside
         Me.btnLogUt.Text = "Log ut"
         Me.btnLogUt.UseVisualStyleBackColor = True
         '
+        'txtEpost
+        '
+        Me.txtEpost.Location = New System.Drawing.Point(219, 290)
+        Me.txtEpost.Name = "txtEpost"
+        Me.txtEpost.Size = New System.Drawing.Size(100, 20)
+        Me.txtEpost.TabIndex = 21
+        '
+        'lbEpost
+        '
+        Me.lbEpost.AutoSize = True
+        Me.lbEpost.Location = New System.Drawing.Point(168, 293)
+        Me.lbEpost.Name = "lbEpost"
+        Me.lbEpost.Size = New System.Drawing.Size(34, 13)
+        Me.lbEpost.TabIndex = 22
+        Me.lbEpost.Text = "Epost"
+        '
         'minside
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -408,4 +428,6 @@ Partial Class minside
     Friend WithEvents Dato As DataGridViewTextBoxColumn
     Friend WithEvents Blodposer As DataGridViewTextBoxColumn
     Friend WithEvents btnLogUt As Button
+    Friend WithEvents lbEpost As Label
+    Friend WithEvents txtEpost As TextBox
 End Class
