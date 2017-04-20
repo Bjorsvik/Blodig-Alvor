@@ -193,7 +193,6 @@ Public Class minside
                 End If
 
 
-
                 person.endreFornavn(txtFornavn.Text)
                 person.endreEtternavn(txtEtternavn.Text)
                 person.endreFodselsdato(txtFodselsdato.Text)

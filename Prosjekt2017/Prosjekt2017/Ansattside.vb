@@ -30,6 +30,8 @@ Public Class Ansattside
         visAlleBlodCeller()
     End Sub
     Private Sub btnSok_Click(sender As Object, e As EventArgs) Handles btnSok.Click
+        'Global variabel personnummer blir skrevet over av txtSok.text for senere bruk
+        PubVar.personnummer = txtSok.Text
         visBruker()
         visPoststed()
     End Sub
@@ -161,6 +163,7 @@ Public Class Ansattside
 
     Private Sub visBruker()
         'Oppretter tomme variabler og tabeller
+        PubVar.personnummer = txtSok.Text
         Dim brukerTab As New DataTable()
         Dim postnummere As New DataTable()
 
@@ -202,21 +205,20 @@ Public Class Ansattside
     End Sub
 
     Private Sub endreInfo()
-        'Global variabel personnummer blir skrevet over av txtSok.text for senere bruk
-        PubVar.personnummer = txtSok.Text
 
         'Oppretter tomme variabler og tabeller
         Dim brukerTab As New DataTable()
         Dim postnummere As New DataTable()
-
         Dim fornavn As String
         Dim etternavn As String
-        Dim fodselsdato As Date
+        Dim fodselsdato As String
         Dim telefon As Integer
         Dim adresse As String
         Dim postnummer As Integer
         Dim blodtype As String
         Dim epost As String
+
+
 
         Try
 
@@ -279,7 +281,7 @@ Public Class Ansattside
                     MessageBox.Show("Fyll inn epost med riktig format", "Feilmelding")
                 End If
 
-                If validering.ValidereBlodtype(cboBlod.Text) = False Then
+                If validering.ValidereBlodtype(cboBlodType.Text) = False Then
                     MessageBox.Show("Blodtypen finns ikke", "Feilmelding")
                 End If
 
@@ -299,6 +301,7 @@ Public Class Ansattside
         Catch ex As Exception
 
         End Try
+
     End Sub
     Private Sub visPoststed()
         'Henter ut poststedet som postnummeret er koblet til og viser det fram i en tekstboks
@@ -503,6 +506,4 @@ Public Class Ansattside
         res.fyllDatagrid(idato, Reservasjonskalender, resDato, ResGrid, reservasjonsTabell)
 
     End Sub
-
-
 End Class
