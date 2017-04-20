@@ -32,11 +32,6 @@ Partial Class Ansattside
         Me.personnummer = New System.Windows.Forms.TextBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.ResGrid = New System.Windows.Forms.DataGridView()
-        Me.Dato = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Tidspunkt = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.resID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Slett = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Reservasjonskalender = New System.Windows.Forms.MonthCalendar()
         Me.Lager = New System.Windows.Forms.TabPage()
@@ -101,6 +96,12 @@ Partial Class Ansattside
         Me.txtSok = New System.Windows.Forms.TextBox()
         Me.lblSok = New System.Windows.Forms.Label()
         Me.btnLogUt = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Dato = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Tidspunkt = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.resID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Slett = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Statistikk.SuspendLayout()
         Me.Reservasjoner.SuspendLayout()
         CType(Me.ResGrid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -149,6 +150,7 @@ Partial Class Ansattside
         '
         'Reservasjoner
         '
+        Me.Reservasjoner.Controls.Add(Me.Button3)
         Me.Reservasjoner.Controls.Add(Me.Button2)
         Me.Reservasjoner.Controls.Add(Me.Label11)
         Me.Reservasjoner.Controls.Add(Me.Label10)
@@ -168,7 +170,7 @@ Partial Class Ansattside
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(216, 339)
+        Me.Button2.Location = New System.Drawing.Point(280, 338)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(165, 28)
         Me.Button2.TabIndex = 21
@@ -216,40 +218,6 @@ Partial Class Ansattside
         Me.ResGrid.Name = "ResGrid"
         Me.ResGrid.Size = New System.Drawing.Size(356, 162)
         Me.ResGrid.TabIndex = 16
-        '
-        'Dato
-        '
-        Me.Dato.HeaderText = "Dato"
-        Me.Dato.Name = "Dato"
-        Me.Dato.ReadOnly = True
-        '
-        'Tidspunkt
-        '
-        Me.Tidspunkt.HeaderText = "Tidspunkt"
-        Me.Tidspunkt.Name = "Tidspunkt"
-        Me.Tidspunkt.ReadOnly = True
-        Me.Tidspunkt.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Tidspunkt.Width = 70
-        '
-        'ID
-        '
-        Me.ID.HeaderText = "ID"
-        Me.ID.Name = "ID"
-        Me.ID.ReadOnly = True
-        Me.ID.Width = 40
-        '
-        'resID
-        '
-        Me.resID.HeaderText = "resID"
-        Me.resID.Name = "resID"
-        Me.resID.ReadOnly = True
-        Me.resID.Width = 50
-        '
-        'Slett
-        '
-        Me.Slett.HeaderText = "Slett"
-        Me.Slett.Name = "Slett"
-        Me.Slett.Width = 50
         '
         'Label2
         '
@@ -871,6 +839,49 @@ Partial Class Ansattside
         Me.btnLogUt.Text = "Log Ut"
         Me.btnLogUt.UseVisualStyleBackColor = True
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(166, 338)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(80, 26)
+        Me.Button3.TabIndex = 22
+        Me.Button3.Text = "Søk"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Dato
+        '
+        Me.Dato.HeaderText = "Dato"
+        Me.Dato.Name = "Dato"
+        Me.Dato.ReadOnly = True
+        '
+        'Tidspunkt
+        '
+        Me.Tidspunkt.HeaderText = "Tidspunkt"
+        Me.Tidspunkt.Name = "Tidspunkt"
+        Me.Tidspunkt.ReadOnly = True
+        Me.Tidspunkt.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Tidspunkt.Width = 70
+        '
+        'ID
+        '
+        Me.ID.HeaderText = "pID"
+        Me.ID.Name = "ID"
+        Me.ID.ReadOnly = True
+        Me.ID.Width = 40
+        '
+        'resID
+        '
+        Me.resID.HeaderText = "resID"
+        Me.resID.Name = "resID"
+        Me.resID.ReadOnly = True
+        Me.resID.Width = 50
+        '
+        'Slett
+        '
+        Me.Slett.HeaderText = "Slett"
+        Me.Slett.Name = "Slett"
+        Me.Slett.Width = 50
+        '
         'Ansattside
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -977,6 +988,7 @@ Partial Class Ansattside
     Friend WithEvents personnummer As TextBox
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
     Friend WithEvents Dato As DataGridViewTextBoxColumn
     Friend WithEvents Tidspunkt As DataGridViewTextBoxColumn
     Friend WithEvents ID As DataGridViewTextBoxColumn

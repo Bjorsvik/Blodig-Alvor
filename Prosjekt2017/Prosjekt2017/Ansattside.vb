@@ -8,6 +8,8 @@ Public Class Ansattside
     Dim ansatt As New Ansatt()
     Dim validering As New Validering()
     Dim personID As String = "0"
+    Dim idato As Date
+    Dim resDato As String
 
 
     Private Sub Ansattside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -293,26 +295,12 @@ Public Class Ansattside
     End Sub
 
     Private Sub Reservasjonskalender_DateChanged(sender As Object, e As DateRangeEventArgs) Handles Reservasjonskalender.DateChanged
-        Dim idato As Date = Reservasjonskalender.SelectionRange.Start
-        Dim resDato As String = idato.ToString("yyyy-MM-dd")
+
+        idato = Reservasjonskalender.SelectionRange.Start
+        resDato = idato.ToString("yyyy-MM-dd")
         Dim reservasjonsTabell As New DataTable
-        Dim resArray As New ArrayList()
-        Dim dato As Date
-        Dim persid As String
-        Dim tidspunkt As String
-        Dim resid As String
         reservasjonsTabell = res.getResValgtDato(resDato)
-        ResGrid.Rows.Clear()
-
-        'MsgBox(dbDato)
-
-        For Each reserv In reservasjonsTabell.Rows()
-            resid = reserv(0).ToString
-            dato = reserv(1).ToString
-            persid = reserv(2).ToString
-            tidspunkt = reserv(3).ToString
-            ResGrid.Rows.Add(dato.ToString("yyyy-MM-dd"), tidspunkt, persid, resid)
-        Next
+        res.fyllDatagrid(idato, Reservasjonskalender, resDato, ResGrid, reservasjonsTabell)
 
         res.fyllCombobox(resDato, ComboBox1)
 
@@ -392,5 +380,19 @@ Public Class Ansattside
             End If
 
         End If
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        res.addReservasjon(ComboBox1, personnummer.Text, resDato)
+        Dim reservasjonsTabell As New DataTable
+        reservasjonsTabell = res.getResValgtDato(resDato)
+        res.fyllDatagrid(idato, Reservasjonskalender, resDato, ResGrid, reservasjonsTabell)
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim reservasjonsTabell As New DataTable
+        reservasjonsTabell = res.getPersResByPersID(personID)
+        res.fyllDatagrid(idato, Reservasjonskalender, resDato, ResGrid, reservasjonsTabell)
+
     End Sub
 End Class
