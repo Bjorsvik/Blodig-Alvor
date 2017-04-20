@@ -63,9 +63,9 @@
         db.Query("UPDATE Person SET epost = '" & epost & "' WHERE personnummer = '" & PubVar.personnummer & "'")
     End Sub
 
-    Public Function GetPersonnummer() As DataTable
+    Public Function GetPersonByGlobalPersonnummer() As DataTable
         Return db.Query("SELECT * FROM Person JOIN Blodgiver WHERE Person.personID = Blodgiver.personID And personnummer = " & "'" & PubVar.personnummer & "'")
-        End Function
+    End Function
 
     Public Function getLastPersonID() As DataTable
         Return db.Query("SELECT MAX(personID) FROM Person")
