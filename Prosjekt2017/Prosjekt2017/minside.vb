@@ -1,8 +1,10 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class minside
     Dim bg As New Blodgiver()
+    Dim person As New Person()
     Dim postnr As New Postnummer()
     Dim res As New Reservasjoner
+    Dim validering As New Validering()
     Dim resDato As String
     Dim fornavn As String
     Dim etternavn As String
@@ -10,6 +12,7 @@ Public Class minside
     Dim personnummer As String
     Dim telefon As Integer
     Dim adresse As String
+    Dim epost As String
     Dim postnummer As Integer
     Dim personID As Integer
 
@@ -77,6 +80,7 @@ Public Class minside
             personnummer = row("personnummer")
             telefon = row("telefon")
             adresse = row("adresse")
+            epost = row("epost")
             postnummer = row("postnummer")
             personID = row("personID")
 
@@ -86,6 +90,7 @@ Public Class minside
             txtPersonnummer.Text = personnummer
             txtTelefon.Text = telefon
             txtAdresse.Text = adresse
+            txtEpost.Text = epost
             txtPostnummer.Text = postnummer
             lbPersonID.Text = personID
 
@@ -113,24 +118,87 @@ Public Class minside
 
         brukerTab = bg.GetPersonnummer()
 
-        For Each row In brukerTab.Rows
+        Try
+            For Each row In brukerTab.Rows
 
-            fornavn = row("fornavn")
-            etternavn = row("etternavn")
-            fodselsdato = row("fodselsdato")
-            personnummer = row("personnummer")
-            telefon = row("telefon")
-            adresse = row("adresse")
-            postnummer = row("postnummer")
+                fornavn = row("fornavn")
+                etternavn = row("etternavn")
+                fodselsdato = row("fodselsdato")
+                personnummer = row("personnummer")
+                telefon = row("telefon")
+                adresse = row("adresse")
+                epost = row("epost")
+                postnummer = row("postnummer")
 
-            bg.endreFornavn(txtFornavn.Text)
-            bg.endreEtternavn(txtEtternavn.Text)
-            bg.endreFodselsdato(txtFodselsdato.Text)
-            bg.endreTelefon(txtTelefon.Text)
-            bg.endreAdresse(txtAdresse.Text)
-            bg.endrePostnummer(txtPostnummer.Text)
+                'Validerer postnummer
+                If Validering.ValidereUtfylt(txtPostnummer.Text) = False Then
+                    MessageBox.Show("Fyll ut postnummer", "Feilmelding")
+                ElseIf Validering.ValidereTall(txtPostnummer.Text) = False Then
+                    MessageBox.Show("Postnummer skal bare inneholde tall", "Feilmelding")
+                End If
 
-        Next row
+                'Validerer telefon
+                If validering.ValidereUtfylt(txtTelefon.Text) = False Then
+                    MessageBox.Show("Fyll ut telefonnummer", "Feilmelding")
+                ElseIf validering.ValidereTall(txttelefon.Text) = False Then
+                    MessageBox.Show("Telefonnummer skal bare inneholde tall", "Feilmelding")
+                End If
+
+                'Validerer fornavn
+                If Validering.ValidereUtfylt(txtFornavn.Text) = False Then
+                    MessageBox.Show("Fyll ut Fornavn", "Feilmelding")
+                ElseIf Validering.ValidereTall(txtFornavn.Text) = True Then
+                    MessageBox.Show("Fornavn skal ikke inneholde tall", "Feilmelding")
+                End If
+
+                'Validerer etternavn
+                If Validering.ValidereUtfylt(txtEtternavn.Text) = False Then
+                    MessageBox.Show("Fyll ut etternavn", "Feilmelding")
+                ElseIf Validering.ValidereTall(txtEtternavn.Text) = True Then
+                    MessageBox.Show("Etternavn skal ikke inneholde tall", "Feilmelding")
+                End If
+
+                'Validerer fødselsdato
+                If Validering.ValidereUtfylt(txtFodselsdato.Text) = False Then
+                    MessageBox.Show("Fyll ut Fødselsdato", "Feilmelding")
+                End If
+
+                If Validering.ValidereUtfylt(txtAdresse.Text) = False Then
+                    MessageBox.Show("Fyll ut adresse", "Feilmelding")
+                End If
+
+                'Validerer personnummer
+                If Validering.ValidereUtfylt(txtPersonnummer.Text) = False Then
+                    MessageBox.Show("Fyll ut personnummer", "Feilmelding")
+                ElseIf Validering.ValidereTall(txtPersonnummer.Text) = False Then
+                    MessageBox.Show("Personnummer skal bare inneholde tall", "Feilmelding")
+                ElseIf Validering.ValiderePersonnummer(txtPersonnummer.Text) = False Then
+                    MessageBox.Show("Et personnummer inneholder 11 tall", "Feilmelding")
+                End If
+
+                'Validerer epost
+                If validering.ValidereUtfylt(txtEpost.Text) = False Then
+                    MessageBox.Show("Fyll ut Epost", "Feilmelding")
+                ElseIf validering.ValidereEmail(txtEpost.Text) = False Then
+                    MessageBox.Show("Fyll inn med riktig format", "Feilmelding")
+                End If
+
+
+
+                person.endreFornavn(txtFornavn.Text)
+                person.endreEtternavn(txtEtternavn.Text)
+                person.endreFodselsdato(txtFodselsdato.Text)
+                person.endreTelefon(txtTelefon.Text)
+                person.endreAdresse(txtAdresse.Text)
+                person.endreEpost(txtEpost.Text)
+                person.endrePostnummer(txtPostnummer.Text)
+
+            Next row
+
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 
     Public Sub btnReserverTime_Click(sender As Object, e As EventArgs) Handles btnReserverTime.Click
