@@ -1,6 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Registreringsskjema
     Dim postnr As New Postnummer()
+    Dim validering As New Validering()
     Private Sub Registreringsskjema_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim FixedString As String = ToUpperFirst(txtFornavn.Text)
         If txtFornavn.Text <> FixedString Then txtFornavn.Text = FixedString
@@ -26,55 +27,85 @@ Public Class Registreringsskjema
         Dim bpassord = txtBekreftPassord.Text
 
 
-        If txtFornavn.Text = "" Then
-            lblFornavnFeil.Text = ("Fyll ut")
-        End If
+        Try
+            'Validerer postnummer
+            If validering.ValidereUtfylt(txtPostnummer.Text) = False Then
+                MessageBox.Show("Fyll ut postnummer", "Feilmelding")
+            ElseIf validering.ValidereTall(txtPostnummer.Text) = False Then
+                MessageBox.Show("Postnummer skal bare inneholde tall", "Feilmelding")
+            End If
 
-        If txtEtternavn.Text = "" Then
-            lblEtternavnFeil.Text = ("Fyll ut")
-        End If
+            'Validerer telefon
+            If validering.ValidereUtfylt(txtTlf.Text) = False Then
+                MessageBox.Show("Fyll ut telefonnummer", "Feilmelding")
+            ElseIf validering.ValidereTall(txtTlf.Text) = False Then
+                MessageBox.Show("Telefonnummer skal bare inneholde tall", "Feilmelding")
+            End If
 
-        If txtAdresse.Text = "" Then
-            lblAdresseFeil.Text = ("Fyll ut")
-        End If
+            'Validerer fornavn
+            If validering.ValidereUtfylt(txtFornavn.Text) = False Then
+                MessageBox.Show("Fyll ut Fornavn", "Feilmelding")
+            ElseIf validering.ValidereTall(txtFornavn.Text) = True Then
+                MessageBox.Show("Fornavn skal ikke inneholde tall", "Feilmelding")
+            End If
 
-        If txtPostnummer.Text = "" Then
-            lblPostnrFeil.Text = ("Fyll ut")
-        End If
+            'Validerer etternavn
+            If validering.ValidereUtfylt(txtEtternavn.Text) = False Then
+                MessageBox.Show("Fyll ut etternavn", "Feilmelding")
+            ElseIf validering.ValidereTall(txtEtternavn.Text) = True Then
+                MessageBox.Show("Etternavn skal ikke inneholde tall", "Feilmelding")
+            End If
 
-        If txtFodselsdato.Text = "" Then
-            lblFodselFeil.Text = ("Fyll ut")
-        End If
+            'Validerer fødselsdato
+            If validering.ValidereUtfylt(txtFodselsdato.Text) = False Then
+                MessageBox.Show("Fyll ut Fødselsdato", "Feilmelding")
+            End If
 
-        If txtPersonnummer.Text = "" Then
-            lblPersnrFeil.Text = ("Fyll ut")
-        End If
+            If validering.ValidereUtfylt(txtAdresse.Text) = False Then
+                MessageBox.Show("Fyll ut adresse", "Feilmelding")
+            End If
 
-        If txtTlf.Text = "" Then
-            lblTelefonFeil.Text = ("Fyll ut")
-        End If
+            'Validerer personnummer
+            If validering.ValidereUtfylt(txtPersonnummer.Text) = False Then
+                MessageBox.Show("Fyll ut personnummer", "Feilmelding")
+            ElseIf validering.ValidereTall(txtPersonnummer.Text) = False Then
+                MessageBox.Show("Personnummer skal bare inneholde tall", "Feilmelding")
+            ElseIf validering.ValiderePersonnummer(txtPersonnummer.text) = False Then
+                MessageBox.Show("Et personnummer inneholder 11 tall", "Feilmelding")
+            End If
 
-        If txtEpost.Text = "" Then
-            lblEpostFeil.Text = ("Fyll ut")
-        End If
+            'Validerer passord
+            If validering.ValidereUtfylt(txtPassord.Text) = False Then
+                MessageBox.Show("Fyll ut passord", "Feilmelding")
+            End If
 
-        If txtPassord.Text = "" Then
-            lblPwFeil.Text = ("Fyll ut")
-        End If
+            'Validerer epost
+            If validering.ValidereUtfylt(txtEpost.Text) = False Then
+                MessageBox.Show("Fyll ut Epost", "Feilmelding")
+            ElseIf validering.ValidereEmail(txtEpost.Text) = False Then
+                MessageBox.Show("Fyll inn med riktig format", "Feilmelding")
+            End If
 
-        If txtBekreftPassord.Text = "" Then
-            lblPw2Feil.Text = ("Fyll ut")
-        End If
 
-        If bpassord = passord Then
-            Dim nyBruker As New Blodgiver(txtPassord.Text, txtFornavn.Text, txtEtternavn.Text, txtFodselsdato.Text, txtPersonnummer.Text,
-                                             txtTlf.Text, txtAdresse.Text, txtPostnummer.Text, txtEpost.Text)
-            nyBruker.regBlodgiver()
 
-            Me.Close()
-        Else
-            MsgBox("Passordene er ikke like")
-        End If
+            If bpassord = passord Then
+                Dim nyBruker As New Blodgiver(txtPassord.Text, txtFornavn.Text, txtEtternavn.Text, txtFodselsdato.Text, txtPersonnummer.Text,
+                                                 txtTlf.Text, txtAdresse.Text, txtPostnummer.Text, txtEpost.Text)
+                nyBruker.regBlodgiver()
+
+                Me.Close()
+            Else
+                MsgBox("Passordene er ikke like")
+            End If
+
+        Catch ex As Exception
+
+        End Try
+
+
+
+
+
     End Sub
 
     Private Sub txtPostnummer_TextChanged(sender As Object, e As EventArgs) Handles txtPostnummer.TextChanged
