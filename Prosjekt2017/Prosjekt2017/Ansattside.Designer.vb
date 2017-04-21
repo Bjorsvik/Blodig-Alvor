@@ -31,7 +31,7 @@ Partial Class Ansattside
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.personnummer = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.timeComboBox = New System.Windows.Forms.ComboBox()
         Me.ResGrid = New System.Windows.Forms.DataGridView()
         Me.Dato = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Tidspunkt = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -70,6 +70,8 @@ Partial Class Ansattside
         Me.lblPersnr = New System.Windows.Forms.Label()
         Me.txtPersonnr = New System.Windows.Forms.TextBox()
         Me.Innkalling = New System.Windows.Forms.TabPage()
+        Me.btnHasteInnkalling = New System.Windows.Forms.Button()
+        Me.btnInnkalling = New System.Windows.Forms.Button()
         Me.btnHasteProsedyre = New System.Windows.Forms.Button()
         Me.btnNormalProsedyre = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -104,6 +106,10 @@ Partial Class Ansattside
         Me.txtSok = New System.Windows.Forms.TextBox()
         Me.lblSok = New System.Windows.Forms.Label()
         Me.btnLogUt = New System.Windows.Forms.Button()
+<<<<<<< HEAD
+        Me.innkallingTimeComboBox = New System.Windows.Forms.ComboBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+=======
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.rb562 = New System.Windows.Forms.RadioButton()
         Me.rb572 = New System.Windows.Forms.RadioButton()
@@ -419,6 +425,7 @@ Partial Class Ansattside
         Me.Label132 = New System.Windows.Forms.Label()
         Me.Label133 = New System.Windows.Forms.Label()
         Me.Label134 = New System.Windows.Forms.Label()
+>>>>>>> refs/remotes/origin/master
         Me.Statistikk.SuspendLayout()
         Me.Reservasjoner.SuspendLayout()
         CType(Me.ResGrid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -534,7 +541,7 @@ Partial Class Ansattside
         Me.Reservasjoner.Controls.Add(Me.Label11)
         Me.Reservasjoner.Controls.Add(Me.Label10)
         Me.Reservasjoner.Controls.Add(Me.personnummer)
-        Me.Reservasjoner.Controls.Add(Me.ComboBox1)
+        Me.Reservasjoner.Controls.Add(Me.timeComboBox)
         Me.Reservasjoner.Controls.Add(Me.ResGrid)
         Me.Reservasjoner.Controls.Add(Me.Label2)
         Me.Reservasjoner.Controls.Add(Me.Reservasjonskalender)
@@ -590,13 +597,13 @@ Partial Class Ansattside
         Me.personnummer.Size = New System.Drawing.Size(100, 20)
         Me.personnummer.TabIndex = 18
         '
-        'ComboBox1
+        'timeComboBox
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(324, 298)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 17
+        Me.timeComboBox.FormattingEnabled = True
+        Me.timeComboBox.Location = New System.Drawing.Point(324, 298)
+        Me.timeComboBox.Name = "timeComboBox"
+        Me.timeComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.timeComboBox.TabIndex = 17
         '
         'ResGrid
         '
@@ -935,6 +942,10 @@ Partial Class Ansattside
         '
         'Innkalling
         '
+        Me.Innkalling.Controls.Add(Me.Label12)
+        Me.Innkalling.Controls.Add(Me.innkallingTimeComboBox)
+        Me.Innkalling.Controls.Add(Me.btnHasteInnkalling)
+        Me.Innkalling.Controls.Add(Me.btnInnkalling)
         Me.Innkalling.Controls.Add(Me.btnHasteProsedyre)
         Me.Innkalling.Controls.Add(Me.btnNormalProsedyre)
         Me.Innkalling.Controls.Add(Me.Button1)
@@ -952,6 +963,24 @@ Partial Class Ansattside
         Me.Innkalling.TabIndex = 0
         Me.Innkalling.Text = "Innkalling"
         Me.Innkalling.UseVisualStyleBackColor = True
+        '
+        'btnHasteInnkalling
+        '
+        Me.btnHasteInnkalling.Location = New System.Drawing.Point(471, 310)
+        Me.btnHasteInnkalling.Name = "btnHasteInnkalling"
+        Me.btnHasteInnkalling.Size = New System.Drawing.Size(149, 28)
+        Me.btnHasteInnkalling.TabIndex = 19
+        Me.btnHasteInnkalling.Text = "Haste innkalling"
+        Me.btnHasteInnkalling.UseVisualStyleBackColor = True
+        '
+        'btnInnkalling
+        '
+        Me.btnInnkalling.Location = New System.Drawing.Point(244, 310)
+        Me.btnInnkalling.Name = "btnInnkalling"
+        Me.btnInnkalling.Size = New System.Drawing.Size(152, 28)
+        Me.btnInnkalling.TabIndex = 18
+        Me.btnInnkalling.Text = "Innkalling"
+        Me.btnInnkalling.UseVisualStyleBackColor = True
         '
         'btnHasteProsedyre
         '
@@ -982,7 +1011,7 @@ Partial Class Ansattside
         '
         'txtboxTilgjengelig
         '
-        Me.txtboxTilgjengelig.Location = New System.Drawing.Point(559, 240)
+        Me.txtboxTilgjengelig.Location = New System.Drawing.Point(559, 194)
         Me.txtboxTilgjengelig.Margin = New System.Windows.Forms.Padding(2)
         Me.txtboxTilgjengelig.Name = "txtboxTilgjengelig"
         Me.txtboxTilgjengelig.Size = New System.Drawing.Size(92, 20)
@@ -991,7 +1020,7 @@ Partial Class Ansattside
         'lblTilgjengeligeGivere
         '
         Me.lblTilgjengeligeGivere.AutoSize = True
-        Me.lblTilgjengeligeGivere.Location = New System.Drawing.Point(435, 243)
+        Me.lblTilgjengeligeGivere.Location = New System.Drawing.Point(435, 197)
         Me.lblTilgjengeligeGivere.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblTilgjengeligeGivere.Name = "lblTilgjengeligeGivere"
         Me.lblTilgjengeligeGivere.Size = New System.Drawing.Size(121, 13)
@@ -1280,6 +1309,15 @@ Partial Class Ansattside
         Me.btnLogUt.Text = "Log Ut"
         Me.btnLogUt.UseVisualStyleBackColor = True
         '
+<<<<<<< HEAD
+        'innkallingTimeComboBox
+        '
+        Me.innkallingTimeComboBox.FormattingEnabled = True
+        Me.innkallingTimeComboBox.Location = New System.Drawing.Point(530, 240)
+        Me.innkallingTimeComboBox.Name = "innkallingTimeComboBox"
+        Me.innkallingTimeComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.innkallingTimeComboBox.TabIndex = 20
+=======
         'TabPage1
         '
         Me.TabPage1.AutoScroll = True
@@ -2570,10 +2608,18 @@ Partial Class Ansattside
         Me.lblFornavn.Name = "lblFornavn"
         Me.lblFornavn.Size = New System.Drawing.Size(0, 13)
         Me.lblFornavn.TabIndex = 629
+>>>>>>> refs/remotes/origin/master
         '
         'Label12
         '
         Me.Label12.AutoSize = True
+<<<<<<< HEAD
+        Me.Label12.Location = New System.Drawing.Point(449, 243)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(54, 13)
+        Me.Label12.TabIndex = 21
+        Me.Label12.Text = "Tidspunkt"
+=======
         Me.Label12.Location = New System.Drawing.Point(80, 84)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(56, 13)
@@ -4440,6 +4486,7 @@ Partial Class Ansattside
         Me.Label134.Size = New System.Drawing.Size(346, 29)
         Me.Label134.TabIndex = 441
         Me.Label134.Text = "Spørreskjema for blodgivere"
+>>>>>>> refs/remotes/origin/master
         '
         'Ansattside
         '
@@ -4669,7 +4716,7 @@ Partial Class Ansattside
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents personnummer As TextBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents timeComboBox As ComboBox
     Friend WithEvents btnLeggInnReservasjon As Button
     Friend WithEvents btnSokPersonnummer As Button
     Friend WithEvents Dato As DataGridViewTextBoxColumn
@@ -4679,6 +4726,12 @@ Partial Class Ansattside
     Friend WithEvents Slett As DataGridViewButtonColumn
     Friend WithEvents labelEpost As Label
     Friend WithEvents txtEpost As TextBox
+<<<<<<< HEAD
+    Friend WithEvents btnHasteInnkalling As Button
+    Friend WithEvents btnInnkalling As Button
+    Friend WithEvents Label12 As Label
+    Friend WithEvents innkallingTimeComboBox As ComboBox
+=======
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents Panel33 As Panel
     Friend WithEvents rb572 As RadioButton
@@ -4994,4 +5047,5 @@ Partial Class Ansattside
     Friend WithEvents Label132 As Label
     Friend WithEvents Label133 As Label
     Friend WithEvents Label134 As Label
+>>>>>>> refs/remotes/origin/master
 End Class
