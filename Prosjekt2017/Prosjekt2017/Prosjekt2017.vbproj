@@ -108,7 +108,6 @@
     <Compile Include="Postnummer.vb" />
     <Compile Include="PubVar.vb" />
     <Compile Include="Blodgiver.vb" />
-    <Compile Include="Reader.vb" />
     <Compile Include="Registreringsskjema.Designer.vb">
       <DependentUpon>Registreringsskjema.vb</DependentUpon>
     </Compile>
