@@ -26,7 +26,7 @@ Public Class egenerklering
         Dim fornavn As String
         Dim etternavn As String
 
-        brukerTab = blodgiver.GetPersonnummer()
+        brukerTab = blodgiver.GetPersonByGlobalPersonnummer()
 
         For Each row In brukerTab.Rows
 

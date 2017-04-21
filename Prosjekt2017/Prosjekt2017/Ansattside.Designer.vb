@@ -26,7 +26,8 @@ Partial Class Ansattside
         Me.lbAntallDonorer = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Reservasjoner = New System.Windows.Forms.TabPage()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnSokPersonnummer = New System.Windows.Forms.Button()
+        Me.btnLeggInnReservasjon = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.personnummer = New System.Windows.Forms.TextBox()
@@ -80,6 +81,8 @@ Partial Class Ansattside
         Me.lblBlodtypeØnsket = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.Søk = New System.Windows.Forms.TabPage()
+        Me.labelEpost = New System.Windows.Forms.Label()
+        Me.txtEpost = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.cboBlodType = New System.Windows.Forms.ComboBox()
         Me.btnEndreInfo = New System.Windows.Forms.Button()
@@ -149,7 +152,8 @@ Partial Class Ansattside
         '
         'Reservasjoner
         '
-        Me.Reservasjoner.Controls.Add(Me.Button2)
+        Me.Reservasjoner.Controls.Add(Me.btnSokPersonnummer)
+        Me.Reservasjoner.Controls.Add(Me.btnLeggInnReservasjon)
         Me.Reservasjoner.Controls.Add(Me.Label11)
         Me.Reservasjoner.Controls.Add(Me.Label10)
         Me.Reservasjoner.Controls.Add(Me.personnummer)
@@ -166,14 +170,23 @@ Partial Class Ansattside
         Me.Reservasjoner.Text = "Reservasjoner"
         Me.Reservasjoner.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnSokPersonnummer
         '
-        Me.Button2.Location = New System.Drawing.Point(216, 339)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(165, 28)
-        Me.Button2.TabIndex = 21
-        Me.Button2.Text = "Legg inn ny reservasjon"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnSokPersonnummer.Location = New System.Drawing.Point(166, 338)
+        Me.btnSokPersonnummer.Name = "btnSokPersonnummer"
+        Me.btnSokPersonnummer.Size = New System.Drawing.Size(80, 26)
+        Me.btnSokPersonnummer.TabIndex = 22
+        Me.btnSokPersonnummer.Text = "Søk"
+        Me.btnSokPersonnummer.UseVisualStyleBackColor = True
+        '
+        'btnLeggInnReservasjon
+        '
+        Me.btnLeggInnReservasjon.Location = New System.Drawing.Point(280, 338)
+        Me.btnLeggInnReservasjon.Name = "btnLeggInnReservasjon"
+        Me.btnLeggInnReservasjon.Size = New System.Drawing.Size(165, 28)
+        Me.btnLeggInnReservasjon.TabIndex = 21
+        Me.btnLeggInnReservasjon.Text = "Legg inn ny reservasjon"
+        Me.btnLeggInnReservasjon.UseVisualStyleBackColor = True
         '
         'Label11
         '
@@ -233,7 +246,7 @@ Partial Class Ansattside
         '
         'ID
         '
-        Me.ID.HeaderText = "ID"
+        Me.ID.HeaderText = "pID"
         Me.ID.Name = "ID"
         Me.ID.ReadOnly = True
         Me.ID.Width = 40
@@ -664,6 +677,8 @@ Partial Class Ansattside
         '
         'Søk
         '
+        Me.Søk.Controls.Add(Me.labelEpost)
+        Me.Søk.Controls.Add(Me.txtEpost)
         Me.Søk.Controls.Add(Me.Label8)
         Me.Søk.Controls.Add(Me.cboBlodType)
         Me.Søk.Controls.Add(Me.btnEndreInfo)
@@ -693,10 +708,26 @@ Partial Class Ansattside
         Me.Søk.Text = "Søk/Endre"
         Me.Søk.UseVisualStyleBackColor = True
         '
+        'labelEpost
+        '
+        Me.labelEpost.AutoSize = True
+        Me.labelEpost.Location = New System.Drawing.Point(189, 321)
+        Me.labelEpost.Name = "labelEpost"
+        Me.labelEpost.Size = New System.Drawing.Size(34, 13)
+        Me.labelEpost.TabIndex = 33
+        Me.labelEpost.Text = "Epost"
+        '
+        'txtEpost
+        '
+        Me.txtEpost.Location = New System.Drawing.Point(247, 314)
+        Me.txtEpost.Name = "txtEpost"
+        Me.txtEpost.Size = New System.Drawing.Size(100, 20)
+        Me.txtEpost.TabIndex = 32
+        '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(189, 319)
+        Me.Label8.Location = New System.Drawing.Point(193, 359)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(48, 13)
         Me.Label8.TabIndex = 31
@@ -707,7 +738,7 @@ Partial Class Ansattside
         Me.cboBlodType.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboBlodType.FormattingEnabled = True
         Me.cboBlodType.Items.AddRange(New Object() {"A+", "A-", "B+", "B-", "0+", "0-", "AB+", "AB-"})
-        Me.cboBlodType.Location = New System.Drawing.Point(247, 314)
+        Me.cboBlodType.Location = New System.Drawing.Point(247, 354)
         Me.cboBlodType.Name = "cboBlodType"
         Me.cboBlodType.Size = New System.Drawing.Size(44, 23)
         Me.cboBlodType.TabIndex = 30
@@ -976,10 +1007,13 @@ Partial Class Ansattside
     Friend WithEvents Label10 As Label
     Friend WithEvents personnummer As TextBox
     Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnLeggInnReservasjon As Button
+    Friend WithEvents btnSokPersonnummer As Button
     Friend WithEvents Dato As DataGridViewTextBoxColumn
     Friend WithEvents Tidspunkt As DataGridViewTextBoxColumn
     Friend WithEvents ID As DataGridViewTextBoxColumn
     Friend WithEvents resID As DataGridViewTextBoxColumn
     Friend WithEvents Slett As DataGridViewButtonColumn
+    Friend WithEvents labelEpost As Label
+    Friend WithEvents txtEpost As TextBox
 End Class

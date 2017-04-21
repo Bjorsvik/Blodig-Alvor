@@ -4,17 +4,12 @@
     Dim ansatt As New Ansatt()
     Dim blodgiver As New Blodgiver()
 
-
-    Public Function getGjeldendeReservasjoner()
-        Return db.Query("SELECT * from Reservasjon WHERE dato >= GETDATE()")
-    End Function
-
     Public Function getResValgtDato(ByVal resDato As String)
         Return db.Query("SELECT * from Reservasjon WHERE dato = '" & resDato & "'")
     End Function
 
-    Public Function getAlleReservasjoner() As DataTable
-        Return db.Query("SELECT * from Reservasjon")
+    Public Function getPersResByPersID(ByVal personID As String) As DataTable
+        Return db.Query("SELECT * from Reservasjon WHERE personID = '" & personID & "' AND dato >= NOW()")
     End Function
 
     Public Function getLastResID() As DataTable
@@ -27,13 +22,13 @@
 
     Public Function getOpptattTimer(ByVal resDato) As DataTable
         Return db.Query("Select *
-From Tidspunkt, Reservasjon
-Where Tidspunkt.tidspunkt = Reservasjon.tidspunkt
-And dato = '" & resDato & "'
-And (SELECT COUNT(*) FROM Tidspunkt, Reservasjon
-Where Tidspunkt.tidspunkt = Reservasjon.tidspunkt
-And dato = '" & resDato & "') >=5
-Group by Tidspunkt.tidspunkt")
+                         From Tidspunkt, Reservasjon
+                         Where Tidspunkt.tidspunkt = Reservasjon.tidspunkt
+                         And dato = '" & resDato & "'
+                         And (SELECT COUNT(*) FROM Tidspunkt, Reservasjon
+                         Where Tidspunkt.tidspunkt = Reservasjon.tidspunkt
+                         And dato = '" & resDato & "') >=5
+                         Group by Tidspunkt.tidspunkt")
     End Function
 
     Public Function getLastResIDByPersonID(personID As Integer) As DataTable
@@ -88,6 +83,41 @@ Group by Tidspunkt.tidspunkt")
 
         comboBox.DataSource = timeArray
         comboBox.DisplayMember = "Tidspunkt"
+    End Sub
+
+    Public Sub addReservasjon(ByRef ComboBox, ByVal personnummer, ByVal resDato)
+        Dim personID As String = ""
+        Dim tid As String = ComboBox.SelectedValue.ToString()
+
+
+        Dim id As New DataTable()
+
+        id = blodgiver.GetIDByPersonNr(personnummer)
+
+        For Each rad In id.Rows
+            personID = rad(0).ToString()
+        Next rad
+        Dim tempID As String = personID
+        reserver(resDato, tempID, tid)
+    End Sub
+
+    Public Sub fyllDatagrid(ByVal idato As Date, ByRef Reservasjonskalender As Object, ByVal resDato As String, ByRef ResGrid As Object, ByVal reservasjonsTabell As DataTable)
+        Dim resArray As New ArrayList()
+        Dim dato As Date
+        Dim persid As String
+        Dim tidspunkt As String
+        Dim resid As String
+        ResGrid.Rows.Clear()
+
+        'MsgBox(dbDato)
+
+        For Each reserv In reservasjonsTabell.Rows()
+            resid = reserv(0).ToString
+            dato = reserv(1).ToString
+            persid = reserv(2).ToString
+            tidspunkt = reserv(3).ToString
+            ResGrid.Rows.Add(dato.ToString("yyyy-MM-dd"), tidspunkt, persid, resid)
+        Next
     End Sub
 
 End Class

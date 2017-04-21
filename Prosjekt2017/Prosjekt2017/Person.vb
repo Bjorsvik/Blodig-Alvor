@@ -27,6 +27,10 @@
         Me.epost = epost
 
     End Sub
+
+    Public Function getPersonByPersonnummer(personnummer As String) As DataTable
+        Return db.Query("SELECT * FROM Person WHERE personnummer = '" & personnummer & "'")
+    End Function
     Public Sub regPerson()
         db.Query("INSERT INTO Person(fornavn, etternavn, fodselsdato, telefon, epost, postnummer, adresse, personnummer) VALUES('" & fornavn & "', '" & etternavn &
                  "', '" & fodselsdato & "', '" & telefon & "', '" & epost & "', '" & postnummer & "', '" & adresse & "', '" & personnummer & "')")
@@ -55,9 +59,12 @@
     Public Sub endreBlodtype(blodtype As String)
         db.Query("UPDATE Person SET blodtype = '" & blodtype & "' WHERE personnummer = '" & PubVar.personnummer & "'")
     End Sub
+    Public Sub endreEpost(epost As String)
+        db.Query("UPDATE Person SET epost = '" & epost & "' WHERE personnummer = '" & PubVar.personnummer & "'")
+    End Sub
 
-    Public Function GetPersonnummer() As DataTable
-        Return db.Query("SELECT * FROM Person JOIN Blodgiver WHERE Person.personID = Blodgiver.personID AND personnummer = " & "'" & PubVar.personnummer & "'")
+    Public Function GetPersonByGlobalPersonnummer() As DataTable
+        Return db.Query("SELECT * FROM Person JOIN Blodgiver WHERE Person.personID = Blodgiver.personID And personnummer = " & "'" & PubVar.personnummer & "'")
     End Function
 
     Public Function getLastPersonID() As DataTable
@@ -65,6 +72,10 @@
     End Function
 
     Public Function getPersonID(ByVal personnummer As String) As DataTable
+        Return db.Query("SELECT * FROM Person WHERE personnummer = '" & personnummer & "'")
+    End Function
+
+    Public Function getBlodtype(ByVal personnummer As String) As DataTable
         Return db.Query("SELECT * FROM Person WHERE personnummer = '" & personnummer & "'")
     End Function
 End Class
