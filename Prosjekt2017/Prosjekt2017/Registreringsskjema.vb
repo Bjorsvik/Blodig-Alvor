@@ -18,6 +18,7 @@ Public Class Registreringsskjema
         Else
             Return ""
         End If
+
     End Function
 
 
@@ -27,6 +28,8 @@ Public Class Registreringsskjema
 
 
         Try
+
+#Region "Validerings kode"
             'Validerer postnummer
             If validering.ValidereUtfylt(txtPostnummer.Text) = False Then
                 MessageBox.Show("Fyll ut postnummer", "Feilmelding")
@@ -69,7 +72,7 @@ Public Class Registreringsskjema
                 MessageBox.Show("Fyll ut personnummer", "Feilmelding")
             ElseIf validering.ValidereTall(txtPersonnummer.Text) = False Then
                 MessageBox.Show("Personnummer skal bare inneholde tall", "Feilmelding")
-            ElseIf validering.ValiderePersonnummer(txtPersonnummer.text) = False Then
+            ElseIf validering.ValiderePersonnummer(txtPersonnummer.Text) = False Then
                 MessageBox.Show("Et personnummer inneholder 11 tall", "Feilmelding")
             End If
 
@@ -84,7 +87,7 @@ Public Class Registreringsskjema
             ElseIf validering.ValidereEmail(txtEpost.Text) = False Then
                 MessageBox.Show("Fyll inn med riktig format", "Feilmelding")
             End If
-
+#End Region
 
             'Bekreftelse av passord og registrering av brukeren om dette stemmer
             If bpassord = passord Then
@@ -100,10 +103,6 @@ Public Class Registreringsskjema
         Catch ex As Exception
 
         End Try
-
-
-
-
 
     End Sub
 
