@@ -1,7 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class minside
-    'Oppretter tomme variabler
-    'Oppretter tomme konstruktører koblet opp mot klassene for å hente ut funskjoner og prosedyrer 
     Dim bg As New Blodgiver()
     Dim person As New Person()
     Dim postnr As New Postnummer()
@@ -18,11 +16,10 @@ Public Class minside
     Dim postnummer As Integer
     Dim personID As Integer
 
-    'Henter brukerinfo og karanteneinfo ved oppstart
+
     Private Sub minside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim personnummer = PubVar.personnummer
 
-        'Viser brukerinfo, poststed og historikk
         visBruker()
         visPoststed()
         visHistorikk()
@@ -55,7 +52,7 @@ Public Class minside
         li = (livstid(0))
         'MsgBox(li.ToString)
         If li = True Then
-            MsgBox("Din karantene for å gi blod er på livstid. Ta kontakt med betjeningen for mer informasjon")
+            MsgBox("Din karantene for å gi blod er på livstid")
             MsgBox("Du vil nå bli logget ut")
             Me.Close()
             Application.Exit()
@@ -63,26 +60,18 @@ Public Class minside
 
 
     End Sub
-
-
-    'Gruppert brukerinfo kode
-#Region "Brukerinfo kode"
     Private Sub btnEndreInfo_Click(sender As Object, e As EventArgs) Handles btnEndreInfo.Click
-        'Endrer info -> oppdaterer brukerinfo og poststed
         endreInfo()
         visBruker()
         visPoststed()
     End Sub
 
     Private Sub visBruker()
-        'Oppretter tomme tabeller
         Dim brukerTab As New DataTable()
         Dim postnummere As New DataTable()
 
-        'Henter ut hele brukeren ved å kalle opp funksjonen GetPersonByGlobalPersonnummer og legger det inn i en tabell
-        brukerTab = bg.GetPersonByGlobalPersonnummer()
+        brukerTab = bg.GetPersonnummer()
 
-        'Løkke for å lese alle verdiene i tabellen og setter det inn i variabler.
         For Each row In brukerTab.Rows
 
             fornavn = row("fornavn")
@@ -95,7 +84,6 @@ Public Class minside
             postnummer = row("postnummer")
             personID = row("personID")
 
-            'Framvisning i tekstbokser ved å legge variabel verdiene inn
             txtFornavn.Text = fornavn
             txtEtternavn.Text = etternavn
             txtFodselsdato.Text = fodselsdato
@@ -109,7 +97,7 @@ Public Class minside
         Next row
     End Sub
     Private Sub visPoststed()
-        'Henter ut poststedet som postnummeret er koblet til og viser det fram i en tekstboks
+
         Dim postnummerTab As New DataTable()
 
         Dim poststed As String
@@ -125,16 +113,12 @@ Public Class minside
     End Sub
 
     Private Sub endreInfo()
-
-        'Oppretter tomme tabeller
         Dim brukerTab As New DataTable()
         Dim postnummere As New DataTable()
 
-        'Henter ut hele brukeren ved å kalle opp funksjonen GetPersonByGlobalPersonnummer og legger det inn i en tabell
-        brukerTab = bg.GetPersonByGlobalPersonnummer()
+        brukerTab = bg.GetPersonnummer()
 
         Try
-            'Løkke for å lese alle verdiene i tabellen og setter det inn i variabler.
             For Each row In brukerTab.Rows
 
                 fornavn = row("fornavn")
@@ -146,50 +130,49 @@ Public Class minside
                 epost = row("epost")
                 postnummer = row("postnummer")
 
-#Region "Validerings kode"
                 'Validerer postnummer
-                If validering.ValidereUtfylt(txtPostnummer.Text) = False Then
+                If Validering.ValidereUtfylt(txtPostnummer.Text) = False Then
                     MessageBox.Show("Fyll ut postnummer", "Feilmelding")
-                ElseIf validering.ValidereTall(txtPostnummer.Text) = False Then
+                ElseIf Validering.ValidereTall(txtPostnummer.Text) = False Then
                     MessageBox.Show("Postnummer skal bare inneholde tall", "Feilmelding")
                 End If
 
                 'Validerer telefon
                 If validering.ValidereUtfylt(txtTelefon.Text) = False Then
                     MessageBox.Show("Fyll ut telefonnummer", "Feilmelding")
-                ElseIf validering.ValidereTall(txtTelefon.Text) = False Then
+                ElseIf validering.ValidereTall(txttelefon.Text) = False Then
                     MessageBox.Show("Telefonnummer skal bare inneholde tall", "Feilmelding")
                 End If
 
                 'Validerer fornavn
-                If validering.ValidereUtfylt(txtFornavn.Text) = False Then
+                If Validering.ValidereUtfylt(txtFornavn.Text) = False Then
                     MessageBox.Show("Fyll ut Fornavn", "Feilmelding")
-                ElseIf validering.ValidereTall(txtFornavn.Text) = True Then
+                ElseIf Validering.ValidereTall(txtFornavn.Text) = True Then
                     MessageBox.Show("Fornavn skal ikke inneholde tall", "Feilmelding")
                 End If
 
                 'Validerer etternavn
-                If validering.ValidereUtfylt(txtEtternavn.Text) = False Then
+                If Validering.ValidereUtfylt(txtEtternavn.Text) = False Then
                     MessageBox.Show("Fyll ut etternavn", "Feilmelding")
-                ElseIf validering.ValidereTall(txtEtternavn.Text) = True Then
+                ElseIf Validering.ValidereTall(txtEtternavn.Text) = True Then
                     MessageBox.Show("Etternavn skal ikke inneholde tall", "Feilmelding")
                 End If
 
                 'Validerer fødselsdato
-                If validering.ValidereUtfylt(txtFodselsdato.Text) = False Then
+                If Validering.ValidereUtfylt(txtFodselsdato.Text) = False Then
                     MessageBox.Show("Fyll ut Fødselsdato", "Feilmelding")
                 End If
 
-                If validering.ValidereUtfylt(txtAdresse.Text) = False Then
+                If Validering.ValidereUtfylt(txtAdresse.Text) = False Then
                     MessageBox.Show("Fyll ut adresse", "Feilmelding")
                 End If
 
                 'Validerer personnummer
-                If validering.ValidereUtfylt(txtPersonnummer.Text) = False Then
+                If Validering.ValidereUtfylt(txtPersonnummer.Text) = False Then
                     MessageBox.Show("Fyll ut personnummer", "Feilmelding")
-                ElseIf validering.ValidereTall(txtPersonnummer.Text) = False Then
+                ElseIf Validering.ValidereTall(txtPersonnummer.Text) = False Then
                     MessageBox.Show("Personnummer skal bare inneholde tall", "Feilmelding")
-                ElseIf validering.ValiderePersonnummer(txtPersonnummer.Text) = False Then
+                ElseIf Validering.ValiderePersonnummer(txtPersonnummer.Text) = False Then
                     MessageBox.Show("Et personnummer inneholder 11 tall", "Feilmelding")
                 End If
 
@@ -199,10 +182,9 @@ Public Class minside
                 ElseIf validering.ValidereEmail(txtEpost.Text) = False Then
                     MessageBox.Show("Fyll inn med riktig format", "Feilmelding")
                 End If
-#End Region
 
 
-                'Henter prosedyrer for å endre informasjon i databasen. Bruker input fra tekstboksene for å erstatte info.
+
                 person.endreFornavn(txtFornavn.Text)
                 person.endreEtternavn(txtEtternavn.Text)
                 person.endreFodselsdato(txtFodselsdato.Text)
@@ -218,20 +200,9 @@ Public Class minside
         End Try
 
     End Sub
-#End Region
-
-
-    'Gruppert reservasjons kode
-#Region "Reservasjons kode"
-
-    Public Sub MonthCalendar1_DateChanged(sender As Object, e As DateRangeEventArgs) Handles MonthCalendar1.DateChanged
-        Dim dato As New Date()
-        dato = MonthCalendar1.SelectionRange.Start
-        resDato = dato.Year & "-" & dato.Month & "-" & dato.Day
-        res.fyllCombobox(resDato, ComboBox1)
-    End Sub
 
     Public Sub btnReserverTime_Click(sender As Object, e As EventArgs) Handles btnReserverTime.Click
+
         Dim personID As String = ""
         Dim tid As String = ComboBox1.SelectedValue.ToString()
 
@@ -247,45 +218,22 @@ Public Class minside
         res.reserver(resDato, tempID, tid)
         'MsgBox(tid)
 
-    End Sub
-#End Region
-
-
-    'Gruppert historikk kode
-#Region "Historikk kode"
-    Private Sub visHistorikk()
-        'Oppretter tomme variabler og tabell
-        Dim historikkTab As New DataTable
-        Dim dato As String
-        Dim blodposer As Integer
-
-        'Tømmer datagrid
-        gridHistorikk.Rows.Clear()
-
-        'Henter blodgiverens historikk og legger det inn i en tabell
-        historikkTab = bg.visHistorikk(personID)
-
-        'Løkke som legger inn verdiene i tabellen inn i variabler
-        For Each row In historikkTab.Rows
-            dato = row("dato")
-            blodposer = row("blodposer")
-
-            'Legger til rader i datagrid
-            gridHistorikk.Rows.Add(dato, blodposer)
-        Next row
 
     End Sub
-#End Region
-
 
     Private Sub btnSkjema_Click(sender As Object, e As EventArgs) Handles btnSkjema.Click
-        'Knapp som viser egenerklæringskjemaet
         egenerklering.Show()
+    End Sub
+
+    Public Sub MonthCalendar1_DateChanged(sender As Object, e As DateRangeEventArgs) Handles MonthCalendar1.DateChanged
+        Dim dato As New Date()
+        dato = MonthCalendar1.SelectionRange.Start
+        resDato = dato.Year & "-" & dato.Month & "-" & dato.Day
+        res.fyllCombobox(resDato, ComboBox1)
     End Sub
 
 
     Private Sub btnLogUt_Click(sender As Object, e As EventArgs) Handles btnLogUt.Click
-        'Log ut knapp, fører brukeren til startsiden
         Me.Close()
         Hjemmeside.lbInput.Hide()
         Hjemmeside.lbPassord.Hide()
@@ -298,5 +246,20 @@ Public Class minside
         Hjemmeside.Show()
     End Sub
 
+    Private Sub visHistorikk()
+        Dim historikkTab As New DataTable
+        Dim dato As String
+        Dim blodposer As Integer
 
+        gridHistorikk.Rows.Clear()
+
+        historikkTab = bg.visHistorikk(personID)
+        For Each row In historikkTab.Rows
+            dato = row("dato")
+            blodposer = row("blodposer")
+
+            gridHistorikk.Rows.Add(dato, blodposer)
+        Next row
+
+    End Sub
 End Class

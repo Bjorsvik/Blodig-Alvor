@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class Database
-
+    'Tilkobling mot databasen
     Private connectionOK As Boolean = True
     Private connString As String = "Server=mysql.stud.iie.ntnu.no;" _
                                         & "Database=g_oops_23;" _

@@ -2,6 +2,7 @@
 Public Class Registreringsskjema
     Dim postnr As New Postnummer()
     Dim validering As New Validering()
+
     Private Sub Registreringsskjema_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Maxlengde på postnummer = 4
         txtPostnummer.MaxLength = 4
@@ -85,7 +86,7 @@ Public Class Registreringsskjema
             End If
 
 
-            'Bekreftelse av passord og registrering av brukeren viss dette stemmer
+            'Bekreftelse av passord og registrering av brukeren om dette stemmer
             If bpassord = passord Then
                 Dim nyBruker As New Blodgiver(txtPassord.Text, txtFornavn.Text, txtEtternavn.Text, txtFodselsdato.Text, txtPersonnummer.Text,
                                                  txtTlf.Text, txtAdresse.Text, txtPostnummer.Text, txtEpost.Text)
