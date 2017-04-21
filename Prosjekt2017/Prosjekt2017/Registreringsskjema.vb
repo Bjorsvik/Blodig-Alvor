@@ -2,10 +2,9 @@
 Public Class Registreringsskjema
     Dim postnr As New Postnummer()
     Dim validering As New Validering()
-    Private Sub Registreringsskjema_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim FixedString As String = ToUpperFirst(txtFornavn.Text)
-        If txtFornavn.Text <> FixedString Then txtFornavn.Text = FixedString
 
+    Private Sub Registreringsskjema_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Maxlengde på postnummer = 4
         txtPostnummer.MaxLength = 4
     End Sub
 
@@ -87,7 +86,7 @@ Public Class Registreringsskjema
             End If
 
 
-
+            'Bekreftelse av passord og registrering av brukeren om dette stemmer
             If bpassord = passord Then
                 Dim nyBruker As New Blodgiver(txtPassord.Text, txtFornavn.Text, txtEtternavn.Text, txtFodselsdato.Text, txtPersonnummer.Text,
                                                  txtTlf.Text, txtAdresse.Text, txtPostnummer.Text, txtEpost.Text)
@@ -109,12 +108,14 @@ Public Class Registreringsskjema
     End Sub
 
     Private Sub txtPostnummer_TextChanged(sender As Object, e As EventArgs) Handles txtPostnummer.TextChanged
+        'En tekstboks for postnummer som setter igang en prosedyre for framvisning av poststed ved bokstavlengde 4
         If txtPostnummer.TextLength = 4 Then
             visPoststed()
         End If
     End Sub
 
     Private Sub visPoststed()
+        'Viser poststedet som tilhører postnummeret
         Dim postnummerTab As New DataTable()
         Dim poststed As String
 
@@ -134,16 +135,19 @@ Public Class Registreringsskjema
     End Sub
 
     Private Sub txtFornavn_TextChanged(sender As Object, e As EventArgs) Handles txtFornavn.TextChanged
+        'Uppercase førstebokstav i tekstboks
         txtFornavn.Text = ToUpperFirst(txtFornavn.Text)
         txtFornavn.Select(txtFornavn.Text.Length, 0)
     End Sub
 
     Private Sub txtEtternavn_TextChanged(sender As Object, e As EventArgs) Handles txtEtternavn.TextChanged
+        'Uppercase førstebokstav i tekstboks
         txtEtternavn.Text = ToUpperFirst(txtEtternavn.Text)
         txtEtternavn.Select(txtEtternavn.Text.Length, 0)
     End Sub
 
     Private Sub txtAdresse_TextChanged(sender As Object, e As EventArgs) Handles txtAdresse.TextChanged
+        'Uppercase førstebokstav i tekstboks
         txtAdresse.Text = ToUpperFirst(txtAdresse.Text)
         txtAdresse.Select(txtAdresse.Text.Length, 0)
     End Sub

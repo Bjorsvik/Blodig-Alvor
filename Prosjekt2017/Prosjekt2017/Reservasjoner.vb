@@ -4,37 +4,44 @@
     Dim ansatt As New Ansatt()
     Dim blodgiver As New Blodgiver()
 
+    'Henter ut reservasjon ved valgt dato
     Public Function getResValgtDato(ByVal resDato As String)
         Return db.Query("SELECT * from Reservasjon WHERE dato = '" & resDato & "'")
     End Function
 
+    'Henter ut personens reservasjon ved bruk av personID
     Public Function getPersResByPersID(ByVal personID As String) As DataTable
         Return db.Query("SELECT * from Reservasjon WHERE personID = '" & personID & "' AND dato >= NOW()")
     End Function
 
+    'Henter ut siste resID
     Public Function getLastResID() As DataTable
         Return db.Query("SELECT MAX(resID) FROM Reservasjon")
     End Function
 
+    'Henter ut alle tidspunkter
     Public Function getAlleTidspunkt() As DataTable
         Return db.Query("SELECT * from Tidspunkt")
     End Function
 
+    'Henter ut timene som er okkupert
     Public Function getOpptattTimer(ByVal resDato) As DataTable
         Return db.Query("Select *
-From Tidspunkt, Reservasjon
-Where Tidspunkt.tidspunkt = Reservasjon.tidspunkt
-And dato = '" & resDato & "'
-And (SELECT COUNT(*) FROM Tidspunkt, Reservasjon
-Where Tidspunkt.tidspunkt = Reservasjon.tidspunkt
-And dato = '" & resDato & "') >=5
-Group by Tidspunkt.tidspunkt")
+                         From Tidspunkt, Reservasjon
+                         Where Tidspunkt.tidspunkt = Reservasjon.tidspunkt
+                         And dato = '" & resDato & "'
+                         And (SELECT COUNT(*) FROM Tidspunkt, Reservasjon
+                         Where Tidspunkt.tidspunkt = Reservasjon.tidspunkt
+                         And dato = '" & resDato & "') >=5
+                         Group by Tidspunkt.tidspunkt")
     End Function
 
+    'Henter ut siste resID ved bruk av personID
     Public Function getLastResIDByPersonID(personID As Integer) As DataTable
         Return db.Query("SELECT MAX(resID) As resID FROM Reservasjon JOIN Person ON Reservasjon.personID = Person.personID WHERE Person.personID = '" & personID & "'")
     End Function
 
+    'Reserver time
     Public Sub reserver(ByVal dato As String, ByVal personID As Integer, ByVal tid As String)
 
         Dim resID As DataTable = getLastResID()
@@ -57,7 +64,7 @@ Group by Tidspunkt.tidspunkt")
         db.Query("INSERT INTO Reservasjon (resID, dato, personID, tidspunkt) VALUES ('" & nextresID & "', '" & dato & "', '" & personID & "', '" & tid & "');")
     End Sub
 
-
+    'Fyller ut combobox med tilgjengelige tidspunkter utifra hvilken dato som er valgt
     Public Sub fyllCombobox(ByVal resDato, ByRef comboBox)
         Dim timer As DataTable = getAlleTidspunkt()
         Dim opptattTimer As DataTable = getOpptattTimer(resDato)
@@ -85,6 +92,7 @@ Group by Tidspunkt.tidspunkt")
         comboBox.DisplayMember = "Tidspunkt"
     End Sub
 
+    'Legger til reservasjon
     Public Sub addReservasjon(ByRef ComboBox, ByVal personnummer, ByVal resDato)
         Dim personID As String = ""
         Dim tid As String = ComboBox.SelectedValue.ToString()
