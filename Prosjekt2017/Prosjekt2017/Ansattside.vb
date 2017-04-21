@@ -13,6 +13,8 @@ Public Class Ansattside
     Dim personID As String = "0"
     Dim idato As Date
     Dim resDato As String
+    Dim inkallDato As Date = Date.Now.AddDays(+1)
+
 
     'Viser alle tilgjengelige blodprodukter og gjør klar kalender ved oppstart
     Private Sub Ansattside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -21,6 +23,8 @@ Public Class Ansattside
         visAlleBlodCeller()
         visAlleBlodplater()
         Reservasjonskalender.MinDate = Date.Now
+        res.fyllCombobox(inkallDato.ToString("yyyy-MM-dd"), innkallingTidspunktComboBox)
+        MsgBox(inkallDato)
 
     End Sub
 
@@ -449,7 +453,7 @@ Public Class Ansattside
         reservasjonsTabell = res.getResValgtDato(resDato)
         res.fyllDatagrid(idato, Reservasjonskalender, resDato, ResGrid, reservasjonsTabell)
 
-        res.fyllCombobox(resDato, ComboBox1)
+        res.fyllCombobox(resDato, resTidComboBox)
 
 
 
@@ -494,7 +498,7 @@ Public Class Ansattside
 
     Private Sub btnLeggInnReservasjon_Click(sender As Object, e As EventArgs) Handles btnLeggInnReservasjon.Click
 
-        res.addReservasjon(ComboBox1, personnummer.Text, resDato)
+        res.addReservasjon(resTidComboBox, personnummer.Text, resDato)
         Dim reservasjonsTabell As New DataTable
         reservasjonsTabell = res.getResValgtDato(resDato)
         res.fyllDatagrid(idato, Reservasjonskalender, resDato, ResGrid, reservasjonsTabell)
@@ -547,5 +551,17 @@ Public Class Ansattside
         Hjemmeside.btnBlodgiver.Show()
         Hjemmeside.btnAnsatt.Show()
         Hjemmeside.Show()
+    End Sub
+
+    Private Sub btnInnkalling_Click(sender As Object, e As EventArgs) Handles btnInnkalling.Click
+        Dim epostliste As DataTable
+        epostliste = res.getInnkallingEpost()
+        Dim innEpost As String = ""
+
+        For Each row In epostliste.Rows
+            innEpost = row(0).ToString
+            MsgBox(innEpost)
+            res.sendInnkalling(innEpost)
+        Next
     End Sub
 End Class
