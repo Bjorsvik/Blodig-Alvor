@@ -277,15 +277,14 @@ Public Class minside
     End Sub
 #End Region
 
-
+    'Knapp som viser egenerklæringskjemaet
     Private Sub btnSkjema_Click(sender As Object, e As EventArgs) Handles btnSkjema.Click
-        'Knapp som viser egenerklæringskjemaet
         egenerklering.Show()
     End Sub
 
-
+    'Log ut knapp, fører brukeren til startsiden
     Private Sub btnLogUt_Click(sender As Object, e As EventArgs) Handles btnLogUt.Click
-        'Log ut knapp, fører brukeren til startsiden
+
         Me.Close()
         Hjemmeside.lbInput.Hide()
         Hjemmeside.lbPassord.Hide()
@@ -297,6 +296,5 @@ Public Class minside
         Hjemmeside.btnAnsatt.Show()
         Hjemmeside.Show()
     End Sub
-
 
 End Class
