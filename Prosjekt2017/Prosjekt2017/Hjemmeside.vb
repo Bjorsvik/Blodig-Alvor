@@ -54,7 +54,7 @@ Public Class Hjemmeside
                     txtInput.Clear()
                     txtPassord.Clear()
                     Me.Hide()
-                    MsgBox("Velkommen til minside!")
+                    'MsgBox("Velkommen til minside!")
                     minside.Show()
 
                 End If
@@ -91,7 +91,7 @@ Public Class Hjemmeside
                     txtInput.Clear()
                     txtPassord.Clear()
                     Me.Hide()
-                    MsgBox("Velkommen til minside!")
+                    'MsgBox("Velkommen til minside!")
                     Ansattside.Show()
 
                 End If
