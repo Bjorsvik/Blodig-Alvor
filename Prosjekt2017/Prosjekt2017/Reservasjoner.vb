@@ -1,5 +1,4 @@
-﻿Imports System.Net.Mail
-Public Class Reservasjoner
+﻿Public Class Reservasjoner
 
     Dim db As New Database()
     Dim ansatt As New Ansatt()
@@ -127,33 +126,6 @@ Public Class Reservasjoner
             tidspunkt = reserv(3).ToString
             ResGrid.Rows.Add(dato.ToString("yyyy-MM-dd"), tidspunkt, persid, resid)
         Next
-    End Sub
-
-    Public Function getInnkallingEpost() As DataTable
-        Return db.Query("SELECT epost 
-from Person, Blodgiver, Reservasjon
-Where Person.personID = Blodgiver.personID
-AND Blodgiver.personID = Reservasjon.personID
-AND Reservasjon.dato <= date_sub(now(), interval 3 month)
-Group by epost")
-    End Function
-
-    Public Sub sendInnkalling(ByVal innEpost As String)
-        Dim mail As New MailMessage()
-        Try
-            mail.From = New MailAddress("Blodigalvor113@gmail.com")
-            mail.To.Add(innEpost)
-            mail.Subject = "Test Mail"
-            mail.Body = "This is for testing SMTP mail from GMAIL"
-            Dim Smtp As New SmtpClient("smtp.gmail.com")
-            Smtp.Port = 587
-            Smtp.EnableSsl = True
-            Smtp.Credentials = New System.Net.NetworkCredential("Blodigalvor113@gmail.com", "vanadium")
-            Smtp.Send(mail)
-            MsgBox("mail send")
-        Catch ex As Exception
-            MsgBox(ex.ToString)
-        End Try
     End Sub
 
 End Class
