@@ -434,6 +434,7 @@ Partial Class Ansattside
         Me.Label133 = New System.Windows.Forms.Label()
         Me.Label134 = New System.Windows.Forms.Label()
         Me.btnLogUt = New System.Windows.Forms.Button()
+
         Me.btnVisPlater = New System.Windows.Forms.Button()
         Me.datoblod = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Blodtype1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -441,6 +442,7 @@ Partial Class Ansattside
         Me.diffceller = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SkrivUt = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnVisPlasma = New System.Windows.Forms.Button()
+
         Me.Statistikk.SuspendLayout()
         CType(Me.gridStatistikkAar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gridStatistikkMaaned, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -4590,6 +4592,7 @@ Partial Class Ansattside
         Me.btnLogUt.Text = "Log Ut"
         Me.btnLogUt.UseVisualStyleBackColor = True
         '
+
         'btnVisPlater
         '
         Me.btnVisPlater.Location = New System.Drawing.Point(663, 514)
@@ -4635,7 +4638,7 @@ Partial Class Ansattside
         Me.btnVisPlasma.TabIndex = 20
         Me.btnVisPlasma.Text = "Vis plasma"
         Me.btnVisPlasma.UseVisualStyleBackColor = True
-        '
+
         'Ansattside
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)

@@ -14,8 +14,10 @@ Public Class Ansattside
     Dim personID As String = "0"
     Dim idato As Date
     Dim resDato As String
+
     Dim inkallDato As Date = Date.Now.AddDays(+1)
     Dim blodtypeValgt As String
+
 
 
     'Viser alle tilgjengelige blodprodukter og gjør klar kalender ved oppstart
@@ -25,8 +27,10 @@ Public Class Ansattside
         visAlleBlodplater()
         visStatistikk()
         Reservasjonskalender.MinDate = Date.Now
-        res.fyllCombobox(inkallDato.ToString("yyyy-MM-dd"), innkallingTidspunktComboBox)
-        MsgBox(inkallDato)
+
+
+
+        'MsgBox(inkallDato)
 
     End Sub
 
@@ -645,14 +649,55 @@ Public Class Ansattside
     End Sub
 
     Private Sub btnInnkalling_Click(sender As Object, e As EventArgs) Handles btnInnkalling.Click
-        Dim epostliste As DataTable
-        epostliste = res.getInnkallingEpost()
-        Dim innEpost As String = ""
+        Dim blodtype As String = cboBlodtypeInnkalling.SelectedItem.ToString
+        Dim inkEpostliste As DataTable
+        inkEpostliste = res.getInnkallingEpostByBlodtype(blodtype)
 
-        For Each row In epostliste.Rows
+    End Sub
+
+    Private Sub btnHasteInnkalling_Click(sender As Object, e As EventArgs) Handles btnHasteInnkalling.Click
+        Dim hastInkEpostListe As DataTable
+        hastInkEpostListe = res.getInnkallingEpost()
+        Dim innEpost As String = ""
+        Dim inkPersonNr As Integer
+        Dim inkTime As String = ""
+        Dim hastInnkallDato As Date
+        hastInnkallDato = Date.Now.AddDays(1)
+        res.fyllCombobox(hastInnkallDato.ToString("yyyy-MM-dd"), innkallingTidspunktComboBox)
+
+        If innkallingTidspunktComboBox.SelectedItem Is Nothing Then
+            hastInnkallDato = hastInnkallDato.AddDays(1)
+        End If
+
+        For Each row In epostListe.Rows
             innEpost = row(0).ToString
-            MsgBox(innEpost)
-            res.sendInnkalling(innEpost)
+
+            If innkallingTidspunktComboBox.SelectedItem Is Nothing Then
+                hastInnkallDato = hastInnkallDato.AddDays(1)
+            End If
+
+            If innkallingTidspunktComboBox.SelectedItem IsNot Nothing Then
+                If innkallingTidspunktComboBox.Items.Count > 15 Then
+                    inkTime = innkallingTidspunktComboBox.Items.Item(15)
+                Else
+                    inkTime = innkallingTidspunktComboBox.Items.Item(0)
+                End If
+            End If
+
+            Dim persNrListe As New DataTable
+            persNrListe = person.getPersonIDByEpost(innEpost)
+
+            For Each pers In persNrListe.Rows
+                inkPersonNr = pers(0)
+            Next
+
+            'MsgBox(hastInnkallDato.ToString("yyyy-MM-dd"))
+            'MsgBox(innEpost)
+
+            'MsgBox(inkPersonNr.ToString)
+            'MsgBox(inkTime.ToString)
+            res.reserver(hastInnkallDato.ToString("yyyy-MM-dd"), inkPersonNr, inkTime)
+            res.fyllCombobox(hastInnkallDato.ToString("yyyy-MM-dd"), innkallingTidspunktComboBox)
         Next
     End Sub
 
