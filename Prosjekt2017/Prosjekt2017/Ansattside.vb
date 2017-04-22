@@ -557,9 +557,69 @@ Public Class Ansattside
     End Sub
 
     Private Sub btnInnkalling_Click(sender As Object, e As EventArgs) Handles btnInnkalling.Click
-        Dim blodtype As String = cboBlodtypeInnkalling.SelectedItem.ToString
-        Dim inkEpostliste As DataTable
-        inkEpostliste = res.getInnkallingEpostByBlodtype(blodtype)
+        Dim liste As DataTable = res.getAlleResEpost()
+        Dim epostListe As New ArrayList()
+        Dim persIDListe As New ArrayList()
+        Dim datoListe As New ArrayList()
+        Dim innkEpost As String
+        Dim innkPersID As Integer
+        Dim inkTime As String = ""
+        Dim mnd As Date = Date.Now.AddMonths(-3)
+        Dim send As Boolean = False
+        Dim innkallDato As Date
+        innkallDato = Date.Now.AddDays(7)
+        res.fyllCombobox(innkallDato.ToString("yyyy-MM-dd"), innkallingTidspunktComboBox)
+
+        For Each row In liste.Rows
+            epostListe.Add(row(0).ToString)
+            persIDListe.Add(row(1))
+            datoListe.Add(row(2))
+        Next
+
+        For i = 0 To datoListe.Count - 1
+            If innkallingTidspunktComboBox.SelectedItem Is Nothing Then
+                innkallDato = innkallDato.AddDays(1)
+                res.fyllCombobox(innkallDato.ToString("yyyy-MM-dd"), innkallingTidspunktComboBox)
+                If innkallingTidspunktComboBox.SelectedItem Is Nothing Then
+
+                End If
+            End If
+
+            If innkallingTidspunktComboBox.SelectedItem IsNot Nothing Then
+                    If innkallingTidspunktComboBox.Items.Count > 15 Then
+                        inkTime = innkallingTidspunktComboBox.Items.Item(15)
+                    Else
+                        inkTime = innkallingTidspunktComboBox.Items.Item(0)
+                    End If
+                End If
+                If IsDBNull(datoListe.Item(i)) Then
+                    innkEpost = epostListe.Item(i).ToString()
+                    innkPersID = persIDListe.Item(i)
+                    'MsgBox(innkEpost & " Null")
+                    send = True
+                ElseIf datoListe.Item(i) <= mnd Then
+                    Dim listeDato As Date = datoListe.Item(i)
+                    innkEpost = epostListe.Item(i).ToString()
+                    innkPersID = persIDListe.Item(i)
+                    'MsgBox(innkEpost & " Eldre eller lik")
+                    send = True
+                ElseIf datoListe.Item(i) >= mnd Then
+                    Dim listeDato As Date = datoListe.Item(i)
+                    innkEpost = epostListe.Item(i).ToString()
+                    innkPersID = persIDListe.Item(i)
+                    'MsgBox(innkEpost & " Nyere")
+                End If
+
+                If send = True Then
+                    res.reserver(innkallDato.ToString("yyyy-MM-dd"), innkPersID, innkallingTidspunktComboBox.SelectedItem)
+                    res.sendInnkalling(innkEpost, innkallDato.ToString("yyyy-MM-dd"), innkallingTidspunktComboBox.SelectedItem)
+                    MsgBox(innkEpost)
+                Else
+                    MsgBox("Ingen blodgivere har vært borte i 3 måneder eller mer")
+                End If
+
+            Next
+
 
     End Sub
 
@@ -577,7 +637,7 @@ Public Class Ansattside
             hastInnkallDato = hastInnkallDato.AddDays(1)
         End If
 
-        For Each row In epostListe.Rows
+        For Each row In hastInkEpostListe.Rows
             innEpost = row(0).ToString
 
             If innkallingTidspunktComboBox.SelectedItem Is Nothing Then

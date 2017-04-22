@@ -179,4 +179,17 @@ AND blodtype = '" & blodtype & "'")
         End Try
     End Sub
 
+    Public Function getAlleResEpost() As DataTable
+        Return db.Query("SELECT epost, Person.personID, MAX(dato)
+                        FROM Person
+                        LEFT JOIN Reservasjon ON Person.personID = Reservasjon.personID
+                        Group by Person.personID")
+    End Function
+    Public Function getHasteResEpost(ByVal blodtype As String) As DataTable
+        Return db.Query("SELECT epost, Person.personID, MAX(dato), blodtype = '" & blodtype & "'
+                        FROM Person
+                        LEFT JOIN Reservasjon ON Person.personID = Reservasjon.personID
+                        Group by Person.personID")
+    End Function
+
 End Class
