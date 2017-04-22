@@ -71,9 +71,9 @@ Public Class Blodgiver
     Public Function getLivstid(ByVal personID As Integer)
         Return db.Query("SELECT livstid from Blodgiver WHERE personID = '" & personID & "'")
     End Function
-    'db.Query("Insert into Egenerklering (dato, varsling_epost, varsling_sms, bolk1, personID, karanteneID) values ('" & dbDato.ToString("yyyy-MM-dd") & "', " & spmEpost & ", " & spmSMS & ", '" & liste & "', " & personID & ");")
 
-    'Public Function getHistorikkByPersonID()
+    Public Function getLastResByPersID()
 
-    'End Function
+    End Function
+
 End Class
