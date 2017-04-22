@@ -557,12 +557,15 @@ Public Class Ansattside
     End Sub
 
     Private Sub btnInnkalling_Click(sender As Object, e As EventArgs) Handles btnInnkalling.Click
+        Dim blodtype As String = cboBlodtypeInnkalling.SelectedItem.ToString
+        Dim inkEpostliste As DataTable
+        inkEpostliste = res.getInnkallingEpostByBlodtype(blodtype)
 
     End Sub
 
     Private Sub btnHasteInnkalling_Click(sender As Object, e As EventArgs) Handles btnHasteInnkalling.Click
-        Dim epostListe As DataTable
-        epostListe = res.getInnkallingEpost()
+        Dim hastInkEpostListe As DataTable
+        hastInkEpostListe = res.getInnkallingEpost()
         Dim innEpost As String = ""
         Dim inkPersonNr As Integer
         Dim inkTime As String = ""
