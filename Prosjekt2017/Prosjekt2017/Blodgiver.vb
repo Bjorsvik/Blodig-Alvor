@@ -4,7 +4,6 @@ Public Class Blodgiver
     Private db As New Database()
 
     Private passord As String
-    Private registrertdato As String
 
     'Tom konstruktør
     Public Sub New()
@@ -12,11 +11,10 @@ Public Class Blodgiver
     End Sub
 
     'Oppretter et objekt av blodgiver
-    Public Sub New(passord As String, registrertdato As String, ByVal fornavn As String, ByVal etternavn As String, ByVal fodselsdato As String, ByVal personnummer As String, ByVal telefon As Integer,
+    Public Sub New(passord As String, ByVal fornavn As String, ByVal etternavn As String, ByVal fodselsdato As String, ByVal personnummer As String, ByVal telefon As Integer,
                    ByVal adresse As String, ByVal postnummer As Integer, ByVal epost As String)
         MyBase.New(fornavn, etternavn, fodselsdato, personnummer, telefon, adresse, postnummer, epost)
         Me.passord = passord
-        Me.registrertdato = registrertdato
     End Sub
 
     'Registrering av Blodgiver
@@ -30,7 +28,7 @@ Public Class Blodgiver
         Next id
 
         MsgBox(personID)
-        db.Query("INSERT INTO Blodgiver(personID, Bpassord, registrertdato) VALUES('" & personID & "', '" & passord & "', '" & registrertdato & "' )")
+        db.Query("INSERT INTO Blodgiver(personID, Bpassord) VALUES('" & personID & "', '" & passord & "' )")
     End Sub
 
     'Viser historikken til blodgiveren (dato og blodtapping)

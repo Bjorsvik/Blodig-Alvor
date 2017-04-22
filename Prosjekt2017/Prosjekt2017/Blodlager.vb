@@ -41,60 +41,20 @@
     blodtype,
     SUM(celler_poser) As Cellerposer,
     Blodceller.dato As dato,
-    DATEDIFF(CURDATE(), Blodceller.dato) As diffCeller
+    DATEDIFF(Blodceller.dato, CURDATE()) As diffCeller
     
      FROM Blodtype
                          Join Blodceller ON Blodtype.blodID = Blodceller.blodID  
-    Group By blodtype
+    Group By blodtype                 
     ) As innertable
 
     Where diffCeller < 36")
     End Function
 
-    Public Function getBlodcellerGrid(blodtype As String) As DataTable
-        Return db.Query("SELECT * From (
-    SELECT
-    blodtype,
-    celler_poser As Cellerposer,
-    Blodceller.dato As dato,
-    DATEDIFF(CURDATE(), Blodceller.dato) As diffCeller
-    
-     FROM Blodtype
-                         Join Blodceller ON Blodtype.blodID = Blodceller.blodID  
-    Group By dato, blodtype
-    ) As innertable
-
-    Where diffCeller < 36 AND blodtype = '" & blodtype & "'")
-    End Function
-
-    Public Function getPlaterGrid(blodtype As String) As DataTable
-        Return db.Query("SELECT * From (
-    SELECT
-    blodtype,
-    plater_poser As Platerposer,
-    Blodplater.dato As dato,
-    DATEDIFF(CURDATE(), Blodplater.dato) As diffplater
-    
-     FROM Blodtype
-                         Join Blodplater ON Blodtype.blodID = Blodplater.blodID  
-    Group By dato, blodtype
-    ) As innertable
-
-    Where diffPlater < 8 AND blodtype = '" & blodtype & "'")
-    End Function
-
-    'Public Function getPlasmaGrid(blodtype As String) As DataTable
-    '    Return db.Query("SELECT plasma_poser As Plasmaposer
-    '                    FROM Blodtype
-    '                    Join Blodplasma ON Blodtype.blodID = Blodplasma.blodID
-    '                    Where blodtype = '" & blodtype & "' 
-    '                    Group By blodtype")
-    'End Function
-
     'Henter ut alle blodplateposer som ikke har gått ut på dato
     Public Function getAlleTilgjengeligeBlodplater() As DataTable
         Return db.Query("SELECT * From (
-    Select
+    SELECT
     blodtype,
     SUM(plater_poser) As Platerposer,
     Blodplater.dato As dato,
@@ -106,26 +66,6 @@
     ) As innertable
     Where diffPlater < 8")
     End Function
-
-    Public Sub fyllDatagrid(ByRef blodGrid As Object, ByVal blodTabell As DataTable)
-        Dim blodArray As New ArrayList()
-        Dim dato As Date
-        Dim blodtype As String
-        Dim poser As String
-        Dim diffCeller As String
-        blodGrid.Rows.Clear()
-
-        'MsgBox(dbDato)
-
-        For Each reserv In blodTabell.Rows()
-            blodtype = reserv(0).ToString
-            poser = reserv(1).ToString
-            dato = reserv(2).ToString
-            diffCeller = reserv(3).ToString
-            blodGrid.Rows.Add(dato.ToString("yyyy-MM-dd"), blodtype, poser, diffCeller)
-        Next
-    End Sub
-
     'Henter ut siste blodID ved bruk av resID
     Public Function getLastBlodIDByResID(ByVal reservasjonsID As String) As DataTable
         Return db.Query("SELECT MAX(blodID) AS blodID FROM Blodtype
