@@ -8,14 +8,6 @@ Public Class minside
     Dim res As New Reservasjoner
     Dim validering As New Validering()
     Dim resDato As String
-    Dim fornavn As String
-    Dim etternavn As String
-    Dim fodselsdato As String
-    Dim personnummer As String
-    Dim telefon As Integer
-    Dim adresse As String
-    Dim epost As String
-    Dim postnummer As Integer
     Dim personID As Integer
 
     'Henter brukerinfo og karanteneinfo ved oppstart
@@ -79,6 +71,16 @@ Public Class minside
         Dim brukerTab As New DataTable()
         Dim postnummere As New DataTable()
 
+        Dim fornavn As String
+        Dim etternavn As String
+        Dim fodselsdato As Date
+        Dim personnummer As String
+        Dim telefon As Integer
+        Dim adresse As String
+        Dim epost As String
+        Dim postnummer As Integer
+
+
         'Henter ut hele brukeren ved å kalle opp funksjonen GetPersonByGlobalPersonnummer og legger det inn i en tabell
         brukerTab = bg.GetPersonByGlobalPersonnummer()
 
@@ -98,7 +100,7 @@ Public Class minside
             'Framvisning i tekstbokser ved å legge variabel verdiene inn
             txtFornavn.Text = fornavn
             txtEtternavn.Text = etternavn
-            txtFodselsdato.Text = fodselsdato
+            txtFodselsdato.Text = fodselsdato.ToString("yyyy-MM-dd")
             txtPersonnummer.Text = personnummer
             txtTelefon.Text = telefon
             txtAdresse.Text = adresse
@@ -130,6 +132,17 @@ Public Class minside
         Dim brukerTab As New DataTable()
         Dim postnummere As New DataTable()
 
+        Dim fornavn As String
+        Dim etternavn As String
+        Dim fodselsdato As String
+        Dim personnummer As String
+        Dim telefon As Integer
+        Dim adresse As String
+        Dim epost As String
+        Dim postnummer As Integer
+        Dim endretinfo As Boolean = False
+
+
         'Henter ut hele brukeren ved å kalle opp funksjonen GetPersonByGlobalPersonnummer og legger det inn i en tabell
         brukerTab = bg.GetPersonByGlobalPersonnummer()
 
@@ -146,7 +159,8 @@ Public Class minside
                 epost = row("epost")
                 postnummer = row("postnummer")
 
-#Region "Validerings kode"
+                'Gruppert valideringskode
+#Region "Valideringskode"
                 'Validerer postnummer
                 If validering.ValidereUtfylt(txtPostnummer.Text) = False Then
                     MessageBox.Show("Fyll ut postnummer", "Feilmelding")
@@ -205,10 +219,10 @@ Public Class minside
                 'Henter prosedyrer for å endre informasjon i databasen. Bruker input fra tekstboksene for å erstatte info.
                 person.endreFornavn(txtFornavn.Text)
                 person.endreEtternavn(txtEtternavn.Text)
-                person.endreFodselsdato(txtFodselsdato.Text)
                 person.endreTelefon(txtTelefon.Text)
                 person.endreAdresse(txtAdresse.Text)
                 person.endreEpost(txtEpost.Text)
+                person.endreFodselsdato(txtFodselsdato.Text)
                 person.endrePostnummer(txtPostnummer.Text)
 
             Next row
@@ -245,7 +259,7 @@ Public Class minside
         Next rad
         Dim tempID As String = personID
         res.reserver(resDato, tempID, tid)
-        'MsgBox(tid)
+        MessageBox.Show("Din reservasjon er nå registrert", "Reservasjon")
 
     End Sub
 #End Region
