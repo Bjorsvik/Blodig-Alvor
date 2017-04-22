@@ -70,6 +70,10 @@ Partial Class Ansattside
         Me.lblPersnr = New System.Windows.Forms.Label()
         Me.txtPersonnr = New System.Windows.Forms.TextBox()
         Me.Innkalling = New System.Windows.Forms.TabPage()
+        Me.Label135 = New System.Windows.Forms.Label()
+        Me.innkallingTidspunktComboBox = New System.Windows.Forms.ComboBox()
+        Me.btnHasteInnkalling = New System.Windows.Forms.Button()
+        Me.btnInnkalling = New System.Windows.Forms.Button()
         Me.btnHasteProsedyre = New System.Windows.Forms.Button()
         Me.btnNormalProsedyre = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -419,10 +423,6 @@ Partial Class Ansattside
         Me.Label133 = New System.Windows.Forms.Label()
         Me.Label134 = New System.Windows.Forms.Label()
         Me.btnLogUt = New System.Windows.Forms.Button()
-        Me.btnInnkalling = New System.Windows.Forms.Button()
-        Me.btnHasteInnkalling = New System.Windows.Forms.Button()
-        Me.innkallingTidspunktComboBox = New System.Windows.Forms.ComboBox()
-        Me.Label135 = New System.Windows.Forms.Label()
         Me.Statistikk.SuspendLayout()
         Me.Reservasjoner.SuspendLayout()
         CType(Me.ResGrid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -960,6 +960,41 @@ Partial Class Ansattside
         Me.Innkalling.TabIndex = 0
         Me.Innkalling.Text = "Innkalling"
         Me.Innkalling.UseVisualStyleBackColor = True
+        '
+        'Label135
+        '
+        Me.Label135.AutoSize = True
+        Me.Label135.Location = New System.Drawing.Point(443, 243)
+        Me.Label135.Name = "Label135"
+        Me.Label135.Size = New System.Drawing.Size(57, 13)
+        Me.Label135.TabIndex = 21
+        Me.Label135.Text = "Tidspunkt:"
+        '
+        'innkallingTidspunktComboBox
+        '
+        Me.innkallingTidspunktComboBox.FormattingEnabled = True
+        Me.innkallingTidspunktComboBox.Location = New System.Drawing.Point(528, 239)
+        Me.innkallingTidspunktComboBox.Name = "innkallingTidspunktComboBox"
+        Me.innkallingTidspunktComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.innkallingTidspunktComboBox.TabIndex = 20
+        '
+        'btnHasteInnkalling
+        '
+        Me.btnHasteInnkalling.Location = New System.Drawing.Point(446, 297)
+        Me.btnHasteInnkalling.Name = "btnHasteInnkalling"
+        Me.btnHasteInnkalling.Size = New System.Drawing.Size(155, 27)
+        Me.btnHasteInnkalling.TabIndex = 19
+        Me.btnHasteInnkalling.Text = "Hasteinnkalling"
+        Me.btnHasteInnkalling.UseVisualStyleBackColor = True
+        '
+        'btnInnkalling
+        '
+        Me.btnInnkalling.Location = New System.Drawing.Point(247, 297)
+        Me.btnInnkalling.Name = "btnInnkalling"
+        Me.btnInnkalling.Size = New System.Drawing.Size(149, 27)
+        Me.btnInnkalling.TabIndex = 18
+        Me.btnInnkalling.Text = "Innkalling"
+        Me.btnInnkalling.UseVisualStyleBackColor = True
         '
         'btnHasteProsedyre
         '
@@ -4448,41 +4483,6 @@ Partial Class Ansattside
         Me.btnLogUt.TabIndex = 16
         Me.btnLogUt.Text = "Log Ut"
         Me.btnLogUt.UseVisualStyleBackColor = True
-        '
-        'btnInnkalling
-        '
-        Me.btnInnkalling.Location = New System.Drawing.Point(247, 297)
-        Me.btnInnkalling.Name = "btnInnkalling"
-        Me.btnInnkalling.Size = New System.Drawing.Size(149, 27)
-        Me.btnInnkalling.TabIndex = 18
-        Me.btnInnkalling.Text = "Innkalling"
-        Me.btnInnkalling.UseVisualStyleBackColor = True
-        '
-        'btnHasteInnkalling
-        '
-        Me.btnHasteInnkalling.Location = New System.Drawing.Point(446, 297)
-        Me.btnHasteInnkalling.Name = "btnHasteInnkalling"
-        Me.btnHasteInnkalling.Size = New System.Drawing.Size(155, 27)
-        Me.btnHasteInnkalling.TabIndex = 19
-        Me.btnHasteInnkalling.Text = "Hasteinnkalling"
-        Me.btnHasteInnkalling.UseVisualStyleBackColor = True
-        '
-        'innkallingTidspunktComboBox
-        '
-        Me.innkallingTidspunktComboBox.FormattingEnabled = True
-        Me.innkallingTidspunktComboBox.Location = New System.Drawing.Point(528, 239)
-        Me.innkallingTidspunktComboBox.Name = "innkallingTidspunktComboBox"
-        Me.innkallingTidspunktComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.innkallingTidspunktComboBox.TabIndex = 20
-        '
-        'Label135
-        '
-        Me.Label135.AutoSize = True
-        Me.Label135.Location = New System.Drawing.Point(443, 243)
-        Me.Label135.Name = "Label135"
-        Me.Label135.Size = New System.Drawing.Size(57, 13)
-        Me.Label135.TabIndex = 21
-        Me.Label135.Text = "Tidspunkt:"
         '
         'Ansattside
         '

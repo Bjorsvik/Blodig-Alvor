@@ -27,14 +27,17 @@ Public Class Reservasjoner
 
     'Henter ut timene som er okkupert
     Public Function getOpptattTimer(ByVal resDato) As DataTable
-        Return db.Query("Select *
-                         From Tidspunkt, Reservasjon
-                         Where Tidspunkt.tidspunkt = Reservasjon.tidspunkt
-                         And dato = '" & resDato & "'
-                         And (SELECT COUNT(*) FROM Tidspunkt, Reservasjon
-                         Where Tidspunkt.tidspunkt = Reservasjon.tidspunkt
-                         And dato = '" & resDato & "') >=5
-                         Group by Tidspunkt.tidspunkt")
+        Return db.Query("SELECT *
+                FROM Reservasjon
+                WHERE tidspunkt IN
+                (   SELECT tidspunkt
+                    FROM Reservasjon
+                    Where dato = '" & resDato & "'
+                    GROUP BY tidspunkt
+                     HAVING COUNT(*) >=5
+                )
+                And dato = '" & resDato & "'
+                group by tidspunkt")
     End Function
 
     'Henter ut siste resID ved bruk av personID
@@ -77,15 +80,19 @@ Public Class Reservasjoner
 
         For Each time In timer.Rows
             timeArray.Add(time(0).ToString)
+            'MsgBox(time(0).ToString)
         Next
         For Each opptatt In opptattTimer.Rows
-            opptattArray.Add(opptatt(0).ToString)
+            opptattArray.Add(opptatt(3).ToString)
+            'MsgBox("time opptatt" & opptatt(0).ToString)
         Next
 
         'MsgBox(opptattArray.Count.ToString)
         For i = 0 To opptattArray.Count - 1
+            'MsgBox(opptattArray(i).ToString)
             If timeArray.Contains(opptattArray(i).ToString) Then
                 timeArray.Remove(opptattArray(i).ToString)
+                'MsgBox("fjerner" & opptattArray(0).ToString)
             End If
         Next
 
@@ -94,7 +101,7 @@ Public Class Reservasjoner
     End Sub
 
     'Legger til reservasjon
-    Public Sub addReservasjon(ByRef ComboBox, ByVal personnummer, ByVal resDato)
+    Public Sub addReservasjon(ByRef ComboBox As Object, ByVal personnummer As String, ByVal resDato As String)
         Dim personID As String = ""
         Dim tid As String = ComboBox.SelectedValue.ToString()
 
@@ -138,19 +145,19 @@ AND Reservasjon.dato <= date_sub(now(), interval 3 month)
 Group by epost")
     End Function
 
-    Public Sub sendInnkalling(ByVal innEpost As String)
+    Public Sub sendInnkalling(ByVal innEpost As String, ByVal dato As String, ByVal tidspunkt As String)
         Dim mail As New MailMessage()
         Try
             mail.From = New MailAddress("Blodigalvor113@gmail.com")
             mail.To.Add(innEpost)
-            mail.Subject = "Test Mail"
-            mail.Body = "This is for testing SMTP mail from GMAIL"
+            mail.Subject = "Innkalling til blodgivning"
+            mail.Body = "Du får med denne eposten en innkalling til time ved St. Olavs hospital den " & dato & " klokken " & tidspunkt
             Dim Smtp As New SmtpClient("smtp.gmail.com")
             Smtp.Port = 587
             Smtp.EnableSsl = True
             Smtp.Credentials = New System.Net.NetworkCredential("Blodigalvor113@gmail.com", "vanadium")
             Smtp.Send(mail)
-            MsgBox("mail send")
+            MsgBox("Innkalling sendt")
         Catch ex As Exception
             MsgBox(ex.ToString)
         End Try
