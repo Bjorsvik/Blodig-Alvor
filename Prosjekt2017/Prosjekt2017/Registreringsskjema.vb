@@ -3,6 +3,17 @@ Public Class Registreringsskjema
     Dim postnr As New Postnummer()
     Dim validering As New Validering()
 
+    Dim regpostnr As Boolean
+    Dim regtlf As Boolean
+    Dim regfornavn As Boolean
+    Dim regetternavn As Boolean
+    Dim regadresse As Boolean
+    Dim regfdato As Boolean
+    Dim regpassord As Boolean
+    Dim regpersonnr As Boolean
+    Dim regepost As Boolean
+
+
     Private Sub Registreringsskjema_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Maxlengde på postnummer = 4
         txtPostnummer.MaxLength = 4
@@ -25,16 +36,21 @@ Public Class Registreringsskjema
     Private Sub btnRegistrer_Click(sender As Object, e As EventArgs) Handles btnRegistrer.Click
         Dim passord = txtPassord.Text
         Dim bpassord = txtBekreftPassord.Text
-
+        Dim dato As String = Date.Now.ToString("yyyy-MM-dd")
 
         Try
 
-#Region "Validerings kode"
+
+
+            'Gruppert valideringskode
+#Region "Valideringskode"
             'Validerer postnummer
             If validering.ValidereUtfylt(txtPostnummer.Text) = False Then
                 MessageBox.Show("Fyll ut postnummer", "Feilmelding")
             ElseIf validering.ValidereTall(txtPostnummer.Text) = False Then
                 MessageBox.Show("Postnummer skal bare inneholde tall", "Feilmelding")
+            Else
+                regpostnr = True
             End If
 
             'Validerer telefon
@@ -42,6 +58,8 @@ Public Class Registreringsskjema
                 MessageBox.Show("Fyll ut telefonnummer", "Feilmelding")
             ElseIf validering.ValidereTall(txtTlf.Text) = False Then
                 MessageBox.Show("Telefonnummer skal bare inneholde tall", "Feilmelding")
+            Else
+                regtlf = True
             End If
 
             'Validerer fornavn
@@ -49,6 +67,8 @@ Public Class Registreringsskjema
                 MessageBox.Show("Fyll ut Fornavn", "Feilmelding")
             ElseIf validering.ValidereTall(txtFornavn.Text) = True Then
                 MessageBox.Show("Fornavn skal ikke inneholde tall", "Feilmelding")
+            Else
+                regfornavn = True
             End If
 
             'Validerer etternavn
@@ -56,15 +76,21 @@ Public Class Registreringsskjema
                 MessageBox.Show("Fyll ut etternavn", "Feilmelding")
             ElseIf validering.ValidereTall(txtEtternavn.Text) = True Then
                 MessageBox.Show("Etternavn skal ikke inneholde tall", "Feilmelding")
+            Else
+                regetternavn = True
             End If
 
             'Validerer fødselsdato
             If validering.ValidereUtfylt(txtFodselsdato.Text) = False Then
                 MessageBox.Show("Fyll ut Fødselsdato", "Feilmelding")
+            Else
+                regfdato = True
             End If
 
             If validering.ValidereUtfylt(txtAdresse.Text) = False Then
                 MessageBox.Show("Fyll ut adresse", "Feilmelding")
+            Else
+                regadresse = True
             End If
 
             'Validerer personnummer
@@ -74,30 +100,41 @@ Public Class Registreringsskjema
                 MessageBox.Show("Personnummer skal bare inneholde tall", "Feilmelding")
             ElseIf validering.ValiderePersonnummer(txtPersonnummer.Text) = False Then
                 MessageBox.Show("Et personnummer inneholder 11 tall", "Feilmelding")
+            Else
+                regpersonnr = True
             End If
 
             'Validerer passord
             If validering.ValidereUtfylt(txtPassord.Text) = False Then
                 MessageBox.Show("Fyll ut passord", "Feilmelding")
+            Else
+                regpassord = True
             End If
 
             'Validerer epost
             If validering.ValidereUtfylt(txtEpost.Text) = False Then
                 MessageBox.Show("Fyll ut Epost", "Feilmelding")
             ElseIf validering.ValidereEmail(txtEpost.Text) = False Then
-                MessageBox.Show("Fyll inn med riktig format", "Feilmelding")
-            End If
-#End Region
-
-            'Bekreftelse av passord og registrering av brukeren om dette stemmer
-            If bpassord = passord Then
-                Dim nyBruker As New Blodgiver(txtPassord.Text, txtFornavn.Text, txtEtternavn.Text, txtFodselsdato.Text, txtPersonnummer.Text,
-                                                 txtTlf.Text, txtAdresse.Text, txtPostnummer.Text, txtEpost.Text)
-                nyBruker.regBlodgiver()
-
-                Me.Close()
+                MessageBox.Show("Fyll inn epost med riktig format", "Feilmelding")
             Else
-                MsgBox("Passordene er ikke like")
+                regepost = True
+            End If
+
+
+#End Region
+            'Om alle tekstboksene er riktig utført fortsetter programmet til passord bekreftelse
+            If regadresse = True And regepost = True And regetternavn = True And regfornavn = True And regfdato = True And regtlf = True And regpersonnr = True And regpassord = True Then
+
+                If bpassord = passord Then
+                    Dim nyBruker As New Blodgiver(txtPassord.Text, dato, txtFornavn.Text, txtEtternavn.Text, txtFodselsdato.Text, txtPersonnummer.Text,
+                                                     txtTlf.Text, txtAdresse.Text, txtPostnummer.Text, txtEpost.Text)
+                    nyBruker.regBlodgiver()
+
+                    Me.Close()
+                Else
+                    MsgBox("Passordene er ikke like")
+                End If
+
             End If
 
         Catch ex As Exception

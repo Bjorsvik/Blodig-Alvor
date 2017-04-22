@@ -10,19 +10,22 @@ Public Class Ansattside
     Dim res As New Reservasjoner()
     Dim ansatt As New Ansatt()
     Dim validering As New Validering()
+    Dim stats As New Statistikk()
     Dim personID As String = "0"
     Dim idato As Date
     Dim resDato As String
 
+    Dim inkallDato As Date = Date.Now.AddDays(+1)
+    Dim blodtypeValgt As String
 
 
 
     'Viser alle tilgjengelige blodprodukter og gjør klar kalender ved oppstart
     Private Sub Ansattside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         visAlleBlodplasma()
         visAlleBlodCeller()
         visAlleBlodplater()
+        visStatistikk()
         Reservasjonskalender.MinDate = Date.Now
 
 
@@ -42,6 +45,39 @@ Public Class Ansattside
         visAlleBlodplater()
         visAlleBlodCeller()
 
+    End Sub
+
+    Private Sub visCeller()
+        Dim blodTabell As New DataTable
+
+        If cboBlod.Text = blodtypeValgt Then
+            blodTabell = Blodlager.getBlodcellerGrid(blodtypeValgt)
+            Blodlager.fyllDatagrid(blodGrid, blodTabell)
+        End If
+
+    End Sub
+
+    Private Sub visPlater()
+        Dim blodTabell As New DataTable
+
+        If cboBlod.Text = blodtypeValgt Then
+            blodTabell = Blodlager.getPlaterGrid(blodtypeValgt)
+            Blodlager.fyllDatagrid(blodGrid, blodTabell)
+        End If
+
+    End Sub
+
+    Private Sub visPlasma()
+        Dim blodTabell As New DataTable
+
+        If cboBlod.Text = blodtypeValgt Then
+            blodTabell = Blodlager.getPlasmaGrid(blodtypeValgt)
+            Blodlager.fyllDatagrid(blodGrid, blodTabell)
+        End If
+    End Sub
+
+    Private Sub btnTest_Click(sender As Object, e As EventArgs) Handles btnVisCeller.Click
+        visCeller()
     End Sub
 
     Private Sub LeggtilBlod()
@@ -99,28 +135,51 @@ Public Class Ansattside
         Dim blodIDTab As New DataTable
         Dim resIDTab As New DataTable
 
-        'Finner personID utifra personnummeret som blir skrevet inn
-        personIDTab = person.getPersonID(personnummer)
+        Try
 
-        For Each row In personIDTab.Rows
-            pID = row("personID")
+            'Finner personID utifra personnummeret som blir skrevet inn
+            personIDTab = person.getPersonID(personnummer)
 
-        Next
+            For Each row In personIDTab.Rows
+                pID = row("personID")
 
-        'Finner siste reservasjonID ved bruk av personID
-        resIDTab = res.getLastResIDByPersonID(pID)
+            Next row
 
-        For Each row In resIDTab.Rows
-            rID = row("resID")
-        Next
+            'Finner siste reservasjonID ved bruk av personID
+            resIDTab = res.getLastResIDByPersonID(pID)
+
+            For Each row In resIDTab.Rows
+                rID = row("resID")
+            Next row
 
 
-        'Finner siste blodtappingsID ved bruk av reservasjonsID
-        blodIDTab = Blodlager.getLastBlodIDByResID(rID)
+            'Finner siste blodtappingsID ved bruk av reservasjonsID
+            blodIDTab = Blodlager.getLastBlodIDByResID(rID)
 
-        For Each row In blodIDTab.Rows
-            bID = row("blodID")
-        Next
+            For Each row In blodIDTab.Rows
+                bID = row("blodID")
+            Next row
+
+            'Legger inn checkbox verdiene inn i integer variabler
+            Dim celleposer As Integer = cboBlodlegeme.Text
+            Dim plasmaposer As Integer = cboBlodplasma.Text
+            Dim plateposer As Integer = cboBlodplater.Text
+            Dim dato As String = Date.Now.ToString("yyyy-MM-dd")
+
+            'Henter ut prosedyrer for å legg inn verdiene rett inn i databasen
+            Blodlager.leggInnBlodcelle(lagerID, bID, celleposer, dato)
+            Blodlager.leggInnBlodplasma(lagerID, bID, plasmaposer)
+            Blodlager.leggInnBlodplate(lagerID, bID, plateposer, dato)
+
+            'Viser messagebox og gjør blodtype comboboks tilgjengelig deretter tømmer personnummer tekstboks
+            MessageBox.Show("Blodprodukter har blitt lagt inn", "Fullført")
+            cboBlod.Enabled = True
+            txtLagerPersonnummer.Text = ""
+
+        Catch ex As Exception
+
+        End Try
+
 
 
 #Region "Validerings kode"
@@ -141,20 +200,10 @@ Public Class Ansattside
 #End Region
 
 
-        'Legger inn checkbox verdiene inn i integer variabler
-        Dim celleposer As Integer = cboBlodlegeme.Text
-        Dim plasmaposer As Integer = cboBlodplasma.Text
-        Dim plateposer As Integer = cboBlodplater.Text
-        Dim dato As String = Date.Now.ToString("yyyy-MM-dd")
 
-        'Henter ut prosedyrer for å legg inn verdiene rett inn i databasen
-        Blodlager.leggInnBlodcelle(lagerID, bID, celleposer, dato)
-        Blodlager.leggInnBlodplasma(lagerID, bID, plasmaposer)
-        Blodlager.leggInnBlodplate(lagerID, bID, plateposer, dato)
-
-        MessageBox.Show("Blodprodukter har blitt lagt inn", "Fullført")
 
     End Sub
+
 
     Private Sub skrivUtBlodProdukter()
         'Legger inn checkbox verdiene inn i integer variabler
@@ -167,6 +216,8 @@ Public Class Ansattside
         Blodlager.skrivUtBlodceller(ant_celleposer, blodtype)
         Blodlager.skrivUtBlodplater(ant_plateposer, blodtype)
         Blodlager.skrivUtBlodplasma(ant_plasmaposer, blodtype)
+
+        MessageBox.Show("Fullført", "Fullført")
     End Sub
 
 
@@ -332,7 +383,7 @@ Public Class Ansattside
             'Framvisning i tekstbokser ved å legge variabel verdiene inn
             txtFornavn.Text = fornavn
             txtEtternavn.Text = etternavn
-            txtFodselsdato.Text = fodselsdato
+            txtFodselsdato.Text = fodselsdato.ToString("yyyy-MM-dd")
             txtTelefon.Text = telefon
             txtAdresse.Text = adresse
             txtPostnummer.Text = postnummer
@@ -518,7 +569,48 @@ Public Class Ansattside
 #End Region
 
 
+#Region "Statistikk kode"
+    Private Sub visStatistikk()
 
+        'Oppretter tomme tabeller
+        Dim statistikkMaanedTab As New DataTable
+        Dim statistikkAarTab As New DataTable
+
+
+
+        Dim antallregistrerteMaaned As String
+        Dim antallregistrerteAar As String
+
+        'Legger verdiene fra spørringen inn i månedstabellen
+        statistikkMaanedTab = stats.bgRegistrertMaaned()
+
+        For Each row In statistikkMaanedTab.Rows
+
+            antallregistrerteMaaned = row("Antallregistrerte")
+            MsgBox(antallregistrerteMaaned)
+
+            gridStatistikkMaaned.Rows.Add(antallregistrerteMaaned)
+
+        Next row
+
+
+
+
+        'Legger verdiene fra spørringen inn i månedstabellen
+        statistikkAarTab = stats.bgRegistrertAar()
+
+        For Each row In statistikkAarTab.Rows
+            antallregistrerteAar = row("Antallregistrerte")
+
+            If antallregistrerteAar = "" Then
+                antallregistrerteAar = "0"
+            End If
+
+            gridStatistikkAar.Rows.Add(antallregistrerteAar)
+        Next row
+
+    End Sub
+#End Region
     'Henter ut poststedet som postnummeret er koblet til og viser det fram i en tekstboks
     Private Sub visPoststed()
 
@@ -607,5 +699,17 @@ Public Class Ansattside
             res.reserver(hastInnkallDato.ToString("yyyy-MM-dd"), inkPersonNr, inkTime)
             res.fyllCombobox(hastInnkallDato.ToString("yyyy-MM-dd"), innkallingTidspunktComboBox)
         Next
+    End Sub
+
+    Private Sub cboBlod_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboBlod.SelectedIndexChanged
+        blodtypeValgt = cboBlod.Text
+    End Sub
+
+    Private Sub btnVisPlater_Click(sender As Object, e As EventArgs) Handles btnVisPlater.Click
+        visPlater()
+    End Sub
+
+    Private Sub btnVisPlasma_Click(sender As Object, e As EventArgs) Handles btnVisPlasma.Click
+        visPlasma()
     End Sub
 End Class

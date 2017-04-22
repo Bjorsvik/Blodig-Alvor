@@ -143,6 +143,7 @@
     <Compile Include="SplashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Statistikk.vb" />
     <Compile Include="Validering.vb" />
   </ItemGroup>
   <ItemGroup>
