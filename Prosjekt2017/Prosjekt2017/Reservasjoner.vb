@@ -94,7 +94,7 @@ Public Class Reservasjoner
     End Sub
 
     'Legger til reservasjon
-    Public Sub addReservasjon(ByRef ComboBox, ByVal personnummer, ByVal resDato)
+    Public Sub addReservasjon(ByRef ComboBox As Object, ByVal personnummer As String, ByVal resDato As String)
         Dim personID As String = ""
         Dim tid As String = ComboBox.SelectedValue.ToString()
 
@@ -138,19 +138,19 @@ AND Reservasjon.dato <= date_sub(now(), interval 3 month)
 Group by epost")
     End Function
 
-    Public Sub sendInnkalling(ByVal innEpost As String)
+    Public Sub sendInnkalling(ByVal innEpost As String, ByVal dato As String, ByVal tidspunkt As String)
         Dim mail As New MailMessage()
         Try
             mail.From = New MailAddress("Blodigalvor113@gmail.com")
             mail.To.Add(innEpost)
-            mail.Subject = "Test Mail"
-            mail.Body = "This is for testing SMTP mail from GMAIL"
+            mail.Subject = "Innkalling til blodgivning"
+            mail.Body = "Du får med denne eposten en innkalling til time ved St. Olavs hospital den " & dato & " klokken " & tidspunkt
             Dim Smtp As New SmtpClient("smtp.gmail.com")
             Smtp.Port = 587
             Smtp.EnableSsl = True
             Smtp.Credentials = New System.Net.NetworkCredential("Blodigalvor113@gmail.com", "vanadium")
             Smtp.Send(mail)
-            MsgBox("mail send")
+            MsgBox("Innkalling sendt")
         Catch ex As Exception
             MsgBox(ex.ToString)
         End Try
