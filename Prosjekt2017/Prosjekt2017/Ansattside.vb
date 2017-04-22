@@ -24,7 +24,6 @@ Public Class Ansattside
         visAlleBlodCeller()
         visAlleBlodplater()
         Reservasjonskalender.MinDate = Date.Now
-        hastInnkallDato = Date.Now.AddDays(2)
 
 
 
