@@ -31,7 +31,7 @@ Partial Class Ansattside
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.personnummer = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.resTidComboBox = New System.Windows.Forms.ComboBox()
         Me.ResGrid = New System.Windows.Forms.DataGridView()
         Me.Dato = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Tidspunkt = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -103,115 +103,112 @@ Partial Class Ansattside
         Me.btnSok = New System.Windows.Forms.Button()
         Me.txtSok = New System.Windows.Forms.TextBox()
         Me.lblSok = New System.Windows.Forms.Label()
-        Me.btnLogUt = New System.Windows.Forms.Button()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.rb562 = New System.Windows.Forms.RadioButton()
-        Me.rb572 = New System.Windows.Forms.RadioButton()
         Me.Panel33 = New System.Windows.Forms.Panel()
+        Me.rb572 = New System.Windows.Forms.RadioButton()
         Me.rb571 = New System.Windows.Forms.RadioButton()
+        Me.Panel32 = New System.Windows.Forms.Panel()
         Me.rb582 = New System.Windows.Forms.RadioButton()
         Me.rb581 = New System.Windows.Forms.RadioButton()
-        Me.Panel32 = New System.Windows.Forms.Panel()
-        Me.rb812 = New System.Windows.Forms.RadioButton()
-        Me.rb412 = New System.Windows.Forms.RadioButton()
-        Me.rb811 = New System.Windows.Forms.RadioButton()
-        Me.rb712 = New System.Windows.Forms.RadioButton()
-        Me.rb711 = New System.Windows.Forms.RadioButton()
-        Me.rb722 = New System.Windows.Forms.RadioButton()
-        Me.rb721 = New System.Windows.Forms.RadioButton()
         Me.Panel40 = New System.Windows.Forms.Panel()
         Me.rb5112 = New System.Windows.Forms.RadioButton()
         Me.rb5111 = New System.Windows.Forms.RadioButton()
-        Me.rb411 = New System.Windows.Forms.RadioButton()
-        Me.rb732 = New System.Windows.Forms.RadioButton()
         Me.Panel34 = New System.Windows.Forms.Panel()
+        Me.rb562 = New System.Windows.Forms.RadioButton()
         Me.rb561 = New System.Windows.Forms.RadioButton()
-        Me.rb252 = New System.Windows.Forms.RadioButton()
-        Me.rb512 = New System.Windows.Forms.RadioButton()
-        Me.rb511 = New System.Windows.Forms.RadioButton()
-        Me.rb522 = New System.Windows.Forms.RadioButton()
-        Me.rb521 = New System.Windows.Forms.RadioButton()
-        Me.rb532 = New System.Windows.Forms.RadioButton()
-        Me.rb531 = New System.Windows.Forms.RadioButton()
         Me.Panel35 = New System.Windows.Forms.Panel()
         Me.rb552 = New System.Windows.Forms.RadioButton()
         Me.rb551 = New System.Windows.Forms.RadioButton()
+        Me.Panel36 = New System.Windows.Forms.Panel()
         Me.rb542 = New System.Windows.Forms.RadioButton()
         Me.rb541 = New System.Windows.Forms.RadioButton()
-        Me.Panel36 = New System.Windows.Forms.Panel()
         Me.Panel38 = New System.Windows.Forms.Panel()
+        Me.rb522 = New System.Windows.Forms.RadioButton()
+        Me.rb521 = New System.Windows.Forms.RadioButton()
         Me.Panel26 = New System.Windows.Forms.Panel()
+        Me.rb412 = New System.Windows.Forms.RadioButton()
+        Me.rb411 = New System.Windows.Forms.RadioButton()
         Me.Panel39 = New System.Windows.Forms.Panel()
+        Me.rb512 = New System.Windows.Forms.RadioButton()
+        Me.rb511 = New System.Windows.Forms.RadioButton()
         Me.Panel30 = New System.Windows.Forms.Panel()
+        Me.rb712 = New System.Windows.Forms.RadioButton()
+        Me.rb711 = New System.Windows.Forms.RadioButton()
         Me.Panel37 = New System.Windows.Forms.Panel()
+        Me.rb532 = New System.Windows.Forms.RadioButton()
+        Me.rb531 = New System.Windows.Forms.RadioButton()
         Me.Panel31 = New System.Windows.Forms.Panel()
+        Me.rb812 = New System.Windows.Forms.RadioButton()
+        Me.rb811 = New System.Windows.Forms.RadioButton()
         Me.Panel29 = New System.Windows.Forms.Panel()
-        Me.rb731 = New System.Windows.Forms.RadioButton()
+        Me.rb722 = New System.Windows.Forms.RadioButton()
+        Me.rb721 = New System.Windows.Forms.RadioButton()
         Me.label4030 = New System.Windows.Forms.Label()
         Me.Panel28 = New System.Windows.Forms.Panel()
-        Me.rb251 = New System.Windows.Forms.RadioButton()
+        Me.rb732 = New System.Windows.Forms.RadioButton()
+        Me.rb731 = New System.Windows.Forms.RadioButton()
         Me.Panel27 = New System.Windows.Forms.Panel()
         Me.rb742 = New System.Windows.Forms.RadioButton()
         Me.rb741 = New System.Windows.Forms.RadioButton()
-        Me.rb242 = New System.Windows.Forms.RadioButton()
-        Me.rb241 = New System.Windows.Forms.RadioButton()
         Me.Panel25 = New System.Windows.Forms.Panel()
         Me.rb382 = New System.Windows.Forms.RadioButton()
         Me.rb381 = New System.Windows.Forms.RadioButton()
-        Me.rb332 = New System.Windows.Forms.RadioButton()
-        Me.rb331 = New System.Windows.Forms.RadioButton()
         Me.Panel24 = New System.Windows.Forms.Panel()
         Me.rb372 = New System.Windows.Forms.RadioButton()
         Me.rb371 = New System.Windows.Forms.RadioButton()
-        Me.rb322 = New System.Windows.Forms.RadioButton()
-        Me.rb321 = New System.Windows.Forms.RadioButton()
-        Me.rb312 = New System.Windows.Forms.RadioButton()
-        Me.rb311 = New System.Windows.Forms.RadioButton()
-        Me.rb362 = New System.Windows.Forms.RadioButton()
         Me.Panel21 = New System.Windows.Forms.Panel()
+        Me.rb362 = New System.Windows.Forms.RadioButton()
         Me.rb361 = New System.Windows.Forms.RadioButton()
         Me.Panel16 = New System.Windows.Forms.Panel()
+        Me.rb252 = New System.Windows.Forms.RadioButton()
+        Me.rb251 = New System.Windows.Forms.RadioButton()
         Me.Panel17 = New System.Windows.Forms.Panel()
+        Me.rb242 = New System.Windows.Forms.RadioButton()
+        Me.rb241 = New System.Windows.Forms.RadioButton()
         Me.Panel14 = New System.Windows.Forms.Panel()
         Me.rb222 = New System.Windows.Forms.RadioButton()
         Me.rb221 = New System.Windows.Forms.RadioButton()
         Me.Panel18 = New System.Windows.Forms.Panel()
+        Me.rb332 = New System.Windows.Forms.RadioButton()
+        Me.rb331 = New System.Windows.Forms.RadioButton()
         Me.Panel12 = New System.Windows.Forms.Panel()
         Me.rb232 = New System.Windows.Forms.RadioButton()
         Me.rb231 = New System.Windows.Forms.RadioButton()
+        Me.Panel23 = New System.Windows.Forms.Panel()
         Me.rb342 = New System.Windows.Forms.RadioButton()
         Me.rb341 = New System.Windows.Forms.RadioButton()
-        Me.Panel23 = New System.Windows.Forms.Panel()
         Me.Panel20 = New System.Windows.Forms.Panel()
+        Me.rb312 = New System.Windows.Forms.RadioButton()
+        Me.rb311 = New System.Windows.Forms.RadioButton()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.rb142 = New System.Windows.Forms.RadioButton()
         Me.rb141 = New System.Windows.Forms.RadioButton()
+        Me.Panel22 = New System.Windows.Forms.Panel()
         Me.rb352 = New System.Windows.Forms.RadioButton()
         Me.rb351 = New System.Windows.Forms.RadioButton()
-        Me.Panel22 = New System.Windows.Forms.Panel()
         Me.Panel19 = New System.Windows.Forms.Panel()
+        Me.rb322 = New System.Windows.Forms.RadioButton()
+        Me.rb321 = New System.Windows.Forms.RadioButton()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.rb132 = New System.Windows.Forms.RadioButton()
         Me.rb131 = New System.Windows.Forms.RadioButton()
         Me.Panel60 = New System.Windows.Forms.Panel()
         Me.rb392 = New System.Windows.Forms.RadioButton()
         Me.rb391 = New System.Windows.Forms.RadioButton()
-        Me.rb1102 = New System.Windows.Forms.RadioButton()
         Me.Panel59 = New System.Windows.Forms.Panel()
+        Me.rb1102 = New System.Windows.Forms.RadioButton()
         Me.rb3101 = New System.Windows.Forms.RadioButton()
+        Me.Panel58 = New System.Windows.Forms.Panel()
         Me.rbSMSNei = New System.Windows.Forms.RadioButton()
         Me.rbSMSJa = New System.Windows.Forms.RadioButton()
-        Me.Panel58 = New System.Windows.Forms.Panel()
+        Me.Panel57 = New System.Windows.Forms.Panel()
         Me.rbEpostNei = New System.Windows.Forms.RadioButton()
         Me.rbEpostJa = New System.Windows.Forms.RadioButton()
-        Me.Panel57 = New System.Windows.Forms.Panel()
         Me.Label125 = New System.Windows.Forms.Label()
         Me.Label127 = New System.Windows.Forms.Label()
+        Me.Panel56 = New System.Windows.Forms.Panel()
         Me.rb912 = New System.Windows.Forms.RadioButton()
         Me.rb911 = New System.Windows.Forms.RadioButton()
-        Me.Panel56 = New System.Windows.Forms.Panel()
-        Me.rb922 = New System.Windows.Forms.RadioButton()
-        Me.rb921 = New System.Windows.Forms.RadioButton()
         Me.Panel41 = New System.Windows.Forms.Panel()
         Me.rb5102 = New System.Windows.Forms.RadioButton()
         Me.rb5101 = New System.Windows.Forms.RadioButton()
@@ -223,55 +220,57 @@ Partial Class Ansattside
         Me.chkSjekk = New System.Windows.Forms.CheckBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Panel55 = New System.Windows.Forms.Panel()
-        Me.rb162 = New System.Windows.Forms.RadioButton()
+        Me.rb922 = New System.Windows.Forms.RadioButton()
+        Me.rb921 = New System.Windows.Forms.RadioButton()
         Me.Label130 = New System.Windows.Forms.Label()
+        Me.Panel62 = New System.Windows.Forms.Panel()
+        Me.rb162 = New System.Windows.Forms.RadioButton()
         Me.rb161 = New System.Windows.Forms.RadioButton()
+        Me.Panel61 = New System.Windows.Forms.Panel()
         Me.rb152 = New System.Windows.Forms.RadioButton()
         Me.rb151 = New System.Windows.Forms.RadioButton()
-        Me.Panel62 = New System.Windows.Forms.Panel()
-        Me.Panel61 = New System.Windows.Forms.Panel()
         Me.Label129 = New System.Windows.Forms.Label()
         Me.lblDato = New System.Windows.Forms.Label()
         Me.btnInfo = New System.Windows.Forms.Button()
-        Me.rb932 = New System.Windows.Forms.RadioButton()
-        Me.rb9102 = New System.Windows.Forms.RadioButton()
+        Me.Panel48 = New System.Windows.Forms.Panel()
         Me.rb5152 = New System.Windows.Forms.RadioButton()
         Me.rb5151 = New System.Windows.Forms.RadioButton()
-        Me.Panel48 = New System.Windows.Forms.Panel()
-        Me.rb5122 = New System.Windows.Forms.RadioButton()
-        Me.rb5121 = New System.Windows.Forms.RadioButton()
         Me.Panel46 = New System.Windows.Forms.Panel()
+        Me.rb9102 = New System.Windows.Forms.RadioButton()
         Me.rb9101 = New System.Windows.Forms.RadioButton()
         Me.Panel45 = New System.Windows.Forms.Panel()
-        Me.rb5132 = New System.Windows.Forms.RadioButton()
-        Me.rb5141 = New System.Windows.Forms.RadioButton()
-        Me.rb5131 = New System.Windows.Forms.RadioButton()
-        Me.rb5142 = New System.Windows.Forms.RadioButton()
+        Me.rb5122 = New System.Windows.Forms.RadioButton()
+        Me.rb5121 = New System.Windows.Forms.RadioButton()
         Me.Panel43 = New System.Windows.Forms.Panel()
+        Me.rb5142 = New System.Windows.Forms.RadioButton()
+        Me.rb5141 = New System.Windows.Forms.RadioButton()
+        Me.Panel42 = New System.Windows.Forms.Panel()
         Me.rb592 = New System.Windows.Forms.RadioButton()
         Me.rb591 = New System.Windows.Forms.RadioButton()
-        Me.Panel42 = New System.Windows.Forms.Panel()
         Me.Panel44 = New System.Windows.Forms.Panel()
-        Me.rb941 = New System.Windows.Forms.RadioButton()
-        Me.rb931 = New System.Windows.Forms.RadioButton()
-        Me.rb942 = New System.Windows.Forms.RadioButton()
-        Me.rb952 = New System.Windows.Forms.RadioButton()
-        Me.rb951 = New System.Windows.Forms.RadioButton()
-        Me.rb962 = New System.Windows.Forms.RadioButton()
-        Me.rb961 = New System.Windows.Forms.RadioButton()
-        Me.rb971 = New System.Windows.Forms.RadioButton()
+        Me.rb5132 = New System.Windows.Forms.RadioButton()
+        Me.rb5131 = New System.Windows.Forms.RadioButton()
         Me.Panel47 = New System.Windows.Forms.Panel()
         Me.rb992 = New System.Windows.Forms.RadioButton()
         Me.rb991 = New System.Windows.Forms.RadioButton()
         Me.Panel50 = New System.Windows.Forms.Panel()
         Me.rb972 = New System.Windows.Forms.RadioButton()
+        Me.rb971 = New System.Windows.Forms.RadioButton()
         Me.Panel54 = New System.Windows.Forms.Panel()
-        Me.rb981 = New System.Windows.Forms.RadioButton()
+        Me.rb932 = New System.Windows.Forms.RadioButton()
+        Me.rb931 = New System.Windows.Forms.RadioButton()
         Me.Panel52 = New System.Windows.Forms.Panel()
-        Me.rb982 = New System.Windows.Forms.RadioButton()
+        Me.rb952 = New System.Windows.Forms.RadioButton()
+        Me.rb951 = New System.Windows.Forms.RadioButton()
         Me.Panel49 = New System.Windows.Forms.Panel()
+        Me.rb982 = New System.Windows.Forms.RadioButton()
+        Me.rb981 = New System.Windows.Forms.RadioButton()
         Me.Panel53 = New System.Windows.Forms.Panel()
+        Me.rb942 = New System.Windows.Forms.RadioButton()
+        Me.rb941 = New System.Windows.Forms.RadioButton()
         Me.Panel51 = New System.Windows.Forms.Panel()
+        Me.rb962 = New System.Windows.Forms.RadioButton()
+        Me.rb961 = New System.Windows.Forms.RadioButton()
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.rb212 = New System.Windows.Forms.RadioButton()
         Me.rb211 = New System.Windows.Forms.RadioButton()
@@ -419,6 +418,11 @@ Partial Class Ansattside
         Me.Label132 = New System.Windows.Forms.Label()
         Me.Label133 = New System.Windows.Forms.Label()
         Me.Label134 = New System.Windows.Forms.Label()
+        Me.btnLogUt = New System.Windows.Forms.Button()
+        Me.btnInnkalling = New System.Windows.Forms.Button()
+        Me.btnHasteInnkalling = New System.Windows.Forms.Button()
+        Me.innkallingTidspunktComboBox = New System.Windows.Forms.ComboBox()
+        Me.Label135 = New System.Windows.Forms.Label()
         Me.Statistikk.SuspendLayout()
         Me.Reservasjoner.SuspendLayout()
         CType(Me.ResGrid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -534,7 +538,7 @@ Partial Class Ansattside
         Me.Reservasjoner.Controls.Add(Me.Label11)
         Me.Reservasjoner.Controls.Add(Me.Label10)
         Me.Reservasjoner.Controls.Add(Me.personnummer)
-        Me.Reservasjoner.Controls.Add(Me.ComboBox1)
+        Me.Reservasjoner.Controls.Add(Me.resTidComboBox)
         Me.Reservasjoner.Controls.Add(Me.ResGrid)
         Me.Reservasjoner.Controls.Add(Me.Label2)
         Me.Reservasjoner.Controls.Add(Me.Reservasjonskalender)
@@ -590,13 +594,13 @@ Partial Class Ansattside
         Me.personnummer.Size = New System.Drawing.Size(100, 20)
         Me.personnummer.TabIndex = 18
         '
-        'ComboBox1
+        'resTidComboBox
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(324, 298)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 17
+        Me.resTidComboBox.FormattingEnabled = True
+        Me.resTidComboBox.Location = New System.Drawing.Point(324, 298)
+        Me.resTidComboBox.Name = "resTidComboBox"
+        Me.resTidComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.resTidComboBox.TabIndex = 17
         '
         'ResGrid
         '
@@ -935,6 +939,10 @@ Partial Class Ansattside
         '
         'Innkalling
         '
+        Me.Innkalling.Controls.Add(Me.Label135)
+        Me.Innkalling.Controls.Add(Me.innkallingTidspunktComboBox)
+        Me.Innkalling.Controls.Add(Me.btnHasteInnkalling)
+        Me.Innkalling.Controls.Add(Me.btnInnkalling)
         Me.Innkalling.Controls.Add(Me.btnHasteProsedyre)
         Me.Innkalling.Controls.Add(Me.btnNormalProsedyre)
         Me.Innkalling.Controls.Add(Me.Button1)
@@ -982,7 +990,7 @@ Partial Class Ansattside
         '
         'txtboxTilgjengelig
         '
-        Me.txtboxTilgjengelig.Location = New System.Drawing.Point(559, 240)
+        Me.txtboxTilgjengelig.Location = New System.Drawing.Point(557, 194)
         Me.txtboxTilgjengelig.Margin = New System.Windows.Forms.Padding(2)
         Me.txtboxTilgjengelig.Name = "txtboxTilgjengelig"
         Me.txtboxTilgjengelig.Size = New System.Drawing.Size(92, 20)
@@ -991,7 +999,7 @@ Partial Class Ansattside
         'lblTilgjengeligeGivere
         '
         Me.lblTilgjengeligeGivere.AutoSize = True
-        Me.lblTilgjengeligeGivere.Location = New System.Drawing.Point(435, 243)
+        Me.lblTilgjengeligeGivere.Location = New System.Drawing.Point(433, 197)
         Me.lblTilgjengeligeGivere.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblTilgjengeligeGivere.Name = "lblTilgjengeligeGivere"
         Me.lblTilgjengeligeGivere.Size = New System.Drawing.Size(121, 13)
@@ -1271,15 +1279,6 @@ Partial Class Ansattside
         Me.lblSok.TabIndex = 0
         Me.lblSok.Text = "Søk etter personnummer:"
         '
-        'btnLogUt
-        '
-        Me.btnLogUt.Location = New System.Drawing.Point(749, 5)
-        Me.btnLogUt.Name = "btnLogUt"
-        Me.btnLogUt.Size = New System.Drawing.Size(75, 23)
-        Me.btnLogUt.TabIndex = 16
-        Me.btnLogUt.Text = "Log Ut"
-        Me.btnLogUt.UseVisualStyleBackColor = True
-        '
         'TabPage1
         '
         Me.TabPage1.AutoScroll = True
@@ -1483,15 +1482,14 @@ Partial Class Ansattside
         Me.TabPage1.Text = "Egenerklæring"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'rb562
+        'Panel33
         '
-        Me.rb562.AutoSize = True
-        Me.rb562.Location = New System.Drawing.Point(29, 3)
-        Me.rb562.Name = "rb562"
-        Me.rb562.Size = New System.Drawing.Size(14, 13)
-        Me.rb562.TabIndex = 4
-        Me.rb562.TabStop = True
-        Me.rb562.UseVisualStyleBackColor = True
+        Me.Panel33.Controls.Add(Me.rb572)
+        Me.Panel33.Controls.Add(Me.rb571)
+        Me.Panel33.Location = New System.Drawing.Point(323, 1230)
+        Me.Panel33.Name = "Panel33"
+        Me.Panel33.Size = New System.Drawing.Size(46, 19)
+        Me.Panel33.TabIndex = 596
         '
         'rb572
         '
@@ -1503,15 +1501,6 @@ Partial Class Ansattside
         Me.rb572.TabStop = True
         Me.rb572.UseVisualStyleBackColor = True
         '
-        'Panel33
-        '
-        Me.Panel33.Controls.Add(Me.rb572)
-        Me.Panel33.Controls.Add(Me.rb571)
-        Me.Panel33.Location = New System.Drawing.Point(323, 1230)
-        Me.Panel33.Name = "Panel33"
-        Me.Panel33.Size = New System.Drawing.Size(46, 19)
-        Me.Panel33.TabIndex = 596
-        '
         'rb571
         '
         Me.rb571.AutoSize = True
@@ -1521,6 +1510,15 @@ Partial Class Ansattside
         Me.rb571.TabIndex = 3
         Me.rb571.TabStop = True
         Me.rb571.UseVisualStyleBackColor = True
+        '
+        'Panel32
+        '
+        Me.Panel32.Controls.Add(Me.rb582)
+        Me.Panel32.Controls.Add(Me.rb581)
+        Me.Panel32.Location = New System.Drawing.Point(323, 1255)
+        Me.Panel32.Name = "Panel32"
+        Me.Panel32.Size = New System.Drawing.Size(46, 19)
+        Me.Panel32.TabIndex = 597
         '
         'rb582
         '
@@ -1541,85 +1539,6 @@ Partial Class Ansattside
         Me.rb581.TabIndex = 3
         Me.rb581.TabStop = True
         Me.rb581.UseVisualStyleBackColor = True
-        '
-        'Panel32
-        '
-        Me.Panel32.Controls.Add(Me.rb582)
-        Me.Panel32.Controls.Add(Me.rb581)
-        Me.Panel32.Location = New System.Drawing.Point(323, 1255)
-        Me.Panel32.Name = "Panel32"
-        Me.Panel32.Size = New System.Drawing.Size(46, 19)
-        Me.Panel32.TabIndex = 597
-        '
-        'rb812
-        '
-        Me.rb812.AutoSize = True
-        Me.rb812.Location = New System.Drawing.Point(29, 3)
-        Me.rb812.Name = "rb812"
-        Me.rb812.Size = New System.Drawing.Size(14, 13)
-        Me.rb812.TabIndex = 4
-        Me.rb812.TabStop = True
-        Me.rb812.UseVisualStyleBackColor = True
-        '
-        'rb412
-        '
-        Me.rb412.AutoSize = True
-        Me.rb412.Location = New System.Drawing.Point(29, 3)
-        Me.rb412.Name = "rb412"
-        Me.rb412.Size = New System.Drawing.Size(14, 13)
-        Me.rb412.TabIndex = 4
-        Me.rb412.TabStop = True
-        Me.rb412.UseVisualStyleBackColor = True
-        '
-        'rb811
-        '
-        Me.rb811.AutoSize = True
-        Me.rb811.Location = New System.Drawing.Point(5, 3)
-        Me.rb811.Name = "rb811"
-        Me.rb811.Size = New System.Drawing.Size(14, 13)
-        Me.rb811.TabIndex = 3
-        Me.rb811.TabStop = True
-        Me.rb811.UseVisualStyleBackColor = True
-        '
-        'rb712
-        '
-        Me.rb712.AutoSize = True
-        Me.rb712.Location = New System.Drawing.Point(29, 3)
-        Me.rb712.Name = "rb712"
-        Me.rb712.Size = New System.Drawing.Size(14, 13)
-        Me.rb712.TabIndex = 4
-        Me.rb712.TabStop = True
-        Me.rb712.UseVisualStyleBackColor = True
-        '
-        'rb711
-        '
-        Me.rb711.AutoSize = True
-        Me.rb711.Location = New System.Drawing.Point(5, 3)
-        Me.rb711.Name = "rb711"
-        Me.rb711.Size = New System.Drawing.Size(14, 13)
-        Me.rb711.TabIndex = 3
-        Me.rb711.TabStop = True
-        Me.rb711.UseVisualStyleBackColor = True
-        '
-        'rb722
-        '
-        Me.rb722.AutoSize = True
-        Me.rb722.Location = New System.Drawing.Point(29, 3)
-        Me.rb722.Name = "rb722"
-        Me.rb722.Size = New System.Drawing.Size(14, 13)
-        Me.rb722.TabIndex = 4
-        Me.rb722.TabStop = True
-        Me.rb722.UseVisualStyleBackColor = True
-        '
-        'rb721
-        '
-        Me.rb721.AutoSize = True
-        Me.rb721.Location = New System.Drawing.Point(5, 3)
-        Me.rb721.Name = "rb721"
-        Me.rb721.Size = New System.Drawing.Size(14, 13)
-        Me.rb721.TabIndex = 3
-        Me.rb721.TabStop = True
-        Me.rb721.UseVisualStyleBackColor = True
         '
         'Panel40
         '
@@ -1650,26 +1569,6 @@ Partial Class Ansattside
         Me.rb5111.TabStop = True
         Me.rb5111.UseVisualStyleBackColor = True
         '
-        'rb411
-        '
-        Me.rb411.AutoSize = True
-        Me.rb411.Location = New System.Drawing.Point(5, 3)
-        Me.rb411.Name = "rb411"
-        Me.rb411.Size = New System.Drawing.Size(14, 13)
-        Me.rb411.TabIndex = 3
-        Me.rb411.TabStop = True
-        Me.rb411.UseVisualStyleBackColor = True
-        '
-        'rb732
-        '
-        Me.rb732.AutoSize = True
-        Me.rb732.Location = New System.Drawing.Point(29, 3)
-        Me.rb732.Name = "rb732"
-        Me.rb732.Size = New System.Drawing.Size(14, 13)
-        Me.rb732.TabIndex = 4
-        Me.rb732.TabStop = True
-        Me.rb732.UseVisualStyleBackColor = True
-        '
         'Panel34
         '
         Me.Panel34.Controls.Add(Me.rb562)
@@ -1678,6 +1577,16 @@ Partial Class Ansattside
         Me.Panel34.Name = "Panel34"
         Me.Panel34.Size = New System.Drawing.Size(46, 19)
         Me.Panel34.TabIndex = 595
+        '
+        'rb562
+        '
+        Me.rb562.AutoSize = True
+        Me.rb562.Location = New System.Drawing.Point(29, 3)
+        Me.rb562.Name = "rb562"
+        Me.rb562.Size = New System.Drawing.Size(14, 13)
+        Me.rb562.TabIndex = 4
+        Me.rb562.TabStop = True
+        Me.rb562.UseVisualStyleBackColor = True
         '
         'rb561
         '
@@ -1688,76 +1597,6 @@ Partial Class Ansattside
         Me.rb561.TabIndex = 3
         Me.rb561.TabStop = True
         Me.rb561.UseVisualStyleBackColor = True
-        '
-        'rb252
-        '
-        Me.rb252.AutoSize = True
-        Me.rb252.Location = New System.Drawing.Point(29, 3)
-        Me.rb252.Name = "rb252"
-        Me.rb252.Size = New System.Drawing.Size(14, 13)
-        Me.rb252.TabIndex = 4
-        Me.rb252.TabStop = True
-        Me.rb252.UseVisualStyleBackColor = True
-        '
-        'rb512
-        '
-        Me.rb512.AutoSize = True
-        Me.rb512.Location = New System.Drawing.Point(29, 3)
-        Me.rb512.Name = "rb512"
-        Me.rb512.Size = New System.Drawing.Size(14, 13)
-        Me.rb512.TabIndex = 4
-        Me.rb512.TabStop = True
-        Me.rb512.UseVisualStyleBackColor = True
-        '
-        'rb511
-        '
-        Me.rb511.AutoSize = True
-        Me.rb511.Location = New System.Drawing.Point(5, 3)
-        Me.rb511.Name = "rb511"
-        Me.rb511.Size = New System.Drawing.Size(14, 13)
-        Me.rb511.TabIndex = 3
-        Me.rb511.TabStop = True
-        Me.rb511.UseVisualStyleBackColor = True
-        '
-        'rb522
-        '
-        Me.rb522.AutoSize = True
-        Me.rb522.Location = New System.Drawing.Point(29, 3)
-        Me.rb522.Name = "rb522"
-        Me.rb522.Size = New System.Drawing.Size(14, 13)
-        Me.rb522.TabIndex = 4
-        Me.rb522.TabStop = True
-        Me.rb522.UseVisualStyleBackColor = True
-        '
-        'rb521
-        '
-        Me.rb521.AutoSize = True
-        Me.rb521.Location = New System.Drawing.Point(5, 3)
-        Me.rb521.Name = "rb521"
-        Me.rb521.Size = New System.Drawing.Size(14, 13)
-        Me.rb521.TabIndex = 3
-        Me.rb521.TabStop = True
-        Me.rb521.UseVisualStyleBackColor = True
-        '
-        'rb532
-        '
-        Me.rb532.AutoSize = True
-        Me.rb532.Location = New System.Drawing.Point(29, 3)
-        Me.rb532.Name = "rb532"
-        Me.rb532.Size = New System.Drawing.Size(14, 13)
-        Me.rb532.TabIndex = 4
-        Me.rb532.TabStop = True
-        Me.rb532.UseVisualStyleBackColor = True
-        '
-        'rb531
-        '
-        Me.rb531.AutoSize = True
-        Me.rb531.Location = New System.Drawing.Point(5, 3)
-        Me.rb531.Name = "rb531"
-        Me.rb531.Size = New System.Drawing.Size(14, 13)
-        Me.rb531.TabIndex = 3
-        Me.rb531.TabStop = True
-        Me.rb531.UseVisualStyleBackColor = True
         '
         'Panel35
         '
@@ -1788,6 +1627,15 @@ Partial Class Ansattside
         Me.rb551.TabStop = True
         Me.rb551.UseVisualStyleBackColor = True
         '
+        'Panel36
+        '
+        Me.Panel36.Controls.Add(Me.rb542)
+        Me.Panel36.Controls.Add(Me.rb541)
+        Me.Panel36.Location = New System.Drawing.Point(323, 1158)
+        Me.Panel36.Name = "Panel36"
+        Me.Panel36.Size = New System.Drawing.Size(46, 19)
+        Me.Panel36.TabIndex = 593
+        '
         'rb542
         '
         Me.rb542.AutoSize = True
@@ -1808,15 +1656,6 @@ Partial Class Ansattside
         Me.rb541.TabStop = True
         Me.rb541.UseVisualStyleBackColor = True
         '
-        'Panel36
-        '
-        Me.Panel36.Controls.Add(Me.rb542)
-        Me.Panel36.Controls.Add(Me.rb541)
-        Me.Panel36.Location = New System.Drawing.Point(323, 1158)
-        Me.Panel36.Name = "Panel36"
-        Me.Panel36.Size = New System.Drawing.Size(46, 19)
-        Me.Panel36.TabIndex = 593
-        '
         'Panel38
         '
         Me.Panel38.Controls.Add(Me.rb522)
@@ -1825,6 +1664,26 @@ Partial Class Ansattside
         Me.Panel38.Name = "Panel38"
         Me.Panel38.Size = New System.Drawing.Size(46, 19)
         Me.Panel38.TabIndex = 591
+        '
+        'rb522
+        '
+        Me.rb522.AutoSize = True
+        Me.rb522.Location = New System.Drawing.Point(29, 3)
+        Me.rb522.Name = "rb522"
+        Me.rb522.Size = New System.Drawing.Size(14, 13)
+        Me.rb522.TabIndex = 4
+        Me.rb522.TabStop = True
+        Me.rb522.UseVisualStyleBackColor = True
+        '
+        'rb521
+        '
+        Me.rb521.AutoSize = True
+        Me.rb521.Location = New System.Drawing.Point(5, 3)
+        Me.rb521.Name = "rb521"
+        Me.rb521.Size = New System.Drawing.Size(14, 13)
+        Me.rb521.TabIndex = 3
+        Me.rb521.TabStop = True
+        Me.rb521.UseVisualStyleBackColor = True
         '
         'Panel26
         '
@@ -1835,6 +1694,26 @@ Partial Class Ansattside
         Me.Panel26.Size = New System.Drawing.Size(46, 19)
         Me.Panel26.TabIndex = 589
         '
+        'rb412
+        '
+        Me.rb412.AutoSize = True
+        Me.rb412.Location = New System.Drawing.Point(29, 3)
+        Me.rb412.Name = "rb412"
+        Me.rb412.Size = New System.Drawing.Size(14, 13)
+        Me.rb412.TabIndex = 4
+        Me.rb412.TabStop = True
+        Me.rb412.UseVisualStyleBackColor = True
+        '
+        'rb411
+        '
+        Me.rb411.AutoSize = True
+        Me.rb411.Location = New System.Drawing.Point(5, 3)
+        Me.rb411.Name = "rb411"
+        Me.rb411.Size = New System.Drawing.Size(14, 13)
+        Me.rb411.TabIndex = 3
+        Me.rb411.TabStop = True
+        Me.rb411.UseVisualStyleBackColor = True
+        '
         'Panel39
         '
         Me.Panel39.Controls.Add(Me.rb512)
@@ -1843,6 +1722,26 @@ Partial Class Ansattside
         Me.Panel39.Name = "Panel39"
         Me.Panel39.Size = New System.Drawing.Size(46, 19)
         Me.Panel39.TabIndex = 590
+        '
+        'rb512
+        '
+        Me.rb512.AutoSize = True
+        Me.rb512.Location = New System.Drawing.Point(29, 3)
+        Me.rb512.Name = "rb512"
+        Me.rb512.Size = New System.Drawing.Size(14, 13)
+        Me.rb512.TabIndex = 4
+        Me.rb512.TabStop = True
+        Me.rb512.UseVisualStyleBackColor = True
+        '
+        'rb511
+        '
+        Me.rb511.AutoSize = True
+        Me.rb511.Location = New System.Drawing.Point(5, 3)
+        Me.rb511.Name = "rb511"
+        Me.rb511.Size = New System.Drawing.Size(14, 13)
+        Me.rb511.TabIndex = 3
+        Me.rb511.TabStop = True
+        Me.rb511.UseVisualStyleBackColor = True
         '
         'Panel30
         '
@@ -1853,6 +1752,26 @@ Partial Class Ansattside
         Me.Panel30.Size = New System.Drawing.Size(46, 19)
         Me.Panel30.TabIndex = 584
         '
+        'rb712
+        '
+        Me.rb712.AutoSize = True
+        Me.rb712.Location = New System.Drawing.Point(29, 3)
+        Me.rb712.Name = "rb712"
+        Me.rb712.Size = New System.Drawing.Size(14, 13)
+        Me.rb712.TabIndex = 4
+        Me.rb712.TabStop = True
+        Me.rb712.UseVisualStyleBackColor = True
+        '
+        'rb711
+        '
+        Me.rb711.AutoSize = True
+        Me.rb711.Location = New System.Drawing.Point(5, 3)
+        Me.rb711.Name = "rb711"
+        Me.rb711.Size = New System.Drawing.Size(14, 13)
+        Me.rb711.TabIndex = 3
+        Me.rb711.TabStop = True
+        Me.rb711.UseVisualStyleBackColor = True
+        '
         'Panel37
         '
         Me.Panel37.Controls.Add(Me.rb532)
@@ -1861,6 +1780,26 @@ Partial Class Ansattside
         Me.Panel37.Name = "Panel37"
         Me.Panel37.Size = New System.Drawing.Size(46, 19)
         Me.Panel37.TabIndex = 592
+        '
+        'rb532
+        '
+        Me.rb532.AutoSize = True
+        Me.rb532.Location = New System.Drawing.Point(29, 3)
+        Me.rb532.Name = "rb532"
+        Me.rb532.Size = New System.Drawing.Size(14, 13)
+        Me.rb532.TabIndex = 4
+        Me.rb532.TabStop = True
+        Me.rb532.UseVisualStyleBackColor = True
+        '
+        'rb531
+        '
+        Me.rb531.AutoSize = True
+        Me.rb531.Location = New System.Drawing.Point(5, 3)
+        Me.rb531.Name = "rb531"
+        Me.rb531.Size = New System.Drawing.Size(14, 13)
+        Me.rb531.TabIndex = 3
+        Me.rb531.TabStop = True
+        Me.rb531.UseVisualStyleBackColor = True
         '
         'Panel31
         '
@@ -1871,6 +1810,26 @@ Partial Class Ansattside
         Me.Panel31.Size = New System.Drawing.Size(46, 19)
         Me.Panel31.TabIndex = 583
         '
+        'rb812
+        '
+        Me.rb812.AutoSize = True
+        Me.rb812.Location = New System.Drawing.Point(29, 3)
+        Me.rb812.Name = "rb812"
+        Me.rb812.Size = New System.Drawing.Size(14, 13)
+        Me.rb812.TabIndex = 4
+        Me.rb812.TabStop = True
+        Me.rb812.UseVisualStyleBackColor = True
+        '
+        'rb811
+        '
+        Me.rb811.AutoSize = True
+        Me.rb811.Location = New System.Drawing.Point(5, 3)
+        Me.rb811.Name = "rb811"
+        Me.rb811.Size = New System.Drawing.Size(14, 13)
+        Me.rb811.TabIndex = 3
+        Me.rb811.TabStop = True
+        Me.rb811.UseVisualStyleBackColor = True
+        '
         'Panel29
         '
         Me.Panel29.Controls.Add(Me.rb722)
@@ -1880,15 +1839,25 @@ Partial Class Ansattside
         Me.Panel29.Size = New System.Drawing.Size(46, 19)
         Me.Panel29.TabIndex = 586
         '
-        'rb731
+        'rb722
         '
-        Me.rb731.AutoSize = True
-        Me.rb731.Location = New System.Drawing.Point(5, 3)
-        Me.rb731.Name = "rb731"
-        Me.rb731.Size = New System.Drawing.Size(14, 13)
-        Me.rb731.TabIndex = 3
-        Me.rb731.TabStop = True
-        Me.rb731.UseVisualStyleBackColor = True
+        Me.rb722.AutoSize = True
+        Me.rb722.Location = New System.Drawing.Point(29, 3)
+        Me.rb722.Name = "rb722"
+        Me.rb722.Size = New System.Drawing.Size(14, 13)
+        Me.rb722.TabIndex = 4
+        Me.rb722.TabStop = True
+        Me.rb722.UseVisualStyleBackColor = True
+        '
+        'rb721
+        '
+        Me.rb721.AutoSize = True
+        Me.rb721.Location = New System.Drawing.Point(5, 3)
+        Me.rb721.Name = "rb721"
+        Me.rb721.Size = New System.Drawing.Size(14, 13)
+        Me.rb721.TabIndex = 3
+        Me.rb721.TabStop = True
+        Me.rb721.UseVisualStyleBackColor = True
         '
         'label4030
         '
@@ -1908,15 +1877,25 @@ Partial Class Ansattside
         Me.Panel28.Size = New System.Drawing.Size(46, 19)
         Me.Panel28.TabIndex = 587
         '
-        'rb251
+        'rb732
         '
-        Me.rb251.AutoSize = True
-        Me.rb251.Location = New System.Drawing.Point(5, 3)
-        Me.rb251.Name = "rb251"
-        Me.rb251.Size = New System.Drawing.Size(14, 13)
-        Me.rb251.TabIndex = 3
-        Me.rb251.TabStop = True
-        Me.rb251.UseVisualStyleBackColor = True
+        Me.rb732.AutoSize = True
+        Me.rb732.Location = New System.Drawing.Point(29, 3)
+        Me.rb732.Name = "rb732"
+        Me.rb732.Size = New System.Drawing.Size(14, 13)
+        Me.rb732.TabIndex = 4
+        Me.rb732.TabStop = True
+        Me.rb732.UseVisualStyleBackColor = True
+        '
+        'rb731
+        '
+        Me.rb731.AutoSize = True
+        Me.rb731.Location = New System.Drawing.Point(5, 3)
+        Me.rb731.Name = "rb731"
+        Me.rb731.Size = New System.Drawing.Size(14, 13)
+        Me.rb731.TabIndex = 3
+        Me.rb731.TabStop = True
+        Me.rb731.UseVisualStyleBackColor = True
         '
         'Panel27
         '
@@ -1947,26 +1926,6 @@ Partial Class Ansattside
         Me.rb741.TabStop = True
         Me.rb741.UseVisualStyleBackColor = True
         '
-        'rb242
-        '
-        Me.rb242.AutoSize = True
-        Me.rb242.Location = New System.Drawing.Point(29, 3)
-        Me.rb242.Name = "rb242"
-        Me.rb242.Size = New System.Drawing.Size(14, 13)
-        Me.rb242.TabIndex = 4
-        Me.rb242.TabStop = True
-        Me.rb242.UseVisualStyleBackColor = True
-        '
-        'rb241
-        '
-        Me.rb241.AutoSize = True
-        Me.rb241.Location = New System.Drawing.Point(5, 3)
-        Me.rb241.Name = "rb241"
-        Me.rb241.Size = New System.Drawing.Size(14, 13)
-        Me.rb241.TabIndex = 3
-        Me.rb241.TabStop = True
-        Me.rb241.UseVisualStyleBackColor = True
-        '
         'Panel25
         '
         Me.Panel25.Controls.Add(Me.rb382)
@@ -1995,26 +1954,6 @@ Partial Class Ansattside
         Me.rb381.TabIndex = 3
         Me.rb381.TabStop = True
         Me.rb381.UseVisualStyleBackColor = True
-        '
-        'rb332
-        '
-        Me.rb332.AutoSize = True
-        Me.rb332.Location = New System.Drawing.Point(29, 3)
-        Me.rb332.Name = "rb332"
-        Me.rb332.Size = New System.Drawing.Size(14, 13)
-        Me.rb332.TabIndex = 4
-        Me.rb332.TabStop = True
-        Me.rb332.UseVisualStyleBackColor = True
-        '
-        'rb331
-        '
-        Me.rb331.AutoSize = True
-        Me.rb331.Location = New System.Drawing.Point(5, 3)
-        Me.rb331.Name = "rb331"
-        Me.rb331.Size = New System.Drawing.Size(14, 13)
-        Me.rb331.TabIndex = 3
-        Me.rb331.TabStop = True
-        Me.rb331.UseVisualStyleBackColor = True
         '
         'Panel24
         '
@@ -2045,45 +1984,14 @@ Partial Class Ansattside
         Me.rb371.TabStop = True
         Me.rb371.UseVisualStyleBackColor = True
         '
-        'rb322
+        'Panel21
         '
-        Me.rb322.AutoSize = True
-        Me.rb322.Location = New System.Drawing.Point(29, 3)
-        Me.rb322.Name = "rb322"
-        Me.rb322.Size = New System.Drawing.Size(14, 13)
-        Me.rb322.TabIndex = 4
-        Me.rb322.TabStop = True
-        Me.rb322.UseVisualStyleBackColor = True
-        '
-        'rb321
-        '
-        Me.rb321.AutoSize = True
-        Me.rb321.Location = New System.Drawing.Point(5, 3)
-        Me.rb321.Name = "rb321"
-        Me.rb321.Size = New System.Drawing.Size(14, 13)
-        Me.rb321.TabIndex = 3
-        Me.rb321.TabStop = True
-        Me.rb321.UseVisualStyleBackColor = True
-        '
-        'rb312
-        '
-        Me.rb312.AutoSize = True
-        Me.rb312.Location = New System.Drawing.Point(29, 3)
-        Me.rb312.Name = "rb312"
-        Me.rb312.Size = New System.Drawing.Size(14, 13)
-        Me.rb312.TabIndex = 4
-        Me.rb312.TabStop = True
-        Me.rb312.UseVisualStyleBackColor = True
-        '
-        'rb311
-        '
-        Me.rb311.AutoSize = True
-        Me.rb311.Location = New System.Drawing.Point(5, 3)
-        Me.rb311.Name = "rb311"
-        Me.rb311.Size = New System.Drawing.Size(14, 13)
-        Me.rb311.TabIndex = 3
-        Me.rb311.TabStop = True
-        Me.rb311.UseVisualStyleBackColor = True
+        Me.Panel21.Controls.Add(Me.rb362)
+        Me.Panel21.Controls.Add(Me.rb361)
+        Me.Panel21.Location = New System.Drawing.Point(323, 847)
+        Me.Panel21.Name = "Panel21"
+        Me.Panel21.Size = New System.Drawing.Size(46, 19)
+        Me.Panel21.TabIndex = 580
         '
         'rb362
         '
@@ -2094,15 +2002,6 @@ Partial Class Ansattside
         Me.rb362.TabIndex = 4
         Me.rb362.TabStop = True
         Me.rb362.UseVisualStyleBackColor = True
-        '
-        'Panel21
-        '
-        Me.Panel21.Controls.Add(Me.rb362)
-        Me.Panel21.Controls.Add(Me.rb361)
-        Me.Panel21.Location = New System.Drawing.Point(323, 847)
-        Me.Panel21.Name = "Panel21"
-        Me.Panel21.Size = New System.Drawing.Size(46, 19)
-        Me.Panel21.TabIndex = 580
         '
         'rb361
         '
@@ -2123,6 +2022,26 @@ Partial Class Ansattside
         Me.Panel16.Size = New System.Drawing.Size(46, 19)
         Me.Panel16.TabIndex = 574
         '
+        'rb252
+        '
+        Me.rb252.AutoSize = True
+        Me.rb252.Location = New System.Drawing.Point(29, 3)
+        Me.rb252.Name = "rb252"
+        Me.rb252.Size = New System.Drawing.Size(14, 13)
+        Me.rb252.TabIndex = 4
+        Me.rb252.TabStop = True
+        Me.rb252.UseVisualStyleBackColor = True
+        '
+        'rb251
+        '
+        Me.rb251.AutoSize = True
+        Me.rb251.Location = New System.Drawing.Point(5, 3)
+        Me.rb251.Name = "rb251"
+        Me.rb251.Size = New System.Drawing.Size(14, 13)
+        Me.rb251.TabIndex = 3
+        Me.rb251.TabStop = True
+        Me.rb251.UseVisualStyleBackColor = True
+        '
         'Panel17
         '
         Me.Panel17.Controls.Add(Me.rb242)
@@ -2131,6 +2050,26 @@ Partial Class Ansattside
         Me.Panel17.Name = "Panel17"
         Me.Panel17.Size = New System.Drawing.Size(46, 19)
         Me.Panel17.TabIndex = 573
+        '
+        'rb242
+        '
+        Me.rb242.AutoSize = True
+        Me.rb242.Location = New System.Drawing.Point(29, 3)
+        Me.rb242.Name = "rb242"
+        Me.rb242.Size = New System.Drawing.Size(14, 13)
+        Me.rb242.TabIndex = 4
+        Me.rb242.TabStop = True
+        Me.rb242.UseVisualStyleBackColor = True
+        '
+        'rb241
+        '
+        Me.rb241.AutoSize = True
+        Me.rb241.Location = New System.Drawing.Point(5, 3)
+        Me.rb241.Name = "rb241"
+        Me.rb241.Size = New System.Drawing.Size(14, 13)
+        Me.rb241.TabIndex = 3
+        Me.rb241.TabStop = True
+        Me.rb241.UseVisualStyleBackColor = True
         '
         'Panel14
         '
@@ -2170,6 +2109,26 @@ Partial Class Ansattside
         Me.Panel18.Size = New System.Drawing.Size(46, 19)
         Me.Panel18.TabIndex = 577
         '
+        'rb332
+        '
+        Me.rb332.AutoSize = True
+        Me.rb332.Location = New System.Drawing.Point(29, 3)
+        Me.rb332.Name = "rb332"
+        Me.rb332.Size = New System.Drawing.Size(14, 13)
+        Me.rb332.TabIndex = 4
+        Me.rb332.TabStop = True
+        Me.rb332.UseVisualStyleBackColor = True
+        '
+        'rb331
+        '
+        Me.rb331.AutoSize = True
+        Me.rb331.Location = New System.Drawing.Point(5, 3)
+        Me.rb331.Name = "rb331"
+        Me.rb331.Size = New System.Drawing.Size(14, 13)
+        Me.rb331.TabIndex = 3
+        Me.rb331.TabStop = True
+        Me.rb331.UseVisualStyleBackColor = True
+        '
         'Panel12
         '
         Me.Panel12.Controls.Add(Me.rb232)
@@ -2199,6 +2158,15 @@ Partial Class Ansattside
         Me.rb231.TabStop = True
         Me.rb231.UseVisualStyleBackColor = True
         '
+        'Panel23
+        '
+        Me.Panel23.Controls.Add(Me.rb342)
+        Me.Panel23.Controls.Add(Me.rb341)
+        Me.Panel23.Location = New System.Drawing.Point(323, 791)
+        Me.Panel23.Name = "Panel23"
+        Me.Panel23.Size = New System.Drawing.Size(46, 19)
+        Me.Panel23.TabIndex = 578
+        '
         'rb342
         '
         Me.rb342.AutoSize = True
@@ -2219,15 +2187,6 @@ Partial Class Ansattside
         Me.rb341.TabStop = True
         Me.rb341.UseVisualStyleBackColor = True
         '
-        'Panel23
-        '
-        Me.Panel23.Controls.Add(Me.rb342)
-        Me.Panel23.Controls.Add(Me.rb341)
-        Me.Panel23.Location = New System.Drawing.Point(323, 791)
-        Me.Panel23.Name = "Panel23"
-        Me.Panel23.Size = New System.Drawing.Size(46, 19)
-        Me.Panel23.TabIndex = 578
-        '
         'Panel20
         '
         Me.Panel20.Controls.Add(Me.rb312)
@@ -2236,6 +2195,26 @@ Partial Class Ansattside
         Me.Panel20.Name = "Panel20"
         Me.Panel20.Size = New System.Drawing.Size(46, 19)
         Me.Panel20.TabIndex = 575
+        '
+        'rb312
+        '
+        Me.rb312.AutoSize = True
+        Me.rb312.Location = New System.Drawing.Point(29, 3)
+        Me.rb312.Name = "rb312"
+        Me.rb312.Size = New System.Drawing.Size(14, 13)
+        Me.rb312.TabIndex = 4
+        Me.rb312.TabStop = True
+        Me.rb312.UseVisualStyleBackColor = True
+        '
+        'rb311
+        '
+        Me.rb311.AutoSize = True
+        Me.rb311.Location = New System.Drawing.Point(5, 3)
+        Me.rb311.Name = "rb311"
+        Me.rb311.Size = New System.Drawing.Size(14, 13)
+        Me.rb311.TabIndex = 3
+        Me.rb311.TabStop = True
+        Me.rb311.UseVisualStyleBackColor = True
         '
         'Panel9
         '
@@ -2266,6 +2245,15 @@ Partial Class Ansattside
         Me.rb141.TabStop = True
         Me.rb141.UseVisualStyleBackColor = True
         '
+        'Panel22
+        '
+        Me.Panel22.Controls.Add(Me.rb352)
+        Me.Panel22.Controls.Add(Me.rb351)
+        Me.Panel22.Location = New System.Drawing.Point(323, 816)
+        Me.Panel22.Name = "Panel22"
+        Me.Panel22.Size = New System.Drawing.Size(46, 19)
+        Me.Panel22.TabIndex = 579
+        '
         'rb352
         '
         Me.rb352.AutoSize = True
@@ -2286,15 +2274,6 @@ Partial Class Ansattside
         Me.rb351.TabStop = True
         Me.rb351.UseVisualStyleBackColor = True
         '
-        'Panel22
-        '
-        Me.Panel22.Controls.Add(Me.rb352)
-        Me.Panel22.Controls.Add(Me.rb351)
-        Me.Panel22.Location = New System.Drawing.Point(323, 816)
-        Me.Panel22.Name = "Panel22"
-        Me.Panel22.Size = New System.Drawing.Size(46, 19)
-        Me.Panel22.TabIndex = 579
-        '
         'Panel19
         '
         Me.Panel19.Controls.Add(Me.rb322)
@@ -2303,6 +2282,26 @@ Partial Class Ansattside
         Me.Panel19.Name = "Panel19"
         Me.Panel19.Size = New System.Drawing.Size(46, 19)
         Me.Panel19.TabIndex = 576
+        '
+        'rb322
+        '
+        Me.rb322.AutoSize = True
+        Me.rb322.Location = New System.Drawing.Point(29, 3)
+        Me.rb322.Name = "rb322"
+        Me.rb322.Size = New System.Drawing.Size(14, 13)
+        Me.rb322.TabIndex = 4
+        Me.rb322.TabStop = True
+        Me.rb322.UseVisualStyleBackColor = True
+        '
+        'rb321
+        '
+        Me.rb321.AutoSize = True
+        Me.rb321.Location = New System.Drawing.Point(5, 3)
+        Me.rb321.Name = "rb321"
+        Me.rb321.Size = New System.Drawing.Size(14, 13)
+        Me.rb321.TabIndex = 3
+        Me.rb321.TabStop = True
+        Me.rb321.UseVisualStyleBackColor = True
         '
         'Panel8
         '
@@ -2362,6 +2361,15 @@ Partial Class Ansattside
         Me.rb391.TabStop = True
         Me.rb391.UseVisualStyleBackColor = True
         '
+        'Panel59
+        '
+        Me.Panel59.Controls.Add(Me.rb1102)
+        Me.Panel59.Controls.Add(Me.rb3101)
+        Me.Panel59.Location = New System.Drawing.Point(323, 955)
+        Me.Panel59.Name = "Panel59"
+        Me.Panel59.Size = New System.Drawing.Size(46, 19)
+        Me.Panel59.TabIndex = 618
+        '
         'rb1102
         '
         Me.rb1102.AutoSize = True
@@ -2372,15 +2380,6 @@ Partial Class Ansattside
         Me.rb1102.TabStop = True
         Me.rb1102.UseVisualStyleBackColor = True
         '
-        'Panel59
-        '
-        Me.Panel59.Controls.Add(Me.rb1102)
-        Me.Panel59.Controls.Add(Me.rb3101)
-        Me.Panel59.Location = New System.Drawing.Point(323, 955)
-        Me.Panel59.Name = "Panel59"
-        Me.Panel59.Size = New System.Drawing.Size(46, 19)
-        Me.Panel59.TabIndex = 618
-        '
         'rb3101
         '
         Me.rb3101.AutoSize = True
@@ -2390,6 +2389,15 @@ Partial Class Ansattside
         Me.rb3101.TabIndex = 3
         Me.rb3101.TabStop = True
         Me.rb3101.UseVisualStyleBackColor = True
+        '
+        'Panel58
+        '
+        Me.Panel58.Controls.Add(Me.rbSMSNei)
+        Me.Panel58.Controls.Add(Me.rbSMSJa)
+        Me.Panel58.Location = New System.Drawing.Point(87, 294)
+        Me.Panel58.Name = "Panel58"
+        Me.Panel58.Size = New System.Drawing.Size(46, 19)
+        Me.Panel58.TabIndex = 567
         '
         'rbSMSNei
         '
@@ -2411,14 +2419,14 @@ Partial Class Ansattside
         Me.rbSMSJa.TabStop = True
         Me.rbSMSJa.UseVisualStyleBackColor = True
         '
-        'Panel58
+        'Panel57
         '
-        Me.Panel58.Controls.Add(Me.rbSMSNei)
-        Me.Panel58.Controls.Add(Me.rbSMSJa)
-        Me.Panel58.Location = New System.Drawing.Point(87, 294)
-        Me.Panel58.Name = "Panel58"
-        Me.Panel58.Size = New System.Drawing.Size(46, 19)
-        Me.Panel58.TabIndex = 567
+        Me.Panel57.Controls.Add(Me.rbEpostNei)
+        Me.Panel57.Controls.Add(Me.rbEpostJa)
+        Me.Panel57.Location = New System.Drawing.Point(87, 272)
+        Me.Panel57.Name = "Panel57"
+        Me.Panel57.Size = New System.Drawing.Size(46, 19)
+        Me.Panel57.TabIndex = 617
         '
         'rbEpostNei
         '
@@ -2440,15 +2448,6 @@ Partial Class Ansattside
         Me.rbEpostJa.TabStop = True
         Me.rbEpostJa.UseVisualStyleBackColor = True
         '
-        'Panel57
-        '
-        Me.Panel57.Controls.Add(Me.rbEpostNei)
-        Me.Panel57.Controls.Add(Me.rbEpostJa)
-        Me.Panel57.Location = New System.Drawing.Point(87, 272)
-        Me.Panel57.Name = "Panel57"
-        Me.Panel57.Size = New System.Drawing.Size(46, 19)
-        Me.Panel57.TabIndex = 617
-        '
         'Label125
         '
         Me.Label125.AutoSize = True
@@ -2469,6 +2468,15 @@ Partial Class Ansattside
         Me.Label127.Text = "Tillater du at blodbanken sender deg epost(Innkalling, timepåminning, eventuelt a" &
     "nnen viktig informasjon)?"
         '
+        'Panel56
+        '
+        Me.Panel56.Controls.Add(Me.rb912)
+        Me.Panel56.Controls.Add(Me.rb911)
+        Me.Panel56.Location = New System.Drawing.Point(633, 914)
+        Me.Panel56.Name = "Panel56"
+        Me.Panel56.Size = New System.Drawing.Size(46, 19)
+        Me.Panel56.TabIndex = 605
+        '
         'rb912
         '
         Me.rb912.AutoSize = True
@@ -2488,35 +2496,6 @@ Partial Class Ansattside
         Me.rb911.TabIndex = 3
         Me.rb911.TabStop = True
         Me.rb911.UseVisualStyleBackColor = True
-        '
-        'Panel56
-        '
-        Me.Panel56.Controls.Add(Me.rb912)
-        Me.Panel56.Controls.Add(Me.rb911)
-        Me.Panel56.Location = New System.Drawing.Point(633, 914)
-        Me.Panel56.Name = "Panel56"
-        Me.Panel56.Size = New System.Drawing.Size(46, 19)
-        Me.Panel56.TabIndex = 605
-        '
-        'rb922
-        '
-        Me.rb922.AutoSize = True
-        Me.rb922.Location = New System.Drawing.Point(29, 3)
-        Me.rb922.Name = "rb922"
-        Me.rb922.Size = New System.Drawing.Size(14, 13)
-        Me.rb922.TabIndex = 4
-        Me.rb922.TabStop = True
-        Me.rb922.UseVisualStyleBackColor = True
-        '
-        'rb921
-        '
-        Me.rb921.AutoSize = True
-        Me.rb921.Location = New System.Drawing.Point(5, 3)
-        Me.rb921.Name = "rb921"
-        Me.rb921.Size = New System.Drawing.Size(14, 13)
-        Me.rb921.TabIndex = 3
-        Me.rb921.TabStop = True
-        Me.rb921.UseVisualStyleBackColor = True
         '
         'Panel41
         '
@@ -2616,15 +2595,25 @@ Partial Class Ansattside
         Me.Panel55.Size = New System.Drawing.Size(46, 19)
         Me.Panel55.TabIndex = 606
         '
-        'rb162
+        'rb922
         '
-        Me.rb162.AutoSize = True
-        Me.rb162.Location = New System.Drawing.Point(29, 3)
-        Me.rb162.Name = "rb162"
-        Me.rb162.Size = New System.Drawing.Size(14, 13)
-        Me.rb162.TabIndex = 4
-        Me.rb162.TabStop = True
-        Me.rb162.UseVisualStyleBackColor = True
+        Me.rb922.AutoSize = True
+        Me.rb922.Location = New System.Drawing.Point(29, 3)
+        Me.rb922.Name = "rb922"
+        Me.rb922.Size = New System.Drawing.Size(14, 13)
+        Me.rb922.TabIndex = 4
+        Me.rb922.TabStop = True
+        Me.rb922.UseVisualStyleBackColor = True
+        '
+        'rb921
+        '
+        Me.rb921.AutoSize = True
+        Me.rb921.Location = New System.Drawing.Point(5, 3)
+        Me.rb921.Name = "rb921"
+        Me.rb921.Size = New System.Drawing.Size(14, 13)
+        Me.rb921.TabIndex = 3
+        Me.rb921.TabStop = True
+        Me.rb921.UseVisualStyleBackColor = True
         '
         'Label130
         '
@@ -2635,6 +2624,25 @@ Partial Class Ansattside
         Me.Label130.TabIndex = 623
         Me.Label130.Text = "Har du piercing i slimhinne?"
         '
+        'Panel62
+        '
+        Me.Panel62.Controls.Add(Me.rb162)
+        Me.Panel62.Controls.Add(Me.rb161)
+        Me.Panel62.Location = New System.Drawing.Point(323, 474)
+        Me.Panel62.Name = "Panel62"
+        Me.Panel62.Size = New System.Drawing.Size(46, 19)
+        Me.Panel62.TabIndex = 624
+        '
+        'rb162
+        '
+        Me.rb162.AutoSize = True
+        Me.rb162.Location = New System.Drawing.Point(29, 3)
+        Me.rb162.Name = "rb162"
+        Me.rb162.Size = New System.Drawing.Size(14, 13)
+        Me.rb162.TabIndex = 4
+        Me.rb162.TabStop = True
+        Me.rb162.UseVisualStyleBackColor = True
+        '
         'rb161
         '
         Me.rb161.AutoSize = True
@@ -2644,6 +2652,15 @@ Partial Class Ansattside
         Me.rb161.TabIndex = 3
         Me.rb161.TabStop = True
         Me.rb161.UseVisualStyleBackColor = True
+        '
+        'Panel61
+        '
+        Me.Panel61.Controls.Add(Me.rb152)
+        Me.Panel61.Controls.Add(Me.rb151)
+        Me.Panel61.Location = New System.Drawing.Point(323, 449)
+        Me.Panel61.Name = "Panel61"
+        Me.Panel61.Size = New System.Drawing.Size(46, 19)
+        Me.Panel61.TabIndex = 622
         '
         'rb152
         '
@@ -2664,24 +2681,6 @@ Partial Class Ansattside
         Me.rb151.TabIndex = 3
         Me.rb151.TabStop = True
         Me.rb151.UseVisualStyleBackColor = True
-        '
-        'Panel62
-        '
-        Me.Panel62.Controls.Add(Me.rb162)
-        Me.Panel62.Controls.Add(Me.rb161)
-        Me.Panel62.Location = New System.Drawing.Point(323, 474)
-        Me.Panel62.Name = "Panel62"
-        Me.Panel62.Size = New System.Drawing.Size(46, 19)
-        Me.Panel62.TabIndex = 624
-        '
-        'Panel61
-        '
-        Me.Panel61.Controls.Add(Me.rb152)
-        Me.Panel61.Controls.Add(Me.rb151)
-        Me.Panel61.Location = New System.Drawing.Point(323, 449)
-        Me.Panel61.Name = "Panel61"
-        Me.Panel61.Size = New System.Drawing.Size(46, 19)
-        Me.Panel61.TabIndex = 622
         '
         'Label129
         '
@@ -2710,25 +2709,14 @@ Partial Class Ansattside
         Me.btnInfo.Text = "Litt viktig informasjon"
         Me.btnInfo.UseVisualStyleBackColor = True
         '
-        'rb932
+        'Panel48
         '
-        Me.rb932.AutoSize = True
-        Me.rb932.Location = New System.Drawing.Point(29, 3)
-        Me.rb932.Name = "rb932"
-        Me.rb932.Size = New System.Drawing.Size(14, 13)
-        Me.rb932.TabIndex = 4
-        Me.rb932.TabStop = True
-        Me.rb932.UseVisualStyleBackColor = True
-        '
-        'rb9102
-        '
-        Me.rb9102.AutoSize = True
-        Me.rb9102.Location = New System.Drawing.Point(29, 3)
-        Me.rb9102.Name = "rb9102"
-        Me.rb9102.Size = New System.Drawing.Size(14, 13)
-        Me.rb9102.TabIndex = 4
-        Me.rb9102.TabStop = True
-        Me.rb9102.UseVisualStyleBackColor = True
+        Me.Panel48.Controls.Add(Me.rb5152)
+        Me.Panel48.Controls.Add(Me.rb5151)
+        Me.Panel48.Location = New System.Drawing.Point(323, 1432)
+        Me.Panel48.Name = "Panel48"
+        Me.Panel48.Size = New System.Drawing.Size(46, 19)
+        Me.Panel48.TabIndex = 604
         '
         'rb5152
         '
@@ -2750,14 +2738,43 @@ Partial Class Ansattside
         Me.rb5151.TabStop = True
         Me.rb5151.UseVisualStyleBackColor = True
         '
-        'Panel48
+        'Panel46
         '
-        Me.Panel48.Controls.Add(Me.rb5152)
-        Me.Panel48.Controls.Add(Me.rb5151)
-        Me.Panel48.Location = New System.Drawing.Point(323, 1432)
-        Me.Panel48.Name = "Panel48"
-        Me.Panel48.Size = New System.Drawing.Size(46, 19)
-        Me.Panel48.TabIndex = 604
+        Me.Panel46.Controls.Add(Me.rb9102)
+        Me.Panel46.Controls.Add(Me.rb9101)
+        Me.Panel46.Location = New System.Drawing.Point(633, 1242)
+        Me.Panel46.Name = "Panel46"
+        Me.Panel46.Size = New System.Drawing.Size(46, 19)
+        Me.Panel46.TabIndex = 614
+        '
+        'rb9102
+        '
+        Me.rb9102.AutoSize = True
+        Me.rb9102.Location = New System.Drawing.Point(29, 3)
+        Me.rb9102.Name = "rb9102"
+        Me.rb9102.Size = New System.Drawing.Size(14, 13)
+        Me.rb9102.TabIndex = 4
+        Me.rb9102.TabStop = True
+        Me.rb9102.UseVisualStyleBackColor = True
+        '
+        'rb9101
+        '
+        Me.rb9101.AutoSize = True
+        Me.rb9101.Location = New System.Drawing.Point(5, 3)
+        Me.rb9101.Name = "rb9101"
+        Me.rb9101.Size = New System.Drawing.Size(14, 13)
+        Me.rb9101.TabIndex = 3
+        Me.rb9101.TabStop = True
+        Me.rb9101.UseVisualStyleBackColor = True
+        '
+        'Panel45
+        '
+        Me.Panel45.Controls.Add(Me.rb5122)
+        Me.Panel45.Controls.Add(Me.rb5121)
+        Me.Panel45.Location = New System.Drawing.Point(323, 1347)
+        Me.Panel45.Name = "Panel45"
+        Me.Panel45.Size = New System.Drawing.Size(46, 19)
+        Me.Panel45.TabIndex = 601
         '
         'rb5122
         '
@@ -2779,63 +2796,14 @@ Partial Class Ansattside
         Me.rb5121.TabStop = True
         Me.rb5121.UseVisualStyleBackColor = True
         '
-        'Panel46
+        'Panel43
         '
-        Me.Panel46.Controls.Add(Me.rb9102)
-        Me.Panel46.Controls.Add(Me.rb9101)
-        Me.Panel46.Location = New System.Drawing.Point(633, 1242)
-        Me.Panel46.Name = "Panel46"
-        Me.Panel46.Size = New System.Drawing.Size(46, 19)
-        Me.Panel46.TabIndex = 614
-        '
-        'rb9101
-        '
-        Me.rb9101.AutoSize = True
-        Me.rb9101.Location = New System.Drawing.Point(5, 3)
-        Me.rb9101.Name = "rb9101"
-        Me.rb9101.Size = New System.Drawing.Size(14, 13)
-        Me.rb9101.TabIndex = 3
-        Me.rb9101.TabStop = True
-        Me.rb9101.UseVisualStyleBackColor = True
-        '
-        'Panel45
-        '
-        Me.Panel45.Controls.Add(Me.rb5122)
-        Me.Panel45.Controls.Add(Me.rb5121)
-        Me.Panel45.Location = New System.Drawing.Point(323, 1347)
-        Me.Panel45.Name = "Panel45"
-        Me.Panel45.Size = New System.Drawing.Size(46, 19)
-        Me.Panel45.TabIndex = 601
-        '
-        'rb5132
-        '
-        Me.rb5132.AutoSize = True
-        Me.rb5132.Location = New System.Drawing.Point(29, 3)
-        Me.rb5132.Name = "rb5132"
-        Me.rb5132.Size = New System.Drawing.Size(14, 13)
-        Me.rb5132.TabIndex = 4
-        Me.rb5132.TabStop = True
-        Me.rb5132.UseVisualStyleBackColor = True
-        '
-        'rb5141
-        '
-        Me.rb5141.AutoSize = True
-        Me.rb5141.Location = New System.Drawing.Point(5, 3)
-        Me.rb5141.Name = "rb5141"
-        Me.rb5141.Size = New System.Drawing.Size(14, 13)
-        Me.rb5141.TabIndex = 3
-        Me.rb5141.TabStop = True
-        Me.rb5141.UseVisualStyleBackColor = True
-        '
-        'rb5131
-        '
-        Me.rb5131.AutoSize = True
-        Me.rb5131.Location = New System.Drawing.Point(5, 3)
-        Me.rb5131.Name = "rb5131"
-        Me.rb5131.Size = New System.Drawing.Size(14, 13)
-        Me.rb5131.TabIndex = 3
-        Me.rb5131.TabStop = True
-        Me.rb5131.UseVisualStyleBackColor = True
+        Me.Panel43.Controls.Add(Me.rb5142)
+        Me.Panel43.Controls.Add(Me.rb5141)
+        Me.Panel43.Location = New System.Drawing.Point(323, 1393)
+        Me.Panel43.Name = "Panel43"
+        Me.Panel43.Size = New System.Drawing.Size(46, 19)
+        Me.Panel43.TabIndex = 603
         '
         'rb5142
         '
@@ -2847,14 +2815,24 @@ Partial Class Ansattside
         Me.rb5142.TabStop = True
         Me.rb5142.UseVisualStyleBackColor = True
         '
-        'Panel43
+        'rb5141
         '
-        Me.Panel43.Controls.Add(Me.rb5142)
-        Me.Panel43.Controls.Add(Me.rb5141)
-        Me.Panel43.Location = New System.Drawing.Point(323, 1393)
-        Me.Panel43.Name = "Panel43"
-        Me.Panel43.Size = New System.Drawing.Size(46, 19)
-        Me.Panel43.TabIndex = 603
+        Me.rb5141.AutoSize = True
+        Me.rb5141.Location = New System.Drawing.Point(5, 3)
+        Me.rb5141.Name = "rb5141"
+        Me.rb5141.Size = New System.Drawing.Size(14, 13)
+        Me.rb5141.TabIndex = 3
+        Me.rb5141.TabStop = True
+        Me.rb5141.UseVisualStyleBackColor = True
+        '
+        'Panel42
+        '
+        Me.Panel42.Controls.Add(Me.rb592)
+        Me.Panel42.Controls.Add(Me.rb591)
+        Me.Panel42.Location = New System.Drawing.Point(323, 1278)
+        Me.Panel42.Name = "Panel42"
+        Me.Panel42.Size = New System.Drawing.Size(46, 19)
+        Me.Panel42.TabIndex = 598
         '
         'rb592
         '
@@ -2876,15 +2854,6 @@ Partial Class Ansattside
         Me.rb591.TabStop = True
         Me.rb591.UseVisualStyleBackColor = True
         '
-        'Panel42
-        '
-        Me.Panel42.Controls.Add(Me.rb592)
-        Me.Panel42.Controls.Add(Me.rb591)
-        Me.Panel42.Location = New System.Drawing.Point(323, 1278)
-        Me.Panel42.Name = "Panel42"
-        Me.Panel42.Size = New System.Drawing.Size(46, 19)
-        Me.Panel42.TabIndex = 598
-        '
         'Panel44
         '
         Me.Panel44.Controls.Add(Me.rb5132)
@@ -2894,85 +2863,25 @@ Partial Class Ansattside
         Me.Panel44.Size = New System.Drawing.Size(46, 19)
         Me.Panel44.TabIndex = 602
         '
-        'rb941
+        'rb5132
         '
-        Me.rb941.AutoSize = True
-        Me.rb941.Location = New System.Drawing.Point(5, 3)
-        Me.rb941.Name = "rb941"
-        Me.rb941.Size = New System.Drawing.Size(14, 13)
-        Me.rb941.TabIndex = 3
-        Me.rb941.TabStop = True
-        Me.rb941.UseVisualStyleBackColor = True
+        Me.rb5132.AutoSize = True
+        Me.rb5132.Location = New System.Drawing.Point(29, 3)
+        Me.rb5132.Name = "rb5132"
+        Me.rb5132.Size = New System.Drawing.Size(14, 13)
+        Me.rb5132.TabIndex = 4
+        Me.rb5132.TabStop = True
+        Me.rb5132.UseVisualStyleBackColor = True
         '
-        'rb931
+        'rb5131
         '
-        Me.rb931.AutoSize = True
-        Me.rb931.Location = New System.Drawing.Point(5, 3)
-        Me.rb931.Name = "rb931"
-        Me.rb931.Size = New System.Drawing.Size(14, 13)
-        Me.rb931.TabIndex = 3
-        Me.rb931.TabStop = True
-        Me.rb931.UseVisualStyleBackColor = True
-        '
-        'rb942
-        '
-        Me.rb942.AutoSize = True
-        Me.rb942.Location = New System.Drawing.Point(29, 3)
-        Me.rb942.Name = "rb942"
-        Me.rb942.Size = New System.Drawing.Size(14, 13)
-        Me.rb942.TabIndex = 4
-        Me.rb942.TabStop = True
-        Me.rb942.UseVisualStyleBackColor = True
-        '
-        'rb952
-        '
-        Me.rb952.AutoSize = True
-        Me.rb952.Location = New System.Drawing.Point(29, 3)
-        Me.rb952.Name = "rb952"
-        Me.rb952.Size = New System.Drawing.Size(14, 13)
-        Me.rb952.TabIndex = 4
-        Me.rb952.TabStop = True
-        Me.rb952.UseVisualStyleBackColor = True
-        '
-        'rb951
-        '
-        Me.rb951.AutoSize = True
-        Me.rb951.Location = New System.Drawing.Point(5, 3)
-        Me.rb951.Name = "rb951"
-        Me.rb951.Size = New System.Drawing.Size(14, 13)
-        Me.rb951.TabIndex = 3
-        Me.rb951.TabStop = True
-        Me.rb951.UseVisualStyleBackColor = True
-        '
-        'rb962
-        '
-        Me.rb962.AutoSize = True
-        Me.rb962.Location = New System.Drawing.Point(29, 3)
-        Me.rb962.Name = "rb962"
-        Me.rb962.Size = New System.Drawing.Size(14, 13)
-        Me.rb962.TabIndex = 4
-        Me.rb962.TabStop = True
-        Me.rb962.UseVisualStyleBackColor = True
-        '
-        'rb961
-        '
-        Me.rb961.AutoSize = True
-        Me.rb961.Location = New System.Drawing.Point(5, 3)
-        Me.rb961.Name = "rb961"
-        Me.rb961.Size = New System.Drawing.Size(14, 13)
-        Me.rb961.TabIndex = 3
-        Me.rb961.TabStop = True
-        Me.rb961.UseVisualStyleBackColor = True
-        '
-        'rb971
-        '
-        Me.rb971.AutoSize = True
-        Me.rb971.Location = New System.Drawing.Point(5, 3)
-        Me.rb971.Name = "rb971"
-        Me.rb971.Size = New System.Drawing.Size(14, 13)
-        Me.rb971.TabIndex = 3
-        Me.rb971.TabStop = True
-        Me.rb971.UseVisualStyleBackColor = True
+        Me.rb5131.AutoSize = True
+        Me.rb5131.Location = New System.Drawing.Point(5, 3)
+        Me.rb5131.Name = "rb5131"
+        Me.rb5131.Size = New System.Drawing.Size(14, 13)
+        Me.rb5131.TabIndex = 3
+        Me.rb5131.TabStop = True
+        Me.rb5131.UseVisualStyleBackColor = True
         '
         'Panel47
         '
@@ -3022,6 +2931,16 @@ Partial Class Ansattside
         Me.rb972.TabStop = True
         Me.rb972.UseVisualStyleBackColor = True
         '
+        'rb971
+        '
+        Me.rb971.AutoSize = True
+        Me.rb971.Location = New System.Drawing.Point(5, 3)
+        Me.rb971.Name = "rb971"
+        Me.rb971.Size = New System.Drawing.Size(14, 13)
+        Me.rb971.TabIndex = 3
+        Me.rb971.TabStop = True
+        Me.rb971.UseVisualStyleBackColor = True
+        '
         'Panel54
         '
         Me.Panel54.Controls.Add(Me.rb932)
@@ -3031,15 +2950,25 @@ Partial Class Ansattside
         Me.Panel54.Size = New System.Drawing.Size(46, 19)
         Me.Panel54.TabIndex = 607
         '
-        'rb981
+        'rb932
         '
-        Me.rb981.AutoSize = True
-        Me.rb981.Location = New System.Drawing.Point(5, 3)
-        Me.rb981.Name = "rb981"
-        Me.rb981.Size = New System.Drawing.Size(14, 13)
-        Me.rb981.TabIndex = 3
-        Me.rb981.TabStop = True
-        Me.rb981.UseVisualStyleBackColor = True
+        Me.rb932.AutoSize = True
+        Me.rb932.Location = New System.Drawing.Point(29, 3)
+        Me.rb932.Name = "rb932"
+        Me.rb932.Size = New System.Drawing.Size(14, 13)
+        Me.rb932.TabIndex = 4
+        Me.rb932.TabStop = True
+        Me.rb932.UseVisualStyleBackColor = True
+        '
+        'rb931
+        '
+        Me.rb931.AutoSize = True
+        Me.rb931.Location = New System.Drawing.Point(5, 3)
+        Me.rb931.Name = "rb931"
+        Me.rb931.Size = New System.Drawing.Size(14, 13)
+        Me.rb931.TabIndex = 3
+        Me.rb931.TabStop = True
+        Me.rb931.UseVisualStyleBackColor = True
         '
         'Panel52
         '
@@ -3049,6 +2978,35 @@ Partial Class Ansattside
         Me.Panel52.Name = "Panel52"
         Me.Panel52.Size = New System.Drawing.Size(46, 19)
         Me.Panel52.TabIndex = 609
+        '
+        'rb952
+        '
+        Me.rb952.AutoSize = True
+        Me.rb952.Location = New System.Drawing.Point(29, 3)
+        Me.rb952.Name = "rb952"
+        Me.rb952.Size = New System.Drawing.Size(14, 13)
+        Me.rb952.TabIndex = 4
+        Me.rb952.TabStop = True
+        Me.rb952.UseVisualStyleBackColor = True
+        '
+        'rb951
+        '
+        Me.rb951.AutoSize = True
+        Me.rb951.Location = New System.Drawing.Point(5, 3)
+        Me.rb951.Name = "rb951"
+        Me.rb951.Size = New System.Drawing.Size(14, 13)
+        Me.rb951.TabIndex = 3
+        Me.rb951.TabStop = True
+        Me.rb951.UseVisualStyleBackColor = True
+        '
+        'Panel49
+        '
+        Me.Panel49.Controls.Add(Me.rb982)
+        Me.Panel49.Controls.Add(Me.rb981)
+        Me.Panel49.Location = New System.Drawing.Point(633, 1160)
+        Me.Panel49.Name = "Panel49"
+        Me.Panel49.Size = New System.Drawing.Size(46, 19)
+        Me.Panel49.TabIndex = 612
         '
         'rb982
         '
@@ -3060,14 +3018,15 @@ Partial Class Ansattside
         Me.rb982.TabStop = True
         Me.rb982.UseVisualStyleBackColor = True
         '
-        'Panel49
+        'rb981
         '
-        Me.Panel49.Controls.Add(Me.rb982)
-        Me.Panel49.Controls.Add(Me.rb981)
-        Me.Panel49.Location = New System.Drawing.Point(633, 1160)
-        Me.Panel49.Name = "Panel49"
-        Me.Panel49.Size = New System.Drawing.Size(46, 19)
-        Me.Panel49.TabIndex = 612
+        Me.rb981.AutoSize = True
+        Me.rb981.Location = New System.Drawing.Point(5, 3)
+        Me.rb981.Name = "rb981"
+        Me.rb981.Size = New System.Drawing.Size(14, 13)
+        Me.rb981.TabIndex = 3
+        Me.rb981.TabStop = True
+        Me.rb981.UseVisualStyleBackColor = True
         '
         'Panel53
         '
@@ -3078,6 +3037,26 @@ Partial Class Ansattside
         Me.Panel53.Size = New System.Drawing.Size(46, 19)
         Me.Panel53.TabIndex = 608
         '
+        'rb942
+        '
+        Me.rb942.AutoSize = True
+        Me.rb942.Location = New System.Drawing.Point(29, 3)
+        Me.rb942.Name = "rb942"
+        Me.rb942.Size = New System.Drawing.Size(14, 13)
+        Me.rb942.TabIndex = 4
+        Me.rb942.TabStop = True
+        Me.rb942.UseVisualStyleBackColor = True
+        '
+        'rb941
+        '
+        Me.rb941.AutoSize = True
+        Me.rb941.Location = New System.Drawing.Point(5, 3)
+        Me.rb941.Name = "rb941"
+        Me.rb941.Size = New System.Drawing.Size(14, 13)
+        Me.rb941.TabIndex = 3
+        Me.rb941.TabStop = True
+        Me.rb941.UseVisualStyleBackColor = True
+        '
         'Panel51
         '
         Me.Panel51.Controls.Add(Me.rb962)
@@ -3086,6 +3065,26 @@ Partial Class Ansattside
         Me.Panel51.Name = "Panel51"
         Me.Panel51.Size = New System.Drawing.Size(46, 19)
         Me.Panel51.TabIndex = 610
+        '
+        'rb962
+        '
+        Me.rb962.AutoSize = True
+        Me.rb962.Location = New System.Drawing.Point(29, 3)
+        Me.rb962.Name = "rb962"
+        Me.rb962.Size = New System.Drawing.Size(14, 13)
+        Me.rb962.TabIndex = 4
+        Me.rb962.TabStop = True
+        Me.rb962.UseVisualStyleBackColor = True
+        '
+        'rb961
+        '
+        Me.rb961.AutoSize = True
+        Me.rb961.Location = New System.Drawing.Point(5, 3)
+        Me.rb961.Name = "rb961"
+        Me.rb961.Size = New System.Drawing.Size(14, 13)
+        Me.rb961.TabIndex = 3
+        Me.rb961.TabStop = True
+        Me.rb961.UseVisualStyleBackColor = True
         '
         'Panel15
         '
@@ -4441,6 +4440,50 @@ Partial Class Ansattside
         Me.Label134.TabIndex = 441
         Me.Label134.Text = "Spørreskjema for blodgivere"
         '
+        'btnLogUt
+        '
+        Me.btnLogUt.Location = New System.Drawing.Point(749, 5)
+        Me.btnLogUt.Name = "btnLogUt"
+        Me.btnLogUt.Size = New System.Drawing.Size(75, 23)
+        Me.btnLogUt.TabIndex = 16
+        Me.btnLogUt.Text = "Log Ut"
+        Me.btnLogUt.UseVisualStyleBackColor = True
+        '
+        'btnInnkalling
+        '
+        Me.btnInnkalling.Location = New System.Drawing.Point(247, 297)
+        Me.btnInnkalling.Name = "btnInnkalling"
+        Me.btnInnkalling.Size = New System.Drawing.Size(149, 27)
+        Me.btnInnkalling.TabIndex = 18
+        Me.btnInnkalling.Text = "Innkalling"
+        Me.btnInnkalling.UseVisualStyleBackColor = True
+        '
+        'btnHasteInnkalling
+        '
+        Me.btnHasteInnkalling.Location = New System.Drawing.Point(446, 297)
+        Me.btnHasteInnkalling.Name = "btnHasteInnkalling"
+        Me.btnHasteInnkalling.Size = New System.Drawing.Size(155, 27)
+        Me.btnHasteInnkalling.TabIndex = 19
+        Me.btnHasteInnkalling.Text = "Hasteinnkalling"
+        Me.btnHasteInnkalling.UseVisualStyleBackColor = True
+        '
+        'innkallingTidspunktComboBox
+        '
+        Me.innkallingTidspunktComboBox.FormattingEnabled = True
+        Me.innkallingTidspunktComboBox.Location = New System.Drawing.Point(528, 239)
+        Me.innkallingTidspunktComboBox.Name = "innkallingTidspunktComboBox"
+        Me.innkallingTidspunktComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.innkallingTidspunktComboBox.TabIndex = 20
+        '
+        'Label135
+        '
+        Me.Label135.AutoSize = True
+        Me.Label135.Location = New System.Drawing.Point(443, 243)
+        Me.Label135.Name = "Label135"
+        Me.Label135.Size = New System.Drawing.Size(57, 13)
+        Me.Label135.TabIndex = 21
+        Me.Label135.Text = "Tidspunkt:"
+        '
         'Ansattside
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -4669,7 +4712,7 @@ Partial Class Ansattside
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents personnummer As TextBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents resTidComboBox As ComboBox
     Friend WithEvents btnLeggInnReservasjon As Button
     Friend WithEvents btnSokPersonnummer As Button
     Friend WithEvents Dato As DataGridViewTextBoxColumn
@@ -4994,4 +5037,8 @@ Partial Class Ansattside
     Friend WithEvents Label132 As Label
     Friend WithEvents Label133 As Label
     Friend WithEvents Label134 As Label
+    Friend WithEvents Label135 As Label
+    Friend WithEvents innkallingTidspunktComboBox As ComboBox
+    Friend WithEvents btnHasteInnkalling As Button
+    Friend WithEvents btnInnkalling As Button
 End Class
