@@ -27,14 +27,17 @@ Public Class Reservasjoner
 
     'Henter ut timene som er okkupert
     Public Function getOpptattTimer(ByVal resDato) As DataTable
-        Return db.Query("Select *
-                         From Tidspunkt, Reservasjon
-                         Where Tidspunkt.tidspunkt = Reservasjon.tidspunkt
-                         And dato = '" & resDato & "'
-                         And (SELECT COUNT(*) FROM Tidspunkt, Reservasjon
-                         Where Tidspunkt.tidspunkt = Reservasjon.tidspunkt
-                         And dato = '" & resDato & "') >=5
-                         Group by Tidspunkt.tidspunkt")
+        Return db.Query("SELECT *
+                FROM Reservasjon
+                WHERE tidspunkt IN
+                (   SELECT tidspunkt
+                    FROM Reservasjon
+                    Where dato = '" & resDato & "'
+                    GROUP BY tidspunkt
+                     HAVING COUNT(*) >=5
+                )
+                And dato = '" & resDato & "'
+                group by tidspunkt")
     End Function
 
     'Henter ut siste resID ved bruk av personID
@@ -77,15 +80,19 @@ Public Class Reservasjoner
 
         For Each time In timer.Rows
             timeArray.Add(time(0).ToString)
+            'MsgBox(time(0).ToString)
         Next
         For Each opptatt In opptattTimer.Rows
-            opptattArray.Add(opptatt(0).ToString)
+            opptattArray.Add(opptatt(3).ToString)
+            'MsgBox("time opptatt" & opptatt(0).ToString)
         Next
 
         'MsgBox(opptattArray.Count.ToString)
         For i = 0 To opptattArray.Count - 1
+            'MsgBox(opptattArray(i).ToString)
             If timeArray.Contains(opptattArray(i).ToString) Then
                 timeArray.Remove(opptattArray(i).ToString)
+                'MsgBox("fjerner" & opptattArray(0).ToString)
             End If
         Next
 
