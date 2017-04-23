@@ -10,26 +10,33 @@ Public Class Ansattside
     Dim res As New Reservasjoner()
     Dim ansatt As New Ansatt()
     Dim validering As New Validering()
-    Dim stats As New Statistikk()
     Dim personID As String = "0"
     Dim idato As Date
     Dim resDato As String
+
 
     Dim inkallDato As Date = Date.Now.AddDays(+1)
     Dim blodtypeValgt As String
     Dim blodprodukt As String
 
 
+    Dim innkBlodtype As String
+
+
 
     'Viser alle tilgjengelige blodprodukter og gjør klar kalender ved oppstart
     Private Sub Ansattside_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         visAlleBlodplasma()
         visAlleBlodCeller()
         visAlleBlodplater()
-        visStatistikk()
         Reservasjonskalender.MinDate = Date.Now
-
-
+        cboBlodtypeInnkalling.Items.Clear()
+        Dim columns() As String = {"A+", "A-", "AB+", "AB-", "B+", "B-", "O+", "O-"}
+        cboBlodtypeInnkalling.MaxDropDownItems = columns.Length
+        For Each column As String In columns
+            cboBlodtypeInnkalling.Items.Add(column)
+        Next
 
         'MsgBox(inkallDato)
 
@@ -47,6 +54,7 @@ Public Class Ansattside
         visAlleBlodCeller()
 
     End Sub
+
 
     'Viser hver enkelt blodcelleposer
     Private Sub visCeller()
@@ -138,6 +146,7 @@ Public Class Ansattside
         blodtypeValgt = cboGridBlodtype.Text
     End Sub
 
+
     Private Sub LeggtilBlod()
         'Oppretter tomme variabler og tabeller
         'Kobler personnummer til txtLagerpersonnummer for senere bruk og blodposer til numBlodmengde
@@ -193,51 +202,28 @@ Public Class Ansattside
         Dim blodIDTab As New DataTable
         Dim resIDTab As New DataTable
 
-        Try
+        'Finner personID utifra personnummeret som blir skrevet inn
+        personIDTab = person.getPersonID(personnummer)
 
-            'Finner personID utifra personnummeret som blir skrevet inn
-            personIDTab = person.getPersonID(personnummer)
+        For Each row In personIDTab.Rows
+            pID = row("personID")
 
-            For Each row In personIDTab.Rows
-                pID = row("personID")
+        Next
 
-            Next row
+        'Finner siste reservasjonID ved bruk av personID
+        resIDTab = res.getLastResIDByPersonID(pID)
 
-            'Finner siste reservasjonID ved bruk av personID
-            resIDTab = res.getLastResIDByPersonID(pID)
-
-            For Each row In resIDTab.Rows
-                rID = row("resID")
-            Next row
+        For Each row In resIDTab.Rows
+            rID = row("resID")
+        Next
 
 
-            'Finner siste blodtappingsID ved bruk av reservasjonsID
-            blodIDTab = Blodlager.getLastBlodIDByResID(rID)
+        'Finner siste blodtappingsID ved bruk av reservasjonsID
+        blodIDTab = Blodlager.getLastBlodIDByResID(rID)
 
-            For Each row In blodIDTab.Rows
-                bID = row("blodID")
-            Next row
-
-            'Legger inn checkbox verdiene inn i integer variabler
-            Dim celleposer As Integer = cboBlodlegeme.Text
-            Dim plasmaposer As Integer = cboBlodplasma.Text
-            Dim plateposer As Integer = cboBlodplater.Text
-            Dim dato As String = Date.Now.ToString("yyyy-MM-dd")
-
-            'Henter ut prosedyrer for å legg inn verdiene rett inn i databasen
-            Blodlager.leggInnBlodcelle(lagerID, bID, celleposer, dato)
-            Blodlager.leggInnBlodplasma(lagerID, bID, plasmaposer)
-            Blodlager.leggInnBlodplate(lagerID, bID, plateposer, dato)
-
-            'Viser messagebox og gjør blodtype comboboks tilgjengelig deretter tømmer personnummer tekstboks
-            MessageBox.Show("Blodprodukter har blitt lagt inn", "Fullført")
-            cboBlod.Enabled = True
-            txtLagerPersonnummer.Text = ""
-
-        Catch ex As Exception
-
-        End Try
-
+        For Each row In blodIDTab.Rows
+            bID = row("blodID")
+        Next
 
 
 #Region "Validerings kode"
@@ -258,9 +244,36 @@ Public Class Ansattside
 #End Region
 
 
+        'Legger inn checkbox verdiene inn i integer variabler
+        Dim celleposer As Integer = cboBlodlegeme.Text
+        Dim plasmaposer As Integer = cboBlodplasma.Text
+        Dim plateposer As Integer = cboBlodplater.Text
+        Dim dato As String = Date.Now.ToString("yyyy-MM-dd")
 
+        'Henter ut prosedyrer for å legg inn verdiene rett inn i databasen
+        Blodlager.leggInnBlodcelle(lagerID, bID, celleposer, dato)
+        Blodlager.leggInnBlodplasma(lagerID, bID, plasmaposer)
+        Blodlager.leggInnBlodplate(lagerID, bID, plateposer, dato)
+
+        MessageBox.Show("Blodprodukter har blitt lagt inn", "Fullført")
 
     End Sub
+
+
+    Private Sub skrivUtBlodProdukter()
+        'Legger inn checkbox verdiene inn i integer variabler
+        Dim ant_plasmaposer As Integer = cboBlodplasma.Text
+        Dim ant_celleposer As Integer = cboBlodlegeme.Text
+        Dim ant_plateposer As Integer = cboBlodplater.Text
+        Dim blodtype As String = cboBlod.Text
+
+        'Henter ut prosedyrer for å trekke fra verdiene i databasen
+        Blodlager.skrivUtBlodceller(ant_celleposer, blodtype)
+        Blodlager.skrivUtBlodplater(ant_plateposer, blodtype)
+        Blodlager.skrivUtBlodplasma(ant_plasmaposer, blodtype)
+    End Sub
+
+
 
     Private Sub visAlleBlodplasma()
         'Oppretter en tom tabell
@@ -390,7 +403,7 @@ Public Class Ansattside
             'Framvisning i tekstbokser ved å legge variabel verdiene inn
             txtFornavn.Text = fornavn
             txtEtternavn.Text = etternavn
-            txtFodselsdato.Text = fodselsdato.ToString("yyyy-MM-dd")
+            txtFodselsdato.Text = fodselsdato
             txtTelefon.Text = telefon
             txtAdresse.Text = adresse
             txtPostnummer.Text = postnummer
@@ -576,48 +589,7 @@ Public Class Ansattside
 #End Region
 
 
-#Region "Statistikk kode"
-    Private Sub visStatistikk()
 
-        'Oppretter tomme tabeller
-        Dim statistikkMaanedTab As New DataTable
-        Dim statistikkAarTab As New DataTable
-
-
-
-        Dim antallregistrerteMaaned As String
-        Dim antallregistrerteAar As String
-
-        'Legger verdiene fra spørringen inn i månedstabellen
-        statistikkMaanedTab = stats.bgRegistrertMaaned()
-
-        For Each row In statistikkMaanedTab.Rows
-
-            antallregistrerteMaaned = row("Antallregistrerte")
-            MsgBox(antallregistrerteMaaned)
-
-            gridStatistikkMaaned.Rows.Add(antallregistrerteMaaned)
-
-        Next row
-
-
-
-
-        'Legger verdiene fra spørringen inn i månedstabellen
-        statistikkAarTab = stats.bgRegistrertAar()
-
-        For Each row In statistikkAarTab.Rows
-            antallregistrerteAar = row("Antallregistrerte")
-
-            If antallregistrerteAar = "" Then
-                antallregistrerteAar = "0"
-            End If
-
-            gridStatistikkAar.Rows.Add(antallregistrerteAar)
-        Next row
-
-    End Sub
-#End Region
     'Henter ut poststedet som postnummeret er koblet til og viser det fram i en tekstboks
     Private Sub visPoststed()
 
@@ -656,32 +628,31 @@ Public Class Ansattside
     End Sub
 
     Private Sub btnInnkalling_Click(sender As Object, e As EventArgs) Handles btnInnkalling.Click
-        Dim blodtype As String = cboBlodtypeInnkalling.SelectedItem.ToString
-        Dim inkEpostliste As DataTable
-        inkEpostliste = res.getInnkallingEpostByBlodtype(blodtype)
-
-    End Sub
-
-    Private Sub btnHasteInnkalling_Click(sender As Object, e As EventArgs) Handles btnHasteInnkalling.Click
-        Dim hastInkEpostListe As DataTable
-        hastInkEpostListe = res.getInnkallingEpost()
-        Dim innEpost As String = ""
-        Dim inkPersonNr As Integer
+        Dim liste As DataTable = res.getAlleResMulig()
+        Dim epostListe As New ArrayList()
+        Dim persIDListe As New ArrayList()
+        Dim datoListe As New ArrayList()
+        Dim innkEpost As String
+        Dim innkPersID As Integer
         Dim inkTime As String = ""
-        Dim hastInnkallDato As Date
-        hastInnkallDato = Date.Now.AddDays(1)
-        res.fyllCombobox(hastInnkallDato.ToString("yyyy-MM-dd"), innkallingTidspunktComboBox)
+        Dim mnd As Date = Date.Now.AddMonths(-3)
+        Dim send As Boolean = False
+        Dim innkallDato As Date
+        innkallDato = Date.Now.AddDays(7)
+        res.fyllCombobox(innkallDato.ToString("yyyy-MM-dd"), innkallingTidspunktComboBox)
 
-        If innkallingTidspunktComboBox.SelectedItem Is Nothing Then
-            hastInnkallDato = hastInnkallDato.AddDays(1)
-        End If
+        For Each row In liste.Rows
+            epostListe.Add(row(0).ToString)
+            persIDListe.Add(row(1))
+            datoListe.Add(row(2))
+        Next
 
-        For Each row In epostListe.Rows
-            innEpost = row(0).ToString
-
-            If innkallingTidspunktComboBox.SelectedItem Is Nothing Then
-                hastInnkallDato = hastInnkallDato.AddDays(1)
-            End If
+        For i = 0 To datoListe.Count - 1
+            res.fyllCombobox(innkallDato.ToString("yyyy-MM-dd"), innkallingTidspunktComboBox)
+            While innkallingTidspunktComboBox.SelectedItem Is Nothing
+                innkallDato = innkallDato.AddDays(1)
+                res.fyllCombobox(innkallDato.ToString("yyyy-MM-dd"), innkallingTidspunktComboBox)
+            End While
 
             If innkallingTidspunktComboBox.SelectedItem IsNot Nothing Then
                 If innkallingTidspunktComboBox.Items.Count > 15 Then
@@ -690,22 +661,111 @@ Public Class Ansattside
                     inkTime = innkallingTidspunktComboBox.Items.Item(0)
                 End If
             End If
+            If IsDBNull(datoListe.Item(i)) Then
+                innkEpost = epostListe.Item(i).ToString()
+                innkPersID = persIDListe.Item(i)
+                'MsgBox(innkEpost & " Null")
+                send = True
+            ElseIf datoListe.Item(i) <= mnd Then
+                Dim listeDato As Date = datoListe.Item(i)
+                innkEpost = epostListe.Item(i).ToString()
+                innkPersID = persIDListe.Item(i)
+                'MsgBox(innkEpost & " Eldre eller lik")
+                send = True
+            ElseIf datoListe.Item(i) >= mnd Then
+                Dim listeDato As Date = datoListe.Item(i)
+                innkEpost = epostListe.Item(i).ToString()
+                innkPersID = persIDListe.Item(i)
+                'MsgBox(innkEpost & " Nyere")
+                send = False
+            End If
 
-            Dim persNrListe As New DataTable
-            persNrListe = person.getPersonIDByEpost(innEpost)
+            If send = True Then
+                res.reserver(innkallDato.ToString("yyyy-MM-dd"), innkPersID, inkTime)
+                res.sendInnkalling(innkEpost, innkallDato.ToString("yyyy-MM-dd"), inkTime)
+                MsgBox(innkEpost)
+            Else
+                MsgBox("Ingen blodgivere har vært borte i 3 måneder eller mer")
+            End If
+            res.fyllCombobox(innkallDato.ToString("yyyy-MM-dd"), innkallingTidspunktComboBox)
+        Next
 
-            For Each pers In persNrListe.Rows
-                inkPersonNr = pers(0)
-            Next
 
-            'MsgBox(hastInnkallDato.ToString("yyyy-MM-dd"))
-            'MsgBox(innEpost)
+    End Sub
 
-            'MsgBox(inkPersonNr.ToString)
-            'MsgBox(inkTime.ToString)
-            res.reserver(hastInnkallDato.ToString("yyyy-MM-dd"), inkPersonNr, inkTime)
+    Private Sub btnHasteInnkalling_Click(sender As Object, e As EventArgs) Handles btnHasteInnkalling.Click
+        innkBlodtype = cboBlodtypeInnkalling.Text
+        Dim liste As DataTable = res.getHasteResMulig(innkBlodtype)
+        Dim epostListe As New ArrayList()
+        Dim persIDListe As New ArrayList()
+        Dim datoListe As New ArrayList()
+        Dim hastInnkEpost As String
+        Dim hastInnkPersID As Integer
+        Dim hastInkTime As String = ""
+        Dim mnd As Date = Date.Now.AddMonths(-3)
+        Dim send As Boolean = False
+        Dim hastInnkallDato As Date
+        hastInnkallDato = Date.Now.AddDays(7)
+        res.fyllCombobox(hastInnkallDato.ToString("yyyy-MM-dd"), innkallingTidspunktComboBox)
+
+        For Each row In liste.Rows
+            epostListe.Add(row(0).ToString)
+            persIDListe.Add(row(1))
+            datoListe.Add(row(2))
+        Next
+
+        For i = 0 To datoListe.Count - 1
+            res.fyllCombobox(hastInnkallDato.ToString("yyyy-MM-dd"), innkallingTidspunktComboBox)
+            While innkallingTidspunktComboBox.SelectedItem Is Nothing
+                hastInnkallDato = hastInnkallDato.AddDays(1)
+                res.fyllCombobox(hastInnkallDato.ToString("yyyy-MM-dd"), innkallingTidspunktComboBox)
+            End While
+
+            If innkallingTidspunktComboBox.SelectedItem IsNot Nothing Then
+                If innkallingTidspunktComboBox.Items.Count > 15 Then
+                    hastInkTime = innkallingTidspunktComboBox.Items.Item(15)
+                Else
+                    hastInkTime = innkallingTidspunktComboBox.Items.Item(0)
+                End If
+            End If
+            If IsDBNull(datoListe.Item(i)) Then
+                hastInnkEpost = epostListe.Item(i).ToString()
+                hastInnkPersID = persIDListe.Item(i)
+                MsgBox(hastInnkEpost & " Null")
+                send = True
+            ElseIf datoListe.Item(i) <= mnd Then
+                Dim listeDato As Date = datoListe.Item(i)
+                hastInnkEpost = epostListe.Item(i).ToString()
+                hastInnkPersID = persIDListe.Item(i)
+                MsgBox(hastInnkEpost & " Eldre eller lik")
+                send = True
+            ElseIf datoListe.Item(i) >= mnd Then
+                Dim listeDato As Date = datoListe.Item(i)
+                hastInnkEpost = epostListe.Item(i).ToString()
+                hastInnkPersID = persIDListe.Item(i)
+                MsgBox(hastInnkEpost & " Nyere")
+                send = False
+            End If
+
+            If send = True Then
+                'res.reserver(hastInnkallDato.ToString("yyyy-MM-dd"), hastInnkPersID, hastInkTime)
+                'res.sendInnkalling(hastInnkEpost, hastInnkallDato.ToString("yyyy-MM-dd"), hastInkTime)
+                MsgBox(hastInnkEpost & "Sendt")
+            End If
             res.fyllCombobox(hastInnkallDato.ToString("yyyy-MM-dd"), innkallingTidspunktComboBox)
         Next
+    End Sub
+
+
+    Private Sub cboBlodtypeInnkalling_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboBlodtypeInnkalling.SelectedIndexChanged
+        innkBlodtype = cboBlodtypeInnkalling.Text
+        Dim muligBlodgiver As DataTable = res.getHasteResMulig(innkBlodtype)
+        Dim teller As Integer = 0
+        For Each row In muligBlodgiver.Rows
+            teller += 1
+        Next
+        txtboxTilgjengelig.Text = teller.ToString
+
     End Sub
 
 End Class

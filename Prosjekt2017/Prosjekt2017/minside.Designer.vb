@@ -119,7 +119,7 @@ Partial Class minside
         '
         Me.txtEpost.Location = New System.Drawing.Point(219, 290)
         Me.txtEpost.Name = "txtEpost"
-        Me.txtEpost.Size = New System.Drawing.Size(140, 20)
+        Me.txtEpost.Size = New System.Drawing.Size(100, 20)
         Me.txtEpost.TabIndex = 21
         '
         'lbPersonID
@@ -143,9 +143,10 @@ Partial Class minside
         '
         'txtFodselsdato
         '
+        Me.txtFodselsdato.Enabled = False
         Me.txtFodselsdato.Location = New System.Drawing.Point(218, 199)
         Me.txtFodselsdato.Name = "txtFodselsdato"
-        Me.txtFodselsdato.Size = New System.Drawing.Size(141, 20)
+        Me.txtFodselsdato.Size = New System.Drawing.Size(100, 20)
         Me.txtFodselsdato.TabIndex = 18
         '
         'Label2
@@ -196,7 +197,7 @@ Partial Class minside
         '
         Me.txtAdresse.Location = New System.Drawing.Point(509, 123)
         Me.txtAdresse.Name = "txtAdresse"
-        Me.txtAdresse.Size = New System.Drawing.Size(174, 20)
+        Me.txtAdresse.Size = New System.Drawing.Size(148, 20)
         Me.txtAdresse.TabIndex = 11
         '
         'lbPoststedLabel
@@ -213,7 +214,7 @@ Partial Class minside
         Me.txtPersonnummer.Enabled = False
         Me.txtPersonnummer.Location = New System.Drawing.Point(219, 231)
         Me.txtPersonnummer.Name = "txtPersonnummer"
-        Me.txtPersonnummer.Size = New System.Drawing.Size(140, 20)
+        Me.txtPersonnummer.Size = New System.Drawing.Size(100, 20)
         Me.txtPersonnummer.TabIndex = 9
         '
         'lbPostnummer
@@ -274,21 +275,21 @@ Partial Class minside
         '
         Me.txtTelefon.Location = New System.Drawing.Point(219, 264)
         Me.txtTelefon.Name = "txtTelefon"
-        Me.txtTelefon.Size = New System.Drawing.Size(140, 20)
+        Me.txtTelefon.Size = New System.Drawing.Size(100, 20)
         Me.txtTelefon.TabIndex = 2
         '
         'txtEtternavn
         '
         Me.txtEtternavn.Location = New System.Drawing.Point(218, 164)
         Me.txtEtternavn.Name = "txtEtternavn"
-        Me.txtEtternavn.Size = New System.Drawing.Size(141, 20)
+        Me.txtEtternavn.Size = New System.Drawing.Size(100, 20)
         Me.txtEtternavn.TabIndex = 1
         '
         'txtFornavn
         '
         Me.txtFornavn.Location = New System.Drawing.Point(219, 127)
         Me.txtFornavn.Name = "txtFornavn"
-        Me.txtFornavn.Size = New System.Drawing.Size(140, 20)
+        Me.txtFornavn.Size = New System.Drawing.Size(100, 20)
         Me.txtFornavn.TabIndex = 0
         '
         'tabHistorikk
@@ -337,6 +338,7 @@ Partial Class minside
         '
         'ComboBox1
         '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(427, 60)
         Me.ComboBox1.Name = "ComboBox1"

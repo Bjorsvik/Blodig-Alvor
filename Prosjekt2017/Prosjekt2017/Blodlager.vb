@@ -23,20 +23,22 @@
     blodtype,
     SUM(celler_poser) As Cellerposer,
     Blodceller.dato As dato,
-    DATEDIFF(CURDATE(), Blodceller.dato) As diffCeller
+    DATEDIFF(Blodceller.dato, CURDATE()) As diffCeller
     
      FROM Blodtype
                          Join Blodceller ON Blodtype.blodID = Blodceller.blodID  
-    Group By blodtype
+    Group By blodtype                 
     ) As innertable
 
     Where diffCeller < 36")
     End Function
 
+
     'Henter ut alle blodplateposer som ikke har gått ut på dato og grupperer det
     Public Function getAlleTilgjengeligeBlodplater() As DataTable
         Return db.Query("SELECT * From (
     Select
+
     blodtype,
     SUM(plater_poser) As Platerposer,
     Blodplater.dato As dato,
@@ -44,6 +46,7 @@
     
      FROM Blodtype
                          Join Blodplater ON Blodtype.blodID = Blodplater.blodID  
+
      Group By blodtype
     ) As innertable
     Where diffPlater < 8")
@@ -160,6 +163,7 @@
                          SET plater_poser = plater_poser - 1 
                          WHERE Blodplater.blodID = " & blodID & " AND plater_poser > 0")
     End Function
+
 
     'Henter ut siste blodID ved bruk av resID
     Public Function getLastBlodIDByResID(ByVal reservasjonsID As String) As DataTable
