@@ -444,6 +444,18 @@ Partial Class Ansattside
         Me.Label133 = New System.Windows.Forms.Label()
         Me.Label134 = New System.Windows.Forms.Label()
         Me.btnLogUt = New System.Windows.Forms.Button()
+<<<<<<< HEAD
+=======
+
+        Me.btnVisPlater = New System.Windows.Forms.Button()
+        Me.datoblod = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Blodtype1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Blodposer1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.diffceller = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SkrivUt = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnVisPlasma = New System.Windows.Forms.Button()
+
+>>>>>>> origin/bloodykiet
         Me.Statistikk.SuspendLayout()
         CType(Me.gridStatistikkAar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gridStatistikkMaaned, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -4673,6 +4685,56 @@ Partial Class Ansattside
         Me.btnLogUt.Text = "Log Ut"
         Me.btnLogUt.UseVisualStyleBackColor = True
         '
+<<<<<<< HEAD
+=======
+
+        'btnVisPlater
+        '
+        Me.btnVisPlater.Location = New System.Drawing.Point(663, 514)
+        Me.btnVisPlater.Name = "btnVisPlater"
+        Me.btnVisPlater.Size = New System.Drawing.Size(63, 23)
+        Me.btnVisPlater.TabIndex = 19
+        Me.btnVisPlater.Text = "Vis plater"
+        Me.btnVisPlater.UseVisualStyleBackColor = True
+        '
+        'datoblod
+        '
+        Me.datoblod.HeaderText = "Dato"
+        Me.datoblod.Name = "datoblod"
+        '
+        'Blodtype1
+        '
+        Me.Blodtype1.HeaderText = "Blodtype"
+        Me.Blodtype1.Name = "Blodtype1"
+        Me.Blodtype1.Width = 50
+        '
+        'Blodposer1
+        '
+        Me.Blodposer1.HeaderText = "Poser"
+        Me.Blodposer1.Name = "Blodposer1"
+        Me.Blodposer1.Width = 70
+        '
+        'diffceller
+        '
+        Me.diffceller.HeaderText = "Ant dager gått"
+        Me.diffceller.Name = "diffceller"
+        Me.diffceller.Width = 50
+        '
+        'SkrivUt
+        '
+        Me.SkrivUt.HeaderText = "SkrivUt"
+        Me.SkrivUt.Name = "SkrivUt"
+        '
+        'btnVisPlasma
+        '
+        Me.btnVisPlasma.Location = New System.Drawing.Point(535, 514)
+        Me.btnVisPlasma.Name = "btnVisPlasma"
+        Me.btnVisPlasma.Size = New System.Drawing.Size(65, 23)
+        Me.btnVisPlasma.TabIndex = 20
+        Me.btnVisPlasma.Text = "Vis plasma"
+        Me.btnVisPlasma.UseVisualStyleBackColor = True
+
+>>>>>>> origin/bloodykiet
         'Ansattside
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)

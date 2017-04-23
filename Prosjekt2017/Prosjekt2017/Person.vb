@@ -87,4 +87,15 @@
     Public Function getBlodtype(ByVal personnummer As String) As DataTable
         Return db.Query("SELECT * FROM Person WHERE personnummer = '" & personnummer & "'")
     End Function
+
+    Public Function getPersonIDByEpost(ByVal epost As String) As DataTable
+        Return db.Query("SELECT personID FROM Person WHERE epost = '" & epost & "'")
+    End Function
+
+    Public Function getPersonIDByBlodtype(ByVal blodtype As String) As DataTable
+        Return db.Query("SELECT personID FROM Person WHERE blodtype = '" & blodtype & "'")
+    End Function
+
+
+
 End Class
