@@ -10,24 +10,6 @@
         db.Query("INSERT INTO Blodtype(blodtype, blodposer, resID) Values ('" & blodtype & "', '" & blodposer & "', '" & resID & "')")
     End Sub
 
-    'Skriv ut blodplasmaposer fra databasen
-    Public Sub skrivUtBlodplasma(antall As Integer, blodtype As String)
-        db.Query("UPDATE Blodplasma JOIN Blodtype ON Blodplasma.blodID = Blodtype.blodID
-                  SET plasma_poser = plasma_poser - " & antall & " WHERE blodtype = '" & blodtype & "'")
-    End Sub
-
-    'Skriv ut blodplateposer fra databasen
-    Public Sub skrivUtBlodplater(antall As Integer, blodtype As String)
-        db.Query("UPDATE Blodplater JOIN Blodtype ON Blodplater.blodID = Blodtype.blodID
-                  SET plater_poser = plater_poser - " & antall & " WHERE blodtype = '" & blodtype & "'")
-    End Sub
-
-    'Skriv ut blodcelleposer fra databasen
-    Public Sub skrivUtBlodceller(antall As Integer, blodtype As String)
-        db.Query("UPDATE Blodceller JOIN Blodtype ON Blodceller.blodID = Blodtype.blodID
-                  SET celler_poser = celler_poser - " & antall & " WHERE blodtype = '" & blodtype & "'")
-    End Sub
-
     'Henter ut alle tilgjengelige blodplasmaposer
     Public Function getAlleTilgjengeligeBlodPlasma() As DataTable
         Return db.Query("SELECT blodtype, SUM(plasma_poser) As Plasmaposer From Blodtype JOIN Blodplasma ON Blodtype.blodID = Blodplasma.blodID
@@ -57,7 +39,8 @@
     blodtype,
     celler_poser As Cellerposer,
     Blodceller.dato As dato,
-    DATEDIFF(CURDATE(), Blodceller.dato) As diffCeller
+    DATEDIFF(CURDATE(), Blodceller.dato) As diffCeller,
+    Blodtype.blodID
     
      FROM Blodtype
                          Join Blodceller ON Blodtype.blodID = Blodceller.blodID  
@@ -73,7 +56,8 @@
     blodtype,
     plater_poser As Platerposer,
     Blodplater.dato As dato,
-    DATEDIFF(CURDATE(), Blodplater.dato) As diffplater
+    DATEDIFF(CURDATE(), Blodplater.dato) As diffplater,
+    Blodtype.blodID
     
      FROM Blodtype
                          Join Blodplater ON Blodtype.blodID = Blodplater.blodID  
@@ -83,13 +67,13 @@
     Where diffPlater < 8 AND blodtype = '" & blodtype & "'")
     End Function
 
-    'Public Function getPlasmaGrid(blodtype As String) As DataTable
-    '    Return db.Query("SELECT plasma_poser As Plasmaposer
-    '                    FROM Blodtype
-    '                    Join Blodplasma ON Blodtype.blodID = Blodplasma.blodID
-    '                    Where blodtype = '" & blodtype & "' 
-    '                    Group By blodtype")
-    'End Function
+    Public Function getPlasmaGrid(blodtype As String) As DataTable
+        Return db.Query("SELECT blodtype, plasma_poser As Plasmaposer, Blodplasma.blodID
+                        FROM Blodtype
+                        Join Blodplasma ON Blodtype.blodID = Blodplasma.blodID
+                        Where blodtype = '" & blodtype & "' 
+                        ")
+    End Function
 
     'Henter ut alle blodplateposer som ikke har gått ut på dato
     Public Function getAlleTilgjengeligeBlodplater() As DataTable
@@ -113,23 +97,62 @@
         Dim blodtype As String
         Dim poser As String
         Dim diffCeller As String
+        Dim bID As String
         blodGrid.Rows.Clear()
 
         'MsgBox(dbDato)
 
-        For Each reserv In blodTabell.Rows()
-            blodtype = reserv(0).ToString
-            poser = reserv(1).ToString
-            dato = reserv(2).ToString
-            diffCeller = reserv(3).ToString
-            blodGrid.Rows.Add(dato.ToString("yyyy-MM-dd"), blodtype, poser, diffCeller)
+        For Each row In blodTabell.Rows()
+            blodtype = row(0).ToString
+            poser = row(1).ToString
+            dato = row(2).ToString
+            diffCeller = row(3).ToString
+            bID = row(4).ToString
+
+            blodGrid.Rows.Add(dato.ToString("yyyy-MM-dd"), blodtype, poser, diffCeller, bID)
         Next
     End Sub
+
+    Public Sub fyllPlasmagrid(ByRef blodGrid As Object, ByVal blodTabell As DataTable)
+        Dim blodArray As New ArrayList()
+        Dim plasmaposer As String
+        Dim blodtype As String
+        Dim bID As String
+        blodGrid.Rows.Clear()
+
+        'MsgBox(dbDato)
+
+        For Each row In blodTabell.Rows()
+            blodtype = row(0).ToString
+            plasmaposer = row(1).ToString
+            bID = row(2).ToString
+
+            blodGrid.Rows.Add("-", blodtype, plasmaposer, "Ingen utløpsdato", bID)
+        Next
+    End Sub
+
+    Public Function skrivUtBlodplasma(ByVal blodID As Integer)
+        Return db.Query("UPDATE Blodplasma
+                         SET plasma_poser = plasma_poser - 1 
+                         WHERE Blodplasma.blodID = " & blodID)
+    End Function
+
+    Public Function skrivUtBlodceller(ByVal blodID As Integer)
+        Return db.Query("UPDATE Blodceller
+                         SET celler_poser = celler_poser - 1
+                         WHERE Blodceller.blodID = " & blodID)
+    End Function
+
+    Public Function skrivUtBlodplater(ByVal blodID As Integer)
+        Return db.Query("UPDATE Blodplater
+                         SET plater_poser = plater_poser - 1 
+                         WHERE Blodplater.blodID = " & blodID)
+    End Function
 
     'Henter ut siste blodID ved bruk av resID
     Public Function getLastBlodIDByResID(ByVal reservasjonsID As String) As DataTable
         Return db.Query("SELECT MAX(blodID) AS blodID FROM Blodtype
-                         JOIN Reservasjon ON Blodtype.resID = Reservasjon.resID
+                         Join Reservasjon ON Blodtype.resID = Reservasjon.resID
                          Where Reservasjon.resID = '" & reservasjonsID & "'")
     End Function
     'Legger inn blodplasmaposer inn i databasen

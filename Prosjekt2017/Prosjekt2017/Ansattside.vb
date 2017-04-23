@@ -16,6 +16,7 @@ Public Class Ansattside
     Dim resDato As String
     Dim inkallDato As Date = Date.Now.AddDays(+1)
     Dim blodtypeValgt As String
+    Dim blodprodukt As String
 
 
     'Viser alle tilgjengelige blodprodukter og gjør klar kalender ved oppstart
@@ -46,7 +47,9 @@ Public Class Ansattside
     Private Sub visCeller()
         Dim blodTabell As New DataTable
 
-        If cboBlod.Text = blodtypeValgt Then
+        If cboGridBlodtype.Text = blodtypeValgt Then
+            blodGrid.Rows.Clear()
+            blodprodukt = "Celler"
             blodTabell = Blodlager.getBlodcellerGrid(blodtypeValgt)
             Blodlager.fyllDatagrid(blodGrid, blodTabell)
         End If
@@ -56,7 +59,9 @@ Public Class Ansattside
     Private Sub visPlater()
         Dim blodTabell As New DataTable
 
-        If cboBlod.Text = blodtypeValgt Then
+        If cboGridBlodtype.Text = blodtypeValgt Then
+            blodGrid.Rows.Clear()
+            blodprodukt = "Plater"
             blodTabell = Blodlager.getPlaterGrid(blodtypeValgt)
             Blodlager.fyllDatagrid(blodGrid, blodTabell)
         End If
@@ -66,14 +71,56 @@ Public Class Ansattside
     Private Sub visPlasma()
         Dim blodTabell As New DataTable
 
-        If cboBlod.Text = blodtypeValgt Then
+        If cboGridBlodtype.Text = blodtypeValgt Then
+            blodGrid.Rows.Clear()
+            blodprodukt = "Plasma"
             blodTabell = Blodlager.getPlasmaGrid(blodtypeValgt)
-            Blodlager.fyllDatagrid(blodGrid, blodTabell)
+            Blodlager.fyllPlasmagrid(blodGrid, blodTabell)
         End If
     End Sub
 
-    Private Sub btnTest_Click(sender As Object, e As EventArgs) Handles btnVisCeller.Click
+    Private Sub btnVisPlater_Click(sender As Object, e As EventArgs) Handles btnVisPlater.Click
+        visPlater()
+    End Sub
+
+    Private Sub btnVisPlasma_Click(sender As Object, e As EventArgs) Handles btnVisPlasma.Click
+        visPlasma()
+    End Sub
+
+    Private Sub btnVisCeller_Click(sender As Object, e As EventArgs) Handles btnVisCeller.Click
         visCeller()
+    End Sub
+
+    Private Sub blodGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles blodGrid.CellContentClick
+
+        If e.ColumnIndex <> 5 Then
+            Exit Sub
+        End If
+
+        Dim blodID As Integer
+        If e.ColumnIndex = 5 And blodprodukt = "Celler" Then
+
+            blodID = blodGrid.Rows(e.RowIndex).Cells(4).Value
+            Blodlager.skrivUtBlodceller(blodID)
+            MsgBox(blodID)
+
+        ElseIf e.ColumnIndex = 5 And blodprodukt = "Plasma" Then
+
+            blodID = blodGrid.Rows(e.RowIndex).Cells(4).Value
+            Blodlager.skrivUtBlodplasma(blodID)
+            MsgBox(blodID)
+
+        ElseIf e.ColumnIndex = 5 And blodprodukt = "Plater" Then
+
+            blodID = blodGrid.Rows(e.RowIndex).Cells(4).Value
+            Blodlager.skrivUtBlodplater(blodID)
+            MsgBox(blodID)
+
+        End If
+    End Sub
+
+    Private Sub cboGridBlodtype_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboGridBlodtype.SelectedIndexChanged
+        blodtypeValgt = cboGridBlodtype.Text
     End Sub
 
     Private Sub LeggtilBlod()
@@ -200,23 +247,6 @@ Public Class Ansattside
 
     End Sub
 
-
-    Private Sub skrivUtBlodProdukter()
-        'Legger inn checkbox verdiene inn i integer variabler
-        Dim ant_plasmaposer As Integer = cboBlodplasma.Text
-        Dim ant_celleposer As Integer = cboBlodlegeme.Text
-        Dim ant_plateposer As Integer = cboBlodplater.Text
-        Dim blodtype As String = cboBlod.Text
-
-        'Henter ut prosedyrer for å trekke fra verdiene i databasen
-        Blodlager.skrivUtBlodceller(ant_celleposer, blodtype)
-        Blodlager.skrivUtBlodplater(ant_plateposer, blodtype)
-        Blodlager.skrivUtBlodplasma(ant_plasmaposer, blodtype)
-
-        MessageBox.Show("Fullført", "Fullført")
-    End Sub
-
-
     Private Sub visAlleBlodplasma()
         'Oppretter en tom tabell
         Dim blodPlasmaTab As New DataTable()
@@ -287,9 +317,7 @@ Public Class Ansattside
     End Sub
 
     'Knapp som skriver ut blodprodukter og oppdaterer datagrid
-    Private Sub btnSkrivUt_Click(sender As Object, e As EventArgs) Handles btnSkrivUt.Click
-
-        skrivUtBlodProdukter()
+    Private Sub btnSkrivUt_Click(sender As Object, e As EventArgs)
         visAlleBlodCeller()
         visAlleBlodplasma()
         visAlleBlodplater()
@@ -656,15 +684,4 @@ Public Class Ansattside
         Next
     End Sub
 
-    Private Sub cboBlod_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboBlod.SelectedIndexChanged
-        blodtypeValgt = cboBlod.Text
-    End Sub
-
-    Private Sub btnVisPlater_Click(sender As Object, e As EventArgs) Handles btnVisPlater.Click
-        visPlater()
-    End Sub
-
-    Private Sub btnVisPlasma_Click(sender As Object, e As EventArgs) Handles btnVisPlasma.Click
-        visPlasma()
-    End Sub
 End Class
