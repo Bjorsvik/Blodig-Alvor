@@ -221,7 +221,6 @@ Partial Class Ansattside
         Me.lblFornavn = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.chkSjekk = New System.Windows.Forms.CheckBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Panel55 = New System.Windows.Forms.Panel()
         Me.rb922 = New System.Windows.Forms.RadioButton()
@@ -234,8 +233,6 @@ Partial Class Ansattside
         Me.rb152 = New System.Windows.Forms.RadioButton()
         Me.rb151 = New System.Windows.Forms.RadioButton()
         Me.Label129 = New System.Windows.Forms.Label()
-        Me.lblDato = New System.Windows.Forms.Label()
-        Me.btnInfo = New System.Windows.Forms.Button()
         Me.Panel48 = New System.Windows.Forms.Panel()
         Me.rb5152 = New System.Windows.Forms.RadioButton()
         Me.rb5151 = New System.Windows.Forms.RadioButton()
@@ -305,7 +302,6 @@ Partial Class Ansattside
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.rb612 = New System.Windows.Forms.RadioButton()
         Me.rb611 = New System.Windows.Forms.RadioButton()
-        Me.btnSendInn = New System.Windows.Forms.Button()
         Me.Label123 = New System.Windows.Forms.Label()
         Me.Label124 = New System.Windows.Forms.Label()
         Me.Label121 = New System.Windows.Forms.Label()
@@ -420,7 +416,6 @@ Partial Class Ansattside
         Me.Label128 = New System.Windows.Forms.Label()
         Me.Label131 = New System.Windows.Forms.Label()
         Me.Label132 = New System.Windows.Forms.Label()
-        Me.Label133 = New System.Windows.Forms.Label()
         Me.Label134 = New System.Windows.Forms.Label()
         Me.btnLogUt = New System.Windows.Forms.Button()
         Me.Statistikk.SuspendLayout()
@@ -1363,15 +1358,12 @@ Partial Class Ansattside
         Me.TabPage1.Controls.Add(Me.lblFornavn)
         Me.TabPage1.Controls.Add(Me.Label12)
         Me.TabPage1.Controls.Add(Me.Label13)
-        Me.TabPage1.Controls.Add(Me.chkSjekk)
         Me.TabPage1.Controls.Add(Me.Label14)
         Me.TabPage1.Controls.Add(Me.Panel55)
         Me.TabPage1.Controls.Add(Me.Label130)
         Me.TabPage1.Controls.Add(Me.Panel62)
         Me.TabPage1.Controls.Add(Me.Panel61)
         Me.TabPage1.Controls.Add(Me.Label129)
-        Me.TabPage1.Controls.Add(Me.lblDato)
-        Me.TabPage1.Controls.Add(Me.btnInfo)
         Me.TabPage1.Controls.Add(Me.Panel48)
         Me.TabPage1.Controls.Add(Me.Panel46)
         Me.TabPage1.Controls.Add(Me.Panel45)
@@ -1395,7 +1387,6 @@ Partial Class Ansattside
         Me.TabPage1.Controls.Add(Me.Panel3)
         Me.TabPage1.Controls.Add(Me.Panel2)
         Me.TabPage1.Controls.Add(Me.Panel1)
-        Me.TabPage1.Controls.Add(Me.btnSendInn)
         Me.TabPage1.Controls.Add(Me.Label123)
         Me.TabPage1.Controls.Add(Me.Label124)
         Me.TabPage1.Controls.Add(Me.Label121)
@@ -1510,7 +1501,6 @@ Partial Class Ansattside
         Me.TabPage1.Controls.Add(Me.Label128)
         Me.TabPage1.Controls.Add(Me.Label131)
         Me.TabPage1.Controls.Add(Me.Label132)
-        Me.TabPage1.Controls.Add(Me.Label133)
         Me.TabPage1.Controls.Add(Me.Label134)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
@@ -1524,7 +1514,7 @@ Partial Class Ansattside
         '
         Me.Panel33.Controls.Add(Me.rb572)
         Me.Panel33.Controls.Add(Me.rb571)
-        Me.Panel33.Location = New System.Drawing.Point(323, 1230)
+        Me.Panel33.Location = New System.Drawing.Point(319, 1119)
         Me.Panel33.Name = "Panel33"
         Me.Panel33.Size = New System.Drawing.Size(46, 19)
         Me.Panel33.TabIndex = 596
@@ -1553,7 +1543,7 @@ Partial Class Ansattside
         '
         Me.Panel32.Controls.Add(Me.rb582)
         Me.Panel32.Controls.Add(Me.rb581)
-        Me.Panel32.Location = New System.Drawing.Point(323, 1255)
+        Me.Panel32.Location = New System.Drawing.Point(319, 1144)
         Me.Panel32.Name = "Panel32"
         Me.Panel32.Size = New System.Drawing.Size(46, 19)
         Me.Panel32.TabIndex = 597
@@ -1582,7 +1572,7 @@ Partial Class Ansattside
         '
         Me.Panel40.Controls.Add(Me.rb5112)
         Me.Panel40.Controls.Add(Me.rb5111)
-        Me.Panel40.Location = New System.Drawing.Point(323, 1325)
+        Me.Panel40.Location = New System.Drawing.Point(319, 1214)
         Me.Panel40.Name = "Panel40"
         Me.Panel40.Size = New System.Drawing.Size(46, 19)
         Me.Panel40.TabIndex = 600
@@ -1611,7 +1601,7 @@ Partial Class Ansattside
         '
         Me.Panel34.Controls.Add(Me.rb562)
         Me.Panel34.Controls.Add(Me.rb561)
-        Me.Panel34.Location = New System.Drawing.Point(323, 1205)
+        Me.Panel34.Location = New System.Drawing.Point(319, 1094)
         Me.Panel34.Name = "Panel34"
         Me.Panel34.Size = New System.Drawing.Size(46, 19)
         Me.Panel34.TabIndex = 595
@@ -1640,7 +1630,7 @@ Partial Class Ansattside
         '
         Me.Panel35.Controls.Add(Me.rb552)
         Me.Panel35.Controls.Add(Me.rb551)
-        Me.Panel35.Location = New System.Drawing.Point(323, 1180)
+        Me.Panel35.Location = New System.Drawing.Point(319, 1069)
         Me.Panel35.Name = "Panel35"
         Me.Panel35.Size = New System.Drawing.Size(46, 19)
         Me.Panel35.TabIndex = 594
@@ -1669,7 +1659,7 @@ Partial Class Ansattside
         '
         Me.Panel36.Controls.Add(Me.rb542)
         Me.Panel36.Controls.Add(Me.rb541)
-        Me.Panel36.Location = New System.Drawing.Point(323, 1158)
+        Me.Panel36.Location = New System.Drawing.Point(319, 1047)
         Me.Panel36.Name = "Panel36"
         Me.Panel36.Size = New System.Drawing.Size(46, 19)
         Me.Panel36.TabIndex = 593
@@ -1698,7 +1688,7 @@ Partial Class Ansattside
         '
         Me.Panel38.Controls.Add(Me.rb522)
         Me.Panel38.Controls.Add(Me.rb521)
-        Me.Panel38.Location = New System.Drawing.Point(323, 1115)
+        Me.Panel38.Location = New System.Drawing.Point(319, 1004)
         Me.Panel38.Name = "Panel38"
         Me.Panel38.Size = New System.Drawing.Size(46, 19)
         Me.Panel38.TabIndex = 591
@@ -1727,7 +1717,7 @@ Partial Class Ansattside
         '
         Me.Panel26.Controls.Add(Me.rb412)
         Me.Panel26.Controls.Add(Me.rb411)
-        Me.Panel26.Location = New System.Drawing.Point(323, 1022)
+        Me.Panel26.Location = New System.Drawing.Point(319, 911)
         Me.Panel26.Name = "Panel26"
         Me.Panel26.Size = New System.Drawing.Size(46, 19)
         Me.Panel26.TabIndex = 589
@@ -1756,7 +1746,7 @@ Partial Class Ansattside
         '
         Me.Panel39.Controls.Add(Me.rb512)
         Me.Panel39.Controls.Add(Me.rb511)
-        Me.Panel39.Location = New System.Drawing.Point(323, 1088)
+        Me.Panel39.Location = New System.Drawing.Point(319, 977)
         Me.Panel39.Name = "Panel39"
         Me.Panel39.Size = New System.Drawing.Size(46, 19)
         Me.Panel39.TabIndex = 590
@@ -1785,7 +1775,7 @@ Partial Class Ansattside
         '
         Me.Panel30.Controls.Add(Me.rb712)
         Me.Panel30.Controls.Add(Me.rb711)
-        Me.Panel30.Location = New System.Drawing.Point(632, 669)
+        Me.Panel30.Location = New System.Drawing.Point(628, 558)
         Me.Panel30.Name = "Panel30"
         Me.Panel30.Size = New System.Drawing.Size(46, 19)
         Me.Panel30.TabIndex = 584
@@ -1814,7 +1804,7 @@ Partial Class Ansattside
         '
         Me.Panel37.Controls.Add(Me.rb532)
         Me.Panel37.Controls.Add(Me.rb531)
-        Me.Panel37.Location = New System.Drawing.Point(323, 1136)
+        Me.Panel37.Location = New System.Drawing.Point(319, 1025)
         Me.Panel37.Name = "Panel37"
         Me.Panel37.Size = New System.Drawing.Size(46, 19)
         Me.Panel37.TabIndex = 592
@@ -1843,7 +1833,7 @@ Partial Class Ansattside
         '
         Me.Panel31.Controls.Add(Me.rb812)
         Me.Panel31.Controls.Add(Me.rb811)
-        Me.Panel31.Location = New System.Drawing.Point(633, 843)
+        Me.Panel31.Location = New System.Drawing.Point(629, 732)
         Me.Panel31.Name = "Panel31"
         Me.Panel31.Size = New System.Drawing.Size(46, 19)
         Me.Panel31.TabIndex = 583
@@ -1872,7 +1862,7 @@ Partial Class Ansattside
         '
         Me.Panel29.Controls.Add(Me.rb722)
         Me.Panel29.Controls.Add(Me.rb721)
-        Me.Panel29.Location = New System.Drawing.Point(632, 701)
+        Me.Panel29.Location = New System.Drawing.Point(628, 590)
         Me.Panel29.Name = "Panel29"
         Me.Panel29.Size = New System.Drawing.Size(46, 19)
         Me.Panel29.TabIndex = 586
@@ -1910,7 +1900,7 @@ Partial Class Ansattside
         '
         Me.Panel28.Controls.Add(Me.rb732)
         Me.Panel28.Controls.Add(Me.rb731)
-        Me.Panel28.Location = New System.Drawing.Point(632, 737)
+        Me.Panel28.Location = New System.Drawing.Point(628, 626)
         Me.Panel28.Name = "Panel28"
         Me.Panel28.Size = New System.Drawing.Size(46, 19)
         Me.Panel28.TabIndex = 587
@@ -1939,7 +1929,7 @@ Partial Class Ansattside
         '
         Me.Panel27.Controls.Add(Me.rb742)
         Me.Panel27.Controls.Add(Me.rb741)
-        Me.Panel27.Location = New System.Drawing.Point(632, 778)
+        Me.Panel27.Location = New System.Drawing.Point(628, 667)
         Me.Panel27.Name = "Panel27"
         Me.Panel27.Size = New System.Drawing.Size(46, 19)
         Me.Panel27.TabIndex = 588
@@ -1968,7 +1958,7 @@ Partial Class Ansattside
         '
         Me.Panel25.Controls.Add(Me.rb382)
         Me.Panel25.Controls.Add(Me.rb381)
-        Me.Panel25.Location = New System.Drawing.Point(323, 905)
+        Me.Panel25.Location = New System.Drawing.Point(319, 794)
         Me.Panel25.Name = "Panel25"
         Me.Panel25.Size = New System.Drawing.Size(46, 19)
         Me.Panel25.TabIndex = 582
@@ -1997,7 +1987,7 @@ Partial Class Ansattside
         '
         Me.Panel24.Controls.Add(Me.rb372)
         Me.Panel24.Controls.Add(Me.rb371)
-        Me.Panel24.Location = New System.Drawing.Point(323, 872)
+        Me.Panel24.Location = New System.Drawing.Point(319, 761)
         Me.Panel24.Name = "Panel24"
         Me.Panel24.Size = New System.Drawing.Size(46, 19)
         Me.Panel24.TabIndex = 581
@@ -2026,7 +2016,7 @@ Partial Class Ansattside
         '
         Me.Panel21.Controls.Add(Me.rb362)
         Me.Panel21.Controls.Add(Me.rb361)
-        Me.Panel21.Location = New System.Drawing.Point(323, 847)
+        Me.Panel21.Location = New System.Drawing.Point(319, 736)
         Me.Panel21.Name = "Panel21"
         Me.Panel21.Size = New System.Drawing.Size(46, 19)
         Me.Panel21.TabIndex = 580
@@ -2055,7 +2045,7 @@ Partial Class Ansattside
         '
         Me.Panel16.Controls.Add(Me.rb252)
         Me.Panel16.Controls.Add(Me.rb251)
-        Me.Panel16.Location = New System.Drawing.Point(323, 626)
+        Me.Panel16.Location = New System.Drawing.Point(319, 515)
         Me.Panel16.Name = "Panel16"
         Me.Panel16.Size = New System.Drawing.Size(46, 19)
         Me.Panel16.TabIndex = 574
@@ -2084,7 +2074,7 @@ Partial Class Ansattside
         '
         Me.Panel17.Controls.Add(Me.rb242)
         Me.Panel17.Controls.Add(Me.rb241)
-        Me.Panel17.Location = New System.Drawing.Point(323, 604)
+        Me.Panel17.Location = New System.Drawing.Point(319, 493)
         Me.Panel17.Name = "Panel17"
         Me.Panel17.Size = New System.Drawing.Size(46, 19)
         Me.Panel17.TabIndex = 573
@@ -2113,7 +2103,7 @@ Partial Class Ansattside
         '
         Me.Panel14.Controls.Add(Me.rb222)
         Me.Panel14.Controls.Add(Me.rb221)
-        Me.Panel14.Location = New System.Drawing.Point(323, 557)
+        Me.Panel14.Location = New System.Drawing.Point(319, 446)
         Me.Panel14.Name = "Panel14"
         Me.Panel14.Size = New System.Drawing.Size(46, 19)
         Me.Panel14.TabIndex = 568
@@ -2142,7 +2132,7 @@ Partial Class Ansattside
         '
         Me.Panel18.Controls.Add(Me.rb332)
         Me.Panel18.Controls.Add(Me.rb331)
-        Me.Panel18.Location = New System.Drawing.Point(323, 766)
+        Me.Panel18.Location = New System.Drawing.Point(319, 655)
         Me.Panel18.Name = "Panel18"
         Me.Panel18.Size = New System.Drawing.Size(46, 19)
         Me.Panel18.TabIndex = 577
@@ -2171,7 +2161,7 @@ Partial Class Ansattside
         '
         Me.Panel12.Controls.Add(Me.rb232)
         Me.Panel12.Controls.Add(Me.rb231)
-        Me.Panel12.Location = New System.Drawing.Point(323, 579)
+        Me.Panel12.Location = New System.Drawing.Point(319, 468)
         Me.Panel12.Name = "Panel12"
         Me.Panel12.Size = New System.Drawing.Size(46, 19)
         Me.Panel12.TabIndex = 572
@@ -2200,7 +2190,7 @@ Partial Class Ansattside
         '
         Me.Panel23.Controls.Add(Me.rb342)
         Me.Panel23.Controls.Add(Me.rb341)
-        Me.Panel23.Location = New System.Drawing.Point(323, 791)
+        Me.Panel23.Location = New System.Drawing.Point(319, 680)
         Me.Panel23.Name = "Panel23"
         Me.Panel23.Size = New System.Drawing.Size(46, 19)
         Me.Panel23.TabIndex = 578
@@ -2229,7 +2219,7 @@ Partial Class Ansattside
         '
         Me.Panel20.Controls.Add(Me.rb312)
         Me.Panel20.Controls.Add(Me.rb311)
-        Me.Panel20.Location = New System.Drawing.Point(323, 698)
+        Me.Panel20.Location = New System.Drawing.Point(319, 587)
         Me.Panel20.Name = "Panel20"
         Me.Panel20.Size = New System.Drawing.Size(46, 19)
         Me.Panel20.TabIndex = 575
@@ -2258,7 +2248,7 @@ Partial Class Ansattside
         '
         Me.Panel9.Controls.Add(Me.rb142)
         Me.Panel9.Controls.Add(Me.rb141)
-        Me.Panel9.Location = New System.Drawing.Point(323, 427)
+        Me.Panel9.Location = New System.Drawing.Point(319, 316)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(46, 19)
         Me.Panel9.TabIndex = 570
@@ -2287,7 +2277,7 @@ Partial Class Ansattside
         '
         Me.Panel22.Controls.Add(Me.rb352)
         Me.Panel22.Controls.Add(Me.rb351)
-        Me.Panel22.Location = New System.Drawing.Point(323, 816)
+        Me.Panel22.Location = New System.Drawing.Point(319, 705)
         Me.Panel22.Name = "Panel22"
         Me.Panel22.Size = New System.Drawing.Size(46, 19)
         Me.Panel22.TabIndex = 579
@@ -2316,7 +2306,7 @@ Partial Class Ansattside
         '
         Me.Panel19.Controls.Add(Me.rb322)
         Me.Panel19.Controls.Add(Me.rb321)
-        Me.Panel19.Location = New System.Drawing.Point(323, 730)
+        Me.Panel19.Location = New System.Drawing.Point(319, 619)
         Me.Panel19.Name = "Panel19"
         Me.Panel19.Size = New System.Drawing.Size(46, 19)
         Me.Panel19.TabIndex = 576
@@ -2345,7 +2335,7 @@ Partial Class Ansattside
         '
         Me.Panel8.Controls.Add(Me.rb132)
         Me.Panel8.Controls.Add(Me.rb131)
-        Me.Panel8.Location = New System.Drawing.Point(323, 394)
+        Me.Panel8.Location = New System.Drawing.Point(319, 283)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(46, 19)
         Me.Panel8.TabIndex = 571
@@ -2374,7 +2364,7 @@ Partial Class Ansattside
         '
         Me.Panel60.Controls.Add(Me.rb392)
         Me.Panel60.Controls.Add(Me.rb391)
-        Me.Panel60.Location = New System.Drawing.Point(323, 933)
+        Me.Panel60.Location = New System.Drawing.Point(319, 822)
         Me.Panel60.Name = "Panel60"
         Me.Panel60.Size = New System.Drawing.Size(46, 19)
         Me.Panel60.TabIndex = 585
@@ -2403,7 +2393,7 @@ Partial Class Ansattside
         '
         Me.Panel59.Controls.Add(Me.rb1102)
         Me.Panel59.Controls.Add(Me.rb3101)
-        Me.Panel59.Location = New System.Drawing.Point(323, 955)
+        Me.Panel59.Location = New System.Drawing.Point(319, 844)
         Me.Panel59.Name = "Panel59"
         Me.Panel59.Size = New System.Drawing.Size(46, 19)
         Me.Panel59.TabIndex = 618
@@ -2432,7 +2422,7 @@ Partial Class Ansattside
         '
         Me.Panel58.Controls.Add(Me.rbSMSNei)
         Me.Panel58.Controls.Add(Me.rbSMSJa)
-        Me.Panel58.Location = New System.Drawing.Point(87, 294)
+        Me.Panel58.Location = New System.Drawing.Point(83, 183)
         Me.Panel58.Name = "Panel58"
         Me.Panel58.Size = New System.Drawing.Size(46, 19)
         Me.Panel58.TabIndex = 567
@@ -2461,7 +2451,7 @@ Partial Class Ansattside
         '
         Me.Panel57.Controls.Add(Me.rbEpostNei)
         Me.Panel57.Controls.Add(Me.rbEpostJa)
-        Me.Panel57.Location = New System.Drawing.Point(87, 272)
+        Me.Panel57.Location = New System.Drawing.Point(83, 161)
         Me.Panel57.Name = "Panel57"
         Me.Panel57.Size = New System.Drawing.Size(46, 19)
         Me.Panel57.TabIndex = 617
@@ -2489,7 +2479,7 @@ Partial Class Ansattside
         'Label125
         '
         Me.Label125.AutoSize = True
-        Me.Label125.Location = New System.Drawing.Point(136, 297)
+        Me.Label125.Location = New System.Drawing.Point(132, 186)
         Me.Label125.Name = "Label125"
         Me.Label125.Size = New System.Drawing.Size(503, 13)
         Me.Label125.TabIndex = 616
@@ -2499,7 +2489,7 @@ Partial Class Ansattside
         'Label127
         '
         Me.Label127.AutoSize = True
-        Me.Label127.Location = New System.Drawing.Point(136, 275)
+        Me.Label127.Location = New System.Drawing.Point(132, 164)
         Me.Label127.Name = "Label127"
         Me.Label127.Size = New System.Drawing.Size(506, 13)
         Me.Label127.TabIndex = 615
@@ -2510,7 +2500,7 @@ Partial Class Ansattside
         '
         Me.Panel56.Controls.Add(Me.rb912)
         Me.Panel56.Controls.Add(Me.rb911)
-        Me.Panel56.Location = New System.Drawing.Point(633, 914)
+        Me.Panel56.Location = New System.Drawing.Point(629, 803)
         Me.Panel56.Name = "Panel56"
         Me.Panel56.Size = New System.Drawing.Size(46, 19)
         Me.Panel56.TabIndex = 605
@@ -2539,7 +2529,7 @@ Partial Class Ansattside
         '
         Me.Panel41.Controls.Add(Me.rb5102)
         Me.Panel41.Controls.Add(Me.rb5101)
-        Me.Panel41.Location = New System.Drawing.Point(323, 1303)
+        Me.Panel41.Location = New System.Drawing.Point(319, 1192)
         Me.Panel41.Name = "Panel41"
         Me.Panel41.Size = New System.Drawing.Size(46, 19)
         Me.Panel41.TabIndex = 599
@@ -2606,16 +2596,6 @@ Partial Class Ansattside
         Me.Label13.TabIndex = 627
         Me.Label13.Text = "Fornavn:"
         '
-        'chkSjekk
-        '
-        Me.chkSjekk.AutoSize = True
-        Me.chkSjekk.Location = New System.Drawing.Point(281, 237)
-        Me.chkSjekk.Name = "chkSjekk"
-        Me.chkSjekk.Size = New System.Drawing.Size(201, 17)
-        Me.chkSjekk.TabIndex = 626
-        Me.chkSjekk.Text = "Jeg har lest og forstått informasjonen."
-        Me.chkSjekk.UseVisualStyleBackColor = True
-        '
         'Label14
         '
         Me.Label14.AutoSize = True
@@ -2628,7 +2608,7 @@ Partial Class Ansattside
         '
         Me.Panel55.Controls.Add(Me.rb922)
         Me.Panel55.Controls.Add(Me.rb921)
-        Me.Panel55.Location = New System.Drawing.Point(633, 953)
+        Me.Panel55.Location = New System.Drawing.Point(629, 842)
         Me.Panel55.Name = "Panel55"
         Me.Panel55.Size = New System.Drawing.Size(46, 19)
         Me.Panel55.TabIndex = 606
@@ -2656,7 +2636,7 @@ Partial Class Ansattside
         'Label130
         '
         Me.Label130.AutoSize = True
-        Me.Label130.Location = New System.Drawing.Point(80, 477)
+        Me.Label130.Location = New System.Drawing.Point(76, 366)
         Me.Label130.Name = "Label130"
         Me.Label130.Size = New System.Drawing.Size(136, 13)
         Me.Label130.TabIndex = 623
@@ -2666,7 +2646,7 @@ Partial Class Ansattside
         '
         Me.Panel62.Controls.Add(Me.rb162)
         Me.Panel62.Controls.Add(Me.rb161)
-        Me.Panel62.Location = New System.Drawing.Point(323, 474)
+        Me.Panel62.Location = New System.Drawing.Point(319, 363)
         Me.Panel62.Name = "Panel62"
         Me.Panel62.Size = New System.Drawing.Size(46, 19)
         Me.Panel62.TabIndex = 624
@@ -2695,7 +2675,7 @@ Partial Class Ansattside
         '
         Me.Panel61.Controls.Add(Me.rb152)
         Me.Panel61.Controls.Add(Me.rb151)
-        Me.Panel61.Location = New System.Drawing.Point(323, 449)
+        Me.Panel61.Location = New System.Drawing.Point(319, 338)
         Me.Panel61.Name = "Panel61"
         Me.Panel61.Size = New System.Drawing.Size(46, 19)
         Me.Panel61.TabIndex = 622
@@ -2723,35 +2703,17 @@ Partial Class Ansattside
         'Label129
         '
         Me.Label129.AutoSize = True
-        Me.Label129.Location = New System.Drawing.Point(80, 451)
+        Me.Label129.Location = New System.Drawing.Point(76, 340)
         Me.Label129.Name = "Label129"
         Me.Label129.Size = New System.Drawing.Size(205, 13)
         Me.Label129.TabIndex = 621
         Me.Label129.Text = "Har du åpne sår, eksem eller hudsykdom?"
         '
-        'lblDato
-        '
-        Me.lblDato.AutoSize = True
-        Me.lblDato.Location = New System.Drawing.Point(80, 1568)
-        Me.lblDato.Name = "lblDato"
-        Me.lblDato.Size = New System.Drawing.Size(30, 13)
-        Me.lblDato.TabIndex = 620
-        Me.lblDato.Text = "Dato"
-        '
-        'btnInfo
-        '
-        Me.btnInfo.Location = New System.Drawing.Point(281, 170)
-        Me.btnInfo.Name = "btnInfo"
-        Me.btnInfo.Size = New System.Drawing.Size(224, 55)
-        Me.btnInfo.TabIndex = 619
-        Me.btnInfo.Text = "Litt viktig informasjon"
-        Me.btnInfo.UseVisualStyleBackColor = True
-        '
         'Panel48
         '
         Me.Panel48.Controls.Add(Me.rb5152)
         Me.Panel48.Controls.Add(Me.rb5151)
-        Me.Panel48.Location = New System.Drawing.Point(323, 1432)
+        Me.Panel48.Location = New System.Drawing.Point(319, 1321)
         Me.Panel48.Name = "Panel48"
         Me.Panel48.Size = New System.Drawing.Size(46, 19)
         Me.Panel48.TabIndex = 604
@@ -2780,7 +2742,7 @@ Partial Class Ansattside
         '
         Me.Panel46.Controls.Add(Me.rb9102)
         Me.Panel46.Controls.Add(Me.rb9101)
-        Me.Panel46.Location = New System.Drawing.Point(633, 1242)
+        Me.Panel46.Location = New System.Drawing.Point(629, 1131)
         Me.Panel46.Name = "Panel46"
         Me.Panel46.Size = New System.Drawing.Size(46, 19)
         Me.Panel46.TabIndex = 614
@@ -2809,7 +2771,7 @@ Partial Class Ansattside
         '
         Me.Panel45.Controls.Add(Me.rb5122)
         Me.Panel45.Controls.Add(Me.rb5121)
-        Me.Panel45.Location = New System.Drawing.Point(323, 1347)
+        Me.Panel45.Location = New System.Drawing.Point(319, 1236)
         Me.Panel45.Name = "Panel45"
         Me.Panel45.Size = New System.Drawing.Size(46, 19)
         Me.Panel45.TabIndex = 601
@@ -2838,7 +2800,7 @@ Partial Class Ansattside
         '
         Me.Panel43.Controls.Add(Me.rb5142)
         Me.Panel43.Controls.Add(Me.rb5141)
-        Me.Panel43.Location = New System.Drawing.Point(323, 1393)
+        Me.Panel43.Location = New System.Drawing.Point(319, 1282)
         Me.Panel43.Name = "Panel43"
         Me.Panel43.Size = New System.Drawing.Size(46, 19)
         Me.Panel43.TabIndex = 603
@@ -2867,7 +2829,7 @@ Partial Class Ansattside
         '
         Me.Panel42.Controls.Add(Me.rb592)
         Me.Panel42.Controls.Add(Me.rb591)
-        Me.Panel42.Location = New System.Drawing.Point(323, 1278)
+        Me.Panel42.Location = New System.Drawing.Point(319, 1167)
         Me.Panel42.Name = "Panel42"
         Me.Panel42.Size = New System.Drawing.Size(46, 19)
         Me.Panel42.TabIndex = 598
@@ -2896,7 +2858,7 @@ Partial Class Ansattside
         '
         Me.Panel44.Controls.Add(Me.rb5132)
         Me.Panel44.Controls.Add(Me.rb5131)
-        Me.Panel44.Location = New System.Drawing.Point(323, 1370)
+        Me.Panel44.Location = New System.Drawing.Point(319, 1259)
         Me.Panel44.Name = "Panel44"
         Me.Panel44.Size = New System.Drawing.Size(46, 19)
         Me.Panel44.TabIndex = 602
@@ -2925,7 +2887,7 @@ Partial Class Ansattside
         '
         Me.Panel47.Controls.Add(Me.rb992)
         Me.Panel47.Controls.Add(Me.rb991)
-        Me.Panel47.Location = New System.Drawing.Point(633, 1207)
+        Me.Panel47.Location = New System.Drawing.Point(629, 1096)
         Me.Panel47.Name = "Panel47"
         Me.Panel47.Size = New System.Drawing.Size(46, 19)
         Me.Panel47.TabIndex = 613
@@ -2954,7 +2916,7 @@ Partial Class Ansattside
         '
         Me.Panel50.Controls.Add(Me.rb972)
         Me.Panel50.Controls.Add(Me.rb971)
-        Me.Panel50.Location = New System.Drawing.Point(633, 1117)
+        Me.Panel50.Location = New System.Drawing.Point(629, 1006)
         Me.Panel50.Name = "Panel50"
         Me.Panel50.Size = New System.Drawing.Size(46, 19)
         Me.Panel50.TabIndex = 611
@@ -2983,7 +2945,7 @@ Partial Class Ansattside
         '
         Me.Panel54.Controls.Add(Me.rb932)
         Me.Panel54.Controls.Add(Me.rb931)
-        Me.Panel54.Location = New System.Drawing.Point(633, 986)
+        Me.Panel54.Location = New System.Drawing.Point(629, 875)
         Me.Panel54.Name = "Panel54"
         Me.Panel54.Size = New System.Drawing.Size(46, 19)
         Me.Panel54.TabIndex = 607
@@ -3012,7 +2974,7 @@ Partial Class Ansattside
         '
         Me.Panel52.Controls.Add(Me.rb952)
         Me.Panel52.Controls.Add(Me.rb951)
-        Me.Panel52.Location = New System.Drawing.Point(633, 1059)
+        Me.Panel52.Location = New System.Drawing.Point(629, 948)
         Me.Panel52.Name = "Panel52"
         Me.Panel52.Size = New System.Drawing.Size(46, 19)
         Me.Panel52.TabIndex = 609
@@ -3041,7 +3003,7 @@ Partial Class Ansattside
         '
         Me.Panel49.Controls.Add(Me.rb982)
         Me.Panel49.Controls.Add(Me.rb981)
-        Me.Panel49.Location = New System.Drawing.Point(633, 1160)
+        Me.Panel49.Location = New System.Drawing.Point(629, 1049)
         Me.Panel49.Name = "Panel49"
         Me.Panel49.Size = New System.Drawing.Size(46, 19)
         Me.Panel49.TabIndex = 612
@@ -3070,7 +3032,7 @@ Partial Class Ansattside
         '
         Me.Panel53.Controls.Add(Me.rb942)
         Me.Panel53.Controls.Add(Me.rb941)
-        Me.Panel53.Location = New System.Drawing.Point(633, 1024)
+        Me.Panel53.Location = New System.Drawing.Point(629, 913)
         Me.Panel53.Name = "Panel53"
         Me.Panel53.Size = New System.Drawing.Size(46, 19)
         Me.Panel53.TabIndex = 608
@@ -3099,7 +3061,7 @@ Partial Class Ansattside
         '
         Me.Panel51.Controls.Add(Me.rb962)
         Me.Panel51.Controls.Add(Me.rb961)
-        Me.Panel51.Location = New System.Drawing.Point(633, 1094)
+        Me.Panel51.Location = New System.Drawing.Point(629, 983)
         Me.Panel51.Name = "Panel51"
         Me.Panel51.Size = New System.Drawing.Size(46, 19)
         Me.Panel51.TabIndex = 610
@@ -3128,7 +3090,7 @@ Partial Class Ansattside
         '
         Me.Panel15.Controls.Add(Me.rb212)
         Me.Panel15.Controls.Add(Me.rb211)
-        Me.Panel15.Location = New System.Drawing.Point(323, 535)
+        Me.Panel15.Location = New System.Drawing.Point(319, 424)
         Me.Panel15.Name = "Panel15"
         Me.Panel15.Size = New System.Drawing.Size(46, 19)
         Me.Panel15.TabIndex = 565
@@ -3157,7 +3119,7 @@ Partial Class Ansattside
         '
         Me.Panel10.Controls.Add(Me.rb122)
         Me.Panel10.Controls.Add(Me.rb121)
-        Me.Panel10.Location = New System.Drawing.Point(323, 363)
+        Me.Panel10.Location = New System.Drawing.Point(319, 252)
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Size = New System.Drawing.Size(46, 19)
         Me.Panel10.TabIndex = 569
@@ -3186,7 +3148,7 @@ Partial Class Ansattside
         '
         Me.Panel11.Controls.Add(Me.rb112)
         Me.Panel11.Controls.Add(Me.rb111)
-        Me.Panel11.Location = New System.Drawing.Point(323, 341)
+        Me.Panel11.Location = New System.Drawing.Point(319, 230)
         Me.Panel11.Name = "Panel11"
         Me.Panel11.Size = New System.Drawing.Size(46, 19)
         Me.Panel11.TabIndex = 566
@@ -3215,7 +3177,7 @@ Partial Class Ansattside
         '
         Me.Panel7.Controls.Add(Me.rb632)
         Me.Panel7.Controls.Add(Me.rb631)
-        Me.Panel7.Location = New System.Drawing.Point(633, 402)
+        Me.Panel7.Location = New System.Drawing.Point(629, 291)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(46, 19)
         Me.Panel7.TabIndex = 564
@@ -3244,7 +3206,7 @@ Partial Class Ansattside
         '
         Me.Panel6.Controls.Add(Me.rb672)
         Me.Panel6.Controls.Add(Me.rb671)
-        Me.Panel6.Location = New System.Drawing.Point(633, 579)
+        Me.Panel6.Location = New System.Drawing.Point(629, 468)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(46, 19)
         Me.Panel6.TabIndex = 563
@@ -3273,7 +3235,7 @@ Partial Class Ansattside
         '
         Me.Panel5.Controls.Add(Me.rb662)
         Me.Panel5.Controls.Add(Me.rb661)
-        Me.Panel5.Location = New System.Drawing.Point(633, 551)
+        Me.Panel5.Location = New System.Drawing.Point(629, 440)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(46, 19)
         Me.Panel5.TabIndex = 562
@@ -3302,7 +3264,7 @@ Partial Class Ansattside
         '
         Me.Panel4.Controls.Add(Me.rb652)
         Me.Panel4.Controls.Add(Me.rb651)
-        Me.Panel4.Location = New System.Drawing.Point(633, 506)
+        Me.Panel4.Location = New System.Drawing.Point(629, 395)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(46, 19)
         Me.Panel4.TabIndex = 561
@@ -3331,7 +3293,7 @@ Partial Class Ansattside
         '
         Me.Panel3.Controls.Add(Me.rb642)
         Me.Panel3.Controls.Add(Me.rb641)
-        Me.Panel3.Location = New System.Drawing.Point(633, 445)
+        Me.Panel3.Location = New System.Drawing.Point(629, 334)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(46, 19)
         Me.Panel3.TabIndex = 560
@@ -3360,7 +3322,7 @@ Partial Class Ansattside
         '
         Me.Panel2.Controls.Add(Me.rb622)
         Me.Panel2.Controls.Add(Me.rb621)
-        Me.Panel2.Location = New System.Drawing.Point(633, 377)
+        Me.Panel2.Location = New System.Drawing.Point(629, 266)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(46, 19)
         Me.Panel2.TabIndex = 559
@@ -3389,7 +3351,7 @@ Partial Class Ansattside
         '
         Me.Panel1.Controls.Add(Me.rb612)
         Me.Panel1.Controls.Add(Me.rb611)
-        Me.Panel1.Location = New System.Drawing.Point(633, 341)
+        Me.Panel1.Location = New System.Drawing.Point(629, 230)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(46, 19)
         Me.Panel1.TabIndex = 558
@@ -3414,19 +3376,10 @@ Partial Class Ansattside
         Me.rb611.TabStop = True
         Me.rb611.UseVisualStyleBackColor = True
         '
-        'btnSendInn
-        '
-        Me.btnSendInn.Location = New System.Drawing.Point(306, 1568)
-        Me.btnSendInn.Name = "btnSendInn"
-        Me.btnSendInn.Size = New System.Drawing.Size(158, 23)
-        Me.btnSendInn.TabIndex = 557
-        Me.btnSendInn.Text = "Send inn Egenærklering"
-        Me.btnSendInn.UseVisualStyleBackColor = True
-        '
         'Label123
         '
         Me.Label123.AutoSize = True
-        Me.Label123.Location = New System.Drawing.Point(80, 1445)
+        Me.Label123.Location = New System.Drawing.Point(76, 1334)
         Me.Label123.Name = "Label123"
         Me.Label123.Size = New System.Drawing.Size(44, 13)
         Me.Label123.TabIndex = 556
@@ -3435,7 +3388,7 @@ Partial Class Ansattside
         'Label124
         '
         Me.Label124.AutoSize = True
-        Me.Label124.Location = New System.Drawing.Point(80, 1432)
+        Me.Label124.Location = New System.Drawing.Point(76, 1321)
         Me.Label124.Name = "Label124"
         Me.Label124.Size = New System.Drawing.Size(214, 13)
         Me.Label124.TabIndex = 555
@@ -3444,7 +3397,7 @@ Partial Class Ansattside
         'Label121
         '
         Me.Label121.AutoSize = True
-        Me.Label121.Location = New System.Drawing.Point(80, 1408)
+        Me.Label121.Location = New System.Drawing.Point(76, 1297)
         Me.Label121.Name = "Label121"
         Me.Label121.Size = New System.Drawing.Size(72, 13)
         Me.Label121.TabIndex = 554
@@ -3453,7 +3406,7 @@ Partial Class Ansattside
         'Label122
         '
         Me.Label122.AutoSize = True
-        Me.Label122.Location = New System.Drawing.Point(80, 1395)
+        Me.Label122.Location = New System.Drawing.Point(76, 1284)
         Me.Label122.Name = "Label122"
         Me.Label122.Size = New System.Drawing.Size(198, 13)
         Me.Label122.TabIndex = 553
@@ -3462,7 +3415,7 @@ Partial Class Ansattside
         'Label120
         '
         Me.Label120.AutoSize = True
-        Me.Label120.Location = New System.Drawing.Point(80, 1371)
+        Me.Label120.Location = New System.Drawing.Point(76, 1260)
         Me.Label120.Name = "Label120"
         Me.Label120.Size = New System.Drawing.Size(213, 13)
         Me.Label120.TabIndex = 552
@@ -3471,7 +3424,7 @@ Partial Class Ansattside
         'Label119
         '
         Me.Label119.AutoSize = True
-        Me.Label119.Location = New System.Drawing.Point(80, 1349)
+        Me.Label119.Location = New System.Drawing.Point(76, 1238)
         Me.Label119.Name = "Label119"
         Me.Label119.Size = New System.Drawing.Size(60, 13)
         Me.Label119.TabIndex = 551
@@ -3480,7 +3433,7 @@ Partial Class Ansattside
         'Label118
         '
         Me.Label118.AutoSize = True
-        Me.Label118.Location = New System.Drawing.Point(80, 1326)
+        Me.Label118.Location = New System.Drawing.Point(76, 1215)
         Me.Label118.Name = "Label118"
         Me.Label118.Size = New System.Drawing.Size(136, 13)
         Me.Label118.TabIndex = 550
@@ -3489,7 +3442,7 @@ Partial Class Ansattside
         'Label117
         '
         Me.Label117.AutoSize = True
-        Me.Label117.Location = New System.Drawing.Point(80, 1303)
+        Me.Label117.Location = New System.Drawing.Point(76, 1192)
         Me.Label117.Name = "Label117"
         Me.Label117.Size = New System.Drawing.Size(95, 13)
         Me.Label117.TabIndex = 549
@@ -3498,7 +3451,7 @@ Partial Class Ansattside
         'Label116
         '
         Me.Label116.AutoSize = True
-        Me.Label116.Location = New System.Drawing.Point(80, 1279)
+        Me.Label116.Location = New System.Drawing.Point(76, 1168)
         Me.Label116.Name = "Label116"
         Me.Label116.Size = New System.Drawing.Size(101, 13)
         Me.Label116.TabIndex = 548
@@ -3507,7 +3460,7 @@ Partial Class Ansattside
         'Label115
         '
         Me.Label115.AutoSize = True
-        Me.Label115.Location = New System.Drawing.Point(80, 1255)
+        Me.Label115.Location = New System.Drawing.Point(76, 1144)
         Me.Label115.Name = "Label115"
         Me.Label115.Size = New System.Drawing.Size(239, 13)
         Me.Label115.TabIndex = 547
@@ -3516,7 +3469,7 @@ Partial Class Ansattside
         'Label114
         '
         Me.Label114.AutoSize = True
-        Me.Label114.Location = New System.Drawing.Point(80, 1232)
+        Me.Label114.Location = New System.Drawing.Point(76, 1121)
         Me.Label114.Name = "Label114"
         Me.Label114.Size = New System.Drawing.Size(230, 13)
         Me.Label114.TabIndex = 546
@@ -3525,7 +3478,7 @@ Partial Class Ansattside
         'Label113
         '
         Me.Label113.AutoSize = True
-        Me.Label113.Location = New System.Drawing.Point(80, 1206)
+        Me.Label113.Location = New System.Drawing.Point(76, 1095)
         Me.Label113.Name = "Label113"
         Me.Label113.Size = New System.Drawing.Size(113, 13)
         Me.Label113.TabIndex = 545
@@ -3534,7 +3487,7 @@ Partial Class Ansattside
         'Label112
         '
         Me.Label112.AutoSize = True
-        Me.Label112.Location = New System.Drawing.Point(80, 1180)
+        Me.Label112.Location = New System.Drawing.Point(76, 1069)
         Me.Label112.Name = "Label112"
         Me.Label112.Size = New System.Drawing.Size(69, 13)
         Me.Label112.TabIndex = 544
@@ -3543,7 +3496,7 @@ Partial Class Ansattside
         'Label111
         '
         Me.Label111.AutoSize = True
-        Me.Label111.Location = New System.Drawing.Point(80, 1158)
+        Me.Label111.Location = New System.Drawing.Point(76, 1047)
         Me.Label111.Name = "Label111"
         Me.Label111.Size = New System.Drawing.Size(172, 13)
         Me.Label111.TabIndex = 543
@@ -3552,7 +3505,7 @@ Partial Class Ansattside
         'Label110
         '
         Me.Label110.AutoSize = True
-        Me.Label110.Location = New System.Drawing.Point(80, 1135)
+        Me.Label110.Location = New System.Drawing.Point(76, 1024)
         Me.Label110.Name = "Label110"
         Me.Label110.Size = New System.Drawing.Size(119, 13)
         Me.Label110.TabIndex = 542
@@ -3561,7 +3514,7 @@ Partial Class Ansattside
         'Label109
         '
         Me.Label109.AutoSize = True
-        Me.Label109.Location = New System.Drawing.Point(80, 1113)
+        Me.Label109.Location = New System.Drawing.Point(76, 1002)
         Me.Label109.Name = "Label109"
         Me.Label109.Size = New System.Drawing.Size(57, 13)
         Me.Label109.TabIndex = 541
@@ -3570,7 +3523,7 @@ Partial Class Ansattside
         'Label108
         '
         Me.Label108.AutoSize = True
-        Me.Label108.Location = New System.Drawing.Point(80, 1088)
+        Me.Label108.Location = New System.Drawing.Point(76, 977)
         Me.Label108.Name = "Label108"
         Me.Label108.Size = New System.Drawing.Size(184, 13)
         Me.Label108.TabIndex = 540
@@ -3579,7 +3532,7 @@ Partial Class Ansattside
         'Label106
         '
         Me.Label106.AutoSize = True
-        Me.Label106.Location = New System.Drawing.Point(346, 1065)
+        Me.Label106.Location = New System.Drawing.Point(342, 954)
         Me.Label106.Name = "Label106"
         Me.Label106.Size = New System.Drawing.Size(23, 13)
         Me.Label106.TabIndex = 539
@@ -3588,7 +3541,7 @@ Partial Class Ansattside
         'Label107
         '
         Me.Label107.AutoSize = True
-        Me.Label107.Location = New System.Drawing.Point(322, 1065)
+        Me.Label107.Location = New System.Drawing.Point(318, 954)
         Me.Label107.Name = "Label107"
         Me.Label107.Size = New System.Drawing.Size(18, 13)
         Me.Label107.TabIndex = 538
@@ -3597,7 +3550,7 @@ Partial Class Ansattside
         'Label104
         '
         Me.Label104.AutoSize = True
-        Me.Label104.Location = New System.Drawing.Point(346, 1002)
+        Me.Label104.Location = New System.Drawing.Point(342, 891)
         Me.Label104.Name = "Label104"
         Me.Label104.Size = New System.Drawing.Size(23, 13)
         Me.Label104.TabIndex = 537
@@ -3606,7 +3559,7 @@ Partial Class Ansattside
         'Label105
         '
         Me.Label105.AutoSize = True
-        Me.Label105.Location = New System.Drawing.Point(322, 1002)
+        Me.Label105.Location = New System.Drawing.Point(318, 891)
         Me.Label105.Name = "Label105"
         Me.Label105.Size = New System.Drawing.Size(18, 13)
         Me.Label105.TabIndex = 536
@@ -3616,7 +3569,7 @@ Partial Class Ansattside
         '
         Me.Label103.AutoSize = True
         Me.Label103.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label103.Location = New System.Drawing.Point(80, 1065)
+        Me.Label103.Location = New System.Drawing.Point(76, 954)
         Me.Label103.Name = "Label103"
         Me.Label103.Size = New System.Drawing.Size(223, 13)
         Me.Label103.TabIndex = 535
@@ -3625,7 +3578,7 @@ Partial Class Ansattside
         'Label101
         '
         Me.Label101.AutoSize = True
-        Me.Label101.Location = New System.Drawing.Point(388, 1255)
+        Me.Label101.Location = New System.Drawing.Point(384, 1144)
         Me.Label101.Name = "Label101"
         Me.Label101.Size = New System.Drawing.Size(124, 13)
         Me.Label101.TabIndex = 534
@@ -3634,7 +3587,7 @@ Partial Class Ansattside
         'Label102
         '
         Me.Label102.AutoSize = True
-        Me.Label102.Location = New System.Drawing.Point(388, 1242)
+        Me.Label102.Location = New System.Drawing.Point(384, 1131)
         Me.Label102.Name = "Label102"
         Me.Label102.Size = New System.Drawing.Size(232, 13)
         Me.Label102.TabIndex = 533
@@ -3643,7 +3596,7 @@ Partial Class Ansattside
         'Label99
         '
         Me.Label99.AutoSize = True
-        Me.Label99.Location = New System.Drawing.Point(388, 1220)
+        Me.Label99.Location = New System.Drawing.Point(384, 1109)
         Me.Label99.Name = "Label99"
         Me.Label99.Size = New System.Drawing.Size(54, 13)
         Me.Label99.TabIndex = 532
@@ -3652,7 +3605,7 @@ Partial Class Ansattside
         'Label100
         '
         Me.Label100.AutoSize = True
-        Me.Label100.Location = New System.Drawing.Point(388, 1207)
+        Me.Label100.Location = New System.Drawing.Point(384, 1096)
         Me.Label100.Name = "Label100"
         Me.Label100.Size = New System.Drawing.Size(219, 13)
         Me.Label100.TabIndex = 531
@@ -3661,7 +3614,7 @@ Partial Class Ansattside
         'Label98
         '
         Me.Label98.AutoSize = True
-        Me.Label98.Location = New System.Drawing.Point(388, 1184)
+        Me.Label98.Location = New System.Drawing.Point(384, 1073)
         Me.Label98.Name = "Label98"
         Me.Label98.Size = New System.Drawing.Size(249, 13)
         Me.Label98.TabIndex = 530
@@ -3670,7 +3623,7 @@ Partial Class Ansattside
         'Label97
         '
         Me.Label97.AutoSize = True
-        Me.Label97.Location = New System.Drawing.Point(388, 1171)
+        Me.Label97.Location = New System.Drawing.Point(384, 1060)
         Me.Label97.Name = "Label97"
         Me.Label97.Size = New System.Drawing.Size(240, 13)
         Me.Label97.TabIndex = 529
@@ -3679,7 +3632,7 @@ Partial Class Ansattside
         'Label79
         '
         Me.Label79.AutoSize = True
-        Me.Label79.Location = New System.Drawing.Point(388, 1158)
+        Me.Label79.Location = New System.Drawing.Point(384, 1047)
         Me.Label79.Name = "Label79"
         Me.Label79.Size = New System.Drawing.Size(228, 13)
         Me.Label79.TabIndex = 528
@@ -3688,7 +3641,7 @@ Partial Class Ansattside
         'Label80
         '
         Me.Label80.AutoSize = True
-        Me.Label80.Location = New System.Drawing.Point(388, 1145)
+        Me.Label80.Location = New System.Drawing.Point(384, 1034)
         Me.Label80.Name = "Label80"
         Me.Label80.Size = New System.Drawing.Size(241, 13)
         Me.Label80.TabIndex = 527
@@ -3697,7 +3650,7 @@ Partial Class Ansattside
         'Label81
         '
         Me.Label81.AutoSize = True
-        Me.Label81.Location = New System.Drawing.Point(388, 1119)
+        Me.Label81.Location = New System.Drawing.Point(384, 1008)
         Me.Label81.Name = "Label81"
         Me.Label81.Size = New System.Drawing.Size(221, 13)
         Me.Label81.TabIndex = 526
@@ -3706,7 +3659,7 @@ Partial Class Ansattside
         'Label82
         '
         Me.Label82.AutoSize = True
-        Me.Label82.Location = New System.Drawing.Point(388, 1100)
+        Me.Label82.Location = New System.Drawing.Point(384, 989)
         Me.Label82.Name = "Label82"
         Me.Label82.Size = New System.Drawing.Size(94, 13)
         Me.Label82.TabIndex = 525
@@ -3715,7 +3668,7 @@ Partial Class Ansattside
         'Label83
         '
         Me.Label83.AutoSize = True
-        Me.Label83.Location = New System.Drawing.Point(388, 1087)
+        Me.Label83.Location = New System.Drawing.Point(384, 976)
         Me.Label83.Name = "Label83"
         Me.Label83.Size = New System.Drawing.Size(167, 13)
         Me.Label83.TabIndex = 524
@@ -3724,7 +3677,7 @@ Partial Class Ansattside
         'Label84
         '
         Me.Label84.AutoSize = True
-        Me.Label84.Location = New System.Drawing.Point(388, 1065)
+        Me.Label84.Location = New System.Drawing.Point(384, 954)
         Me.Label84.Name = "Label84"
         Me.Label84.Size = New System.Drawing.Size(237, 13)
         Me.Label84.TabIndex = 523
@@ -3733,7 +3686,7 @@ Partial Class Ansattside
         'Label85
         '
         Me.Label85.AutoSize = True
-        Me.Label85.Location = New System.Drawing.Point(388, 1052)
+        Me.Label85.Location = New System.Drawing.Point(384, 941)
         Me.Label85.Name = "Label85"
         Me.Label85.Size = New System.Drawing.Size(229, 13)
         Me.Label85.TabIndex = 522
@@ -3742,7 +3695,7 @@ Partial Class Ansattside
         'Label86
         '
         Me.Label86.AutoSize = True
-        Me.Label86.Location = New System.Drawing.Point(388, 1030)
+        Me.Label86.Location = New System.Drawing.Point(384, 919)
         Me.Label86.Name = "Label86"
         Me.Label86.Size = New System.Drawing.Size(104, 13)
         Me.Label86.TabIndex = 521
@@ -3751,7 +3704,7 @@ Partial Class Ansattside
         'Label87
         '
         Me.Label87.AutoSize = True
-        Me.Label87.Location = New System.Drawing.Point(388, 1017)
+        Me.Label87.Location = New System.Drawing.Point(384, 906)
         Me.Label87.Name = "Label87"
         Me.Label87.Size = New System.Drawing.Size(240, 13)
         Me.Label87.TabIndex = 520
@@ -3760,7 +3713,7 @@ Partial Class Ansattside
         'Label88
         '
         Me.Label88.AutoSize = True
-        Me.Label88.Location = New System.Drawing.Point(388, 992)
+        Me.Label88.Location = New System.Drawing.Point(384, 881)
         Me.Label88.Name = "Label88"
         Me.Label88.Size = New System.Drawing.Size(215, 13)
         Me.Label88.TabIndex = 519
@@ -3769,7 +3722,7 @@ Partial Class Ansattside
         'Label89
         '
         Me.Label89.AutoSize = True
-        Me.Label89.Location = New System.Drawing.Point(388, 979)
+        Me.Label89.Location = New System.Drawing.Point(384, 868)
         Me.Label89.Name = "Label89"
         Me.Label89.Size = New System.Drawing.Size(238, 13)
         Me.Label89.TabIndex = 518
@@ -3778,7 +3731,7 @@ Partial Class Ansattside
         'Label90
         '
         Me.Label90.AutoSize = True
-        Me.Label90.Location = New System.Drawing.Point(388, 959)
+        Me.Label90.Location = New System.Drawing.Point(384, 848)
         Me.Label90.Name = "Label90"
         Me.Label90.Size = New System.Drawing.Size(129, 13)
         Me.Label90.TabIndex = 517
@@ -3787,7 +3740,7 @@ Partial Class Ansattside
         'Label91
         '
         Me.Label91.AutoSize = True
-        Me.Label91.Location = New System.Drawing.Point(388, 943)
+        Me.Label91.Location = New System.Drawing.Point(384, 832)
         Me.Label91.Name = "Label91"
         Me.Label91.Size = New System.Drawing.Size(234, 13)
         Me.Label91.TabIndex = 516
@@ -3796,7 +3749,7 @@ Partial Class Ansattside
         'Label92
         '
         Me.Label92.AutoSize = True
-        Me.Label92.Location = New System.Drawing.Point(656, 882)
+        Me.Label92.Location = New System.Drawing.Point(652, 771)
         Me.Label92.Name = "Label92"
         Me.Label92.Size = New System.Drawing.Size(23, 13)
         Me.Label92.TabIndex = 515
@@ -3805,7 +3758,7 @@ Partial Class Ansattside
         'Label93
         '
         Me.Label93.AutoSize = True
-        Me.Label93.Location = New System.Drawing.Point(636, 882)
+        Me.Label93.Location = New System.Drawing.Point(632, 771)
         Me.Label93.Name = "Label93"
         Me.Label93.Size = New System.Drawing.Size(18, 13)
         Me.Label93.TabIndex = 514
@@ -3814,7 +3767,7 @@ Partial Class Ansattside
         'Label94
         '
         Me.Label94.AutoSize = True
-        Me.Label94.Location = New System.Drawing.Point(388, 920)
+        Me.Label94.Location = New System.Drawing.Point(384, 809)
         Me.Label94.Name = "Label94"
         Me.Label94.Size = New System.Drawing.Size(144, 13)
         Me.Label94.TabIndex = 513
@@ -3823,7 +3776,7 @@ Partial Class Ansattside
         'Label95
         '
         Me.Label95.AutoSize = True
-        Me.Label95.Location = New System.Drawing.Point(388, 907)
+        Me.Label95.Location = New System.Drawing.Point(384, 796)
         Me.Label95.Name = "Label95"
         Me.Label95.Size = New System.Drawing.Size(173, 13)
         Me.Label95.TabIndex = 512
@@ -3833,7 +3786,7 @@ Partial Class Ansattside
         '
         Me.Label96.AutoSize = True
         Me.Label96.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label96.Location = New System.Drawing.Point(388, 882)
+        Me.Label96.Location = New System.Drawing.Point(384, 771)
         Me.Label96.Name = "Label96"
         Me.Label96.Size = New System.Drawing.Size(77, 13)
         Me.Label96.TabIndex = 511
@@ -3842,7 +3795,7 @@ Partial Class Ansattside
         'Label78
         '
         Me.Label78.AutoSize = True
-        Me.Label78.Location = New System.Drawing.Point(80, 1025)
+        Me.Label78.Location = New System.Drawing.Point(76, 914)
         Me.Label78.Name = "Label78"
         Me.Label78.Size = New System.Drawing.Size(237, 13)
         Me.Label78.TabIndex = 510
@@ -3852,7 +3805,7 @@ Partial Class Ansattside
         '
         Me.Label77.AutoSize = True
         Me.Label77.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label77.Location = New System.Drawing.Point(80, 1002)
+        Me.Label77.Location = New System.Drawing.Point(76, 891)
         Me.Label77.Name = "Label77"
         Me.Label77.Size = New System.Drawing.Size(180, 13)
         Me.Label77.TabIndex = 509
@@ -3861,7 +3814,7 @@ Partial Class Ansattside
         'Label76
         '
         Me.Label76.AutoSize = True
-        Me.Label76.Location = New System.Drawing.Point(388, 846)
+        Me.Label76.Location = New System.Drawing.Point(384, 735)
         Me.Label76.Name = "Label76"
         Me.Label76.Size = New System.Drawing.Size(228, 13)
         Me.Label76.TabIndex = 508
@@ -3870,7 +3823,7 @@ Partial Class Ansattside
         'Label74
         '
         Me.Label74.AutoSize = True
-        Me.Label74.Location = New System.Drawing.Point(656, 824)
+        Me.Label74.Location = New System.Drawing.Point(652, 713)
         Me.Label74.Name = "Label74"
         Me.Label74.Size = New System.Drawing.Size(23, 13)
         Me.Label74.TabIndex = 507
@@ -3879,7 +3832,7 @@ Partial Class Ansattside
         'Label75
         '
         Me.Label75.AutoSize = True
-        Me.Label75.Location = New System.Drawing.Point(632, 824)
+        Me.Label75.Location = New System.Drawing.Point(628, 713)
         Me.Label75.Name = "Label75"
         Me.Label75.Size = New System.Drawing.Size(18, 13)
         Me.Label75.TabIndex = 506
@@ -3888,7 +3841,7 @@ Partial Class Ansattside
         'Label72
         '
         Me.Label72.AutoSize = True
-        Me.Label72.Location = New System.Drawing.Point(656, 646)
+        Me.Label72.Location = New System.Drawing.Point(652, 535)
         Me.Label72.Name = "Label72"
         Me.Label72.Size = New System.Drawing.Size(23, 13)
         Me.Label72.TabIndex = 505
@@ -3897,7 +3850,7 @@ Partial Class Ansattside
         'Label73
         '
         Me.Label73.AutoSize = True
-        Me.Label73.Location = New System.Drawing.Point(632, 646)
+        Me.Label73.Location = New System.Drawing.Point(628, 535)
         Me.Label73.Name = "Label73"
         Me.Label73.Size = New System.Drawing.Size(18, 13)
         Me.Label73.TabIndex = 504
@@ -3906,7 +3859,7 @@ Partial Class Ansattside
         'Label70
         '
         Me.Label70.AutoSize = True
-        Me.Label70.Location = New System.Drawing.Point(346, 675)
+        Me.Label70.Location = New System.Drawing.Point(342, 564)
         Me.Label70.Name = "Label70"
         Me.Label70.Size = New System.Drawing.Size(23, 13)
         Me.Label70.TabIndex = 503
@@ -3915,7 +3868,7 @@ Partial Class Ansattside
         'Label71
         '
         Me.Label71.AutoSize = True
-        Me.Label71.Location = New System.Drawing.Point(322, 675)
+        Me.Label71.Location = New System.Drawing.Point(318, 564)
         Me.Label71.Name = "Label71"
         Me.Label71.Size = New System.Drawing.Size(18, 13)
         Me.Label71.TabIndex = 502
@@ -3924,7 +3877,7 @@ Partial Class Ansattside
         'Label68
         '
         Me.Label68.AutoSize = True
-        Me.Label68.Location = New System.Drawing.Point(346, 512)
+        Me.Label68.Location = New System.Drawing.Point(342, 401)
         Me.Label68.Name = "Label68"
         Me.Label68.Size = New System.Drawing.Size(23, 13)
         Me.Label68.TabIndex = 501
@@ -3933,7 +3886,7 @@ Partial Class Ansattside
         'Label69
         '
         Me.Label69.AutoSize = True
-        Me.Label69.Location = New System.Drawing.Point(322, 512)
+        Me.Label69.Location = New System.Drawing.Point(318, 401)
         Me.Label69.Name = "Label69"
         Me.Label69.Size = New System.Drawing.Size(18, 13)
         Me.Label69.TabIndex = 500
@@ -3943,7 +3896,7 @@ Partial Class Ansattside
         '
         Me.Label67.AutoSize = True
         Me.Label67.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label67.Location = New System.Drawing.Point(388, 824)
+        Me.Label67.Location = New System.Drawing.Point(384, 713)
         Me.Label67.Name = "Label67"
         Me.Label67.Size = New System.Drawing.Size(111, 13)
         Me.Label67.TabIndex = 499
@@ -3952,7 +3905,7 @@ Partial Class Ansattside
         'Label64
         '
         Me.Label64.AutoSize = True
-        Me.Label64.Location = New System.Drawing.Point(388, 791)
+        Me.Label64.Location = New System.Drawing.Point(384, 680)
         Me.Label64.Name = "Label64"
         Me.Label64.Size = New System.Drawing.Size(193, 13)
         Me.Label64.TabIndex = 498
@@ -3961,7 +3914,7 @@ Partial Class Ansattside
         'Label65
         '
         Me.Label65.AutoSize = True
-        Me.Label65.Location = New System.Drawing.Point(388, 778)
+        Me.Label65.Location = New System.Drawing.Point(384, 667)
         Me.Label65.Name = "Label65"
         Me.Label65.Size = New System.Drawing.Size(224, 13)
         Me.Label65.TabIndex = 497
@@ -3970,7 +3923,7 @@ Partial Class Ansattside
         'Label66
         '
         Me.Label66.AutoSize = True
-        Me.Label66.Location = New System.Drawing.Point(388, 765)
+        Me.Label66.Location = New System.Drawing.Point(384, 654)
         Me.Label66.Name = "Label66"
         Me.Label66.Size = New System.Drawing.Size(214, 13)
         Me.Label66.TabIndex = 496
@@ -3979,7 +3932,7 @@ Partial Class Ansattside
         'Label62
         '
         Me.Label62.AutoSize = True
-        Me.Label62.Location = New System.Drawing.Point(388, 730)
+        Me.Label62.Location = New System.Drawing.Point(384, 619)
         Me.Label62.Name = "Label62"
         Me.Label62.Size = New System.Drawing.Size(179, 13)
         Me.Label62.TabIndex = 495
@@ -3988,7 +3941,7 @@ Partial Class Ansattside
         'Label63
         '
         Me.Label63.AutoSize = True
-        Me.Label63.Location = New System.Drawing.Point(388, 743)
+        Me.Label63.Location = New System.Drawing.Point(384, 632)
         Me.Label63.Name = "Label63"
         Me.Label63.Size = New System.Drawing.Size(159, 13)
         Me.Label63.TabIndex = 494
@@ -3997,7 +3950,7 @@ Partial Class Ansattside
         'Label60
         '
         Me.Label60.AutoSize = True
-        Me.Label60.Location = New System.Drawing.Point(388, 694)
+        Me.Label60.Location = New System.Drawing.Point(384, 583)
         Me.Label60.Name = "Label60"
         Me.Label60.Size = New System.Drawing.Size(201, 13)
         Me.Label60.TabIndex = 493
@@ -4006,7 +3959,7 @@ Partial Class Ansattside
         'Label61
         '
         Me.Label61.AutoSize = True
-        Me.Label61.Location = New System.Drawing.Point(388, 707)
+        Me.Label61.Location = New System.Drawing.Point(384, 596)
         Me.Label61.Name = "Label61"
         Me.Label61.Size = New System.Drawing.Size(143, 13)
         Me.Label61.TabIndex = 492
@@ -4015,7 +3968,7 @@ Partial Class Ansattside
         'Label59
         '
         Me.Label59.AutoSize = True
-        Me.Label59.Location = New System.Drawing.Point(388, 672)
+        Me.Label59.Location = New System.Drawing.Point(384, 561)
         Me.Label59.Name = "Label59"
         Me.Label59.Size = New System.Drawing.Size(70, 13)
         Me.Label59.TabIndex = 491
@@ -4025,7 +3978,7 @@ Partial Class Ansattside
         '
         Me.Label58.AutoSize = True
         Me.Label58.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label58.Location = New System.Drawing.Point(388, 646)
+        Me.Label58.Location = New System.Drawing.Point(384, 535)
         Me.Label58.Name = "Label58"
         Me.Label58.Size = New System.Drawing.Size(123, 13)
         Me.Label58.TabIndex = 490
@@ -4034,7 +3987,7 @@ Partial Class Ansattside
         'Label57
         '
         Me.Label57.AutoSize = True
-        Me.Label57.Location = New System.Drawing.Point(80, 959)
+        Me.Label57.Location = New System.Drawing.Point(76, 848)
         Me.Label57.Name = "Label57"
         Me.Label57.Size = New System.Drawing.Size(133, 13)
         Me.Label57.TabIndex = 489
@@ -4043,7 +3996,7 @@ Partial Class Ansattside
         'Label56
         '
         Me.Label56.AutoSize = True
-        Me.Label56.Location = New System.Drawing.Point(80, 936)
+        Me.Label56.Location = New System.Drawing.Point(76, 825)
         Me.Label56.Name = "Label56"
         Me.Label56.Size = New System.Drawing.Size(119, 13)
         Me.Label56.TabIndex = 488
@@ -4052,7 +4005,7 @@ Partial Class Ansattside
         'Label54
         '
         Me.Label54.AutoSize = True
-        Me.Label54.Location = New System.Drawing.Point(80, 898)
+        Me.Label54.Location = New System.Drawing.Point(76, 787)
         Me.Label54.Name = "Label54"
         Me.Label54.Size = New System.Drawing.Size(220, 13)
         Me.Label54.TabIndex = 487
@@ -4061,7 +4014,7 @@ Partial Class Ansattside
         'Label55
         '
         Me.Label55.AutoSize = True
-        Me.Label55.Location = New System.Drawing.Point(80, 911)
+        Me.Label55.Location = New System.Drawing.Point(76, 800)
         Me.Label55.Name = "Label55"
         Me.Label55.Size = New System.Drawing.Size(215, 13)
         Me.Label55.TabIndex = 486
@@ -4070,7 +4023,7 @@ Partial Class Ansattside
         'Label53
         '
         Me.Label53.AutoSize = True
-        Me.Label53.Location = New System.Drawing.Point(80, 875)
+        Me.Label53.Location = New System.Drawing.Point(76, 764)
         Me.Label53.Name = "Label53"
         Me.Label53.Size = New System.Drawing.Size(191, 13)
         Me.Label53.TabIndex = 485
@@ -4079,7 +4032,7 @@ Partial Class Ansattside
         'Label51
         '
         Me.Label51.AutoSize = True
-        Me.Label51.Location = New System.Drawing.Point(80, 840)
+        Me.Label51.Location = New System.Drawing.Point(76, 729)
         Me.Label51.Name = "Label51"
         Me.Label51.Size = New System.Drawing.Size(210, 13)
         Me.Label51.TabIndex = 484
@@ -4088,7 +4041,7 @@ Partial Class Ansattside
         'Label52
         '
         Me.Label52.AutoSize = True
-        Me.Label52.Location = New System.Drawing.Point(80, 853)
+        Me.Label52.Location = New System.Drawing.Point(76, 742)
         Me.Label52.Name = "Label52"
         Me.Label52.Size = New System.Drawing.Size(224, 13)
         Me.Label52.TabIndex = 483
@@ -4097,7 +4050,7 @@ Partial Class Ansattside
         'Label50
         '
         Me.Label50.AutoSize = True
-        Me.Label50.Location = New System.Drawing.Point(80, 817)
+        Me.Label50.Location = New System.Drawing.Point(76, 706)
         Me.Label50.Name = "Label50"
         Me.Label50.Size = New System.Drawing.Size(82, 13)
         Me.Label50.TabIndex = 482
@@ -4106,7 +4059,7 @@ Partial Class Ansattside
         'Label43
         '
         Me.Label43.AutoSize = True
-        Me.Label43.Location = New System.Drawing.Point(80, 723)
+        Me.Label43.Location = New System.Drawing.Point(76, 612)
         Me.Label43.Name = "Label43"
         Me.Label43.Size = New System.Drawing.Size(214, 13)
         Me.Label43.TabIndex = 481
@@ -4115,7 +4068,7 @@ Partial Class Ansattside
         'Label44
         '
         Me.Label44.AutoSize = True
-        Me.Label44.Location = New System.Drawing.Point(80, 736)
+        Me.Label44.Location = New System.Drawing.Point(76, 625)
         Me.Label44.Name = "Label44"
         Me.Label44.Size = New System.Drawing.Size(217, 13)
         Me.Label44.TabIndex = 480
@@ -4124,7 +4077,7 @@ Partial Class Ansattside
         'Label45
         '
         Me.Label45.AutoSize = True
-        Me.Label45.Location = New System.Drawing.Point(80, 759)
+        Me.Label45.Location = New System.Drawing.Point(76, 648)
         Me.Label45.Name = "Label45"
         Me.Label45.Size = New System.Drawing.Size(194, 13)
         Me.Label45.TabIndex = 479
@@ -4133,7 +4086,7 @@ Partial Class Ansattside
         'Label46
         '
         Me.Label46.AutoSize = True
-        Me.Label46.Location = New System.Drawing.Point(80, 772)
+        Me.Label46.Location = New System.Drawing.Point(76, 661)
         Me.Label46.Name = "Label46"
         Me.Label46.Size = New System.Drawing.Size(98, 13)
         Me.Label46.TabIndex = 478
@@ -4142,7 +4095,7 @@ Partial Class Ansattside
         'Label47
         '
         Me.Label47.AutoSize = True
-        Me.Label47.Location = New System.Drawing.Point(80, 794)
+        Me.Label47.Location = New System.Drawing.Point(76, 683)
         Me.Label47.Name = "Label47"
         Me.Label47.Size = New System.Drawing.Size(209, 13)
         Me.Label47.TabIndex = 477
@@ -4151,7 +4104,7 @@ Partial Class Ansattside
         'Label48
         '
         Me.Label48.AutoSize = True
-        Me.Label48.Location = New System.Drawing.Point(80, 701)
+        Me.Label48.Location = New System.Drawing.Point(76, 590)
         Me.Label48.Name = "Label48"
         Me.Label48.Size = New System.Drawing.Size(88, 13)
         Me.Label48.TabIndex = 476
@@ -4161,7 +4114,7 @@ Partial Class Ansattside
         '
         Me.Label49.AutoSize = True
         Me.Label49.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label49.Location = New System.Drawing.Point(80, 675)
+        Me.Label49.Location = New System.Drawing.Point(76, 564)
         Me.Label49.Name = "Label49"
         Me.Label49.Size = New System.Drawing.Size(232, 13)
         Me.Label49.TabIndex = 475
@@ -4170,7 +4123,7 @@ Partial Class Ansattside
         'Label42
         '
         Me.Label42.AutoSize = True
-        Me.Label42.Location = New System.Drawing.Point(388, 579)
+        Me.Label42.Location = New System.Drawing.Point(384, 468)
         Me.Label42.Name = "Label42"
         Me.Label42.Size = New System.Drawing.Size(224, 13)
         Me.Label42.TabIndex = 474
@@ -4179,7 +4132,7 @@ Partial Class Ansattside
         'Label41
         '
         Me.Label41.AutoSize = True
-        Me.Label41.Location = New System.Drawing.Point(388, 557)
+        Me.Label41.Location = New System.Drawing.Point(384, 446)
         Me.Label41.Name = "Label41"
         Me.Label41.Size = New System.Drawing.Size(104, 13)
         Me.Label41.TabIndex = 473
@@ -4188,7 +4141,7 @@ Partial Class Ansattside
         'Label40
         '
         Me.Label40.AutoSize = True
-        Me.Label40.Location = New System.Drawing.Point(385, 544)
+        Me.Label40.Location = New System.Drawing.Point(381, 433)
         Me.Label40.Name = "Label40"
         Me.Label40.Size = New System.Drawing.Size(207, 13)
         Me.Label40.TabIndex = 472
@@ -4197,7 +4150,7 @@ Partial Class Ansattside
         'Label39
         '
         Me.Label39.AutoSize = True
-        Me.Label39.Location = New System.Drawing.Point(385, 525)
+        Me.Label39.Location = New System.Drawing.Point(381, 414)
         Me.Label39.Name = "Label39"
         Me.Label39.Size = New System.Drawing.Size(102, 13)
         Me.Label39.TabIndex = 471
@@ -4206,7 +4159,7 @@ Partial Class Ansattside
         'Label38
         '
         Me.Label38.AutoSize = True
-        Me.Label38.Location = New System.Drawing.Point(385, 512)
+        Me.Label38.Location = New System.Drawing.Point(381, 401)
         Me.Label38.Name = "Label38"
         Me.Label38.Size = New System.Drawing.Size(207, 13)
         Me.Label38.TabIndex = 470
@@ -4215,7 +4168,7 @@ Partial Class Ansattside
         'Label37
         '
         Me.Label37.AutoSize = True
-        Me.Label37.Location = New System.Drawing.Point(385, 499)
+        Me.Label37.Location = New System.Drawing.Point(381, 388)
         Me.Label37.Name = "Label37"
         Me.Label37.Size = New System.Drawing.Size(235, 13)
         Me.Label37.TabIndex = 469
@@ -4224,7 +4177,7 @@ Partial Class Ansattside
         'Label36
         '
         Me.Label36.AutoSize = True
-        Me.Label36.Location = New System.Drawing.Point(385, 477)
+        Me.Label36.Location = New System.Drawing.Point(381, 366)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(147, 13)
         Me.Label36.TabIndex = 468
@@ -4233,7 +4186,7 @@ Partial Class Ansattside
         'Label35
         '
         Me.Label35.AutoSize = True
-        Me.Label35.Location = New System.Drawing.Point(385, 464)
+        Me.Label35.Location = New System.Drawing.Point(381, 353)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(213, 13)
         Me.Label35.TabIndex = 467
@@ -4242,7 +4195,7 @@ Partial Class Ansattside
         'Label34
         '
         Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(385, 451)
+        Me.Label34.Location = New System.Drawing.Point(381, 340)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(192, 13)
         Me.Label34.TabIndex = 466
@@ -4251,7 +4204,7 @@ Partial Class Ansattside
         'Label33
         '
         Me.Label33.AutoSize = True
-        Me.Label33.Location = New System.Drawing.Point(385, 438)
+        Me.Label33.Location = New System.Drawing.Point(381, 327)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(227, 13)
         Me.Label33.TabIndex = 465
@@ -4260,7 +4213,7 @@ Partial Class Ansattside
         'Label32
         '
         Me.Label32.AutoSize = True
-        Me.Label32.Location = New System.Drawing.Point(385, 413)
+        Me.Label32.Location = New System.Drawing.Point(381, 302)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(80, 13)
         Me.Label32.TabIndex = 464
@@ -4269,7 +4222,7 @@ Partial Class Ansattside
         'Label31
         '
         Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(385, 400)
+        Me.Label31.Location = New System.Drawing.Point(381, 289)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(210, 13)
         Me.Label31.TabIndex = 463
@@ -4278,7 +4231,7 @@ Partial Class Ansattside
         'Label30
         '
         Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(385, 377)
+        Me.Label30.Location = New System.Drawing.Point(381, 266)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(149, 13)
         Me.Label30.TabIndex = 462
@@ -4287,7 +4240,7 @@ Partial Class Ansattside
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(656, 325)
+        Me.Label28.Location = New System.Drawing.Point(652, 214)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(23, 13)
         Me.Label28.TabIndex = 461
@@ -4296,7 +4249,7 @@ Partial Class Ansattside
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(632, 325)
+        Me.Label29.Location = New System.Drawing.Point(628, 214)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(18, 13)
         Me.Label29.TabIndex = 460
@@ -4305,7 +4258,7 @@ Partial Class Ansattside
         'Label27
         '
         Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(385, 354)
+        Me.Label27.Location = New System.Drawing.Point(381, 243)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(164, 13)
         Me.Label27.TabIndex = 459
@@ -4314,7 +4267,7 @@ Partial Class Ansattside
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(385, 341)
+        Me.Label26.Location = New System.Drawing.Point(381, 230)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(210, 13)
         Me.Label26.TabIndex = 458
@@ -4324,7 +4277,7 @@ Partial Class Ansattside
         '
         Me.Label25.AutoSize = True
         Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(385, 325)
+        Me.Label25.Location = New System.Drawing.Point(381, 214)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(232, 13)
         Me.Label25.TabIndex = 457
@@ -4333,7 +4286,7 @@ Partial Class Ansattside
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(80, 560)
+        Me.Label24.Location = New System.Drawing.Point(76, 449)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(125, 13)
         Me.Label24.TabIndex = 456
@@ -4342,7 +4295,7 @@ Partial Class Ansattside
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(80, 582)
+        Me.Label23.Location = New System.Drawing.Point(76, 471)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(90, 13)
         Me.Label23.TabIndex = 455
@@ -4351,7 +4304,7 @@ Partial Class Ansattside
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(80, 605)
+        Me.Label22.Location = New System.Drawing.Point(76, 494)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(71, 13)
         Me.Label22.TabIndex = 454
@@ -4360,7 +4313,7 @@ Partial Class Ansattside
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(80, 628)
+        Me.Label21.Location = New System.Drawing.Point(76, 517)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(171, 13)
         Me.Label21.TabIndex = 453
@@ -4369,7 +4322,7 @@ Partial Class Ansattside
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(80, 538)
+        Me.Label19.Location = New System.Drawing.Point(76, 427)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(85, 13)
         Me.Label19.TabIndex = 452
@@ -4379,7 +4332,7 @@ Partial Class Ansattside
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(80, 512)
+        Me.Label18.Location = New System.Drawing.Point(76, 401)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(201, 13)
         Me.Label18.TabIndex = 451
@@ -4388,7 +4341,7 @@ Partial Class Ansattside
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(80, 427)
+        Me.Label17.Location = New System.Drawing.Point(76, 316)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(124, 13)
         Me.Label17.TabIndex = 450
@@ -4397,7 +4350,7 @@ Partial Class Ansattside
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(80, 400)
+        Me.Label16.Location = New System.Drawing.Point(76, 289)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(210, 13)
         Me.Label16.TabIndex = 449
@@ -4406,7 +4359,7 @@ Partial Class Ansattside
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(80, 387)
+        Me.Label15.Location = New System.Drawing.Point(76, 276)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(176, 13)
         Me.Label15.TabIndex = 448
@@ -4415,7 +4368,7 @@ Partial Class Ansattside
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(80, 363)
+        Me.Label20.Location = New System.Drawing.Point(76, 252)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(109, 13)
         Me.Label20.TabIndex = 447
@@ -4425,7 +4378,7 @@ Partial Class Ansattside
         '
         Me.Label126.AutoSize = True
         Me.Label126.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label126.Location = New System.Drawing.Point(80, 325)
+        Me.Label126.Location = New System.Drawing.Point(76, 214)
         Me.Label126.Name = "Label126"
         Me.Label126.Size = New System.Drawing.Size(101, 13)
         Me.Label126.TabIndex = 446
@@ -4434,7 +4387,7 @@ Partial Class Ansattside
         'Label128
         '
         Me.Label128.AutoSize = True
-        Me.Label128.Location = New System.Drawing.Point(346, 325)
+        Me.Label128.Location = New System.Drawing.Point(342, 214)
         Me.Label128.Name = "Label128"
         Me.Label128.Size = New System.Drawing.Size(23, 13)
         Me.Label128.TabIndex = 445
@@ -4443,7 +4396,7 @@ Partial Class Ansattside
         'Label131
         '
         Me.Label131.AutoSize = True
-        Me.Label131.Location = New System.Drawing.Point(326, 325)
+        Me.Label131.Location = New System.Drawing.Point(322, 214)
         Me.Label131.Name = "Label131"
         Me.Label131.Size = New System.Drawing.Size(18, 13)
         Me.Label131.TabIndex = 444
@@ -4452,21 +4405,11 @@ Partial Class Ansattside
         'Label132
         '
         Me.Label132.AutoSize = True
-        Me.Label132.Location = New System.Drawing.Point(80, 341)
+        Me.Label132.Location = New System.Drawing.Point(76, 230)
         Me.Label132.Name = "Label132"
         Me.Label132.Size = New System.Drawing.Size(193, 13)
         Me.Label132.TabIndex = 443
         Me.Label132.Text = "Har du fått informasjon om blodgivning?"
-        '
-        'Label133
-        '
-        Me.Label133.AutoSize = True
-        Me.Label133.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label133.Location = New System.Drawing.Point(80, 238)
-        Me.Label133.Name = "Label133"
-        Me.Label133.Size = New System.Drawing.Size(41, 13)
-        Me.Label133.TabIndex = 442
-        Me.Label133.Text = "Fyll ut"
         '
         'Label134
         '
@@ -4484,7 +4427,7 @@ Partial Class Ansattside
         Me.btnLogUt.Name = "btnLogUt"
         Me.btnLogUt.Size = New System.Drawing.Size(75, 23)
         Me.btnLogUt.TabIndex = 16
-        Me.btnLogUt.Text = "Log Ut"
+        Me.btnLogUt.Text = "Logg ut"
         Me.btnLogUt.UseVisualStyleBackColor = True
         '
         'Ansattside
@@ -4839,7 +4782,6 @@ Partial Class Ansattside
     Friend WithEvents lblFornavn As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
-    Friend WithEvents chkSjekk As CheckBox
     Friend WithEvents Label14 As Label
     Friend WithEvents Panel55 As Panel
     Friend WithEvents rb922 As RadioButton
@@ -4852,8 +4794,6 @@ Partial Class Ansattside
     Friend WithEvents rb152 As RadioButton
     Friend WithEvents rb151 As RadioButton
     Friend WithEvents Label129 As Label
-    Friend WithEvents lblDato As Label
-    Friend WithEvents btnInfo As Button
     Friend WithEvents Panel48 As Panel
     Friend WithEvents rb5152 As RadioButton
     Friend WithEvents rb5151 As RadioButton
@@ -4923,7 +4863,6 @@ Partial Class Ansattside
     Friend WithEvents Panel1 As Panel
     Friend WithEvents rb612 As RadioButton
     Friend WithEvents rb611 As RadioButton
-    Friend WithEvents btnSendInn As Button
     Friend WithEvents Label123 As Label
     Friend WithEvents Label124 As Label
     Friend WithEvents Label121 As Label
@@ -5038,7 +4977,6 @@ Partial Class Ansattside
     Friend WithEvents Label128 As Label
     Friend WithEvents Label131 As Label
     Friend WithEvents Label132 As Label
-    Friend WithEvents Label133 As Label
     Friend WithEvents Label134 As Label
     Friend WithEvents Label135 As Label
     Friend WithEvents innkallingTidspunktComboBox As ComboBox

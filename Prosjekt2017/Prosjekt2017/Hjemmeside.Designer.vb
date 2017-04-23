@@ -30,6 +30,7 @@ Partial Class Hjemmeside
         Me.btnRegistrer = New System.Windows.Forms.Button()
         Me.btnBlodgiver = New System.Windows.Forms.Button()
         Me.btnAnsatt = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'lbInput
@@ -91,7 +92,7 @@ Partial Class Hjemmeside
         Me.btnRegistrer.Name = "btnRegistrer"
         Me.btnRegistrer.Size = New System.Drawing.Size(137, 76)
         Me.btnRegistrer.TabIndex = 5
-        Me.btnRegistrer.Text = "Registrer"
+        Me.btnRegistrer.Text = "Ny blodgiver?"
         Me.btnRegistrer.UseVisualStyleBackColor = True
         '
         'btnBlodgiver
@@ -112,12 +113,23 @@ Partial Class Hjemmeside
         Me.btnAnsatt.Text = "Ansatt"
         Me.btnAnsatt.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(237, 32)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(295, 25)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "Velkommen til blodbanken!"
+        '
         'Hjemmeside
         '
         Me.AcceptButton = Me.btnLogginn
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(736, 449)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnAnsatt)
         Me.Controls.Add(Me.btnBlodgiver)
         Me.Controls.Add(Me.btnRegistrer)
@@ -142,4 +154,5 @@ Partial Class Hjemmeside
     Friend WithEvents btnRegistrer As Button
     Friend WithEvents btnBlodgiver As Button
     Friend WithEvents btnAnsatt As Button
+    Friend WithEvents Label1 As Label
 End Class
