@@ -969,6 +969,7 @@ Partial Class Ansattside
         Me.Label135.Size = New System.Drawing.Size(57, 13)
         Me.Label135.TabIndex = 21
         Me.Label135.Text = "Tidspunkt:"
+        Me.Label135.Visible = False
         '
         'innkallingTidspunktComboBox
         '
@@ -977,6 +978,7 @@ Partial Class Ansattside
         Me.innkallingTidspunktComboBox.Name = "innkallingTidspunktComboBox"
         Me.innkallingTidspunktComboBox.Size = New System.Drawing.Size(121, 21)
         Me.innkallingTidspunktComboBox.TabIndex = 20
+        Me.innkallingTidspunktComboBox.Visible = False
         '
         'btnHasteInnkalling
         '
@@ -1025,6 +1027,7 @@ Partial Class Ansattside
         '
         'txtboxTilgjengelig
         '
+        Me.txtboxTilgjengelig.Enabled = False
         Me.txtboxTilgjengelig.Location = New System.Drawing.Point(557, 194)
         Me.txtboxTilgjengelig.Margin = New System.Windows.Forms.Padding(2)
         Me.txtboxTilgjengelig.Name = "txtboxTilgjengelig"
@@ -1061,6 +1064,7 @@ Partial Class Ansattside
         '
         'cboBlodtypeInnkalling
         '
+        Me.cboBlodtypeInnkalling.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboBlodtypeInnkalling.FormattingEnabled = True
         Me.cboBlodtypeInnkalling.Items.AddRange(New Object() {"A", "B", "AB", "0"})
         Me.cboBlodtypeInnkalling.Location = New System.Drawing.Point(304, 193)
@@ -1068,7 +1072,6 @@ Partial Class Ansattside
         Me.cboBlodtypeInnkalling.Name = "cboBlodtypeInnkalling"
         Me.cboBlodtypeInnkalling.Size = New System.Drawing.Size(92, 21)
         Me.cboBlodtypeInnkalling.TabIndex = 8
-        Me.cboBlodtypeInnkalling.Text = "A"
         '
         'lblBlodtypeØnsket
         '

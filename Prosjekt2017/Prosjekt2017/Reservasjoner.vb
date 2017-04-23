@@ -136,13 +136,8 @@ Public Class Reservasjoner
         Next
     End Sub
 
-    Public Function getInnkallingEpost() As DataTable
-        Return db.Query("SELECT epost 
-from Person, Blodgiver, Reservasjon
-Where Person.personID = Blodgiver.personID
-AND Blodgiver.personID = Reservasjon.personID
-AND Reservasjon.dato <= date_sub(now(), interval 3 month)
-Group by epost")
+    Public Function tilgjengeligePersAvBlodtype(ByVal blodtype As String)
+        Return db.Query("")
     End Function
 
     Public Sub sendInnkalling(ByVal innEpost As String, ByVal dato As String, ByVal tidspunkt As String)
@@ -162,5 +157,19 @@ Group by epost")
             MsgBox(ex.ToString)
         End Try
     End Sub
+
+    Public Function getAlleResMulig() As DataTable
+        Return db.Query("SELECT epost, Person.personID, MAX(dato)
+                        FROM Person
+                        LEFT JOIN Reservasjon ON Person.personID = Reservasjon.personID
+                        Group by Person.personID")
+    End Function
+    Public Function getHasteResMulig(ByVal blodtype As String) As DataTable
+        Return db.Query("SELECT epost, Person.personID, MAX(dato)
+                        FROM Person
+                        LEFT JOIN Reservasjon ON Person.personID = Reservasjon.personID
+                        Where blodtype = '" & blodtype & "'
+                        Group by Person.personID")
+    End Function
 
 End Class
