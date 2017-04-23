@@ -33,6 +33,23 @@
     Where diffCeller < 36")
     End Function
 
+    'Henter ut alle blodplateposer som ikke har gått ut på dato og grupperer det
+    Public Function getAlleTilgjengeligeBlodplater() As DataTable
+        Return db.Query("SELECT * From (
+    Select
+    blodtype,
+    SUM(plater_poser) As Platerposer,
+    Blodplater.dato As dato,
+    DATEDIFF(Blodplater.dato, CURDATE()) As diffPlater
+    
+     FROM Blodtype
+                         Join Blodplater ON Blodtype.blodID = Blodplater.blodID  
+     Group By blodtype
+    ) As innertable
+    Where diffPlater < 8")
+    End Function
+
+    'Henter ut alle tilgjengelige blodceller
     Public Function getBlodcellerGrid(blodtype As String) As DataTable
         Return db.Query("SELECT * From (
     SELECT
@@ -50,6 +67,7 @@
     Where diffCeller < 36 AND blodtype = '" & blodtype & "'")
     End Function
 
+    'Henter ut alle tilgjengelige blodplater
     Public Function getPlaterGrid(blodtype As String) As DataTable
         Return db.Query("SELECT * From (
     SELECT
@@ -66,29 +84,13 @@
 
     Where diffPlater < 8 AND blodtype = '" & blodtype & "'")
     End Function
-
+    'Henter ut alle plasma
     Public Function getPlasmaGrid(blodtype As String) As DataTable
         Return db.Query("SELECT blodtype, plasma_poser As Plasmaposer, Blodplasma.blodID
                         FROM Blodtype
                         Join Blodplasma ON Blodtype.blodID = Blodplasma.blodID
                         Where blodtype = '" & blodtype & "' 
                         ")
-    End Function
-
-    'Henter ut alle blodplateposer som ikke har gått ut på dato
-    Public Function getAlleTilgjengeligeBlodplater() As DataTable
-        Return db.Query("SELECT * From (
-    Select
-    blodtype,
-    SUM(plater_poser) As Platerposer,
-    Blodplater.dato As dato,
-    DATEDIFF(Blodplater.dato, CURDATE()) As diffPlater
-    
-     FROM Blodtype
-                         Join Blodplater ON Blodtype.blodID = Blodplater.blodID  
-     Group By blodtype                 
-    ) As innertable
-    Where diffPlater < 8")
     End Function
 
     Public Sub fyllDatagrid(ByRef blodGrid As Object, ByVal blodTabell As DataTable)
@@ -99,8 +101,6 @@
         Dim diffCeller As String
         Dim bID As String
         blodGrid.Rows.Clear()
-
-        'MsgBox(dbDato)
 
         For Each row In blodTabell.Rows()
             blodtype = row(0).ToString
@@ -120,8 +120,6 @@
         Dim bID As String
         blodGrid.Rows.Clear()
 
-        'MsgBox(dbDato)
-
         For Each row In blodTabell.Rows()
             blodtype = row(0).ToString
             plasmaposer = row(1).ToString
@@ -131,22 +129,36 @@
         Next
     End Sub
 
+    Public Sub fyllBlodproduktgrid(ByRef blodGrid As Object, ByVal blodTabell As DataTable)
+        Dim blodArray As New ArrayList()
+        Dim poser As String
+        Dim blodtype As String
+        blodGrid.Rows.Clear()
+
+        For Each row In blodTabell.Rows()
+            blodtype = row(0).ToString
+            poser = row(1).ToString
+
+            blodGrid.Rows.Add(blodtype, poser)
+        Next
+    End Sub
+
     Public Function skrivUtBlodplasma(ByVal blodID As Integer)
         Return db.Query("UPDATE Blodplasma
                          SET plasma_poser = plasma_poser - 1 
-                         WHERE Blodplasma.blodID = " & blodID)
+                         WHERE Blodplasma.blodID = " & blodID & " AND plasma_poser > 0")
     End Function
 
     Public Function skrivUtBlodceller(ByVal blodID As Integer)
         Return db.Query("UPDATE Blodceller
                          SET celler_poser = celler_poser - 1
-                         WHERE Blodceller.blodID = " & blodID)
+                         WHERE Blodceller.blodID = " & blodID & " AND celler_poser > 0")
     End Function
 
     Public Function skrivUtBlodplater(ByVal blodID As Integer)
         Return db.Query("UPDATE Blodplater
                          SET plater_poser = plater_poser - 1 
-                         WHERE Blodplater.blodID = " & blodID)
+                         WHERE Blodplater.blodID = " & blodID & " AND plater_poser > 0")
     End Function
 
     'Henter ut siste blodID ved bruk av resID

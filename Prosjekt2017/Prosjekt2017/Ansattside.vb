@@ -44,6 +44,7 @@ Public Class Ansattside
 
     End Sub
 
+    'Viser hver enkelt blodcelleposer
     Private Sub visCeller()
         Dim blodTabell As New DataTable
 
@@ -56,6 +57,7 @@ Public Class Ansattside
 
     End Sub
 
+    'Viser hver enkelt blodplateposer
     Private Sub visPlater()
         Dim blodTabell As New DataTable
 
@@ -68,6 +70,7 @@ Public Class Ansattside
 
     End Sub
 
+    'Viser hver enkelt blodplasmaposer
     Private Sub visPlasma()
         Dim blodTabell As New DataTable
 
@@ -79,18 +82,22 @@ Public Class Ansattside
         End If
     End Sub
 
+    'Knapp som kaller opp prosedyren visPlater
     Private Sub btnVisPlater_Click(sender As Object, e As EventArgs) Handles btnVisPlater.Click
         visPlater()
     End Sub
 
+    'Knapp som kaller opp prosedyren visPlasma
     Private Sub btnVisPlasma_Click(sender As Object, e As EventArgs) Handles btnVisPlasma.Click
         visPlasma()
     End Sub
 
+    'Knapp som kaller opp prosedyren visCeller
     Private Sub btnVisCeller_Click(sender As Object, e As EventArgs) Handles btnVisCeller.Click
         visCeller()
     End Sub
 
+    'Knapp på hver enkel rad for å skrive ut blodprodukter
     Private Sub blodGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles blodGrid.CellContentClick
 
         If e.ColumnIndex <> 5 Then
@@ -102,23 +109,27 @@ Public Class Ansattside
 
             blodID = blodGrid.Rows(e.RowIndex).Cells(4).Value
             Blodlager.skrivUtBlodceller(blodID)
+            visCeller()
             MsgBox(blodID)
 
         ElseIf e.ColumnIndex = 5 And blodprodukt = "Plasma" Then
 
             blodID = blodGrid.Rows(e.RowIndex).Cells(4).Value
             Blodlager.skrivUtBlodplasma(blodID)
+            visPlasma()
             MsgBox(blodID)
 
         ElseIf e.ColumnIndex = 5 And blodprodukt = "Plater" Then
 
             blodID = blodGrid.Rows(e.RowIndex).Cells(4).Value
             Blodlager.skrivUtBlodplater(blodID)
+            visPlater()
             MsgBox(blodID)
 
         End If
     End Sub
 
+    'Verdien i combobox for blodtype blir oppdatert globalt i variabelen blodtypeValgt for bruk i prosedyrer
     Private Sub cboGridBlodtype_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboGridBlodtype.SelectedIndexChanged
         blodtypeValgt = cboGridBlodtype.Text
     End Sub
@@ -251,25 +262,14 @@ Public Class Ansattside
         'Oppretter en tom tabell
         Dim blodPlasmaTab As New DataTable()
 
-        Dim blodtype As String
-        Dim blodplasma As String
-
         'Tømmer datagridview
         gridBlodplasma.Rows.Clear()
 
         'Fyller blodplasma tabell med verdier fra databasen på antall tilgjengelige blodplasma
         blodPlasmaTab = Blodlager.getAlleTilgjengeligeBlodPlasma()
 
-
-        'Løkke for å lese alle verdiene i tabellen og setter det inn i variabler.
-        For Each row In blodPlasmaTab.Rows
-            blodtype = row("blodtype")
-            blodplasma = row("Plasmaposer")
-
-            'Legger inn verdier i datagrid
-            gridBlodplasma.Rows.Add(blodtype, blodplasma)
-
-        Next row
+        'Kaller opp prosedyre for å fylle opp datagrid
+        Blodlager.fyllBlodproduktgrid(gridBlodplasma, blodPlasmaTab)
 
     End Sub
 
@@ -277,21 +277,15 @@ Public Class Ansattside
         'Oppretter en tom tabell
         Dim blodPlaterTab As New DataTable()
 
-        Dim blodtype As String
-        Dim blodplater As String
-
         'Tømmer datagridview
         gridBlodplater.Rows.Clear()
 
         'Fyller blodplatertabellen med verdier fra databasen på antall tilgjengelige blodplater
         blodPlaterTab = Blodlager.getAlleTilgjengeligeBlodplater
-        For Each row In blodPlaterTab.Rows
-            blodtype = row("blodtype")
-            blodplater = row("PlaterPoser")
 
-            'Legger inn verdier i datagrid
-            gridBlodplater.Rows.Add(blodtype, blodplater)
-        Next row
+        'Kaller opp prosedyre for å fylle opp datagrid
+        Blodlager.fyllBlodproduktgrid(gridBlodplater, blodPlaterTab)
+
 
     End Sub
 
@@ -299,29 +293,14 @@ Public Class Ansattside
         'Oppretter en tom tabell
         Dim blodCellerTab As New DataTable()
 
-        Dim blodtype As String
-        Dim blodceller As String
-
         'Tømmer datagridview
         gridBlodceller.Rows.Clear()
 
         'Fyller blodcellertabellen med verdier fra databasen på antall tilgjengelige blodceller
         blodCellerTab = Blodlager.getAlleTilgjengeligeBlodceller
-        For Each row In blodCellerTab.Rows
-            blodtype = row("blodtype")
-            blodceller = row("Cellerposer")
 
-            'Legger inn verdier i datagrid
-            gridBlodceller.Rows.Add(blodtype, blodceller)
-        Next row
-    End Sub
-
-    'Knapp som skriver ut blodprodukter og oppdaterer datagrid
-    Private Sub btnSkrivUt_Click(sender As Object, e As EventArgs)
-        visAlleBlodCeller()
-        visAlleBlodplasma()
-        visAlleBlodplater()
-
+        'Kaller opp prosedyre for å fylle opp datagrid
+        Blodlager.fyllBlodproduktgrid(gridBlodceller, blodCellerTab)
     End Sub
 
     'Låser blodtype til en person ved inntasting av personnummer
