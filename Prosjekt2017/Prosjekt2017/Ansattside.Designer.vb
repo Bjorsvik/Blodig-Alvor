@@ -452,7 +452,7 @@ Partial Class Ansattside
         Me.Blodtype1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Blodposer1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.diffceller = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SkrivUt = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SkrivUt = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.btnVisPlasma = New System.Windows.Forms.Button()
 
 

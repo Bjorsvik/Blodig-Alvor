@@ -259,22 +259,6 @@ Public Class Ansattside
 
     End Sub
 
-
-    Private Sub skrivUtBlodProdukter()
-        'Legger inn checkbox verdiene inn i integer variabler
-        Dim ant_plasmaposer As Integer = cboBlodplasma.Text
-        Dim ant_celleposer As Integer = cboBlodlegeme.Text
-        Dim ant_plateposer As Integer = cboBlodplater.Text
-        Dim blodtype As String = cboBlod.Text
-
-        'Henter ut prosedyrer for å trekke fra verdiene i databasen
-        Blodlager.skrivUtBlodceller(ant_celleposer, blodtype)
-        Blodlager.skrivUtBlodplater(ant_plateposer, blodtype)
-        Blodlager.skrivUtBlodplasma(ant_plasmaposer, blodtype)
-    End Sub
-
-
-
     Private Sub visAlleBlodplasma()
         'Oppretter en tom tabell
         Dim blodPlasmaTab As New DataTable()
