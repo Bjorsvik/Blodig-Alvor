@@ -22,6 +22,15 @@ Partial Class Ansattside
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+
         Me.Statistikk = New System.Windows.Forms.TabPage()
         Me.lbAntallDonorer = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -41,8 +50,21 @@ Partial Class Ansattside
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Reservasjonskalender = New System.Windows.Forms.MonthCalendar()
         Me.Lager = New System.Windows.Forms.TabPage()
+
+        Me.Label136 = New System.Windows.Forms.Label()
+        Me.cboGridBlodtype = New System.Windows.Forms.ComboBox()
+        Me.btnVisPlasma = New System.Windows.Forms.Button()
+        Me.btnVisPlater = New System.Windows.Forms.Button()
+        Me.btnVisCeller = New System.Windows.Forms.Button()
+        Me.blodGrid = New System.Windows.Forms.DataGridView()
+        Me.datoblod = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Blodtype1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Blodposer1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.diffceller = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.bID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SkrivUt = New System.Windows.Forms.DataGridViewButtonColumn()
+
         Me.cboBlod = New System.Windows.Forms.ComboBox()
-        Me.btnSkrivUt = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.gridBlodplater = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -423,6 +445,17 @@ Partial Class Ansattside
         Me.Label133 = New System.Windows.Forms.Label()
         Me.Label134 = New System.Windows.Forms.Label()
         Me.btnLogUt = New System.Windows.Forms.Button()
+
+
+        Me.btnVisPlater = New System.Windows.Forms.Button()
+        Me.datoblod = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Blodtype1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Blodposer1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.diffceller = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SkrivUt = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnVisPlasma = New System.Windows.Forms.Button()
+
+
         Me.Statistikk.SuspendLayout()
         Me.Reservasjoner.SuspendLayout()
         CType(Me.ResGrid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -664,8 +697,15 @@ Partial Class Ansattside
         '
         'Lager
         '
+
+        Me.Lager.Controls.Add(Me.Label136)
+        Me.Lager.Controls.Add(Me.cboGridBlodtype)
+        Me.Lager.Controls.Add(Me.btnVisPlasma)
+        Me.Lager.Controls.Add(Me.btnVisPlater)
+        Me.Lager.Controls.Add(Me.btnVisCeller)
+        Me.Lager.Controls.Add(Me.blodGrid)
+
         Me.Lager.Controls.Add(Me.cboBlod)
-        Me.Lager.Controls.Add(Me.btnSkrivUt)
         Me.Lager.Controls.Add(Me.Label9)
         Me.Lager.Controls.Add(Me.gridBlodplater)
         Me.Lager.Controls.Add(Me.gridBlodceller)
@@ -689,27 +729,127 @@ Partial Class Ansattside
         Me.Lager.Text = "Lager"
         Me.Lager.UseVisualStyleBackColor = True
         '
+
+        'Label136
+        '
+        Me.Label136.AutoSize = True
+        Me.Label136.Location = New System.Drawing.Point(273, 314)
+        Me.Label136.Name = "Label136"
+        Me.Label136.Size = New System.Drawing.Size(51, 13)
+        Me.Label136.TabIndex = 22
+        Me.Label136.Text = "Blodtype:"
+        '
+        'cboGridBlodtype
+        '
+        Me.cboGridBlodtype.FormattingEnabled = True
+        Me.cboGridBlodtype.Items.AddRange(New Object() {"A+", "A-", "B+", "B-", "0+", "0-", "AB+", "AB-"})
+        Me.cboGridBlodtype.Location = New System.Drawing.Point(327, 310)
+        Me.cboGridBlodtype.Name = "cboGridBlodtype"
+        Me.cboGridBlodtype.Size = New System.Drawing.Size(40, 21)
+        Me.cboGridBlodtype.TabIndex = 21
+        Me.cboGridBlodtype.Text = "A+"
+        '
+        'btnVisPlasma
+        '
+        Me.btnVisPlasma.Location = New System.Drawing.Point(304, 366)
+        Me.btnVisPlasma.Name = "btnVisPlasma"
+        Me.btnVisPlasma.Size = New System.Drawing.Size(65, 23)
+        Me.btnVisPlasma.TabIndex = 20
+        Me.btnVisPlasma.Text = "Vis plasma"
+        Me.btnVisPlasma.UseVisualStyleBackColor = True
+        '
+        'btnVisPlater
+        '
+        Me.btnVisPlater.Location = New System.Drawing.Point(304, 395)
+        Me.btnVisPlater.Name = "btnVisPlater"
+        Me.btnVisPlater.Size = New System.Drawing.Size(63, 23)
+        Me.btnVisPlater.TabIndex = 19
+        Me.btnVisPlater.Text = "Vis plater"
+        Me.btnVisPlater.UseVisualStyleBackColor = True
+        '
+        'btnVisCeller
+        '
+        Me.btnVisCeller.Location = New System.Drawing.Point(305, 339)
+        Me.btnVisCeller.Name = "btnVisCeller"
+        Me.btnVisCeller.Size = New System.Drawing.Size(62, 23)
+        Me.btnVisCeller.TabIndex = 18
+        Me.btnVisCeller.Text = "Vis celler"
+        Me.btnVisCeller.UseVisualStyleBackColor = True
+        '
+        'blodGrid
+        '
+        Me.blodGrid.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
+        Me.blodGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.blodGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.datoblod, Me.Blodtype1, Me.Blodposer1, Me.diffceller, Me.bID, Me.SkrivUt})
+        Me.blodGrid.Location = New System.Drawing.Point(373, 287)
+        Me.blodGrid.Name = "blodGrid"
+        Me.blodGrid.Size = New System.Drawing.Size(447, 221)
+        Me.blodGrid.TabIndex = 17
+        '
+        'datoblod
+        '
+        Me.datoblod.HeaderText = "Dato"
+        Me.datoblod.Name = "datoblod"
+        Me.datoblod.ReadOnly = True
+        Me.datoblod.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.datoblod.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'Blodtype1
+        '
+        Me.Blodtype1.HeaderText = "Blodtype"
+        Me.Blodtype1.Name = "Blodtype1"
+        Me.Blodtype1.ReadOnly = True
+        Me.Blodtype1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Blodtype1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Blodtype1.Width = 50
+        '
+        'Blodposer1
+        '
+        Me.Blodposer1.HeaderText = "Poser"
+        Me.Blodposer1.Name = "Blodposer1"
+        Me.Blodposer1.ReadOnly = True
+        Me.Blodposer1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Blodposer1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Blodposer1.Width = 70
+        '
+        'diffceller
+        '
+        Me.diffceller.HeaderText = "Ant dager gått"
+        Me.diffceller.Name = "diffceller"
+        Me.diffceller.ReadOnly = True
+        Me.diffceller.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.diffceller.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'bID
+        '
+        Me.bID.HeaderText = "bID"
+        Me.bID.Name = "bID"
+        Me.bID.Width = 30
+        '
+        'SkrivUt
+        '
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.Gray
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.Gray
+        Me.SkrivUt.DefaultCellStyle = DataGridViewCellStyle7
+        Me.SkrivUt.HeaderText = "SkrivUt"
+        Me.SkrivUt.Name = "SkrivUt"
+        Me.SkrivUt.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.SkrivUt.Width = 50
+        '
+
         'cboBlod
         '
         Me.cboBlod.FormattingEnabled = True
         Me.cboBlod.Items.AddRange(New Object() {"A+", "A-", "B+", "B-", "0+", "0-", "AB+", "AB-"})
-        Me.cboBlod.Location = New System.Drawing.Point(403, 346)
+
+        Me.cboBlod.Location = New System.Drawing.Point(140, 314)
+
         Me.cboBlod.Name = "cboBlod"
         Me.cboBlod.Size = New System.Drawing.Size(121, 21)
         Me.cboBlod.TabIndex = 16
         Me.cboBlod.Text = "A+"
-        '
-        'btnSkrivUt
-        '
-        Me.btnSkrivUt.Location = New System.Drawing.Point(424, 483)
-        Me.btnSkrivUt.Name = "btnSkrivUt"
-        Me.btnSkrivUt.Size = New System.Drawing.Size(116, 23)
-        Me.btnSkrivUt.TabIndex = 15
-        Me.btnSkrivUt.Text = "Skriv ut blodprodukt"
-        Me.btnSkrivUt.UseVisualStyleBackColor = True
-        '
-        'Label9
-        '
+  
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(239, 13)
@@ -764,7 +904,9 @@ Partial Class Ansattside
         '
         'btnInsert
         '
-        Me.btnInsert.Location = New System.Drawing.Point(281, 483)
+
+        Me.btnInsert.Location = New System.Drawing.Point(65, 429)
+
         Me.btnInsert.Name = "btnInsert"
         Me.btnInsert.Size = New System.Drawing.Size(116, 23)
         Me.btnInsert.TabIndex = 11
@@ -774,7 +916,9 @@ Partial Class Ansattside
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(320, 323)
+
+        Me.Label7.Location = New System.Drawing.Point(17, 290)
+
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(77, 13)
         Me.Label7.TabIndex = 10
@@ -782,7 +926,9 @@ Partial Class Ansattside
         '
         'txtLagerPersonnummer
         '
-        Me.txtLagerPersonnummer.Location = New System.Drawing.Point(403, 320)
+
+        Me.txtLagerPersonnummer.Location = New System.Drawing.Point(100, 287)
+
         Me.txtLagerPersonnummer.Name = "txtLagerPersonnummer"
         Me.txtLagerPersonnummer.Size = New System.Drawing.Size(100, 20)
         Me.txtLagerPersonnummer.TabIndex = 9
@@ -790,7 +936,9 @@ Partial Class Ansattside
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(332, 437)
+
+        Me.Label6.Location = New System.Drawing.Point(69, 405)
+
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(54, 13)
         Me.Label6.TabIndex = 8
@@ -799,7 +947,9 @@ Partial Class Ansattside
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(325, 408)
+
+        Me.Label5.Location = New System.Drawing.Point(62, 376)
+
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(61, 13)
         Me.Label5.TabIndex = 7
@@ -808,7 +958,9 @@ Partial Class Ansattside
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(293, 376)
+
+        Me.Label4.Location = New System.Drawing.Point(30, 344)
+
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(93, 13)
         Me.Label4.TabIndex = 6
@@ -817,7 +969,9 @@ Partial Class Ansattside
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(338, 350)
+
+        Me.Label3.Location = New System.Drawing.Point(75, 318)
+
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(48, 13)
         Me.Label3.TabIndex = 5
@@ -827,7 +981,9 @@ Partial Class Ansattside
         '
         Me.cboBlodplater.FormattingEnabled = True
         Me.cboBlodplater.Items.AddRange(New Object() {"1", "2", "3", "4"})
-        Me.cboBlodplater.Location = New System.Drawing.Point(403, 434)
+
+        Me.cboBlodplater.Location = New System.Drawing.Point(140, 402)
+
         Me.cboBlodplater.Name = "cboBlodplater"
         Me.cboBlodplater.Size = New System.Drawing.Size(121, 21)
         Me.cboBlodplater.TabIndex = 4
@@ -837,7 +993,9 @@ Partial Class Ansattside
         '
         Me.cboBlodplasma.FormattingEnabled = True
         Me.cboBlodplasma.Items.AddRange(New Object() {"1", "2", "3", "4"})
-        Me.cboBlodplasma.Location = New System.Drawing.Point(403, 405)
+
+        Me.cboBlodplasma.Location = New System.Drawing.Point(140, 373)
+
         Me.cboBlodplasma.Name = "cboBlodplasma"
         Me.cboBlodplasma.Size = New System.Drawing.Size(121, 21)
         Me.cboBlodplasma.TabIndex = 3
@@ -847,7 +1005,9 @@ Partial Class Ansattside
         '
         Me.cboBlodlegeme.FormattingEnabled = True
         Me.cboBlodlegeme.Items.AddRange(New Object() {"1", "2", "3", "4"})
-        Me.cboBlodlegeme.Location = New System.Drawing.Point(403, 373)
+
+        Me.cboBlodlegeme.Location = New System.Drawing.Point(140, 341)
+
         Me.cboBlodlegeme.Name = "cboBlodlegeme"
         Me.cboBlodlegeme.Size = New System.Drawing.Size(121, 21)
         Me.cboBlodlegeme.TabIndex = 2
@@ -4487,6 +4647,55 @@ Partial Class Ansattside
         Me.btnLogUt.Text = "Log Ut"
         Me.btnLogUt.UseVisualStyleBackColor = True
         '
+
+
+        'btnVisPlater
+        '
+        Me.btnVisPlater.Location = New System.Drawing.Point(663, 514)
+        Me.btnVisPlater.Name = "btnVisPlater"
+        Me.btnVisPlater.Size = New System.Drawing.Size(63, 23)
+        Me.btnVisPlater.TabIndex = 19
+        Me.btnVisPlater.Text = "Vis plater"
+        Me.btnVisPlater.UseVisualStyleBackColor = True
+        '
+        'datoblod
+        '
+        Me.datoblod.HeaderText = "Dato"
+        Me.datoblod.Name = "datoblod"
+        '
+        'Blodtype1
+        '
+        Me.Blodtype1.HeaderText = "Blodtype"
+        Me.Blodtype1.Name = "Blodtype1"
+        Me.Blodtype1.Width = 50
+        '
+        'Blodposer1
+        '
+        Me.Blodposer1.HeaderText = "Poser"
+        Me.Blodposer1.Name = "Blodposer1"
+        Me.Blodposer1.Width = 70
+        '
+        'diffceller
+        '
+        Me.diffceller.HeaderText = "Ant dager gått"
+        Me.diffceller.Name = "diffceller"
+        Me.diffceller.Width = 50
+        '
+        'SkrivUt
+        '
+        Me.SkrivUt.HeaderText = "SkrivUt"
+        Me.SkrivUt.Name = "SkrivUt"
+        '
+        'btnVisPlasma
+        '
+        Me.btnVisPlasma.Location = New System.Drawing.Point(535, 514)
+        Me.btnVisPlasma.Name = "btnVisPlasma"
+        Me.btnVisPlasma.Size = New System.Drawing.Size(65, 23)
+        Me.btnVisPlasma.TabIndex = 20
+        Me.btnVisPlasma.Text = "Vis plasma"
+        Me.btnVisPlasma.UseVisualStyleBackColor = True
+
+
         'Ansattside
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -4704,7 +4913,6 @@ Partial Class Ansattside
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents Label9 As Label
-    Friend WithEvents btnSkrivUt As Button
     Friend WithEvents cboBlod As ComboBox
     Friend WithEvents ResGrid As DataGridView
     Friend WithEvents Button1 As Button
@@ -5044,4 +5252,23 @@ Partial Class Ansattside
     Friend WithEvents innkallingTidspunktComboBox As ComboBox
     Friend WithEvents btnHasteInnkalling As Button
     Friend WithEvents btnInnkalling As Button
+
+    Friend WithEvents Label1 As Label
+    Friend WithEvents gridStatistikkAar As DataGridView
+    Friend WithEvents gridStatistikkMaaned As DataGridView
+    Friend WithEvents antRegistrerte As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents blodGrid As DataGridView
+    Friend WithEvents btnVisCeller As Button
+    Friend WithEvents btnVisPlater As Button
+    Friend WithEvents btnVisPlasma As Button
+    Friend WithEvents Label136 As Label
+    Friend WithEvents cboGridBlodtype As ComboBox
+    Friend WithEvents datoblod As DataGridViewTextBoxColumn
+    Friend WithEvents Blodtype1 As DataGridViewTextBoxColumn
+    Friend WithEvents Blodposer1 As DataGridViewTextBoxColumn
+    Friend WithEvents diffceller As DataGridViewTextBoxColumn
+    Friend WithEvents bID As DataGridViewTextBoxColumn
+    Friend WithEvents SkrivUt As DataGridViewButtonColumn
+
 End Class
