@@ -136,27 +136,6 @@ Public Class Reservasjoner
         Next
     End Sub
 
-    Public Function getlastResIDTilPers()
-
-    End Function
-
-    Public Function getInnkallingEpost() As DataTable
-        Return db.Query("SELECT epost 
-from Person, Blodgiver, Reservasjon
-Where Person.personID = Blodgiver.personID
-AND Blodgiver.personID = Reservasjon.personID
-AND Reservasjon.dato <= date_sub(now(), interval 3 month)
-Group by epost")
-    End Function
-
-    Public Function getInnkallingEpostByBlodtype(ByVal blodtype As String)
-        Return db.Query("SELECT epost 
-from Person, Reservasjon
-Where Person.personID = Reservasjon.personID
-AND Reservasjon.dato <= date_sub(now(), interval 3 month)
-AND blodtype = '" & blodtype & "'")
-    End Function
-
     Public Function tilgjengeligePersAvBlodtype(ByVal blodtype As String)
         Return db.Query("")
     End Function
@@ -179,16 +158,17 @@ AND blodtype = '" & blodtype & "'")
         End Try
     End Sub
 
-    Public Function getAlleResEpost() As DataTable
+    Public Function getAlleResMulig() As DataTable
         Return db.Query("SELECT epost, Person.personID, MAX(dato)
                         FROM Person
                         LEFT JOIN Reservasjon ON Person.personID = Reservasjon.personID
                         Group by Person.personID")
     End Function
-    Public Function getHasteResEpost(ByVal blodtype As String) As DataTable
-        Return db.Query("SELECT epost, Person.personID, MAX(dato), blodtype = '" & blodtype & "'
+    Public Function getHasteResMulig(ByVal blodtype As String) As DataTable
+        Return db.Query("SELECT epost, Person.personID, MAX(dato)
                         FROM Person
                         LEFT JOIN Reservasjon ON Person.personID = Reservasjon.personID
+                        Where blodtype = '" & blodtype & "'
                         Group by Person.personID")
     End Function
 

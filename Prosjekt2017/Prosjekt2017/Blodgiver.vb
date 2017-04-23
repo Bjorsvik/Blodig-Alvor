@@ -72,8 +72,4 @@ Public Class Blodgiver
         Return db.Query("SELECT livstid from Blodgiver WHERE personID = '" & personID & "'")
     End Function
 
-    Public Function getLastResByPersID()
-
-    End Function
-
 End Class
